@@ -1,6 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
+import theme from "./styles/ExtendedTheme";
 import {
   Links,
   LiveReload,
@@ -24,7 +25,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
           <Outlet />
         </ChakraProvider>
         <ScrollRestoration />

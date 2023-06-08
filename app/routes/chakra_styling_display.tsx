@@ -1,12 +1,11 @@
 import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
-import ButtonBar from "~/ButtonBar";
+import { StyleButtonBar } from "~/components/ButtonBar";
 import stylesUrl from "~/styles/global.css";
 import {
   BasicText,
   BigBackgroundBox,
   FlexibleBox,
-  MyButton,
   MyHeading,
   MyLabel,
   colors,
@@ -19,10 +18,12 @@ export const links: LinksFunction = () => [
 export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
-      <ButtonBar />
+      <StyleButtonBar />
       <MyHeading>Chakra Display Styling:</MyHeading>
       <BasicText>Flexbox, Grid Layout, and Background.</BasicText>
-      <MyLabel>Display: </MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#display">
+        Display:
+      </MyLabel>
       <Box>
         <BasicText>
           display='none' makes an element not appear. (The following element
@@ -71,7 +72,9 @@ export default function chakra_basic_styling() {
           </FlexibleBox>
         </FlexibleBox>
       </Box>
-      <MyLabel>Flexbox: </MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#flexbox">
+        Flexbox:
+      </MyLabel>
       <Box>
         <BasicText>
           display="flex" alignItems="center" justifyContent="space-between"
@@ -89,7 +92,9 @@ export default function chakra_basic_styling() {
         <Flex bg={colors.mainAccent4} align="center" justify="center">
           Flex Chakra component with align="center" and justify="center"
         </Flex>
-        <MyLabel>Grid Layout</MyLabel>
+        <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#grid-layout">
+          Grid Layout
+        </MyLabel>
         <FlexibleBox display="grid" gridGap={2} gridAutoFlow="row dense">
           <p>Grid: display="grid" gridGap={2} gridAutoFlow="row dense"</p>
           <p>
@@ -127,7 +132,9 @@ export default function chakra_basic_styling() {
         >
           Grid using Chakra shorthand: Grid gap={2} autoFlow="row dense"
         </Grid>
-        <MyLabel>Background</MyLabel>
+        <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#background">
+          Background
+        </MyLabel>
         <Box>
           <p>The Following is a Box with background properties: </p>
           <p>backgroundImage="url('URL.png')"</p>
@@ -158,6 +165,7 @@ export default function chakra_basic_styling() {
           backgroundSize="cover"
           h="200px"
         />
+        <StyleButtonBar />
       </Box>
     </BigBackgroundBox>
   );

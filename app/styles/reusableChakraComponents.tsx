@@ -1,14 +1,12 @@
-import { Box, BoxProps, Flex, Link, Text } from "@chakra-ui/react";
-
-// export const colors = {
-//   mainBackground: "#333333",
-//   lightFont: "white",
-//   darkFont: "black",
-//   mainAccent: "cyan",
-//   mainAccent2: "deeppink",
-//   mainAccent3: "yellow",
-//   secondaryBackground: "#71797E",
-// };
+import {
+  Box,
+  BoxProps,
+  Flex,
+  HStack,
+  Link,
+  Text,
+  chakra,
+} from "@chakra-ui/react";
 
 export const colors = {
   mainBackground: "#141114",
@@ -19,7 +17,34 @@ export const colors = {
   mainAccent3: "#9ffccc",
   mainAccent4: "#4d185c",
   secondaryBackground: "#460b47",
+  codeText: "#ff5ee7",
 };
+
+export const mainMenuButtons = {
+  bg: colors.mainAccent4,
+  color: colors.mainAccent2,
+  hoverbg: colors.mainAccent3,
+  hovercolor: colors.mainBackground,
+  width: "120px",
+  fontWeight: "bold",
+  fontSize: "13px",
+  p: 1,
+  mx: 0,
+};
+
+export const sectionMenuButtons = {
+  bg: colors.mainAccent2,
+  color: colors.mainBackground,
+  hoverbg: colors.mainAccent3,
+  hovercolor: colors.mainAccent4,
+  width: "120px",
+  fontWeight: "bold",
+  fontSize: "11px",
+  p: 0.5,
+  mx: 0,
+};
+
+export const homeIconColor = colors.mainAccent;
 
 interface BigBackgroundBoxProps {
   children: React.ReactNode;
@@ -62,35 +87,50 @@ export function MyHeading({
 }
 
 interface MyButtonProps {
+  bg?: string;
+  color?: string;
   label: string;
   href: string;
   width?: string;
   fontWeight?: string;
+  fontSize?: string;
+  p?: number;
+  mx?: number;
+  hoverbg?: string;
+  hovercolor?: string;
 }
 
 export function MyButton({
   label,
   href,
-  width = "140px",
-  fontWeight = "normal",
+  bg = colors.secondaryBackground,
+  color = colors.mainAccent,
+  width = "120px",
+  fontWeight = "bold",
+  fontSize = "13px",
+  p = 1,
+  mx = 0,
+  hoverbg = colors.mainAccent,
+  hovercolor = colors.mainBackground,
 }: MyButtonProps) {
   return (
     <Link
-      color={colors.mainAccent}
+      color={color}
       href={href}
       fontWeight={fontWeight}
-      bg={colors.secondaryBackground}
+      fontSize={fontSize}
+      bg={bg}
       w={width}
-      mx={1}
-      p={1}
+      mx={mx}
+      p={p}
       border={`1px solid ${colors.mainBackground}`}
       borderBottom={"0px"}
       borderRadius="sm"
       boxShadow="0 -1px -4px rgba(160, 160, 160, 0.5)"
       textAlign={"center"}
       _hover={{
-        bg: `${colors.mainAccent}`,
-        color: `${colors.mainBackground}`,
+        bg: hoverbg,
+        color: hovercolor,
         boxShadow: "0 2px 4px rgba(200, 200, 200, 0.5)",
       }}
     >
@@ -100,41 +140,82 @@ export function MyButton({
 }
 
 interface MyLabelProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   size?: number;
-  color?: string;
+  labelColor?: string;
+  linkColor?: string;
+  link?: string;
 }
+
+const CustomLink = chakra(Link, {
+  baseStyle: {
+    _hover: {
+      color: colors.mainAccent3,
+      textDecoration: "underline",
+    },
+  },
+});
 
 export function MyLabel({
   size = 16,
-  color = colors.mainText,
+  labelColor = colors.mainAccent,
+  linkColor = colors.mainAccent2,
+  link = "",
   children,
 }: MyLabelProps) {
-  return (
-    <>
-      <Box
-        mb={2}
-        mt={6}
-        h="1px"
-        w="100%"
-        bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
-      />
-      <Text fontSize={size} color={color} mb={3} fontWeight="bold">
-        {children}
-      </Text>
-    </>
-  );
+  if (link === "") {
+    return (
+      <>
+        <Box
+          mb={2}
+          mt={6}
+          h="1px"
+          w="100%"
+          bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
+        />
+        <Text fontSize={size} color={labelColor} mb={3} fontWeight="bold">
+          {children}
+        </Text>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Box
+          mb={2}
+          mt={6}
+          h="1px"
+          w="100%"
+          bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
+        />
+        <HStack spacing={3} alignItems="flex-end">
+          <Text fontSize={size} color={labelColor} mb={3} fontWeight="bold">
+            {children}
+          </Text>
+          <CustomLink
+            href={link}
+            target="blank"
+            fontSize={size - 3}
+            color={linkColor}
+            mb={3}
+          >
+            / Chakra Docs /
+          </CustomLink>
+        </HStack>
+      </>
+    );
+  }
 }
 
 interface BasicTextProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   size?: number;
   color?: string;
   fontWeight?: string;
 }
 
 export function BasicText({
-  size = 16,
+  size = 14,
   color = colors.mainText,
   fontWeight = "normal",
   children,
@@ -164,4 +245,13 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
       {children}
     </Box>
   );
+}
+
+export function Mono({ children }: { children?: React.ReactNode }) {
+  const monoStyle = {
+    fontFamily: "monospace !important",
+    color: colors.codeText,
+    fontSize: "14px !important",
+  };
+  return <span style={monoStyle}>{children}</span>;
 }

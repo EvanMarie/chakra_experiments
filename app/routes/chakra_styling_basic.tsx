@@ -2,7 +2,6 @@ import { Box, Text } from "@chakra-ui/react";
 import {
   BasicText,
   BigBackgroundBox,
-  MyButton,
   MyLabel,
   colors,
   FlexibleBox,
@@ -11,7 +10,7 @@ import {
 
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import ButtonBar from "~/ButtonBar";
+import { StyleButtonBar } from "~/components/ButtonBar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -20,13 +19,15 @@ export const links: LinksFunction = () => [
 export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
-      <ButtonBar />
+      <StyleButtonBar />
       <MyHeading>Basic Chakra Styling:</MyHeading>
       <BasicText>
         Padding, Margin, Background, Font Color, Font Effects, Width, and
         Height.
       </BasicText>
-      <MyLabel>Padding and Margin:</MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#margin-and-padding">
+        Padding and Margin:
+      </MyLabel>
       <Box p={2} bg={colors.mainAccent2} mb={3} color={colors.secondaryText}>
         This <b>Box</b> has a padding setting of
         <b>
@@ -40,7 +41,9 @@ export default function chakra_basic_styling() {
         </b>
       </Box>
 
-      <MyLabel>Background and Font Colors:</MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#color-and-background-color">
+        Background and Font Colors:
+      </MyLabel>
       {/* Begin the examples */}
       <Box bg="tomato" p={2} mb={3}>
         This <b>Box</b> has a <b>bg of tomato</b>.
@@ -56,7 +59,9 @@ export default function chakra_basic_styling() {
         <b>color (font) of "#444444"</b>.
       </Box>
 
-      <MyLabel>Gradients:</MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#gradient">
+        Gradients:
+      </MyLabel>
       <Box
         w="100%"
         p={2}
@@ -77,7 +82,9 @@ export default function chakra_basic_styling() {
         This <b>Box</b> has a <b>radial gradient</b> background.
       </Box>
 
-      <MyLabel>Font Effects:</MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#typography">
+        Font Effects:
+      </MyLabel>
       <Box
         paddingX={3}
         paddingY={1}
@@ -114,7 +121,9 @@ export default function chakra_basic_styling() {
         </ul>
       </Box>
 
-      <MyLabel>Width & Height:</MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#layout-width-and-height">
+        Width & Height:
+      </MyLabel>
 
       <FlexibleBox width="100%" height={12}>
         width="100% height={12}
@@ -125,8 +134,7 @@ export default function chakra_basic_styling() {
       <FlexibleBox boxSize="sm">boxSize="sm"</FlexibleBox>
       <FlexibleBox w={256}>w={256}</FlexibleBox>
       <FlexibleBox w="40px">w='40px'</FlexibleBox>
-      <MyLabel>:)</MyLabel>
-      <MyButton label="Back" href="/" />
+      <StyleButtonBar />
     </BigBackgroundBox>
   );
 }

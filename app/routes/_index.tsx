@@ -1,13 +1,15 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import {
+  BasicText,
   BigBackgroundBox,
+  FlexibleBox,
   MyButton,
   colors,
 } from "~/styles/reusableChakraComponents";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { Box } from "@chakra-ui/react";
-import ButtonBar from "~/ButtonBar";
+import { Flex } from "@chakra-ui/react";
+import { FullButtonBar } from "~/components/ButtonBar";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -26,16 +28,26 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <BigBackgroundBox>
-      <ButtonBar />
-      {/* <Box
-        bg={colors.secondaryBackground}
-        w="100%"
-        h="75px"
-        borderRadius="sm"
-        display="flex"
-        alignItems="flex-end"
-        justifyContent="center"
-      ></Box> */}
+      <FullButtonBar />
+      <Flex justifyContent={"center"} alignItems={"center"}>
+        <FlexibleBox
+          bg={colors.mainAccent2}
+          p={4}
+          borderRadius="sm"
+          width="80%"
+        >
+          <BasicText color="black" size={16}>
+            The examples shown here are taken from the Chakra examples in their
+            documentation. These are my explorations with the various
+            possibilities that Chakra-UI offers, expressed in a way that
+            communicates clearly to me. <b>Enjoy! And never stop learning!</b>
+          </BasicText>
+          <br />
+          <BasicText color="black" size={16}>
+            <i>~ Evan Marie Carr</i>
+          </BasicText>
+        </FlexibleBox>
+      </Flex>
     </BigBackgroundBox>
   );
 }

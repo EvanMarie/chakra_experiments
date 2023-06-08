@@ -1,5 +1,6 @@
 html, body {
 background-color: #141114;
+scroll-behavior: smooth;
 }
 
 li {
