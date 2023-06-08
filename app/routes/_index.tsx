@@ -1,7 +1,17 @@
-import { Box, Flex, Link } from "@chakra-ui/react";
 import type { V2_MetaFunction } from "@remix-run/node";
-import { Outlet } from "@remix-run/react";
-import { MyButton } from "~/styles/reusableChakraComponents";
+import {
+  BigBackgroundBox,
+  MyButton,
+  colors,
+} from "~/styles/reusableChakraComponents";
+import type { LinksFunction } from "@remix-run/node";
+import stylesUrl from "~/styles/global.css";
+import { Box } from "@chakra-ui/react";
+import ButtonBar from "~/ButtonBar";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesUrl },
+];
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -15,12 +25,17 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <Box p={4} maxW="100%" bg="#333333" color="white">
-      <Flex justifyContent={"center"}>
-        <Box p={1} width="800px" display="flex" flexDirection="column">
-          <MyButton label="Styling" href="/chakra_styling" />
-        </Box>
-      </Flex>
-    </Box>
+    <BigBackgroundBox>
+      <ButtonBar />
+      {/* <Box
+        bg={colors.secondaryBackground}
+        w="100%"
+        h="75px"
+        borderRadius="sm"
+        display="flex"
+        alignItems="flex-end"
+        justifyContent="center"
+      ></Box> */}
+    </BigBackgroundBox>
   );
 }

@@ -1,6 +1,6 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import { ChakraProvider, Box, Heading } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
+import globalStylesUrl from "~/styles/global.css";
 import {
   Links,
   LiveReload,
@@ -11,7 +11,7 @@ import {
 } from "@remix-run/react";
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: globalStylesUrl },
 ];
 
 export default function App() {
