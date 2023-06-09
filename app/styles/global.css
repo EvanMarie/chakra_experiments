@@ -8,3 +8,12 @@ li {
     line-height: 1.25rem;
     font-size: 14px;
 }
+
+a {
+    color: deeppink !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cyan !important;
+}

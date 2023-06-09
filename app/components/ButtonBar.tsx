@@ -40,7 +40,7 @@ export function FullButtonBar() {
               />
             </HStack>
           </HStack>
-          <HStack align="center">
+          <HStack align="flex-end" spacing={1}>
             <Text fontSize={labelFontSize} fontWeight="bold">
               Components:{" "}
             </Text>

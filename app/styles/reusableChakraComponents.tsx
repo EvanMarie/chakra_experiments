@@ -18,14 +18,15 @@ export const colors = {
   mainAccent3: "#9ffccc",
   mainAccent4: "#4d185c",
   secondaryBackground: "#460b47",
+  myblue: "#034880",
+  mygrayblue: "#23394a",
+  mypurple: "#892aa3",
   codeText: "#ff5ee7",
 };
 
 export const mainMenuButtons = {
   bg: colors.mainAccent4,
-  color: colors.mainAccent2,
-  hoverbg: colors.mainAccent3,
-  hovercolor: colors.mainBackground,
+  hoverbg: colors.mypurple,
   width: "120px",
   fontWeight: "bold",
   fontSize: "13px",
@@ -34,18 +35,15 @@ export const mainMenuButtons = {
 };
 
 export const sectionMenuButtons = {
-  bg: colors.mainAccent2,
-  color: colors.mainBackground,
-  hoverbg: colors.mainAccent3,
-  hovercolor: colors.mainAccent4,
+  bg: colors.myblue,
+  hoverbg: colors.mygrayblue,
   width: "120px",
   fontWeight: "bold",
   fontSize: "11px",
-  p: 0.5,
+  border: "0px",
+  p: "2px",
   mx: 0,
 };
-
-export const homeIconColor = colors.mainAccent;
 
 interface BigBackgroundBoxProps {
   children: React.ReactNode;
@@ -71,6 +69,7 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
 
 interface MyHeadingProps {
   children: React.ReactNode;
+  fontFamily?: string;
   size?: number;
   color?: string;
 }
@@ -78,10 +77,17 @@ interface MyHeadingProps {
 export function MyHeading({
   children,
   size = 33,
+  fontFamily = "monospace",
   color = colors.mainAccent2,
 }: MyHeadingProps) {
   return (
-    <Text fontSize={size} color={color} mb={3} fontWeight="bold">
+    <Text
+      fontSize={size}
+      color={color}
+      mb={3}
+      fontFamily={fontFamily}
+      fontWeight="bold"
+    >
       {children}
     </Text>
   );
@@ -95,8 +101,9 @@ interface MyButtonProps {
   width?: string;
   fontWeight?: string;
   fontSize?: string;
-  p?: number;
+  p?: string | number;
   mx?: number;
+  border?: string;
   hoverbg?: string;
   hovercolor?: string;
 }
@@ -109,7 +116,8 @@ export function MyButton({
   width = "120px",
   fontWeight = "bold",
   fontSize = "13px",
-  p = 1,
+  border = `1px solid ${colors.mainBackground}`,
+  p = "2px",
   mx = 0,
   hoverbg = colors.mainAccent,
   hovercolor = colors.mainBackground,
@@ -124,7 +132,7 @@ export function MyButton({
       w={width}
       mx={mx}
       p={p}
-      border={`1px solid ${colors.mainBackground}`}
+      border={border}
       borderBottom={"0px"}
       borderRadius="sm"
       boxShadow="0 -1px -4px rgba(160, 160, 160, 0.5)"
@@ -132,7 +140,6 @@ export function MyButton({
       _hover={{
         bg: hoverbg,
         color: hovercolor,
-        boxShadow: "0 2px 4px rgba(200, 200, 200, 0.5)",
       }}
     >
       {label}
@@ -157,8 +164,20 @@ const CustomLink = chakra(Link, {
   },
 });
 
+export function HorizontalLine() {
+  return (
+    <Box
+      mb={2}
+      mt={6}
+      h="1px"
+      w="100%"
+      bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
+    />
+  );
+}
+
 export function MyLabel({
-  size = 16,
+  size = 28,
   labelColor = colors.mainAccent,
   linkColor = colors.mainAccent2,
   link = "",
@@ -167,13 +186,7 @@ export function MyLabel({
   if (link === "") {
     return (
       <>
-        <Box
-          mb={2}
-          mt={6}
-          h="1px"
-          w="100%"
-          bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
-        />
+        <HorizontalLine />
         <Text fontSize={size} color={labelColor} mb={3} fontWeight="bold">
           {children}
         </Text>
@@ -182,21 +195,20 @@ export function MyLabel({
   } else {
     return (
       <>
-        <Box
-          mb={2}
-          mt={6}
-          h="1px"
-          w="100%"
-          bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
-        />
-        <HStack spacing={3} alignItems="flex-end">
+        <HorizontalLine />
+        <HStack
+          spacing={3}
+          paddingX={3}
+          alignItems="center"
+          justifyContent="space-between"
+        >
           <Text fontSize={size} color={labelColor} mb={3} fontWeight="bold">
             {children}
           </Text>
           <CustomLink
             href={link}
             target="blank"
-            fontSize={size - 3}
+            fontSize={size - 10}
             color={linkColor}
             mb={3}
           >

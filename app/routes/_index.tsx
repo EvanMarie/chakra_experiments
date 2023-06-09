@@ -3,13 +3,12 @@ import {
   BasicText,
   BigBackgroundBox,
   FlexibleBox,
-  MyButton,
   colors,
 } from "~/styles/reusableChakraComponents";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { Flex } from "@chakra-ui/react";
-import { FullButtonBar } from "~/components/ButtonBar";
+import { Flex, VStack } from "@chakra-ui/react";
+import { FullButtonBar, StyleMenuBar } from "~/components/MenuBars";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -28,6 +27,9 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <BigBackgroundBox>
+      <VStack>
+        <StyleMenuBar />
+      </VStack>
       <FullButtonBar />
       <Flex justifyContent={"center"} alignItems={"center"}>
         <FlexibleBox
