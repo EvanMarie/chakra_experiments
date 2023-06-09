@@ -2,6 +2,7 @@ import {
   Box,
   BoxProps,
   Flex,
+  Grid,
   HStack,
   Link,
   Text,
@@ -247,11 +248,44 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
   );
 }
 
-export function Mono({ children }: { children?: React.ReactNode }) {
+interface MonoProps {
+  children?: React.ReactNode;
+  fontSize?: string;
+  width?: string;
+}
+
+export function Mono({
+  children,
+  fontSize = "14px",
+  width = "100%",
+}: MonoProps) {
   const monoStyle = {
     fontFamily: "monospace !important",
     color: colors.codeText,
-    fontSize: "14px !important",
+    fontSize: `${fontSize} !important`,
+    width: `${width} !important`,
   };
   return <span style={monoStyle}>{children}</span>;
+}
+
+interface CompWithLabelProps {
+  children: React.ReactNode[];
+  fontSize?: string;
+  split?: string;
+}
+export function CompWithLabel({
+  children,
+  fontSize = "15px",
+  split = "40% 60%",
+}: CompWithLabelProps) {
+  return (
+    <Grid w="100%" templateColumns={split}>
+      <Flex justifyContent={"center"} alignItems={"center"}>
+        {children[0]}
+      </Flex>
+      <Flex fontSize={fontSize} alignItems={"center"}>
+        {children[1]}
+      </Flex>
+    </Grid>
+  );
 }

@@ -50,6 +50,11 @@ export function FullButtonBar() {
                 href="/chakra_disclosure"
                 {...mainMenuButtons}
               />
+              <MyButton
+                label="Feedback"
+                href="/chakra_feedback"
+                {...mainMenuButtons}
+              />
             </HStack>
           </HStack>
         </VStack>
