@@ -159,16 +159,24 @@ const CustomLink = chakra(Link, {
   },
 });
 
-export function HorizontalLine() {
-  return (
-    <Box
-      mb={2}
-      mt={6}
-      h="1px"
-      w="100%"
-      bgGradient={`linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`}
-    />
-  );
+interface HorizontalLineProps {
+  color?: string | undefined;
+  mb?: string | number;
+  mt?: string | number;
+  h?: string | number;
+  w?: string | number;
+  bgGradient?: string | undefined;
+}
+
+export function HorizontalLine({
+  color = undefined,
+  mb = 2,
+  mt = 6,
+  h = "1px",
+  w = "100%",
+  bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
+}: HorizontalLineProps) {
+  return <Box mb={mb} mt={mt} h={h} w={w} bgGradient={bgGradient} bg={color} />;
 }
 
 interface MyLabelProps {
@@ -399,4 +407,8 @@ export function ExampleContainer({
       {children}
     </Box>
   );
+}
+
+export function Divider() {
+  return <HorizontalLine h="0.35px" mb="1px" mt="1px" />;
 }
