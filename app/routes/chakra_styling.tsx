@@ -20,9 +20,9 @@ import {
 
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import BackdropFilters from "~/components/imageFilters2";
-import Filters from "~/components/imageFilters";
-import { PageHeader, StyleMenuBar } from "~/components/menuBars";
+import BackdropFilters from "~/components/styling/imageFilters2";
+import Filters from "~/components/styling/imageFilters";
+import { PageHeader, StyleMenuBar } from "~/components/app_components/menuBars";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },

@@ -12,7 +12,8 @@ import {
 import { BiHome } from "react-icons/bi";
 
 export const colors = {
-  mainBackground: "#141114",
+  // mainBackground: "#141114",
+  mainBackground: "#211421",
   mainText: "#f7e6c1",
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
@@ -47,6 +48,8 @@ export const sectionMenuButtons = {
   p: "2px",
   mx: 0,
 };
+
+export const BasicTextSize = 16;
 
 interface BigBackgroundBoxProps {
   children: React.ReactNode;
@@ -234,19 +237,21 @@ export function MyLabel({
 
 interface BasicTextProps {
   children?: React.ReactNode;
-  size?: number;
+  size?: string | number;
   color?: string;
   fontWeight?: string;
+  mb?: number;
 }
 
 export function BasicText({
-  size = 14,
+  size = BasicTextSize,
   color = colors.mainText,
   fontWeight = "normal",
+  mb = 2,
   children,
 }: BasicTextProps) {
   return (
-    <Text fontSize={size} color={color} mb={3} fontWeight={fontWeight}>
+    <Text fontSize={size} color={color} mb={mb} fontWeight={fontWeight}>
       {children}
     </Text>
   );
@@ -274,16 +279,16 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
 
 interface MonoProps {
   children?: React.ReactNode;
-  fontSize?: string;
+  fontSize?: string | number;
   width?: string;
   fontWeight?: string;
 }
 
 export function Mono({
   children,
-  fontSize = "15px",
+  fontSize = BasicTextSize,
   width = "100%",
-  fontWeight = "bold",
+  fontWeight = "normal",
 }: MonoProps) {
   const monoStyle = {
     fontFamily: "monospace !important",
@@ -310,7 +315,7 @@ export function CompWithLabel({
       <Flex justifyContent={"center"} alignItems={"center"}>
         {children[0]}
       </Flex>
-      <Flex fontSize={fontSize} alignItems={"center"}>
+      <Flex fontSize={fontSize} justifyContent={"center"} alignItems={"center"}>
         {children[1]}
       </Flex>
     </Grid>
@@ -343,5 +348,35 @@ export function SectionContainer({
     >
       {children}
     </Flex>
+  );
+}
+
+interface ExamplenContainerProps extends FlexProps {
+  children?: React.ReactNode;
+  bg?: string;
+  [key: string]: any;
+}
+
+export function ExampleContainer({
+  children,
+  ...restProps
+}: ExamplenContainerProps) {
+  const defaultFlexProps = {
+    p: 3,
+    marginY: 0,
+    bg: colors.mainAccent2,
+    justifyContent: "center",
+    alignItems: "left",
+    borderRadius: "sm",
+  };
+
+  return (
+    <Box
+      {...defaultFlexProps}
+      flexDirection={{ base: "column" }}
+      {...restProps}
+    >
+      {children}
+    </Box>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, HStack, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import { Progress } from "@chakra-ui/react";
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
@@ -10,7 +10,7 @@ import {
   AlertOne,
   AlertThree,
   AlertTwo,
-} from "~/components/alerts";
+} from "~/components/feedback/alerts";
 
 import stylesUrl from "~/styles/global.css";
 
@@ -21,6 +21,7 @@ import {
   Mono,
   MyLabel,
   SectionContainer,
+  colors,
 } from "~/styles/reusableChakraComponents";
 import {
   SkeletonFive,
@@ -30,7 +31,7 @@ import {
   SkeletonSix,
   SkeletonThree,
   SkeletonTwo,
-} from "~/components/skeletons";
+} from "~/components/feedback/skeletons";
 import {
   ToastEight,
   ToastFive,
@@ -41,12 +42,12 @@ import {
   ToastSix,
   ToastThree,
   ToastTwo,
-} from "~/components/toast";
+} from "~/components/feedback/toast";
 import {
   ComponentHeadingsBar,
   FeedbackComponentBar,
   PageHeader,
-} from "~/components/menuBars";
+} from "~/components/app_components/menuBars";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -123,7 +124,7 @@ export default function chakra_feedback() {
 
       <Box p={3}>
         <SectionContainer>
-          <BasicText>
+          <BasicText color={colors.mainAccent3}>
             <b>⦾ Circular Progress</b> is used to indicates the progress for
             determinate and indeterminate processes.
           </BasicText>
@@ -226,7 +227,7 @@ export default function chakra_feedback() {
         Progress Bars:
       </MyLabel>
       <SectionContainer>
-        <Box p={3}>
+        <Flex p={3} justifyContent="center" alignItems="center" w="100%">
           <VStack spacing={4}>
             <CompWithLabel>
               {[
@@ -325,7 +326,7 @@ export default function chakra_feedback() {
               ]}
             </CompWithLabel>
           </VStack>
-        </Box>
+        </Flex>
       </SectionContainer>
       <div id="skeletons" />
       <MyLabel link="https://chakra-ui.com/docs/components/skeleton" size={28}>

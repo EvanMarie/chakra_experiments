@@ -5,15 +5,19 @@ import {
   ComponentHeadingsBar,
   FeedbackComponentBar,
   PageHeader,
-} from "~/components/menuBars";
+} from "~/components/app_components/menuBars";
 import {
   BasicText,
   BigBackgroundBox,
   FlexibleBox,
+  Mono,
   MyLabel,
   SectionContainer,
 } from "~/styles/reusableChakraComponents";
-import { AlertDialogueOne } from "~/components/alertDialog";
+import {
+  AlertDialogueOne,
+  AlertDialogueTwo,
+} from "~/components/overlay/alertDialog";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -40,8 +44,9 @@ export default function chakra_overlay() {
         <SectionContainer>
           <BasicText>
             The Alert Dialog is a component that allows you to display a dialog
-            box with a <b>title</b>, <b>description</b>, and <b>action</b>
-            buttons. It is commonly used to confirm or reject an action.
+            box with a <Mono>title</Mono>, <Mono>description</Mono>, and{" "}
+            <Mono>action</Mono> buttons. It is commonly used to confirm or
+            reject an action.
           </BasicText>
           <BasicText>
             It is ued to interrupt the user with a mandatory confirmation or
@@ -52,75 +57,77 @@ export default function chakra_overlay() {
           </BasicText>
           <Box paddingX={10}>
             <BasicText>
-              1. <b>AlertDialog</b> used to create a dialog box with a{" "}
-              <b>title</b>,<b>body</b>, <b>content</b>, and optional{" "}
-              <b>footer</b>. It is typically used to display important messages
-              or ask for user confirmation.
+              1. <Mono>AlertDialog</Mono> used to create a dialog box with a{" "}
+              <Mono>title</Mono>, <Mono>body</Mono>, <Mono>content</Mono>, and
+              optional <Mono>footer</Mono>. It is typically used to display
+              important messages or ask for user confirmation.
             </BasicText>
             <BasicText>
-              2. <b>AlertDialogHeader</b>represents the header section of the
-              <b>AlertDialog</b>. It typically contains the <b>title</b> or
-              <b>heading</b> of the dialog.
+              2. <Mono>AlertDialogHeader</Mono> represents the header section of
+              the <Mono>AlertDialog</Mono>. It typically contains the{" "}
+              <Mono>title</Mono> or <Mono>heading</Mono> of the dialog.
             </BasicText>
             <BasicText>
-              3. <b>AlertDialogBody</b>represents the main content area of the
-              <b>AlertDialog</b>. It is used to display the main message or
+              3. <Mono>AlertDialogBody</Mono> represents the main content area
+              of the <Mono>AlertDialog</Mono>. It is used to display the main
+              message or content within the dialog.
+            </BasicText>
+            <BasicText>
+              4. <Mono>AlertDialogContent</Mono> a wrapper that contains the
+              header, body, and footer components of the{" "}
+              <Mono>AlertDialog</Mono>. It helps in structuring and styling the
               content within the dialog.
             </BasicText>
             <BasicText>
-              4. <b>AlertDialogContent</b> a wrapper that contains the header,
-              body, and footer components of the <b>AlertDialog</b>. It helps in
-              structuring and styling the content within the dialog.
-            </BasicText>
-            <BasicText>
-              5. <b>AlertDialogFooter</b> represents the <b>footer</b> section
-              of the
-              <b>AlertDialog</b>. It is typically used to display action buttons
-              such as "Confirm" or "Cancel" for user interaction.
+              5. <Mono>AlertDialogFooter</Mono> represents the{" "}
+              <Mono>footer</Mono> section of the <Mono>AlertDialog</Mono>. It is
+              typically used to display action buttons such as "Confirm" or
+              "Cancel" for user interaction.
             </BasicText>
 
             <BasicText>
-              6. <b>AlertDialogOverlay</b> a full-screen overlay that is
-              rendered behind the <b>AlertDialog</b>. It helps to create a
+              6. <Mono>AlertDialogOverlay</Mono> a full-screen overlay that is
+              rendered behind the <Mono>AlertDialog</Mono>. It helps to create a
               modal-like behavior by covering the rest of the UI and focusing
               the user's attention on the dialog.
             </BasicText>
             <BasicText>
-              7. <b>AlertDialogCloseButton</b> is a close button typically
-              placed in the top-right corner of the <b>AlertDialog</b>. It
+              7. <Mono>AlertDialogCloseButton</Mono> is a close button typically
+              placed in the top-right corner of the <Mono>AlertDialog</Mono>. It
               allows the user to close the dialog without taking any action.
             </BasicText>
           </Box>
           <FlexibleBox p={3} m={3}>
             <BasicText color="black">
-              The statement "AlertDialog requires that you provide the
-              <b>leastDestructiveRef</b> prop" means that when using the <b></b>
-              AlertDialog component from Chakra UI, it expects you to provide a
-              reference to the least destructive element in the dialog using the{" "}
-              {""}
-              <b>leastDestructiveRef</b> prop.
+              The statement "AlertDialog requires that you provide the{" "}
+              <Mono>leastDestructiveRef</Mono> prop" means that when using the{" "}
+              <Mono>AlertDialog</Mono> component from Chakra UI, it expects you
+              to provide a reference to the least destructive element in the
+              dialog using the {""}
+              <Mono>leastDestructiveRef</Mono> prop.
             </BasicText>
             <BasicText color="black">
               {" "}
-              In the context of an <b>AlertDialog</b>, a "destructive action"
-              refers to an action that may have significant consequences or
-              irreversible effects, such as deleting data. To prevent users from
-              accidentally confirming a destructive action, it is important to
-              place the initial focus on the least destructive element within
+              In the context of an <Mono>AlertDialog</Mono>, a "destructive
+              action" refers to an action that may have significant consequences
+              or irreversible effects, such as deleting data. To prevent users
+              from accidentally confirming a destructive action, it is important
+              to place the initial focus on the least destructive element within
               the dialog.
             </BasicText>
             <BasicText color="black">
               {" "}
-              By providing the <b>leastDestructiveRef</b> prop with a reference
-              to the least destructive element, the <b>AlertDialog</b> {""}
+              By providing the <Mono>leastDestructiveRef</Mono> prop with a
+              reference to the least destructive element, the{" "}
+              <Mono>AlertDialog</Mono> {""}
               component ensures that when the dialog opens, the focus is
               automatically set to that element. This helps users navigate and
               interact with the dialog safely, reducing the likelihood of
               unintentional destructive actions.{" "}
             </BasicText>
             <BasicText color="black">
-              The requirement to provide the <b>leastDestructiveRef</b> prop
-              aligns with the WAI-ARIA (Web Accessibility Initiative -
+              The requirement to provide the <Mono>leastDestructiveRef</Mono>{" "}
+              prop aligns with the WAI-ARIA (Web Accessibility Initiative -
               Accessible Rich Internet Applications) specifications, which
               provide guidelines for creating accessible web content. Following
               these specifications helps ensure that dialogs are usable and
@@ -132,7 +139,9 @@ export default function chakra_overlay() {
         <SectionContainer>
           <AlertDialogueOne />
         </SectionContainer>
-        <SectionContainer>EX 2</SectionContainer>
+        <SectionContainer>
+          <AlertDialogueTwo />
+        </SectionContainer>
         <SectionContainer>EX 3</SectionContainer>
         <SectionContainer>EX 4</SectionContainer>
         <SectionContainer>EX 5</SectionContainer>

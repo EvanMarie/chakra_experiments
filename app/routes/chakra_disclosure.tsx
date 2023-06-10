@@ -5,14 +5,14 @@ import {
   ComponentHeadingsBar,
   DisclosureComponentBar,
   PageHeader,
-} from "~/components/menuBars";
+} from "~/components/app_components/menuBars";
 import {
   AccordionFive,
   AccordionFour,
   AccordionOne,
   AccordionThree,
   AccordionTwo,
-} from "~/components/accordion";
+} from "~/components/disclosure/accordion";
 import {
   TabsEight,
   TabsEleven,
@@ -30,12 +30,13 @@ import {
   TabsThree,
   TabsTwelve,
   TabsTwo,
-} from "~/components/tabs";
+} from "~/components/disclosure/tabs";
 import stylesUrl from "~/styles/global.css";
 
 import {
   BasicText,
   BigBackgroundBox,
+  Mono,
   MyLabel,
   SectionContainer,
 } from "~/styles/reusableChakraComponents";
@@ -89,25 +90,31 @@ export default function chakra_basic_styling() {
       <SectionContainer>
         <Box paddingX={5}>
           <ul>
-            <li>Tabs: Provides context and state for all components</li>
-            <li>TabList: Wrapper for the Tab components</li>
             <li>
-              Tab: element that serves as a label for one of the tab panels and
-              can be activated to display that panel.
+              <b>Tabs</b>: Provides context and state for all components
             </li>
             <li>
-              TabPanels: Wrapper for the TabPanel components TabPanel: element
-              that contains the content associated with a tab
+              <b>TabList</b>: Wrapper for the Tab components
+            </li>
+            <li>
+              <b>Tab</b>: element that serves as a label for one of the tab
+              panels and can be activated to display that panel.
+            </li>
+            <li>
+              <b>TabPanels</b>: Wrapper for the TabPanel components TabPanel:
+              element that contains the content associated with a tab
             </li>
           </ul>
           <p>
             You can render any element within Tabs, but TabList should only have
-            Tab as children, and TabPanels should have TabPanel as children.{" "}
+            Tab as children, and <Mono>TabPanels</Mono> should have{" "}
+            <Mono>TabPanel</Mono> as children.{" "}
           </p>
           <br />
           <p>
-            Tabs expects TabList and TabPanels as children. The order doesn't
-            matter, you can have TabList at the top, at the bottom, or both.
+            <Mono>Tabs</Mono> expects <Mono>TabList</Mono> and{" "}
+            <Mono>TabPanels</Mono> as children. The order doesn't matter, you
+            can have <Mono>TabList</Mono> at the top, at the bottom, or both.
           </p>
         </Box>
       </SectionContainer>

@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { BasicText, colors } from "~/styles/reusableChakraComponents";
+import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
 
 export function OnChangeTabs() {
   const tabsColors = useColorModeValue(
@@ -47,7 +47,7 @@ export function OnChangeTabs() {
       <br />
       <BasicText>
         Below is the code for my above variation on the Chakra UI example for
-        this <b>onChange</b> functionality.
+        this <Mono>onChange</Mono> functionality.
       </BasicText>
       <center>
         <img src="/images/onchangetabs.png" alt="OnChange Tabs" width="500px" />

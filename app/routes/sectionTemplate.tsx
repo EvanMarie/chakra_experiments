@@ -5,7 +5,7 @@ import {
   ComponentHeadingsBar,
   FeedbackComponentBar,
   PageHeader,
-} from "~/components/menuBars";
+} from "~/components/app_components/menuBars";
 import {
   BigBackgroundBox,
   MyLabel,

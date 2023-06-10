@@ -6,7 +6,10 @@ import {
   MyHeading,
   colors,
 } from "~/styles/reusableChakraComponents";
-import { OverlayComponentBar, menuBarWidth } from "~/components/menuBars";
+import {
+  OverlayComponentBar,
+  menuBarWidth,
+} from "~/components/app_components/menuBars";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 import { Flex, Link, VStack } from "@chakra-ui/react";
@@ -14,7 +17,7 @@ import {
   DisclosureComponentBar,
   FeedbackComponentBar,
   StyleMenuBar,
-} from "~/components/menuBars";
+} from "~/components/app_components/menuBars";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },

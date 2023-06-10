@@ -16,9 +16,10 @@ export function AlertOne() {
         General Usage
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ The alert below uses <b>Alert</b>, <b>AlertIcon</b>, <b>AlertTitle</b>
-        , and <b>AlertDescription</b>. In <b>Alert</b>, the status is set to
-        "error". And the rest is simple text input.
+        ⦾ The alert below uses <Mono>Alert</Mono>, <Mono>AlertIcon</Mono>,{" "}
+        <Mono>AlertTitle</Mono>, and <Mono>AlertDescription</Mono>. In{" "}
+        <Mono>Alert</Mono>, the status is set to "error". And the rest is simple
+        text input.
       </BasicText>
 
       <Box p={5}>
@@ -46,9 +47,10 @@ export function AlertTwo() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ Change the status of the alerts by passing the status prop. This
-        affects the color scheme and icon used. Alert supports <b>error</b>,{" "}
-        <b>success</b>,<b>warning</b>, and <b>info</b> statuses. The following
-        use only the <b>Alert</b> and <b>AlertIcon</b> components.
+        affects the color scheme and icon used. Alert supports{" "}
+        <Mono>error</Mono>, <Mono>success</Mono>, <Mono>warning</Mono>, and{" "}
+        <Mono>info</Mono> statuses. The following use only the{" "}
+        <Mono>Alert</Mono> and <Mono>AlertIcon</Mono> components.
       </BasicText>
 
       <Box p={5}>
@@ -88,8 +90,8 @@ export function AlertThree() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ Alert has 4 variant styles you can use. Pass the variant prop and use
-        either <b>subtle</b>, <b>solid</b>, <b>left-accent</b> or{" "}
-        <b>top-accent</b>.
+        either <Mono>subtle</Mono>, <Mono>solid</Mono>, <Mono>left-accent</Mono>{" "}
+        or <Mono>top-accent</Mono>.
       </BasicText>
 
       <Box p={5}>
@@ -130,8 +132,8 @@ export function AlertFour() {
         Composition
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ There are numerous layouts possible with <b>Alert</b>. The following
-        alert has these properties:
+        ⦾ There are numerous layouts possible with <Mono>Alert</Mono>. The
+        following alert has these properties:
       </BasicText>
       <Box paddingX={6}>
         <p>
@@ -187,12 +189,12 @@ export function AlertFive() {
   return (
     <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Incorporating a <b>CloseButton</b>
+        Incorporating a Close Button
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ Alert can also incorporate other Chakra components. Here's an example
-        of an alert with wrapping description text and the <b>CloseButton</b>{" "}
-        component with simple close functionality:
+        of an alert with wrapping description text and the{" "}
+        <Mono>CloseButton</Mono> component with simple close functionality:
       </BasicText>
 
       <Box p={5}>

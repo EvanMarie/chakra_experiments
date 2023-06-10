@@ -27,13 +27,20 @@ function DataArrayTabs() {
 
   const tabData: TabData[] = [
     {
-      label: "Nigerian Jollof",
-      content: "Perhaps the greatest dish ever invented.",
+      label: "Truth One",
+      content: "Truth: Chopsticks are better than forks.",
     },
     {
-      label: "Pounded Yam & Egusi",
-      content:
-        "Perhaps the surest dish ever invented but fills the stomach more than rice.",
+      label: "Truth Two",
+      content: "Truth: Nothing is better than a good night's sleep.",
+    },
+    {
+      label: "Truth Three",
+      content: "Truth: The best things in life are free.",
+    },
+    {
+      label: "Truth Four",
+      content: "Truth: Dogs are better than cats.",
     },
   ];
 

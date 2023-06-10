@@ -66,9 +66,10 @@ export function TabsTwo() {
         Variants and Colors: Example One
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ Tabs come in 6 different variants to style the tabs: <b>line</b>,{" "}
-        <b>enclosed</b>,<b>enclosed-colored</b>, <b>soft-rounded</b>,{" "}
-        <b>solid-rounded</b>, and <b>unstyled</b>
+        ⦾ Tabs come in 6 different variants to style the tabs: <Mono>line</Mono>
+        , <Mono>enclosed</Mono>, <Mono>enclosed-colored</Mono>,{" "}
+        <Mono>soft-rounded</Mono>, <Mono>solid-rounded</Mono>, and{" "}
+        <Mono>unstyled</Mono>
       </BasicText>
 
       <Box p={5}>
@@ -101,9 +102,10 @@ export function TabsThree() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ You can also change the color scheme for any specific variant by
-        passing the <b>colorScheme</b>. The value of <b>colorScheme</b> must
-        exist in the theme object, and must be a key in <b>theme.colors</b> that
-        has the <b>50 - 900</b> color values.
+        passing the <Mono>colorScheme</Mono>. The value of{" "}
+        <Mono>colorScheme</Mono> must exist in the theme object, and must be a
+        key in <Mono>theme.colors</Mono> that has the <Mono>50 - 900</Mono>{" "}
+        color values.
       </BasicText>
 
       <Box p={5}>
@@ -136,9 +138,10 @@ export function TabsFour() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ You can change the size of the tab by passing size prop. Chakra
-        supports 3 sizes <b>sm</b>, <b>md</b>, <b>lg</b>. The following uses
-        size small with the <b>soft-rounded</b> variant and a red
-        <b>colorScheme</b>.
+        supports 3 sizes <Mono>sm</Mono>, <Mono>md</Mono>, <Mono>lg</Mono>. The
+        following uses size small with the <Mono>soft-rounded</Mono> variant and
+        a red
+        <Mono>colorScheme</Mono>.
       </BasicText>
 
       <Box p={5}>
@@ -171,8 +174,8 @@ export function TabsFive() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ You can change the alignment of the TabList by passing align prop.
-        Charka supports 3 variations <b>start</b>, <b>center</b>, and <b>end</b>
-        . The following uses a center alignment.
+        Charka supports 3 variations <Mono>start</Mono>, <Mono>center</Mono>,
+        and <Mono>end</Mono>. The following uses a center alignment.
       </BasicText>
 
       <Box p={5}>
@@ -204,8 +207,8 @@ export function TabsSix() {
         Fitted Tabs
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ Stretch the tab list to fit the container by passing <b>isFitted</b>{" "}
-        prop.
+        ⦾ Stretch the tab list to fit the container by passing{" "}
+        <Mono>isFitted</Mono> prop.
       </BasicText>
 
       <Box p={5}>
@@ -250,29 +253,30 @@ export function TabsSeven() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ To customize the active tab indicator, set the variant to
-        <b>unstyled</b> and set styles on <b>TabIndicator</b>.
+        <Mono>unstyled</Mono> and set styles on <Mono>TabIndicator</Mono>.
       </BasicText>
       <BasicText>
-        In Chakra UI's Tabs component, the <b>TabIndicator</b> represents a
-        visual indicator that highlights the currently active tab. It is a
+        In Chakra UI's Tabs component, the <Mono>TabIndicator</Mono> represents
+        a visual indicator that highlights the currently active tab. It is a
         visual element that helps users identify the active tab and provides
         visual feedback as they navigate through different tab options.
       </BasicText>
       <BasicText>
-        The <b>TabIndicator</b> is typically a horizontal line or a bar that
-        appears below or above the active tab, indicating its selected state. It
-        visually separates the active tab from the rest of the tabs and provides
-        a clear visual cue of the user's current selection.{" "}
+        The <Mono>TabIndicator</Mono> is typically a horizontal line or a bar
+        that appears below or above the active tab, indicating its selected
+        state. It visually separates the active tab from the rest of the tabs
+        and provides a clear visual cue of the user's current selection.{" "}
       </BasicText>
       <BasicText>
         Chakra UI's Tabs component automatically manages the positioning and
-        appearance of the <b>TabIndicator</b> based on the selected tab. It
-        updates its position and size when the active tab changes, providing a
-        smooth transition between tabs. You can customize the appearance of the
-        <b>TabIndicator</b> by modifying the styles associated with the active
-        tab. Chakra UI provides a range of styling options to customize the{" "}
-        <b>TabIndicator</b>'s color, size, position, and animation using its
-        theme and style props.
+        appearance of the <Mono>TabIndicator</Mono> based on the selected tab.
+        It updates its position and size when the active tab changes, providing
+        a smooth transition between tabs. You can customize the appearance of
+        the
+        <Mono>TabIndicator</Mono> by modifying the styles associated with the
+        active tab. Chakra UI provides a range of styling options to customize
+        the <Mono>TabIndicator</Mono>'s color, size, position, and animation
+        using its theme and style props.
       </BasicText>
       <BasicText>
         The <b>TabIndicator</b> in Chakra UI's Tabs component serves as a visual
@@ -324,8 +328,8 @@ export function TabsEight() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ In the event that you need to create custom styles for individual
-        tabs, use the <b>_selected</b>, <b>_hover</b>, and <b>_active</b> style
-        props.
+        tabs, use the <Mono>_selected</Mono>, <Mono>_hover</Mono>, and{" "}
+        <Mono>_active</Mono> style props.
       </BasicText>
 
       <Box p={5}>
@@ -391,9 +395,9 @@ export function TabsNine() {
         The onChange Property
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ The <b>onChange</b> callback returns the active tab's index whenever
-        the user changes tabs. If you intend to control the tabs
-        programmatically, use this with the <b>index</b> prop.
+        ⦾ The <Mono>onChange</Mono> callback returns the active tab's index
+        whenever the user changes tabs. If you intend to control the tabs
+        programmatically, use this with the <Mono>index</Mono> prop.
       </BasicText>
 
       <Box p={5}>
@@ -414,8 +418,8 @@ export function TabsTen() {
       <BasicText color={colors.mainAccent3}>
         ⦾ By default, only one item may be expanded and it can only be collapsed
         again by expanding another. Pressing the up and down arrow keys will
-        move focus between accordion buttons. Here, the <b>defaultIndex</b> on{" "}
-        <b>Tabs</b> is set to 3.
+        move focus between accordion buttons. Here, the{" "}
+        <Mono>defaultIndex</Mono> on <Mono>Tabs</Mono> is set to 3.
       </BasicText>
       <Box p={5}>
         <Box marginY={1}>
@@ -469,8 +473,8 @@ export function TabsEleven() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ When a Tab is disabled, it is skipped during keyboard navigation and
-        it is not clickable. Here, the <b>isDisabled</b> property is used on the
-        second tab.
+        it is not clickable. Here, the <Mono>isDisabled</Mono> property is used
+        on the second tab.
       </BasicText>
 
       <Box p={5}>
@@ -502,8 +506,8 @@ export function TabsTwelve() {
       <BasicText color={colors.mainAccent3}>
         ⦾ By default, Tabs are activated automatically. This means when you use
         the arrow keys to change tabs, the tab is activated and focused. The
-        content of a <b>TabPanel</b> should ideally be preloaded. However, if
-        switching to a tab panel causes a network request and possibly a page
+        content of a <Mono>TabPanel</Mono> should ideally be preloaded. However,
+        if switching to a tab panel causes a network request and possibly a page
         refresh, there might be some noticeable latency and this might affect
         the experience for keyboard and screen reader users. In this scenario,
         you should use a manually activated tab, it moves focus without
@@ -602,9 +606,9 @@ export function TabsFifteen() {
         Custom Tab Components
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ Because TabList needs to know the order of the children, we use
-        cloneElement to pass state internally. Your custom Tab component must
-        use <b>React.forwardRef</b>.
+        ⦾ Because <Mono>TabList</Mono> needs to know the order of the children,
+        we use cloneElement to pass state internally. Your custom Tab component
+        must use <Mono>React.forwardRef</Mono>.
       </BasicText>
 
       <Box p={5}>
@@ -624,7 +628,8 @@ export function TabsSixteen() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ If you'd like to drive your tabs with an array instead of using the
-        granular components, you can create your own DataTabs component.
+        granular components, you can create your own <Mono>DataTabs</Mono>{" "}
+        component.
       </BasicText>
 
       <Box p={5}>

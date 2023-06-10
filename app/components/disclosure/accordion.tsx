@@ -8,7 +8,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import { BasicText, colors } from "~/styles/reusableChakraComponents";
+import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
 
 export function AccordionOne() {
   return (
@@ -72,8 +72,8 @@ export function AccordionTwo() {
         AllowMultiple
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ If you set <b>allowMultiple</b> to true then the accordion will permit
-        multiple items to be expanded at once.
+        ⦾ If you set <Mono>allowMultiple</Mono> to true then the accordion will
+        permit multiple items to be expanded at once.
       </BasicText>
 
       <Box p={5}>
@@ -127,7 +127,7 @@ export function AccordionThree() {
       </BasicText>
 
       <BasicText color={colors.mainAccent3}>
-        ⦾ If you set <b>allowToggle</b> to true, any expanded item may be
+        ⦾ If you set <Mono>allowToggle</Mono> to true, any expanded item may be
         collapsed again.
       </BasicText>
       <Box p={5}>
@@ -180,10 +180,9 @@ export function AccordionFour() {
         Expanded State
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ The <b>AccordionButton</b> component has aria-expanded set to true or
-        false depending on the state of the <b>AccordionItem</b>. Use the style
-        prop
-        <b>_expanded</b> to style this state.
+        ⦾ The <Mono>AccordionButton</Mono> component has aria-expanded set to
+        true or false depending on the state of the <Mono>AccordionItem</Mono>.
+        Use the style prop <Mono>_expanded</Mono> to style this state.
       </BasicText>
       <Box p={5}>
         <Box marginY={1}>
@@ -222,8 +221,7 @@ export function AccordionFive() {
       <BasicText color={colors.mainAccent3}>
         ⦾ If you need access to the internal state of each accordion item, you
         can use a render prop. It provides 2 internal state props:{" "}
-        <b>isExpanded</b>
-        and <b>isDisabled</b>.
+        <Mono>isExpanded</Mono> and <Mono>isDisabled</Mono>.
       </BasicText>
       <Box p={5}>
         <Box marginY={1}>

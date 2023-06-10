@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import {
   BasicText,
+  ExampleContainer,
   FlexibleBox,
   Mono,
   colors,
@@ -31,9 +32,9 @@ export function ToastOne() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={2}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastOneFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <BasicText>
         This is the code for my variation of the Chakra UI first example for
@@ -49,40 +50,40 @@ export function ToastOne() {
       <Box paddingX={6}>
         <ul>
           <li>
-            The <b>useToast</b> hook is called to obtain the toast function,
-            which can be used to display the toast notification.
+            The <Mono>useToast</Mono> hook is called to obtain the toast
+            function, which can be used to display the toast notification.
           </li>
           <li>
-            The component returns a <b>Button</b> component that triggers the
-            toast notification when clicked.
+            The component returns a <Mono>Button</Mono> component that triggers
+            the toast notification when clicked.
           </li>
           <li>
             When the button is clicked, the toast function is called with an
             object that specifies the configuration for the toast notification.
-            The configuration includes properties such as <b>title</b>,{" "}
-            <b>description</b>,<b>status</b>, <b>duration</b>, and{" "}
-            <b>isClosable</b>.
+            The configuration includes properties such as <Mono>title</Mono>,{" "}
+            <Mono>description</Mono>,<Mono>status</Mono>, <Mono>duration</Mono>,
+            and <Mono>isClosable</Mono>.
           </li>
           <li>
-            The <b>title</b> property is set to "You did It!" to indicate a
-            successful action.
+            The <Mono>title</Mono> property is set to "You did It!" to indicate
+            a successful action.
           </li>
           <li>
-            The <b>description</b> property provides additional details about
-            the action, stating "You made toast! Great work!"
+            The <Mono>description</Mono> property provides additional details
+            about the action, stating "You made toast! Great work!"
           </li>
           <li>
-            The <b>status</b> property is set to "success" to determine the
-            visual style of the toast.
+            The <Mono>status</Mono> property is set to "success" to determine
+            the visual style of the toast.
           </li>
           <li>
-            The <b>duration</b> property sets the duration for which the toast
-            should be displayed on the screen. In this example, it is set to
-            9000 milliseconds (9 seconds).
+            The <Mono>duration</Mono> property sets the duration for which the
+            toast should be displayed on the screen. In this example, it is set
+            to 9000 milliseconds (9 seconds).
           </li>
           <li>
-            The <b>isClosable</b> property allows the user to manually close the
-            toast notification.
+            The <Mono>isClosable</Mono> property allows the user to manually
+            close the toast notification.
           </li>
           <li>The button's text is set as "Make Toast!".</li>
         </ul>
@@ -103,9 +104,9 @@ export function ToastTwo() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={2}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastTwoFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -123,15 +124,16 @@ export function ToastThree() {
         Closing Toast Components:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ Toasts can be closed imperatively, individually (via the <b>close</b>
-        instance method) or all together (via the <b>closeAll</b> instance
+        ⦾ Toasts can be closed imperatively, individually (via the{" "}
+        <Mono>close</Mono>
+        instance method) or all together (via the <Mono>closeAll</Mono> instance
         method).
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={4}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastThreeFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -154,9 +156,9 @@ export function ToastFour() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={3}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastFourFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -178,9 +180,9 @@ export function ToastFive() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={2}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastFiveFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -204,23 +206,24 @@ export function ToastSix() {
       <Box paddingX={6}>
         <ul>
           <li>
-            <b>subtle</b>: A subtle variant with minimal visual impact.
+            <Mono>subtle</Mono>: A subtle variant with minimal visual impact.
           </li>
           <li>
-            <b>solid</b>: A solid background color variant with a border.
+            <Mono>solid</Mono>: A solid background color variant with a border.
           </li>
           <li>
-            <b>left-accent</b>: A variant with a colored left accent border.
+            <Mono>left-accent</Mono>: A variant with a colored left accent
+            border.
           </li>
           <li>
-            <b>top-accent</b>: A variant with a colored top accent border.
+            <Mono>top-accent</Mono>: A variant with a colored top accent border.
           </li>
         </ul>
       </Box>
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={2}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastSixFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -243,9 +246,9 @@ export function ToastSeven() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={3}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastSevenFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -263,14 +266,14 @@ export function ToastEight() {
         Positioning the Toast:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ The <b>position</b> property allows you to specify where the toast
-        will popup from.
+        ⦾ The <Mono>position</Mono> property allows you to specify where the
+        toast will popup from.
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={2}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastEightFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
@@ -289,15 +292,15 @@ export function ToastNine() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ In some cases you might need to prevent duplicate of specific toasts.
-        To achieve you need to pass an <b>id</b> and use the{" "}
-        <b>toast.isActive</b> method to determine when to call <b>toast(...)</b>
-        .
+        To achieve you need to pass an <Mono>id</Mono> and use the{" "}
+        <Mono>toast.isActive</Mono> method to determine when to call{" "}
+        <Mono>toast(...)</Mono>.
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.sectionColor} padding={2}>
+        <ExampleContainer bg={colors.mypurple}>
           <ToastNineFunction />
-        </FlexibleBox>
+        </ExampleContainer>
       </Box>
       <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
