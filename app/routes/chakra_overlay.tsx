@@ -13,6 +13,7 @@ import {
   Mono,
   MyLabel,
   SectionContainer,
+  colors,
 } from "~/styles/reusableChakraComponents";
 import {
   AlertDialogueOne,
@@ -97,8 +98,8 @@ export default function chakra_overlay() {
               allows the user to close the dialog without taking any action.
             </BasicText>
           </Box>
-          <FlexibleBox p={3} m={3}>
-            <BasicText color="black">
+          <FlexibleBox p={3} m={3} bg={colors.myblue}>
+            <BasicText>
               The statement "AlertDialog requires that you provide the{" "}
               <Mono>leastDestructiveRef</Mono> prop" means that when using the{" "}
               <Mono>AlertDialog</Mono> component from Chakra UI, it expects you
@@ -106,7 +107,7 @@ export default function chakra_overlay() {
               dialog using the {""}
               <Mono>leastDestructiveRef</Mono> prop.
             </BasicText>
-            <BasicText color="black">
+            <BasicText>
               {" "}
               In the context of an <Mono>AlertDialog</Mono>, a "destructive
               action" refers to an action that may have significant consequences
@@ -115,7 +116,7 @@ export default function chakra_overlay() {
               to place the initial focus on the least destructive element within
               the dialog.
             </BasicText>
-            <BasicText color="black">
+            <BasicText>
               {" "}
               By providing the <Mono>leastDestructiveRef</Mono> prop with a
               reference to the least destructive element, the{" "}
@@ -125,7 +126,7 @@ export default function chakra_overlay() {
               interact with the dialog safely, reducing the likelihood of
               unintentional destructive actions.{" "}
             </BasicText>
-            <BasicText color="black">
+            <BasicText>
               The requirement to provide the <Mono>leastDestructiveRef</Mono>{" "}
               prop aligns with the WAI-ARIA (Web Accessibility Initiative -
               Accessible Rich Internet Applications) specifications, which

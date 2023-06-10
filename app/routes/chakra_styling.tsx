@@ -16,12 +16,12 @@ import {
   Mono,
   HorizontalLine,
   SectionContainer,
+  ExampleContainer,
 } from "~/styles/reusableChakraComponents";
 
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import BackdropFilters from "~/components/styling/imageFilters2";
-import Filters from "~/components/styling/imageFilters";
+import { Filters, BackdropFilters } from "~/components/styling/imageFilters";
 import { PageHeader, StyleMenuBar } from "~/components/app_components/menuBars";
 
 export const links: LinksFunction = () => [
@@ -243,32 +243,45 @@ export default function chakra_basic_styling() {
         <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#grid-layout">
           Grid Layout
         </MyLabel>
-        <FlexibleBox display="grid" gridGap={2} gridAutoFlow="row dense">
+        <FlexibleBox
+          bg={colors.sectionColor}
+          color={colors.mainText}
+          display="grid"
+          gridGap={2}
+          gridAutoFlow="row dense"
+          paddingX={4}
+          paddingY={2}
+          margin={4}
+        >
+          <BasicText>This container has the following values:</BasicText>
           <p>
-            <b>Grid: display="grid" gridGap={2} gridAutoFlow="row dense"</b>
+            {" "}
+            <Mono>
+              Grid: display="grid" gridGap={2} gridAutoFlow="row dense"
+            </Mono>
           </p>
           <p>
-            <b>display="grid"</b>: This prop sets the display property of the
-            Box component to "grid", enabling grid layout on the container.
+            <Mono>display="grid"</Mono>: This prop sets the display property of
+            the Box component to "grid", enabling grid layout on the container.
           </p>
           <p>
-            <b>
+            <Mono>
               gridGap=
               {2}
-            </b>
+            </Mono>
             : This prop specifies the gap (or spacing) between grid items inside
             the container. The value 2 represents the spacing in Chakra UI's
             spacing scale, where 2 corresponds to 0.5rem by default.
           </p>
           <p>
-            <b>gridAutoFlow="row dense"</b>: This prop controls how the grid
-            items are automatically placed within the grid. Setting{" "}
-            <b>gridAutoFlow</b>
-            to <b>"row dense"</b> specifies that the grid items should be placed
-            in rows, and the dense packing algorithm is used to fill the grid.
-            The dense packing algorithm tries to fill empty spaces in the grid,
-            ensuring a more compact layout. You can adjust the values of these
-            props according to your specific layout requirements.
+            <Mono>gridAutoFlow="row dense"</Mono>: This prop controls how the
+            grid items are automatically placed within the grid. Setting{" "}
+            <Mono>gridAutoFlow</Mono>
+            to <Mono>"row dense"</Mono> specifies that the grid items should be
+            placed in rows, and the dense packing algorithm is used to fill the
+            grid. The dense packing algorithm tries to fill empty spaces in the
+            grid, ensuring a more compact layout. You can adjust the values of
+            these props according to your specific layout requirements.
           </p>
           <p>
             Additionally, you can add child elements inside the Box component to
@@ -276,6 +289,7 @@ export default function chakra_basic_styling() {
           </p>
         </FlexibleBox>
         <Grid
+          margin={4}
           gap={2}
           autoFlow="row dense"
           bg={colors.mainAccent2}
@@ -290,12 +304,15 @@ export default function chakra_basic_styling() {
         <SectionContainer>
           <Box>
             <p>The Following is a Box with background properties: </p>
-            <b>
-              <p>backgroundImage="url('URL.png')"</p>
-              <p>backgroundPosition="center"</p>{" "}
-              <p> backgroundRepeat="no-repeat"</p>
-              <p> backgroundSize="cover"</p> <p> h="200px"</p>
-            </b>
+            <Box paddingX={4} paddingBottom={4}>
+              <Mono>backgroundImage="url('URL.png')"</Mono>
+              <br />
+              <Mono>backgroundPosition="center"</Mono> <br />
+              <Mono> backgroundRepeat="no-repeat"</Mono>
+              <br />
+              <Mono> backgroundSize="cover"</Mono> <br />
+              <Mono> h="200px"</Mono>
+            </Box>
           </Box>
 
           <FlexibleBox
@@ -310,12 +327,16 @@ export default function chakra_basic_styling() {
         <SectionContainer>
           <Box>
             <p>The Following is a the short hand version of the same: </p>
-            <b>
-              <p>bgImage="url('URL.png')"</p>
-              <p>bgPosition="center" </p>
-              <p>bgRepeat="no-repeat"</p>
-              <p> bgSize="cover"</p> <p>h="200px"</p>
-            </b>
+            <Box paddingX={4} paddingBottom={4}>
+              <Mono>bgImage="url('URL.png')"</Mono>
+              <br />
+              <Mono>bgPosition="center" </Mono>
+              <br />
+              <Mono>bgRepeat="no-repeat"</Mono>
+              <br />
+              <Mono> bgSize="cover"</Mono>
+              <br /> <Mono>h="200px"</Mono>
+            </Box>
           </Box>
           <Box
             bgImage="url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png')"
@@ -328,9 +349,9 @@ export default function chakra_basic_styling() {
         <SectionContainer>
           <Box>
             <p>Let's try some different values to see their effects: </p>
-            <b>
-              <p>h="400px"</p>
-            </b>
+            <Box paddingX={4} paddingBottom={4}>
+              <Mono>h="400px"</Mono>
+            </Box>
           </Box>
           <Box
             bgImage="url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png')"
@@ -345,7 +366,7 @@ export default function chakra_basic_styling() {
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#borders">
         Borders:
       </MyLabel>
-      <FlexibleBox border="2px" borderColor="yellow.200">
+      <FlexibleBox border="2px" borderColor="yellow.200" marginTop={4}>
         Box with <b>2px border, borderColor="yellow.200"</b>
       </FlexibleBox>
       <div id="border_radius" />
@@ -355,29 +376,29 @@ export default function chakra_basic_styling() {
       <Box>
         <SectionContainer>
           <BasicText>
-            Button with <b>RightRadius="0"</b>, creating no border radius on
-            right, but default settings on left.
+            Button with <Mono>RightRadius="0"</Mono>, creating no border radius
+            on right, but default settings on left.
           </BasicText>
           <Button borderRightRadius="0" mb={4} w="150px">
             Button 1
           </Button>
           <BasicText>
-            Button with <b>LeftRadius="0"</b>, creating no border radius on
-            left, but default settings on right.
+            Button with <Mono>LeftRadius="0"</Mono>, creating no border radius
+            on left, but default settings on right.
           </BasicText>
           <Button borderLeftRadius="0" mb={4} w="150px">
             Button 2
           </Button>
           <BasicText>
-            Button with <b>TopRadius="0"</b>, creating no border radius on top,
-            but default settings on bottom.
+            Button with <Mono>TopRadius="0"</Mono>, creating no border radius on
+            top, but default settings on bottom.
           </BasicText>
           <Button borderTopRadius="0" mb={4} w="150px">
             Button 3
           </Button>
           <BasicText>
-            Button with <b>borderBottomRadius="0"</b>, creating no border radius
-            on bottom, but default settings on top.
+            Button with <Mono>borderBottomRadius="0"</Mono>, creating no border
+            radius on bottom, but default settings on top.
           </BasicText>
           <Button borderBottomRadius="0" mb={4} w="150px">
             Button 4
@@ -397,30 +418,40 @@ export default function chakra_basic_styling() {
               mb={3}
               position="relative"
             >
-              <FlexibleBox position="absolute">position="absolute"</FlexibleBox>
-            </Box>
-            <Box
-              w="100%"
-              h="75px"
-              bg={colors.mainAccent2}
-              mb={3}
-              position="relative"
-            >
-              <FlexibleBox pos="absolute">pos="absolute"</FlexibleBox>
-            </Box>
-            <Box
-              w="100%"
-              h="75px"
-              position="relative"
-              bg={colors.mainAccent2}
-              mb={3}
-            >
-              <FlexibleBox pos="absolute" top="3" left="3">
-                Absolute (in relation to parent, which is set to relative) with{" "}
-                <b>top="3"</b> and <b>left="3"</b>
+              <FlexibleBox position="absolute" bg={colors.myblue}>
+                <Mono>position="absolute"</Mono>
               </FlexibleBox>
             </Box>
-            <FlexibleBox>
+            <Box
+              w="100%"
+              h="75px"
+              bg={colors.mainAccent2}
+              mb={3}
+              position="relative"
+            >
+              <FlexibleBox pos="absolute" bg={colors.myblue}>
+                <Mono>pos="absolute"</Mono>
+              </FlexibleBox>
+            </Box>
+            <Box
+              w="100%"
+              h="75px"
+              position="relative"
+              bg={colors.mainAccent2}
+              mb={3}
+            >
+              <FlexibleBox
+                pos="absolute"
+                top="3"
+                left="3"
+                bg={colors.myblue}
+                color={colors.mainText}
+              >
+                Absolute (in relation to parent, which is set to relative) with{" "}
+                <Mono>top="3"</Mono> and <Mono>left="3"</Mono>
+              </FlexibleBox>
+            </Box>
+            <FlexibleBox p={4}>
               <p>
                 <b>Fixed positioning</b>is a CSS property that allows an element
                 to be positioned relative to the viewport, meaning it remains in
@@ -448,112 +479,82 @@ export default function chakra_basic_styling() {
           Shadow:
         </MyLabel>
         <SimpleGrid
-          bg={colors.sectionColor}
-          columns={{ sm: 2, md: 4 }}
-          spacing="8"
+          bg="white"
+          justifyContent="center"
+          alignContent="center"
+          columns={2}
+          spacing={8}
           p="10"
+          fontSize={16}
+          marginTop={4}
           textAlign="center"
           rounded="lg"
-          color="gray.400"
         >
-          <Box
-            boxShadow="xs"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
-          >
-            <b>boxShadow="xs"</b>
+          <Box margin={5} boxShadow="xs" p="5" rounded="sm" bg={colors.myblue}>
+            <Mono>boxShadow="xs"</Mono>
+          </Box>
+          <Box margin={5} boxShadow="sm" p="5" rounded="sm" bg={colors.myblue}>
+            <Mono> boxShadow="sm"</Mono>
           </Box>
           <Box
-            boxShadow="sm"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
-          >
-            <b>boxShadow="sm"</b>
-          </Box>
-          <Box
+            margin={5}
             boxShadow="base"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
+            p="5"
+            rounded="sm"
+            bg={colors.myblue}
           >
-            <b>boxShadow="base"</b>
+            <Mono> boxShadow="base"</Mono>
+          </Box>
+          <Box margin={5} boxShadow="md" p="5" rounded="sm" bg={colors.myblue}>
+            <Mono> boxShadow="md"</Mono>
+          </Box>
+          <Box margin={5} boxShadow="lg" p="5" rounded="sm" bg={colors.myblue}>
+            <Mono> boxShadow="lg"</Mono>
+          </Box>
+          <Box margin={5} boxShadow="xl" p="5" rounded="sm" bg={colors.myblue}>
+            <Mono> boxShadow="xl"</Mono>
+          </Box>
+          <Box margin={5} boxShadow="2xl" p="5" rounded="sm" bg={colors.myblue}>
+            <Mono> boxShadow="2xl"</Mono>
           </Box>
           <Box
-            boxShadow="md"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
-          >
-            <b>boxShadow="md"</b>
-          </Box>
-          <Box
-            boxShadow="lg"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
-          >
-            <b>boxShadow="lg"</b>
-          </Box>
-          <Box
-            boxShadow="xl"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
-          >
-            <b>boxShadow="xl"</b>
-          </Box>
-          <Box
-            boxShadow="2xl"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
-          >
-            <b>boxShadow="2xl"</b>
-          </Box>
-          <Box
+            margin={5}
             boxShadow="dark-lg"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
+            p="5"
+            rounded="sm"
+            bg={colors.myblue}
           >
-            <b>boxShadow="dark-lg"</b>
+            <Mono> boxShadow="dark-lg"</Mono>
           </Box>
           <Box
+            margin={5}
             boxShadow="outline"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
+            p="5"
+            rounded="sm"
+            bg={colors.myblue}
           >
-            <b>boxShadow="outline"</b>
+            <Mono> boxShadow="outline"</Mono>
           </Box>
           <Box
+            margin={5}
             boxShadow="inner"
-            p="6"
-            rounded="md"
-            bg={colors.mainAccent3}
-            color="black"
+            p="5"
+            rounded="sm"
+            bg={colors.myblue}
           >
-            <b>boxShadow="inner"</b>
+            <Mono> boxShadow="inner"</Mono>
           </Box>
         </SimpleGrid>
         <Box mt={5}>
-          <BasicText>Text With Shadows:</BasicText>
+          <BasicText>
+            Text With Shadows: The blue portion below is the result of the{" "}
+            <Mono>boxShadow</Mono> setting.
+          </BasicText>
         </Box>
 
         <FlexibleBox>
-          <Text textShadow="2px 2px red" m="3" fontSize={20}>
-            Text with shadows: <b>textShadow="2px 2px red"</b>
+          <Text color="white" textShadow="2px 2px blue" m="3" fontSize={28}>
+            <Mono>textShadow="2px 2px red"</Mono>
           </Text>
         </FlexibleBox>
       </Box>
@@ -561,11 +562,12 @@ export default function chakra_basic_styling() {
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#filter">
         Filter:
       </MyLabel>
-      <SectionContainer>
+      <SectionContainer fontSize={16}>
         <BasicText>
-          Note: To apply <b>blur</b>, <b>brightness</b>, <b>contrast</b>,{" "}
-          <b>hueRotate</b>, <b>invert</b>, <b>saturate</b>
-          props on the element, set <b>filter</b> prop value to "auto".
+          Note: To apply <Mono>blur</Mono>, <Mono>brightness</Mono>,{" "}
+          <Mono>contrast</Mono>, <Mono>hueRotate</Mono>, <Mono>invert</Mono>,{" "}
+          <Mono>saturate</Mono> props on the element, set <Mono>filter</Mono>{" "}
+          prop value to "auto".
         </BasicText>
         <Box>
           <Filters />
@@ -594,38 +596,43 @@ export default function chakra_basic_styling() {
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#psuedo">
         Pseudo:
       </MyLabel>
-      <SectionContainer>
+      <SectionContainer fontSize={16}>
         <Box>
           <VStack w="100%">
             <Mono>
               colorScheme="teal" _hover= background: "white", color: "teal.500"
             </Mono>
-
-            <Button
-              colorScheme="teal"
-              _hover={{
-                background: "white",
-                color: "teal.500",
-              }}
-            >
-              Hover me
-            </Button>
+            <ExampleContainer>
+              <Button
+                colorScheme="teal"
+                _hover={{
+                  background: "white",
+                  color: "teal.500",
+                }}
+              >
+                Hover me
+              </Button>
+            </ExampleContainer>
           </VStack>
           <br />
           <VStack w="100%" mt={5}>
-            <BasicText>A Chakra Box with:</BasicText>
+            <BasicText>
+              A Chakra Box with <Mono>role="group"</Mono> for the container and:
+            </BasicText>
             <Mono>
               _hover= fontWeight: "semibold" _groupHover= color: "purple"
             </Mono>
-            <Box role="group">
-              <FlexibleBox w="100px">
-                <Box
-                  _hover={{ fontWeight: "semibold" }}
-                  _groupHover={{ color: "purple" }}
-                >
-                  Text
-                </Box>
-              </FlexibleBox>
+            <Box role="group" w="100%">
+              <ExampleContainer bg={colors.myblue} color={colors.mainText}>
+                <FlexibleBox w="100px">
+                  <Box
+                    _hover={{ fontWeight: "semibold" }}
+                    _groupHover={{ color: "purple" }}
+                  >
+                    Text
+                  </Box>
+                </FlexibleBox>
+              </ExampleContainer>
             </Box>
           </VStack>
           <VStack w="100%" mt={5}>
@@ -633,11 +640,17 @@ export default function chakra_basic_styling() {
             <Mono>
               _before = content: '"🙂"', display: "inline-block", mr: "5px"{" "}
             </Mono>
-            <Box
-              _before={{ content: '"🙂"', display: "inline-block", mr: "5px" }}
-            >
-              A pseudo element
-            </Box>
+            <ExampleContainer color={colors.secondaryText}>
+              <Box
+                _before={{
+                  content: '"🙂"',
+                  display: "inline-block",
+                  mr: "5px",
+                }}
+              >
+                A pseudo element
+              </Box>
+            </ExampleContainer>
           </VStack>
         </Box>
       </SectionContainer>
@@ -646,22 +659,24 @@ export default function chakra_basic_styling() {
         The as Prop:
       </MyLabel>
       <SectionContainer>
-        <VStack w="100%" mt={5}>
+        <VStack w="100%" mt={5} fontSize={16}>
           <Mono>
             Button as="a" target="_blank" variant="outline"
             href="https://chakra-ui.com" color="pink"
           </Mono>
-          <Box>
-            <Button
-              as="a"
-              target="_blank"
-              variant="outline"
-              href="https://chakra-ui.com"
-              color="pink"
-            >
-              Hello
-            </Button>
-          </Box>
+          <ExampleContainer bg={colors.myblue}>
+            <Box>
+              <Button
+                as="a"
+                target="_blank"
+                variant="outline"
+                href="https://www.evanmarie.com"
+                color="pink"
+              >
+                Hello
+              </Button>
+            </Box>
+          </ExampleContainer>
         </VStack>
       </SectionContainer>
       <HorizontalLine />

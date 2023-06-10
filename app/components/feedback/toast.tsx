@@ -32,7 +32,7 @@ export function ToastOne() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastOneFunction />
         </ExampleContainer>
       </Box>
@@ -104,7 +104,7 @@ export function ToastTwo() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastTwoFunction />
         </ExampleContainer>
       </Box>
@@ -125,13 +125,12 @@ export function ToastThree() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ Toasts can be closed imperatively, individually (via the{" "}
-        <Mono>close</Mono>
-        instance method) or all together (via the <Mono>closeAll</Mono> instance
-        method).
+        <Mono>close</Mono> instance method) or all together (via the{" "}
+        <Mono>closeAll</Mono> instance method).
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastThreeFunction />
         </ExampleContainer>
       </Box>
@@ -156,7 +155,7 @@ export function ToastFour() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastFourFunction />
         </ExampleContainer>
       </Box>
@@ -180,7 +179,7 @@ export function ToastFive() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastFiveFunction />
         </ExampleContainer>
       </Box>
@@ -221,7 +220,7 @@ export function ToastSix() {
         </ul>
       </Box>
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastSixFunction />
         </ExampleContainer>
       </Box>
@@ -246,7 +245,7 @@ export function ToastSeven() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastSevenFunction />
         </ExampleContainer>
       </Box>
@@ -271,7 +270,7 @@ export function ToastEight() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastEightFunction />
         </ExampleContainer>
       </Box>
@@ -298,7 +297,7 @@ export function ToastNine() {
       </BasicText>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mypurple}>
+        <ExampleContainer bg={colors.mainBackground}>
           <ToastNineFunction />
         </ExampleContainer>
       </Box>

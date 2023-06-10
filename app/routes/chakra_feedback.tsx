@@ -18,6 +18,7 @@ import {
   BasicText,
   BigBackgroundBox,
   CompWithLabel,
+  ExampleContainer,
   Mono,
   MyLabel,
   SectionContainer,
@@ -128,7 +129,7 @@ export default function chakra_feedback() {
             <b>⦾ Circular Progress</b> is used to indicates the progress for
             determinate and indeterminate processes.
           </BasicText>
-          <Box paddingX={6}>
+          <Box padding={6}>
             <ul>
               <li>
                 There are two types of progress indicators: determinate and
@@ -144,9 +145,7 @@ export default function chakra_feedback() {
               </li>
             </ul>
           </Box>
-        </SectionContainer>
-        <SectionContainer>
-          <Box p={3}>
+          <ExampleContainer bg={colors.mainBackground}>
             <VStack spacing={5} align="center">
               <CompWithLabel>
                 {[
@@ -218,7 +217,7 @@ export default function chakra_feedback() {
                 ]}
               </CompWithLabel>
             </VStack>
-          </Box>
+          </ExampleContainer>
         </SectionContainer>
       </Box>
 
@@ -227,106 +226,108 @@ export default function chakra_feedback() {
         Progress Bars:
       </MyLabel>
       <SectionContainer>
-        <Flex p={3} justifyContent="center" alignItems="center" w="100%">
-          <VStack spacing={4}>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>Progress value={80}</Mono>,
-                <Progress value={80} w="300px" key={2} />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>Progress hasStripe value={64}</Mono>,
-                <Progress hasStripe value={64} w="300px" key={2} />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>
-                  Progress colorScheme='red' size='sm' value={20}
-                </Mono>,
-                <Progress
-                  colorScheme="red"
-                  size="sm"
-                  value={20}
-                  w="300px"
-                  key={2}
-                />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>
-                  Progress colorScheme='orange' size='md' value={30}
-                </Mono>,
-                <Progress
-                  colorScheme="orange"
-                  size="md"
-                  value={30}
-                  w="300px"
-                  key={2}
-                />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>
-                  Progress colorScheme='yellow' size='lg' value={40}
-                </Mono>,
-                <Progress
-                  colorScheme="yellow"
-                  size="lg"
-                  value={40}
-                  w="300px"
-                  key={2}
-                />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>
-                  Progress colorScheme='green' height='32px' value={50}
-                </Mono>,
-                <Progress
-                  colorScheme="green"
-                  height="32px"
-                  value={50}
-                  w="300px"
-                  key={2}
-                />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>
-                  Progress value={60} size='m' colorScheme='blue'
-                </Mono>,
-                <Progress
-                  key={2}
-                  value={60}
-                  size="sm"
-                  colorScheme="blue"
-                  w="300px"
-                />,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Mono key={1}>
-                  Progress size='sm'colorScheme="purple" isIndeterminate
-                </Mono>,
-                <Progress
-                  size="sm"
-                  colorScheme="purple"
-                  isIndeterminate
-                  w="300px"
-                  key={2}
-                />,
-              ]}
-            </CompWithLabel>
-          </VStack>
-        </Flex>
+        <ExampleContainer bg={colors.mainBackground}>
+          <Flex p={3} justifyContent="center" alignItems="center" w="100%">
+            <VStack spacing={4}>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>Progress value={80}</Mono>,
+                  <Progress value={80} w="300px" key={2} />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>Progress hasStripe value={64}</Mono>,
+                  <Progress hasStripe value={64} w="300px" key={2} />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>
+                    Progress colorScheme='red' size='sm' value={20}
+                  </Mono>,
+                  <Progress
+                    colorScheme="red"
+                    size="sm"
+                    value={20}
+                    w="300px"
+                    key={2}
+                  />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>
+                    Progress colorScheme='orange' size='md' value={30}
+                  </Mono>,
+                  <Progress
+                    colorScheme="orange"
+                    size="md"
+                    value={30}
+                    w="300px"
+                    key={2}
+                  />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>
+                    Progress colorScheme='yellow' size='lg' value={40}
+                  </Mono>,
+                  <Progress
+                    colorScheme="yellow"
+                    size="lg"
+                    value={40}
+                    w="300px"
+                    key={2}
+                  />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>
+                    Progress colorScheme='green' height='32px' value={50}
+                  </Mono>,
+                  <Progress
+                    colorScheme="green"
+                    height="32px"
+                    value={50}
+                    w="300px"
+                    key={2}
+                  />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>
+                    Progress value={60} size='m' colorScheme='blue'
+                  </Mono>,
+                  <Progress
+                    key={2}
+                    value={60}
+                    size="sm"
+                    colorScheme="blue"
+                    w="300px"
+                  />,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Mono key={1}>
+                    Progress size='sm'colorScheme="purple" isIndeterminate
+                  </Mono>,
+                  <Progress
+                    size="sm"
+                    colorScheme="purple"
+                    isIndeterminate
+                    w="300px"
+                    key={2}
+                  />,
+                ]}
+              </CompWithLabel>
+            </VStack>
+          </Flex>
+        </ExampleContainer>
       </SectionContainer>
       <div id="skeletons" />
       <MyLabel link="https://chakra-ui.com/docs/components/skeleton" size={28}>
@@ -379,7 +380,7 @@ export default function chakra_feedback() {
         </BasicText>
       </Box>
       <SectionContainer>
-        <Box p={3}>
+        <ExampleContainer bg={colors.mainBackground}>
           <VStack spacing={5} align="center">
             <CompWithLabel>
               {[
@@ -428,7 +429,7 @@ export default function chakra_feedback() {
               ]}
             </CompWithLabel>
           </VStack>
-        </Box>
+        </ExampleContainer>
       </SectionContainer>
 
       <div id="toast" />

@@ -7,7 +7,12 @@ import {
   Box,
   TabIndicator,
 } from "@chakra-ui/react";
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import {
+  BasicText,
+  ExampleContainer,
+  Mono,
+  colors,
+} from "~/styles/reusableChakraComponents";
 import { OnChangeTabs } from "./tabsOnChange";
 import {
   BsEmojiSunglasses,
@@ -22,7 +27,7 @@ import DataArrayTabs from "./dataTabs";
 
 export function TabsOne() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Default Settings
       </BasicText>
@@ -32,7 +37,7 @@ export function TabsOne() {
         move focus between accordion buttons.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs>
             <TabList>
@@ -54,14 +59,14 @@ export function TabsOne() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsTwo() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Variants and Colors: Example One
       </BasicText>
@@ -72,7 +77,7 @@ export function TabsTwo() {
         <Mono>unstyled</Mono>
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs variant="enclosed">
             <TabList>
@@ -89,14 +94,14 @@ export function TabsTwo() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsThree() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Variants and Colors: Example Two
       </BasicText>
@@ -108,7 +113,7 @@ export function TabsThree() {
         color values.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs variant="soft-rounded" colorScheme="green">
             <TabList>
@@ -125,14 +130,14 @@ export function TabsThree() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsFour() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Tab Sizing
       </BasicText>
@@ -144,7 +149,7 @@ export function TabsFour() {
         <Mono>colorScheme</Mono>.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs size="sm" variant="soft-rounded" colorScheme="red">
             <TabList>
@@ -161,14 +166,14 @@ export function TabsFour() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsFive() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Changing Alignment
       </BasicText>
@@ -178,7 +183,7 @@ export function TabsFive() {
         and <Mono>end</Mono>. The following uses a center alignment.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs align="center" variant="enclosed">
             <TabList>
@@ -195,14 +200,14 @@ export function TabsFive() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsSix() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Fitted Tabs
       </BasicText>
@@ -211,7 +216,7 @@ export function TabsSix() {
         <Mono>isFitted</Mono> prop.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs isFitted variant="enclosed">
             <TabList mb="1em">
@@ -240,14 +245,14 @@ export function TabsSix() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsSeven() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         TabIndicator: Styling the tab states via props
       </BasicText>
@@ -288,7 +293,7 @@ export function TabsSeven() {
         borderRadius="2px"
       </Mono>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs position="relative" variant="unstyled">
             <TabList>
@@ -315,14 +320,14 @@ export function TabsSeven() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsEight() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Customizing individual tabs
       </BasicText>
@@ -332,7 +337,7 @@ export function TabsEight() {
         <Mono>_active</Mono> style props.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs variant="unstyled">
             <TabList>
@@ -383,14 +388,14 @@ export function TabsEight() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsNine() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         The onChange Property
       </BasicText>
@@ -400,18 +405,18 @@ export function TabsNine() {
         programmatically, use this with the <Mono>index</Mono> prop.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <OnChangeTabs />
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsTen() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Focus a specific tab by default:
       </BasicText>
@@ -421,7 +426,7 @@ export function TabsTen() {
         move focus between accordion buttons. Here, the{" "}
         <Mono>defaultIndex</Mono> on <Mono>Tabs</Mono> is set to 3.
       </BasicText>
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs isFitted defaultIndex={3}>
             <TabPanels>
@@ -460,14 +465,14 @@ export function TabsTen() {
             </TabList>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsEleven() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Disable a Tab
       </BasicText>
@@ -477,7 +482,7 @@ export function TabsEleven() {
         on the second tab.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs>
             <TabList>
@@ -492,14 +497,14 @@ export function TabsEleven() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsTwelve() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Manually activate tabs
       </BasicText>
@@ -516,7 +521,7 @@ export function TabsTwelve() {
       </BasicText>
       <Mono>Tabs: isManual variant="enclosed"</Mono>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs isManual variant="enclosed">
             <TabList>
@@ -533,14 +538,14 @@ export function TabsTwelve() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsThirteen() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Lazy Tab Mounting
       </BasicText>
@@ -555,7 +560,7 @@ export function TabsThirteen() {
 
       <Mono>Tabs: isLazy</Mono>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs isLazy>
             <TabList>
@@ -574,14 +579,14 @@ export function TabsThirteen() {
             </TabPanels>
           </Tabs>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsFourteen() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Controlled Tabs
       </BasicText>
@@ -590,18 +595,18 @@ export function TabsFourteen() {
         include an onChange as well, or else the tabs will not be interactive.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <ControlledTabs />
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsFifteen() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Custom Tab Components
       </BasicText>
@@ -611,18 +616,18 @@ export function TabsFifteen() {
         must use <Mono>React.forwardRef</Mono>.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <CustomTabs />
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function TabsSixteen() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         DataTabs
       </BasicText>
@@ -632,11 +637,11 @@ export function TabsSixteen() {
         component.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <DataArrayTabs />
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }

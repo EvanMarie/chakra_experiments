@@ -18,13 +18,14 @@ export const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  mainAccent3: "#9ffccc",
+  mainAccent3: "#5de8a0",
+  // mainAccent3: "#9ffccc",
   mainAccent4: "#4d185c",
   secondaryBackground: "#460b47",
   myblue: "#034880",
   mygrayblue: "#23394a",
   mypurple: "#892aa3",
-  codeText: "#ff03d9",
+  codeText: "#faafef",
   sectionColor: "#3d3145",
 };
 
@@ -354,6 +355,7 @@ export function SectionContainer({
 interface ExamplenContainerProps extends FlexProps {
   children?: React.ReactNode;
   bg?: string;
+  w?: string;
   [key: string]: any;
 }
 
@@ -362,8 +364,9 @@ export function ExampleContainer({
   ...restProps
 }: ExamplenContainerProps) {
   const defaultFlexProps = {
-    p: 3,
-    marginY: 0,
+    p: 4,
+    margin: 4,
+    w: "100%",
     bg: colors.mainAccent2,
     justifyContent: "center",
     alignItems: "left",

@@ -8,11 +8,16 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import {
+  BasicText,
+  ExampleContainer,
+  Mono,
+  colors,
+} from "~/styles/reusableChakraComponents";
 
 export function AccordionOne() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Default Settings
       </BasicText>
@@ -22,7 +27,7 @@ export function AccordionOne() {
         move focus between accordion buttons.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion>
             <AccordionItem>
@@ -60,14 +65,14 @@ export function AccordionOne() {
             </AccordionItem>
           </Accordion>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function AccordionTwo() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         AllowMultiple
       </BasicText>
@@ -76,7 +81,7 @@ export function AccordionTwo() {
         permit multiple items to be expanded at once.
       </BasicText>
 
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion defaultIndex={[0]} allowMultiple>
             <AccordionItem>
@@ -114,14 +119,14 @@ export function AccordionTwo() {
             </AccordionItem>
           </Accordion>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function AccordionThree() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         AllowToggle
       </BasicText>
@@ -130,7 +135,7 @@ export function AccordionThree() {
         ⦾ If you set <Mono>allowToggle</Mono> to true, any expanded item may be
         collapsed again.
       </BasicText>
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion allowToggle>
             <AccordionItem>
@@ -168,14 +173,14 @@ export function AccordionThree() {
             </AccordionItem>
           </Accordion>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function AccordionFour() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Expanded State
       </BasicText>
@@ -184,7 +189,7 @@ export function AccordionFour() {
         true or false depending on the state of the <Mono>AccordionItem</Mono>.
         Use the style prop <Mono>_expanded</Mono> to style this state.
       </BasicText>
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion>
             <AccordionItem>
@@ -207,14 +212,14 @@ export function AccordionFour() {
             </AccordionItem>
           </Accordion>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
 
 export function AccordionFive() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Internal State
       </BasicText>
@@ -223,7 +228,7 @@ export function AccordionFive() {
         can use a render prop. It provides 2 internal state props:{" "}
         <Mono>isExpanded</Mono> and <Mono>isDisabled</Mono>.
       </BasicText>
-      <Box p={5}>
+      <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion allowMultiple>
             <AccordionItem>
@@ -269,7 +274,7 @@ export function AccordionFive() {
             </AccordionItem>
           </Accordion>
         </Box>
-      </Box>
+      </ExampleContainer>
     </Box>
   );
 }
