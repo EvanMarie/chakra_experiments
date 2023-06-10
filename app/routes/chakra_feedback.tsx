@@ -64,7 +64,6 @@ export default function chakra_feedback() {
 
         <FeedbackComponentBar />
       </VStack>
-      <HStack wrap="wrap"></HStack>
 
       <div id="alert" />
       <MyLabel link="https://chakra-ui.com/docs/components/alert" size={28}>

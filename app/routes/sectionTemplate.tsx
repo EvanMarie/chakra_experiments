@@ -25,17 +25,62 @@ export default function chakra_section() {
 
         <FeedbackComponentBar />
       </VStack>
-      <HStack wrap="wrap"></HStack>
 
       <div id="component_id" />
       <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
         ComponentName:
       </MyLabel>
-      <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
-      <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-      <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-      <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-      <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+      <Box>
+        <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+      </Box>
+      <div id="component_id" />
+      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
+        ComponentName:
+      </MyLabel>
+      <Box>
+        <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+      </Box>
+      <div id="component_id" />
+      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
+        ComponentName:
+      </MyLabel>
+      <Box>
+        <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+      </Box>
+      <div id="component_id" />
+      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
+        ComponentName:
+      </MyLabel>
+      <Box>
+        <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+      </Box>
+      <div id="component_id" />
+      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
+        ComponentName:
+      </MyLabel>
+      <Box>
+        <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
+        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+      </Box>
     </BigBackgroundBox>
   );
 }

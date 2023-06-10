@@ -53,11 +53,13 @@ export default function chakra_basic_styling() {
             <i>m={4}</i>
           </b>
         </Box>
-        <div id="colors" />
-        <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#color-and-background-color">
-          Background and Font Colors:
-        </MyLabel>
-        {/* Begin the examples */}
+      </SectionContainer>
+
+      <div id="colors" />
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#color-and-background-color">
+        Background and Font Colors:
+      </MyLabel>
+      <SectionContainer>
         <Box bg="tomato" p={2} mb={3}>
           This <b>Box</b> has a <b>bg of tomato</b>.
         </Box>
