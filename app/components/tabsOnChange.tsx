@@ -50,7 +50,7 @@ export function OnChangeTabs() {
         this <b>onChange</b> functionality.
       </BasicText>
       <center>
-        <img src="onchangetabs.png" alt="OnChange Tabs" width="500px" />
+        <img src="/images/onchangetabs.png" alt="OnChange Tabs" width="500px" />
       </center>
     </>
   );

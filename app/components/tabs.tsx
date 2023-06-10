@@ -16,13 +16,13 @@ import {
   BsEmojiDizzy,
   BsEmojiKiss,
 } from "react-icons/bs";
-import { ControlledTabs } from "./controlledtabs";
+import { ControlledTabs } from "./controlledTabs";
 import CustomTabs from "./customTabs";
-import DataArrayTabs from "./datatabs";
+import DataArrayTabs from "./dataTabs";
 
 export function TabsOne() {
   return (
-    <Box marginTop="40px">
+    <Box marginTop="20px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Default Settings
       </BasicText>
@@ -244,7 +244,7 @@ export function TabsSix() {
 
 export function TabsSeven() {
   return (
-    <Box marginTop="40px">
+    <Box marginTop="20px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         TabIndicator: Styling the tab states via props
       </BasicText>

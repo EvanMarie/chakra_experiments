@@ -26,7 +26,7 @@ export function SkeletonOne() {
       <Mono>Skeleton height="20px"</Mono>
       <Box p={5}>
         <Box marginY={1}>
-          <FlexibleBox bg={colors.secondaryBackground} padding={5}>
+          <FlexibleBox bg={colors.sectionColor} padding={5}>
             <Stack>
               <Skeleton height="20px" />
               <Skeleton height="20px" />
@@ -52,7 +52,7 @@ export function SkeletonTwo() {
 
       <Box p={5}>
         <Box marginY={1}>
-          <FlexibleBox bg={colors.secondaryBackground} padding={5}>
+          <FlexibleBox bg={colors.sectionColor} padding={5}>
             <Skeleton>
               <div>contents wrapped</div>
               <div>won't be visible</div>
@@ -66,7 +66,7 @@ export function SkeletonTwo() {
 
 export function SkeletonThree() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Fetching Remote Data:
       </BasicText>
@@ -77,7 +77,7 @@ export function SkeletonThree() {
 
       <Box p={5}>
         <Box marginY={1}>
-          <FlexibleBox bg={colors.secondaryBackground} padding={5}>
+          <FlexibleBox bg={colors.sectionColor} padding={5}>
             <Flex justifyContent={"center"} alignItems={"center"}>
               <img
                 src="./images/remotedataskeleton.png"
@@ -94,7 +94,7 @@ export function SkeletonThree() {
 
 export function SkeletonFour() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Circle and Text Skeleton:
       </BasicText>
@@ -105,7 +105,7 @@ export function SkeletonFour() {
 
       <Box p={5}>
         <Box marginY={1}>
-          <FlexibleBox bg={colors.secondaryBackground} padding={5}>
+          <FlexibleBox bg={colors.sectionColor} padding={5}>
             <Box padding="6" boxShadow="lg" bg="white">
               <SkeletonCircle size="10" />
               <SkeletonText
@@ -124,7 +124,7 @@ export function SkeletonFour() {
 
 export function SkeletonFive() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Color-Changing Skeleton:
       </BasicText>
@@ -137,7 +137,7 @@ export function SkeletonFive() {
       </Mono>
       <Box p={5}>
         <Box marginY={1}>
-          <FlexibleBox bg={colors.secondaryBackground} padding={5}>
+          <FlexibleBox bg={colors.sectionColor} padding={5}>
             <Skeleton startColor="pink.500" endColor="blue.500" height="20px" />
           </FlexibleBox>
         </Box>
@@ -148,7 +148,7 @@ export function SkeletonFive() {
 
 export function SkeletonSix() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         isLoaded prop:
       </BasicText>
@@ -156,7 +156,7 @@ export function SkeletonSix() {
         ⦾ to prevent the skeleton from rendering, use <b>isLoaded</b> as shown
         below.
       </BasicText>
-      <FlexibleBox bg={colors.secondaryBackground} padding={5}>
+      <FlexibleBox bg={colors.sectionColor} padding={5}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img
             src="./images/skeletonisloaded.png"
@@ -178,7 +178,7 @@ export function SkeletonSix() {
 
 export function SkeletonSeven() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         fadeDuration prop:
       </BasicText>
@@ -191,7 +191,7 @@ export function SkeletonSeven() {
 
       <Box p={5}>
         <Box marginY={1}>
-          <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+          <FlexibleBox bg={colors.sectionColor} padding={2}>
             <FadeDurationSkeleton />
           </FlexibleBox>
         </Box>

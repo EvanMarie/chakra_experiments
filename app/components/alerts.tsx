@@ -7,11 +7,11 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
-import CloseButtonAlert from "./closebuttonalert";
+import CloseButtonAlert from "./closeButtonAlert";
 
 export function AlertOne() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         General Usage
       </BasicText>
@@ -40,7 +40,7 @@ export function AlertOne() {
 
 export function AlertTwo() {
   return (
-    <Box marginTop="40px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Status
       </BasicText>
@@ -82,7 +82,7 @@ export function AlertTwo() {
 
 export function AlertThree() {
   return (
-    <Box marginTop="40px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Variants
       </BasicText>
@@ -125,7 +125,7 @@ export function AlertThree() {
 
 export function AlertFour() {
   return (
-    <Box marginTop="40px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Composition
       </BasicText>
@@ -185,7 +185,7 @@ export function AlertFour() {
 
 export function AlertFive() {
   return (
-    <Box marginTop="40px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Incorporating a <b>CloseButton</b>
       </BasicText>

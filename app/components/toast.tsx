@@ -15,11 +15,11 @@ import {
   ToastSixFunction,
   ToastThreeFunction,
   ToastTwoFunction,
-} from "./ToastFunctions";
+} from "./toastFunctions";
 
 export function ToastOne() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Simple Example
       </BasicText>
@@ -31,7 +31,7 @@ export function ToastOne() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+        <FlexibleBox bg={colors.sectionColor} padding={2}>
           <ToastOneFunction />
         </FlexibleBox>
       </Box>
@@ -40,7 +40,7 @@ export function ToastOne() {
         toast. See an explanation of the code step-by-step below.{" "}
       </BasicText>
 
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastonecode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -93,7 +93,7 @@ export function ToastOne() {
 
 export function ToastTwo() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Custom Component Toast:
       </BasicText>
@@ -103,11 +103,11 @@ export function ToastTwo() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+        <FlexibleBox bg={colors.sectionColor} padding={2}>
           <ToastTwoFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toasttwocode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -118,7 +118,7 @@ export function ToastTwo() {
 
 export function ToastThree() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Closing Toast Components:
       </BasicText>
@@ -129,11 +129,11 @@ export function ToastThree() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={4}>
+        <FlexibleBox bg={colors.sectionColor} padding={4}>
           <ToastThreeFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastthreecode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -144,9 +144,9 @@ export function ToastThree() {
 
 export function ToastFour() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Upading Toast Components:
+        Updating Toast Components:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ Toasts' options can be updated, by passing an id and the new options
@@ -154,11 +154,11 @@ export function ToastFour() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+        <FlexibleBox bg={colors.sectionColor} padding={3}>
           <ToastFourFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastfourcode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -169,7 +169,7 @@ export function ToastFour() {
 
 export function ToastFive() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Toast Statuses
       </BasicText>
@@ -178,11 +178,11 @@ export function ToastFive() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+        <FlexibleBox bg={colors.sectionColor} padding={2}>
           <ToastFiveFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastfivecode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -193,7 +193,7 @@ export function ToastFive() {
 
 export function ToastSix() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Variants on Toast
       </BasicText>
@@ -218,11 +218,11 @@ export function ToastSix() {
         </ul>
       </Box>
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+        <FlexibleBox bg={colors.sectionColor} padding={2}>
           <ToastSixFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastsixcode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -233,7 +233,7 @@ export function ToastSix() {
 
 export function ToastSeven() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Customizing the Container of the Toast:
       </BasicText>
@@ -243,11 +243,11 @@ export function ToastSeven() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+        <FlexibleBox bg={colors.sectionColor} padding={3}>
           <ToastSevenFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastsevencode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -258,7 +258,7 @@ export function ToastSeven() {
 
 export function ToastEight() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Positioning the Toast:
       </BasicText>
@@ -268,11 +268,11 @@ export function ToastEight() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+        <FlexibleBox bg={colors.sectionColor} padding={2}>
           <ToastEightFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toasteightcode.png" alt="skeleton" width="425px" />
         </Flex>
@@ -283,7 +283,7 @@ export function ToastEight() {
 
 export function ToastNine() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="10px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Preventing Duplicate Toast:
       </BasicText>
@@ -295,11 +295,11 @@ export function ToastNine() {
       </BasicText>
 
       <Box p={1}>
-        <FlexibleBox bg={colors.secondaryBackground} padding={2}>
+        <FlexibleBox bg={colors.sectionColor} padding={2}>
           <ToastNineFunction />
         </FlexibleBox>
       </Box>
-      <FlexibleBox bg={colors.secondaryBackground} padding={3}>
+      <FlexibleBox bg={colors.sectionColor} padding={3}>
         <Flex justifyContent={"center"} alignItems={"center"}>
           <img src="./images/toastninecode.png" alt="skeleton" width="425px" />
         </Flex>

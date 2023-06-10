@@ -2,12 +2,14 @@ import {
   Box,
   BoxProps,
   Flex,
+  FlexProps,
   Grid,
   HStack,
   Link,
   Text,
   chakra,
 } from "@chakra-ui/react";
+import { BiHome } from "react-icons/bi";
 
 export const colors = {
   mainBackground: "#141114",
@@ -21,7 +23,8 @@ export const colors = {
   myblue: "#034880",
   mygrayblue: "#23394a",
   mypurple: "#892aa3",
-  codeText: "#ff5ee7",
+  codeText: "#ff03d9",
+  sectionColor: "#3d3145",
 };
 
 export const mainMenuButtons = {
@@ -37,9 +40,9 @@ export const mainMenuButtons = {
 export const sectionMenuButtons = {
   bg: colors.myblue,
   hoverbg: colors.mygrayblue,
-  width: "120px",
+  width: "130px",
   fontWeight: "bold",
-  fontSize: "11px",
+  fontSize: "13px",
   border: "0px",
   p: "2px",
   mx: 0,
@@ -69,25 +72,21 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
 
 interface MyHeadingProps {
   children: React.ReactNode;
-  fontFamily?: string;
   size?: number;
   color?: string;
+  mb?: number;
+  mt?: number;
 }
 
 export function MyHeading({
   children,
   size = 33,
-  fontFamily = "monospace",
+  mb = 3,
+  mt = 3,
   color = colors.mainAccent2,
 }: MyHeadingProps) {
   return (
-    <Text
-      fontSize={size}
-      color={color}
-      mb={3}
-      fontFamily={fontFamily}
-      fontWeight="bold"
-    >
+    <Text fontSize={size} color={color} mb={mb} mt={mt} fontWeight="bold">
       {children}
     </Text>
   );
@@ -147,14 +146,6 @@ export function MyButton({
   );
 }
 
-interface MyLabelProps {
-  children?: React.ReactNode;
-  size?: number;
-  labelColor?: string;
-  linkColor?: string;
-  link?: string;
-}
-
 const CustomLink = chakra(Link, {
   baseStyle: {
     _hover: {
@@ -176,6 +167,14 @@ export function HorizontalLine() {
   );
 }
 
+interface MyLabelProps {
+  children?: React.ReactNode;
+  size?: number;
+  labelColor?: string;
+  linkColor?: string;
+  link?: string;
+}
+
 export function MyLabel({
   size = 28,
   labelColor = colors.mainAccent,
@@ -187,34 +186,47 @@ export function MyLabel({
     return (
       <>
         <HorizontalLine />
-        <Text fontSize={size} color={labelColor} mb={3} fontWeight="bold">
-          {children}
-        </Text>
+        <Flex justifyContent={"space-between"}>
+          <Text fontSize={size} color={labelColor} fontWeight="bold">
+            {children}
+          </Text>
+          <Link href="/">
+            <BiHome size="40px" color="deeppink" />
+          </Link>
+        </Flex>
       </>
     );
   } else {
     return (
       <>
         <HorizontalLine />
-        <HStack
-          spacing={3}
-          paddingX={3}
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Text fontSize={size} color={labelColor} mb={3} fontWeight="bold">
+        <Flex justifyContent={"space-between"}>
+          <Text fontSize={size} color={labelColor} fontWeight="bold">
             {children}
           </Text>
-          <CustomLink
-            href={link}
-            target="blank"
-            fontSize={size - 10}
-            color={linkColor}
-            mb={3}
+          <HStack
+            w="300px"
+            spacing={3}
+            paddingX={3}
+            alignItems="center"
+            justifyContent={"space-between"}
           >
-            / Chakra Docs /
-          </CustomLink>
-        </HStack>
+            <Text fontSize="28px">|</Text>
+            <CustomLink
+              href={link}
+              target="blank"
+              fontSize={size - 10}
+              color={linkColor}
+            >
+              Chakra Docs
+            </CustomLink>
+            <Text fontSize="28px">|</Text>
+            <Link href="/">
+              <BiHome size="25px" color="deeppink" />
+            </Link>
+            <Text fontSize="28px">|</Text>
+          </HStack>
+        </Flex>
       </>
     );
   }
@@ -264,15 +276,18 @@ interface MonoProps {
   children?: React.ReactNode;
   fontSize?: string;
   width?: string;
+  fontWeight?: string;
 }
 
 export function Mono({
   children,
-  fontSize = "14px",
+  fontSize = "15px",
   width = "100%",
+  fontWeight = "bold",
 }: MonoProps) {
   const monoStyle = {
     fontFamily: "monospace !important",
+    fontWeight: fontWeight,
     color: colors.codeText,
     fontSize: `${fontSize} !important`,
     width: `${width} !important`,
@@ -299,5 +314,34 @@ export function CompWithLabel({
         {children[1]}
       </Flex>
     </Grid>
+  );
+}
+
+interface SectionContainerProps extends FlexProps {
+  children?: React.ReactNode;
+  [key: string]: any;
+}
+
+export function SectionContainer({
+  children,
+  ...restProps
+}: SectionContainerProps) {
+  const defaultFlexProps = {
+    p: 3,
+    marginY: 3,
+    bg: colors.sectionColor,
+    justifyContent: "center",
+    alignItems: "left",
+    borderRadius: "sm",
+  };
+
+  return (
+    <Flex
+      {...defaultFlexProps}
+      flexDirection={{ base: "column" }}
+      {...restProps}
+    >
+      {children}
+    </Flex>
   );
 }
