@@ -20,4 +20,12 @@ module.exports = {
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
+  mdx: async (filename) => {
+    const [rehypeHighlight] = await Promise.all([
+      import('rehype-highlight').then((mod) => mod.default),
+    ]);
+    return {
+      rehypePlugins: [rehypeHighlight],
+    };
+  }
 };

@@ -19,6 +19,7 @@
     "@remix-run/serve": "^1.17.0",
     "framer-motion": "^6.5.1",
     "highlight": "^0.2.4",
+    "highlight.js": "^11.8.0",
     "isbot": "^3.6.8",
     "marked": "^5.1.0",
     "marked-highlight": "^2.0.1",
@@ -26,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-highlight": "^0.15.0",
     "react-icons": "^4.9.0",
+    "rehype-highlight": "^6.0.0",
     "remix-flat-routes": "^0.5.8"
   },
   "devDependencies": {
