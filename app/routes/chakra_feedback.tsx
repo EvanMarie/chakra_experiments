@@ -18,7 +18,9 @@ import {
   BasicText,
   BigBackgroundBox,
   CompWithLabel,
+  Divider,
   ExampleContainer,
+  HorizontalLine,
   Mono,
   MyLabel,
   SectionContainer,
@@ -258,6 +260,7 @@ export default function chakra_feedback() {
                   />,
                 ]}
               </CompWithLabel>
+
               <CompWithLabel>
                 {[
                   <Mono key={1}>
