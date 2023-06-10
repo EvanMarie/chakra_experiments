@@ -1,29 +1,65 @@
 import { Box } from "@chakra-ui/react";
+import { ExampleContainer, colors } from "~/styles/reusableChakraComponents";
 
 export function ComponentFunctionOne() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }
 
 export function ComponentFunctionTwo() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }
 
 export function ComponentFunctionThree() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }
 
 export function ComponentFunctionFour() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }
 
 export function ComponentFunctionFive() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }
 
 export function ComponentFunctionSix() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }
 
 export function ComponentFunctionSeven() {
-  return <Box>Function Logic</Box>;
+  return (
+    <ExampleContainer bg={colors.mainBackground}>
+      {" "}
+      Function Logic
+    </ExampleContainer>
+  );
 }

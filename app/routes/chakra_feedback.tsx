@@ -71,7 +71,8 @@ export default function chakra_feedback() {
       <MyLabel link="https://chakra-ui.com/docs/components/alert" size={28}>
         Alert:
       </MyLabel>
-      <SectionContainer>
+
+      <SectionContainer bg={colors.mainAccent4}>
         <Box p={3}>
           <BasicText>
             <b>⦾ Alert</b>: The wrapper for alert components.{" "}
@@ -146,14 +147,14 @@ export default function chakra_feedback() {
             </ul>
           </Box>
           <ExampleContainer bg={colors.mainBackground}>
-            <VStack spacing={5} align="center">
-              <CompWithLabel>
+            <VStack spacing={4} align="center" overflow="hidden">
+              <CompWithLabel fontSize={15}>
                 {[
                   <CircularProgress key={1} value={80} />,
                   <Mono key={2}>CircularProgress value={80}</Mono>,
                 ]}
               </CompWithLabel>
-              <CompWithLabel>
+              <CompWithLabel fontSize={15}>
                 {[
                   <CircularProgress key={1} value={30} size="120px" />,
                   <Mono key={2}>
@@ -163,7 +164,7 @@ export default function chakra_feedback() {
                 ]}
               </CompWithLabel>
 
-              <CompWithLabel>
+              <CompWithLabel fontSize={15}>
                 {[
                   <CircularProgress
                     key={1}
@@ -176,7 +177,7 @@ export default function chakra_feedback() {
                   </Mono>,
                 ]}
               </CompWithLabel>
-              <CompWithLabel>
+              <CompWithLabel fontSize={15}>
                 {[
                   <CircularProgress
                     key={1}
@@ -191,7 +192,7 @@ export default function chakra_feedback() {
                 ]}
               </CompWithLabel>
 
-              <CompWithLabel>
+              <CompWithLabel fontSize={15}>
                 {[
                   <Box key={1}>
                     <CircularProgress value={40} color="green.400">
@@ -204,16 +205,18 @@ export default function chakra_feedback() {
                   </VStack>,
                 ]}
               </CompWithLabel>
-              <CompWithLabel>
+              <CompWithLabel fontSize={15}>
                 {[
                   <CircularProgress
                     key={1}
                     isIndeterminate
                     color="green.300"
                   />,
-                  <Mono key={2}>
-                    CircularProgress isIndeterminate color='green.300'
-                  </Mono>,
+                  <VStack key={2}>
+                    <Mono>CircularProgress </Mono>
+                    <Mono>isIndeterminate</Mono>
+                    <Mono>color='green.300'</Mono>
+                  </VStack>,
                 ]}
               </CompWithLabel>
             </VStack>

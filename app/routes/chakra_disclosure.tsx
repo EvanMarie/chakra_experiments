@@ -39,6 +39,7 @@ import {
   Mono,
   MyLabel,
   SectionContainer,
+  colors,
 } from "~/styles/reusableChakraComponents";
 
 export const links: LinksFunction = () => [
@@ -62,10 +63,13 @@ export default function chakra_basic_styling() {
       <MyLabel link="https://chakra-ui.com/docs/components/accordion" size={28}>
         Accordion:
       </MyLabel>
-      <BasicText>
-        Pressing space or enter when focus is on the accordion panel header will
-        toggle (expand or collapse) the accordion.
-      </BasicText>
+      <SectionContainer bg={colors.mainAccent4}>
+        <BasicText>
+          Pressing space or enter when focus is on the accordion panel header
+          will toggle (expand or collapse) the accordion.
+        </BasicText>
+      </SectionContainer>
+
       <SectionContainer>
         <AccordionOne />
       </SectionContainer>
@@ -87,7 +91,8 @@ export default function chakra_basic_styling() {
       <MyLabel link="https://chakra-ui.com/docs/components/tabs" size={28}>
         Tabs:
       </MyLabel>
-      <SectionContainer>
+
+      <SectionContainer bg={colors.mainAccent4}>
         <Box paddingX={5}>
           <ul>
             <li>
@@ -105,6 +110,7 @@ export default function chakra_basic_styling() {
               element that contains the content associated with a tab
             </li>
           </ul>
+          <br />
           <p>
             You can render any element within Tabs, but TabList should only have
             Tab as children, and <Mono>TabPanels</Mono> should have{" "}

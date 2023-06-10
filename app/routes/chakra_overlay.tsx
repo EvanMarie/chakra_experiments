@@ -19,6 +19,7 @@ import {
   AlertDialogueOne,
   AlertDialogueTwo,
 } from "~/components/overlay/alertDialog";
+import { Experiment } from "~/styles/codeExamples";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -42,7 +43,7 @@ export default function chakra_overlay() {
         Alert Dialog:
       </MyLabel>
       <Box>
-        <SectionContainer>
+        <SectionContainer bg={colors.mainAccent4}>
           <BasicText>
             The Alert Dialog is a component that allows you to display a dialog
             box with a <Mono>title</Mono>, <Mono>description</Mono>, and{" "}
@@ -143,15 +144,22 @@ export default function chakra_overlay() {
         <SectionContainer>
           <AlertDialogueTwo />
         </SectionContainer>
-        <SectionContainer>EX 3</SectionContainer>
-        <SectionContainer>EX 4</SectionContainer>
-        <SectionContainer>EX 5</SectionContainer>
       </Box>
-      <div id="component_id" />
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
+      <div id="drawer" />
+      <MyLabel link="https://chakra-ui.com/docs/components/drawer" size={28}>
+        Drawer:
       </MyLabel>
+      {/*  Section Introduction */}
       <Box>
+        <SectionContainer bg={colors.mainAccent4}>
+          <BasicText>Text</BasicText>
+          <Box paddingX={10}>
+            <BasicText>Text</BasicText>
+          </Box>
+          <FlexibleBox p={3} m={3} bg={colors.myblue}>
+            <BasicText>Text</BasicText>
+          </FlexibleBox>
+        </SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
@@ -162,7 +170,18 @@ export default function chakra_overlay() {
       <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
         ComponentName:
       </MyLabel>
+      {/*  Section Introduction */}
       <Box>
+        <SectionContainer bg={colors.mainAccent4}>
+          <BasicText>Text</BasicText>
+
+          <Box paddingX={10}>
+            <BasicText>Text</BasicText>
+          </Box>
+          <FlexibleBox p={3} m={3} bg={colors.myblue}>
+            <BasicText>Text</BasicText>
+          </FlexibleBox>
+        </SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
@@ -173,7 +192,18 @@ export default function chakra_overlay() {
       <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
         ComponentName:
       </MyLabel>
+      {/*  Section Introduction */}
       <Box>
+        <SectionContainer bg={colors.mainAccent4}>
+          <BasicText>Text</BasicText>
+
+          <Box paddingX={10}>
+            <BasicText>Text</BasicText>
+          </Box>
+          <FlexibleBox p={3} m={3} bg={colors.myblue}>
+            <BasicText>Text</BasicText>
+          </FlexibleBox>
+        </SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>

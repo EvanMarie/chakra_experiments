@@ -282,6 +282,8 @@ interface MonoProps {
   children?: React.ReactNode;
   fontSize?: string | number;
   width?: string;
+  marginY?: number;
+  lineHeight?: string;
   fontWeight?: string;
 }
 
@@ -289,11 +291,15 @@ export function Mono({
   children,
   fontSize = BasicTextSize,
   width = "100%",
+  marginY = 0,
+  lineHeight = "1",
   fontWeight = "normal",
 }: MonoProps) {
   const monoStyle = {
     fontFamily: "monospace !important",
     fontWeight: fontWeight,
+    marginY: `${marginY} !important`,
+    lineheight: `${lineHeight} !important`,
     color: colors.codeText,
     fontSize: `${fontSize} !important`,
     width: `${width} !important`,
@@ -303,23 +309,33 @@ export function Mono({
 
 interface CompWithLabelProps {
   children: React.ReactNode[];
-  fontSize?: string;
+  fontSize?: string | number;
   split?: string;
+  leftColAlign?: string;
+  rightColAlign?: string;
 }
 export function CompWithLabel({
   children,
-  fontSize = "15px",
+  fontSize = BasicTextSize,
   split = "40% 60%",
+  leftColAlign = "center",
+  rightColAlign = "left",
 }: CompWithLabelProps) {
   return (
-    <Grid w="100%" templateColumns={split}>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        {children[0]}
-      </Flex>
-      <Flex fontSize={fontSize} justifyContent={"center"} alignItems={"center"}>
-        {children[1]}
-      </Flex>
-    </Grid>
+    <Box w="100%">
+      <Grid templateColumns={split}>
+        <Flex justifyContent={"center"} alignItems={leftColAlign}>
+          {children[0]}
+        </Flex>
+        <Flex
+          fontSize={fontSize}
+          justifyContent={rightColAlign}
+          alignItems={"center"}
+        >
+          {children[1]}
+        </Flex>
+      </Grid>
+    </Box>
   );
 }
 
@@ -333,7 +349,8 @@ export function SectionContainer({
   ...restProps
 }: SectionContainerProps) {
   const defaultFlexProps = {
-    p: 3,
+    p: 5,
+    overflow: "auto",
     marginY: 3,
     bg: colors.sectionColor,
     justifyContent: "center",
@@ -365,7 +382,7 @@ export function ExampleContainer({
 }: ExamplenContainerProps) {
   const defaultFlexProps = {
     p: 4,
-    margin: 4,
+    overflow: "auto",
     w: "100%",
     bg: colors.mainAccent2,
     justifyContent: "center",

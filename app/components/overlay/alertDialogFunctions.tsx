@@ -11,14 +11,14 @@ import {
   AlertDialogCloseButton,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { ExampleContainer } from "~/styles/reusableChakraComponents";
+import { ExampleContainer, colors } from "~/styles/reusableChakraComponents";
 
 export function AlertDialogFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <ExampleContainer>
+    <ExampleContainer bg={colors.mainBackground}>
       <Button colorScheme="red" onClick={onOpen}>
         Delete Customer
       </Button>
@@ -58,8 +58,8 @@ export function AlertDialogFunctionTwo() {
   const cancelRef = useRef<HTMLButtonElement | null>(null);
 
   return (
-    <ExampleContainer>
-      <Button onClick={onOpen}>Discard</Button>
+    <ExampleContainer bg={colors.mainBackground}>
+      <Button onClick={onOpen}>Are you sure?</Button>
       <AlertDialog
         motionPreset="slideInBottom"
         leastDestructiveRef={cancelRef}
@@ -70,42 +70,21 @@ export function AlertDialogFunctionTwo() {
         <AlertDialogOverlay />
 
         <AlertDialogContent>
-          <AlertDialogHeader>Discard Changes?</AlertDialogHeader>
+          <AlertDialogHeader>Just checking:</AlertDialogHeader>
           <AlertDialogCloseButton />
           <AlertDialogBody>
-            Are you sure you want to discard all of your notes? 44 words will be
-            deleted.
+            Do you really want to give me that delicious cheeseburger 🍔 ?
           </AlertDialogBody>
           <AlertDialogFooter>
             <Button ref={cancelRef} onClick={onClose}>
-              No
+              No way!
             </Button>
             <Button colorScheme="red" ml={3}>
-              Yes
+              Of course!
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     </ExampleContainer>
   );
-}
-
-export function AlertDialogFunctionThree() {
-  return <Box>Function Logic</Box>;
-}
-
-export function AlertDialogFunctionFour() {
-  return <Box>Function Logic</Box>;
-}
-
-export function AlertDialogFunctionFive() {
-  return <Box>Function Logic</Box>;
-}
-
-export function AlertDialogFunctionSix() {
-  return <Box>Function Logic</Box>;
-}
-
-export function AlertDialogFunctionSeven() {
-  return <Box>Function Logic</Box>;
 }

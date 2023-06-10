@@ -8,7 +8,7 @@ import {
 
 export function AlertDialogueOne() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Default Usage
       </BasicText>
@@ -41,7 +41,7 @@ export function AlertDialogueOne() {
 
 export function AlertDialogueTwo() {
   return (
-    <Box marginTop="20px">
+    <Box marginTop="5px">
       <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
         Modifying the Animated Transition:
       </BasicText>
@@ -68,36 +68,13 @@ export function AlertDialogueTwo() {
           <AlertDialogFunctionTwo />
         </Box>
       </Box>
-    </Box>
-  );
-}
-
-export function AlertDialogueThree() {
-  return (
-    <Box marginTop="20px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        HEADING
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>⦾ DESCRIPTION</BasicText>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
-      </Box>
-    </Box>
-  );
-}
-
-export function AlertDialogueFour() {
-  return (
-    <Box marginTop="20px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        HEADING
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>⦾ DESCRIPTION</BasicText>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
-      </Box>
+      <Flex justifyContent={"center"} alignItems={"center"}>
+        <img
+          src="./images/alertdialogcodetwo.png"
+          alt="skeleton"
+          width="425px"
+        />
+      </Flex>
     </Box>
   );
 }
