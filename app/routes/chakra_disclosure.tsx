@@ -36,6 +36,8 @@ import stylesUrl from "~/styles/global.css";
 import {
   BasicText,
   BigBackgroundBox,
+  FlexibleBox,
+  HL,
   Mono,
   MyLabel,
   SectionContainer,
@@ -58,6 +60,37 @@ export default function chakra_basic_styling() {
 
         <DisclosureComponentBar />
       </VStack>
+
+      <SectionContainer>
+        <BasicText color={colors.mainAccent3}>
+          Chakra UI offers two main components for Disclosure: accordions and
+          tabs.
+        </BasicText>
+        <FlexibleBox bg={colors.myblue} p={4}>
+          <BasicText>
+            <HL>Accordions</HL> and <HL>tabs</HL> are user interface components
+            that can be used to organize and display content in a structured and
+            user-friendly way.{" "}
+          </BasicText>
+          <Box p={4}>
+            <BasicText>
+              In Chakra UI, the <Mono>Accordion</Mono> component is a wrapper
+              that uses <Mono>cloneElement</Mono> to pass props to AccordionItem
+              children, while the <Mono>AccordionItem</Mono> component is a
+              child of the <Mono>Accordion</Mono> component that can be used to
+              display content in a collapsible and expandable manner.{" "}
+            </BasicText>
+            <BasicText>
+              The <Mono>Tabs</Mono> component, on the other hand, can be used to
+              create tabbed interfaces in React applications, allowing users to
+              switch between different sections of content without leaving the
+              page. Both Accordions and Tabs can be used to improve the user
+              experience by organizing content in a structured and
+              easy-to-navigate way.
+            </BasicText>
+          </Box>
+        </FlexibleBox>
+      </SectionContainer>
 
       <div id="accordion" />
       <MyLabel link="https://chakra-ui.com/docs/components/accordion" size={28}>

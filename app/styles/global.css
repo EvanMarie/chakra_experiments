@@ -10,6 +10,11 @@ li, ul, ol, p {
     font-size: 16px;
 }
 
+ul {
+    list-style-type: circle;
+}
+
+
 a {
     color: deeppink !important;
     text-decoration: none;

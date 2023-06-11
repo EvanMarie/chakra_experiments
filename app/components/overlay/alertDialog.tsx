@@ -31,13 +31,6 @@ export function AlertDialogueOne() {
           <AlertDialogFunctionOne />
         </Box>
       </Box>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <img
-          src="./images/alertdialogcodeone.png"
-          alt="skeleton"
-          width="425px"
-        />
-      </Flex>
     </Box>
   );
 }
@@ -72,13 +65,6 @@ export function AlertDialogueTwo() {
           <AlertDialogFunctionTwo />
         </Box>
       </Box>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <img
-          src="./images/alertdialogcodetwo.png"
-          alt="skeleton"
-          width="425px"
-        />
-      </Flex>
     </Box>
   );
 }

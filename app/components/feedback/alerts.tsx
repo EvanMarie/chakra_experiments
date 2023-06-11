@@ -136,29 +136,6 @@ export function AlertFour() {
         ⦾ There are numerous layouts possible with <Mono>Alert</Mono>. The
         following alert has these properties:
       </BasicText>
-      <Box paddingX={6}>
-        <p>
-          <Mono>status="success"</Mono>
-        </p>
-        <p>
-          <Mono> variant="subtle" </Mono>
-        </p>
-        <p>
-          <Mono>flexDirection="column"</Mono>
-        </p>
-        <p>
-          <Mono>alignItems="center" </Mono>
-        </p>
-        <p>
-          <Mono>justifyContent="center" </Mono>
-        </p>
-        <p>
-          <Mono>textAlign="center"</Mono>
-        </p>
-        <p>
-          <Mono>height="200px"</Mono>
-        </p>
-      </Box>
       <Box p={5}>
         <Box marginY={1}>
           <Alert
@@ -201,18 +178,6 @@ export function AlertFive() {
       <Box p={5}>
         <Box marginY={1}>
           <CloseButtonAlert />
-        </Box>
-        <br />
-        <BasicText>
-          Below is the code for my variation on this example from the Chakra
-          documentation.
-        </BasicText>
-        <Box justifyContent={"center"} display={"flex"}>
-          <img
-            src="/images/closebuttonalert.png"
-            alt="Chakra Alert with CloseButton"
-            width="600px"
-          />
         </Box>
       </Box>
     </Box>

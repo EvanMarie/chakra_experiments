@@ -7,6 +7,7 @@ import {
   HStack,
   Link,
   Text,
+  VStack,
   chakra,
 } from "@chakra-ui/react";
 import { BiHome } from "react-icons/bi";
@@ -25,6 +26,7 @@ export const colors = {
   mypurple: "#892aa3",
   codeText: "#faafef",
   sectionColor: "#3d3145",
+  highlighterColor: "#faa5b9",
 };
 
 export const mainMenuButtons = {
@@ -285,35 +287,6 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
   );
 }
 
-interface MonoProps {
-  children?: React.ReactNode;
-  fontSize?: string | number;
-  width?: string;
-  marginY?: number;
-  lineHeight?: string;
-  fontWeight?: string;
-}
-
-export function Mono({
-  children,
-  fontSize = BasicTextSize,
-  width = "100%",
-  marginY = 0,
-  lineHeight = "1",
-  fontWeight = "normal",
-}: MonoProps) {
-  const monoStyle = {
-    fontFamily: "monospace !important",
-    fontWeight: fontWeight,
-    marginY: `${marginY} !important`,
-    lineheight: `${lineHeight} !important`,
-    color: colors.codeText,
-    fontSize: `${fontSize} !important`,
-    width: `${width} !important`,
-  };
-  return <span style={monoStyle}>{children}</span>;
-}
-
 interface CompWithLabelProps {
   children: React.ReactNode[];
   fontSize?: string | number;
@@ -331,11 +304,16 @@ export function CompWithLabel({
   return (
     <Box w="100%">
       <Grid templateColumns={split}>
-        <Flex justifyContent={"center"} alignItems={leftColAlign}>
+        <Flex
+          justifyContent={"center"}
+          overflow="scroll"
+          alignItems={leftColAlign}
+        >
           {children[0]}
         </Flex>
         <Flex
           fontSize={fontSize}
+          overflow="scroll"
           justifyContent={rightColAlign}
           alignItems={"center"}
         >
@@ -357,7 +335,7 @@ export function SectionContainer({
 }: SectionContainerProps) {
   const defaultFlexProps = {
     p: 5,
-    overflow: "auto",
+    // overflow: "auto",
     fontSize: BasicTextSize,
     marginY: 3,
     bg: colors.sectionColor,
@@ -390,7 +368,7 @@ export function ExampleContainer({
 }: ExamplenContainerProps) {
   const defaultFlexProps = {
     p: 4,
-    overflow: "auto",
+    // overflow: "auto",
     fontSize: BasicTextSize,
     w: "100%",
     bg: colors.mainAccent2,
@@ -410,6 +388,91 @@ export function ExampleContainer({
   );
 }
 
-export function Divider() {
+export function MyDivider() {
   return <HorizontalLine h="0.35px" mb="1px" mt="1px" />;
+}
+
+interface HighlightMeProps {
+  children?: React.ReactNode;
+  color?: string;
+  fontWeight?: string;
+  size?: string | number;
+}
+
+export function HL({
+  children,
+  color = colors.highlighterColor,
+  size = "16px",
+  fontWeight = "bold",
+}: HighlightMeProps) {
+  return (
+    <Text as="span" color={color} fontSize={size} fontWeight={fontWeight}>
+      {children}
+    </Text>
+  );
+}
+
+interface MonoProps {
+  children?: React.ReactNode;
+  fontSize?: string | number;
+  width?: string;
+  marginY?: number;
+  lineHeight?: string;
+  fontWeight?: string;
+}
+
+export function Mono({
+  children,
+  fontSize = BasicTextSize,
+  width = "100%",
+  marginY = 0,
+  lineHeight = "1",
+  fontWeight = "normal",
+}: MonoProps) {
+  const monoStyle = {
+    fontFamily: "monospace !important",
+    fontWeight: fontWeight,
+    marginY: `${marginY} !important`,
+    lineheight: `${lineHeight} !important`,
+    color: colors.codeText,
+    fontSize: `${fontSize} !important`,
+    width: `${width} !important`,
+  };
+  return <span style={monoStyle}>{children}</span>;
+}
+
+interface StackedExampleProps extends FlexProps {
+  children?: React.ReactNode;
+  bg?: string | undefined;
+  w?: string;
+  spacing?: number;
+  [key: string]: any;
+}
+
+export function StackedExample({
+  children,
+  spacing = 3,
+  ...restProps
+}: StackedExampleProps) {
+  const defaultFlexProps = {
+    p: 4,
+    fontSize: BasicTextSize,
+    w: "100%",
+    bg: undefined,
+    justifyContent: "center",
+    alignItems: "left",
+    borderRadius: "sm",
+  };
+
+  return (
+    <Box
+      {...defaultFlexProps}
+      flexDirection={{ base: "column" }}
+      {...restProps}
+    >
+      <VStack spacing={spacing} align="center">
+        {children}
+      </VStack>
+    </Box>
+  );
 }

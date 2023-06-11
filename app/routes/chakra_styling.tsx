@@ -17,6 +17,7 @@ import {
   HorizontalLine,
   SectionContainer,
   ExampleContainer,
+  HL,
 } from "~/styles/reusableChakraComponents";
 
 import type { LinksFunction } from "@remix-run/node";
@@ -53,40 +54,40 @@ export default function chakra_basic_styling() {
           </Box>
           <Box p={4}>
             <BasicText>
-              <b>Design Tokens</b>: Chakra UI defines a set of design tokens
+              <HL>Design Tokens</HL>: Chakra UI defines a set of design tokens
               such as colors, spacing, typography, and shadows. These tokens are
               used consistently throughout the application to maintain a
               cohesive visual style.{" "}
             </BasicText>
             <BasicText>
-              <b>Component-based approach</b>: Chakra UI offers a wide range of
-              customizable components that follow best practices and provide
+              <HL>Component-based approach</HL>: Chakra UI offers a wide range
+              of customizable components that follow best practices and provide
               consistent styling out of the box. These components can be easily
               composed together to build complex UIs.{" "}
             </BasicText>
             <BasicText>
-              <b>Utility Props</b>: Chakra UI introduces utility props that
+              <HL>Utility Props</HL>: Chakra UI introduces utility props that
               allow you to apply common styles directly to components without
               writing CSS. For example, you can set margin, padding, color, and
               more using intuitive prop names.{" "}
             </BasicText>
             <BasicText>
-              <b>Responsive Styles</b>: Chakra UI provides a responsive design
+              <HL>Responsive Styles</HL>: Chakra UI provides a responsive design
               system, allowing you to define styles that adapt to different
               screen sizes. You can use breakpoint modifiers to specify
               different styles for various screen sizes.{" "}
             </BasicText>
             <BasicText>
-              <b>Theming</b>: Chakra UI offers a powerful theming system that
+              <HL>Theming</HL>: Chakra UI offers a powerful theming system that
               allows you to customize the design tokens and default styles
               according to your application's needs. You can create and extend
               themes to achieve a consistent and branded look.{" "}
             </BasicText>
             <BasicText>
-              <b>Style Props and CSS Prop</b>: Chakra UI introduces style props
-              and the CSS prop, allowing you to apply inline styles directly to
-              components. This provides flexibility for custom styling while
-              leveraging the benefits of the Chakra UI system.{" "}
+              <HL>Style Props and CSS Prop</HL>: Chakra UI introduces style
+              props and the CSS prop, allowing you to apply inline styles
+              directly to components. This provides flexibility for custom
+              styling while leveraging the benefits of the Chakra UI system.{" "}
             </BasicText>
           </Box>
           <Box>
@@ -105,17 +106,17 @@ export default function chakra_basic_styling() {
         Padding and Margin:
       </MyLabel>
       <SectionContainer>
-        <Box p={2} bg={colors.mainAccent2} mb={3} color={colors.secondaryText}>
-          This <b>Box</b> has a padding setting of
-          <b>
+        <Box p={2} bg={colors.mypurple} mb={3}>
+          This <Mono>Box</Mono> has a padding setting of{" "}
+          <Mono>
             <i>p={2}</i>
-          </b>
+          </Mono>
         </Box>
-        <Box m={4} bg={colors.mainAccent2} mb={3} color={colors.secondaryText}>
-          This <b>Box</b> has a margin setting of{" "}
-          <b>
+        <Box m={4} bg={colors.myblue} mb={3}>
+          This <Mono>Box</Mono> has a margin setting of{" "}
+          <Mono>
             <i>m={4}</i>
-          </b>
+          </Mono>
         </Box>
       </SectionContainer>
 
@@ -124,23 +125,18 @@ export default function chakra_basic_styling() {
         Background and Font Colors:
       </MyLabel>
       <SectionContainer>
-        <Box bg="tomato" p={2} mb={3}>
-          This <b>Box</b> has a <b>bg of tomato</b>.
+        <Box bg="blue" p={2} mb={3}>
+          This <Mono>Box</Mono> has a <Mono>bg</Mono> of "blue".
         </Box>
 
-        <Box bg="green.200" p={2} mb={3} color={colors.secondaryText}>
-          This <b>Box</b> has a <b>bg of green.200</b> and a{" "}
-          <b>color (font) of "black"</b>.
+        <Box bg="green.700" p={2} mb={3} color="white">
+          This <Mono>Box</Mono> has a <Mono>bg of green.700</Mono> and a{" "}
+          <Mono>color</Mono> (font) of "white".
         </Box>
 
-        <Box
-          backgroundColor="red.400"
-          p={2}
-          mb={3}
-          color={colors.secondaryText}
-        >
-          This <b>Box</b> has a <b>backgroundColor of red.400</b> and a{" "}
-          <b>color (font) of "#444444"</b>.
+        <Box backgroundColor="red.700" p={2} mb={3}>
+          This <Mono>Box</Mono> has a <Mono>backgroundColor</Mono> of{" "}
+          <Mono>red.700</Mono> and a <Mono>color</Mono>. "#444444"
         </Box>
       </SectionContainer>
       <div id="gradients" />
@@ -152,54 +148,56 @@ export default function chakra_basic_styling() {
           w="100%"
           p={2}
           mb={3}
-          bgGradient={"linear(to-t, green.200, pink.500)"}
+          bgGradient={"linear(to-t, green.700, pink.700)"}
           borderRadius={"sm"}
-          color="black"
         >
-          This <b>Box</b> has a <b>linear gradient</b> background.
+          This <Mono>Box</Mono> has a <Mono>linear gradient</Mono> background.
         </Box>
 
-        <Box
-          w="100%"
-          p={2}
-          bgGradient="radial(cyan, yellow.400, pink.200)"
-          color="black"
-        >
-          This <b>Box</b> has a <b>radial gradient</b> background.
+        <Box w="100%" p={2} bgGradient="radial(blue, yellow.700, pink.700)">
+          This <Mono>Box</Mono> has a <Mono>radial gradient</Mono> background.
         </Box>
       </SectionContainer>
       <div id="fonts" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#typography">
         Font Effects:
       </MyLabel>
-      <SectionContainer>
-        <VStack spacing={4}>
-          <Text fontSize={32}>fontSize={32}</Text>
-          <Text fontSize="1.5em">fontSize="1.5em"</Text>
-          <Text fontSize="md">fontSize="md"</Text>
-          <Text textTransform="uppercase">textTransform="uppercase"</Text>
-          <Text textTransform="lowercase">textTransform="lowercase"</Text>
-          <Text textDecoration="underline">textDecoration="underline"</Text>
-          <Text textDecoration="overline">textDecoration="overline"</Text>
-          <Text textDecoration="line-through">
-            textDecoration="line-through"
-          </Text>
-        </VStack>
+      <SectionContainer p={8}>
+        <ExampleContainer bg={colors.mainBackground}>
+          <VStack spacing={7} fontFamily="monospace" color="deeppink">
+            <Text fontSize={32}>fontSize={32}</Text>
+            <Text fontSize="1.5em">fontSize="1.5em"</Text>
+            <Text fontSize="md">fontSize="md"</Text>
+            <Text textTransform="uppercase">textTransform="uppercase"</Text>
+            <Text textTransform="lowercase">textTransform="lowercase"</Text>
+            <Text textDecoration="underline">textDecoration="underline"</Text>
+            <Text textDecoration="overline">textDecoration="overline"</Text>
+            <Text textDecoration="line-through">
+              textDecoration="line-through"
+            </Text>
+          </VStack>
+        </ExampleContainer>
       </SectionContainer>
       <div id="width_height" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#layout-width-and-height">
         Width & Height:
       </MyLabel>
       <SectionContainer>
-        <FlexibleBox width="100%" height={12}>
-          width="100%" height={12}
+        <FlexibleBox width="100%" height={12} bg={colors.myblue} paddingX={2}>
+          <Mono>width="100%" height={12}</Mono>
         </FlexibleBox>
-        <FlexibleBox w="100%" h="32px">
-          w="100%" h="32px"{" "}
+        <FlexibleBox w="100%" h="32px" bg={colors.myblue} paddingX={2}>
+          <Mono> w="100%" h="32px"</Mono>{" "}
         </FlexibleBox>
-        <FlexibleBox boxSize="sm">boxSize="sm"</FlexibleBox>
-        <FlexibleBox w={256}>w={256}</FlexibleBox>
-        <FlexibleBox w="40px">w='40px'</FlexibleBox>
+        <FlexibleBox boxSize="sm" bg={colors.myblue} paddingX={2}>
+          <Mono>boxSize="sm"</Mono>
+        </FlexibleBox>
+        <FlexibleBox w={256} bg={colors.myblue} paddingX={2}>
+          <Mono>w={256}</Mono>
+        </FlexibleBox>
+        <FlexibleBox w="80px" bg={colors.myblue} paddingX={2} fontSize={12}>
+          <Mono>w='80px'</Mono>
+        </FlexibleBox>
       </SectionContainer>
       <div id="display" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#display">
@@ -208,8 +206,8 @@ export default function chakra_basic_styling() {
       <Box>
         <SectionContainer>
           <BasicText>
-            display='none' makes an element not appear. (The following element
-            does not appear.)
+            <Mono>display='none'</Mono> makes an element not appear. (The
+            following element does not appear.)
           </BasicText>
         </SectionContainer>
         <FlexibleBox display="none">display='none'</FlexibleBox>
@@ -223,12 +221,17 @@ export default function chakra_basic_styling() {
             bg={colors.mainBackground}
           ></FlexibleBox>
 
-          <FlexibleBox display={{ base: "none", md: "block" }} h="100px">
-            <b>base: "none", md: "block" </b>configuration sets the display
-            property to "none" for smaller screens and "block" for screens that
-            meet or exceed the <b>md</b> breakpoint. This allows for responsive
-            behavior where the element is hidden on smaller screens and
-            displayed as a block on larger screens.
+          <FlexibleBox
+            display={{ base: "none", md: "block" }}
+            h="100px"
+            bg={colors.myblue}
+            color={colors.mainText}
+          >
+            <Mono>base: "none", md: "block" </Mono>configuration sets the
+            display property to "none" for smaller screens and "block" for
+            screens that meet or exceed the <Mono>md</Mono> breakpoint. This
+            allows for responsive behavior where the element is hidden on
+            smaller screens and displayed as a block on larger screens.
           </FlexibleBox>
         </SectionContainer>
 
@@ -243,13 +246,13 @@ export default function chakra_basic_styling() {
               The following small bar expands once the screen size reaches{" "}
               <b>md</b> or above.
             </BasicText>
-            <FlexibleBox>
+            <FlexibleBox bg={colors.myblue} color={colors.mainText}>
               <Box hideBelow="md">
-                <b>hideBelow='md'</b> prop on a Box component is a custom prop
-                used to conditionally hide the component on screens smaller than
-                the md breakpoint. This is the one that is creating the small
-                bar that expands to be this text once the screen size reaches md
-                or above.
+                <Mono>hideBelow='md'</Mono> prop on a Box component is a custom
+                prop used to conditionally hide the component on screens smaller
+                than the md breakpoint. This is the one that is creating the
+                small bar that expands to be this text once the screen size
+                reaches md or above.
               </Box>
             </FlexibleBox>
           </FlexibleBox>
@@ -259,15 +262,24 @@ export default function chakra_basic_styling() {
             The following boxes only show on screens that are medium or smaller
           </BasicText>
           <FlexibleBox
-            h="100px"
+            h="90px"
             bg={colors.mainBackground}
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <FlexibleBox display={{ base: "block", md: "none" }}>
-              <b>base: "block", md: "none"</b> - hide the element from 'md' up
+            <FlexibleBox
+              display={{ base: "block", md: "none" }}
+              bg={colors.myblue}
+              color={colors.mainText}
+            >
+              <Mono>base: "block", md: "none"</Mono> - hide the element from
+              'md' up
             </FlexibleBox>
-            <FlexibleBox hideFrom="md">
+            <FlexibleBox
+              hideFrom="md"
+              bg={colors.myblue}
+              color={colors.mainText}
+            >
               This box complete disappears at sizes of medium and higher.
             </FlexibleBox>
           </FlexibleBox>
@@ -288,6 +300,8 @@ export default function chakra_basic_styling() {
             alignItems="center"
             justifyContent="space-between"
             mt={3}
+            bg={colors.myblue}
+            color={colors.mainText}
           >
             <Text>Child One</Text>
             <Text>Child Two</Text>
@@ -356,10 +370,12 @@ export default function chakra_basic_styling() {
           margin={4}
           gap={2}
           autoFlow="row dense"
-          bg={colors.mainAccent2}
-          color={colors.secondaryText}
+          p={2}
+          bg={colors.myblue}
+          color={colors.mainText}
         >
-          Grid using Chakra shorthand: <b>Grid gap={2} autoFlow="row dense"</b>
+          Grid using Chakra shorthand:{" "}
+          <Mono>Grid gap={2} autoFlow="row dense"</Mono>
         </Grid>
         <div id="background" />
         <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#background">
@@ -430,8 +446,15 @@ export default function chakra_basic_styling() {
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#borders">
         Borders:
       </MyLabel>
-      <FlexibleBox border="2px" borderColor="yellow.200" marginTop={4}>
-        Box with <b>2px border, borderColor="yellow.200"</b>
+      <FlexibleBox
+        border="2px"
+        fontSize={16}
+        bg={colors.myblue}
+        borderColor="yellow.200"
+        marginTop={4}
+        color={colors.mainText}
+      >
+        Box with <Mono>2px border, borderColor="yellow.200"</Mono>
       </FlexibleBox>
       <div id="border_radius" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#border-radius">
@@ -726,7 +749,7 @@ export default function chakra_basic_styling() {
         <VStack w="100%" mt={5} fontSize={16}>
           <Mono>
             Button as="a" target="_blank" variant="outline"
-            href="https://chakra-ui.com" color="pink"
+            href="https://www.evanmarie.com" color="pink"
           </Mono>
           <ExampleContainer bg={colors.myblue}>
             <Box>

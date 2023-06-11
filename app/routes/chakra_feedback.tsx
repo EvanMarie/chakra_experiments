@@ -23,9 +23,12 @@ import {
   BigBackgroundBox,
   CompWithLabel,
   ExampleContainer,
+  FlexibleBox,
+  HL,
   Mono,
   MyLabel,
   SectionContainer,
+  StackedExample,
   colors,
 } from "~/styles/reusableChakraComponents";
 import {
@@ -74,12 +77,111 @@ export default function chakra_feedback() {
         <FeedbackComponentBar />
       </VStack>
 
+      <SectionContainer>
+        <Box mb={3}>
+          <BasicText color={colors.mainAccent3}>
+            Feedback components in Chakra UI are primarily designed to provide
+            visual cues to users indicating the status or result of certain
+            actions or processes. They are fundamental in building interactive
+            and responsive user interfaces. By implementing these components,
+            developers can communicate the application's state to the user,
+            enhancing usability and the overall user experience.{" "}
+          </BasicText>
+          <BasicText>
+            Loading components like <HL>Spinners</HL>, <HL>Progress</HL>,{" "}
+            <HL>Circular Progress</HL>, and <HL>Skeletons</HL> serve to indicate
+            to users that a process or operation is underway. They effectively
+            manage user expectations during periods of uncertainty or wait
+            times, keeping users engaged and preventing confusion or
+            frustration.{" "}
+          </BasicText>
+          <BasicText>
+            Messaging components such as <HL>Alerts</HL> and <HL>Toasts</HL> are
+            pivotal in providing immediate feedback to users' actions or system
+            statuses. These components allow applications to provide meaningful
+            context for success, warnings, errors, or general information,
+            enabling users to understand the system's responses to their
+            actions.
+          </BasicText>
+          <BasicText>
+            Utilizing these feedback components properly makes applications feel
+            more responsive and user-friendly. They provide a dynamic layer of
+            interaction that can reassure the user about what's happening in the
+            application and potentially reduce perceived latency or errors.
+          </BasicText>
+        </Box>
+        <FlexibleBox bg={colors.myblue} p={4}>
+          <Box>
+            <BasicText>
+              These are the six feedback components Chakra-UI has to offer:
+            </BasicText>
+          </Box>
+          <Box p={4}>
+            <ul>
+              <li>
+                <BasicText>
+                  <HL>Alert</HL>: Alert component is used to provide feedback
+                  based on user interactions, or system status. They may contain
+                  an optional description and can be color coded according to
+                  the severity of the message. It's possible to add actions,
+                  too.
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL>Circular Progress</HL>: This component is used to indicate
+                  the progress of a task that's going on in the background,
+                  typically when the percentage of completion is known. It
+                  displays a circle that gets progressively filled in a
+                  clockwise direction to show the progress of the operation.{" "}
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL>Progress</HL>: Similar to the Circular Progress component,
+                  the Progress component is also used to display the progress of
+                  an operation. However, instead of a circle, it uses a
+                  horizontal bar.{" "}
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL>Skeletons</HL>: The Skeleton component is a placeholder
+                  component that's used when the content that should be in its
+                  place is still loading. This component gives the user a visual
+                  clue that content is on the way, improving the perceived
+                  performance of the application.{" "}
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL>Spinners</HL>: The Spinner component is used to indicate
+                  that a task is ongoing. Unlike the Progress and Circular
+                  Progress components, Spinners do not indicate how much of the
+                  task is complete, making them more suitable for tasks where
+                  the duration is unknown.
+                </BasicText>
+              </li>{" "}
+              <li>
+                <BasicText>
+                  <HL>Toast</HL>: The Toast component is used to show brief
+                  messages or notifications to the user. These messages
+                  typically appear for a short duration, then fade out. They can
+                  be used to indicate the success, error, or status of an
+                  operation.{" "}
+                </BasicText>
+              </li>
+            </ul>
+          </Box>
+        </FlexibleBox>
+      </SectionContainer>
+
       <div id="alert" />
       <MyLabel link="https://chakra-ui.com/docs/components/alert" size={28}>
         Alert:
       </MyLabel>
 
-      <SectionContainer bg={colors.mainAccent4}>
+      <SectionContainer bg={colors.mainAccent4} p={2}>
         <Box p={3}>
           <BasicText>
             <b>⦾ Alert</b>: The wrapper for alert components.{" "}
@@ -96,6 +198,12 @@ export default function chakra_feedback() {
             <b>⦾ AlertDescription</b>: The description of the alert to be
             announced by screen readers.
           </BasicText>
+
+          {/* IMPORT CODE */}
+          <SectionContainer p={2} mt={5} mb={2}>
+            <BasicText>These components can be imported as follows:</BasicText>
+            <Feedback.AlertImports />
+          </SectionContainer>
         </Box>
       </SectionContainer>
       <Box>
@@ -106,21 +214,25 @@ export default function chakra_feedback() {
 
         <SectionContainer>
           <AlertTwo />
+          <Feedback.E02 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <AlertThree />
+          <Feedback.E03 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <AlertFour />
+          <Feedback.E04 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <AlertFive />
+          <Feedback.E05 />
         </SectionContainer>
       </Box>
 
@@ -153,26 +265,30 @@ export default function chakra_feedback() {
                 moving along the circular track.
               </li>
             </ul>
+            {/* IMPORT CODE */}
+            <SectionContainer p={2} mt={5} mb={2}>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Feedback.CircularImports />
+            </SectionContainer>
           </Box>
-          <ExampleContainer bg={colors.mainBackground}>
-            <VStack spacing={4} align="center" overflow="hidden">
-              <CompWithLabel fontSize={15}>
+          <ExampleContainer bg={colors.mainAccent4}>
+            <VStack spacing={2} align="center" overflow="hidden">
+              <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress key={1} value={80} />,
-                  <Mono key={2}>CircularProgress value={80}</Mono>,
+                  <Feedback.E06 key={2} />,
                 ]}
               </CompWithLabel>
-              <CompWithLabel fontSize={15}>
+              <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress key={1} value={30} size="120px" />,
-                  <Mono key={2}>
-                    {" "}
-                    CircularProgress value={30} size='120px'
-                  </Mono>,
+                  <Feedback.E07 key={2} />,
                 ]}
               </CompWithLabel>
 
-              <CompWithLabel fontSize={15}>
+              <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress
                     key={1}
@@ -180,12 +296,10 @@ export default function chakra_feedback() {
                     size="100px"
                     thickness="4px"
                   />,
-                  <Mono key={2}>
-                    CircularProgress value={59} size='100px' thickness='4px'
-                  </Mono>,
+                  <Feedback.E08 key={2} />,
                 ]}
               </CompWithLabel>
-              <CompWithLabel fontSize={15}>
+              <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress
                     key={1}
@@ -193,38 +307,28 @@ export default function chakra_feedback() {
                     color="orange.400"
                     thickness="12px"
                   />,
-                  <Mono key={2}>
-                    CircularProgress value={30} color='orange.400'
-                    thickness='12px'
-                  </Mono>,
+                  <Feedback.E09 key={2} />,
                 ]}
               </CompWithLabel>
 
-              <CompWithLabel fontSize={15}>
+              <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <Box key={1}>
                     <CircularProgress value={40} color="green.400">
                       <CircularProgressLabel>40%</CircularProgressLabel>
                     </CircularProgress>
                   </Box>,
-                  <VStack key={2}>
-                    <Mono>CircularProgress value={40} color='green.400'</Mono>
-                    <Mono>CircularProgressLabel - 40%</Mono>
-                  </VStack>,
+                  <Feedback.E10 key={2} />,
                 ]}
               </CompWithLabel>
-              <CompWithLabel fontSize={15}>
+              <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress
                     key={1}
                     isIndeterminate
                     color="green.300"
                   />,
-                  <VStack key={2}>
-                    <Mono>CircularProgress </Mono>
-                    <Mono>isIndeterminate</Mono>
-                    <Mono>color='green.300'</Mono>
-                  </VStack>,
+                  <Feedback.E11 key={2} />,
                 ]}
               </CompWithLabel>
             </VStack>
@@ -239,104 +343,49 @@ export default function chakra_feedback() {
       <SectionContainer>
         <ExampleContainer bg={colors.mainBackground}>
           <Flex p={3} justifyContent="center" alignItems="center" w="100%">
-            <VStack spacing={4}>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>Progress value={80}</Mono>,
-                  <Progress value={80} w="300px" key={2} />,
-                ]}
-              </CompWithLabel>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>Progress hasStripe value={64}</Mono>,
-                  <Progress hasStripe value={64} w="300px" key={2} />,
-                ]}
-              </CompWithLabel>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>
-                    Progress colorScheme='red' size='sm' value={20}
-                  </Mono>,
-                  <Progress
-                    colorScheme="red"
-                    size="sm"
-                    value={20}
-                    w="300px"
-                    key={2}
-                  />,
-                ]}
-              </CompWithLabel>
-
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>
-                    Progress colorScheme='orange' size='md' value={30}
-                  </Mono>,
-                  <Progress
-                    colorScheme="orange"
-                    size="md"
-                    value={30}
-                    w="300px"
-                    key={2}
-                  />,
-                ]}
-              </CompWithLabel>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>
-                    Progress colorScheme='yellow' size='lg' value={40}
-                  </Mono>,
-                  <Progress
-                    colorScheme="yellow"
-                    size="lg"
-                    value={40}
-                    w="300px"
-                    key={2}
-                  />,
-                ]}
-              </CompWithLabel>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>
-                    Progress colorScheme='green' height='32px' value={50}
-                  </Mono>,
-                  <Progress
-                    colorScheme="green"
-                    height="32px"
-                    value={50}
-                    w="300px"
-                    key={2}
-                  />,
-                ]}
-              </CompWithLabel>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>
-                    Progress value={60} size='m' colorScheme='blue'
-                  </Mono>,
-                  <Progress
-                    key={2}
-                    value={60}
-                    size="sm"
-                    colorScheme="blue"
-                    w="300px"
-                  />,
-                ]}
-              </CompWithLabel>
-              <CompWithLabel>
-                {[
-                  <Mono key={1}>
-                    Progress size='sm'colorScheme="purple" isIndeterminate
-                  </Mono>,
-                  <Progress
-                    size="sm"
-                    colorScheme="purple"
-                    isIndeterminate
-                    w="300px"
-                    key={2}
-                  />,
-                ]}
-              </CompWithLabel>
+            <VStack spacing={4} width="100%" bg={colors.mainAccent4}>
+              <StackedExample>
+                <Feedback.E12 />
+                <Progress value={80} w="400px" />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E13 />
+                <Progress hasStripe value={64} w="400px" />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E14 />
+                <Progress colorScheme="red" size="sm" value={20} w="400px" />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E15 />
+                <Progress colorScheme="orange" size="md" value={30} w="400px" />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E16 />
+                <Progress colorScheme="yellow" size="lg" value={40} w="400px" />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E17 />
+                <Progress
+                  colorScheme="green"
+                  height="32px"
+                  value={50}
+                  w="400px"
+                />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E18 />
+                <Progress value={60} size="sm" colorScheme="blue" w="400px" />
+              </StackedExample>
+              <StackedExample>
+                <Feedback.E19 />
+                <Progress
+                  size="sm"
+                  colorScheme="purple"
+                  isIndeterminate
+                  w="400px"
+                />
+              </StackedExample>
             </VStack>
           </Flex>
         </ExampleContainer>

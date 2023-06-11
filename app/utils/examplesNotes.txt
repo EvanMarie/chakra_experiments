@@ -1,0 +1,10 @@
+// Markdown files render the content in a React component on import
+import hljs from "highlight.js";
+import javascript from "highlight.js/lib/languages/javascript";
+import styles from "~/examples/example.css";
+
+hljs.registerLanguage("javascript", javascript);
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesUrl },
+  { rel: "stylesheet", href: styles },
+];
