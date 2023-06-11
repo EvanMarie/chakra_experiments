@@ -12,7 +12,7 @@ export function links() {
   return [{ rel: "stylesheet", href: styles }];
 } 
 */
-export function HighLighter({language, children}: {language: string, children : React.ReactNode}) {
+export function HighLighter({language="javascript", children}: {language?: string, children : React.ReactNode}) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (ref.current) {
