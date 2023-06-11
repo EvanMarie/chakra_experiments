@@ -12,15 +12,13 @@ import {
 import { BiHome } from "react-icons/bi";
 
 export const colors = {
-  // mainBackground: "#141114",
   mainBackground: "#211421",
   mainText: "#f7e6c1",
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
   mainAccent3: "#5de8a0",
-  // mainAccent3: "#9ffccc",
-  mainAccent4: "#4d185c",
+  mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
   myblue: "#034880",
   mygrayblue: "#23394a",

@@ -1,8 +1,12 @@
-import { Box, Flex, HStack, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import { Progress } from "@chakra-ui/react";
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
+import * as Feedback from "~/mardownExamples/feedback/index";
+import hljs from "highlight.js";
+import javascript from "highlight.js/lib/languages/javascript";
+import styles from "~/styles/codeMarkdown.css";
 
 import {
   AlertFive,
@@ -18,9 +22,7 @@ import {
   BasicText,
   BigBackgroundBox,
   CompWithLabel,
-  Divider,
   ExampleContainer,
-  HorizontalLine,
   Mono,
   MyLabel,
   SectionContainer,
@@ -52,8 +54,11 @@ import {
   PageHeader,
 } from "~/components/app_components/menuBars";
 
+hljs.registerLanguage("javascript", javascript);
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
+  { rel: "stylesheet", href: styles },
 ];
 
 export default function chakra_feedback() {
@@ -96,6 +101,7 @@ export default function chakra_feedback() {
       <Box>
         <SectionContainer>
           <AlertOne />
+          <Feedback.E01 />
         </SectionContainer>
 
         <SectionContainer>
