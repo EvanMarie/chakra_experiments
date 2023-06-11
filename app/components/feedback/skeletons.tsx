@@ -1,12 +1,12 @@
 import {
   BasicText,
   FlexibleBox,
+  HL,
   Mono,
   colors,
 } from "~/styles/reusableChakraComponents";
 import {
   Box,
-  Flex,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
@@ -21,9 +21,8 @@ export function SkeletonOne() {
         As a stand alone component:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ The following component has this code times three:
+        ⦾ The contains three of the most simple use cases for the Skeleton:
       </BasicText>
-      <Mono>Skeleton height="20px"</Mono>
       <Box p={5}>
         <Box marginY={1}>
           <FlexibleBox bg={colors.mainBackground} padding={5}>
@@ -74,20 +73,6 @@ export function SkeletonThree() {
         ⦾ Skeletons can load and give visual structure to content while waiting
         for the actual content to load. See code below.
       </BasicText>
-
-      <Box p={5}>
-        <Box marginY={1}>
-          <FlexibleBox bg={colors.sectionColor} padding={5}>
-            <Flex justifyContent={"center"} alignItems={"center"}>
-              <img
-                src="./images/remotedataskeleton.png"
-                alt="skeleton"
-                width="425px"
-              />
-            </Flex>
-          </FlexibleBox>
-        </Box>
-      </Box>
     </Box>
   );
 }
@@ -99,8 +84,8 @@ export function SkeletonFour() {
         Circle and Text Skeleton:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ This example uses two additional elements: <b>SkeletonCircle</b> and{" "}
-        <b>SkeletonText</b>
+        ⦾ This example uses two additional elements: <Mono>SkeletonCircle</Mono>{" "}
+        and <Mono>SkeletonText</Mono>
       </BasicText>
 
       <Box p={5}>
@@ -129,12 +114,9 @@ export function SkeletonFive() {
         Color-Changing Skeleton:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ use <b>startColor</b> and <b>endColor</b> to create color-changing
-        skeletons. The following code produces the skeleton below.
+        ⦾ use <Mono>startColor</Mono> and <Mono>endColor</Mono> to create
+        color-changing skeletons.
       </BasicText>
-      <Mono>
-        Skeleton startColor="pink.500" endColor="blue.500" height="20px"
-      </Mono>
       <Box p={5}>
         <Box marginY={1}>
           <FlexibleBox bg={colors.mainBackground} padding={5}>
@@ -153,18 +135,9 @@ export function SkeletonSix() {
         isLoaded prop:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ to prevent the skeleton from rendering, use <b>isLoaded</b> as shown
-        below.
+        ⦾ to prevent the skeleton from rendering, use <Mono>isLoaded</Mono> as
+        shown below.
       </BasicText>
-      <FlexibleBox bg={colors.sectionColor} padding={5}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img
-            src="./images/skeletonisloaded.png"
-            alt="skeleton"
-            width="425px"
-          />
-        </Flex>
-      </FlexibleBox>
       <Box p={5}>
         <Box marginY={1}>
           <Skeleton isLoaded>
@@ -183,10 +156,11 @@ export function SkeletonSeven() {
         fadeDuration prop:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ <b>fadeDuration</b> allows you to control the speed at which the
-        content fades into viewl. The number passed is the number of seconds for
-        the <b>animation</b> style prop to render. Default is 0.4 seconds. This
-        is best viewd with the <b>isLoaded</b> prop set to <b>true</b>.{" "}
+        ⦾ <HL>fadeDuration</HL> allows you to control the speed at which the
+        content fades into view. The number passed is the number of seconds for
+        the <HL>animation</HL> style prop to render. Default is 0.4 seconds.
+        This is best viewd with the <Mono>isLoaded</Mono> prop set to{" "}
+        <Mono>true</Mono>.{" "}
       </BasicText>
 
       <Box p={5}>

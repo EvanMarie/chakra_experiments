@@ -1,4 +1,4 @@
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import { Box, Flex, Highlight, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import { Progress } from "@chakra-ui/react";
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
@@ -56,6 +56,7 @@ import {
   FeedbackComponentBar,
   PageHeader,
 } from "~/components/app_components/menuBars";
+import { Highlighter } from "~/components/styling/highlighter";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -87,6 +88,8 @@ export default function chakra_feedback() {
             developers can communicate the application's state to the user,
             enhancing usability and the overall user experience.{" "}
           </BasicText>
+        </Box>
+        <FlexibleBox bg={colors.myblue} p={4}>
           <BasicText>
             Loading components like <HL>Spinners</HL>, <HL>Progress</HL>,{" "}
             <HL>Circular Progress</HL>, and <HL>Skeletons</HL> serve to indicate
@@ -109,8 +112,7 @@ export default function chakra_feedback() {
             interaction that can reassure the user about what's happening in the
             application and potentially reduce perceived latency or errors.
           </BasicText>
-        </Box>
-        <FlexibleBox bg={colors.myblue} p={4}>
+
           <Box>
             <BasicText>
               These are the six feedback components Chakra-UI has to offer:
@@ -180,60 +182,87 @@ export default function chakra_feedback() {
       <MyLabel link="https://chakra-ui.com/docs/components/alert" size={28}>
         Alert:
       </MyLabel>
+      <Box p={3}>
+        {/* COMPONENT DESCRIPTION */}
+        <SectionContainer paddingBottom={2}>
+          <BasicText color={colors.mainAccent3}>
+            ⦾ The <Mono>Alert</Mono> component in Chakra UI is a highly
+            customizable and accessible way to provide feedback to users based
+            on their interactions or to display system statuses. This component
+            provides a way to quickly inform the user of important information,
+            whether it be success messages, error messages, warning messages, or
+            informational messages.
+          </BasicText>
+          <BasicText>
+            Alert components are highly versatile and can be customized to fit
+            the overall design theme of your application. You can control the
+            style of the alert (solid or subtle), the status or type of the
+            alert (information, success, warning, or error), and whether it has
+            a close button. This makes the Alert component a vital tool in
+            enhancing the overall user experience of your application.
+          </BasicText>
+          <Box paddingX={7} paddingY={3}>
+            <BasicText>
+              These are the main parts of an <Mono>Alert</Mono> component.
+            </BasicText>
+            <ul>
+              <li>
+                <HL>Alert</HL>: The wrapper for alert components.
+              </li>
+              <li>
+                <HL>AlertIcon</HL>: The visual icon for the alert that changes
+                based on the status prop.
+              </li>
+              <li>
+                <HL>AlertTitle</HL>: The title of the alert to be announced by
+                screen readers.
+              </li>
+              <li>
+                <HL>AlertDescription</HL>: The description of the alert to be
+                announced by screen readers.
+              </li>
+            </ul>
+          </Box>
+          <Box paddingX={4} paddingY={2}>
+            {/* IMPORT CODE */}
+            <SectionContainer p={2} mt={5} mb={2}>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Highlighter>{`import { Alert, AlertIcon, AlertTitle, AlertDescription } 
+  from "@chakra-ui/react";`}</Highlighter>
+            </SectionContainer>
+          </Box>
+        </SectionContainer>
+        <Box>
+          <SectionContainer>
+            <AlertOne />
+            <Feedback.E01 />
+          </SectionContainer>
 
-      <SectionContainer bg={colors.mainAccent4} p={2}>
-        <Box p={3}>
-          <BasicText>
-            <b>⦾ Alert</b>: The wrapper for alert components.{" "}
-          </BasicText>
-          <BasicText>
-            <b>⦾ AlertIcon</b>: The visual icon for the alert that changes based
-            on the status prop.{" "}
-          </BasicText>
-          <BasicText>
-            <b>⦾ AlertTitle</b>: The title of the alert to be announced by
-            screen readers.
-          </BasicText>
-          <BasicText>
-            <b>⦾ AlertDescription</b>: The description of the alert to be
-            announced by screen readers.
-          </BasicText>
+          <SectionContainer>
+            <AlertTwo />
+            <Feedback.E02 />
+          </SectionContainer>
 
-          {/* IMPORT CODE */}
-          <SectionContainer p={2} mt={5} mb={2}>
-            <BasicText>These components can be imported as follows:</BasicText>
-            <Feedback.AlertImports />
+          <SectionContainer>
+            {" "}
+            <AlertThree />
+            <Feedback.E03 />
+          </SectionContainer>
+
+          <SectionContainer>
+            {" "}
+            <AlertFour />
+            <Feedback.E04 />
+          </SectionContainer>
+
+          <SectionContainer>
+            {" "}
+            <AlertFive />
+            <Feedback.E05 />
           </SectionContainer>
         </Box>
-      </SectionContainer>
-      <Box>
-        <SectionContainer>
-          <AlertOne />
-          <Feedback.E01 />
-        </SectionContainer>
-
-        <SectionContainer>
-          <AlertTwo />
-          <Feedback.E02 />
-        </SectionContainer>
-
-        <SectionContainer>
-          {" "}
-          <AlertThree />
-          <Feedback.E03 />
-        </SectionContainer>
-
-        <SectionContainer>
-          {" "}
-          <AlertFour />
-          <Feedback.E04 />
-        </SectionContainer>
-
-        <SectionContainer>
-          {" "}
-          <AlertFive />
-          <Feedback.E05 />
-        </SectionContainer>
       </Box>
 
       <div id="circular-progress" />
@@ -270,7 +299,7 @@ export default function chakra_feedback() {
               <BasicText>
                 These components can be imported as follows:
               </BasicText>
-              <Feedback.CircularImports />
+              <Highlighter>{`import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";`}</Highlighter>
             </SectionContainer>
           </Box>
           <ExampleContainer bg={colors.mainAccent4}>
@@ -278,13 +307,17 @@ export default function chakra_feedback() {
               <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress key={1} value={80} />,
-                  <Feedback.E06 key={2} />,
+                  <Highlighter
+                    key={2}
+                  >{`<CircularProgress value={80} />`}</Highlighter>,
                 ]}
               </CompWithLabel>
               <CompWithLabel fontSize={15} split="30% 70%">
                 {[
                   <CircularProgress key={1} value={30} size="120px" />,
-                  <Feedback.E07 key={2} />,
+                  <Highlighter
+                    key={2}
+                  >{`<CircularProgress value={30} size="120px" />`}</Highlighter>,
                 ]}
               </CompWithLabel>
 
@@ -296,7 +329,9 @@ export default function chakra_feedback() {
                     size="100px"
                     thickness="4px"
                   />,
-                  <Feedback.E08 key={2} />,
+                  <Highlighter
+                    key={2}
+                  >{` <CircularProgress value={59} size="100px" thickness="4px" />`}</Highlighter>,
                 ]}
               </CompWithLabel>
               <CompWithLabel fontSize={15} split="30% 70%">
@@ -307,7 +342,10 @@ export default function chakra_feedback() {
                     color="orange.400"
                     thickness="12px"
                   />,
-                  <Feedback.E09 key={2} />,
+                  <Highlighter key={2}>
+                    {`<CircularProgress value={30} 
+    color="orange.400" thickness="12px" />`}
+                  </Highlighter>,
                 ]}
               </CompWithLabel>
 
@@ -318,7 +356,11 @@ export default function chakra_feedback() {
                       <CircularProgressLabel>40%</CircularProgressLabel>
                     </CircularProgress>
                   </Box>,
-                  <Feedback.E10 key={2} />,
+                  <Highlighter
+                    key={2}
+                  >{`<CircularProgress value={40} color="green.400">
+  <CircularProgressLabel>40%</CircularProgressLabel>
+</CircularProgress> `}</Highlighter>,
                 ]}
               </CompWithLabel>
               <CompWithLabel fontSize={15} split="30% 70%">
@@ -328,7 +370,9 @@ export default function chakra_feedback() {
                     isIndeterminate
                     color="green.300"
                   />,
-                  <Feedback.E11 key={2} />,
+                  <Highlighter key={2}>
+                    {` <CircularProgress isIndeterminate color="green.300" />`}
+                  </Highlighter>,
                 ]}
               </CompWithLabel>
             </VStack>
@@ -340,32 +384,71 @@ export default function chakra_feedback() {
       <MyLabel link="https://chakra-ui.com/docs/components/progress" size={28}>
         Progress Bars:
       </MyLabel>
-      <SectionContainer>
-        <ExampleContainer bg={colors.mainBackground}>
+      <Box p={3}>
+        {/*  Section Introduction */}
+        {/* COMPONENT DESCRIPTION */}
+        <SectionContainer paddingBottom={2}>
+          <BasicText color={colors.mainAccent3}>
+            ⦾ Some statement about this component
+          </BasicText>
+          <Box paddingX={7} paddingY={3}>
+            <ul>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+            </ul>
+          </Box>
+          <Box paddingX={4} paddingY={2}>
+            <BasicText>Some description</BasicText>
+            {/* IMPORT CODE */}
+            <SectionContainer p={2} mt={5} mb={2}>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Highlighter>{``}</Highlighter>
+            </SectionContainer>
+          </Box>
           <Flex p={3} justifyContent="center" alignItems="center" w="100%">
-            <VStack spacing={4} width="100%" bg={colors.mainAccent4}>
+            <VStack spacing={3} width="100%" bg={colors.mainAccent4}>
               <StackedExample>
-                <Feedback.E12 />
+                <Highlighter>{`<Progress value={80} />`}</Highlighter>
                 <Progress value={80} w="400px" />
               </StackedExample>
               <StackedExample>
-                <Feedback.E13 />
+                <Highlighter>{`<Progress hasStripe value={64} />`}</Highlighter>
                 <Progress hasStripe value={64} w="400px" />
               </StackedExample>
               <StackedExample>
-                <Feedback.E14 />
+                <Highlighter>{`<Progress colorScheme="red" size="sm" value={20} />`}</Highlighter>
                 <Progress colorScheme="red" size="sm" value={20} w="400px" />
               </StackedExample>
               <StackedExample>
-                <Feedback.E15 />
+                <Highlighter>{`<Progress colorScheme="orange" size="md" value={30} />`}</Highlighter>
                 <Progress colorScheme="orange" size="md" value={30} w="400px" />
               </StackedExample>
               <StackedExample>
-                <Feedback.E16 />
+                <Highlighter>{`<Progress colorScheme="yellow" size="lg" value={40} />`}</Highlighter>
                 <Progress colorScheme="yellow" size="lg" value={40} w="400px" />
               </StackedExample>
               <StackedExample>
-                <Feedback.E17 />
+                <Highlighter>
+                  {`<Progress colorScheme="green" height="32px" value={50} w="400px" />`}
+                </Highlighter>
                 <Progress
                   colorScheme="green"
                   height="32px"
@@ -374,11 +457,13 @@ export default function chakra_feedback() {
                 />
               </StackedExample>
               <StackedExample>
-                <Feedback.E18 />
+                <Highlighter>{`<Progress value={60} size="sm" colorScheme="blue" />`}</Highlighter>
                 <Progress value={60} size="sm" colorScheme="blue" w="400px" />
               </StackedExample>
               <StackedExample>
-                <Feedback.E19 />
+                <Highlighter>
+                  {`<Progress size="sm" colorScheme="purple" isIndeterminate />`}
+                </Highlighter>
                 <Progress
                   size="sm"
                   colorScheme="purple"
@@ -388,45 +473,99 @@ export default function chakra_feedback() {
               </StackedExample>
             </VStack>
           </Flex>
-        </ExampleContainer>
-      </SectionContainer>
+        </SectionContainer>
+      </Box>
+
       <div id="skeletons" />
       <MyLabel link="https://chakra-ui.com/docs/components/skeleton" size={28}>
         Skeletons:
       </MyLabel>
       <Box p={3}>
+        {/*  Section Introduction */}
+        {/* COMPONENT DESCRIPTION */}
+        <SectionContainer paddingBottom={2}>
+          <BasicText color={colors.mainAccent3}>
+            ⦾ Some statement about this component
+          </BasicText>
+          <Box paddingX={7} paddingY={3}>
+            <ul>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+            </ul>
+          </Box>
+          <Box paddingX={4} paddingY={2}>
+            <BasicText>Some description</BasicText>
+            {/* IMPORT CODE */}
+            <SectionContainer p={2} mt={5} mb={2}>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Highlighter>{``}</Highlighter>
+            </SectionContainer>
+          </Box>
+        </SectionContainer>
         <SectionContainer>
           <SkeletonOne />
+          <Highlighter>{`<Stack>
+  <Skeleton height="20px" />
+  <Skeleton height="20px" />
+  <Skeleton height="20px" />
+</Stack>`}</Highlighter>
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <SkeletonTwo />
+          <Highlighter>{`<Skeleton>
+  <div>contents wrapped</div>
+  <div>won't be visible</div>
+</Skeleton>`}</Highlighter>
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <SkeletonThree />
+          <Feedback.E06 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <SkeletonFour />
+          <Highlighter>{`<SkeletonText mt="4" noOfLines={4} spacing="4" skeletonHeight="2" />`}</Highlighter>
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <SkeletonFive />
+          <Highlighter>{`<Skeleton startColor="pink.500" endColor="blue.500" height="20px" />`}</Highlighter>
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <SkeletonSix />
+          <Highlighter>{`<Skeleton isLoaded><span>No skeleton to see here.</span></Skeleton>`}</Highlighter>
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <SkeletonSeven />
+          <Highlighter>{`<FadeDurationSkeleton />`}</Highlighter>
         </SectionContainer>
       </Box>
 
@@ -435,63 +574,125 @@ export default function chakra_feedback() {
         Spinners:
       </MyLabel>
       <Box p={3}>
-        <BasicText>
-          <b>⦾ Spinners</b> are used to provide visual cues for users that
-          actions are being processed and to wait for a change or a result.
-        </BasicText>
+        {/*  Section Introduction */}
+        {/* COMPONENT DESCRIPTION */}
+        <SectionContainer>
+          <BasicText color={colors.mainAccent3}>
+            ⦾ <HL>Spinners</HL> are used to provide visual cues for users that
+            actions are being processed and to wait for a change or a result.
+          </BasicText>
+          <Box paddingX={7} paddingY={3}>
+            <ul>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+              <li>
+                <HL>Component</HL>: Description
+              </li>
+            </ul>
+          </Box>
+          <Box paddingX={4} paddingY={2}>
+            <BasicText>Some description</BasicText>
+            {/* IMPORT CODE */}
+            <SectionContainer p={2} mt={5} mb={2}>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Highlighter>{``}</Highlighter>
+            </SectionContainer>
+          </Box>
+          <Flex bg={colors.mainAccent4} paddingX={10}>
+            <VStack spacing={5} align="center" w="100%" marginY={5}>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} color="red.500" />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner color="red.500" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} size="xs" />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner size="xs" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} size="sm" />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner size="sm" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} size="md" />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner size="md" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} size="lg" />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner size="lg" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner key={1} size="xl" />,
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner size="xl" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+              <CompWithLabel>
+                {[
+                  <Spinner
+                    key={1}
+                    thickness="4px"
+                    speed="0.65s"
+                    emptyColor="gray.200"
+                    color="blue.500"
+                    size="xl"
+                  />,
+
+                  <Box key={2}>
+                    <Highlighter>{`<Spinner thickness="4px" speed="0.65s"
+    emptyColor="gray.200" color="blue.500" 
+    size="xl" />`}</Highlighter>
+                  </Box>,
+                ]}
+              </CompWithLabel>
+            </VStack>
+          </Flex>
+        </SectionContainer>
       </Box>
-      <SectionContainer>
-        <ExampleContainer bg={colors.mainBackground}>
-          <VStack spacing={5} align="center">
-            <CompWithLabel>
-              {[
-                <Spinner key={1} />,
-                <Mono key={2}>Spinner used with default settings</Mono>,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Spinner key={1} color="red.500" />,
-                <Mono key={2}>Spinner color="red.500"</Mono>,
-              ]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[<Spinner key={1} size="xs" />, <Mono key={2}>size='xs'</Mono>]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[<Spinner key={1} size="sm" />, <Mono key={2}>size='sm'</Mono>]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[<Spinner key={1} size="md" />, <Mono key={2}>size='md'</Mono>]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[<Spinner key={1} size="lg" />, <Mono key={2}>size='lg'</Mono>]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[<Spinner key={1} size="xl" />, <Mono key={2}>size='xl'</Mono>]}
-            </CompWithLabel>
-            <CompWithLabel>
-              {[
-                <Spinner
-                  key={1}
-                  thickness="4px"
-                  speed="0.65s"
-                  emptyColor="gray.200"
-                  color="blue.500"
-                  size="xl"
-                />,
-                <VStack spacing="1px" key={2}>
-                  <Mono>thickness='4px'</Mono>
-                  <Mono>speed="0.65s"</Mono>
-                  <Mono>emptyColor="gray.200"</Mono>
-                  <Mono>color="blue.500"</Mono>
-                  <Mono>size="xl"</Mono>
-                </VStack>,
-              ]}
-            </CompWithLabel>
-          </VStack>
-        </ExampleContainer>
-      </SectionContainer>
 
       <div id="toast" />
       <MyLabel link="https://chakra-ui.com/docs/components/toast" size={28}>
@@ -499,97 +700,118 @@ export default function chakra_feedback() {
       </MyLabel>
 
       <Box p={3}>
-        <SectionContainer>
-          <BasicText>
-            In web design, a toast is a small, non-modal notification popup that
-            appears on the screen to provide brief information or alerts to the
-            user. It is typically displayed as a small rectangular box
+        {/*  Section Introduction */}
+        {/* COMPONENT DESCRIPTION */}
+        <SectionContainer paddingBottom={2}>
+          <BasicText color={colors.mainAccent3}>
+            ⦾ In web design, a toast is a small, non-modal notification popup
+            that appears on the screen to provide brief information or alerts to
+            the user. It is typically displayed as a small rectangular box
             positioned at the bottom, top, or corner of the screen.
           </BasicText>
-          <BasicText>
-            Toasts are used to provide important or time-sensitive information
-            to the user without interrupting their current workflow. They can be
-            used to show notifications, success messages, error messages,
-            warnings, or other types of feedback. Toasts often include a brief
-            message or status update along with an optional icon or action
-            button.
-          </BasicText>
-          <BasicText>The main characteristics of a toast include:</BasicText>
-
-          <BasicText>
-            ⦾ <b>Brief and concise</b>: Toasts typically display short and
-            concise messages to quickly grab the user's attention and convey the
-            information effectively.
-          </BasicText>
-
-          <BasicText>
-            ⦾ <b>Non-intrusive</b>: Toasts do not require any user interaction
-            and automatically disappear after a certain duration or when the
-            user dismisses them. They appear briefly and do not block or
-            interrupt the user's current activity.
-          </BasicText>
-
-          <BasicText>
-            ⦾ <b>Temporary</b>: Toasts are temporary notifications and do not
-            persist on the screen. They are meant to provide transient
-            information or feedback.
-          </BasicText>
-
-          <BasicText>
-            ⦾ <b>Responsive</b>: Toasts are often designed to be responsive and
-            adapt to different screen sizes and devices. They should be visually
-            appealing and legible on various screen resolutions.
-          </BasicText>
-
-          <BasicText>
-            ⦾ Toasts are commonly used in web and mobile applications to enhance
+          <Box paddingX={4} paddingY={2}>
+            <BasicText>
+              Toasts are used to provide important or time-sensitive information
+              to the user without interrupting their current workflow. They can
+              be used to show notifications, success messages, error messages,
+              warnings, or other types of feedback. Toasts often include a brief
+              message or status update along with an optional icon or action
+              button.
+            </BasicText>
+            <BasicText>The main characteristics of a toast include:</BasicText>
+            <Box paddingX={7} paddingY={3}>
+              <ul>
+                <li>
+                  <HL>Brief and concise</HL>: Description
+                </li>
+                <li>
+                  <HL>Component</HL>: Toasts typically display short and concise
+                  messages to quickly grab the user's attention and convey the
+                  information effectively.
+                </li>
+                <li>
+                  <HL>Non-intrusive</HL>: Toasts do not require any user
+                  interaction and automatically disappear after a certain
+                  duration or when the user dismisses them. They appear briefly
+                  and do not block or interrupt the user's current activity.
+                </li>
+                <li>
+                  <HL>Temporary</HL>: Toasts are temporary notifications and do
+                  not persist on the screen. They are meant to provide transient
+                  information or feedback.
+                </li>
+                <li>
+                  <HL>Responsive</HL>: Toasts are often designed to be
+                  responsive and adapt to different screen sizes and devices.
+                  They should be visually appealing and legible on various
+                  screen resolutions.
+                </li>
+              </ul>
+            </Box>
+            Toasts are commonly used in web and mobile applications to enhance
             the user experience by providing timely feedback and information.
             They help in conveying important messages without disrupting the
             user's flow or requiring them to navigate away from their current
             context.
-          </BasicText>
+            {/* IMPORT CODE */}
+            <SectionContainer p={2} mt={5} mb={2}>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Highlighter>{`import { useToast } from '@chakra-ui/react'`}</Highlighter>
+            </SectionContainer>
+          </Box>
         </SectionContainer>
       </Box>
-      <Box p={3}>
+      <Box>
         <SectionContainer>
           <ToastOne />
+          <Feedback.E07 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <ToastTwo />
+          <Feedback.E08 />
         </SectionContainer>
 
         <SectionContainer>
           <ToastThree />
+          <Feedback.E09 />
         </SectionContainer>
 
         <SectionContainer>
           <ToastFour />
+          <Feedback.E10 />
         </SectionContainer>
 
         <SectionContainer>
           <ToastFive />
+          <Feedback.E11 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <ToastSix />
+          <Feedback.E12 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <ToastSeven />
+          <Feedback.E13 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <ToastEight />
+          <Feedback.E14 />
         </SectionContainer>
 
         <SectionContainer>
           {" "}
           <ToastNine />
+          <Feedback.E15 />
         </SectionContainer>
       </Box>
       <Box p={3}>

@@ -36,17 +36,6 @@ export function ToastOne() {
           <ToastOneFunction />
         </ExampleContainer>
       </Box>
-      <BasicText>
-        This is the code for my variation of the Chakra UI first example for
-        toast. See an explanation of the code step-by-step below.{" "}
-      </BasicText>
-
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastonecode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
-
       <Box paddingX={6}>
         <ul>
           <li>
@@ -108,11 +97,6 @@ export function ToastTwo() {
           <ToastTwoFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toasttwocode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -134,11 +118,6 @@ export function ToastThree() {
           <ToastThreeFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastthreecode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -159,11 +138,6 @@ export function ToastFour() {
           <ToastFourFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastfourcode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -183,11 +157,6 @@ export function ToastFive() {
           <ToastFiveFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastfivecode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -224,11 +193,6 @@ export function ToastSix() {
           <ToastSixFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastsixcode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -240,7 +204,7 @@ export function ToastSeven() {
         Customizing the Container of the Toast:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ The <b>containerStyle</b> property is available to override the
+        ⦾ The <Mono>containerStyle</Mono> property is available to override the
         default styles for this aspect of the toast.
       </BasicText>
 
@@ -249,11 +213,6 @@ export function ToastSeven() {
           <ToastSevenFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastsevencode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -274,11 +233,6 @@ export function ToastEight() {
           <ToastEightFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toasteightcode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }
@@ -301,11 +255,6 @@ export function ToastNine() {
           <ToastNineFunction />
         </ExampleContainer>
       </Box>
-      <FlexibleBox bg={colors.sectionColor} padding={3}>
-        <Flex justifyContent={"center"} alignItems={"center"}>
-          <img src="./images/toastninecode.png" alt="skeleton" width="425px" />
-        </Flex>
-      </FlexibleBox>
     </Box>
   );
 }

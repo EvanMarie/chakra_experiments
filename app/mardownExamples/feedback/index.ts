@@ -14,14 +14,6 @@ import { default as E12 }  from './12.md';
 import { default as E13 }  from './13.md';
 import { default as E14 }  from './14.md';
 import { default as E15 }  from './15.md';
-import { default as E16 }  from './16.md';
-import { default as E17 }  from './17.md';
-import { default as E18 }  from './18.md';
-import { default as E19 }  from './19.md';
-
-import { default as AlertImports }  from './alertImports.md';
-import { default as CircularImports }  from './circularImports.md';
-
 
 
 export { E01};
@@ -39,12 +31,6 @@ export { E12};
 export { E13};
 export { E14};
 export { E15};
-export { E16};
-export { E17};
-export { E18};
-export { E19};
 
 
 
-export { AlertImports};
-export { CircularImports};

@@ -201,7 +201,6 @@ export function ToastSixFunction() {
 }
 
 export function ToastSevenFunction() {
-  // Via instantiation
   const toast = useToast({
     position: "top",
     title:

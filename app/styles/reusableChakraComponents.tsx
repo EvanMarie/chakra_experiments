@@ -305,6 +305,7 @@ export function CompWithLabel({
     <Box w="100%">
       <Grid templateColumns={split}>
         <Flex
+          w="100%"
           justifyContent={"center"}
           overflow="scroll"
           alignItems={leftColAlign}
@@ -312,6 +313,7 @@ export function CompWithLabel({
           {children[0]}
         </Flex>
         <Flex
+          w="100%"
           fontSize={fontSize}
           overflow="scroll"
           justifyContent={rightColAlign}
@@ -455,7 +457,7 @@ export function StackedExample({
   ...restProps
 }: StackedExampleProps) {
   const defaultFlexProps = {
-    p: 4,
+    p: 3,
     fontSize: BasicTextSize,
     w: "100%",
     bg: undefined,

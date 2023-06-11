@@ -1,8 +1,8 @@
-import hljs from 'highlight.js';
+import hljs from "highlight.js";
 import { useEffect, useRef } from "react";
 
-import javascript from 'highlight.js/lib/languages/javascript';
-hljs.registerLanguage('javascript', javascript);
+import javascript from "highlight.js/lib/languages/javascript";
+hljs.registerLanguage("javascript", javascript);
 // additional languages can be added using the pattern above
 
 /*  These lines must be added wherever this is used.
@@ -12,7 +12,13 @@ export function links() {
   return [{ rel: "stylesheet", href: styles }];
 } 
 */
-export function HighLighter({language="javascript", children}: {language?: string, children : React.ReactNode}) {
+export function Highlighter({
+  language = "javascript",
+  children,
+}: {
+  language?: string;
+  children: React.ReactNode;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (ref.current) {
@@ -25,12 +31,8 @@ export function HighLighter({language="javascript", children}: {language?: strin
   return (
     <div className="syntax-container">
       <pre data-syntax={language}>
-        <code ref={ref}
-          className={`hljs language-${language}`}
-        />
+        <code ref={ref} className={`hljs language-${language}`} />
       </pre>
     </div>
   );
 }
-
-
