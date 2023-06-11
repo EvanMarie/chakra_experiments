@@ -14,12 +14,15 @@ export function AlertDialogueOne() {
       </BasicText>
       <BasicText color={colors.mainAccent3}>
         ⦾ This is is an example of how to use the <Mono>AlertDialog</Mono>{" "}
-        component from Chakra UI. It renders a button labeled "Delete Customer"
-        and opens an alert dialog when clicked. The alert dialog prompts the
-        user to confirm the deletion action with the message "Are you sure? You
-        can't undo this action afterwards." It provides two buttons for the user
-        to choose from: "Cancel" and "Delete". The <Mono>useDisclosure</Mono>{" "}
-        hook is used to control the open and close state of the dialog, and the{" "}
+        component from Chakra UI.
+      </BasicText>{" "}
+      <BasicText>
+        It renders a button labeled "Delete Customer" and opens an alert dialog
+        when clicked. The alert dialog prompts the user to confirm the deletion
+        action with the message "Are you sure? You can't undo this action
+        afterwards." It provides two buttons for the user to choose from:
+        "Cancel" and "Delete". The <Mono>useDisclosure</Mono> hook is used to
+        control the open and close state of the dialog, and the{" "}
         <Mono>useRef</Mono> hook is used to reference the cancel button within
         the dialog.
       </BasicText>
@@ -48,13 +51,15 @@ export function AlertDialogueTwo() {
       <BasicText color={colors.mainAccent3}>
         ⦾ In Chakra UI, the <Mono>Modal</Mono> component has a default
         transition animation called "scale", which means it smoothly scales up
-        and down when opening and closing. However, you can customize the
-        transition animation by using the <Mono>motionPreset</Mono> prop. By
-        setting the value of <Mono>motionPreset</Mono> to "slideInBottom",
-        "slideInRight", or "scale", you can change the transition effect of the
-        modal.
+        and down when opening and closing.
+      </BasicText>{" "}
+      <BasicText>
+        However, you can customize the transition animation by using the{" "}
+        <Mono>motionPreset</Mono> prop. By setting the value of{" "}
+        <Mono>motionPreset</Mono> to "slideInBottom", "slideInRight", or
+        "scale", you can change the transition effect of the modal.
       </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <BasicText>
         For example, if you set <Mono>motionPreset="slideInRight"</Mono>, the
         modal will slide in from the right side of the screen when opening.
         Similarly, <Mono>motionPreset="slideInBottom"</Mono> will make the modal
@@ -62,7 +67,6 @@ export function AlertDialogueTwo() {
         default scaling transition, you can simply omit the{" "}
         <Mono>motionPreset</Mono> prop.
       </BasicText>
-
       <Box p={5}>
         <Box marginY={1}>
           <AlertDialogFunctionTwo />

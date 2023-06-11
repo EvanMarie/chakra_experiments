@@ -12,12 +12,13 @@ import {
 } from "~/components/app_components/menuBars";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { Flex, Link, VStack } from "@chakra-ui/react";
+import { Flex, Link, Text, VStack } from "@chakra-ui/react";
 import {
   DisclosureComponentBar,
   FeedbackComponentBar,
   StyleMenuBar,
 } from "~/components/app_components/menuBars";
+import FeedbackExOne from "~/examples/feedbackCodeOne";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },

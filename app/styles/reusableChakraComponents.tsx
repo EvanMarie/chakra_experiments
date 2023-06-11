@@ -275,6 +275,7 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
   const defaultBoxProps = {
     p: 1,
     mb: 3,
+    borderRadius: "sm",
     bg: colors.mainAccent3,
     color: colors.secondaryText,
   };
@@ -359,6 +360,7 @@ export function SectionContainer({
   const defaultFlexProps = {
     p: 5,
     overflow: "auto",
+    fontSize: BasicTextSize,
     marginY: 3,
     bg: colors.sectionColor,
     justifyContent: "center",
@@ -391,6 +393,7 @@ export function ExampleContainer({
   const defaultFlexProps = {
     p: 4,
     overflow: "auto",
+    fontSize: BasicTextSize,
     w: "100%",
     bg: colors.mainAccent2,
     justifyContent: "center",

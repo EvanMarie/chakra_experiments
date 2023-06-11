@@ -5,6 +5,7 @@ import {
   AlertTitle,
   Box,
   Stack,
+  Text,
 } from "@chakra-ui/react";
 import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
 import CloseButtonAlert from "./closeButtonAlert";

@@ -18,3 +18,7 @@ a {
 a:hover {
     color: cyan !important;
 }
+
+li::marker {
+    color: #f7e6c1;
+}

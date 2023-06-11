@@ -20,6 +20,7 @@ import {
   AlertDialogueTwo,
 } from "~/components/overlay/alertDialog";
 import { Experiment } from "~/styles/codeExamples";
+import { DrawerOne } from "~/components/overlay/drawer";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -152,15 +153,83 @@ export default function chakra_overlay() {
       {/*  Section Introduction */}
       <Box>
         <SectionContainer bg={colors.mainAccent4}>
-          <BasicText>Text</BasicText>
-          <Box paddingX={10}>
-            <BasicText>Text</BasicText>
-          </Box>
-          <FlexibleBox p={3} m={3} bg={colors.myblue}>
-            <BasicText>Text</BasicText>
+          <BasicText>
+            The Chakra UI Drawer component is a versatile component that
+            provides a slide-in panel that can be used for various purposes such
+            as displaying menus, sidebars, or modal-like content. It is commonly
+            used to present additional options or information without taking up
+            too much space on the screen.
+          </BasicText>
+          <Box paddingX={10}></Box>
+          <FlexibleBox bg={colors.myblue}>
+            <Box paddingX={7} paddingY={2} m={1}>
+              <BasicText>
+                The Chakra Drawer component offers several features and
+                customization options:
+              </BasicText>
+            </Box>
+            <Box paddingX={12} paddingY={1} m={1}>
+              <ul style={{ listStyleType: "circle" }}>
+                <li>
+                  <BasicText>
+                    <b>Placement</b>: You can specify the placement of the
+                    drawer, such as "left", "right", "top", or "bottom", to
+                    determine from which direction it will slide into view.
+                  </BasicText>
+                </li>{" "}
+                <li>
+                  <BasicText>
+                    <b>Size</b>: You can control the size of the drawer by
+                    setting the size prop to values like "xs", "sm", "md", "lg",
+                    or "xl", or you can provide custom values.{" "}
+                  </BasicText>
+                </li>{" "}
+                <li>
+                  <BasicText>
+                    <b>Overlay</b>: The drawer component automatically adds an
+                    overlay to the rest of the screen when it is open, making
+                    the content outside the drawer less prominent. The overlay
+                    can be customized with various properties such as opacity
+                    and background color.{" "}
+                  </BasicText>
+                </li>{" "}
+                <li>
+                  <BasicText>
+                    <b>Animation</b>: The drawer component provides smooth
+                    animation when opening and closing. You can customize the
+                    animation using CSS transitions or other animation
+                    libraries.{" "}
+                  </BasicText>
+                </li>{" "}
+                <li>
+                  <BasicText>
+                    <b>Controlled or Uncontrolled</b>: You have the flexibility
+                    to use the drawer as a controlled or uncontrolled component.
+                    You can manually control its open/close state, or you can
+                    use the <Mono>isOpen</Mono> and <Mono>onClose</Mono> props
+                    to let Chakra UI handle the state for you.{" "}
+                  </BasicText>
+                </li>{" "}
+                <li>
+                  <BasicText>
+                    Accessibility: The Chakra Drawer component is built with
+                    accessibility in mind. It ensures proper focus management
+                    and screen reader compatibility.
+                  </BasicText>
+                </li>
+              </ul>
+              <BasicText>
+                To use the Chakra Drawer component, you need to import it from
+                the Chakra UI library and place its content inside the
+                component. You can control the visibility of the drawer by
+                toggling its open state using the isOpen prop.
+              </BasicText>
+            </Box>
           </FlexibleBox>
         </SectionContainer>
-        <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+        <SectionContainer>
+          <DrawerOne />
+        </SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
         <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
