@@ -95,7 +95,7 @@ export default function chakra_section() {
         </SectionContainer>
 
         {/* COMPONENT EXAMPLES */}
-        <Box p={3}>
+        <Box>
           <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
           <Highlighter>{``}</Highlighter>
           <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>

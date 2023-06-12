@@ -45,13 +45,6 @@ export function OnChangeTabs() {
         </TabPanels>
       </Tabs>
       <br />
-      <BasicText>
-        Below is the code for my above variation on the Chakra UI example for
-        this <Mono>onChange</Mono> functionality.
-      </BasicText>
-      <center>
-        <img src="/images/onchangetabs.png" alt="OnChange Tabs" width="500px" />
-      </center>
     </>
   );
 }

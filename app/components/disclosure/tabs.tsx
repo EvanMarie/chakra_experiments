@@ -145,8 +145,7 @@ export function TabsFour() {
         ⦾ You can change the size of the tab by passing size prop. Chakra
         supports 3 sizes <Mono>sm</Mono>, <Mono>md</Mono>, <Mono>lg</Mono>. The
         following uses size small with the <Mono>soft-rounded</Mono> variant and
-        a red
-        <Mono>colorScheme</Mono>.
+        a red <Mono>colorScheme</Mono>.
       </BasicText>
 
       <ExampleContainer bg={colors.mainBackground}>
@@ -288,10 +287,6 @@ export function TabsSeven() {
         guide to help users navigate and understand the current state of the
         tabbed interface.
       </BasicText>
-      <Mono>
-        <b>TabIndicator</b>: mt="-2.5px" height="3px" bg="pink.500"
-        borderRadius="2px"
-      </Mono>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -384,6 +379,12 @@ export function TabsEight() {
               </TabPanel>
               <TabPanel>
                 <p>two!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>three!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>four!</p>
               </TabPanel>
             </TabPanels>
           </Tabs>
@@ -519,7 +520,6 @@ export function TabsTwelve() {
         activating the tabs. With focus on a specific tab, users can activate a
         tab by pressing Space or Enter.
       </BasicText>
-      <Mono>Tabs: isManual variant="enclosed"</Mono>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>

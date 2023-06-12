@@ -272,7 +272,6 @@ export default function chakra_basic_styling() {
         </SectionContainer>
 
         <SectionContainer>
-          {" "}
           <TabsTwo />
           <Disclosure.E07 />
         </SectionContainer>
@@ -284,54 +283,67 @@ export default function chakra_basic_styling() {
 
         <SectionContainer>
           <TabsFour />
+          <Disclosure.E09 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsFive />
+          <Disclosure.E16 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsSix />
+          <Disclosure.E10 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsSeven />
+          <Disclosure.E11 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsEight />
+          <Disclosure.E12 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsNine />
+          <Disclosure.E21 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsTen />
+          <Disclosure.E13 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsEleven />
+          <Disclosure.E14 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsTwelve />
+          <Disclosure.E15 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsThirteen />
+          <Disclosure.E17 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsFourteen />
+          <Disclosure.E18 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsFifteen />
+          <Disclosure.E19 />
         </SectionContainer>
 
         <SectionContainer>
           <TabsSixteen />
+          <Disclosure.E20 />
         </SectionContainer>
       </Box>
 
