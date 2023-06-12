@@ -4,6 +4,8 @@ import {
   ExampleContainer,
   FlexibleBox,
   Mono,
+  SectionDescription,
+  SectionHeading,
   colors,
 } from "~/styles/reusableChakraComponents";
 import {
@@ -21,15 +23,13 @@ import {
 export function ToastOne() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Simple Example
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Simple Example</SectionHeading>
+      <SectionDescription>
         ⦾ The toast will close itself when the close button is clicked, or after
         a timeout. Toasts can be configured to appear at either the top or the
         bottom of an application window, and it is possible to have more than
         one toast onscreen at a time.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -84,13 +84,11 @@ export function ToastOne() {
 export function ToastTwo() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Custom Component Toast:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Custom Component Toast:</SectionHeading>
+      <SectionDescription>
         ⦾ You can also create and display a custom component instead of the
         default Toast UI.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -104,14 +102,12 @@ export function ToastTwo() {
 export function ToastThree() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Closing Toast Components:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Closing Toast Components:</SectionHeading>
+      <SectionDescription>
         ⦾ Toasts can be closed imperatively, individually (via the{" "}
         <Mono>close</Mono> instance method) or all together (via the{" "}
         <Mono>closeAll</Mono> instance method).
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -125,13 +121,11 @@ export function ToastThree() {
 export function ToastFour() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Updating Toast Components:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Updating Toast Components:</SectionHeading>
+      <SectionDescription>
         ⦾ Toasts' options can be updated, by passing an id and the new options
         to the update instance method.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -145,12 +139,10 @@ export function ToastFour() {
 export function ToastFive() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Toast Statuses
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Toast Statuses</SectionHeading>
+      <SectionDescription>
         ⦾ You can use status to change the overall representation of a toast.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -164,13 +156,11 @@ export function ToastFive() {
 export function ToastSix() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Variants on Toast
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Variants on Toast</SectionHeading>
+      <SectionDescription>
         ⦾ The Toast component has the same types of variants as the Alert
         component does.
-      </BasicText>
+      </SectionDescription>
       <Box paddingX={6}>
         <ul>
           <li>
@@ -200,13 +190,11 @@ export function ToastSix() {
 export function ToastSeven() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Customizing the Container of the Toast:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Customizing the Container of the Toast:</SectionHeading>
+      <SectionDescription>
         ⦾ The <Mono>containerStyle</Mono> property is available to override the
         default styles for this aspect of the toast.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -220,13 +208,11 @@ export function ToastSeven() {
 export function ToastEight() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Positioning the Toast:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Positioning the Toast:</SectionHeading>
+      <SectionDescription>
         ⦾ The <Mono>position</Mono> property allows you to specify where the
         toast will popup from.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>
@@ -240,15 +226,13 @@ export function ToastEight() {
 export function ToastNine() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Preventing Duplicate Toast:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Preventing Duplicate Toast:</SectionHeading>
+      <SectionDescription>
         ⦾ In some cases you might need to prevent duplicate of specific toasts.
         To achieve you need to pass an <Mono>id</Mono> and use the{" "}
         <Mono>toast.isActive</Mono> method to determine when to call{" "}
         <Mono>toast(...)</Mono>.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={1}>
         <ExampleContainer bg={colors.mainBackground}>

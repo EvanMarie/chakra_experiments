@@ -24,9 +24,15 @@ import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 import { Filters, BackdropFilters } from "~/components/styling/imageFilters";
 import { PageHeader, StyleMenuBar } from "~/components/app_components/menuBars";
+import { Highlighter } from "~/components/styling/highlighter";
+import hljs from "highlight.js";
+import javascript from "highlight.js/lib/languages/javascript";
+import styles from "~/styles/codeMarkdown.css";
 
+hljs.registerLanguage("javascript", javascript);
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
+  { rel: "stylesheet", href: styles },
 ];
 
 export default function chakra_basic_styling() {
@@ -112,12 +118,15 @@ export default function chakra_basic_styling() {
             <i>p={2}</i>
           </Mono>
         </Box>
+        <Highlighter>{`<Box p={2} mb={3}>`}</Highlighter>
         <Box m={4} bg={colors.myblue} mb={3}>
           This <Mono>Box</Mono> has a margin setting of{" "}
           <Mono>
             <i>m={4}</i>
           </Mono>
         </Box>
+
+        <Highlighter>{`<Box m={4} mb={3}>`}</Highlighter>
       </SectionContainer>
 
       <div id="colors" />
@@ -125,38 +134,49 @@ export default function chakra_basic_styling() {
         Background and Font Colors:
       </MyLabel>
       <SectionContainer>
-        <Box bg="blue" p={2} mb={3}>
-          This <Mono>Box</Mono> has a <Mono>bg</Mono> of "blue".
-        </Box>
+        <VStack alignItems="left" spacing={4}>
+          <Box bg="blue" p={2}>
+            This <Mono>Box</Mono> has a <Mono>bg</Mono> of "blue".
+          </Box>
 
-        <Box bg="green.700" p={2} mb={3} color="white">
-          This <Mono>Box</Mono> has a <Mono>bg of green.700</Mono> and a{" "}
-          <Mono>color</Mono> (font) of "white".
-        </Box>
+          <Highlighter>{`<Box bg="blue">`}</Highlighter>
 
-        <Box backgroundColor="red.700" p={2} mb={3}>
-          This <Mono>Box</Mono> has a <Mono>backgroundColor</Mono> of{" "}
-          <Mono>red.700</Mono> and a <Mono>color</Mono>. "#444444"
-        </Box>
+          <Box bg="green.700" p={2} color="white">
+            This <Mono>Box</Mono> has a <Mono>bg of green.700</Mono> and a{" "}
+            <Mono>color</Mono> (font) of "white".
+          </Box>
+
+          <Highlighter>{`<Box bg="green.700" color="white">`}</Highlighter>
+
+          <Box backgroundColor="red.700" p={2}>
+            This <Mono>Box</Mono> has a <Mono>backgroundColor</Mono> of{" "}
+            <Mono>red.700</Mono> and a <Mono>color</Mono>. "#444444"
+          </Box>
+          <Highlighter>{`<Box backgroundColor="red.700">`}</Highlighter>
+        </VStack>
       </SectionContainer>
       <div id="gradients" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#gradient">
         Gradients:
       </MyLabel>
       <SectionContainer>
-        <Box
-          w="100%"
-          p={2}
-          mb={3}
-          bgGradient={"linear(to-t, green.700, pink.700)"}
-          borderRadius={"sm"}
-        >
-          This <Mono>Box</Mono> has a <Mono>linear gradient</Mono> background.
-        </Box>
+        <VStack alignItems="left" spacing={4}>
+          <Box
+            w="100%"
+            p={2}
+            mb={3}
+            bgGradient={"linear(to-t, green.700, pink.700)"}
+            borderRadius={"sm"}
+          >
+            This <Mono>Box</Mono> has a <Mono>linear gradient</Mono> background.
+          </Box>
+          <Highlighter>{`<Box bgGradient={"linear(to-t, green.700, pink.700)"}>`}</Highlighter>
 
-        <Box w="100%" p={2} bgGradient="radial(blue, yellow.700, pink.700)">
-          This <Mono>Box</Mono> has a <Mono>radial gradient</Mono> background.
-        </Box>
+          <Box w="100%" p={2} bgGradient="radial(blue, yellow.700, pink.700)">
+            This <Mono>Box</Mono> has a <Mono>radial gradient</Mono> background.
+          </Box>
+          <Highlighter>{`<Box bgGradient="radial(blue, yellow.700, pink.700)">`}</Highlighter>
+        </VStack>
       </SectionContainer>
       <div id="fonts" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#typography">
@@ -164,17 +184,29 @@ export default function chakra_basic_styling() {
       </MyLabel>
       <SectionContainer p={8}>
         <ExampleContainer bg={colors.mainBackground}>
-          <VStack spacing={7} fontFamily="monospace" color="deeppink">
+          <VStack spacing={3} fontFamily="monospace" color="deeppink">
             <Text fontSize={32}>fontSize={32}</Text>
+            <Highlighter>{`<Text fontSize={32}>`}</Highlighter>
             <Text fontSize="1.5em">fontSize="1.5em"</Text>
+            <Highlighter>{`<Text fontSize="1.5em">`}</Highlighter>
             <Text fontSize="md">fontSize="md"</Text>
+            <Highlighter>{`<Text fontSize="md">`}</Highlighter>
             <Text textTransform="uppercase">textTransform="uppercase"</Text>
+            <Highlighter>{`<Text textTransform="uppercase">`}</Highlighter>
+            <Text textTransform="capitalize">textTransform="capitalize"</Text>
+            <Highlighter>{`<Text textTransform="capitalize">`}</Highlighter>
             <Text textTransform="lowercase">textTransform="lowercase"</Text>
+            <Highlighter>{`<Text textTransform="lowercase">`}</Highlighter>
+            <Text fontWeight="bold">fontWeight="bold"</Text>
+            <Highlighter>{`<Text fontWeight="bold">`}</Highlighter>
             <Text textDecoration="underline">textDecoration="underline"</Text>
+            <Highlighter>{`<Text textDecoration="underline">`}</Highlighter>
             <Text textDecoration="overline">textDecoration="overline"</Text>
+            <Highlighter>{`<Text textDecoration="overline">`}</Highlighter>
             <Text textDecoration="line-through">
               textDecoration="line-through"
             </Text>
+            <Highlighter>{`<Text textDecoration="line-through">`}</Highlighter>
           </VStack>
         </ExampleContainer>
       </SectionContainer>
@@ -291,9 +323,9 @@ export default function chakra_basic_styling() {
       </MyLabel>
       <Box>
         <SectionContainer>
-          <Mono>
-            display="flex" alignItems="center" justifyContent="space-between"
-          </Mono>
+          <Highlighter>
+            {`display="flex" alignItems="center" justifyContent="space-between"`}
+          </Highlighter>
 
           <FlexibleBox
             display="flex"
@@ -310,11 +342,11 @@ export default function chakra_basic_styling() {
           <Flex
             bg={colors.mainAccent2}
             color="black"
+            h="100px"
             align="center"
             justify="center"
           >
-            This is a Flex Chakra component with align="center" and
-            justify="center"
+            <Highlighter>{`align="center" and justify="center"`}</Highlighter>{" "}
           </Flex>
         </SectionContainer>
         <div id="grid" />
@@ -332,12 +364,8 @@ export default function chakra_basic_styling() {
           margin={4}
         >
           <BasicText>This container has the following values:</BasicText>
-          <p>
-            {" "}
-            <Mono>
-              Grid: display="grid" gridGap={2} gridAutoFlow="row dense"
-            </Mono>
-          </p>
+          <Highlighter>{`<Grid display="grid" gridGap={2} gridAutoFlow="row dense">`}</Highlighter>
+
           <p>
             <Mono>display="grid"</Mono>: This prop sets the display property of
             the Box component to "grid", enabling grid layout on the container.
@@ -375,7 +403,7 @@ export default function chakra_basic_styling() {
           color={colors.mainText}
         >
           Grid using Chakra shorthand:{" "}
-          <Mono>Grid gap={2} autoFlow="row dense"</Mono>
+          <Highlighter>{`<Grid gap={2} autoFlow="row dense">`}</Highlighter>
         </Grid>
         <div id="background" />
         <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#background">
@@ -385,13 +413,11 @@ export default function chakra_basic_styling() {
           <Box>
             <p>The Following is a Box with background properties: </p>
             <Box paddingX={4} paddingBottom={4}>
-              <Mono>backgroundImage="url('URL.png')"</Mono>
-              <br />
-              <Mono>backgroundPosition="center"</Mono> <br />
-              <Mono> backgroundRepeat="no-repeat"</Mono>
-              <br />
-              <Mono> backgroundSize="cover"</Mono> <br />
-              <Mono> h="200px"</Mono>
+              <Highlighter>{`backgroundImage="url('URL.png')"
+backgroundPosition="center"
+backgroundRepeat="no-repeat"
+backgroundSize="cover"
+h="200px"`}</Highlighter>
             </Box>
           </Box>
 
@@ -408,14 +434,11 @@ export default function chakra_basic_styling() {
           <Box>
             <p>The Following is a the short hand version of the same: </p>
             <Box paddingX={4} paddingBottom={4}>
-              <Mono>bgImage="url('URL.png')"</Mono>
-              <br />
-              <Mono>bgPosition="center" </Mono>
-              <br />
-              <Mono>bgRepeat="no-repeat"</Mono>
-              <br />
-              <Mono> bgSize="cover"</Mono>
-              <br /> <Mono>h="200px"</Mono>
+              <Highlighter>{`bgImage="url('URL.png')"
+bgPosition="center" 
+bgRepeat="no-repeat"
+bgSize="cover"
+h="200px"`}</Highlighter>
             </Box>
           </Box>
           <Box
@@ -430,7 +453,7 @@ export default function chakra_basic_styling() {
           <Box>
             <p>Let's try some different values to see their effects: </p>
             <Box paddingX={4} paddingBottom={4}>
-              <Mono>h="400px"</Mono>
+              <Highlighter>{`h="400px"`}</Highlighter>
             </Box>
           </Box>
           <Box
@@ -451,10 +474,11 @@ export default function chakra_basic_styling() {
         fontSize={16}
         bg={colors.myblue}
         borderColor="yellow.200"
+        h="60px"
         marginTop={4}
         color={colors.mainText}
       >
-        Box with <Mono>2px border, borderColor="yellow.200"</Mono>
+        <Highlighter>{`<Box 2px border borderColor="yellow.200">`}</Highlighter>
       </FlexibleBox>
       <div id="border_radius" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#border-radius">
@@ -611,7 +635,7 @@ export default function chakra_basic_styling() {
             rounded="sm"
             bg={colors.myblue}
           >
-            <Mono> boxShadow="dark-lg"</Mono>
+            <Mono> {`boxShadow="dark-lg"`}</Mono>
           </Box>
           <Box
             margin={5}
@@ -620,7 +644,7 @@ export default function chakra_basic_styling() {
             rounded="sm"
             bg={colors.myblue}
           >
-            <Mono> boxShadow="outline"</Mono>
+            <Mono> {`boxShadow="outline"`}</Mono>
           </Box>
           <Box
             margin={5}
@@ -629,7 +653,7 @@ export default function chakra_basic_styling() {
             rounded="sm"
             bg={colors.myblue}
           >
-            <Mono> boxShadow="inner"</Mono>
+            <Mono> {`boxShadow="inner"`}</Mono>
           </Box>
         </SimpleGrid>
         <Box mt={5}>
@@ -686,9 +710,6 @@ export default function chakra_basic_styling() {
       <SectionContainer fontSize={16}>
         <Box>
           <VStack w="100%">
-            <Mono>
-              colorScheme="teal" _hover= background: "white", color: "teal.500"
-            </Mono>
             <ExampleContainer>
               <Button
                 colorScheme="teal"
@@ -700,15 +721,12 @@ export default function chakra_basic_styling() {
                 Hover me
               </Button>
             </ExampleContainer>
+            <Highlighter>
+              {`colorScheme="teal" _hover= background: "white", color: "teal.500"`}
+            </Highlighter>
           </VStack>
           <br />
           <VStack w="100%" mt={5}>
-            <BasicText>
-              A Chakra Box with <Mono>role="group"</Mono> for the container and:
-            </BasicText>
-            <Mono>
-              _hover= fontWeight: "semibold" _groupHover= color: "purple"
-            </Mono>
             <Box role="group" w="100%">
               <ExampleContainer bg={colors.myblue} color={colors.mainText}>
                 <FlexibleBox w="100px">
@@ -719,14 +737,14 @@ export default function chakra_basic_styling() {
                     Text
                   </Box>
                 </FlexibleBox>
+                <Highlighter>{`<Box role="group>
+  <Box _hover= fontWeight: "semibold" _groupHover= color: "purple"">
+  </Box>
+</Box>`}</Highlighter>
               </ExampleContainer>
             </Box>
           </VStack>
           <VStack w="100%" mt={5}>
-            <BasicText>A Chakra Box with:</BasicText>
-            <Mono>
-              _before = content: '"🙂"', display: "inline-block", mr: "5px"{" "}
-            </Mono>
             <ExampleContainer color={colors.secondaryText}>
               <Box
                 _before={{
@@ -738,6 +756,8 @@ export default function chakra_basic_styling() {
                 A pseudo element
               </Box>
             </ExampleContainer>
+
+            <Highlighter>{`<Box _before = content: '"🙂"', display: "inline-block", mr: "5px">`}</Highlighter>
           </VStack>
         </Box>
       </SectionContainer>
@@ -747,10 +767,6 @@ export default function chakra_basic_styling() {
       </MyLabel>
       <SectionContainer>
         <VStack w="100%" mt={5} fontSize={16}>
-          <Mono>
-            Button as="a" target="_blank" variant="outline"
-            href="https://www.evanmarie.com" color="pink"
-          </Mono>
           <ExampleContainer bg={colors.myblue}>
             <Box>
               <Button
@@ -759,10 +775,20 @@ export default function chakra_basic_styling() {
                 variant="outline"
                 href="https://www.evanmarie.com"
                 color="pink"
+                mb={4}
               >
                 Hello
               </Button>
             </Box>
+            <Highlighter>{`<Button
+  as="a"
+  target="_blank"
+  variant="outline"
+  href="https://www.evanmarie.com"
+  color="pink"
+>
+  Hello
+</Button>`}</Highlighter>
           </ExampleContainer>
         </VStack>
       </SectionContainer>

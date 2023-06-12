@@ -1,18 +1,22 @@
 import { Box, Flex } from "@chakra-ui/react";
 
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import {
+  BasicText,
+  Mono,
+  SectionDescription,
+  SectionHeading,
+  colors,
+} from "~/styles/reusableChakraComponents";
 import { DrawerFunctionOne } from "./drawerFunctions";
 
 export function DrawerOne() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Default Usage:
-      </BasicText>
+      <SectionHeading>Default Usage:</SectionHeading>
       <Box>
-        <BasicText color={colors.mainAccent3}>
+        <SectionDescription>
           ⦾ The following is a basic drawer.{" "}
-        </BasicText>
+        </SectionDescription>
         <BasicText>
           It first defines the <Mono>ComponentFunctionOne</Mono> functional
           component: <Mono>useDisclosure()</Mono> hook is used to get the
@@ -45,9 +49,6 @@ export function DrawerOne() {
           <DrawerFunctionOne />
         </Box>
       </Box>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <img src="./images/drawercodeone.png" alt="skeleton" width="425px" />
-      </Flex>
     </Box>
   );
 }
@@ -55,17 +56,12 @@ export function DrawerOne() {
 export function ComponentTwo() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        HEADING
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>⦾ DESCRIPTION</BasicText>
+      <SectionHeading>HEADING</SectionHeading>
+      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>COMPONENT</Box>
       </Box>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <img src="./images/codeimage.png" alt="skeleton" width="425px" />
-      </Flex>
     </Box>
   );
 }
@@ -73,17 +69,12 @@ export function ComponentTwo() {
 export function ComponentThree() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        HEADING
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>⦾ DESCRIPTION</BasicText>
+      <SectionHeading>HEADING</SectionHeading>
+      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>COMPONENT</Box>
       </Box>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <img src="./images/codeimage.png" alt="skeleton" width="425px" />
-      </Flex>
     </Box>
   );
 }
@@ -99,9 +90,6 @@ export function ComponentFour() {
       <Box p={5}>
         <Box marginY={1}>COMPONENT</Box>
       </Box>
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <img src="./images/codeimage.png" alt="skeleton" width="425px" />
-      </Flex>
     </Box>
   );
 }

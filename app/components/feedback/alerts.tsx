@@ -7,21 +7,25 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import {
+  BasicText,
+  Mono,
+  SectionDescription,
+  SectionHeading,
+  colors,
+} from "~/styles/reusableChakraComponents";
 import CloseButtonAlert from "./closeButtonAlert";
 
 export function AlertOne() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        General Usage
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>General Usage</SectionHeading>
+      <SectionDescription>
         ⦾ The alert below uses <Mono>Alert</Mono>, <Mono>AlertIcon</Mono>,{" "}
         <Mono>AlertTitle</Mono>, and <Mono>AlertDescription</Mono>. In{" "}
         <Mono>Alert</Mono>, the status is set to "error". And the rest is simple
         text input.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>
@@ -43,16 +47,14 @@ export function AlertOne() {
 export function AlertTwo() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Status
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Status</SectionHeading>
+      <SectionDescription>
         ⦾ Change the status of the alerts by passing the status prop. This
         affects the color scheme and icon used. Alert supports{" "}
         <Mono>error</Mono>, <Mono>success</Mono>, <Mono>warning</Mono>, and{" "}
         <Mono>info</Mono> statuses. The following use only the{" "}
         <Mono>Alert</Mono> and <Mono>AlertIcon</Mono> components.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>
@@ -86,14 +88,12 @@ export function AlertTwo() {
 export function AlertThree() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Variants
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Variants</SectionHeading>
+      <SectionDescription>
         ⦾ Alert has 4 variant styles you can use. Pass the variant prop and use
         either <Mono>subtle</Mono>, <Mono>solid</Mono>, <Mono>left-accent</Mono>{" "}
         or <Mono>top-accent</Mono>.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>
@@ -129,13 +129,11 @@ export function AlertThree() {
 export function AlertFour() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Composition
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Composition</SectionHeading>
+      <SectionDescription>
         ⦾ There are numerous layouts possible with <Mono>Alert</Mono>. The
         following alert has these properties:
-      </BasicText>
+      </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
           <Alert
@@ -166,14 +164,12 @@ export function AlertFour() {
 export function AlertFive() {
   return (
     <Box marginTop="10px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Incorporating a Close Button
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Incorporating a Close Button</SectionHeading>
+      <SectionDescription>
         ⦾ Alert can also incorporate other Chakra components. Here's an example
         of an alert with wrapping description text and the{" "}
         <Mono>CloseButton</Mono> component with simple close functionality:
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>

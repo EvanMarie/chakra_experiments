@@ -1,6 +1,12 @@
 import { Box, Flex } from "@chakra-ui/react";
 
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import {
+  BasicText,
+  Mono,
+  SectionDescription,
+  SectionHeading,
+  colors,
+} from "~/styles/reusableChakraComponents";
 import {
   AlertDialogFunctionOne,
   AlertDialogFunctionTwo,
@@ -9,13 +15,11 @@ import {
 export function AlertDialogueOne() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Default Usage
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Default Usage</SectionHeading>
+      <SectionDescription>
         ⦾ This is is an example of how to use the <Mono>AlertDialog</Mono>{" "}
         component from Chakra UI.
-      </BasicText>{" "}
+      </SectionDescription>{" "}
       <BasicText>
         It renders a button labeled "Delete Customer" and opens an alert dialog
         when clicked. The alert dialog prompts the user to confirm the deletion
@@ -38,14 +42,12 @@ export function AlertDialogueOne() {
 export function AlertDialogueTwo() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Modifying the Animated Transition:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Modifying the Animated Transition:</SectionHeading>
+      <SectionDescription>
         ⦾ In Chakra UI, the <Mono>Modal</Mono> component has a default
         transition animation called "scale", which means it smoothly scales up
         and down when opening and closing.
-      </BasicText>{" "}
+      </SectionDescription>{" "}
       <BasicText>
         However, you can customize the transition animation by using the{" "}
         <Mono>motionPreset</Mono> prop. By setting the value of{" "}

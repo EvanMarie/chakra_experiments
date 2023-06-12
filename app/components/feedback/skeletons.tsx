@@ -3,6 +3,8 @@ import {
   FlexibleBox,
   HL,
   Mono,
+  SectionDescription,
+  SectionHeading,
   colors,
 } from "~/styles/reusableChakraComponents";
 import {
@@ -17,12 +19,10 @@ import FadeDurationSkeleton from "./skeletonFadeDuration";
 export function SkeletonOne() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        As a stand alone component:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>As a stand alone component:</SectionHeading>
+      <SectionDescription>
         ⦾ The contains three of the most simple use cases for the Skeleton:
-      </BasicText>
+      </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
           <FlexibleBox bg={colors.mainBackground} padding={5}>
@@ -41,13 +41,11 @@ export function SkeletonOne() {
 export function SkeletonTwo() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Wrapping a Component:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Wrapping a Component:</SectionHeading>
+      <SectionDescription>
         ⦾ The contents of the component will not be seen. This will be seen
         until the contents are loaded.
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>
@@ -66,13 +64,11 @@ export function SkeletonTwo() {
 export function SkeletonThree() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Fetching Remote Data:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Fetching Remote Data:</SectionHeading>
+      <SectionDescription>
         ⦾ Skeletons can load and give visual structure to content while waiting
         for the actual content to load. See code below.
-      </BasicText>
+      </SectionDescription>
     </Box>
   );
 }
@@ -80,13 +76,11 @@ export function SkeletonThree() {
 export function SkeletonFour() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Circle and Text Skeleton:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Circle and Text Skeleton:</SectionHeading>
+      <SectionDescription>
         ⦾ This example uses two additional elements: <Mono>SkeletonCircle</Mono>{" "}
         and <Mono>SkeletonText</Mono>
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>
@@ -110,13 +104,11 @@ export function SkeletonFour() {
 export function SkeletonFive() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Color-Changing Skeleton:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Color-Changing Skeleton:</SectionHeading>
+      <SectionDescription>
         ⦾ use <Mono>startColor</Mono> and <Mono>endColor</Mono> to create
         color-changing skeletons.
-      </BasicText>
+      </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
           <FlexibleBox bg={colors.mainBackground} padding={5}>
@@ -131,13 +123,11 @@ export function SkeletonFive() {
 export function SkeletonSix() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        isLoaded prop:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>isLoaded prop:</SectionHeading>
+      <SectionDescription>
         ⦾ to prevent the skeleton from rendering, use <Mono>isLoaded</Mono> as
         shown below.
-      </BasicText>
+      </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
           <Skeleton isLoaded>
@@ -152,16 +142,14 @@ export function SkeletonSix() {
 export function SkeletonSeven() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        fadeDuration prop:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>fadeDuration prop:</SectionHeading>
+      <SectionDescription>
         ⦾ <Mono>fadeDuration</Mono> allows you to control the speed at which the
         content fades into view. The number passed is the number of seconds for
         the <Mono>animation</Mono> style prop to render. Default is 0.4 seconds.
         This is best viewd with the <Mono>isLoaded</Mono> prop set to{" "}
         <Mono>true</Mono>.{" "}
-      </BasicText>
+      </SectionDescription>
 
       <Box p={5}>
         <Box marginY={1}>

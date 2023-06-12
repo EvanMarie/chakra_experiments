@@ -11,6 +11,8 @@ import {
   BasicText,
   ExampleContainer,
   Mono,
+  SectionDescription,
+  SectionHeading,
   colors,
 } from "~/styles/reusableChakraComponents";
 import { OnChangeTabs } from "./tabsOnChange";
@@ -28,14 +30,12 @@ import DataArrayTabs from "./dataTabs";
 export function TabsOne() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Default Settings
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Default Settings</SectionHeading>
+      <SectionDescription>
         ⦾ By default, only one item may be expanded and it can only be collapsed
         again by expanding another. Pressing the up and down arrow keys will
         move focus between accordion buttons.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -67,15 +67,13 @@ export function TabsOne() {
 export function TabsTwo() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Variants and Colors: Example One
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Variants and Colors</SectionHeading>
+      <SectionDescription>
         ⦾ Tabs come in 6 different variants to style the tabs: <Mono>line</Mono>
         , <Mono>enclosed</Mono>, <Mono>enclosed-colored</Mono>,{" "}
         <Mono>soft-rounded</Mono>, <Mono>solid-rounded</Mono>, and{" "}
         <Mono>unstyled</Mono>
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -102,16 +100,14 @@ export function TabsTwo() {
 export function TabsThree() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Variants and Colors: Example Two
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Variants and Colors: Example Two</SectionHeading>
+      <SectionDescription>
         ⦾ You can also change the color scheme for any specific variant by
         passing the <Mono>colorScheme</Mono>. The value of{" "}
         <Mono>colorScheme</Mono> must exist in the theme object, and must be a
         key in <Mono>theme.colors</Mono> that has the <Mono>50 - 900</Mono>{" "}
         color values.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -138,15 +134,13 @@ export function TabsThree() {
 export function TabsFour() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Tab Sizing
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Tab Sizing</SectionHeading>
+      <SectionDescription>
         ⦾ You can change the size of the tab by passing size prop. Chakra
         supports 3 sizes <Mono>sm</Mono>, <Mono>md</Mono>, <Mono>lg</Mono>. The
         following uses size small with the <Mono>soft-rounded</Mono> variant and
         a red <Mono>colorScheme</Mono>.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -173,14 +167,12 @@ export function TabsFour() {
 export function TabsFive() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Changing Alignment
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Changing Alignment</SectionHeading>
+      <SectionDescription>
         ⦾ You can change the alignment of the TabList by passing align prop.
         Charka supports 3 variations <Mono>start</Mono>, <Mono>center</Mono>,
         and <Mono>end</Mono>. The following uses a center alignment.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -207,13 +199,11 @@ export function TabsFive() {
 export function TabsSix() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Fitted Tabs
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Fitted Tabs</SectionHeading>
+      <SectionDescription>
         ⦾ Stretch the tab list to fit the container by passing{" "}
         <Mono>isFitted</Mono> prop.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -252,13 +242,13 @@ export function TabsSix() {
 export function TabsSeven() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
+      <SectionHeading>
         TabIndicator: Styling the tab states via props
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      </SectionHeading>
+      <SectionDescription>
         ⦾ To customize the active tab indicator, set the variant to
         <Mono>unstyled</Mono> and set styles on <Mono>TabIndicator</Mono>.
-      </BasicText>
+      </SectionDescription>
       <BasicText>
         In Chakra UI's Tabs component, the <Mono>TabIndicator</Mono> represents
         a visual indicator that highlights the currently active tab. It is a
@@ -323,14 +313,12 @@ export function TabsSeven() {
 export function TabsEight() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Customizing individual tabs
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Customizing individual tabs</SectionHeading>
+      <SectionDescription>
         ⦾ In the event that you need to create custom styles for individual
         tabs, use the <Mono>_selected</Mono>, <Mono>_hover</Mono>, and{" "}
         <Mono>_active</Mono> style props.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -397,14 +385,12 @@ export function TabsEight() {
 export function TabsNine() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        The onChange Property
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>The onChange Property</SectionHeading>
+      <SectionDescription>
         ⦾ The <Mono>onChange</Mono> callback returns the active tab's index
         whenever the user changes tabs. If you intend to control the tabs
         programmatically, use this with the <Mono>index</Mono> prop.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -418,15 +404,13 @@ export function TabsNine() {
 export function TabsTen() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Focus a specific tab by default:
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Focus a specific tab by default:</SectionHeading>
+      <SectionDescription>
         ⦾ By default, only one item may be expanded and it can only be collapsed
         again by expanding another. Pressing the up and down arrow keys will
         move focus between accordion buttons. Here, the{" "}
         <Mono>defaultIndex</Mono> on <Mono>Tabs</Mono> is set to 3.
-      </BasicText>
+      </SectionDescription>
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Tabs isFitted defaultIndex={3}>
@@ -474,14 +458,12 @@ export function TabsTen() {
 export function TabsEleven() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Disable a Tab
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Disable a Tab</SectionHeading>
+      <SectionDescription>
         ⦾ When a Tab is disabled, it is skipped during keyboard navigation and
         it is not clickable. Here, the <Mono>isDisabled</Mono> property is used
         on the second tab.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -506,10 +488,8 @@ export function TabsEleven() {
 export function TabsTwelve() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Manually activate tabs
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Manually activate tabs</SectionHeading>
+      <SectionDescription>
         ⦾ By default, Tabs are activated automatically. This means when you use
         the arrow keys to change tabs, the tab is activated and focused. The
         content of a <Mono>TabPanel</Mono> should ideally be preloaded. However,
@@ -519,7 +499,7 @@ export function TabsTwelve() {
         you should use a manually activated tab, it moves focus without
         activating the tabs. With focus on a specific tab, users can activate a
         tab by pressing Space or Enter.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -546,17 +526,15 @@ export function TabsTwelve() {
 export function TabsThirteen() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Lazy Tab Mounting
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Lazy Tab Mounting</SectionHeading>
+      <SectionDescription>
         ⦾ By default, the Tabs component renders all tabs content to the DOM,
         meaning that invisible tabs are still rendered but are hidden by styles.
         If you want to defer rendering of each tab until that tab is selected,
         you can use the isLazy prop. This is useful if your tabs require heavy
         performance, or make network calls on mount that should only happen when
         the component is displayed.
-      </BasicText>
+      </SectionDescription>
 
       <Mono>Tabs: isLazy</Mono>
 
@@ -587,13 +565,11 @@ export function TabsThirteen() {
 export function TabsFourteen() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Controlled Tabs
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Controlled Tabs</SectionHeading>
+      <SectionDescription>
         ⦾ Like form inputs, a tab's state can be controlled. Make sure to
         include an onChange as well, or else the tabs will not be interactive.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -607,14 +583,12 @@ export function TabsFourteen() {
 export function TabsFifteen() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Custom Tab Components
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Custom Tab Components</SectionHeading>
+      <SectionDescription>
         ⦾ Because <Mono>TabList</Mono> needs to know the order of the children,
         we use cloneElement to pass state internally. Your custom Tab component
         must use <Mono>React.forwardRef</Mono>.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -628,14 +602,12 @@ export function TabsFifteen() {
 export function TabsSixteen() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        DataTabs
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>DataTabs</SectionHeading>
+      <SectionDescription>
         ⦾ If you'd like to drive your tabs with an array instead of using the
         granular components, you can create your own <Mono>DataTabs</Mono>{" "}
         component.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>

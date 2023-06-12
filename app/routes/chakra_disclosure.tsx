@@ -108,7 +108,7 @@ export default function chakra_basic_styling() {
       <Box p={3}>
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
-        <SectionContainer paddingBottom={2}>
+        <SectionContainer paddingBottom={2} mb={0}>
           <BasicText color={colors.mainAccent3}>
             ⦾ The <Mono>Accordion</Mono> component in Chakra UI is a versatile
             component that allows you to provide sections of content that can
@@ -191,7 +191,7 @@ export default function chakra_basic_styling() {
 
       {/* COMPONENT EXAMPLES */}
       <Box p={3}>
-        <SectionContainer>
+        <SectionContainer mt={0}>
           <AccordionOne />
           <Disclosure.E01 />
         </SectionContainer>
@@ -220,7 +220,7 @@ export default function chakra_basic_styling() {
       <Box p={3}>
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
-        <SectionContainer paddingBottom={2}>
+        <SectionContainer paddingBottom={2} mb={0}>
           <BasicText color={colors.mainAccent3}>
             ⦾ You can render any element within Tabs, but TabList should only
             have Tab as children, and <Mono>TabPanels</Mono> should have{" "}
@@ -266,7 +266,7 @@ export default function chakra_basic_styling() {
 
       {/* COMPONENT EXAMPLES */}
       <Box p={3}>
-        <SectionContainer>
+        <SectionContainer mt={0}>
           <TabsOne />
           <Disclosure.E06 />
         </SectionContainer>

@@ -56,7 +56,7 @@ export default function chakra_section() {
       <Box p={3}>
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
-        <SectionContainer paddingBottom={2}>
+        <SectionContainer paddingBottom={2} mb={0}>
           <BasicText color={colors.mainAccent3}>
             ⦾ Some statement about this component
           </BasicText>
@@ -96,7 +96,7 @@ export default function chakra_section() {
 
         {/* COMPONENT EXAMPLES */}
         <Box>
-          <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
+          <SectionContainer mt={0}>COMPONENT EXAMPLE ONE</SectionContainer>
           <Highlighter>{``}</Highlighter>
           <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
           <Highlighter>{``}</Highlighter>
@@ -108,186 +108,6 @@ export default function chakra_section() {
           <Highlighter>{``}</Highlighter>
         </Box>
       </Box>
-      {/* ********************************************************************* */}
-      <div id="component_id" />
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
-      </MyLabel>
-      <Box p={3}>
-        {/*  Section Introduction */}
-        {/* COMPONENT DESCRIPTION */}
-        <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
-            ⦾ Some statement about this component
-          </BasicText>
-          <Box paddingX={7} paddingY={3}>
-            <ul>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-            </ul>
-          </Box>
-          <Box paddingX={4} paddingY={2}>
-            <BasicText>Some description</BasicText>
-            {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
-            </SectionContainer>
-          </Box>
-        </SectionContainer>
-
-        {/* COMPONENT EXAMPLES */}
-        <Box p={3}>
-          <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-        </Box>
-      </Box>{" "}
-      {/* ********************************************************************* */}
-      <div id="component_id" />
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
-      </MyLabel>
-      <Box p={3}>
-        {/*  Section Introduction */}
-        {/* COMPONENT DESCRIPTION */}
-        <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
-            ⦾ Some statement about this component
-          </BasicText>
-          <Box paddingX={7} paddingY={3}>
-            <ul>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-            </ul>
-          </Box>
-          <Box paddingX={4} paddingY={2}>
-            <BasicText>Some description</BasicText>
-            {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
-            </SectionContainer>
-          </Box>
-        </SectionContainer>
-
-        {/* COMPONENT EXAMPLES */}
-        <Box p={3}>
-          <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-        </Box>
-      </Box>{" "}
-      {/* ********************************************************************* */}
-      <div id="component_id" />
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
-      </MyLabel>
-      <Box p={3}>
-        {/*  Section Introduction */}
-        {/* COMPONENT DESCRIPTION */}
-        <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
-            ⦾ Some statement about this component
-          </BasicText>
-          <Box paddingX={7} paddingY={3}>
-            <ul>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-            </ul>
-          </Box>
-          <Box paddingX={4} paddingY={2}>
-            <BasicText>Some description</BasicText>
-            {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
-            </SectionContainer>
-          </Box>
-        </SectionContainer>
-
-        {/* COMPONENT EXAMPLES */}
-        <Box p={3}>
-          <SectionContainer>COMPONENT EXAMPLE ONE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-        </Box>
-      </Box>{" "}
       {/* ********************************************************************* */}
     </BigBackgroundBox>
   );

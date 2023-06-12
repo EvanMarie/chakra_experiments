@@ -248,8 +248,9 @@ interface BasicTextProps {
   children?: React.ReactNode;
   size?: string | number;
   color?: string;
-  fontWeight?: string;
-  mb?: number;
+  fontWeight?: string | number;
+  mb?: number | string;
+  mt?: number | string;
 }
 
 export function BasicText({
@@ -257,10 +258,11 @@ export function BasicText({
   color = colors.mainText,
   fontWeight = "normal",
   mb = 2,
+  mt = 2,
   children,
 }: BasicTextProps) {
   return (
-    <Text fontSize={size} color={color} mb={mb} fontWeight={fontWeight}>
+    <Text fontSize={size} color={color} mb={mb} mt={mt} fontWeight={fontWeight}>
       {children}
     </Text>
   );
@@ -501,5 +503,49 @@ export function StackedExample({
         {children}
       </VStack>
     </Box>
+  );
+}
+
+interface SectionHeadingProps {
+  children?: React.ReactNode;
+  size?: number | string;
+  color?: string;
+  mb?: number | string;
+  mt?: number | string;
+}
+
+export function SectionHeading({
+  children,
+  size = 23,
+  mb = 3,
+  mt = 0,
+  color = colors.mainAccent2,
+}: SectionHeadingProps) {
+  return (
+    <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
+      {children}
+    </BasicText>
+  );
+}
+
+interface SectionDescriptionProps {
+  children?: React.ReactNode;
+  size?: number | string;
+  color?: string;
+  mb?: number | string;
+  mt?: number | string;
+}
+
+export function SectionDescription({
+  children,
+  size = BasicTextSize,
+  mb = 3,
+  mt = 3,
+  color = colors.mainAccent3,
+}: SectionDescriptionProps) {
+  return (
+    <BasicText size={size} color={color} mb={mb} mt={mt}>
+      {children}
+    </BasicText>
   );
 }

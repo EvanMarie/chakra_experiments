@@ -12,20 +12,20 @@ import {
   BasicText,
   ExampleContainer,
   Mono,
+  SectionDescription,
+  SectionHeading,
   colors,
 } from "~/styles/reusableChakraComponents";
 
 export function AccordionOne() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Default Settings
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Default Settings</SectionHeading>
+      <SectionDescription>
         ⦾ By default, only one item may be expanded and it can only be collapsed
         again by expanding another. Pressing the up and down arrow keys will
         move focus between accordion buttons.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -73,13 +73,11 @@ export function AccordionOne() {
 export function AccordionTwo() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        AllowMultiple
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>AllowMultiple</SectionHeading>
+      <SectionDescription>
         ⦾ If you set <Mono>allowMultiple</Mono> to true then the accordion will
         permit multiple items to be expanded at once.
-      </BasicText>
+      </SectionDescription>
 
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
@@ -127,14 +125,12 @@ export function AccordionTwo() {
 export function AccordionThree() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        AllowToggle
-      </BasicText>
+      <SectionHeading>AllowToggle</SectionHeading>
 
-      <BasicText color={colors.mainAccent3}>
+      <SectionDescription>
         ⦾ If you set <Mono>allowToggle</Mono> to true, any expanded item may be
         collapsed again.
-      </BasicText>
+      </SectionDescription>
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion allowToggle>
@@ -181,14 +177,12 @@ export function AccordionThree() {
 export function AccordionFour() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Expanded State
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Expanded State</SectionHeading>
+      <SectionDescription>
         ⦾ The <Mono>AccordionButton</Mono> component has aria-expanded set to
         true or false depending on the state of the <Mono>AccordionItem</Mono>.
         Use the style prop <Mono>_expanded</Mono> to style this state.
-      </BasicText>
+      </SectionDescription>
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion>
@@ -220,14 +214,12 @@ export function AccordionFour() {
 export function AccordionFive() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
-        Internal State
-      </BasicText>
-      <BasicText color={colors.mainAccent3}>
+      <SectionHeading>Internal State</SectionHeading>
+      <SectionDescription>
         ⦾ If you need access to the internal state of each accordion item, you
         can use a render prop. It provides 2 internal state props:{" "}
         <Mono>isExpanded</Mono> and <Mono>isDisabled</Mono>.
-      </BasicText>
+      </SectionDescription>
       <ExampleContainer bg={colors.mainBackground}>
         <Box marginY={1}>
           <Accordion allowMultiple>
