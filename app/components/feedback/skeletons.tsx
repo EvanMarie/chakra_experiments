@@ -156,9 +156,9 @@ export function SkeletonSeven() {
         fadeDuration prop:
       </BasicText>
       <BasicText color={colors.mainAccent3}>
-        ⦾ <HL>fadeDuration</HL> allows you to control the speed at which the
+        ⦾ <Mono>fadeDuration</Mono> allows you to control the speed at which the
         content fades into view. The number passed is the number of seconds for
-        the <HL>animation</HL> style prop to render. Default is 0.4 seconds.
+        the <Mono>animation</Mono> style prop to render. Default is 0.4 seconds.
         This is best viewd with the <Mono>isLoaded</Mono> prop set to{" "}
         <Mono>true</Mono>.{" "}
       </BasicText>

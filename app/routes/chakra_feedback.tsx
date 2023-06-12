@@ -91,11 +91,11 @@ export default function chakra_feedback() {
         </Box>
         <FlexibleBox bg={colors.myblue} p={4}>
           <BasicText>
-            Loading components like <HL>Spinners</HL>, <HL>Progress</HL>,{" "}
-            <HL>Circular Progress</HL>, and <HL>Skeletons</HL> serve to indicate
-            to users that a process or operation is underway. They effectively
-            manage user expectations during periods of uncertainty or wait
-            times, keeping users engaged and preventing confusion or
+            Loading components like <Mono>Spinners</Mono>, <Mono>Progress</Mono>
+            , <Mono>Circular Progress</Mono>, and <Mono>Skeletons</Mono> serve
+            to indicate to users that a process or operation is underway. They
+            effectively manage user expectations during periods of uncertainty
+            or wait times, keeping users engaged and preventing confusion or
             frustration.{" "}
           </BasicText>
           <BasicText>
@@ -201,34 +201,32 @@ export default function chakra_feedback() {
             a close button. This makes the Alert component a vital tool in
             enhancing the overall user experience of your application.
           </BasicText>
-          <Box paddingX={7} paddingY={3}>
+          <Box paddingX={7} paddingY={2}>
             <BasicText>
               These are the main parts of an <Mono>Alert</Mono> component.
             </BasicText>
             <ul>
               <li>
-                <HL>Alert</HL>: The wrapper for alert components.
+                <Mono>Alert</Mono>: The wrapper for alert components.
               </li>
               <li>
-                <HL>AlertIcon</HL>: The visual icon for the alert that changes
-                based on the status prop.
+                <Mono>AlertIcon</Mono>: The visual icon for the alert that
+                changes based on the status prop.
               </li>
               <li>
-                <HL>AlertTitle</HL>: The title of the alert to be announced by
-                screen readers.
+                <Mono>AlertTitle</Mono>: The title of the alert to be announced
+                by screen readers.
               </li>
               <li>
-                <HL>AlertDescription</HL>: The description of the alert to be
-                announced by screen readers.
+                <Mono>AlertDescription</Mono>: The description of the alert to
+                be announced by screen readers.
               </li>
             </ul>
           </Box>
           <Box paddingX={4} paddingY={2}>
             {/* IMPORT CODE */}
             <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
+              <BasicText>To import these components:</BasicText>
               <Highlighter>{`import { Alert, AlertIcon, AlertTitle, AlertDescription } 
   from "@chakra-ui/react";`}</Highlighter>
             </SectionContainer>
@@ -276,29 +274,53 @@ export default function chakra_feedback() {
       <Box p={3}>
         <SectionContainer>
           <BasicText color={colors.mainAccent3}>
-            <b>⦾ Circular Progress</b> is used to indicates the progress for
-            determinate and indeterminate processes.
+            ⦾ The <Mono>Circular Progress</Mono> component in Chakra UI is used
+            to indicate the status of an ongoing process where the percentage of
+            completion is known. It's an effective visual feedback mechanism for
+            tasks such as file uploads, system checks, or any other asynchronous
+            operation that might take time to complete.{" "}
           </BasicText>
-          <Box padding={6}>
+          <BasicText>
+            This component displays a circular track, with a portion filled to
+            represent the progress of the operation. You can customize the size,
+            color, and thickness of the track and progress indicator based on
+            the look and feel of your application.{" "}
+          </BasicText>
+          <BasicText>
+            An important feature of the <Mono>Circular Progress</Mono> component
+            is its <Mono>value</Mono> {"  "}
+            property. This is a number between 0 and 100 that represents the
+            current progress. If the <Mono>value</Mono> property is not
+            provided, the circular progress will spin indefinitely, which could
+            be used to represent an ongoing operation where the completion
+            percentage is unknown.
+          </BasicText>
+          <BasicText>
+            {" "}
+            Like all Chakra UI components, the <Mono>
+              Circular Progress
+            </Mono>{" "}
+            component is fully accessible, with the proper <Mono>ARIA</Mono>{" "}
+            roles and attributes automatically applied to indicate the
+            determinate or indeterminate state of the progress to assistive
+            technologies. This makes it a reliable tool in building inclusive
+            web interfaces.
+          </BasicText>
+
+          <Box paddingX={6}>
             <ul>
               <li>
-                There are two types of progress indicators: determinate and
-                indeterminate.
+                <HL>Determinate progress</HL>: fills the circular track with
+                color, as the indicator moves from 0 to 360 degrees.
               </li>
               <li>
-                Determinate progress: fills the circular track with color, as
-                the indicator moves from 0 to 360 degrees.
-              </li>
-              <li>
-                Indeterminate progress: grows and shrinks the indicator while
-                moving along the circular track.
+                <HL>Indeterminate progress</HL>: grows and shrinks the indicator
+                while moving along the circular track.
               </li>
             </ul>
             {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
+            <SectionContainer p={2} paddingY={2}>
+              <BasicText>To import these components:</BasicText>
               <Highlighter>{`import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";`}</Highlighter>
             </SectionContainer>
           </Box>
@@ -389,38 +411,41 @@ export default function chakra_feedback() {
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2}>
           <BasicText color={colors.mainAccent3}>
-            ⦾ Some statement about this component
+            ⦾ The <Mono>Progress</Mono> component in Chakra UI is used to
+            represent the completion progress of a task or operation. Similar to
+            the <Mono>Circular Progress</Mono> component, it's an effective way
+            to visually convey the status of a task where the percentage of
+            completion is known.{" "}
           </BasicText>
-          <Box paddingX={7} paddingY={3}>
-            <ul>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-            </ul>
-          </Box>
+          <BasicText>
+            The <Mono>Progress</Mono> component is a horizontal bar that gets
+            progressively filled from left to right to indicate the progress of
+            an operation. It provides a clear visual cue to the user about the
+            status of background tasks such as file uploads, downloads, data
+            processing, and more. One of the main features of the{" "}
+            <Mono>Progress</Mono> component is the <Mono>value</Mono> property,
+            which is a number between 0 and 100 indicating the current progress.{" "}
+          </BasicText>
+          <BasicText>
+            If the <Mono>value</Mono> property is not provided, a striped
+            pattern will be applied to the bar to indicate indeterminate
+            progress, where the percentage of completion is unknown. The{" "}
+            <Mono>Progress</Mono> component allows you to customize the height,
+            color scheme, and even whether or not to display stripes. You can
+            also control whether the progress is animated or not using the
+            isAnimated property.
+          </BasicText>
+          <BasicText>
+            In terms of accessibility, Chakra UI automatically applies the
+            appropriate <Mono>ARIA</Mono> roles and attributes to the Progress
+            component, making it a suitable choice for developing inclusive user
+            interfaces.
+          </BasicText>
           <Box paddingX={4} paddingY={2}>
-            <BasicText>Some description</BasicText>
             {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
+            <SectionContainer p={2} paddingY={2}>
+              <BasicText>To import this component:</BasicText>
+              <Highlighter>{`import { Progress } from '@chakra-ui/react'`}</Highlighter>
             </SectionContainer>
           </Box>
           <Flex p={3} justifyContent="center" alignItems="center" w="100%">
@@ -485,38 +510,62 @@ export default function chakra_feedback() {
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2}>
           <BasicText color={colors.mainAccent3}>
-            ⦾ Some statement about this component
+            ⦾ The <Mono>Skeleton</Mono> component in Chakra UI is a content
+            placeholder used to suggest that content is loading. They provide a
+            low fidelity representation of the content that is loading and are
+            typically used to improve perceived performance and offer a more
+            seamless user experience.{" "}
+          </BasicText>
+          <BasicText>
+            Skeleton components can be used in a wide range of scenarios, such
+            as when loading a page, an image, or a piece of text content. By
+            using a Skeleton component, you can prevent abrupt changes in your
+            application, providing a smoother visual transition as content
+            loads.{" "}
+          </BasicText>
+          <BasicText>
+            One of the key features of the <Mono>Skeleton</Mono> component is
+            its animation. By default, it uses a shimmer effect to better convey
+            the loading state to the user. You can control whether this
+            animation is active or not, and can also customize the speed of the
+            animation. The Skeleton component in Chakra UI is highly flexible
+            and can be adapted to fit a variety of shapes and sizes based on the
+            content it's replacing. You can control its width, height, and other
+            box model properties to fit your needs.{" "}
+          </BasicText>
+          <BasicText>
+            As far as accessibility, Chakra UI applies the appropriate{" "}
+            <Mono>ARIA</Mono> roles and properties to the Skeleton component to
+            indicate to assistive technologies that the content is being loaded.
+            This makes it an excellent tool for building inclusive and
+            performant user interfaces.
           </BasicText>
           <Box paddingX={7} paddingY={3}>
+            <BasicText>Key properties include:</BasicText>
             <ul>
               <li>
-                <HL>Component</HL>: Description
+                <Mono>isLoaded</Mono>: Determines if the skeleton should still
+                be shown or if the content is ready and should be displayed.
               </li>
               <li>
-                <HL>Component</HL>: Description
+                <Mono>startColor / endColor</Mono>: Controls the animation's
+                color at the start and end. Typically you'll want to keep these
+                subtle.
               </li>
               <li>
-                <HL>Component</HL>: Description
+                <Mono>fadeInDuration</Mono>: Determines the duration of the
+                fade-in animation when the isLoaded prop becomes true.
               </li>
               <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
+                <Mono>speed</Mono>: Controls the speed of the shimmer animation.
               </li>
             </ul>
           </Box>
           <Box paddingX={4} paddingY={2}>
-            <BasicText>Some description</BasicText>
             {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
+            <SectionContainer paddingY={2}>
+              <BasicText>To import these components:</BasicText>
+              <Highlighter>{`import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'`}</Highlighter>
             </SectionContainer>
           </Box>
         </SectionContainer>
@@ -578,39 +627,38 @@ export default function chakra_feedback() {
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer>
           <BasicText color={colors.mainAccent3}>
-            ⦾ <HL>Spinners</HL> are used to provide visual cues for users that
-            actions are being processed and to wait for a change or a result.
+            ⦾ The <HL>Spinners</HL> component in Chakra UI is a feedback
+            indicator mainly used for visualizing an unspecified wait time where
+            the length of the task is unknown.{" "}
           </BasicText>
-          <Box paddingX={7} paddingY={3}>
-            <ul>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-              <li>
-                <HL>Component</HL>: Description
-              </li>
-            </ul>
-          </Box>
+          <BasicText>
+            Spinners are animated graphical controls that spin to indicate that
+            a process is currently ongoing. They are often used for tasks such
+            as loading data, submitting forms, or any asynchronous operations
+            where the completion time cannot be estimated. Key features of the
+            Spinner component in Chakra UI are its simplicity and its
+            customizable appearance.{" "}
+          </BasicText>
+          <BasicText>
+            You can easily change the size and color of the Spinner to match the
+            look and feel of your application. Unlike <HL>Progress</HL> or{" "}
+            <HL>CircularProgress</HL> components, Spinners do not represent a
+            percentage completion, but rather the ongoing nature of a task. This
+            makes them suitable for scenarios where the duration of the task is
+            unpredictable.{" "}
+          </BasicText>
+          <BasicText>
+            In terms of accessibility, Chakra UI takes care of that by giving
+            the Spinner component a role of 'status' and providing a fallback
+            status message of 'Loading...', ensuring that screen reader users
+            are also informed about the ongoing operation.
+          </BasicText>
+
           <Box paddingX={4} paddingY={2}>
-            <BasicText>Some description</BasicText>
             {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
+            <SectionContainer p={2} paddingY={2}>
+              <BasicText>To import this component:</BasicText>
+              <Highlighter>{`import { Spinner } from '@chakra-ui/react'`}</Highlighter>
             </SectionContainer>
           </Box>
           <Flex bg={colors.mainAccent4} paddingX={10}>
@@ -755,9 +803,7 @@ export default function chakra_feedback() {
             context.
             {/* IMPORT CODE */}
             <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
+              <BasicText>To import this component:</BasicText>
               <Highlighter>{`import { useToast } from '@chakra-ui/react'`}</Highlighter>
             </SectionContainer>
           </Box>
@@ -814,19 +860,7 @@ export default function chakra_feedback() {
           <Feedback.E15 />
         </SectionContainer>
       </Box>
-      <Box p={3}>
-        <BasicText>
-          To read more about configuring Toasts globally and integrating them
-          into your theme, check out{" "}
-          <a
-            href="https://chakra-ui.com/docs/components/toast/usage#configuring-toast-globally"
-            target="blank"
-          >
-            the Chakra UI documentation
-          </a>{" "}
-          here.
-        </BasicText>
-      </Box>
+      <Box p={3}></Box>
     </BigBackgroundBox>
   );
 }

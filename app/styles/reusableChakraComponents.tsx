@@ -160,7 +160,7 @@ const CustomLink = chakra(Link, {
 });
 
 interface HorizontalLineProps {
-  color?: string | undefined;
+  bg?: string | undefined;
   mb?: string | number;
   mt?: string | number;
   h?: string | number;
@@ -169,14 +169,14 @@ interface HorizontalLineProps {
 }
 
 export function HorizontalLine({
-  color = undefined,
+  bg = undefined,
   mb = 2,
   mt = 6,
   h = "1px",
   w = "100%",
   bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
 }: HorizontalLineProps) {
-  return <Box mb={mb} mt={mt} h={h} w={w} bgGradient={bgGradient} bg={color} />;
+  return <Box mb={mb} mt={mt} h={h} w={w} bgGradient={bgGradient} bg={bg} />;
 }
 
 interface MyLabelProps {
@@ -390,8 +390,33 @@ export function ExampleContainer({
   );
 }
 
-export function MyDivider() {
-  return <HorizontalLine h="0.35px" mb="1px" mt="1px" />;
+interface MyDividerProps {
+  h?: string | number;
+  mb?: string | number;
+  mt?: string | number;
+  bg?: string | undefined;
+  w?: string | number;
+  bgGradient?: string | undefined;
+}
+
+export function MyDivider({
+  bg = undefined,
+  mb = 2,
+  mt = 6,
+  h = "1px",
+  w = "100%",
+  bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
+}: MyDividerProps) {
+  return (
+    <HorizontalLine
+      mb={mb}
+      mt={mt}
+      h={h}
+      w={w}
+      bgGradient={bgGradient}
+      bg={bg}
+    />
+  );
 }
 
 interface HighlightMeProps {
