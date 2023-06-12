@@ -9,8 +9,12 @@ import {
 import {
   BasicText,
   BigBackgroundBox,
+  BulletBox,
+  DescriptionBox,
+  ExampleBox,
   FlexibleBox,
   HL,
+  MyDivider,
   MyLabel,
   SectionContainer,
   colors,
@@ -31,36 +35,18 @@ export const links: LinksFunction = () => [
 export default function chakra_section() {
   return (
     <BigBackgroundBox>
-      <VStack>
-        <ComponentHeadingsBar />
-        <PageHeader title="Chakra Section Components" href="/chakra_section" />
-
-        <FeedbackComponentBar />
-      </VStack>
-      <SectionContainer>
-        <BasicText color={colors.mainAccent3}>Text Intro</BasicText>
-        <FlexibleBox bg={colors.myblue} p={4}>
-          <Box>
-            <BasicText>Text</BasicText>
-          </Box>
-          <Box p={4}>
-            <BasicText>Text</BasicText>
-          </Box>
-        </FlexibleBox>
-      </SectionContainer>
       {/* ********************************************************************* */}
-      <div id="component_id" />
       <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
         ComponentName:
       </MyLabel>
-      <Box p={3}>
+      <DescriptionBox>
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2} mb={0}>
           <BasicText color={colors.mainAccent3}>
             ⦾ Some statement about this component
           </BasicText>
-          <Box paddingX={7} paddingY={3}>
+          <BulletBox>
             <ul>
               <li>
                 <HL>Component</HL>: Description
@@ -81,33 +67,38 @@ export default function chakra_section() {
                 <HL>Component</HL>: Description
               </li>
             </ul>
-          </Box>
-          <Box paddingX={4} paddingY={2}>
+          </BulletBox>
+          <DescriptionBox>
             <BasicText>Some description</BasicText>
             {/* IMPORT CODE */}
-            <SectionContainer p={2} mt={5} mb={2}>
-              <BasicText>
-                These components can be imported as follows:
-              </BasicText>
-              <Highlighter>{``}</Highlighter>
-            </SectionContainer>
-          </Box>
-        </SectionContainer>
 
-        {/* COMPONENT EXAMPLES */}
-        <Box>
-          <SectionContainer mt={0}>COMPONENT EXAMPLE ONE</SectionContainer>
+            <BasicText>These components can be imported as follows:</BasicText>
+            <Highlighter>{``}</Highlighter>
+          </DescriptionBox>
+        </SectionContainer>
+      </DescriptionBox>
+      {/* COMPONENT EXAMPLES */}
+      <ExampleBox>
+        <VStack w="100%" spacing={0}>
+          <Box></Box>
+
           <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-          <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
-          <Highlighter>{``}</Highlighter>
-        </Box>
-      </Box>
+          <BasicText></BasicText>
+        </VStack>
+        <MyDivider mt={0} mb={0} />
+
+        <SectionContainer mt={0}>COMPONENT EXAMPLE ONE</SectionContainer>
+        <Highlighter>{``}</Highlighter>
+        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
+        <Highlighter>{``}</Highlighter>
+        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
+        <Highlighter>{``}</Highlighter>
+        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
+        <Highlighter>{``}</Highlighter>
+        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
+        <Highlighter>{``}</Highlighter>
+      </ExampleBox>
+
       {/* ********************************************************************* */}
     </BigBackgroundBox>
   );

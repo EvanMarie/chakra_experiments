@@ -1,12 +1,12 @@
 
 html, body {
-background-color: #141114;
+background-color: #211421;
 scroll-behavior: smooth;
 }
 
-li, ul, ol, p {
+li, ul, ol, p, a {
     margin-bottom: 0.25rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     font-size: 16px;
 }
 

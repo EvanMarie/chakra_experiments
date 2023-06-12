@@ -686,7 +686,7 @@ h="200px"`}</Highlighter>
       </SectionContainer>
       <SectionContainer>
         <Box marginY={3}>
-          <BasicText size={20} color={colors.mainAccent2}>
+          <BasicText size="20px" color={colors.mainAccent2}>
             <b>Backdrop Filters</b>
           </BasicText>
           <BackdropFilters />

@@ -6,11 +6,13 @@ import {
   Grid,
   HStack,
   Link,
+  ResponsiveValue,
   Text,
+  TextProps,
   VStack,
   chakra,
 } from "@chakra-ui/react";
-import { BiHome } from "react-icons/bi";
+import { AiOutlineHome } from "react-icons/ai";
 
 export const colors = {
   mainBackground: "#211421",
@@ -50,7 +52,9 @@ export const sectionMenuButtons = {
   mx: 0,
 };
 
-export const BasicTextSize = 16;
+export const BasicTextSize = "16px";
+export const MainWidth = "100%";
+export const MainMaxWidth = "1000px";
 
 interface BigBackgroundBoxProps {
   children: React.ReactNode;
@@ -59,17 +63,19 @@ interface BigBackgroundBoxProps {
 export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
   return (
     <Box
-      p={4}
-      w="100%"
-      h="100%"
+      p={2}
+      w={MainWidth}
+      maxWidth={MainMaxWidth}
       bg={colors.mainBackground}
       color={colors.mainText}
+      justifyContent={"center"}
+      alignItems={"center"}
     >
-      <Flex justifyContent={"center"}>
-        <Box p={1} width="800px" display="flex" flexDirection="column">
+      <Box margin="auto 0">
+        <Box p={1} width={MainWidth} display="flex" flexDirection="column">
           {children}
         </Box>
-      </Flex>
+      </Box>
     </Box>
   );
 }
@@ -165,6 +171,7 @@ interface HorizontalLineProps {
   mt?: string | number;
   h?: string | number;
   w?: string | number;
+  opacity?: string | number;
   bgGradient?: string | undefined;
 }
 
@@ -174,9 +181,20 @@ export function HorizontalLine({
   mt = 6,
   h = "1px",
   w = "100%",
+  opacity = 0.3,
   bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
 }: HorizontalLineProps) {
-  return <Box mb={mb} mt={mt} h={h} w={w} bgGradient={bgGradient} bg={bg} />;
+  return (
+    <Box
+      mb={mb}
+      mt={mt}
+      h={h}
+      w={w}
+      opacity={opacity}
+      bgGradient={bgGradient}
+      bg={bg}
+    />
+  );
 }
 
 interface MyLabelProps {
@@ -197,21 +215,25 @@ export function MyLabel({
   if (link === "") {
     return (
       <>
-        <HorizontalLine />
         <Flex justifyContent={"space-between"}>
-          <Text fontSize={size} color={labelColor} fontWeight="bold">
+          <Text
+            fontSize={size}
+            color={labelColor}
+            fontWeight="bold"
+            lineHeight="2em"
+          >
             {children}
           </Text>
           <Link href="/">
-            <BiHome size="40px" color="deeppink" />
+            <AiOutlineHome size="40px" color="deeppink" />
           </Link>
         </Flex>
+        <MyDivider mt={2} mb={2} />
       </>
     );
   } else {
     return (
       <>
-        <HorizontalLine />
         <Flex justifyContent={"space-between"}>
           <Text fontSize={size} color={labelColor} fontWeight="bold">
             {children}
@@ -234,31 +256,33 @@ export function MyLabel({
             </CustomLink>
             <Text fontSize="28px">|</Text>
             <Link href="/">
-              <BiHome size="25px" color="deeppink" />
+              <AiOutlineHome size="25px" color="deeppink" />
             </Link>
             <Text fontSize="28px">|</Text>
           </HStack>
         </Flex>
+        <MyDivider mt={2} mb={2} />
       </>
     );
   }
 }
 
-interface BasicTextProps {
+interface BasicTextProps extends TextProps {
   children?: React.ReactNode;
-  size?: string | number;
+  size?: ResponsiveValue<string>;
   color?: string;
   fontWeight?: string | number;
   mb?: number | string;
   mt?: number | string;
+  [key: string]: any;
 }
 
 export function BasicText({
   size = BasicTextSize,
   color = colors.mainText,
   fontWeight = "normal",
-  mb = 2,
-  mt = 2,
+  mb = 1,
+  mt = 1,
   children,
 }: BasicTextProps) {
   return (
@@ -275,8 +299,8 @@ interface FlexibleBoxProps extends BoxProps {
 
 export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
   const defaultBoxProps = {
-    p: 1,
-    mb: 3,
+    paddingY: 1,
+    paddingX: 5,
     borderRadius: "sm",
     bg: colors.mainAccent3,
     color: colors.secondaryText,
@@ -338,7 +362,8 @@ export function SectionContainer({
   ...restProps
 }: SectionContainerProps) {
   const defaultFlexProps = {
-    p: 5,
+    paddingY: 3,
+    paddingX: 5,
     // overflow: "auto",
     fontSize: BasicTextSize,
     marginY: 3,
@@ -346,6 +371,7 @@ export function SectionContainer({
     justifyContent: "center",
     alignItems: "left",
     borderRadius: "sm",
+    width: "100%",
   };
 
   return (
@@ -398,6 +424,7 @@ interface MyDividerProps {
   mt?: string | number;
   bg?: string | undefined;
   w?: string | number;
+  opacity?: string | number;
   bgGradient?: string | undefined;
 }
 
@@ -407,6 +434,7 @@ export function MyDivider({
   mt = 6,
   h = "1px",
   w = "100%",
+  opacity = 0.3,
   bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
 }: MyDividerProps) {
   return (
@@ -415,6 +443,7 @@ export function MyDivider({
       mt={mt}
       h={h}
       w={w}
+      opacity={opacity}
       bgGradient={bgGradient}
       bg={bg}
     />
@@ -508,7 +537,7 @@ export function StackedExample({
 
 interface SectionHeadingProps {
   children?: React.ReactNode;
-  size?: number | string;
+  size?: string;
   color?: string;
   mb?: number | string;
   mt?: number | string;
@@ -516,7 +545,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   children,
-  size = 23,
+  size = "23px",
   mb = 3,
   mt = 0,
   color = colors.mainAccent2,
@@ -530,7 +559,7 @@ export function SectionHeading({
 
 interface SectionDescriptionProps {
   children?: React.ReactNode;
-  size?: number | string;
+  size?: string;
   color?: string;
   mb?: number | string;
   mt?: number | string;
@@ -539,13 +568,70 @@ interface SectionDescriptionProps {
 export function SectionDescription({
   children,
   size = BasicTextSize,
-  mb = 3,
-  mt = 3,
+  mb = 1,
+  mt = 1,
   color = colors.mainAccent3,
 }: SectionDescriptionProps) {
   return (
     <BasicText size={size} color={color} mb={mb} mt={mt}>
       {children}
     </BasicText>
+  );
+}
+
+interface BulletBoxProps extends BoxProps {
+  children?: React.ReactNode;
+  paddingX?: number | string;
+  paddingY?: number | string;
+  [key: string]: any;
+}
+
+export function BulletBox({
+  children,
+  paddingX = 7,
+  paddingY = 3,
+}: BulletBoxProps) {
+  return (
+    <Box paddingX={paddingX} paddingY={paddingY}>
+      {children}
+    </Box>
+  );
+}
+
+interface DescriptionBoxProps extends BoxProps {
+  children?: React.ReactNode;
+  paddingX?: number | string;
+  paddingY?: number | string;
+  [key: string]: any;
+}
+
+export function DescriptionBox({
+  children,
+  paddingX = 4,
+  paddingY = 2,
+}: DescriptionBoxProps) {
+  return (
+    <Box paddingX={paddingX} paddingY={paddingY}>
+      {children}
+    </Box>
+  );
+}
+
+interface ExampleBoxProps extends BoxProps {
+  children?: React.ReactNode;
+  paddingX?: number | string;
+  paddingY?: number | string;
+  [key: string]: any;
+}
+
+export function ExampleBox({
+  children,
+  paddingX = 5,
+  paddingY = 0,
+}: ExampleBoxProps) {
+  return (
+    <Box paddingX={paddingX} paddingY={paddingY}>
+      {children}
+    </Box>
   );
 }
