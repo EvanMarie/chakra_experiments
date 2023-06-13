@@ -227,9 +227,6 @@ export function MyLabel({
           >
             {children}
           </Text>
-          <Link href="/">
-            <AiOutlineHome size="40px" color="deeppink" />
-          </Link>
         </Flex>
         <MyDivider mt={2} mb={2} />
       </>
@@ -246,7 +243,7 @@ export function MyLabel({
             spacing={3}
             paddingX={3}
             alignItems="center"
-            justifyContent={"space-between"}
+            justifyContent={"right"}
           >
             <Text fontSize="28px">|</Text>
             <CustomLink
@@ -257,10 +254,6 @@ export function MyLabel({
             >
               Chakra Docs
             </CustomLink>
-            <Text fontSize="28px">|</Text>
-            <Link href="/">
-              <AiOutlineHome size="25px" color="deeppink" />
-            </Link>
             <Text fontSize="28px">|</Text>
           </HStack>
         </Flex>

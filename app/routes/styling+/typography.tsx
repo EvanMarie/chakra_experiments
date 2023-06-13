@@ -34,7 +34,7 @@ export default function chakra_section() {
     <BigBackgroundBox>
       {/* ********************************************************************* */}
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#typography">
-        Font Effects:
+        Typography:
       </MyLabel>
       <DescriptionBox>
         {/*  Section Introduction */}
