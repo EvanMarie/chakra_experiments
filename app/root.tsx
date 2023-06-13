@@ -22,6 +22,7 @@ import { SectionHeading } from "./styles/MainDesignComponents";
 import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
 import { BreadCrumbs } from "./components/app_components/breadCrumbs";
+import NavMenu from "./components/app_components/navMenu";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStylesUrl },
