@@ -20,10 +20,6 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   const [ navIndex, setNavIndex ] = useState<number | undefined>(undefined);
-  useEffect(() => {
-    console.log("navIndex: ", navIndex);
-  }, [navIndex]);
-
   return (
     <html lang="en">
       <head>

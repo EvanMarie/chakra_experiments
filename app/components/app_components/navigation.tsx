@@ -82,7 +82,6 @@ type NavElement = {
 export function makeSideNav( { navElements}:{ navElements : NavElement[]} ) {
   return ({initialIndex=undefined, onChange }: {initialIndex?: number, onChange: (index: number)=>void}) => {
     const location = useLocation();
-    
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
     useEffect(() => {
       const basePath = location.pathname.split("/")[1];
@@ -90,7 +89,6 @@ export function makeSideNav( { navElements}:{ navElements : NavElement[]} ) {
       setCurrentIndex(activeIndex);
     }, [location]);
     const onIndexChange = (index: number) => {
-      console.log(index, currentIndex);
       setCurrentIndex(index);
       onChange(index);
     }
