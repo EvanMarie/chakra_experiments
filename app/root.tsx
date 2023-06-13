@@ -4,8 +4,9 @@ import {
   Divider,
   Flex,
   Grid,
+  HStack,
   VStack,
-} from  "@chakra-ui/react";
+} from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
 import theme from "./styles/ExtendedTheme";
@@ -43,8 +44,8 @@ export default function App() {
           <Flex
             width="100%"
             minH="100vh"
-            justifyContent="center"
-            alignItems="center"
+            justifyContent="flex-start"
+            alignItems="flex-start"
             bg={colors.mainBackground}
             direction="column"
           >
@@ -69,7 +70,7 @@ export default function App() {
                 </Box>
                 <Flex
                   flex="1"
-                  justifyContent="center"
+                  justifyContent="flex-start"
                   alignItems="center"
                   direction="column"
                 >
@@ -83,8 +84,15 @@ export default function App() {
                     justifyContent="center"
                     alignItems="center"
                   >
-                    <BreadCrumbs />
-                    <NavMenu />
+                    <Box w="100%" paddingLeft={3} paddingRight={5}>
+                      <HStack justify="space-between">
+                        <BreadCrumbs />
+                        <Box position="fixed" top="7px" right="30px">
+                          <NavMenu />
+                        </Box>
+                      </HStack>
+                    </Box>
+
                     <Outlet />
                   </Flex>
                 </Flex>

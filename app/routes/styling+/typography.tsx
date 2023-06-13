@@ -79,14 +79,13 @@ export default function chakra_section() {
                     controlling font weight: <Mono>fontWeight</Mono>.
                   </li>
                   <li>
-                    <HL>Text Colors</HL>: Text color can be controlled using the
+                    <HL>Text Colors</HL>: Text color can be controlled using the{" "}
                     <Mono>color</Mono> prop, as we've seen in examples on{" "}
                     <Link href="/styling/color">color</Link>.
                   </li>
                   <li>
                     <HL>Line Heights</HL>: Line height can be controlled using
-                    the
-                    <Mono>lineHeight</Mono> prop.
+                    the <Mono>lineHeight</Mono> prop.
                   </li>
                   <li>
                     <HL>Text Alignment and Decoration</HL>: Text alignment can

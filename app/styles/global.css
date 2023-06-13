@@ -16,12 +16,12 @@ ul {
 
 
 a {
-    color: deeppink !important;
+    color: deeppink;
     text-decoration: none;
 }
 
 a:hover {
-    color: cyan !important;
+    color: cyan;
 }
 
 li::marker {

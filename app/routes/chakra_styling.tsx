@@ -473,7 +473,7 @@ h="200px"`}</Highlighter>
       </Box>
       <div id="borders" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#borders">
-        Borders:
+        Borders
       </MyLabel>
       <FlexibleBox
         border="2px"

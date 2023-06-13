@@ -1,12 +1,13 @@
-import { AddIcon, HamburgerIcon } from "@chakra-ui/icons";
+/* eslint-disable react/display-name */
+import { CiMenuBurger } from "react-icons/ci";
+import { CgMenuBoxed } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
 import {
-  Box,
   Menu,
   MenuButton,
   MenuList,
-  Link,
   MenuItem,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 import type { NavElement } from "~/components/app_components/navigation";
@@ -15,6 +16,7 @@ import { navElements } from "~/components/app_components/navigation";
 import { Link as RemixLink, useLocation } from "@remix-run/react";
 
 import { getNavElementForUrl } from "~/components/app_components/navigation";
+import { colors } from "~/styles/DesignComponents";
 
 export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
   // use a Chakra menu to render a dropdown menu for mobile.
@@ -36,26 +38,53 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
       }
     });
 
+    const isSelected = (navElement: NavElement) =>
+      nav && nav.label === navElement.label;
+
+    const selectedStyles = {
+      bg: colors.mainAccent3,
+      color: colors.mainBackground,
+      _hover: {
+        color: "deeppink",
+      },
+    };
+
+    const unselectedStyles = {
+      bg: colors.myblue,
+      color: "deeppink",
+    };
+
+    const isMediumScreen = useBreakpointValue({
+      base: true,
+      small: true,
+      md: false,
+    });
+
+    if (!isMediumScreen) {
+      return null; // Do not render the button on larger screens
+    }
+
     return (
       <Menu>
         <MenuButton
-          as={HamburgerIcon}
-          w={10}
-          h={10}
-          borderRadius="full"
-          _hover={{ bg: "blue.600" }}
-        />
-        <MenuList>
-          <MenuItem as={RemixLink} to="/">
-            <AiOutlineHome />
+          color={colors.mainAccent3}
+          _hover={{ color: colors.mainAccent }}
+        >
+          <CiMenuBurger size={30} />
+        </MenuButton>
+        <MenuList bg={colors.myblue} overflow="hidden">
+          <MenuItem as={RemixLink} to="/" w="210px" bg={colors.myblue}>
+            <AiOutlineHome size={30} />
           </MenuItem>
           {navItems.map((navItem) => {
             return (
               <MenuItem
-                transform={navItem.subItem ? "translateX(12px)" : ""}
+                transform={navItem.subItem ? "translateX(18px)" : ""}
                 as={RemixLink}
                 key={navItem.label}
                 to={navItem.link}
+                {...(isSelected(navItem) ? selectedStyles : unselectedStyles)}
+                h="20px"
               >
                 {navItem.label}
               </MenuItem>
