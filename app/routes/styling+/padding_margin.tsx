@@ -9,6 +9,7 @@ import {
   ExampleBox,
   FlexibleBox,
   HL,
+  ImportBox,
   Mono,
   MyDivider,
   MyLabel,
@@ -67,8 +68,9 @@ export default function chakra_basic_styling() {
               <li>
                 An array for responsive design:{" "}
                 <Highlighter>{`<Box p={[2, 4, 6]}>...</Box>`}</Highlighter>
-                Here, padding will be 2 for mobile devices, 4 for tablet
-                devices, and 6 for desktop devices.
+                Here, padding will be <Mono>2</Mono> for mobile devices,{" "}
+                <Mono>4</Mono> for tablet devices, and <Mono>6</Mono> for
+                desktop devices.
               </li>
             </ul>{" "}
           </BulletBox>
@@ -80,10 +82,12 @@ export default function chakra_basic_styling() {
 
           <DescriptionBox>
             {/* IMPORT CODE */}
-            <BasicText>
-              The <Mono>Box</Mono> component shown below can be imported as:
-            </BasicText>
-            <Highlighter>{`import { Box } from "@chakra-ui/react";`}</Highlighter>
+            <ImportBox>
+              <BasicText>
+                The <Mono>Box</Mono> component shown below can be imported as:
+              </BasicText>
+              <Highlighter>{`import { Box } from "@chakra-ui/react";`}</Highlighter>
+            </ImportBox>
           </DescriptionBox>
         </SectionContainer>
       </DescriptionBox>

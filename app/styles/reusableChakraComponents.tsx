@@ -20,15 +20,18 @@ export const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  mainAccent3: "#5de8a0",
+  // mainAccent3: "#5de8a0",
+  mainAccent3: "#05fce8",
   mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
-  myblue: "#034880",
+  // myblue: "#034880",
+  myblue: "#0c2b45",
   mygrayblue: "#23394a",
-  mypurple: "#892aa3",
+  // mypurple: "#892aa3",
+  mypurple: "#532291",
   codeText: "#faafef",
   sectionColor: "#3d3145",
-  highlighterColor: "#faa5b9",
+  highlighterColor: "#a7d5fa",
 };
 
 export const mainMenuButtons = {
@@ -631,6 +634,36 @@ export function ExampleBox({
 }: ExampleBoxProps) {
   return (
     <Box paddingX={paddingX} paddingY={paddingY}>
+      <BasicText color={colors.mainAccent2} size="23px" mt={3}>
+        <b>
+          <i>Examples</i>
+        </b>
+        :
+      </BasicText>
+      {children}
+    </Box>
+  );
+}
+
+interface ImportBoxProps extends BoxProps {
+  children?: React.ReactNode;
+  paddingX?: number | string;
+  paddingY?: number | string;
+  [key: string]: any;
+}
+
+export function ImportBox({
+  children,
+  paddingX = 5,
+  paddingTop = 5,
+  marginBottom = 1,
+}: ImportBoxProps) {
+  return (
+    <Box
+      paddingX={paddingX}
+      paddingTop={paddingTop}
+      marginBottom={marginBottom}
+    >
       {children}
     </Box>
   );

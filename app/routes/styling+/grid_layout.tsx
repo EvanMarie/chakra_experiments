@@ -33,8 +33,8 @@ export default function chakra_section() {
   return (
     <BigBackgroundBox>
       {/* ********************************************************************* */}
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#grid-layout">
+        Grid Layout
       </MyLabel>
       <DescriptionBox>
         {/*  Section Introduction */}
@@ -78,24 +78,73 @@ export default function chakra_section() {
         </SectionContainer>
       </DescriptionBox>
       {/* COMPONENT EXAMPLES */}
-      <ExampleBox>
-        <VStack w="100%" spacing={0}>
-          <Box></Box>
-          <Highlighter>{``}</Highlighter>
-          <BasicText></BasicText>
-        </VStack>
-        <MyDivider mt={0} mb={0} />
+      <ExampleBox paddingX={5}>
+        <SectionContainer>
+          <VStack>
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
 
-        <SectionContainer mt={0}>COMPONENT EXAMPLE ONE</SectionContainer>
-        <Highlighter>{``}</Highlighter>
-        <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-        <Highlighter>{``}</Highlighter>
-        <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-        <Highlighter>{``}</Highlighter>
-        <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-        <Highlighter>{``}</Highlighter>
-        <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
-        <Highlighter>{``}</Highlighter>
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+
+            <VStack w="100%" spacing={0}>
+              <Box></Box>
+              <Highlighter>{``}</Highlighter>
+              <BasicText></BasicText>
+            </VStack>
+            <MyDivider mt={0} mb={0} />
+          </VStack>
+        </SectionContainer>
       </ExampleBox>
 
       {/* ********************************************************************* */}

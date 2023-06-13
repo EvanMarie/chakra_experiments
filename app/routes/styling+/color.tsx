@@ -14,6 +14,7 @@ import {
   ExampleBox,
   FlexibleBox,
   HL,
+  ImportBox,
   Mono,
   MyDivider,
   MyLabel,
@@ -86,12 +87,13 @@ export default function chakra_section() {
               adjust their color based on the current color mode.
             </BasicText>
             {/* IMPORT CODE */}
-
-            <BasicText>
-              Top import the <Mono>Box</Mono> and <Mono>Text</Mono>components
-              used below:
-            </BasicText>
-            <Highlighter>{`import { Box, Text } from "@chakra-ui/react";`}</Highlighter>
+            <ImportBox>
+              <BasicText>
+                Top import the <Mono>Box</Mono> and <Mono>Text</Mono>components
+                used below:
+              </BasicText>
+              <Highlighter>{`import { Box, Text } from "@chakra-ui/react";`}</Highlighter>
+            </ImportBox>
           </DescriptionBox>
         </SectionContainer>
       </DescriptionBox>
@@ -135,7 +137,10 @@ export default function chakra_section() {
               <Box bg="teal.500">This is a box with a background color</Box>
 
               <Highlighter>{`<Box bg="teal.500">`}</Highlighter>
-              <BasicText></BasicText>
+              <BasicText>
+                In this example, <Mono>teal.500 </Mono>is a color from the
+                Chakra UI color palette, and it applies to the Box's background.
+              </BasicText>
             </VStack>
             <MyDivider mt={0} mb={0} />
 
@@ -145,7 +150,9 @@ export default function chakra_section() {
               </Text>
 
               <Highlighter>{`<Text color="teal.500">`}</Highlighter>
-              <BasicText></BasicText>
+              <BasicText>
+                Here, <Mono>teal.500</Mono> is applied as the text color.
+              </BasicText>
             </VStack>
             <MyDivider mt={0} mb={0} />
 
@@ -158,7 +165,6 @@ export default function chakra_section() {
 
               <Highlighter>{`<Box bg="#F0F0F0">...</Box>
 <Text color="rgb(255, 255, 255)">...</Text>`}</Highlighter>
-              <BasicText></BasicText>
             </VStack>
             <MyDivider mt={0} mb={0} />
 
@@ -168,7 +174,11 @@ export default function chakra_section() {
               </Text>
 
               <Highlighter>{`<Text color={["teal.500", "green.500", "blue.500"]}>`}</Highlighter>
-              <BasicText></BasicText>
+              <BasicText>
+                In this example, the text color will be <Mono>teal.500</Mono> on
+                mobile devices, <Mono>green.500</Mono> on tablet devices, and{" "}
+                <Mono>blue.500</Mono> on desktop devices.
+              </BasicText>
             </VStack>
           </VStack>
         </SectionContainer>
