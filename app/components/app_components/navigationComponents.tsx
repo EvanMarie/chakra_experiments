@@ -44,7 +44,7 @@ export const AccordionMain = ({
 }: AccordionMainProps) => {
   if (hasIcon) {
     return (
-      <Box>
+      <Box {...navHoverMain}>
         <AccordionButton>
           <HStack w="100%" justifyContent={"space-between"}>
             <Link  to={link} {...navHoverMain}>
@@ -65,7 +65,7 @@ export const AccordionMain = ({
     );
   } else {
     return (
-      <Box fontSize={fontSizeMain}>
+      <Box fontSize={fontSizeMain} {...navHoverMain}>
         <AccordionItem>
           <AccordionButton>
             <Link  to={link} {...navHoverMain}>
