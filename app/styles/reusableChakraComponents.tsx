@@ -66,7 +66,7 @@ interface BigBackgroundBoxProps {
 export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
   return (
     <Box
-      p={2}
+      p={1}
       w={MainWidth}
       maxWidth={MainMaxWidth}
       bg={colors.mainBackground}
