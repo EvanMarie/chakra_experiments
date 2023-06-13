@@ -1,25 +1,14 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import {
-  BasicText,
-  BigBackgroundBox,
-  FlexibleBox,
-  MyHeading,
-  SectionContainer,
-  SectionDescription,
-  colors,
-} from "~/styles/DesignComponents";
-import {
-  OverlayComponentBar,
-  menuBarWidth,
-} from "~/components/app_components/menuBars";
+import { BasicText, MyHeading, colors } from "~/styles/DesignComponents";
+
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
 import {
-  DisclosureComponentBar,
-  FeedbackComponentBar,
-  StyleMenuBar,
-} from "~/components/app_components/menuBars";
+  BigBackgroundBox,
+  SectionContainer,
+  SectionDescription,
+} from "~/styles/MainDesignComponents";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },

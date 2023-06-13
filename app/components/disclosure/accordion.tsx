@@ -8,14 +8,12 @@ import {
   Box,
 } from "@chakra-ui/react";
 
+import { Mono, colors } from "~/styles/DesignComponents";
 import {
-  BasicText,
   ExampleContainer,
-  Mono,
   SectionDescription,
   SectionHeading,
-  colors,
-} from "~/styles/DesignComponents";
+} from "~/styles/MainDesignComponents";
 
 export function AccordionOne() {
   return (

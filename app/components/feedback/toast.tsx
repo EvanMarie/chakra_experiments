@@ -1,11 +1,8 @@
 import { Box, Flex } from "@chakra-ui/react";
 import {
   BasicText,
-  ExampleContainer,
   FlexibleBox,
   Mono,
-  SectionDescription,
-  SectionHeading,
   colors,
 } from "~/styles/DesignComponents";
 import {
@@ -19,6 +16,11 @@ import {
   ToastThreeFunction,
   ToastTwoFunction,
 } from "./toastFunctions";
+import {
+  ExampleContainer,
+  SectionDescription,
+  SectionHeading,
+} from "~/styles/MainDesignComponents";
 
 export function ToastOne() {
   return (

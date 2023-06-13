@@ -1,13 +1,10 @@
 import { Box } from "@chakra-ui/react";
+import { BasicText, FlexibleBox, HL, colors } from "~/styles/DesignComponents";
 import {
-  BasicText,
   BigBackgroundBox,
-  FlexibleBox,
-  HL,
   MyLabel,
   SectionContainer,
-  colors,
-} from "~/styles/DesignComponents";
+} from "~/styles/MainDesignComponents";
 
 export default function chakra_basic_styling() {
   return (

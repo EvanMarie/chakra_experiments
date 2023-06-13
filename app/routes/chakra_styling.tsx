@@ -25,14 +25,8 @@ import {
 
 import {
   BigBackgroundBox,
-  BulletBox,
-  DescriptionBox,
-  ExampleBox,
   MyLabel,
   SectionContainer,
-  ImportBox,
-  MainGrid,
-  GridColumn,
   ExampleContainer,
 } from "~/styles/MainDesignComponents";
 
@@ -41,7 +35,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { PageHeader } from "~/components/app_components/menuBars";
+
 import { BackdropFilters, Filters } from "~/components/styling/imageFilters";
 
 hljs.registerLanguage("javascript", javascript);
@@ -53,9 +47,7 @@ export const links: LinksFunction = () => [
 export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
-      <VStack>
-        <PageHeader title="Chakra Styling" href="/chakra_styling" />
-      </VStack>
+      <VStack></VStack>
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props">
         Chakra UI Styling System:
       </MyLabel>

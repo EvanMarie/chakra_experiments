@@ -2,11 +2,6 @@ import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 
 import {
-  ComponentHeadingsBar,
-  DisclosureComponentBar,
-  PageHeader,
-} from "~/components/app_components/menuBars";
-import {
   AccordionFive,
   AccordionFour,
   AccordionOne,
@@ -40,15 +35,17 @@ import javascript from "highlight.js/lib/languages/javascript";
 
 import {
   BasicText,
-  BigBackgroundBox,
   FlexibleBox,
   HL,
   Mono,
   MyDivider,
-  MyLabel,
-  SectionContainer,
   colors,
 } from "~/styles/DesignComponents";
+import {
+  BigBackgroundBox,
+  MyLabel,
+  SectionContainer,
+} from "~/styles/MainDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -60,15 +57,7 @@ export const links: LinksFunction = () => [
 export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
-      <VStack>
-        <ComponentHeadingsBar />
-        <PageHeader
-          title="Chakra Disclosure Components"
-          href="/chakra_disclosure"
-        />
-
-        <DisclosureComponentBar />
-      </VStack>
+      <VStack></VStack>
 
       <SectionContainer>
         <BasicText color={colors.mainAccent3}>
@@ -346,8 +335,6 @@ export default function chakra_basic_styling() {
           <Disclosure.E20 />
         </SectionContainer>
       </Box>
-
-      <ComponentHeadingsBar />
     </BigBackgroundBox>
   );
 }

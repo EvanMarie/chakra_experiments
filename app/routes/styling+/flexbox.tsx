@@ -20,6 +20,10 @@ import {
   ImportBox,
   MainGrid,
   GridColumn,
+  HighlightColumn,
+  GridBoxOne,
+  GridBoxTwo,
+  GridBoxThree,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -40,11 +44,11 @@ export default function chakra_section() {
     <BigBackgroundBox>
       {/* ********************************************************************* */}
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#flexbox">
-        Flexbox:
+        Flexbox
       </MyLabel>
       <MainGrid>
         <GridColumn>
-          <DescriptionBox>
+          <Box>
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
@@ -137,7 +141,7 @@ export default function chakra_section() {
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
-          </DescriptionBox>
+          </Box>
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
@@ -328,7 +332,11 @@ export default function chakra_section() {
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
-        <GridColumn>Column 2</GridColumn>
+        <HighlightColumn>
+          <GridBoxOne>Highlight coming soon!</GridBoxOne>
+          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
+          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+        </HighlightColumn>
       </MainGrid>
 
       {/* ********************************************************************* */}

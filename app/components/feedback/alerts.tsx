@@ -7,14 +7,12 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { BasicText, Mono } from "~/styles/DesignComponents";
+import CloseButtonAlert from "./closeButtonAlert";
 import {
-  BasicText,
-  Mono,
   SectionDescription,
   SectionHeading,
-  colors,
-} from "~/styles/DesignComponents";
-import CloseButtonAlert from "./closeButtonAlert";
+} from "~/styles/MainDesignComponents";
 
 export function AlertOne() {
   return (

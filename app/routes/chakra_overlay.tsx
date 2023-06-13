@@ -1,19 +1,12 @@
 import { Box, Drawer, HStack, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import {
-  ComponentHeadingsBar,
-  OverlayComponentBar,
-  PageHeader,
-} from "~/components/app_components/menuBars";
+
 import {
   BasicText,
-  BigBackgroundBox,
   FlexibleBox,
   HL,
   Mono,
-  MyLabel,
-  SectionContainer,
   colors,
 } from "~/styles/DesignComponents";
 import {
@@ -26,6 +19,11 @@ import javascript from "highlight.js/lib/languages/javascript";
 import styles from "~/styles/codeMarkdown.css";
 import * as Overlay from "~/mardownExamples/overlay/index";
 import { Highlighter } from "~/components/styling/highlighter";
+import {
+  BigBackgroundBox,
+  MyLabel,
+  SectionContainer,
+} from "~/styles/MainDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 export const links: LinksFunction = () => [
@@ -36,12 +34,7 @@ export const links: LinksFunction = () => [
 export default function chakra_overlay() {
   return (
     <BigBackgroundBox>
-      <VStack>
-        <ComponentHeadingsBar />
-        <PageHeader title="Chakra Overlay Components" href="/chakra_overlay" />
-
-        <OverlayComponentBar />
-      </VStack>
+      <VStack></VStack>
       <SectionContainer>
         <BasicText color={colors.mainAccent3}>
           Overlay components in Chakra UI are used to create elements that float

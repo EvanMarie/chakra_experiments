@@ -20,6 +20,10 @@ import {
   ImportBox,
   MainGrid,
   GridColumn,
+  HighlightColumn,
+  GridBoxOne,
+  GridBoxTwo,
+  GridBoxThree,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -39,11 +43,11 @@ export default function chakra_section() {
     <BigBackgroundBox>
       {/* ********************************************************************* */}
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#gradient">
-        Gradients:
+        Gradients
       </MyLabel>
       <MainGrid>
         <GridColumn>
-          <DescriptionBox>
+          <Box>
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
@@ -81,7 +85,7 @@ export default function chakra_section() {
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
-          </DescriptionBox>
+          </Box>
           {/* COMPONENT EXAMPLES */}
 
           <ExampleBox>
@@ -171,6 +175,11 @@ gradients: {
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
+        <HighlightColumn>
+          <GridBoxOne>Highlight coming soon!</GridBoxOne>
+          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
+          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+        </HighlightColumn>
       </MainGrid>
 
       {/* ********************************************************************* */}
