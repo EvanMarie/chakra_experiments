@@ -4,24 +4,8 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "@remix-run/react";
 import { navElements } from "~/components/app_components/navigation";
 import type { NavElement } from "~/components/app_components/navigation";
+import { getNavElementForUrl, getLabelForUrl } from "~/components/app_components/navigation";
 
-const getLabelforUrl = (
-  url: string,
-  navElements: NavElement[]
-): string | null => {
-  // search recursively through navElements for a link that matches url, and return the label
-  for (const navElement of navElements) {
-    if (navElement.link === url) {
-      return navElement.label;
-    } else if (navElement.subElements) {
-      const label = getLabelforUrl(url, navElement.subElements);
-      if (label) {
-        return label;
-      }
-    }
-  }
-  return null;
-};
 
 export function BreadCrumbs() {
   const location = useLocation();
@@ -46,7 +30,7 @@ export function BreadCrumbs() {
         return (
           <BreadcrumbItem key={url}>
             <BreadcrumbLink as={Link} to={url}>
-              {getLabelforUrl(url, navElements)}
+              {getLabelForUrl(url, navElements)}
             </BreadcrumbLink>
           </BreadcrumbItem>
         );
