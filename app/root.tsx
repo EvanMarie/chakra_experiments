@@ -13,6 +13,7 @@ import {
 import { colors } from "./styles/reusableChakraComponents";
 import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
+import { BreadCrumbs } from "./components/app_components/breadCrumbs";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStylesUrl },
@@ -56,6 +57,7 @@ export default function App() {
                   direction="column"
                   align="center"
                 >
+                  <BreadCrumbs />
                   <Outlet />
                 </Flex>
               </Grid>
