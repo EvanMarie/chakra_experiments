@@ -6,6 +6,9 @@ import {
   Flex,
   HStack,
   VStack,
+  Menu,
+  MenuButton,
+  MenuList,
 } from "@chakra-ui/react";
 
 import { AiOutlineHome } from "react-icons/ai";
@@ -17,6 +20,7 @@ export type NavElement = {
   link: string;
   label: string;
   subElements?: Array<NavElement>;
+  _parent?: NavElement | null;
 };
 
 export const navElements: NavElement[] = [
@@ -132,6 +136,38 @@ export const navElements: NavElement[] = [
   },
 ];
 
+export const getNavElementForUrl = (
+  url: string,
+  navElements: NavElement[]
+): NavElement | null => {
+  // search recursively through navElements for a link that matches url, and return the navElement
+  for (const navElement of navElements) {
+    if (navElement.link === url) {
+      navElement._parent = null;
+      return navElement;
+    } else if (navElement.subElements) {
+      const _navElement = getNavElementForUrl(url, navElement.subElements as NavElement[]);
+      if (_navElement) {
+        _navElement._parent = navElement;
+        return _navElement;
+      }
+    }
+  }
+  return null;
+}
+
+export const getLabelForUrl = (
+  url: string,
+  navElements: NavElement[]
+): string | null => {
+  const navElement = getNavElementForUrl(url, navElements);
+  if (navElement) {
+    return navElement.label;
+  } else {
+    return null;
+  }
+}
+
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({
     initialIndex = undefined,
@@ -193,58 +229,32 @@ export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   };
 }
 
-/*
-const MainNavigation = () => {
-  return (
-    <Flex w="100%" h="100vh" alignItems={"flex-start"} p={2}>
-      <VStack w="100%" alignItems={"flex-start"} p={2}>
-        <Link href="/">
-          <Box w="100%>" paddingLeft={15}>
-            <AiOutlineHome size={30} />
-          </Box>
-        </Link>
-        <Accordion allowToggle w="100%">
-          <AccordionItem>
-            <AccordionMain link="/styling" label="Styling" />
-            <AccordionSub
-              link="/styling/padding_margin"
-              label="Padding & Margin"
-            />
-            <AccordionSub link="/styling/color" label="Color" />
-            <AccordionSub link="/styling/gradients" label="Gradients" />
-            <AccordionSub link="/styling/typography" label="Typography" />
-            <AccordionSub link="/styling/layout" label="Layout" />
-            <AccordionSub link="/styling/display" label="Display" />
-            <AccordionSub link="/styling/flexbox" label="Flexbox" />
-            <AccordionSub link="/styling/grid_layout" label="Grid Layout" />
-            <AccordionSub link="/styling/page" label="New" />
-          </AccordionItem>
-
-          <AccordionItem>
-            <AccordionMain link="/disclosure" label="Disclosure" />
-            <AccordionSub link="/styling/chakra" label="Chakra" />
-            <AccordionSub link="/styling/tailwind" label="Tailwind" />
-            <AccordionSub link="/styling/css" label="CSS" />
-          </AccordionItem>
-
-          <AccordionItem>
-            <AccordionMain link="/feedback" label="Feedback" />
-            <AccordionSub link="/styling/chakra" label="Chakra" />
-            <AccordionSub link="/styling/tailwind" label="Tailwind" />
-            <AccordionSub link="/styling/css" label="CSS" />
-          </AccordionItem>
-
-          <AccordionItem>
-            <AccordionMain link="/overlay" label="Overlay" />
-            <AccordionSub link="/styling/chakra" label="Chakra" />
-            <AccordionSub link="/styling/tailwind" label="Tailwind" />
-            <AccordionSub link="/styling/css" label="CSS" />
-          </AccordionItem>
-        </Accordion>
-      </VStack>
-    </Flex>
-  );
-};
-*/
-
 export default makeSideNav({ navElements });
+
+export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
+  // use a Chakra menu to render a dropdown menu for mobile.
+  //
+  return () => {
+    return (
+      <Menu>
+        <MenuButton
+          as={AddIcon}
+          w={10}
+          h={10}
+          borderRadius="full"
+          _hover={{ bg: "blue.600" }}
+        />
+        <MenuList>
+          {navElements.map((navElement) => {
+            return (
+              <Box key={navElement.label}>
+                <Link to={navElement.link}>{navElement.label}</Link>
+              </Box>
+            );
+          })}
+        </MenuList>
+      </Menu>
+    );
+  }
+}
+

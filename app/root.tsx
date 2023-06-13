@@ -5,7 +5,7 @@ import {
   Flex,
   Grid,
   VStack,
-} from "@chakra-ui/react";
+} from  "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
 import theme from "./styles/ExtendedTheme";
@@ -22,6 +22,7 @@ import { SectionHeading } from "./styles/MainDesignComponents";
 import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
 import { BreadCrumbs } from "./components/app_components/breadCrumbs";
+import NavMenu from "./components/app_components/navMenu";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStylesUrl },
@@ -83,6 +84,7 @@ export default function App() {
                     alignItems="center"
                   >
                     <BreadCrumbs />
+                    <NavMenu />
                     <Outlet />
                   </Flex>
                 </Flex>

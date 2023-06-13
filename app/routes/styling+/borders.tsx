@@ -184,14 +184,13 @@ export default function chakra_section() {
             separately. For example,{" "}
             <Highlighter>{`<Box borderTop="2px solid red.500" 
   borderBottom="1px dashed blue.500">`}</Highlighter>
-            .
           </GridBoxOne>
           <GridBoxTwo>
             <b>Transparent Borders</b>: Chakra UI allows you to create
             transparent borders. You can do this by setting the{" "}
-            <b>borderColor</b>
-            to transparent. This can be useful when you want an element to
-            maintain the same layout even when its border is invisible.
+            <b>borderColor</b> to transparent. This can be useful when you want
+            an element to maintain the same layout even when its border is
+            invisible.
           </GridBoxTwo>
           <GridBoxThree>
             <b>Responsive Borders</b>: Chakra UI allows you to define responsive
