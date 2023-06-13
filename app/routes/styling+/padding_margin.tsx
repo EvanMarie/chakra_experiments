@@ -182,9 +182,27 @@ export default function chakra_basic_styling() {
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            <b>Negative margins for overlapping elements</b>: In Chakra UI, you
+            can use negative margin values to create overlapping elements. This
+            can be useful when you want to create unique visual effects or
+            adjust the positioning of elements.
+          </GridBoxOne>
+          <GridBoxTwo>
+            <b>Responsive padding and margin values</b>: Chakra UI provides
+            responsive variants for <b>padding (p)</b> and <b>margin (m)</b>
+            properties, allowing you to specify different values for different
+            screen sizes. The responsive variants are denoted using the <b>@</b>
+            {""}
+            symbol.
+          </GridBoxTwo>
+          <GridBoxThree>
+            <b>Combining padding and margin shorthand</b>: Chakra UI supports
+            shorthand notations for setting multiple padding <b>(p)</b> and
+            margin <b>(m)</b> values at once. You can use these shorthand
+            notations to specify different values for individual sides of an
+            element
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
     </BigBackgroundBox>
