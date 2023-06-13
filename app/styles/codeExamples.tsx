@@ -8,7 +8,7 @@ import { marked } from "marked";
 import { markedHighlight } from "marked-highlight";
 import hljs from "highlight.js";
 import { Box } from "@chakra-ui/react";
-import { colors } from "./reusableChakraComponents";
+import { colors } from "./DesignComponents";
 import styles from "../../node_modules/highlight.js/styles/atom-one-dark.css";
 import stylesUrl from "~/styles/global.css";
 import type { LinksFunction } from "@remix-run/node";

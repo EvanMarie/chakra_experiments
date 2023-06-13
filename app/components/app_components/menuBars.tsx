@@ -5,7 +5,7 @@ import {
   colors,
   mainMenuButtons,
   MyHeading,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import { BiHome } from "react-icons/bi";
 
 const labelFontSize = "13px";

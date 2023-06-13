@@ -4,7 +4,7 @@ import {
   colors,
   SectionDescription,
   SectionHeading,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 
 export function ComponentOne() {
   return (

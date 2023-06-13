@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { ExampleContainer, colors } from "~/styles/reusableChakraComponents";
+import { ExampleContainer, colors } from "~/styles/DesignComponents";
 
 export function ComponentFunctionOne() {
   return (

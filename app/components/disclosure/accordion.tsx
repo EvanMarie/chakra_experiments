@@ -15,7 +15,7 @@ import {
   SectionDescription,
   SectionHeading,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 
 export function AccordionOne() {
   return (

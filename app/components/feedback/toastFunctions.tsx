@@ -9,7 +9,7 @@ import {
   ToastPosition,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { colors } from "~/styles/reusableChakraComponents";
+import { colors } from "~/styles/DesignComponents";
 
 export function ToastOneFunction() {
   const toast = useToast();

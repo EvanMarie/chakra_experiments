@@ -16,7 +16,7 @@ import {
   colors,
   FlexibleBox,
   ImportBox,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples

@@ -11,7 +11,7 @@ import {
   AlertDialogCloseButton,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { ExampleContainer, colors } from "~/styles/reusableChakraComponents";
+import { ExampleContainer, colors } from "~/styles/DesignComponents";
 
 export function AlertDialogFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();

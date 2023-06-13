@@ -1,11 +1,17 @@
 import { AddIcon } from "@chakra-ui/icons";
-import { Accordion, AccordionItem, Box, Flex, VStack } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionItem,
+  Box,
+  Flex,
+  HStack,
+  VStack,
+} from "@chakra-ui/react";
 
 import { AiOutlineHome } from "react-icons/ai";
 import { AccordionMain, AccordionSub } from "./navigationComponents";
 import { useLocation, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
-
 
 export type NavElement = {
   link: string;
@@ -13,7 +19,7 @@ export type NavElement = {
   subElements?: Array<NavElement>;
 };
 
-export const navElements : NavElement[] = [
+export const navElements: NavElement[] = [
   {
     link: "/styling",
     label: "Styling",
@@ -104,7 +110,7 @@ export const navElements : NavElement[] = [
   },
   {
     link: "/feedback",
-    label: "Feeddback",
+    label: "Feedback",
     subElements: [
       {
         link: "/styling/padding_margin",
@@ -125,8 +131,6 @@ export const navElements : NavElement[] = [
     label: "Overlay",
   },
 ];
-
-
 
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({

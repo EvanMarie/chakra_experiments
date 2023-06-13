@@ -1,4 +1,4 @@
-import { ExampleContainer, colors } from "~/styles/reusableChakraComponents";
+import { ExampleContainer, colors } from "~/styles/DesignComponents";
 import {
   Drawer,
   DrawerBody,

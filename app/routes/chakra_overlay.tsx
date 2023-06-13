@@ -15,7 +15,7 @@ import {
   MyLabel,
   SectionContainer,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import {
   AlertDialogueOne,
   AlertDialogueTwo,

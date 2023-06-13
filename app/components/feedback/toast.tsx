@@ -7,7 +7,7 @@ import {
   SectionDescription,
   SectionHeading,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import {
   ToastEightFunction,
   ToastFiveFunction,

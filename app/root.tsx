@@ -1,4 +1,11 @@
-import { Box, ChakraProvider, Flex, Grid } from "@chakra-ui/react";
+import {
+  Box,
+  ChakraProvider,
+  Divider,
+  Flex,
+  Grid,
+  VStack,
+} from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
 import theme from "./styles/ExtendedTheme";
@@ -10,7 +17,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { colors } from "./styles/reusableChakraComponents";
+import { colors } from "./styles/DesignComponents";
+import { SectionHeading } from "./styles/MainDesignComponents";
 import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
 import { BreadCrumbs } from "./components/app_components/breadCrumbs";
@@ -37,28 +45,42 @@ export default function App() {
             justifyContent={"center"}
             bg={colors.mainBackground}
           >
-            <Flex width="100%" maxWidth="1230px">
+            <Flex width="100%" height="100%" maxWidth="1400px">
               <Grid
-                templateColumns={["1fr", "1fr", "300px 1fr"]}
-                gap={1}
+                templateColumns={["1fr", "1fr", "210px 1px 1fr"]}
+                gap={2}
                 width="100%"
+                height="100%"
               >
-                {/* /* The display prop of the first Box component is set to ["none",
-              "none", "block"]. This means that for the first two screen sizes,
-              the Box component will not be displayed (none value for display).
-              However, for the third screen size, it will be displayed as a
-              block element (block value for display). */}
-                <Box bg={colors.myblue} display={["none", "none", "block"]}>
-                  <MainNavigation
-                    initialIndex={navIndex}
-                    onChange={setNavIndex}
-                  />
+                <Box
+                  bg={colors.myblue}
+                  display={["none", "none", "block"]}
+                  width="100%"
+                  height="100%"
+                  overflow="scroll"
+                >
+                  <VStack>
+                    <Box paddingY={3}>
+                      <SectionHeading>Chakra-UI</SectionHeading>
+                    </Box>
+                    <MainNavigation
+                      initialIndex={navIndex}
+                      onChange={setNavIndex}
+                    />
+                  </VStack>
                 </Box>
+                <Divider
+                  orientation="vertical"
+                  height="100%"
+                  colorScheme="linkedin"
+                />
                 <Flex
                   bg={colors.mainBackground}
                   w="100%"
                   direction="column"
                   align="center"
+                  overflow={"hidden"}
+                  paddingX={2}
                 >
                   <BreadCrumbs />
                   <Outlet />

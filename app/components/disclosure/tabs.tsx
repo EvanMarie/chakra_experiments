@@ -14,7 +14,7 @@ import {
   SectionDescription,
   SectionHeading,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import { OnChangeTabs } from "./tabsOnChange";
 import {
   BsEmojiSunglasses,

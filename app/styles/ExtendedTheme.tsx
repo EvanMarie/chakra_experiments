@@ -1,28 +1,14 @@
 import { extendTheme } from "@chakra-ui/react";
-import { colors } from "./reusableChakraComponents";
-
-const color1 = colors.mainAccent;
-const color2 = colors.mainAccent2;
-const color3 = colors.mainAccent3;
-const color4 = colors.mainAccent4;
+import { colors } from "./DesignComponents";
 
 const theme = extendTheme({
-  // components: {
-  //   Tabs: {
-  //     baseStyle: {
-  //       tab: {
-  //         color: "black",
-  //         borderColor: color1,
-  //       },
-  //       bg: color2,
-  //       _selected: {
-  //         color: "red",
-  //         borderColor: color3,
-  //         bg: color4,
-  //       },
-  //     },
-  //   },
-  // },
+  breakpoints: {
+    sm: "30em", // 480px
+    md: "50em", // 800px
+    lg: "69em", // 1100px
+    xl: "80em", // 1280px
+    "2xl": "96em", // 1536px
+  },
 });
 
 export default theme;

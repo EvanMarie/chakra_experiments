@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { BigBackgroundBox } from "~/styles/reusableChakraComponents";
+import { BigBackgroundBox } from "~/styles/DesignComponents";
 
 import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples

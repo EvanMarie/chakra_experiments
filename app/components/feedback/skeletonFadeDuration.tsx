@@ -1,6 +1,6 @@
 import { Box, Button, Skeleton, Stack } from "@chakra-ui/react";
 import { useState } from "react";
-import { colors } from "~/styles/reusableChakraComponents";
+import { colors } from "~/styles/DesignComponents";
 
 function FadeDurationSkeleton() {
   const [isLoaded, setIsLoaded] = useState(false);

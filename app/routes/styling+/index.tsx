@@ -9,7 +9,7 @@ import {
   SectionContainer,
   SectionDescription,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 
 export default function chakra_basic_styling() {
   return (

@@ -1,4 +1,3 @@
-import { AddIcon } from "@chakra-ui/icons";
 import {
   AccordionButton,
   AccordionIcon,
@@ -8,7 +7,7 @@ import {
   HStack,
   //Link,
 } from "@chakra-ui/react";
-import { colors } from "~/styles/reusableChakraComponents";
+import { colors } from "~/styles/DesignComponents";
 import { Link } from "@remix-run/react";
 
 const fontSizeMain = "18px";
@@ -47,7 +46,7 @@ export const AccordionMain = ({
       <Box {...navHoverMain}>
         <AccordionButton>
           <HStack w="100%" justifyContent={"space-between"}>
-            <Link  to={link} {...navHoverMain}>
+            <Link to={link} {...navHoverMain}>
               <Box
                 as="span"
                 flex="1"
@@ -68,7 +67,7 @@ export const AccordionMain = ({
       <Box fontSize={fontSizeMain} {...navHoverMain}>
         <AccordionItem>
           <AccordionButton>
-            <Link  to={link} {...navHoverMain}>
+            <Link to={link} {...navHoverMain}>
               <Box
                 as="span"
                 flex="1"

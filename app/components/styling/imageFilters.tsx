@@ -1,5 +1,5 @@
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import { BasicText, Mono, colors } from "~/styles/DesignComponents";
 
 export function Filters() {
   const basicBoxStyles = {

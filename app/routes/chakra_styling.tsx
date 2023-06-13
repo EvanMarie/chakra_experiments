@@ -7,27 +7,42 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import {
-  BasicText,
-  BigBackgroundBox,
-  MyLabel,
-  colors,
-  FlexibleBox,
-  Mono,
-  HorizontalLine,
-  SectionContainer,
-  ExampleContainer,
-  HL,
-} from "~/styles/reusableChakraComponents";
-
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { Filters, BackdropFilters } from "~/components/styling/imageFilters";
-import { PageHeader, StyleMenuBar } from "~/components/app_components/menuBars";
+
+import {
+  BasicText,
+  FlexibleBox,
+  // Mono,
+  // Flex,
+  // Text,
+  HL,
+  HorizontalLine,
+  Mono,
+  MyDivider,
+  colors,
+} from "~/styles/DesignComponents";
+
+import {
+  BigBackgroundBox,
+  BulletBox,
+  DescriptionBox,
+  ExampleBox,
+  MyLabel,
+  SectionContainer,
+  ImportBox,
+  MainGrid,
+  GridColumn,
+  ExampleContainer,
+} from "~/styles/MainDesignComponents";
+
 import { Highlighter } from "~/components/styling/highlighter";
+import styles from "~/styles/codeMarkdown.css";
+// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import styles from "~/styles/codeMarkdown.css";
+import { PageHeader } from "~/components/app_components/menuBars";
+import { BackdropFilters, Filters } from "~/components/styling/imageFilters";
 
 hljs.registerLanguage("javascript", javascript);
 export const links: LinksFunction = () => [
@@ -40,7 +55,6 @@ export default function chakra_basic_styling() {
     <BigBackgroundBox>
       <VStack>
         <PageHeader title="Chakra Styling" href="/chakra_styling" />
-        <StyleMenuBar />
       </VStack>
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props">
         Chakra UI Styling System:
@@ -793,7 +807,6 @@ h="200px"`}</Highlighter>
         </VStack>
       </SectionContainer>
       <HorizontalLine />
-      <StyleMenuBar />
     </BigBackgroundBox>
   );
 }

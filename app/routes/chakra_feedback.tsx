@@ -30,7 +30,7 @@ import {
   SectionContainer,
   StackedExample,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import {
   SkeletonFive,
   SkeletonFour,

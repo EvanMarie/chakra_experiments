@@ -7,7 +7,7 @@ import {
   SectionContainer,
   SectionDescription,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 import {
   OverlayComponentBar,
   menuBarWidth,

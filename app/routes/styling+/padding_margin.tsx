@@ -15,7 +15,7 @@ import {
   MyLabel,
   SectionContainer,
   colors,
-} from "~/styles/reusableChakraComponents";
+} from "~/styles/DesignComponents";
 
 export default function chakra_basic_styling() {
   return (
@@ -92,7 +92,7 @@ export default function chakra_basic_styling() {
         </SectionContainer>
       </DescriptionBox>
 
-      <ExampleBox paddingX={3}>
+      <ExampleBox>
         <SectionContainer>
           <VStack w="100%" spacing={6}>
             <VStack w="100%" spacing={0}>

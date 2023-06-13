@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { BasicText, Mono, colors } from "~/styles/reusableChakraComponents";
+import { BasicText, Mono, colors } from "~/styles/DesignComponents";
 
 export function OnChangeTabs() {
   const tabsColors = useColorModeValue(

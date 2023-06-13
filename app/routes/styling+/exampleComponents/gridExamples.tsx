@@ -1,5 +1,5 @@
 import { Grid, Box, Text, GridItem, Image } from "@chakra-ui/react";
-import { colors } from "~/styles/reusableChakraComponents";
+import { colors } from "~/styles/DesignComponents";
 
 export function Profiles() {
   const profiles = ["Alice", "Bob", "Charlie", "Dave"]; // Sample data
