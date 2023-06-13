@@ -109,7 +109,7 @@ export default function chakra_basic_styling() {
 
       <div id="padding" />
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#margin-and-padding">
-        Padding and Margin:
+        Padding & Margin:
       </MyLabel>
       <SectionContainer>
         <Box p={2} bg={colors.mypurple} mb={3}>

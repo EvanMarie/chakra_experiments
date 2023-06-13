@@ -27,3 +27,7 @@ a:hover {
 li::marker {
     color: #f7e6c1;
 }
+
+.grid {
+    overflow:auto;
+}

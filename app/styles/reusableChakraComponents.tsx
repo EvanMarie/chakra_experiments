@@ -73,9 +73,10 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       color={colors.mainText}
       justifyContent={"center"}
       alignItems={"center"}
+      overflow="auto"
     >
       <Box margin="auto 0">
-        <Box p={1} width={MainWidth} display="flex" flexDirection="column">
+        <Box width={MainWidth} display="flex" flexDirection="column">
           {children}
         </Box>
       </Box>

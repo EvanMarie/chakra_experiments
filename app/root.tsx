@@ -19,7 +19,7 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
-  const [ navIndex, setNavIndex ] = useState<number | undefined>(undefined);
+  const [navIndex, setNavIndex] = useState<number | undefined>(undefined);
   return (
     <html lang="en">
       <head>
@@ -36,9 +36,9 @@ export default function App() {
             justifyContent={"center"}
             bg={colors.mainBackground}
           >
-            <Flex width="100%" maxWidth="1300px">
+            <Flex width="100%" maxWidth="1230px">
               <Grid
-                templateColumns={["1fr", "1fr", "250px 1fr"]}
+                templateColumns={["1fr", "1fr", "300px 1fr"]}
                 gap={1}
                 width="100%"
               >
@@ -48,7 +48,10 @@ export default function App() {
               However, for the third screen size, it will be displayed as a
               block element (block value for display). */}
                 <Box bg={colors.myblue} display={["none", "none", "block"]}>
-                  <MainNavigation initialIndex={navIndex} onChange={setNavIndex}  />
+                  <MainNavigation
+                    initialIndex={navIndex}
+                    onChange={setNavIndex}
+                  />
                 </Box>
                 <Flex
                   bg={colors.mainBackground}

@@ -44,16 +44,36 @@ const navElements = [
         label: "Grid Layout",
       },
       {
-        link: "/styling/css",
-        label: "CSS",
+        link: "/styling/background",
+        label: "Background",
       },
       {
-        link: "/styling/css",
-        label: "CSS",
+        link: "/styling/borders",
+        label: "Borders",
       },
       {
-        link: "/styling/css",
-        label: "CSS",
+        link: "/styling/border_radius",
+        label: "Border Radius",
+      },
+      {
+        link: "/styling/position",
+        label: "Position",
+      },
+      {
+        link: "/styling/shadow",
+        label: "Shadow",
+      },
+      {
+        link: "/styling/filter",
+        label: "Filter",
+      },
+      {
+        link: "/styling/pseudo",
+        label: "Pseudo Props",
+      },
+      {
+        link: "/styling/as_prop",
+        label: "The as Prop",
       },
     ],
   },

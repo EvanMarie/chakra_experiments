@@ -130,14 +130,14 @@ export default function chakra_section() {
   </Box>
   <Box bg="pink.500" h="10" w="100%">
     Box Three
-    </Box>
-  </Grid>`}</Highlighter>
+  </Box>
+</Grid>`}</Highlighter>
             <BasicText></BasicText>
           </VStack>
         </SectionContainer>
         <SectionContainer>
           <VStack w="100%" spacing={0}>
-            <Box bg={colors.mainText} p={6}>
+            <Box bg={colors.mainText} p={2} mb={2}>
               <Grid templateColumns="repeat(3, 1fr)" gap={1}>
                 <Box p={4} boxShadow="xl" bg={colors.mypurple}>
                   <Text fontSize="md" fontWeight="bold">
@@ -169,9 +169,9 @@ export default function chakra_section() {
               </Grid>
             </Box>
 
-            <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={6}>
+            <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
   <Box p={4} boxShadow="xl" bg={colors.mypurple}>
-    <Text fontSize="xl" fontWeight="bold">
+    <Text fontSize="md" fontWeight="bold">
       Item One
     </Text>
     <Text mt={2}>Some info...</Text>
@@ -180,7 +180,7 @@ export default function chakra_section() {
     </Text>
   </Box>
   <Box p={4} boxShadow="xl" bg={colors.mypurple}>
-    <Text fontSize="xl" fontWeight="bold">
+    <Text fontSize="md" fontWeight="bold">
       Item Two
     </Text>
     <Text mt={2}>Some info...</Text>
@@ -189,7 +189,7 @@ export default function chakra_section() {
     </Text>
   </Box>
   <Box p={4} boxShadow="xl" bg={colors.mypurple}>
-    <Text fontSize="xl" fontWeight="bold">
+    <Text fontSize="md" fontWeight="bold">
       Item Three
     </Text>
     <Text mt={2}>Some info...</Text>
@@ -250,7 +250,7 @@ export default function chakra_section() {
               In this example, we're mapping over an array of profile names and
               creating a <Mono>Box</Mono> for each one. The <Mono>Grid</Mono>{" "}
               automatically creates rows and columns as needed, ensuring that
-              each <Mono>Box</Mono> is at least 100px tall and 20px wide.
+              each <Mono>Box</Mono> is at least 125px tall and 20px wide.
             </BasicText>
           </VStack>
         </SectionContainer>
@@ -304,7 +304,29 @@ export default function chakra_section() {
         <SectionContainer>
           <VStack w="100%" spacing={0}>
             <ImageGallery />
-            <Highlighter>{``}</Highlighter>
+            <Highlighter>{`export function ImageGallery() {
+const images = Array(5).fill(null); // Array of 5 nulls
+return (
+  <Grid
+    templateColumns={{
+      base: "repeat(1, 1fr)",
+      sm: "repeat(2, 1fr)",
+      md: "repeat(3, 1fr)",
+    }}
+    gap={4}
+  >
+    {images.map((_, i) => (
+      <Box key={i}>
+        <Image
+          src={https://picsum.photos/seed/{i}/200/100'}
+          alt="Gallery"
+          objectFit="cover"
+        />
+      </Box>
+    ))}
+  </Grid>
+);
+}`}</Highlighter>
             <BasicText>
               {" "}
               <HL>Responsive Design</HL>: Let's create a responsive image
@@ -321,30 +343,7 @@ export default function chakra_section() {
             </BasicText>
           </VStack>
         </SectionContainer>
-        <SectionContainer>
-          <VStack w="100%" spacing={0}>
-            <Box></Box>
-            <Highlighter>{``}</Highlighter>
-            <BasicText></BasicText>
-          </VStack>
-        </SectionContainer>
-        <SectionContainer>
-          <VStack w="100%" spacing={0}>
-            <Box></Box>
-            <Highlighter>{``}</Highlighter>
-            <BasicText></BasicText>
-          </VStack>
-        </SectionContainer>
-        <SectionContainer>
-          <VStack w="100%" spacing={0}>
-            <Box></Box>
-            <Highlighter>{``}</Highlighter>
-            <BasicText></BasicText>
-          </VStack>
-        </SectionContainer>
       </ExampleBox>
-
-      {/* ********************************************************************* */}
     </BigBackgroundBox>
   );
 }
