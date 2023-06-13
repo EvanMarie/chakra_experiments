@@ -6,7 +6,14 @@ import { AccordionMain, AccordionSub } from "./navigationComponents";
 import { useLocation, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
-const navElements = [
+
+export type NavElement = {
+  link: string;
+  label: string;
+  subElements?: Array<NavElement>;
+};
+
+export const navElements : NavElement[] = [
   {
     link: "/styling",
     label: "Styling",
@@ -119,11 +126,7 @@ const navElements = [
   },
 ];
 
-type NavElement = {
-  link: string;
-  label: string;
-  subElements?: Array<NavElement>;
-};
+
 
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({

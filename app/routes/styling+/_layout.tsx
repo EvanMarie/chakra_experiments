@@ -7,6 +7,7 @@ import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { Outlet } from "@remix-run/react";
+import { BreadCrumbs } from "~/components/app_components/breadCrumbs";
 
 hljs.registerLanguage("javascript", javascript);
 
