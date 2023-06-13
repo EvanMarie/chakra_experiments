@@ -59,7 +59,7 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       color={colors.mainText}
       justifyContent={"center"}
       alignItems={"center"}
-      overflow="auto"
+      overflow="hidden"
     >
       <Box margin="auto 0">
         <Box width={MainWidth} display="flex" flexDirection="column">
@@ -106,8 +106,13 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
 
 export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   return (
-    <Box paddingRight="5px">
-      <SectionContainer bg={colors.myblue} paddingX={2}>
+    <Box paddingRight="5px" height="100%">
+      <SectionContainer
+        bg={colors.myblue}
+        paddingX={2}
+        height="100%"
+        justifyContent="flex-start"
+      >
         <VStack width="100%" justify="left" align="center" {...rest}>
           <Flex>
             <HStack>

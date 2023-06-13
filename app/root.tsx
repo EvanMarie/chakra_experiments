@@ -42,10 +42,65 @@ export default function App() {
           <Flex
             width="100%"
             minH="100vh"
+            justifyContent="center"
+            alignItems="center"
+            bg={colors.mainBackground}
+            direction="column"
+          >
+            <Flex width="100%" maxWidth="1500px" justifyContent="center">
+              <Flex justifyContent="flex-start" alignItems="flex-start">
+                {" "}
+                {/* Changed this line */}
+                <Box
+                  bg={colors.myblue}
+                  display={["none", "none", "block"]}
+                  height="100%"
+                  width="210px"
+                  overflowY="hidden"
+                >
+                  <VStack height="100%" spacing={3} padding={3}>
+                    <SectionHeading>Chakra-UI</SectionHeading>
+                    <MainNavigation
+                      initialIndex={navIndex}
+                      onChange={setNavIndex}
+                    />
+                  </VStack>
+                </Box>
+                <Flex
+                  flex="1"
+                  justifyContent="center"
+                  alignItems="center"
+                  direction="column"
+                >
+                  <Flex
+                    direction="column"
+                    width="100%"
+                    bg={colors.mainBackground}
+                    overflow="hidden"
+                    paddingX={2}
+                    maxWidth="100%"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <BreadCrumbs />
+                    <Outlet />
+                  </Flex>
+                </Flex>
+              </Flex>
+            </Flex>
+          </Flex>
+        </ChakraProvider>
+
+        {/*  OLDER GRID VERSION that would never center the content
+        
+        <ChakraProvider theme={theme}>
+          <Flex
+            width="100%"
+            minH="100vh"
             justifyContent={"center"}
             bg={colors.mainBackground}
           >
-            <Flex width="100%" height="100%" maxWidth="1400px">
+            <Flex width="100%" height="100%" overflowX="hidden">
               <Grid
                 templateColumns={["1fr", "1fr", "210px 1px 1fr"]}
                 gap={2}
@@ -88,7 +143,7 @@ export default function App() {
               </Grid>
             </Flex>
           </Flex>
-        </ChakraProvider>
+        </ChakraProvider> */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
