@@ -20,6 +20,7 @@ export type NavElement = {
   link: string;
   label: string;
   subElements?: Array<NavElement>;
+  _parent?: NavElement | null;
 };
 
 export const navElements: NavElement[] = [
@@ -134,6 +135,38 @@ export const navElements: NavElement[] = [
     label: "Overlay",
   },
 ];
+
+export const getNavElementForUrl = (
+  url: string,
+  navElements: NavElement[]
+): NavElement | null => {
+  // search recursively through navElements for a link that matches url, and return the navElement
+  for (const navElement of navElements) {
+    if (navElement.link === url) {
+      navElement._parent = null;
+      return navElement;
+    } else if (navElement.subElements) {
+      const _navElement = getNavElementForUrl(url, navElement.subElements as NavElement[]);
+      if (_navElement) {
+        _navElement._parent = navElement;
+        return _navElement;
+      }
+    }
+  }
+  return null;
+}
+
+export const getLabelForUrl = (
+  url: string,
+  navElements: NavElement[]
+): string | null => {
+  const navElement = getNavElementForUrl(url, navElements);
+  if (navElement) {
+    return navElement.label;
+  } else {
+    return null;
+  }
+}
 
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({
