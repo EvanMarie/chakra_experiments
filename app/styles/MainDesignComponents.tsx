@@ -11,7 +11,27 @@ import {
   VStack,
   chakra,
 } from "@chakra-ui/react";
-import { BasicText, MyDivider, colors } from "./DesignComponents";
+import { BasicText, MyDivider } from "./DesignComponents";
+
+const colors = {
+  mainBackground: "#211421",
+  mainText: "#f7e6c1",
+  secondaryText: "#26231a",
+  mainAccent: "#faa5b9",
+  mainAccent2: "#a7d5fa",
+  // mainAccent3: "#5de8a0",
+  mainAccent3: "#05fce8",
+  mainAccent4: "#370a42",
+  secondaryBackground: "#460b47",
+  // myblue: "#034880",
+  myblue: "#0c2b45",
+  mygrayblue: "#23394a",
+  // mypurple: "#892aa3",
+  mypurple: "#532291",
+  codeText: "#faafef",
+  sectionColor: "#3d3145",
+  highlighterColor: "#a7d5fa",
+};
 
 export const BasicTextSize = "16px";
 export const MainWidth = "100%";
@@ -101,6 +121,35 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
 //     </VStack>
 //   );
 // }
+
+interface GridBoxProps extends BoxProps {
+  children?: React.ReactNode;
+  [key: string]: any;
+}
+
+export function GridBoxOne({ children, ...rest }: GridColumnProps) {
+  return (
+    <Box bg={colors.mainAccent2} color={colors.secondaryText}>
+      {children}
+    </Box>
+  );
+}
+
+export function GridBoxTwo({ children, ...rest }: GridColumnProps) {
+  return (
+    <Box bg={colors.mainAccent3} color={colors.mainText}>
+      {children}
+    </Box>
+  );
+}
+
+export function GridBoxThree({ children, ...rest }: GridColumnProps) {
+  return (
+    <Box bg={colors.mainAccent4} color={colors.mainText}>
+      {children}
+    </Box>
+  );
+}
 
 /* ********************************MAIN LABEL**************************************** */
 interface MyLabelProps {

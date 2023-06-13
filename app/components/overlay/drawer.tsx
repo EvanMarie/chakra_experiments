@@ -1,13 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react";
 
+import { BasicText, Mono, colors } from "~/styles/DesignComponents";
+import { DrawerFunctionOne } from "./drawerFunctions";
 import {
-  BasicText,
-  Mono,
   SectionDescription,
   SectionHeading,
-  colors,
-} from "~/styles/DesignComponents";
-import { DrawerFunctionOne } from "./drawerFunctions";
+} from "~/styles/MainDesignComponents";
 
 export function DrawerOne() {
   return (
@@ -82,7 +80,7 @@ export function ComponentThree() {
 export function ComponentFour() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size={18} fontWeight="bold">
+      <BasicText color={colors.mainAccent2} size="18px" fontWeight="bold">
         HEADING
       </BasicText>
       <BasicText color={colors.mainAccent3}>⦾ DESCRIPTION</BasicText>

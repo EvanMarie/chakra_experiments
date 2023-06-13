@@ -20,14 +20,10 @@ import stylesUrl from "~/styles/global.css";
 
 import {
   BasicText,
-  BigBackgroundBox,
   CompWithLabel,
-  ExampleContainer,
   FlexibleBox,
   HL,
   Mono,
-  MyLabel,
-  SectionContainer,
   StackedExample,
   colors,
 } from "~/styles/DesignComponents";
@@ -51,12 +47,14 @@ import {
   ToastThree,
   ToastTwo,
 } from "~/components/feedback/toast";
-import {
-  ComponentHeadingsBar,
-  FeedbackComponentBar,
-  PageHeader,
-} from "~/components/app_components/menuBars";
+
 import { Highlighter } from "~/components/styling/highlighter";
+import {
+  BigBackgroundBox,
+  ExampleContainer,
+  MyLabel,
+  SectionContainer,
+} from "~/styles/MainDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -68,15 +66,7 @@ export const links: LinksFunction = () => [
 export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
-      <VStack>
-        <ComponentHeadingsBar />
-        <PageHeader
-          title="Chakra Feedback Components"
-          href="/chakra_feedback"
-        />
-
-        <FeedbackComponentBar />
-      </VStack>
+      <VStack></VStack>
 
       <SectionContainer>
         <Box mb={3}>

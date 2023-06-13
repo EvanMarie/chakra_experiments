@@ -1,16 +1,14 @@
 import { Box, Flex } from "@chakra-ui/react";
 
-import {
-  BasicText,
-  Mono,
-  SectionDescription,
-  SectionHeading,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, Mono, colors } from "~/styles/DesignComponents";
 import {
   AlertDialogFunctionOne,
   AlertDialogFunctionTwo,
 } from "./alertDialogFunctions";
+import {
+  SectionDescription,
+  SectionHeading,
+} from "~/styles/MainDesignComponents";
 
 export function AlertDialogueOne() {
   return (

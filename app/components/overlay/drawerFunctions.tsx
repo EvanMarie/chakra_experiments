@@ -1,4 +1,4 @@
-import { ExampleContainer, colors } from "~/styles/DesignComponents";
+import { colors } from "~/styles/DesignComponents";
 import {
   Drawer,
   DrawerBody,
@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { Input } from "@chakra-ui/react";
+import { ExampleContainer } from "~/styles/MainDesignComponents";
 
 export function DrawerFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();

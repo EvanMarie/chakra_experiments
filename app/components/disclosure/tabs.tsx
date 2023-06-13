@@ -7,14 +7,7 @@ import {
   Box,
   TabIndicator,
 } from "@chakra-ui/react";
-import {
-  BasicText,
-  ExampleContainer,
-  Mono,
-  SectionDescription,
-  SectionHeading,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, Mono, colors } from "~/styles/DesignComponents";
 import { OnChangeTabs } from "./tabsOnChange";
 import {
   BsEmojiSunglasses,
@@ -26,6 +19,11 @@ import {
 import { ControlledTabs } from "./controlledTabs";
 import CustomTabs from "./customTabs";
 import DataArrayTabs from "./dataTabs";
+import {
+  ExampleContainer,
+  SectionDescription,
+  SectionHeading,
+} from "~/styles/MainDesignComponents";
 
 export function TabsOne() {
   return (

@@ -3,8 +3,6 @@ import {
   FlexibleBox,
   HL,
   Mono,
-  SectionDescription,
-  SectionHeading,
   colors,
 } from "~/styles/DesignComponents";
 import {
@@ -15,6 +13,10 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import FadeDurationSkeleton from "./skeletonFadeDuration";
+import {
+  SectionDescription,
+  SectionHeading,
+} from "~/styles/MainDesignComponents";
 
 export function SkeletonOne() {
   return (
