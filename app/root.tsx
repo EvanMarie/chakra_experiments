@@ -12,12 +12,18 @@ import {
 } from "@remix-run/react";
 import { colors } from "./styles/reusableChakraComponents";
 import MainNavigation from "./components/app_components/navigation";
+import { useEffect, useState } from "react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStylesUrl },
 ];
 
 export default function App() {
+  const [ navIndex, setNavIndex ] = useState<number | undefined>(undefined);
+  useEffect(() => {
+    console.log("navIndex: ", navIndex);
+  }, [navIndex]);
+
   return (
     <html lang="en">
       <head>
@@ -46,7 +52,7 @@ export default function App() {
               However, for the third screen size, it will be displayed as a
               block element (block value for display). */}
                 <Box bg={colors.myblue} display={["none", "none", "block"]}>
-                  <MainNavigation />
+                  <MainNavigation initialIndex={navIndex} onChange={setNavIndex}  />
                 </Box>
                 <Flex
                   bg={colors.mainBackground}
