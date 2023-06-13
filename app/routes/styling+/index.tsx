@@ -1,5 +1,4 @@
 import { Box, VStack } from "@chakra-ui/react";
-import { PageHeader } from "~/components/app_components/menuBars";
 import { BasicText, FlexibleBox, HL, colors } from "~/styles/DesignComponents";
 import {
   BigBackgroundBox,
@@ -12,7 +11,7 @@ export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props">
-        Chakra UI Styling System:
+        The Chakra UI Styling System
       </MyLabel>
       <SectionContainer>
         <SectionDescription>

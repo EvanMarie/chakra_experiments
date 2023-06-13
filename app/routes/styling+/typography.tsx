@@ -1,4 +1,4 @@
-import { Code, Heading, Link, Text, VStack } from "@chakra-ui/react";
+import { Box, Code, Heading, Link, Text, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -23,6 +23,10 @@ import {
   ImportBox,
   MainGrid,
   GridColumn,
+  HighlightColumn,
+  GridBoxOne,
+  GridBoxTwo,
+  GridBoxThree,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -43,11 +47,11 @@ export default function chakra_section() {
     <BigBackgroundBox>
       {/* ********************************************************************* */}
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#typography">
-        Typography:
+        Typography
       </MyLabel>
       <MainGrid>
         <GridColumn>
-          <DescriptionBox>
+          <Box>
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
@@ -109,7 +113,7 @@ export default function chakra_section() {
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
-          </DescriptionBox>
+          </Box>
 
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
@@ -247,7 +251,11 @@ export default function chakra_section() {
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
-        <GridColumn>Column 2</GridColumn>
+        <HighlightColumn>
+          <GridBoxOne>Highlight coming soon!</GridBoxOne>
+          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
+          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+        </HighlightColumn>
       </MainGrid>
 
       {/* ********************************************************************* */}

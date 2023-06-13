@@ -12,6 +12,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
+import { RiBookmark3Line } from "react-icons/ri";
 
 const colors = {
   mainBackground: "#211421",
@@ -19,14 +20,11 @@ const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  // mainAccent3: "#5de8a0",
   mainAccent3: "#05fce8",
   mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
-  // myblue: "#034880",
   myblue: "#0c2b45",
   mygrayblue: "#23394a",
-  // mypurple: "#892aa3",
   mypurple: "#532291",
   codeText: "#faafef",
   sectionColor: "#3d3145",
@@ -87,10 +85,7 @@ export function MainGrid({ children, ...rest }: MainGridProps) {
       width="100%"
       {...rest}
     >
-      <VStack>{children}</VStack>
-      <Flex width="100%" justify="Left" align="center">
-        Column 2
-      </Flex>
+      {children}
     </Grid>
   );
 }
@@ -109,43 +104,71 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
   );
 }
 
-// interface ColumnTwoProps extends BoxProps {
-//   children?: React.ReactNode;
-//   [key: string]: any;
-// }
-
-// export function ColumnTwo({ children, ...rest }: ColumnTwoProps) {
-//   return (
-//     <VStack width="100%" justify="left" align="center" {...rest}>
-//       {children}
-//     </VStack>
-//   );
-// }
+export function HighlightColumn({ children, ...rest }: GridColumnProps) {
+  return (
+    <Box paddingRight="5px">
+      <SectionContainer bg={colors.myblue} paddingX={2}>
+        <VStack width="100%" justify="left" align="center" {...rest}>
+          <Flex>
+            <HStack>
+              <RiBookmark3Line size="25px" color={colors.mainAccent3} />
+              <Text fontWeight="bold" fontSize="20px">
+                Did you know?
+              </Text>
+            </HStack>
+          </Flex>
+          {children}
+        </VStack>
+      </SectionContainer>
+    </Box>
+  );
+}
 
 interface GridBoxProps extends BoxProps {
   children?: React.ReactNode;
   [key: string]: any;
 }
 
-export function GridBoxOne({ children, ...rest }: GridColumnProps) {
+const GridBoxDefaults = {
+  width: "100%",
+  paddingY: 2,
+  paddingX: 2,
+  marginY: 2,
+  borderRadius: "sm",
+  boxShadow: "lg",
+};
+
+export function GridBoxOne({ children, ...rest }: GridBoxProps) {
   return (
-    <Box bg={colors.mainAccent2} color={colors.secondaryText}>
+    <Box
+      {...GridBoxDefaults}
+      bg={colors.mainAccent}
+      color={colors.secondaryText}
+    >
       {children}
     </Box>
   );
 }
 
-export function GridBoxTwo({ children, ...rest }: GridColumnProps) {
+export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
   return (
-    <Box bg={colors.mainAccent3} color={colors.mainText}>
+    <Box
+      {...GridBoxDefaults}
+      bg={colors.mainAccent2}
+      color={colors.secondaryText}
+    >
       {children}
     </Box>
   );
 }
 
-export function GridBoxThree({ children, ...rest }: GridColumnProps) {
+export function GridBoxThree({ children, ...rest }: GridBoxProps) {
   return (
-    <Box bg={colors.mainAccent4} color={colors.mainText}>
+    <Box
+      {...GridBoxDefaults}
+      bg={colors.mainAccent3}
+      color={colors.secondaryText}
+    >
       {children}
     </Box>
   );

@@ -23,6 +23,10 @@ import {
   ImportBox,
   MainGrid,
   GridColumn,
+  HighlightColumn,
+  GridBoxOne,
+  GridBoxTwo,
+  GridBoxThree,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -35,11 +39,11 @@ export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#margin-and-padding">
-        Padding & Margin:
+        Padding & Margin
       </MyLabel>
       <MainGrid>
         <GridColumn>
-          <DescriptionBox>
+          <Box>
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
@@ -109,7 +113,7 @@ export default function chakra_basic_styling() {
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
-          </DescriptionBox>
+          </Box>
 
           <ExampleBox>
             <SectionContainer>
@@ -177,7 +181,11 @@ export default function chakra_basic_styling() {
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
-        <GridColumn>Column 2</GridColumn>
+        <HighlightColumn>
+          <GridBoxOne>Highlight coming soon!</GridBoxOne>
+          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
+          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+        </HighlightColumn>
       </MainGrid>
     </BigBackgroundBox>
   );

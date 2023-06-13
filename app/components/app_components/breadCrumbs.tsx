@@ -1,16 +1,8 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-} from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 
 import { ChevronRightIcon } from "@chakra-ui/icons";
-
 import { Link, useLocation } from "@remix-run/react";
-
 import { navElements } from "~/components/app_components/navigation";
-
 import type { NavElement } from "~/components/app_components/navigation";
 
 const getLabelforUrl = (
@@ -41,7 +33,7 @@ export function BreadCrumbs() {
       spacing="8px"
       separator={<ChevronRightIcon color="gray.500" />}
       fontSize="sm"
-      mb={8}
+      mt={2}
     >
       <BreadcrumbItem>
         <BreadcrumbLink as={Link} to="/">

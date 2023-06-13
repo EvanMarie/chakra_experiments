@@ -22,6 +22,10 @@ import {
   ImportBox,
   MainGrid,
   GridColumn,
+  GridBoxOne,
+  GridBoxThree,
+  GridBoxTwo,
+  HighlightColumn,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -87,67 +91,77 @@ export default function chakra_section() {
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
-            <SectionContainer>
-              <VStack>
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-
-                <VStack w="100%" spacing={0}>
-                  <Box></Box>
-                  <Highlighter>{``}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
+            <VStack>
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
               </VStack>
               <MyDivider mt={0} mb={0} />
-            </SectionContainer>
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+
+              <VStack w="100%" spacing={0}>
+                <Box></Box>
+                <Highlighter>{``}</Highlighter>
+                <BasicText></BasicText>
+              </VStack>
+              <MyDivider mt={0} mb={0} />
+            </VStack>
           </ExampleBox>
         </GridColumn>
-        <GridColumn>Column 2</GridColumn>
+        <HighlightColumn>
+          <GridBoxOne>Highlight coming soon!</GridBoxOne>
+          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
+          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+        </HighlightColumn>
       </MainGrid>
 
       {/* ********************************************************************* */}

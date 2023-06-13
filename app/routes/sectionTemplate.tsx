@@ -25,6 +25,7 @@ import {
   GridBoxOne,
   GridBoxThree,
   GridBoxTwo,
+  HighlightColumn,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -109,12 +110,11 @@ export default function chakra_section() {
             <Highlighter>{``}</Highlighter>
           </ExampleBox>
         </GridColumn>
-        <GridColumn>
-          This is a test
-          <GridBoxOne>Test</GridBoxOne>
-          <GridBoxTwo>Test</GridBoxTwo>
-          <GridBoxThree>Test</GridBoxThree>
-        </GridColumn>
+        <HighlightColumn>
+          <GridBoxOne>Highlight coming soon!</GridBoxOne>
+          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
+          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+        </HighlightColumn>
       </MainGrid>
 
       {/* ********************************************************************* */}
