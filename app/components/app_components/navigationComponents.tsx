@@ -96,7 +96,7 @@ interface AccordionSubProps {
 export const AccordionSub = ({ link, label }: AccordionSubProps) => {
   return (
     <Box {...navHoverMini}>
-      <AccordionPanel pb={2}>
+      <AccordionPanel pb={0.5} mb={1}>
         <Link href={link} {...navHoverMini}>
           <Box w="100%" fontSize={fontSizeSub}>
             {label}

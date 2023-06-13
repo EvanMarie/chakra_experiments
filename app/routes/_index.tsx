@@ -52,12 +52,18 @@ export default function Index() {
       </SectionContainer>
       <SectionContainer>
         <BasicText>
-          The examples shown here are taken from the Chakra examples in their
-          documentation. These are my own personal explorations and experiments
-          with the various possibilities that Chakra-UI offers as a means of
-          getting to know Chakra better. With every example, you can find the
-          link to the Chakra Documentation for the specific component or
-          subject. I hope you are as impressed with the libary as I am!{" "}
+          Some of the examples shown here are taken from the Chakra examples in
+          their documentation, and some are my own. Together, they are my own
+          personal explorations and experiments with the various possibilities
+          that Chakra-UI offers as a means of getting to know Chakra and Remix
+          better and to step-up my HTML and CSS game as well. So I put all of
+          that together in this project, because I am nothing if not a
+          multi-tasker.
+        </BasicText>
+        <BasicText>
+          With every example, you can find the link to the Chakra Documentation
+          for the specific component or subject. I hope you are as impressed
+          with the libary as I am!{" "}
         </BasicText>{" "}
         <BasicText color={colors.mainAccent2}>
           <b>Enjoy! And never stop learning!</b>

@@ -2,9 +2,6 @@ import { AddIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
   Box,
   Flex,
   Link,
@@ -31,7 +28,13 @@ const MainNavigation = () => {
               label="Padding & Margin"
             />
             <AccordionSub link="/styling/color" label="Color" />
-            <AccordionSub link="/styling/css" label="CSS" />
+            <AccordionSub link="/styling/gradients" label="Gradients" />
+            <AccordionSub link="/styling/typography" label="Typography" />
+            <AccordionSub link="/styling/layout" label="Layout" />
+            <AccordionSub link="/styling/display" label="Display" />
+            <AccordionSub link="/styling/flexbox" label="Flexbox" />
+            <AccordionSub link="/styling/grid_layout" label="Grid Layout" />
+            <AccordionSub link="/styling/page" label="New" />
           </AccordionItem>
 
           <AccordionItem>
