@@ -540,3 +540,27 @@ export function SingleExample({ children }: SingleExampleProps) {
     </VStack>
   );
 }
+
+/* ******************************MY FLEX******************************* */
+
+interface MyFlexProps extends FlexProps {
+  children?: React.ReactNode;
+  [key: string]: any;
+}
+
+export function MyFlex({ children, ...restProps }: MyFlexProps) {
+  return (
+    <Flex
+      overflow-x="hidden"
+      w="98%"
+      justify="center"
+      align="center"
+      p={3}
+      m={1}
+      flexDirection={{ base: "column" }}
+      {...restProps}
+    >
+      {children}
+    </Flex>
+  );
+}

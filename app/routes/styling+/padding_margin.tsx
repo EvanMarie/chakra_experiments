@@ -28,6 +28,7 @@ import {
   GridBoxTwo,
   GridBoxThree,
   SingleExample,
+  MyFlex,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -187,7 +188,7 @@ export default function chakra_basic_styling() {
             can use negative margin values to create overlapping elements. This
             can be useful when you want to create unique visual effects or
             adjust the positioning of elements.
-            <Flex w="100%" justifyContent="center">
+            <MyFlex>
               <Flex
                 w="150px"
                 justifyContent="center"
@@ -200,7 +201,7 @@ export default function chakra_basic_styling() {
                   <Box bg="yellow.400" h="40px" w="40px" mt="-30px" ml="20px" />
                 </Stack>
               </Flex>
-            </Flex>
+            </MyFlex>
             <Highlighter>{`<Box h="40px" w="40px" />
 <Box h="40px" w="40px" mt="-30px" ml="20px" />`}</Highlighter>
           </GridBoxOne>
@@ -210,21 +211,21 @@ export default function chakra_basic_styling() {
             properties, allowing you to specify different values for different
             screen sizes. The responsive variants are denoted using the <b>@</b>
             {""} symbol.
-            <Flex w="100%" justifyContent="center">
+            <MyFlex>
               <Box
-                p={["20px", "40px", "60px"]}
-                m={["10px", "20px", "30px"]}
+                p={["5px", "10px", "15px"]}
+                m={["5px", "10px", "15px"]}
                 bg="deeppink"
-                w="300px"
-                fontSize="20px"
+                w="200px"
+                fontSize="15px"
                 fontWeight="bold"
               >
                 Responsive Padding and Margin
               </Box>
-            </Flex>
+            </MyFlex>
             <Highlighter>{`<Box
-  p={["20px", "40px", "60px"]}
-  m={["10px", "20px", "30px"]}>`}</Highlighter>
+  p={["5px", "10px", "15px"]}
+  m={["5px", "10px", "15px"]}>`}</Highlighter>
           </GridBoxTwo>
 
           <GridBoxThree>

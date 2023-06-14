@@ -128,7 +128,7 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
   };
 
   return (
-    <Box {...defaultBoxProps} {...restProps}>
+    <Box overflow-x="hidden" {...defaultBoxProps} {...restProps}>
       {children}
     </Box>
   );

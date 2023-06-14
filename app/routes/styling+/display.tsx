@@ -1,4 +1,11 @@
-import { Box, Flex, Grid, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  VStack,
+  VisuallyHidden,
+} from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -26,6 +33,7 @@ import {
   GridBoxTwo,
   GridBoxThree,
   SingleExample,
+  MyFlex,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -256,9 +264,79 @@ export default function chakra_section() {
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            By using the <b>display</b> prop, you can easily toggle the display
+            behavior of elements. In this case, the first <b>Box</b> component
+            will behave like an inline element, while the second By using the
+            display prop, you can easily toggle the display behavior of
+            elements. In this case, the first Box component will behave like an
+            inline element, while the second Box component will behave like a
+            block-level element. <b>Box</b> component will behave like a
+            block-level element.
+            <MyFlex>
+              <Box display="inline" bg="green.300" p={4}>
+                Inline Box
+              </Box>
+              <Box display="block" bg="blue.300" p={4}>
+                Block Box
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Box d="inline" bg="green.300" p={4}>
+  Inline Box
+</Box>
+<Box d="block" bg="blue.300" p={4}>
+  Block Box
+</Box>`}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Chakra UI includes the VisuallyHidden component to visually hide an
+            element while keeping it accessible for screen readers. This is
+            useful when you want to hide elements from sight but still provide
+            meaningful content for assistive technologies. In this example, the
+            VisuallyHidden component wraps the text "Click me to perform an
+            action". Although visually hidden, the text will still be accessible
+            to screen readers, providing a better user experience for users with
+            visual impairments.
+            <MyFlex>
+              {" "}
+              <Button>
+                <VisuallyHidden>Click me to perform an action</VisuallyHidden>
+                Click me
+              </Button>
+            </MyFlex>
+            <Highlighter>{`<Button>
+  <VisuallyHidden>Click me to perform an action</VisuallyHidden>
+  Click me
+</Button>`}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Chakra UI provides the Flex component that makes it easy to create
+            flexible and responsive layouts using CSS flexbox. It offers a
+            simplified API for flexbox properties like flexDirection,
+            justifyContent, alignItems, and more. In this example, the Flex
+            component is used to create a flex container. The direction="row"
+            prop sets the flex direction to horizontal. The
+            justifyContent="center" and alignItems="center" props horizontally
+            center and vertically align the flex items. This allows you to
+            easily create flexible and responsive layouts using Chakra UI's Flex
+            component.
+            <MyFlex>
+              <Flex direction="row" justifyContent="center" alignItems="center">
+                <Box bg="red.300" p={4}>
+                  Box 1
+                </Box>
+                <Box bg="blue.300" p={4}>
+                  Box 2
+                </Box>
+              </Flex>
+            </MyFlex>
+            <Highlighter>{`<Box bg="red.300" p={4}>
+  Box 1
+</Box>
+<Box bg="blue.300" p={4}>
+  Box 2
+</Box>`}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

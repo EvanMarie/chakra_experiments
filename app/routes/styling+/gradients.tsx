@@ -25,6 +25,7 @@ import {
   GridBoxTwo,
   GridBoxThree,
   SingleExample,
+  MyFlex,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -180,7 +181,7 @@ gradients: {
             could help you to create unique headings or highlight specific parts
             of your text. It's not a widely used approach, and knowing this
             could add an extra layer of creativity to your project:
-            <Flex justify="center">
+            <MyFlex>
               <Text
                 bgGradient="linear(to-l, #7928CA, #FF0080)"
                 bgClip="text"
@@ -189,7 +190,7 @@ gradients: {
               >
                 Gradient Text
               </Text>
-            </Flex>
+            </MyFlex>
             <Highlighter>{`<Text
   bgGradient="linear(to-l, #7928CA, #FF0080)">`}</Highlighter>
           </GridBoxOne>
@@ -221,22 +222,22 @@ export function AnimatedGradient({ children }:
           <GridBoxThree>
             <b>On Buttons</b>: You can use gradients on various interactive
             components like buttons to add more color depth and make them more
-            appealing.
-            <Flex justify="center">
+            appealing. Remember, be sure to maintain a balance, as overuse of
+            gradients can make the UI look chaotic.
+            <MyFlex>
               <Button
                 bgGradient="linear(to-r, yellow.500, blue.500)"
+                w="150px"
                 color="white"
                 _hover={{ bgGradient: "linear(to-r, yellow.500, blue.500)" }}
                 _active={{ bgGradient: "linear(to-r, blue.500, yellow.500)" }}
               >
                 Gradient Button
               </Button>
-            </Flex>
+            </MyFlex>
             <Highlighter>{`<Button
   bgGradient="linear(to-r, teal.500, green.500)"
 >`}</Highlighter>
-            Remember, be sure to maintain a balance, as overuse of gradients can
-            make the UI look chaotic.
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

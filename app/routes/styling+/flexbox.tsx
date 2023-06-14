@@ -1,4 +1,12 @@
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Spacer,
+  Text,
+  VStack,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -25,6 +33,7 @@ import {
   GridBoxTwo,
   GridBoxThree,
   SingleExample,
+  MyFlex,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -315,9 +324,80 @@ export default function chakra_section() {
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            You can create equal height columns using Flexbox in Chakra UI. By
+            applying the flex={1} prop to each column, the available space is
+            distributed equally among them, resulting in columns with equal
+            height.
+            <MyFlex>
+              <Flex>
+                <Box flex={1} bg="red.200" p={4}>
+                  Column 1
+                </Box>
+                <Box flex={1} bg="blue.200" p={4}>
+                  Column 2
+                </Box>
+                <Box flex={1} bg="green.200" p={4}>
+                  Column 3
+                </Box>
+              </Flex>
+            </MyFlex>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Flexbox in Chakra UI enables you to effortlessly create responsive
+            layouts using the Wrap component. The Wrap component utilizes the
+            power of Flexbox to wrap flex items onto multiple lines, ensuring a
+            visually appealing and responsive design. In this example, the Wrap
+            component leverages the power of Flexbox to create a responsive grid
+            or wrap elements within a container. The spacing={1} prop sets the
+            spacing between the wrapped items. Each WrapItem component
+            represents an individual item within the Wrap component. The
+            WrapItem ensures that each item is wrapped correctly and contributes
+            to the responsive behavior. Each item is a Box component with a
+            specified background color (bg) and dimensions (height and width).
+            Flexbox comes into play as the Wrap component arranges the items in
+            a row by default. However, when the available space is insufficient
+            to fit all the items in a single row, Flexbox automatically wraps
+            them onto the next line while maintaining their order. This ensures
+            that the items are displayed neatly in a responsive manner, adapting
+            to different screen sizes and orientations. By using Flexbox through
+            the Wrap component, Chakra UI simplifies the process of creating
+            responsive grids or wrapping elements within a container. This
+            flexibility enhances the overall responsiveness and aesthetics of
+            your UI.
+            <MyFlex>
+              <Wrap spacing={1}>
+                <WrapItem>
+                  <Box bg="red.300" height="30px" width="220px" />
+                </WrapItem>
+                <WrapItem>
+                  <Box bg="green.300" height="30px" width="220px" />
+                </WrapItem>
+                <WrapItem>
+                  <Box bg="blue.300" height="30px" width="220px" />
+                </WrapItem>
+              </Wrap>
+            </MyFlex>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Flexbox in Chakra UI allows you to achieve vertical center alignment
+            effortlessly. By using the align="center" prop on the Flex
+            container, the flex items are vertically centered within the
+            container, regardless of their individual heights.
+            <MyFlex>
+              <Flex height="80px" align="center">
+                <Box bg="blue.200" p={2}>
+                  Item 1
+                </Box>
+                <Box bg="green.200" p={2}>
+                  Item 2
+                </Box>
+                <Box bg="red.200" p={2}>
+                  Item 3
+                </Box>
+              </Flex>
+            </MyFlex>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

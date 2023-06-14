@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import { colors } from "~/styles/DesignComponents";
+import { MyFlex } from "~/styles/MainDesignComponents";
 
 const gradient = keyframes`
   0% { background-position: 0% 50%; }
@@ -14,7 +15,7 @@ interface AnimatedGradientProps {
 
 export function AnimatedGradient({ children }: AnimatedGradientProps) {
   return (
-    <Flex w="100%" justify="center">
+    <MyFlex>
       <Box
         p={3}
         bgGradient={`linear(to-l, ${colors.mainAccent}, ${colors.mypurple})`}
@@ -28,6 +29,6 @@ export function AnimatedGradient({ children }: AnimatedGradientProps) {
       >
         {children}
       </Box>
-    </Flex>
+    </MyFlex>
   );
 }

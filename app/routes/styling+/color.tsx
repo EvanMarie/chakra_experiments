@@ -25,6 +25,7 @@ import {
   GridBoxTwo,
   GridBoxThree,
   SingleExample,
+  MyFlex,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -201,7 +202,7 @@ export default function chakra_section() {
             applies only when the app is in dark mode. Utilizing this feature
             allows for more control over the aesthetic of individual components
             in different color schemes.
-            <Flex width="100%" justifyContent="center">
+            <MyFlex>
               <Box
                 color={{ light: "teal.500", dark: "teal.300" }}
                 border="1px solid"
@@ -211,7 +212,7 @@ export default function chakra_section() {
                 In color mode designs, this box changes color based on the
                 current color mode.
               </Box>
-            </Flex>
+            </MyFlex>
             <Highlighter>{`<Box color={{ light: "teal.500", dark: "teal.300" }}>`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
@@ -243,7 +244,7 @@ export default function chakra_section() {
             transparent if the background color behind it changes. These
             "transparent" colors are really powerful for creating overlays or
             backdrop effects, which can create some compelling UI effects.
-            <Flex w="100%" justify="center" m={2}>
+            <MyFlex>
               <Box bg="teal.500" p="2" w="300">
                 <Box
                   bg="blackAlpha.500"
@@ -256,7 +257,7 @@ export default function chakra_section() {
                   </Box>
                 </Box>
               </Box>
-            </Flex>
+            </MyFlex>
             <Highlighter>{`<Box bg="teal.500">
   <Box
     bg="blackAlpha.500"
