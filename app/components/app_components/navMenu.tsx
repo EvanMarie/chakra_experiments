@@ -1,6 +1,5 @@
 /* eslint-disable react/display-name */
-import { CiMenuBurger } from "react-icons/ci";
-import { CgMenuBoxed } from "react-icons/cg";
+import { ImMenu } from "react-icons/im";
 import { AiOutlineHome } from "react-icons/ai";
 import {
   Menu,
@@ -66,11 +65,8 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
 
     return (
       <Menu>
-        <MenuButton
-          color={colors.mainAccent3}
-          _hover={{ color: colors.mainAccent }}
-        >
-          <CiMenuBurger size={30} />
+        <MenuButton color={"deeppink"} _hover={{ color: "cyan" }}>
+          <ImMenu size={30} />
         </MenuButton>
         <MenuList bg={colors.myblue} overflow="hidden">
           <MenuItem as={RemixLink} to="/" w="210px" bg={colors.myblue}>

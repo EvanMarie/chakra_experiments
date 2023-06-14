@@ -1,4 +1,4 @@
-import { Box, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -65,8 +65,7 @@ export default function chakra_section() {
                   <li>
                     <HL>Background color</HL>: You can control the background
                     color of a component using the <Mono>bg</Mono> or{" "}
-                    <Mono>backgroundColor</Mono>
-                    prop.
+                    <Mono>backgroundColor</Mono> prop.
                   </li>
                   <li>
                     <HL>Font color</HL>: You can control the text color of a
@@ -202,6 +201,17 @@ export default function chakra_section() {
             applies only when the app is in dark mode. Utilizing this feature
             allows for more control over the aesthetic of individual components
             in different color schemes.
+            <Flex width="100%" justifyContent="center">
+              <Box
+                color={{ light: "teal.500", dark: "teal.300" }}
+                border="1px solid"
+                p={2}
+                m={2}
+              >
+                In color mode designs, this box changes color based on the
+                current color mode.
+              </Box>
+            </Flex>
             <Highlighter>{`<Box color={{ light: "teal.500", dark: "teal.300" }}>`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
@@ -212,6 +222,18 @@ export default function chakra_section() {
             it can also be used to set the font color and background color. The
             advantage of using the <b>colorScheme</b> property is that it
             automatically adjusts the color contrast to be accessible.
+            <Box bg="teal.500" p="2" m={2} borderRadius="md">
+              <Text
+                color="white"
+                fontSize="md"
+                fontWeight="bold"
+                colorScheme="teal"
+              >
+                I am using ColorScheme!
+              </Text>
+            </Box>
+            <Highlighter>{`<Box bg="teal.500">
+  <Text colorScheme="teal">`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Transparent Colors</b>: Chakra UI offers the ability to use
@@ -221,7 +243,26 @@ export default function chakra_section() {
             transparent if the background color behind it changes. These
             "transparent" colors are really powerful for creating overlays or
             backdrop effects, which can create some compelling UI effects.
-            <Highlighter>{`<Box backgroundColor="blue.200A">`}</Highlighter>
+            <Flex w="100%" justify="center" m={2}>
+              <Box bg="teal.500" p="2" w="300">
+                <Box
+                  bg="blackAlpha.500"
+                  p="2"
+                  borderRadius="md"
+                  position="relative"
+                >
+                  <Box bg="white" p="2" borderRadius="md" boxShadow="lg">
+                    <Box>This is the content inside the overlay box.</Box>
+                  </Box>
+                </Box>
+              </Box>
+            </Flex>
+            <Highlighter>{`<Box bg="teal.500">
+  <Box
+    bg="blackAlpha.500"
+    borderRadius="md"
+    position="relative">
+    <Box bg="white" borderRadius="md">`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

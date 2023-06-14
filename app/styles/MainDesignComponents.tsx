@@ -65,10 +65,15 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       color={colors.mainText}
       justifyContent={"center"}
       alignItems={"center"}
-      overflow="hidden"
+      overflow-x="hidden"
     >
-      <Box margin="auto 0">
-        <Box width={MainWidth} display="flex" flexDirection="column">
+      <Box margin="auto 0" overflow-x="hidden">
+        <Box
+          width={MainWidth}
+          display="flex"
+          flexDirection="column"
+          overflow-x="hidden"
+        >
           {children}
         </Box>
       </Box>
@@ -107,7 +112,7 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
       <VStack
         width="100%"
         justify="center"
-        overflow="hidden"
+        overflow-x="hidden"
         align="center"
         {...rest}
       >
@@ -120,7 +125,7 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
 export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   return (
     <GridItem p="7px" height="100%">
-      <Box height="100%" width="100%" overflow="hidden">
+      <Box height="100%" width="100%" overflow-x="hidden">
         <Box bg={colors.myblue} p={3} borderRadius="sm" height="100%">
           <VStack width="100%" justify="left" align="center" {...rest}>
             <Flex>
@@ -157,7 +162,7 @@ const GridBoxDefaults = {
 export function GridBoxOne({ children, ...rest }: GridBoxProps) {
   const SmallTextSize = useBreakpointValue({
     base: "13px",
-    small: "14px",
+    small: "15px",
     md: "16px",
     lg: "14px",
   });
@@ -188,7 +193,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
 export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
   const SmallTextSize = useBreakpointValue({
     base: "13px",
-    small: "14px",
+    small: "15px",
     md: "16px",
     lg: "14px",
   });
@@ -218,7 +223,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
 export function GridBoxThree({ children, ...rest }: GridBoxProps) {
   const SmallTextSize = useBreakpointValue({
     base: "13px",
-    small: "14px",
+    small: "15px",
     md: "16px",
     lg: "14px",
   });
@@ -247,12 +252,14 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
 }
 
 /* ********************************MAIN LABEL**************************************** */
+
 interface MyLabelProps {
   children?: React.ReactNode;
   size?: number;
   labelColor?: string;
   link?: string;
 }
+
 export function MyLabel({
   size = 33,
   labelColor = colors.mainAccent,
@@ -261,10 +268,10 @@ export function MyLabel({
 }: MyLabelProps) {
   if (link === "") {
     return (
-      <Box>
-        <Flex justifyContent={"space-between"}>
+      <Flex overflow-x="hidden" direction="column">
+        <Flex justifyContent="space-between" overflow-x="hidden">
           <Text
-            fontSize={size}
+            fontSize={["18px", "30px", size]}
             color={labelColor}
             fontWeight="bold"
             lineHeight="2em"
@@ -273,27 +280,30 @@ export function MyLabel({
           </Text>
         </Flex>
         <MyDivider mt={2} mb={2} />
-      </Box>
+      </Flex>
     );
   } else {
     return (
-      <>
-        <Flex justifyContent={"space-between"}>
-          <Text fontSize={size} color={labelColor} fontWeight="bold">
+      <Flex overflow-x="hidden" direction="column">
+        <Flex justifyContent="space-between" paddingX={3} overflow-x="hidden">
+          <Text
+            fontSize={["18px", "24px", size]}
+            color={labelColor}
+            fontWeight="bold"
+          >
             {children}
           </Text>
           <HStack
             w="300px"
             spacing={3}
-            paddingX={3}
             alignItems="center"
-            justifyContent={"right"}
+            justifyContent="right"
           >
             <Text fontSize="28px">|</Text>
             <CustomLink
               href={link}
-              target="blank"
-              fontSize={size - 12}
+              target="_blank"
+              fontSize={["sm", "md", size - 12]}
               color={colors.linkColor}
             >
               Chakra Docs
@@ -302,7 +312,7 @@ export function MyLabel({
           </HStack>
         </Flex>
         <MyDivider mt={2} mb={2} />
-      </>
+      </Flex>
     );
   }
 }
@@ -385,7 +395,6 @@ export function SectionContainer({
   const defaultFlexProps = {
     paddingY: 3,
     paddingX: 5,
-    // overflow: "auto",
     fontSize: BasicTextSize,
     marginBottom: 0,
     bg: colors.sectionColor,
@@ -393,11 +402,11 @@ export function SectionContainer({
     alignItems: "left",
     borderRadius: "sm",
     width: "100%",
-    overflow: "auto",
   };
 
   return (
     <Flex
+      overflow-x="hidden"
       {...defaultFlexProps}
       flexDirection={{ base: "column" }}
       {...restProps}
@@ -422,7 +431,7 @@ export function ExampleBox({
   width = "100%",
 }: ExampleBoxProps) {
   return (
-    <Box paddingX={paddingX} paddingY={paddingY} w={width}>
+    <Box paddingX={paddingX} paddingY={paddingY} w={width} overflow-x="hidden">
       <BasicText color={colors.mainAccent2} size={SectionHeadingSize} mt={3}>
         <b>
           <i>Examples</i>
@@ -430,7 +439,7 @@ export function ExampleBox({
         :
       </BasicText>
       <MyDivider mb={3} mt={1} />
-      <VStack w="100%" spacing={3}>
+      <VStack w="100%" spacing={3} overflow-x="hidden">
         {children}
       </VStack>
     </Box>
@@ -497,7 +506,6 @@ export function ExampleContainer({
 }: ExamplenContainerProps) {
   const defaultFlexProps = {
     p: 4,
-    // overflow: "auto",
     fontSize: BasicTextSize,
     w: "100%",
     bg: colors.mainAccent2,
@@ -508,6 +516,7 @@ export function ExampleContainer({
 
   return (
     <Box
+      overflow-x="hidden"
       {...defaultFlexProps}
       flexDirection={{ base: "column" }}
       {...restProps}

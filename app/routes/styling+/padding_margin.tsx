@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Flex, Stack, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -187,6 +187,22 @@ export default function chakra_basic_styling() {
             can use negative margin values to create overlapping elements. This
             can be useful when you want to create unique visual effects or
             adjust the positioning of elements.
+            <Flex w="100%" justifyContent="center">
+              <Flex
+                w="150px"
+                justifyContent="center"
+                mt={4}
+                bg={colors.sectionColor}
+                p={3}
+              >
+                <Stack spacing={4}>
+                  <Box bg="cyan.500" h="40px" w="40px" />
+                  <Box bg="yellow.400" h="40px" w="40px" mt="-30px" ml="20px" />
+                </Stack>
+              </Flex>
+            </Flex>
+            <Highlighter>{`<Box h="40px" w="40px" />
+<Box h="40px" w="40px" mt="-30px" ml="20px" />`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Responsive padding and margin values</b>: Chakra UI provides
@@ -194,13 +210,39 @@ export default function chakra_basic_styling() {
             properties, allowing you to specify different values for different
             screen sizes. The responsive variants are denoted using the <b>@</b>
             {""} symbol.
+            <Flex w="100%" justifyContent="center">
+              <Box
+                p={["20px", "40px", "60px"]}
+                m={["10px", "20px", "30px"]}
+                bg="deeppink"
+                w="300px"
+                fontSize="20px"
+                fontWeight="bold"
+              >
+                Responsive Padding and Margin
+              </Box>
+            </Flex>
+            <Highlighter>{`<Box
+  p={["20px", "40px", "60px"]}
+  m={["10px", "20px", "30px"]}>`}</Highlighter>
           </GridBoxTwo>
+
           <GridBoxThree>
             <b>Combining padding and margin shorthand</b>: Chakra UI supports
             shorthand notations for setting multiple padding <b>(p)</b> and
             margin <b>(m)</b> values at once. You can use these shorthand
             notations to specify different values for individual sides of an
             element
+            <Box
+              p="10px 20px"
+              m="4px 10px"
+              bg={colors.mypurple}
+              color="white"
+              fontWeight="bold"
+            >
+              Padding and Margin Shorthand
+            </Box>
+            <Highlighter>{`<Box p="10px 20px" m="4px 10px">`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

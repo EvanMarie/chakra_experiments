@@ -1,4 +1,4 @@
-import { Box, Code, Heading, Link, Text, VStack } from "@chakra-ui/react";
+import { Box, Code, Flex, Heading, Link, Text, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -52,7 +52,7 @@ export default function chakra_section() {
       </MyLabel>
       <MainGrid>
         <GridColumn>
-          <Box>
+          <Box overflow-x="hidden">
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
@@ -244,9 +244,49 @@ export default function chakra_section() {
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            Custom Font Family: Chakra UI allows you to easily set a custom font
+            family for your text. You can define your font family in the Chakra
+            UI theme or use the fontFamily prop directly on the Text component.
+            <Flex w="100%" justifyContent="center">
+              <Text fontFamily="Montserrat, sans-serif" fontSize="20px">
+                This text uses a custom font family.
+              </Text>
+            </Flex>
+            <Highlighter>{`<Text fontFamily="Montserrat, sans-serif">`}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Text Alignment: Chakra UI provides the textAlign prop to control the
+            alignment of text within a component.
+            <Flex w="100%" justifyContent="center" bg={colors.mainAccent}>
+              <Text textAlign="center">
+                This text is centered within its container.
+              </Text>
+            </Flex>
+            <Highlighter>{`<Text textAlign="center">`}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Chakra UI provides the lineHeight prop to control the spacing
+            between lines of text. This allows you to adjust the vertical rhythm
+            and improve the readability of your text. In this example, the Text
+            component applies the lineHeight="1.5" property, which increases the
+            line height to 1.5 times the font size. This helps create more
+            breathing space between lines, enhancing readability.
+            <Flex w="100%" justifyContent="center" m={2}>
+              <Flex
+                w="300px"
+                p={2}
+                justifyContent="center"
+                bg={colors.mainAccent2}
+              >
+                <Text lineHeight="1.5">
+                  This text has an increased line height for improved
+                  readability.
+                </Text>
+              </Flex>
+            </Flex>
+            <Highlighter>{`<Text lineHeight="1.5">`}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

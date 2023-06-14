@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -59,19 +59,22 @@ export default function chakra_section() {
                 applying CSS properties directly on Chakra UI components. Here's
                 how you can set background images on Chakra UI components:
               </BasicText>
-              <Box
-                bgImage="url('https://picsum.photos/300/150?random=1')"
-                bgPosition="center"
-                bgRepeat="no-repeat"
-                bgSize="cover"
-                height="150px"
-                fontWeight="bold"
-                fontSize="xl"
-                color="deeppink"
-                padding={3}
-              >
-                Content goes here
-              </Box>
+              <Flex w="100%" justifyContent="center">
+                <Box
+                  bgImage="url('https://picsum.photos/300/150?random=1')"
+                  bgPosition="center"
+                  bgRepeat="no-repeat"
+                  bgSize="cover"
+                  w="90%"
+                  h="150px"
+                  fontWeight="bold"
+                  fontSize="xl"
+                  color="deeppink"
+                  padding={3}
+                >
+                  Content goes here
+                </Box>
+              </Flex>
 
               <Highlighter>{`<Box
   bgImage="url('https://picsum.photos/200/300?random=1')"

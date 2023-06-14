@@ -13,7 +13,7 @@ const theme = extendTheme({
   },
 
   breakpoints: {
-    sm: "30em", // 480px
+    sm: "25em", // 400px
     md: "50em", // 800px
     lg: "75em", // 1200px
     xl: "80em", // 1280px

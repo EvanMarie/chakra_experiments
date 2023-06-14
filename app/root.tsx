@@ -44,17 +44,25 @@ export default function App() {
           <Flex
             width="100%"
             minH="100vh"
+            overflow-x="hidden"
             justifyContent="flex-start"
             alignItems="flex-start"
             bg={colors.mainBackground}
             direction="column"
             flex="1"
           >
-            <Flex width="100%" maxWidth="1500px" justifyContent="center">
-              <Flex justifyContent="flex-start" alignItems="flex-start">
-                {" "}
-                {/* Changed this line */}
-                <Box height="100%" paddingBottom="13px">
+            <Flex
+              width="100%"
+              maxWidth={["400px", "1500px"]}
+              justifyContent="center"
+              overflow-x="hidden"
+            >
+              <Flex
+                justifyContent="flex-start"
+                alignItems="flex-start"
+                overflow-x="hidden"
+              >
+                <Box height="100%" paddingBottom="13px" overflow-x="hidden">
                   <Box
                     bg={colors.myblue}
                     display={["none", "none", "block"]}
@@ -76,6 +84,7 @@ export default function App() {
                   justifyContent="flex-start"
                   alignItems="center"
                   direction="column"
+                  overflow-x="hidden"
                 >
                   <Flex
                     direction="column"
@@ -86,15 +95,16 @@ export default function App() {
                     maxWidth="100%"
                     justifyContent="center"
                     alignItems="center"
+                    overflow-x="hidden"
                   >
-                    <Box w="100%" paddingX={3}>
+                    <Flex w="100%" paddingX={5}>
                       <HStack justify="space-between">
                         <BreadCrumbs />
                         <Box position="fixed" top="7px" right="30px">
                           <NavMenu />
                         </Box>
                       </HStack>
-                    </Box>
+                    </Flex>
 
                     <Outlet />
                   </Flex>
