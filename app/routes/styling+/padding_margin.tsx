@@ -27,6 +27,7 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -117,67 +118,66 @@ export default function chakra_basic_styling() {
 
           <ExampleBox>
             <SectionContainer>
-              <VStack w="100%" spacing={6}>
-                <VStack w="100%" spacing={0}>
-                  <Box p={2} bg={colors.mypurple}>
-                    This <Mono>Box</Mono> has a padding setting of{" "}
+              <SingleExample>
+                <Box p={2} bg={colors.mypurple}>
+                  This <Mono>Box</Mono> has a padding setting of{" "}
+                  <Mono>
+                    <i>p={2}</i>
+                  </Mono>
+                </Box>
+                <Highlighter>{`<Box p={2}>`}</Highlighter>
+                <BasicText>
+                  Here <Mono>4</Mono> is not pixels, but units from the Chakra
+                  UI's theme spacing scale.
+                </BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box pt={4} bg={colors.myblue}>
+                  This box has a padding-top of 4 units
+                </Box>
+                <Highlighter>{`<Box pt={4}>`}</Highlighter>
+                <BasicText>
+                  In this case, <Mono>pt</Mono> stands for padding-top. You can
+                  use similar conventions for padding-right (<Mono>pr</Mono>),
+                  padding-bottom (<Mono>pb</Mono>), padding-left (
+                  <Mono>pl</Mono>
+                  ), and for both x-axis and y-axis simultaneously (
+                  <Mono>px</Mono>, <Mono>py</Mono>).
+                </BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box bg={colors.mainAccent3}>
+                  <Box m={2} bg={colors.myblue} mb={3}>
+                    This <Mono>Box</Mono> has a margin setting of{" "}
                     <Mono>
-                      <i>p={2}</i>
+                      <i>m={4}</i>
                     </Mono>
                   </Box>
-                  <Highlighter>{`<Box p={2}>`}</Highlighter>
-                  <BasicText>
-                    Here <Mono>4</Mono> is not pixels, but units from the Chakra
-                    UI's theme spacing scale.
-                  </BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-                <VStack w="100%" spacing={0}>
-                  <Box pt={4} bg={colors.myblue}>
-                    This box has a padding-top of 4 units
-                  </Box>
-                  <Highlighter>{`<Box pt={4}>`}</Highlighter>
-                  <BasicText>
-                    In this case, <Mono>pt</Mono> stands for padding-top. You
-                    can use similar conventions for padding-right (
-                    <Mono>pr</Mono>), padding-bottom (<Mono>pb</Mono>),
-                    padding-left (<Mono>pl</Mono>
-                    ), and for both x-axis and y-axis simultaneously (
-                    <Mono>px</Mono>, <Mono>py</Mono>).
-                  </BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-                <VStack w="100%" spacing={0}>
-                  <Box bg={colors.mainAccent3}>
-                    <Box m={2} bg={colors.myblue} mb={3}>
-                      This <Mono>Box</Mono> has a margin setting of{" "}
-                      <Mono>
-                        <i>m={4}</i>
-                      </Mono>
-                    </Box>
-                  </Box>
-                  <Highlighter>{`<Box m={4}>`}</Highlighter>
-                  <BasicText>Margin works just like padding.</BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                </Box>
+                <Highlighter>{`<Box m={4}>`}</Highlighter>
+                <BasicText>Margin works just like padding.</BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box mt={4} bg={colors.mypurple}>
+                  This box has a margin-top of 4 units
+                </Box>
 
-                <VStack w="100%" spacing={0}>
-                  <Box mt={4} bg={colors.mypurple}>
-                    This box has a margin-top of 4 units
-                  </Box>
-
-                  <Highlighter>{`<Box mt={4}>`}</Highlighter>
-                  <BasicText>
-                    Here, <Mono>mt</Mono> stands for <Mono>margin-top</Mono>.
-                    Similar to padding, you can also use{" "}
-                    <Mono>margin-right</Mono> (<Mono>mr</Mono>),{" "}
-                    <Mono>margin-bottom</Mono> (<Mono>mb</Mono>),{" "}
-                    <Mono>margin-left</Mono> (<Mono>ml</Mono>), and for both
-                    x-axis and y-axis simultaneously (<Mono>mx</Mono>,{" "}
-                    <Mono>my</Mono> ).
-                  </BasicText>
-                </VStack>
-              </VStack>{" "}
+                <Highlighter>{`<Box mt={4}>`}</Highlighter>
+                <BasicText>
+                  Here, <Mono>mt</Mono> stands for <Mono>margin-top</Mono>.
+                  Similar to padding, you can also use <Mono>margin-right</Mono>{" "}
+                  (<Mono>mr</Mono>), <Mono>margin-bottom</Mono> (<Mono>mb</Mono>
+                  ), <Mono>margin-left</Mono> (<Mono>ml</Mono>), and for both
+                  x-axis and y-axis simultaneously (<Mono>mx</Mono>,{" "}
+                  <Mono>my</Mono> ).
+                </BasicText>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
@@ -190,11 +190,10 @@ export default function chakra_basic_styling() {
           </GridBoxOne>
           <GridBoxTwo>
             <b>Responsive padding and margin values</b>: Chakra UI provides
-            responsive variants for <b>padding (p)</b> and <b>margin (m)</b>
+            responsive variants for <b>padding (p)</b> and <b>margin (m)</b>{" "}
             properties, allowing you to specify different values for different
             screen sizes. The responsive variants are denoted using the <b>@</b>
-            {""}
-            symbol.
+            {""} symbol.
           </GridBoxTwo>
           <GridBoxThree>
             <b>Combining padding and margin shorthand</b>: Chakra UI supports

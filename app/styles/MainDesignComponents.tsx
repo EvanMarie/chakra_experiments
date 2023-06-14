@@ -10,9 +10,13 @@ import {
   Text,
   VStack,
   chakra,
+  Spacer,
+  useBreakpointValue,
+  GridItem,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
+import { HiLightBulb } from "react-icons/hi";
 
 const colors = {
   mainBackground: "#211421",
@@ -29,11 +33,13 @@ const colors = {
   codeText: "#faafef",
   sectionColor: "#3d3145",
   highlighterColor: "#a7d5fa",
+  linkColor: "deeppink",
 };
 
 export const BasicTextSize = "16px";
 export const MainWidth = "100%";
 export const MainMaxWidth = "1000px";
+export const SectionHeadingSize = "23px";
 
 const CustomLink = chakra(Link, {
   baseStyle: {
@@ -52,7 +58,7 @@ interface BigBackgroundBoxProps {
 export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
   return (
     <Box
-      p={1}
+      p="5px"
       w={MainWidth}
       maxWidth={MainMaxWidth}
       bg={colors.mainBackground}
@@ -80,7 +86,6 @@ export function MainGrid({ children, ...rest }: MainGridProps) {
   return (
     <Grid
       templateColumns={{ base: "1fr", lg: "70% 30%" }}
-      gap={2}
       alignItems="start"
       width="100%"
       {...rest}
@@ -98,36 +103,43 @@ interface GridColumnProps extends BoxProps {
 
 export function GridColumn({ children, ...rest }: GridColumnProps) {
   return (
-    <VStack width="100%" justify="left" align="center" {...rest}>
-      {children}
-    </VStack>
+    <GridItem p="7px" height="100%">
+      <VStack
+        width="100%"
+        justify="center"
+        overflow="hidden"
+        align="center"
+        {...rest}
+      >
+        {children}
+      </VStack>
+    </GridItem>
   );
 }
 
 export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   return (
-    <Box paddingRight="5px" height="100%">
-      <SectionContainer
-        bg={colors.myblue}
-        paddingX={2}
-        height="100%"
-        justifyContent="flex-start"
-      >
-        <VStack width="100%" justify="left" align="center" {...rest}>
-          <Flex>
-            <HStack>
-              <RiBookmark3Line size="25px" color={colors.mainAccent3} />
-              <Text fontWeight="bold" fontSize="20px">
-                Did you know?
-              </Text>
-            </HStack>
-          </Flex>
-          {children}
-        </VStack>
-      </SectionContainer>
-    </Box>
+    <GridItem p="7px" height="100%">
+      <Box height="100%" width="100%" overflow="hidden">
+        <Box bg={colors.myblue} p={3} borderRadius="sm" height="100%">
+          <VStack width="100%" justify="left" align="center" {...rest}>
+            <Flex>
+              <HStack>
+                <RiBookmark3Line size="25px" color={colors.mainAccent3} />
+                <Text fontWeight="bold" fontSize="20px">
+                  Did you know?
+                </Text>
+              </HStack>
+            </Flex>
+            {children}
+          </VStack>
+        </Box>
+      </Box>
+    </GridItem>
   );
 }
+
+/* *******************************GRID BOXES************************************** */
 
 interface GridBoxProps extends BoxProps {
   children?: React.ReactNode;
@@ -136,44 +148,99 @@ interface GridBoxProps extends BoxProps {
 
 const GridBoxDefaults = {
   width: "100%",
-  paddingY: 2,
-  paddingX: 2,
+  padding: 2,
   marginY: 2,
   borderRadius: "sm",
   boxShadow: "lg",
 };
 
 export function GridBoxOne({ children, ...rest }: GridBoxProps) {
+  const SmallTextSize = useBreakpointValue({
+    base: "13px",
+    small: "14px",
+    md: "16px",
+    lg: "14px",
+  });
+
   return (
     <Box
       {...GridBoxDefaults}
       bg={colors.mainAccent}
       color={colors.secondaryText}
+      fontSize={SmallTextSize}
     >
+      <HStack>
+        <Flex h="20px" justify="left" mb={2}>
+          <HiLightBulb
+            size={23}
+            style={{ marginRight: "5px", color: "deeppink" }}
+          />
+          <Text fontWeight="bold" fontSize="16px">
+            Useful Tip No. 1!
+          </Text>
+        </Flex>
+      </HStack>{" "}
       {children}
     </Box>
   );
 }
 
 export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
+  const SmallTextSize = useBreakpointValue({
+    base: "13px",
+    small: "14px",
+    md: "16px",
+    lg: "14px",
+  });
   return (
     <Box
       {...GridBoxDefaults}
       bg={colors.mainAccent2}
       color={colors.secondaryText}
+      fontSize={SmallTextSize}
     >
+      <HStack>
+        <Flex h="20px" justify="left" mb={2}>
+          <HiLightBulb
+            size={23}
+            style={{ marginRight: "5px", color: "deeppink" }}
+          />
+          <Text fontWeight="bold" fontSize="16px">
+            Useful Tip No. 2!
+          </Text>
+        </Flex>
+      </HStack>{" "}
       {children}
     </Box>
   );
 }
 
 export function GridBoxThree({ children, ...rest }: GridBoxProps) {
+  const SmallTextSize = useBreakpointValue({
+    base: "13px",
+    small: "14px",
+    md: "16px",
+    lg: "14px",
+  });
+
   return (
     <Box
       {...GridBoxDefaults}
       bg={colors.mainAccent3}
       color={colors.secondaryText}
+      fontSize={SmallTextSize}
     >
+      <HStack>
+        <Flex h="20px" justify="left" mb={2}>
+          <HiLightBulb
+            size={23}
+            style={{ marginRight: "5px", color: "deeppink" }}
+          />
+          <Text fontWeight="bold" fontSize="16px">
+            Useful Tip No. 3!
+          </Text>
+        </Flex>
+      </HStack>{" "}
       {children}
     </Box>
   );
@@ -184,19 +251,17 @@ interface MyLabelProps {
   children?: React.ReactNode;
   size?: number;
   labelColor?: string;
-  linkColor?: string;
   link?: string;
 }
 export function MyLabel({
-  size = 28,
+  size = 33,
   labelColor = colors.mainAccent,
-  linkColor = colors.mainAccent2,
   link = "",
   children,
 }: MyLabelProps) {
   if (link === "") {
     return (
-      <>
+      <Box>
         <Flex justifyContent={"space-between"}>
           <Text
             fontSize={size}
@@ -208,7 +273,7 @@ export function MyLabel({
           </Text>
         </Flex>
         <MyDivider mt={2} mb={2} />
-      </>
+      </Box>
     );
   } else {
     return (
@@ -228,8 +293,8 @@ export function MyLabel({
             <CustomLink
               href={link}
               target="blank"
-              fontSize={size - 10}
-              color={linkColor}
+              fontSize={size - 12}
+              color={colors.linkColor}
             >
               Chakra Docs
             </CustomLink>
@@ -322,7 +387,7 @@ export function SectionContainer({
     paddingX: 5,
     // overflow: "auto",
     fontSize: BasicTextSize,
-    marginY: 3,
+    marginBottom: 0,
     bg: colors.sectionColor,
     justifyContent: "center",
     alignItems: "left",
@@ -358,13 +423,16 @@ export function ExampleBox({
 }: ExampleBoxProps) {
   return (
     <Box paddingX={paddingX} paddingY={paddingY} w={width}>
-      <BasicText color={colors.mainAccent2} size="23px" mt={3}>
+      <BasicText color={colors.mainAccent2} size={SectionHeadingSize} mt={3}>
         <b>
           <i>Examples</i>
         </b>
         :
       </BasicText>
-      {children}
+      <MyDivider mb={3} mt={1} />
+      <VStack w="100%" spacing={3}>
+        {children}
+      </VStack>
     </Box>
   );
 }
@@ -380,7 +448,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   children,
-  size = "23px",
+  size = SectionHeadingSize,
   mb = 3,
   mt = 0,
   color = colors.mainAccent2,
@@ -446,5 +514,20 @@ export function ExampleContainer({
     >
       {children}
     </Box>
+  );
+}
+
+/* ******************************SINGLE EXAMPLE******************************* */
+
+interface SingleExampleProps extends BoxProps {
+  children?: React.ReactNode;
+  [key: string]: any;
+}
+
+export function SingleExample({ children }: SingleExampleProps) {
+  return (
+    <VStack w="100%" spacing={3}>
+      {children}
+    </VStack>
   );
 }

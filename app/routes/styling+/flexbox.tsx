@@ -24,6 +24,7 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -145,190 +146,171 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <VStack spacing={4}>
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    bg={colors.mypurple}
-                    h="75px"
-                    p={2}
-                    align="center"
-                    justify="center"
-                  >
-                    Very centered, indeed!
-                  </Flex>
-                  <Highlighter>
-                    {`<Flex align="center" justify="center">`}
-                  </Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex direction="row" bg={colors.mypurple} w={350} p={3}>
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>
-                    {`<Flex display="row">
+              <SingleExample>
+                <Flex
+                  bg={colors.mypurple}
+                  h="75px"
+                  p={2}
+                  align="center"
+                  justify="center"
+                >
+                  Very centered, indeed!
+                </Flex>
+                <Highlighter>
+                  {`<Flex align="center" justify="center">`}
+                </Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex direction="row" bg={colors.mypurple} w={350} p={3}>
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>
+                  {`<Flex display="row">
   <Text>Child One</Text>
   <Text>Child Two</Text>
   <Text>Child Three</Text>
 </Flex>`}
-                  </Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    direction="column"
-                    bg={colors.mypurple}
-                    w={350}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex direction="column">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    justify="center"
-                    bg={colors.mypurple}
-                    w={350}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex justify="center">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    justify="space-between"
-                    bg={colors.mypurple}
-                    w={350}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex justify="space-between">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    align="center"
-                    bg={colors.mypurple}
-                    w={350}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex align="center">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    align="stretch"
-                    bg={colors.mypurple}
-                    w={350}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex align="stretch">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex wrap="wrap" bg={colors.mypurple} w={200} px={3} py={1}>
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex wrap="wrap">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    wrap="nowrap"
-                    bg={colors.mypurple}
-                    w={200}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex wrap="nowrap">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex
-                    direction={{ base: "column", md: "row" }}
-                    bg={colors.mypurple}
-                    w={350}
-                    px={3}
-                    py={1}
-                  >
-                    <Text>Child One</Text>
-                    <Text>Child Two</Text>
-                    <Text>Child Three</Text>
-                  </Flex>
-                  <Highlighter>{`<Flex direction={{ base: "column", md: "row" }}>`}</Highlighter>
-                  <BasicText>
-                    On mobile and smaller screens, this will be column-wrap. At
-                    medium sized screens and above, this will switch to
-                    row-wrap.
-                  </BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Flex bg={colors.mypurple} w={350} px={3} py={1}>
-                    <Box flexGrow={1}>Child One</Box>
-                    <Box flexShrink={2}>Child Two</Box>
-                    <Box>Child Three</Box>
-                  </Flex>
-                  <Highlighter>{`<Flex>
+                </Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex
+                  direction="column"
+                  bg={colors.mypurple}
+                  w={350}
+                  px={3}
+                  py={1}
+                >
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex direction="column">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex
+                  justify="center"
+                  bg={colors.mypurple}
+                  w={350}
+                  px={3}
+                  py={1}
+                >
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex justify="center">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex
+                  justify="space-between"
+                  bg={colors.mypurple}
+                  w={350}
+                  px={3}
+                  py={1}
+                >
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex justify="space-between">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex align="center" bg={colors.mypurple} w={350} px={3} py={1}>
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex align="center">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex
+                  align="stretch"
+                  bg={colors.mypurple}
+                  w={350}
+                  px={3}
+                  py={1}
+                >
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex align="stretch">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex wrap="wrap" bg={colors.mypurple} w={200} px={3} py={1}>
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex wrap="wrap">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex wrap="nowrap" bg={colors.mypurple} w={200} px={3} py={1}>
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex wrap="nowrap">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex
+                  direction={{ base: "column", md: "row" }}
+                  bg={colors.mypurple}
+                  w={350}
+                  px={3}
+                  py={1}
+                >
+                  <Text>Child One</Text>
+                  <Text>Child Two</Text>
+                  <Text>Child Three</Text>
+                </Flex>
+                <Highlighter>{`<Flex direction={{ base: "column", md: "row" }}>`}</Highlighter>
+                <BasicText>
+                  On mobile and smaller screens, this will be column-wrap. At
+                  medium sized screens and above, this will switch to row-wrap.
+                </BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex bg={colors.mypurple} w={350} px={3} py={1}>
+                  <Box flexGrow={1}>Child One</Box>
+                  <Box flexShrink={2}>Child Two</Box>
+                  <Box>Child Three</Box>
+                </Flex>
+                <Highlighter>{`<Flex>
   <Box flexGrow={1}>Child One</Box>
   <Box flexShrink={2}>Child Two</Box>
   <Box>Child Three</Box>
 </Flex>`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-              </VStack>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>

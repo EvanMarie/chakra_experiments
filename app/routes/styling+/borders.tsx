@@ -24,6 +24,7 @@ import {
   GridBoxThree,
   GridBoxTwo,
   HighlightColumn,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -108,71 +109,72 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <VStack>
-                <VStack w="100%" spacing={0}>
-                  <Box
-                    borderWidth="1px"
-                    borderStyle="solid"
-                    borderColor="blue.500"
-                    borderRadius="lg"
-                    p={3}
-                  >
-                    Have you ever seen such a box?
-                  </Box>
+              <SingleExample>
+                <Box
+                  borderWidth="1px"
+                  borderStyle="solid"
+                  borderColor="blue.500"
+                  borderRadius="lg"
+                  p={3}
+                >
+                  Have you ever seen such a box?
+                </Box>
 
-                  <Highlighter>{`<Box
+                <Highlighter>{`<Box
   borderWidth="1px"
   borderStyle="solid"
   borderColor="blue.500"
   borderRadius="lg"
                 >`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+              </SingleExample>
+            </SectionContainer>
 
-                <VStack w="100%" spacing={0}>
-                  <Box
-                    border="2px"
-                    fontSize={16}
-                    bg={colors.myblue}
-                    borderColor="yellow.200"
-                    h="60px"
-                    marginTop={4}
-                    color={colors.mainText}
-                  >
-                    <Highlighter>{`<Box 2px border borderColor="yellow.200">`}</Highlighter>
-                  </Box>
-                </VStack>
+            <SectionContainer>
+              <SingleExample>
+                <Box
+                  border="2px"
+                  fontSize={16}
+                  bg={colors.myblue}
+                  borderColor="yellow.200"
+                  h="60px"
+                  marginTop={4}
+                  color={colors.mainText}
+                >
+                  <Highlighter>{`<Box 2px border borderColor="yellow.200">`}</Highlighter>
+                </Box>
+
                 <br />
-                <MyDivider mt={0} mb={0} />
+              </SingleExample>
+            </SectionContainer>
 
-                <VStack w="100%" spacing={0}>
-                  <Box borderWidth="1px" borderRadius="md" p={4}>
-                    Whaddabox!
-                  </Box>
-                  <Highlighter>{`<Box borderWidth="1px" borderRadius="md" p={4}>`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>
+                <Box borderWidth="1px" borderRadius="md" p={4}>
+                  Whaddabox!
+                </Box>
+                <Highlighter>{`<Box borderWidth="1px" borderRadius="md" p={4}>`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
 
-                <VStack w="100%" spacing={0}>
-                  <Box borderWidth="1px" borderStyle="dashed" p={4}>
-                    Dashes are grand!
-                  </Box>
-                  <Highlighter>{`<Box borderWidth="1px" borderStyle="dashed" p={4}>`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>
+                <Box borderWidth="1px" borderStyle="dashed" p={4}>
+                  Dashes are grand!
+                </Box>
+                <Highlighter>{`<Box borderWidth="1px" borderStyle="dashed" p={4}>`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
 
-                <VStack w="100%" spacing={0}>
-                  <Box border="2px solid red" p={4}>
-                    Lovely in Red!
-                  </Box>
-                  <Highlighter>{`<Box border="2px solid red" p={4}>`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-              </VStack>
+            <SectionContainer>
+              <SingleExample>
+                <Box border="2px solid red" p={4}>
+                  Lovely in Red!
+                </Box>
+                <Highlighter>{`<Box border="2px solid red" p={4}>`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>

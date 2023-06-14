@@ -48,25 +48,28 @@ export default function App() {
             alignItems="flex-start"
             bg={colors.mainBackground}
             direction="column"
+            flex="1"
           >
             <Flex width="100%" maxWidth="1500px" justifyContent="center">
               <Flex justifyContent="flex-start" alignItems="flex-start">
                 {" "}
                 {/* Changed this line */}
-                <Box
-                  bg={colors.myblue}
-                  display={["none", "none", "block"]}
-                  height="100%"
-                  width="210px"
-                  overflowY="hidden"
-                >
-                  <VStack height="100%" spacing={3} padding={3}>
-                    <SectionHeading>Chakra-UI</SectionHeading>
-                    <MainNavigation
-                      initialIndex={navIndex}
-                      onChange={setNavIndex}
-                    />
-                  </VStack>
+                <Box height="100%" paddingBottom="13px">
+                  <Box
+                    bg={colors.myblue}
+                    display={["none", "none", "block"]}
+                    height="100%"
+                    width="210px"
+                    overflowY="hidden"
+                  >
+                    <VStack height="100%" spacing={3} padding={3}>
+                      <SectionHeading>Chakra-UI</SectionHeading>
+                      <MainNavigation
+                        initialIndex={navIndex}
+                        onChange={setNavIndex}
+                      />
+                    </VStack>
+                  </Box>
                 </Box>
                 <Flex
                   flex="1"
@@ -79,12 +82,12 @@ export default function App() {
                     width="100%"
                     bg={colors.mainBackground}
                     overflow="hidden"
-                    paddingX={2}
+                    paddingX={1}
                     maxWidth="100%"
                     justifyContent="center"
                     alignItems="center"
                   >
-                    <Box w="100%" paddingLeft={3} paddingRight={5}>
+                    <Box w="100%" paddingX={3}>
                       <HStack justify="space-between">
                         <BreadCrumbs />
                         <Box position="fixed" top="7px" right="30px">

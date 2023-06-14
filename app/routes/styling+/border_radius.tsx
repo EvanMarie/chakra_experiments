@@ -1,16 +1,7 @@
-import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  // Mono,
-  // Flex,
-  // Text,
-  HL,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -26,6 +17,7 @@ import {
   GridBoxThree,
   GridBoxTwo,
   HighlightColumn,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -45,122 +37,71 @@ export default function chakra_section() {
   return (
     <BigBackgroundBox>
       {/* ********************************************************************* */}
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#borders">
+        Name
       </MyLabel>
       <MainGrid>
         <GridColumn>
           {/*  Section Introduction */}
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
-            <BasicText color={colors.mainAccent3}>
-              ⦾ Some statement about this component
-            </BasicText>
+            <BasicText color={colors.mainAccent3}>Intro</BasicText>
             <BulletBox>
+              <BasicText>Describe the Bullets:</BasicText>
               <ul>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>:
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>:
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>:
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
-                </li>
-                <li>
-                  <HL>Component</HL>: Description
-                </li>
-                <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>:
                 </li>
               </ul>
             </BulletBox>
             <DescriptionBox>
-              <BasicText>Some description</BasicText>
+              <BasicText>Some Description</BasicText>
+              <Highlighter>{`Some Example`}</Highlighter>
+
               {/* IMPORT CODE */}
               <ImportBox>
-                <BasicText>
-                  These components can be imported as follows:
-                </BasicText>
-                <Highlighter>{``}</Highlighter>
+                <BasicText>To import this:</BasicText>
+                <Highlighter>{`import { Something } from "Somewhere";`}</Highlighter>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
-            <VStack>
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>EXAMPLE</SingleExample>
+            </SectionContainer>
 
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>EXAMPLE</SingleExample>
+            </SectionContainer>
 
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>EXAMPLE</SingleExample>
+            </SectionContainer>
 
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>EXAMPLE</SingleExample>
+            </SectionContainer>
 
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
-
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
-
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
-
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
-
-              <VStack w="100%" spacing={0}>
-                <Box></Box>
-                <Highlighter>{``}</Highlighter>
-                <BasicText></BasicText>
-              </VStack>
-              <MyDivider mt={0} mb={0} />
-            </VStack>
+            <SectionContainer>
+              <SingleExample>EXAMPLE</SingleExample>
+            </SectionContainer>
           </ExampleBox>
         </GridColumn>
+
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>Tip</GridBoxOne>
+          <GridBoxTwo>Tip</GridBoxTwo>
+          <GridBoxThree>Tip</GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

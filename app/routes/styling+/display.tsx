@@ -25,6 +25,7 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -114,146 +115,143 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <VStack spacing={4}>
-                <VStack w="100%" spacing={0}>
-                  <BasicText>
-                    <Mono>display='none'</Mono> makes an element not appear.
-                    (The following element does not appear.)
-                  </BasicText>
-                  <FlexibleBox bg={colors.mypurple} display="none">
-                    display='none'
-                  </FlexibleBox>
-                  <Highlighter>{`<Box display="none">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <BasicText>
-                    The following <Mono>Box</Mono> only appears on medium and
-                    smaller screens:
-                  </BasicText>
-                  <Box h={100}>
-                    <Box
-                      hideFrom="md"
-                      h="100px"
-                      w="100px"
-                      bg={colors.mypurple}
-                    ></Box>{" "}
-                  </Box>
-                  <Highlighter>{`<Box hideFrom="md" h="100px" w="100px">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <BasicText>
-                    The following <Mono>Box</Mono> will not appear until the
-                    screen is at least medium size.
-                  </BasicText>
-                  <Box h={200}>
-                    <Box
-                      display={{ base: "none", md: "block" }}
-                      bg={colors.mypurple}
-                      color={colors.mainText}
-                      padding={3}
-                    >
-                      <Mono>base: "none", md: "block" </Mono>configuration sets
-                      the display property to "none" for smaller screens and
-                      "block" for screens that meet or exceed the{" "}
-                      <Mono>md</Mono> breakpoint. This allows for responsive
-                      behavior where the element is hidden on smaller screens
-                      and displayed as a block on larger screens.
-                    </Box>
-                  </Box>
-                  <Highlighter>{`<Box display={{ base: "none", md: "block" }}>`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <BasicText>
-                    The following boxes only show on screens that are medium or
-                    smaller:
-                  </BasicText>
-
-                  <FlexibleBox
-                    display={{ base: "block", md: "none" }}
-                    bg={colors.mypurple}
-                    color={colors.mainText}
-                  >
-                    <Mono>base: "block", md: "none"</Mono> - hide the element
-                    from 'md' up
-                  </FlexibleBox>
-
-                  <Highlighter>{`<Box display={{ base: "block", md: "none" }}>`}</Highlighter>
-
-                  <br />
-
-                  <FlexibleBox
+              <SingleExample>
+                <BasicText>
+                  <Mono>display='none'</Mono> makes an element not appear. (The
+                  following element does not appear.)
+                </BasicText>
+                <FlexibleBox bg={colors.mypurple} display="none">
+                  display='none'
+                </FlexibleBox>
+                <Highlighter>{`<Box display="none">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>
+                  The following <Mono>Box</Mono> only appears on medium and
+                  smaller screens:
+                </BasicText>
+                <Box h={100}>
+                  <Box
                     hideFrom="md"
+                    h="100px"
+                    w="100px"
+                    bg={colors.mypurple}
+                  ></Box>{" "}
+                </Box>
+                <Highlighter>{`<Box hideFrom="md" h="100px" w="100px">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>
+                  The following <Mono>Box</Mono> will not appear until the
+                  screen is at least medium size.
+                </BasicText>
+                <Box h={200}>
+                  <Box
+                    display={{ base: "none", md: "block" }}
                     bg={colors.mypurple}
                     color={colors.mainText}
+                    padding={3}
                   >
-                    This box complete disappears at sizes of medium and higher.
-                  </FlexibleBox>
-
-                  <Highlighter>{`<Box hideFrom="md">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Box display="block" bg={colors.mypurple}>
-                    This is a block-level element
+                    <Mono>base: "none", md: "block" </Mono>configuration sets
+                    the display property to "none" for smaller screens and
+                    "block" for screens that meet or exceed the <Mono>md</Mono>{" "}
+                    breakpoint. This allows for responsive behavior where the
+                    element is hidden on smaller screens and displayed as a
+                    block on larger screens.
                   </Box>
-                  <Highlighter>{`<Box display="block">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                </Box>
+                <Highlighter>{`<Box display={{ base: "none", md: "block" }}>`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>
+                  The following boxes only show on screens that are medium or
+                  smaller:
+                </BasicText>
 
-                <VStack w="100%" spacing={0}>
-                  <Box display="inline-block" bg={colors.mypurple}>
-                    This is an inline-block element
+                <FlexibleBox
+                  display={{ base: "block", md: "none" }}
+                  bg={colors.mypurple}
+                  color={colors.mainText}
+                >
+                  <Mono>base: "block", md: "none"</Mono> - hide the element from
+                  'md' up
+                </FlexibleBox>
+
+                <Highlighter>{`<Box display={{ base: "block", md: "none" }}>`}</Highlighter>
+
+                <br />
+
+                <FlexibleBox
+                  hideFrom="md"
+                  bg={colors.mypurple}
+                  color={colors.mainText}
+                >
+                  This box complete disappears at sizes of medium and higher.
+                </FlexibleBox>
+
+                <Highlighter>{`<Box hideFrom="md">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box display="block" bg={colors.mypurple}>
+                  This is a block-level element
+                </Box>
+                <Highlighter>{`<Box display="block">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box display="inline-block" bg={colors.mypurple}>
+                  This is an inline-block element
+                </Box>
+                <Highlighter>{`<Box display="inline-block"?`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box display="flex" bg={colors.mypurple}>
+                  This box is a flex container
+                </Box>
+                <Highlighter>{`<Box display="flex">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Flex bg={colors.mypurple}>
+                  This flex component is also a flex container
+                </Flex>
+                <Highlighter>{`<Flex>`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                  <Box p={2} bg={colors.mypurple}>
+                    This is a grid item
                   </Box>
-                  <Highlighter>{`<Box display="inline-block"?`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Box display="flex" bg={colors.mypurple}>
-                    This box is a flex container
+                  <Box p={2} bg={colors.mainAccent} color="black">
+                    This is another grid item
                   </Box>
-                  <Highlighter>{`<Box display="flex">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                </Grid>
 
-                <VStack w="100%" spacing={0}>
-                  <Flex bg={colors.mypurple}>
-                    This flex component is also a flex container
-                  </Flex>
-                  <Highlighter>{`<Flex>`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-                    <Box p={2} bg={colors.mypurple}>
-                      This is a grid item
-                    </Box>
-                    <Box p={2} bg={colors.mainAccent} color="black">
-                      This is another grid item
-                    </Box>
-                  </Grid>
-
-                  <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" gap={6}>
   <Box>This is a grid item</Box>
   <Box>This is another grid item</Box>
 </Grid>
 `}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-              </VStack>
+                <BasicText></BasicText>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>

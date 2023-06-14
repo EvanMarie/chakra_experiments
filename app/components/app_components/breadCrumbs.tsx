@@ -4,8 +4,11 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "@remix-run/react";
 import { navElements } from "~/components/app_components/navigation";
 import type { NavElement } from "~/components/app_components/navigation";
-import { getNavElementForUrl, getLabelForUrl } from "~/components/app_components/navigation";
-
+import {
+  getNavElementForUrl,
+  getLabelForUrl,
+} from "~/components/app_components/navigation";
+import { colors } from "~/styles/DesignComponents";
 
 export function BreadCrumbs() {
   const location = useLocation();
@@ -20,7 +23,7 @@ export function BreadCrumbs() {
       mt={2}
     >
       <BreadcrumbItem>
-        <BreadcrumbLink as={Link} to="/">
+        <BreadcrumbLink color={colors.linkColor} as={Link} to="/">
           Main
         </BreadcrumbLink>
       </BreadcrumbItem>
@@ -29,7 +32,7 @@ export function BreadCrumbs() {
         const url = `/${path.slice(0, index + 1).join("/")}`;
         return (
           <BreadcrumbItem key={url}>
-            <BreadcrumbLink as={Link} to={url}>
+            <BreadcrumbLink color={colors.linkColor} as={Link} to={url}>
               {getLabelForUrl(url, navElements)}
             </BreadcrumbLink>
           </BreadcrumbItem>

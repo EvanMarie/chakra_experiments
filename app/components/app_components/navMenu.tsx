@@ -74,7 +74,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
         </MenuButton>
         <MenuList bg={colors.myblue} overflow="hidden">
           <MenuItem as={RemixLink} to="/" w="210px" bg={colors.myblue}>
-            <AiOutlineHome size={30} />
+            <AiOutlineHome size={30} color={colors.linkColor} />
           </MenuItem>
           {navItems.map((navItem) => {
             return (

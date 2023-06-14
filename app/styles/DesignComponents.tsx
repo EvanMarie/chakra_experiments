@@ -31,6 +31,7 @@ export const colors = {
   codeText: "#faafef",
   sectionColor: "#3d3145",
   highlighterColor: "#a7d5fa",
+  linkColor: "deeppink",
 };
 
 interface MyHeadingProps {

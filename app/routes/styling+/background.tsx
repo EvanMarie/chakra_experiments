@@ -25,6 +25,7 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -137,9 +138,9 @@ export default function chakra_section() {
             </SectionContainer>
           </Box>
           {/* COMPONENT EXAMPLES */}
-          <ExampleBox paddingX={5}>
+          <ExampleBox>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <Box>
                   <BasicText>
                     The Following is a Box with background properties:{" "}
@@ -152,52 +153,48 @@ export default function chakra_section() {
   h="200px">`}</Highlighter>
                   </Box>
                   <FlexibleBox
-                    backgroundImage="url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png')"
+                    backgroundImage="url('https://picsum.photos/200/300')"
                     backgroundPosition="center"
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
                     h="200px"
                   ></FlexibleBox>
                 </Box>
-                <SectionContainer>
-                  <Box>
-                    <p>
-                      The Following is a the short hand version of the same:{" "}
-                    </p>
-                    <Box paddingX={4} paddingBottom={4}>
-                      <Highlighter>{`bgImage="url('URL.png')"
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <p>The Following is a the short hand version of the same: </p>
+
+                <Highlighter>{`bgImage="url('URL.png')"
 bgPosition="center" 
 bgRepeat="no-repeat"
 bgSize="cover"
 h="200px"`}</Highlighter>
-                    </Box>
-                  </Box>
-                  <Box
-                    bgImage="url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png')"
-                    bgPosition="center"
-                    bgRepeat="no-repeat"
-                    backgroundSize="cover"
-                    h="200px"
-                  />
-                </SectionContainer>
-                <SectionContainer>
-                  <Box>
-                    <p>
-                      Let's try some different values to see their effects:{" "}
-                    </p>
-                    <Box paddingX={4} paddingBottom={4}>
-                      <Highlighter>{`h="300px"`}</Highlighter>
-                    </Box>
-                  </Box>
-                  <Box
-                    bgImage="url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png')"
-                    bgPosition="center"
-                    bgRepeat="no-repeat"
-                    backgroundSize="cover"
-                    h="300px"
-                  />
-                </SectionContainer>
-              </VStack>
+
+                <Box
+                  bgImage="url('https://picsum.photos/200/300')"
+                  bgPosition="center"
+                  bgRepeat="no-repeat"
+                  backgroundSize="cover"
+                  h="200px"
+                />
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <p>Let's try some different values to see their effects: </p>
+
+                <Highlighter>{`h="300px"`}</Highlighter>
+                <Box
+                  bgImage="url('https://picsum.photos/200/300')"
+                  bgPosition="center"
+                  bgRepeat="no-repeat"
+                  backgroundSize="cover"
+                  h="300px"
+                />
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>

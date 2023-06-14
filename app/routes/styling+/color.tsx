@@ -24,6 +24,7 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -108,96 +109,120 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <VStack>
-                <VStack w="100%" spacing={0}>
-                  <Box bg="blue" p={2}>
-                    This <Mono>Box</Mono> has a <Mono>bg</Mono> of "blue".
-                  </Box>
+              <SingleExample>
+                <Box bg="blue" p={2}>
+                  This <Mono>Box</Mono> has a <Mono>bg</Mono> of "blue".
+                </Box>
 
-                  <Highlighter>{`<Box bg="blue">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <Highlighter>{`<Box bg="blue">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box bg="green.700" p={2} color="white">
+                  This <Mono>Box</Mono> has a <Mono>bg of green.700</Mono> and a{" "}
+                  <Mono>color</Mono> (font) of "white".
+                </Box>
 
-                <VStack w="100%" spacing={0}>
-                  <Box bg="green.700" p={2} color="white">
-                    This <Mono>Box</Mono> has a <Mono>bg of green.700</Mono> and
-                    a <Mono>color</Mono> (font) of "white".
-                  </Box>
+                <Highlighter>{`<Box bg="green.700" color="white">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box backgroundColor="red.700" p={2}>
+                  This <Mono>Box</Mono> has a <Mono>backgroundColor</Mono> of{" "}
+                  <Mono>red.700</Mono>.
+                </Box>
 
-                  <Highlighter>{`<Box bg="green.700" color="white">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <Highlighter>{`<Box backgroundColor="red.700">`}</Highlighter>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box bg="teal.500">This is a box with a background color</Box>
 
-                <VStack w="100%" spacing={0}>
-                  <Box backgroundColor="red.700" p={2}>
-                    This <Mono>Box</Mono> has a <Mono>backgroundColor</Mono> of{" "}
-                    <Mono>red.700</Mono>.
-                  </Box>
+                <Highlighter>{`<Box bg="teal.500">`}</Highlighter>
+                <BasicText>
+                  In this example, <Mono>teal.500 </Mono>is a color from the
+                  Chakra UI color palette, and it applies to the Box's
+                  background.
+                </BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text color="teal.500">
+                  This is some text with a color of <Mono>teal.500</Mono>
+                </Text>
 
-                  <Highlighter>{`<Box backgroundColor="red.700">`}</Highlighter>
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <Highlighter>{`<Text color="teal.500">`}</Highlighter>
+                <BasicText>
+                  Here, <Mono>teal.500</Mono> is applied as the text color.
+                </BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box bg="#F0F0F0" color="black" p={2}>
+                  {" "}
+                  A Box{" "}
+                </Box>
+                <Text color="rgb(255, 255, 255)"> Some Text </Text>
 
-                <VStack w="100%" spacing={0}>
-                  <Box bg="teal.500">This is a box with a background color</Box>
-
-                  <Highlighter>{`<Box bg="teal.500">`}</Highlighter>
-                  <BasicText>
-                    In this example, <Mono>teal.500 </Mono>is a color from the
-                    Chakra UI color palette, and it applies to the Box's
-                    background.
-                  </BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text color="teal.500">
-                    This is some text with a color of <Mono>teal.500</Mono>
-                  </Text>
-
-                  <Highlighter>{`<Text color="teal.500">`}</Highlighter>
-                  <BasicText>
-                    Here, <Mono>teal.500</Mono> is applied as the text color.
-                  </BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Box bg="#F0F0F0" color="black" p={2}>
-                    {" "}
-                    A Box{" "}
-                  </Box>
-                  <Text color="rgb(255, 255, 255)"> Some Text </Text>
-
-                  <Highlighter>{`<Box bg="#F0F0F0">...</Box>
+                <Highlighter>{`<Box bg="#F0F0F0">...</Box>
 <Text color="rgb(255, 255, 255)">...</Text>`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text color={["teal.500", "green.500", "blue.500"]}>
+                  Responsive color
+                </Text>
 
-                <VStack w="100%" spacing={0}>
-                  <Text color={["teal.500", "green.500", "blue.500"]}>
-                    Responsive color
-                  </Text>
-
-                  <Highlighter>{`<Text color={["teal.500", "green.500", "blue.500"]}>`}</Highlighter>
-                  <BasicText>
-                    In this example, the text color will be{" "}
-                    <Mono>teal.500</Mono> on mobile devices,{" "}
-                    <Mono>green.500</Mono> on tablet devices, and{" "}
-                    <Mono>blue.500</Mono> on desktop devices.
-                  </BasicText>
-                </VStack>
-              </VStack>
+                <Highlighter>{`<Text color={["teal.500", "green.500", "blue.500"]}>`}</Highlighter>
+                <BasicText>
+                  In this example, the text color will be <Mono>teal.500</Mono>{" "}
+                  on mobile devices, <Mono>green.500</Mono> on tablet devices,
+                  and <Mono>blue.500</Mono> on desktop devices.
+                </BasicText>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            Using Color Mode: Chakra UI supports both a light and dark color
+            mode, and allows developers to toggle between them with ease. This
+            is an incredible tool for enhancing user experience, but some
+            developers may not know that you can customize these color modes per
+            component. For example, you can set a specific font color that
+            applies only when the app is in dark mode. Utilizing this feature
+            allows for more control over the aesthetic of individual components
+            in different color schemes.
+            <Highlighter>{`<Box color={{ light: "teal.500", dark: "teal.300" }}>`}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            <b>Use of ColorScheme Property</b>: Chakra UI has predefined color
+            schemes (like "teal", "red", "green", etc.) and shades (from 50 to
+            900). The colorScheme property often gets overlooked because it's
+            generally used with button, badge, and other similar components, but
+            it can also be used to set the font color and background color. The
+            advantage of using the <b>colorScheme</b> property is that it
+            automatically adjusts the color contrast to be accessible.
+          </GridBoxTwo>
+          <GridBoxThree>
+            <b>Transparent Colors</b>: Chakra UI offers the ability to use
+            "transparent" colors. These are like regular colors but have a fixed
+            opacity. This means you can create a background color with a certain
+            level of transparency and not worry about it becoming too
+            transparent if the background color behind it changes. These
+            "transparent" colors are really powerful for creating overlays or
+            backdrop effects, which can create some compelling UI effects.
+            <Highlighter>{`<Box backgroundColor="blue.200A">`}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

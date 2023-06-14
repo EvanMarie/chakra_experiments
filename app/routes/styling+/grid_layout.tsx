@@ -27,6 +27,7 @@ import {
   MainGrid,
   MyLabel,
   SectionContainer,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
@@ -115,7 +116,7 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <Grid templateColumns="repeat(3, 1fr)">
                   <Box bg="blue.500" h="10" w="100%">
                     Box One
@@ -140,10 +141,10 @@ export default function chakra_section() {
   </Box>
 </Grid>`}</Highlighter>
                 <BasicText></BasicText>
-              </VStack>
+              </SingleExample>
             </SectionContainer>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <Box bg={colors.mainText} p={2} mb={2}>
                   <Grid templateColumns="repeat(3, 1fr)" gap={1}>
                     <Box p={4} boxShadow="xl" bg={colors.mypurple}>
@@ -206,10 +207,10 @@ export default function chakra_section() {
   </Box>
 </Grid>`}</Highlighter>
                 <BasicText></BasicText>
-              </VStack>
+              </SingleExample>
             </SectionContainer>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <Grid gap={3} bg={colors.mypurple} p={2}>
                   <Text>Thing One</Text>
                   <Text>Thing Two</Text>
@@ -222,10 +223,10 @@ export default function chakra_section() {
   <Text>Thing Three</Text>
 </Grid>`}</Highlighter>
                 <BasicText></BasicText>
-              </VStack>
+              </SingleExample>
             </SectionContainer>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <Profiles />
                 <Highlighter>{`export function Profiles() {
   const profiles = ["Alice", "Bob", 
@@ -260,10 +261,10 @@ export default function chakra_section() {
                   needed, ensuring that each <Mono>Box</Mono> is at least 125px
                   tall and 20px wide.
                 </BasicText>
-              </VStack>
+              </SingleExample>
             </SectionContainer>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <Dashboard />
                 <Highlighter>{`export function Dashboard() {
   return (
@@ -307,10 +308,10 @@ export default function chakra_section() {
                   of the widgets only span one. The <Mono>colSpan</Mono>{" "}
                   property is used to control this.
                 </BasicText>
-              </VStack>
+              </SingleExample>
             </SectionContainer>
             <SectionContainer>
-              <VStack w="100%" spacing={0}>
+              <SingleExample>
                 <ImageGallery />
                 <Highlighter>{`export function ImageGallery() {
 const images = Array(5).fill(null); // Array of 5 nulls
@@ -350,7 +351,7 @@ return (
                   <Mono>2</Mono> columns for small, and <Mono>3</Mono> for
                   medium and above.
                 </BasicText>
-              </VStack>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>

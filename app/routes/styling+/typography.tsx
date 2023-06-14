@@ -27,6 +27,7 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -117,136 +118,128 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <VStack>
-                <VStack w="100%" spacing={0}>
-                  <Heading as="h1" size="lg">
-                    I'm a large heading
-                  </Heading>
-                  <Highlighter>{`<Heading as="h1" size="lg">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+              <SingleExample>
+                <Heading as="h1" size="lg">
+                  I'm a large heading
+                </Heading>
+                <Highlighter>{`<Heading as="h1" size="lg">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontSize="md">I'm some medium-sized text</Text>
+                <Highlighter>{`<Text fontSize="md">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Code>I'm a code snippet</Code>
+                <Highlighter>{`<Code>I'm a code snippet</Code>`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontSize="md">I'm some medium-sized text</Text>
+                <Highlighter>{`<Text fontSize="md">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontSize={["sm", "md", "lg"]}>I'm responsive text</Text>
+                <Highlighter>{`<Text fontSize={["sm", "md", "lg"]}>`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontWeight="bold">I'm bold text</Text>
 
-                <VStack w="100%" spacing={0}>
-                  <Text fontSize="md">I'm some medium-sized text</Text>
-                  <Highlighter>{`<Text fontSize="md">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <Highlighter>{`<Text fontWeight="bold">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text letterSpacing="wide">
+                  I'm text with wide letter spacing
+                </Text>
 
-                <VStack w="100%" spacing={0}>
-                  <Code>I'm a code snippet</Code>
-                  <Highlighter>{`<Code>I'm a code snippet</Code>`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <Highlighter>{`<Text letterSpacing="wide">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text lineHeight="tall">I'm text with tall line height</Text>
 
-                <VStack w="100%" spacing={0}>
-                  <Text fontSize="md">I'm some medium-sized text</Text>
-                  <Highlighter>{`<Text fontSize="md">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <Highlighter>{`<Text lineHeight="tall">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textAlign="center" textDecoration="underline">
+                  I'm centered, underlined text
+                </Text>
 
-                <VStack w="100%" spacing={0}>
-                  <Text fontSize={["sm", "md", "lg"]}>I'm responsive text</Text>
-                  <Highlighter>{`<Text fontSize={["sm", "md", "lg"]}>`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text fontWeight="bold">I'm bold text</Text>
-
-                  <Highlighter>{`<Text fontWeight="bold">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text letterSpacing="wide">
-                    I'm text with wide letter spacing
-                  </Text>
-
-                  <Highlighter>{`<Text letterSpacing="wide">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text lineHeight="tall">I'm text with tall line height</Text>
-
-                  <Highlighter>{`<Text lineHeight="tall">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textAlign="center" textDecoration="underline">
-                    I'm centered, underlined text
-                  </Text>
-
-                  <Highlighter>{`<Text textAlign="center" textDecoration="underline">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-                <VStack w="100%" spacing={0}>
-                  <Text fontSize={32}>fontSize={32}</Text>
-                  <Highlighter>{`<Text fontSize={32}>`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text fontSize="1.5em">fontSize="1.5em"</Text>
-                  <Highlighter>{`<Text fontSize="1.5em">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text fontSize="md">fontSize="md"</Text>
-                  <Highlighter>{`<Text fontSize="md">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textTransform="uppercase">
-                    textTransform="uppercase"
-                  </Text>
-                  <Highlighter>{`<Text textTransform="uppercase">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textTransform="capitalize">
-                    textTransform="capitalize"
-                  </Text>
-                  <Highlighter>{`<Text textTransform="capitalize">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textTransform="lowercase">
-                    textTransform="lowercase"
-                  </Text>
-                  <Highlighter>{`<Text textTransform="lowercase">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textDecoration="underline">
-                    textDecoration="underline"
-                  </Text>
-                  <Highlighter>{`<Text textDecoration="underline">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textDecoration="overline">
-                    textDecoration="overline"
-                  </Text>
-                  <Highlighter>{`<Text textDecoration="overline">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Text textDecoration="line-through">
-                    textDecoration="line-through"
-                  </Text>
-                  <Highlighter>{`<Text textDecoration="line-through">`}</Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-              </VStack>
+                <Highlighter>{`<Text textAlign="center" textDecoration="underline">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontSize={32}>fontSize={32}</Text>
+                <Highlighter>{`<Text fontSize={32}>`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontSize="1.5em">fontSize="1.5em"</Text>
+                <Highlighter>{`<Text fontSize="1.5em">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text fontSize="md">fontSize="md"</Text>
+                <Highlighter>{`<Text fontSize="md">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textTransform="uppercase">textTransform="uppercase"</Text>
+                <Highlighter>{`<Text textTransform="uppercase">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textTransform="capitalize">
+                  textTransform="capitalize"
+                </Text>
+                <Highlighter>{`<Text textTransform="capitalize">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textTransform="lowercase">textTransform="lowercase"</Text>
+                <Highlighter>{`<Text textTransform="lowercase">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textDecoration="underline">
+                  textDecoration="underline"
+                </Text>
+                <Highlighter>{`<Text textDecoration="underline">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textDecoration="overline">textDecoration="overline"</Text>
+                <Highlighter>{`<Text textDecoration="overline">`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Text textDecoration="line-through">
+                  textDecoration="line-through"
+                </Text>
+                <Highlighter>{`<Text textDecoration="line-through">`}</Highlighter>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>

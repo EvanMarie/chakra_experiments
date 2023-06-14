@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, Text, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -24,12 +24,14 @@ import {
   GridBoxOne,
   GridBoxTwo,
   GridBoxThree,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { AnimatedGradient } from "~/components/styling/animatedGradient";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -90,73 +92,71 @@ export default function chakra_section() {
 
           <ExampleBox>
             <SectionContainer>
-              <VStack>
-                <VStack w="100%" spacing={0}>
-                  <Box
-                    w="100%"
-                    p={2}
-                    bgGradient={"linear(to-t, green.700, pink.700)"}
-                    borderRadius={"sm"}
-                  >
-                    This <Mono>Box</Mono> has a <Mono>linear gradient</Mono>{" "}
-                    background.
-                  </Box>
-                  <Highlighter>{`<Box bgGradient={"linear(to-t, green.700, pink.700)"}>`}</Highlighter>
+              <SingleExample>
+                <Box
+                  w="100%"
+                  p={2}
+                  bgGradient={"linear(to-t, green.700, pink.700)"}
+                  borderRadius={"sm"}
+                >
+                  This <Mono>Box</Mono> has a <Mono>linear gradient</Mono>{" "}
+                  background.
+                </Box>
+                <Highlighter>{`<Box bgGradient={"linear(to-t, green.700, pink.700)"}>`}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box
+                  w="100%"
+                  p={2}
+                  bgGradient="radial(blue, yellow.700, pink.700)"
+                >
+                  This <Mono>Box</Mono> has a <Mono>radial gradient</Mono>{" "}
+                  background.
+                </Box>
+                <Highlighter>{`<Box bgGradient="radial(blue, yellow.700, pink.700)">`}</Highlighter>
 
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box
+                  bgGradient="linear-gradient(to right, red.500, blue.500)"
+                  padding={3}
+                >
+                  This is a box with a linear gradient
+                </Box>
 
-                <VStack w="100%" spacing={0}>
-                  <Box
-                    w="100%"
-                    p={2}
-                    bgGradient="radial(blue, yellow.700, pink.700)"
-                  >
-                    This <Mono>Box</Mono> has a <Mono>radial gradient</Mono>{" "}
-                    background.
-                  </Box>
-                  <Highlighter>{`<Box bgGradient="radial(blue, yellow.700, pink.700)">`}</Highlighter>
-
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-
-                <VStack w="100%" spacing={0}>
-                  <Box
-                    bgGradient="linear-gradient(to right, red.500, blue.500)"
-                    padding={3}
-                  >
-                    This is a box with a linear gradient
-                  </Box>
-
-                  <Highlighter>{`<Box bgGradient="linear-gradient(to right, 
+                <Highlighter>{`<Box bgGradient="linear-gradient(to right, 
     red.500, blue.500)">`}</Highlighter>
 
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-                <VStack w="100%" spacing={0}>
-                  <Box
-                    bgGradient="radial-gradient(circle, red.500, blue.500)"
-                    padding={3}
-                  >
-                    This is a box with a radial gradient
-                  </Box>
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <SingleExample>
+                <Box
+                  bgGradient="radial-gradient(circle, red.500, blue.500)"
+                  padding={3}
+                >
+                  This is a box with a radial gradient
+                </Box>
 
-                  <Highlighter>{`<Box bgGradient="radial-gradient(circle, 
+                <Highlighter>{`<Box bgGradient="radial-gradient(circle, 
     red.500, blue.500)">`}</Highlighter>
 
-                  <BasicText></BasicText>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
-                <VStack w="100%" spacing={0}>
-                  <BasicText>
-                    To work around the limitation mentioned above, you can
-                    define gradient values in the theme and reference them by
-                    name:
-                  </BasicText>
-                  <Highlighter>{`const theme = extendTheme({
+                <BasicText></BasicText>
+              </SingleExample>
+            </SectionContainer>
+            <SectionContainer>
+              <VStack w="100%" spacing={0}>
+                <BasicText>
+                  To work around the limitation mentioned above, you can define
+                  gradient values in the theme and reference them by name:
+                </BasicText>
+                <Highlighter>{`const theme = extendTheme({
 gradients: {
   redToBlue: "linear-gradient(to right, red.500, 
     blue.500)",
@@ -164,21 +164,80 @@ gradients: {
     green.500, yellow.500)",
 },
 })`}</Highlighter>
-                  <Highlighter>
-                    {`// In your component:
+                <Highlighter>
+                  {`// In your component:
 <Box bg={{ base: "gradients.redToBlue", 
   md: "gradients.greenToYellow" }}>...</Box>`}
-                  </Highlighter>
-                </VStack>
-                <MyDivider mt={0} mb={0} />
+                </Highlighter>
               </VStack>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            <b>Gradient Text</b>: While gradients are usually used for
+            backgrounds, you can also apply them to your text in Chakra UI. This
+            could help you to create unique headings or highlight specific parts
+            of your text. It's not a widely used approach, and knowing this
+            could add an extra layer of creativity to your project:
+            <Flex justify="center">
+              <Text
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgClip="text"
+                fontSize="3xl"
+                fontWeight="bold"
+              >
+                Gradient Text
+              </Text>
+            </Flex>
+            <Highlighter>{`<Text
+  bgGradient="linear(to-l, #7928CA, #FF0080)">`}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            <b>Animating Gradients</b>: While Chakra UI does not have built-in
+            gradient animation functionality, you can leverage the power of{" "}
+            <b>@keyframes</b> and CSS-in-JS to create beautiful gradient
+            animations.
+            <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
+            <Highlighter>{`import { keyframes } from "@emotion/react";
+
+const gradient = keyframes
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+export function AnimatedGradient({ children }: 
+  AnimatedGradientProps) {
+  return (
+    <Flex w="100%" justify="center">
+      <Box
+        bgGradient={linear(to-l, 
+          {colors.mainAccent}, {colors.mypurple})}
+        backgroundSize="200% 200%"
+        animation={{gradient} 2s ease infinite}
+        >`}</Highlighter>
+          </GridBoxTwo>
+
+          <GridBoxThree>
+            <b>On Buttons</b>: You can use gradients on various interactive
+            components like buttons to add more color depth and make them more
+            appealing.
+            <Flex justify="center">
+              <Button
+                bgGradient="linear(to-r, yellow.500, blue.500)"
+                color="white"
+                _hover={{ bgGradient: "linear(to-r, yellow.500, blue.500)" }}
+                _active={{ bgGradient: "linear(to-r, blue.500, yellow.500)" }}
+              >
+                Gradient Button
+              </Button>
+            </Flex>
+            <Highlighter>{`<Button
+  bgGradient="linear(to-r, teal.500, green.500)"
+>`}</Highlighter>
+            Remember, be sure to maintain a balance, as overuse of gradients can
+            make the UI look chaotic.
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 
