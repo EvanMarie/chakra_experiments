@@ -9,6 +9,7 @@ import {
   Menu,
   MenuButton,
   MenuList,
+  chakra
 } from "@chakra-ui/react";
 
 import { AiOutlineHome } from "react-icons/ai";
@@ -22,6 +23,15 @@ export type NavElement = {
   subElements?: Array<NavElement>;
   _parent?: NavElement | null;
 };
+
+export const StyledHomeIcon = chakra(AiOutlineHome, {
+  baseStyle: {
+    color: "linkColor",
+    _hover: {
+      color: "accent_2",
+    },
+  },
+});
 
 export const navElements: NavElement[] = [
   {
@@ -171,6 +181,16 @@ export const getLabelForUrl = (
   }
 };
 
+export const useIsCurrentNavRoute = (ownPath: string) => {
+  const location = useLocation();
+  const [isCurrentNavRoute, setIsCurrentNavRoute] = useState(false);
+  useEffect(() => {
+    const basePath = location.pathname;
+    setIsCurrentNavRoute(basePath === ownPath);
+  }, [location]);
+  return isCurrentNavRoute;
+}
+
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({
     initialIndex = undefined,
@@ -197,7 +217,7 @@ export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
         <VStack w="100%" alignItems={"flex-start"}>
           <Link to="/">
             <Box w="100%>" paddingLeft={15}>
-              <AiOutlineHome size={30} />
+              <StyledHomeIcon size={30} />
             </Box>
           </Link>
           <Accordion
@@ -234,29 +254,3 @@ export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
 
 export default makeSideNav({ navElements });
 
-export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
-  // use a Chakra menu to render a dropdown menu for mobile.
-  //
-  return () => {
-    return (
-      <Menu>
-        <MenuButton
-          as={AddIcon}
-          w={10}
-          h={10}
-          borderRadius="full"
-          _hover={{ bg: "blue.600" }}
-        />
-        <MenuList>
-          {navElements.map((navElement) => {
-            return (
-              <Box key={navElement.label}>
-                <Link to={navElement.link}>{navElement.label}</Link>
-              </Box>
-            );
-          })}
-        </MenuList>
-      </Menu>
-    );
-  };
-}
