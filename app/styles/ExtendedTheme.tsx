@@ -44,17 +44,6 @@ const theme = extendTheme({
     xl: "80em", // 1280px
   },
 
-  styles: {
-    global: {
-      a: {
-        color: "linkColor",
-        _hover: {
-          color: "accent_2",
-        },
-      },
-    },
-  },
-
   fonts: {
     sizes: {
       xs: "0.75rem", // 12px

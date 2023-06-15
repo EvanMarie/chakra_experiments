@@ -5,13 +5,28 @@ import {
   AccordionPanel,
   Box,
   HStack,
-  //Link,
+  chakra,
 } from "@chakra-ui/react";
 import { colors } from "~/styles/DesignComponents";
 import { Link } from "@remix-run/react";
+import { useIsCurrentNavRoute } from "./navigation";
 
 const fontSizeMain = "20px";
 const fontSizeSub = "17px";
+
+const AccordionLink = chakra('span', {
+  baseStyle: {
+    flex: "1",
+    textAlign: "left",
+    marginRight: 10,
+    w: "100%",
+    color: "linkColor",
+    _hover: {
+      color: "accent_2",
+    },
+  }
+})
+
 
 // Scoot text to right
 const navHoverMain = {
@@ -41,49 +56,19 @@ export const AccordionMain = ({
   hasIcon = true,
   fontSize = fontSizeMain,
 }: AccordionMainProps) => {
-  if (hasIcon) {
-    return (
-      <Box {...navHoverMain} paddingLeft={1}>
-        <AccordionButton>
-          <HStack w="100%" justifyContent={"space-between"}>
-            <Link to={link} {...navHoverMain}>
-              <Box
-                as="span"
-                flex="1"
-                textAlign="left"
-                marginRight={10}
-                fontSize={fontSize}
-              >
-                {label}
-              </Box>
-            </Link>
-            <AccordionIcon boxSize={4} color={"accent_2"} />
-          </HStack>
-        </AccordionButton>
-      </Box>
-    );
-  } else {
-    return (
-      <Box fontSize={fontSizeMain} {...navHoverMain} paddingLeft={1}>
-        <AccordionItem>
-          <AccordionButton>
-            <Link to={link} {...navHoverMain}>
-              <Box
-                as="span"
-                flex="1"
-                textAlign="left"
-                paddingRight={10}
-                w="100%"
-                fontSize={fontSize}
-              >
-                {label}
-              </Box>
-            </Link>
-          </AccordionButton>
-        </AccordionItem>
-      </Box>
-    );
-  }
+  const isCurrentRoute = useIsCurrentNavRoute(link);
+  return (
+    <Box {...navHoverMain} paddingLeft={1}>
+      <AccordionButton>
+        <HStack w="100%" justifyContent={"space-between"}>
+          <Link to={link} {...navHoverMain}>
+            <AccordionLink fontSize={fontSize}>{label}</AccordionLink>
+          </Link>
+          <AccordionIcon boxSize={4} color={"accent_2"} />
+        </HStack>
+      </AccordionButton>
+    </Box>
+  );
 };
 
 /* ************************************************************************************* */
@@ -91,18 +76,20 @@ export const AccordionMain = ({
 interface AccordionSubProps {
   link: string;
   label: string;
+  fontSize?: string;
 }
 
 export const AccordionSub = ({ link, label }: AccordionSubProps) => {
+  const isCurrentRoute = useIsCurrentNavRoute(link);
+  
   return (
-    <Box {...navHoverMini}>
-      <AccordionPanel pb={2} paddingY="2px" paddingLeft="30px">
-        <Link to={link} {...navHoverMini}>
-          <Box w="100%" fontSize={fontSizeSub}>
+      <AccordionPanel  {...navHoverMini} pb={0} bg={isCurrentRoute ? "background" : "sidebarBackground"}>
+        <Link to={link} >
+          <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
             {label}
-          </Box>
+          </AccordionLink>
         </Link>
       </AccordionPanel>
-    </Box>
+
   );
 };

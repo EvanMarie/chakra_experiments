@@ -1,14 +1,24 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, chakra } from "@chakra-ui/react";
 
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "@remix-run/react";
 import { navElements } from "~/components/app_components/navigation";
 import type { NavElement } from "~/components/app_components/navigation";
+
+
 import {
-  getNavElementForUrl,
   getLabelForUrl,
 } from "~/components/app_components/navigation";
+
 import { colors } from "~/styles/DesignComponents";
+const StyledBreadcrumbLink = chakra(BreadcrumbLink, {
+  baseStyle: {
+    color: "linkColor",
+    _hover: {
+      color: "accent_2",
+    },
+  },
+});
 
 export function BreadCrumbs() {
   const location = useLocation();
@@ -23,18 +33,18 @@ export function BreadCrumbs() {
       mt={2}
     >
       <BreadcrumbItem>
-        <BreadcrumbLink color={colors.linkColor} as={Link} to="/">
+        <StyledBreadcrumbLink as={Link} to="/">
           Main
-        </BreadcrumbLink>
+        </StyledBreadcrumbLink>
       </BreadcrumbItem>
 
       {path.map((link, index) => {
         const url = `/${path.slice(0, index + 1).join("/")}`;
         return (
           <BreadcrumbItem key={url}>
-            <BreadcrumbLink color={colors.linkColor} as={Link} to={url}>
+            <StyledBreadcrumbLink as={Link} to={url}>
               {getLabelForUrl(url, navElements)}
-            </BreadcrumbLink>
+            </StyledBreadcrumbLink>
           </BreadcrumbItem>
         );
       })}
