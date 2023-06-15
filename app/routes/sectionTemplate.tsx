@@ -26,6 +26,8 @@ import {
   GridBoxThree,
   GridBoxTwo,
   HighlightColumn,
+  MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -53,28 +55,29 @@ export default function chakra_section() {
           {/*  Section Introduction */}
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
-            <BasicText color={colors.mainAccent3}>
+            <SectionDescription>
               ⦾ Some statement about this component
-            </BasicText>
+            </SectionDescription>
+            <BasicText></BasicText>
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>: Description
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>: Description
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>: Description
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>: Description
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>: Description
                 </li>
                 <li>
-                  <HL>Component</HL>: Description
+                  <HL></HL>: Description
                 </li>
               </ul>
             </BulletBox>
@@ -111,9 +114,19 @@ export default function chakra_section() {
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            Highlight coming soon!
+            <MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Highlight coming soon!<MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Highlight coming soon!<MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

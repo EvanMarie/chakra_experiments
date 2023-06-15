@@ -146,7 +146,10 @@ export const getNavElementForUrl = (
       navElement._parent = null;
       return navElement;
     } else if (navElement.subElements) {
-      const _navElement = getNavElementForUrl(url, navElement.subElements as NavElement[]);
+      const _navElement = getNavElementForUrl(
+        url,
+        navElement.subElements as NavElement[]
+      );
       if (_navElement) {
         _navElement._parent = navElement;
         return _navElement;
@@ -154,7 +157,7 @@ export const getNavElementForUrl = (
     }
   }
   return null;
-}
+};
 
 export const getLabelForUrl = (
   url: string,
@@ -166,7 +169,7 @@ export const getLabelForUrl = (
   } else {
     return null;
   }
-}
+};
 
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({
@@ -190,8 +193,8 @@ export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
       onChange(index);
     };
     return (
-      <Flex w="100%" h="100vh" alignItems={"flex-start"} p={2}>
-        <VStack w="100%" alignItems={"flex-start"} p={2}>
+      <Flex w="100%" h="100vh" alignItems={"flex-start"}>
+        <VStack w="100%" alignItems={"flex-start"}>
           <Link to="/">
             <Box w="100%>" paddingLeft={15}>
               <AiOutlineHome size={30} />
@@ -255,6 +258,5 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
         </MenuList>
       </Menu>
     );
-  }
+  };
 }
-

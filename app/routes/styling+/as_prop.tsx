@@ -18,6 +18,8 @@ import {
   GridBoxTwo,
   HighlightColumn,
   SingleExample,
+  MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -45,9 +47,9 @@ export default function chakra_section() {
           {/*  Section Introduction */}
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
-            <BasicText color={colors.mainAccent3}>Intro</BasicText>
+            <SectionDescription>⦾ Introduction</SectionDescription>
+            <BasicText>Description</BasicText>
             <BulletBox>
-              <BasicText>Describe the Bullets:</BasicText>
               <ul>
                 <li>
                   <HL></HL>:
@@ -99,9 +101,19 @@ export default function chakra_section() {
         </GridColumn>
 
         <HighlightColumn>
-          <GridBoxOne>Tip</GridBoxOne>
-          <GridBoxTwo>Tip</GridBoxTwo>
-          <GridBoxThree>Tip</GridBoxThree>
+          <GridBoxOne>
+            Tip
+            <MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Tip<MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Tip<MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 

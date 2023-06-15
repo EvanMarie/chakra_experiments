@@ -34,6 +34,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -62,12 +63,12 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ Chakra UI provides a lot of flexibility when it comes to
                 controlling the display property of elements, just like any
                 other aspect of CSS. You can use the display prop to adjust the
                 display CSS property of a component.
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>
@@ -289,14 +290,14 @@ export default function chakra_section() {
 </Box>`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
-            Chakra UI includes the VisuallyHidden component to visually hide an
-            element while keeping it accessible for screen readers. This is
-            useful when you want to hide elements from sight but still provide
-            meaningful content for assistive technologies. In this example, the
-            VisuallyHidden component wraps the text "Click me to perform an
-            action". Although visually hidden, the text will still be accessible
-            to screen readers, providing a better user experience for users with
-            visual impairments.
+            Chakra UI includes the <b>VisuallyHidden</b> component to visually
+            hide an element while keeping it accessible for screen readers. This
+            is useful when you want to hide elements from sight but still
+            provide meaningful content for assistive technologies. In this
+            example, the VisuallyHidden component wraps the text "Click me to
+            perform an action". Although visually hidden, the text will still be
+            accessible to screen readers, providing a better user experience for
+            users with visual impairments.
             <MyFlex>
               {" "}
               <Button>
@@ -305,20 +306,26 @@ export default function chakra_section() {
               </Button>
             </MyFlex>
             <Highlighter>{`<Button>
-  <VisuallyHidden>Click me to perform an action</VisuallyHidden>
+  <VisuallyHidden>
+    Click me to perform an action
+  </VisuallyHidden>
   Click me
 </Button>`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
-            Chakra UI provides the Flex component that makes it easy to create
-            flexible and responsive layouts using CSS flexbox. It offers a
-            simplified API for flexbox properties like flexDirection,
-            justifyContent, alignItems, and more. In this example, the Flex
-            component is used to create a flex container. The direction="row"
-            prop sets the flex direction to horizontal. The
-            justifyContent="center" and alignItems="center" props horizontally
-            center and vertically align the flex items. This allows you to
-            easily create flexible and responsive layouts using Chakra UI's Flex
+            Chakra UI provides the <b>Flex</b> component that makes it easy to
+            create flexible and responsive layouts using CSS flexbox. It offers
+            a simplified API for flexbox properties like flexDirection,
+            <b>justifyContent</b>, <b>alignItems</b>, and more. In this example,
+            the <b>Flex</b> component is used to create a flex container. The
+            <b>direction="row"</b> prop sets the flex direction to horizontal.
+            The <b>justifyContent="center"</b> and <b>alignItems="center"</b>
+            props horizontally center and vertically align the flex items. This
+            allows you to easily create flexible and responsive layouts using
+            Chakra UI's{" "}
+            <b>
+              <b></b>
+            </b>{" "}
             component.
             <MyFlex>
               <Flex direction="row" justifyContent="center" alignItems="center">

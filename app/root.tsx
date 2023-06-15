@@ -19,7 +19,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { colors } from "./styles/DesignComponents";
-import { SectionHeading } from "./styles/MainDesignComponents";
+import { MyFlex, SectionHeading } from "./styles/MainDesignComponents";
 import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
 import { BreadCrumbs } from "./components/app_components/breadCrumbs";
@@ -53,7 +53,7 @@ export default function App() {
           >
             <Flex
               width="100%"
-              maxWidth={["400px", "1500px"]}
+              // maxWidth={["400px", "1600px"]}
               justifyContent="center"
               overflow-x="hidden"
             >
@@ -70,8 +70,11 @@ export default function App() {
                     width="210px"
                     overflowY="hidden"
                   >
-                    <VStack height="100%" spacing={3} padding={3}>
-                      <SectionHeading>Chakra-UI</SectionHeading>
+                    <VStack height="100%" spacing={1}>
+                      <MyFlex>
+                        <SectionHeading mb={1}>Chakra-UI</SectionHeading>
+                      </MyFlex>
+
                       <MainNavigation
                         initialIndex={navIndex}
                         onChange={setNavIndex}

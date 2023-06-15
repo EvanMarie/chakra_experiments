@@ -152,10 +152,10 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <FlexibleBox boxSize="sm" bg={colors.mypurple} paddingX={2}>
+                <FlexibleBox boxSize="xs" bg={colors.mypurple} paddingX={2}>
                   <Mono>boxSize="sm"</Mono>
                 </FlexibleBox>
-                <Highlighter>{`<Box boxSize="sm"`}</Highlighter>
+                <Highlighter>{`<Box boxSize="xs"`}</Highlighter>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>

@@ -107,7 +107,14 @@ export function BasicText({
   children,
 }: BasicTextProps) {
   return (
-    <Text fontSize={size} color={color} mb={mb} mt={mt} fontWeight={fontWeight}>
+    <Text
+      w="100%"
+      fontSize={size}
+      color={color}
+      mb={mb}
+      mt={mt}
+      fontWeight={fontWeight}
+    >
       {children}
     </Text>
   );

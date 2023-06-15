@@ -29,6 +29,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -49,11 +50,11 @@ export default function chakra_basic_styling() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ In Chakra UI, there are two fundamental concepts you must
                 understand regarding spacing in layouts, which are padding and
                 margin.
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>

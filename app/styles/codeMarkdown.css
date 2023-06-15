@@ -2,11 +2,10 @@
 pre code.hljs {
     display: block !important;
     overflow-x: scroll !important;
-    padding: 1em !important;
 }
 
 code.hljs {
-    padding: 15px !important;
+    padding: 10px 15px 10px 15px !important;
         margin: 0 auto !important;
         margin-top: 5px !important;
         font-size: 12px !important;
@@ -16,16 +15,26 @@ code.hljs {
 }
 
 /* Font size for medium screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     code.hljs {
         font-size: 11px !important;
+        max-width: 500px !important;
     }
 }
 
 /* Font size for small screens */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     code.hljs {
         font-size: 11px !important;
+        max-width: 60ch !important;
+    }
+}
+
+/* Font size for small screens */
+@media (max-width: 468px) {
+    code.hljs {
+        font-size: 11px !important;
+                max-width: 46ch !important;
     }
 }
 

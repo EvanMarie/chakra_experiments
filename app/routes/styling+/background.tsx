@@ -1,4 +1,4 @@
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack, useColorModeValue } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -26,6 +26,8 @@ import {
   GridBoxTwo,
   GridBoxThree,
   SingleExample,
+  MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -41,7 +43,11 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-export default function chakra_section() {
+export default function ChakraSection() {
+  const bgGradient = useColorModeValue(
+    "linear(to-r, green.200, pink.500)",
+    "linear(to-r, green.700, pink.300)"
+  );
   return (
     <BigBackgroundBox>
       {/* ********************************************************************* */}
@@ -54,11 +60,11 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ Using background images in Chakra UI can be accomplished by
                 applying CSS properties directly on Chakra UI components. Here's
                 how you can set background images on Chakra UI components:
-              </BasicText>
+              </SectionDescription>
               <Flex w="100%" justifyContent="center">
                 <Box
                   bgImage="url('https://picsum.photos/300/150?random=1')"
@@ -66,6 +72,7 @@ export default function chakra_section() {
                   bgRepeat="no-repeat"
                   bgSize="cover"
                   w="90%"
+                  maxWidth="350px"
                   h="150px"
                   fontWeight="bold"
                   fontSize="xl"
@@ -77,7 +84,7 @@ export default function chakra_section() {
               </Flex>
 
               <Highlighter>{`<Box
-  bgImage="url('https://picsum.photos/200/300?random=1')"
+  bgImage="url('https://picsum.photos/200/300')"
   bgPosition="center"
   bgRepeat="no-repeat"
   bgSize="cover"
@@ -119,15 +126,15 @@ export default function chakra_section() {
                 using a typical React setup with Webpack, you can import the
                 image into your component file and use it like so:
               </BasicText>
-              <Highlighter>{`    <Box
-      bgImage={url({'./path-to-your-image.jpg'})}
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      bgSize="cover"
-      height="200px"
-    >
-      Content goes here
-    </Box>`}</Highlighter>
+              <Highlighter>{`<Box
+  bgImage={url({'./path-to-your-image.jpg'})}
+  bgPosition="center"
+  bgRepeat="no-repeat"
+  bgSize="cover"
+  height="200px"
+>
+  Content goes here
+</Box>`}</Highlighter>
               <DescriptionBox>
                 <BasicText>Some description</BasicText>
                 {/* IMPORT CODE */}
@@ -144,67 +151,132 @@ export default function chakra_section() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
+                <BasicText>Box with Background Image:</BasicText>
                 <Box>
-                  <BasicText>
-                    The Following is a Box with background properties:{" "}
-                  </BasicText>
-                  <Box paddingX={4} paddingBottom={4}>
+                  <Box
+                    backgroundImage="url('https://picsum.photos/200/300')"
+                    backgroundPosition="center"
+                    backgroundRepeat="no-repeat"
+                    backgroundSize="cover"
+                    height="200px"
+                  ></Box>{" "}
+                  <Box paddingBottom={4}>
                     <Highlighter>{`<Box backgroundImage="url('URL.png')"
   backgroundPosition="center"
   backgroundRepeat="no-repeat"
   backgroundSize="cover"
   h="200px">`}</Highlighter>
                   </Box>
-                  <FlexibleBox
-                    backgroundImage="url('https://picsum.photos/200/300')"
-                    backgroundPosition="center"
-                    backgroundRepeat="no-repeat"
-                    backgroundSize="cover"
-                    h="200px"
-                  ></FlexibleBox>
                 </Box>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <p>The Following is a the short hand version of the same: </p>
-
-                <Highlighter>{`bgImage="url('URL.png')"
-bgPosition="center" 
-bgRepeat="no-repeat"
-bgSize="cover"
-h="200px"`}</Highlighter>
-
-                <Box
-                  bgImage="url('https://picsum.photos/200/300')"
-                  bgPosition="center"
-                  bgRepeat="no-repeat"
-                  backgroundSize="cover"
-                  h="200px"
-                />
+                <BasicText>Same values with Chakra shorthand:</BasicText>
+                <Box>
+                  <Box
+                    bgImage="url('https://picsum.photos/200/300')"
+                    bgPosition="center"
+                    bgRepeat="no-repeat"
+                    bgSize="cover"
+                    height="200px"
+                  ></Box>{" "}
+                  <Box paddingBottom={4}>
+                    <Highlighter>{`<Box backgroundImage="url('URL.png')"
+  bgPosition="center"
+  bgRepeat="no-repeat"
+  bgSize="cover"
+  h="200px">`}</Highlighter>
+                  </Box>
+                </Box>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <p>Let's try some different values to see their effects: </p>
-
-                <Highlighter>{`h="300px"`}</Highlighter>
-                <Box
-                  bgImage="url('https://picsum.photos/200/300')"
-                  bgPosition="center"
-                  bgRepeat="no-repeat"
-                  backgroundSize="cover"
-                  h="300px"
-                />
+                <BasicText>
+                  Let's try some different values to see their effects:{" "}
+                </BasicText>
+                <Box>
+                  <Box
+                    bgImage="url('https://picsum.photos/200/300')"
+                    bgPosition="center"
+                    bgRepeat="no-repeat"
+                    bgSize="cover"
+                    height="300px"
+                  ></Box>{" "}
+                  <Box paddingBottom={4}>
+                    <Highlighter>{`<Box backgroundImage="url('URL.png')"
+  h="300px">`}</Highlighter>
+                  </Box>
+                </Box>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            Chakra UI allows you to add a fallback background color for your
+            background images. This is helpful to maintain the aesthetic of your
+            design in case the image fails to load. In the following example, if
+            the image fails to load, the <b>Box</b> component will display a
+            fallback background color (in this case, <b>teal.500</b>).
+            <MyFlex>
+              <Box
+                bgImage="url('https://www.wrongaddress.com')"
+                bg="teal.500"
+                height="200px"
+                width="200px"
+              />
+            </MyFlex>
+            <Highlighter>{`<Box
+  bgImage="url('https://www.wrongaddress.com')"
+  bg="teal.500"
+  height="200px"
+  width="200px"
+/>`}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Chakra UI provides a <b>bgRepeat</b> property which allows you to
+            control if and how a background image is repeated. You can specify
+            <b>no-repeat</b>, <b>repeat</b>, <b>repeat-x</b>, <b>repeat-y,</b>
+            or <b>round</b> as values. In this example, the image is used as a
+            background image for the <b>Box</b> component and is set not to
+            repeat.
+            <MyFlex>
+              <Box
+                bgImage="url('https://picsum.photos/200/200')"
+                bgRepeat="no-repeat"
+                height="200px"
+                width="200px"
+              />
+            </MyFlex>
+            <Highlighter>{`<Box
+  bgImage="url('https://picsum.photos/200/200')"
+  bgRepeat="no-repeat"
+  height="200px"
+  width="200px"
+/>`}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Tou can also use gradients as background images in Chakra UI. Using
+            the <b>linearGradient</b> or <b>radialGradient</b> utilities, you
+            can create smooth transitions between multiple colors.
+            <MyFlex>
+              {" "}
+              <Box bgGradient={bgGradient} height="200px" width="200px" />
+            </MyFlex>
+            <Highlighter>{`const bgGradient = useColorModeValue(
+  "linear(to-r, green.200, pink.500)",
+  "linear(to-r, green.700, pink.300)"
+)
+return (
+  <Box 
+    bgGradient={bgGradient}
+    height="200px"
+    width="200px"
+    />`}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
     </BigBackgroundBox>

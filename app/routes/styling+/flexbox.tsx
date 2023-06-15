@@ -34,6 +34,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -62,13 +63,13 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ Chakra UI, the Flex component is a Box component (the most
                 basic and versatile component in Chakra UI, a simple styled div)
                 with display: flex by default. This makes it easy to apply
                 common flexbox properties to layout your components. Here's a
                 rundown:
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>
@@ -325,46 +326,60 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            You can create equal height columns using Flexbox in Chakra UI. By
-            applying the flex={1} prop to each column, the available space is
-            distributed equally among them, resulting in columns with equal
-            height.
+            You can create equal height columns using <b>Flexbox</b> in Chakra
+            UI. By applying the <b>flex={1}</b> prop to each column, the
+            available space is distributed equally among them, resulting in
+            columns with equal height.
             <MyFlex>
               <Flex>
-                <Box flex={1} bg="red.200" p={4}>
+                <Box flex={1} bg="red.300" p={4}>
                   Column 1
                 </Box>
-                <Box flex={1} bg="blue.200" p={4}>
+                <Box flex={1} bg="blue.300" p={4}>
                   Column 2
                 </Box>
-                <Box flex={1} bg="green.200" p={4}>
+                <Box flex={1} bg="green.300" p={4}>
                   Column 3
                 </Box>
               </Flex>
             </MyFlex>
+            <Highlighter>{`<Flex>
+  <Box flex={1} bg="red.300" p={4}>
+    Column 1
+  </Box>
+  <Box flex={1} bg="blue.300" p={4}>
+    Column 2
+  </Box>
+  <Box flex={1} bg="green.300" p={4}>
+    Column 3
+  </Box>
+</Flex>`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
-            Flexbox in Chakra UI enables you to effortlessly create responsive
-            layouts using the Wrap component. The Wrap component utilizes the
-            power of Flexbox to wrap flex items onto multiple lines, ensuring a
-            visually appealing and responsive design. In this example, the Wrap
-            component leverages the power of Flexbox to create a responsive grid
-            or wrap elements within a container. The spacing={1} prop sets the
-            spacing between the wrapped items. Each WrapItem component
-            represents an individual item within the Wrap component. The
-            WrapItem ensures that each item is wrapped correctly and contributes
-            to the responsive behavior. Each item is a Box component with a
-            specified background color (bg) and dimensions (height and width).
-            Flexbox comes into play as the Wrap component arranges the items in
-            a row by default. However, when the available space is insufficient
-            to fit all the items in a single row, Flexbox automatically wraps
-            them onto the next line while maintaining their order. This ensures
-            that the items are displayed neatly in a responsive manner, adapting
-            to different screen sizes and orientations. By using Flexbox through
-            the Wrap component, Chakra UI simplifies the process of creating
-            responsive grids or wrapping elements within a container. This
-            flexibility enhances the overall responsiveness and aesthetics of
-            your UI.
+            <b>Flexbox</b> in Chakra UI enables you to effortlessly create
+            responsive layouts using the <b>Wrap</b> component. The <b>Wrap</b>
+            component utilizes the power of Flexbox to wrap flex items onto
+            multiple lines, ensuring a visually appealing and responsive design.
+            In this example, the <b>Wrap</b> component leverages the power of
+            <b>Flexbox</b> to create a responsive grid or wrap elements within a
+            container. <br />
+            The <b>spacing={1}</b> prop sets the spacing between the wrapped
+            items. Each <b>WrapItem</b> component represents an individual item
+            within the <b>Wrap</b> component. The <b>WrapItem</b> ensures that
+            each item is wrapped correctly and contributes to the responsive
+            behavior. Each item is a <b>Box</b> component with a specified
+            background color (<b>bg</b>) and dimensions (<b>height</b> and{" "}
+            <b>width</b>). <br />
+            <b>Flexbox</b> comes into play as the <b>Wrap</b> component arranges
+            the items in a row by default. However, when the available space is
+            insufficient to fit all the items in a single row, <b>Flexbox</b>{" "}
+            automatically wraps them onto the next line while maintaining their
+            order. This ensures that the items are displayed neatly in a
+            responsive manner, adapting to different screen sizes and
+            orientations. By using <b>Flexbox</b> through the <b>Wrap</b>{" "}
+            component, Chakra UI simplifies the process of creating responsive
+            grids or wrapping elements within a container. This flexibility
+            enhances the overall responsiveness and aesthetics of your UI.
             <MyFlex>
               <Wrap spacing={1}>
                 <WrapItem>
@@ -378,25 +393,47 @@ export default function chakra_section() {
                 </WrapItem>
               </Wrap>
             </MyFlex>
+            <Highlighter>{`<Wrap spacing={1}>
+  <WrapItem>
+    <Box bg="red.300" height="30px" width="220px" />
+  </WrapItem>
+  <WrapItem>
+    <Box bg="green.300" height="30px" width="220px" />
+  </WrapItem>
+  <WrapItem>
+    <Box bg="blue.300" height="30px" width="220px" />
+  </WrapItem>
+</Wrap>`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
-            Flexbox in Chakra UI allows you to achieve vertical center alignment
-            effortlessly. By using the align="center" prop on the Flex
-            container, the flex items are vertically centered within the
-            container, regardless of their individual heights.
+            <b>Flexbox</b> in Chakra UI allows you to achieve vertical center
+            alignment effortlessly. By using the <b>align="center"</b> prop on
+            the <b>Flex</b> container, the flex items are vertically centered
+            within the container, regardless of their individual heights.
             <MyFlex>
               <Flex height="80px" align="center">
-                <Box bg="blue.200" p={2}>
+                <Box bg="blue.300" p={2}>
                   Item 1
                 </Box>
-                <Box bg="green.200" p={2}>
+                <Box bg="green.300" p={2}>
                   Item 2
                 </Box>
-                <Box bg="red.200" p={2}>
+                <Box bg="red.300" p={2}>
                   Item 3
                 </Box>
               </Flex>
             </MyFlex>
+            <Highlighter>{`<Flex height="80px" align="center">
+  <Box bg="blue.300" p={2}>
+    Item 1
+  </Box>
+  <Box bg="green.300" p={2}>
+    Item 2
+  </Box>
+  <Box bg="red.300" p={2}>
+    Item 3
+  </Box>
+</Flex>`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

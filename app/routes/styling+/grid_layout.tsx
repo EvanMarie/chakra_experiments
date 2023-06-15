@@ -25,8 +25,10 @@ import {
   HighlightColumn,
   ImportBox,
   MainGrid,
+  MyFlex,
   MyLabel,
   SectionContainer,
+  SectionDescription,
   SingleExample,
 } from "~/styles/MainDesignComponents";
 
@@ -50,15 +52,15 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ Chakra UI provides a <Mono>Grid</Mono> component which is a
                 primitive component for all grid related CSS. It helps to create
                 flexible and responsive grid layouts. Here's a brief overview:
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Grid Template</HL>: <Mono>Grid</Mono> uses the
+                    <HL>Grid Template</HL>: <Mono>Grid</Mono> uses the{" "}
                     <Mono>templateColumns</Mono>, <Mono>templateRows</Mono>,{" "}
                     <Mono>templateAreas</Mono> props to create a grid template.
                   </li>
@@ -102,6 +104,12 @@ export default function chakra_section() {
                   <Mono>Grid</Mono> component, you can build most of the complex
                   and responsive grid layouts in a clean and straightforward
                   manner.
+                </BasicText>
+                <br />
+                <BasicText>
+                  Remember that these properties are part of CSS Grid Layout, so
+                  they have broad browser support. But, as always, test your
+                  designs in multiple browsers to ensure compatibility.
                 </BasicText>
                 {/* IMPORT CODE */}
                 <ImportBox>
@@ -356,9 +364,107 @@ return (
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
-          <GridBoxOne>Highlight coming soon!</GridBoxOne>
-          <GridBoxTwo>Highlight coming soon!</GridBoxTwo>
-          <GridBoxThree>Highlight coming soon!</GridBoxThree>
+          <GridBoxOne>
+            with Chakra UI's Grid component, you can create responsive layouts
+            using array-based syntax? It's not just about defining a fixed
+            number of columns or rows. You can define different numbers of
+            columns or rows based on the size of the viewport. This allows for
+            highly responsive designs with less code. <br />
+            In the following example, the Grid component has one column for
+            extra small screens, two for small screens, and three for medium and
+            larger screens.
+            <MyFlex>
+              <Grid
+                templateColumns={[
+                  "repeat(1, 1fr)",
+                  "repeat(2, 1fr)",
+                  "repeat(3, 1fr)",
+                ]}
+                gap={1}
+              >
+                <Box bg="blue.300" height="30px" p={1}>
+                  One
+                </Box>
+                <Box bg="blue.300" height="30px" p={1}>
+                  Two
+                </Box>
+                <Box bg="blue.300" height="30px" p={1}>
+                  Three
+                </Box>
+              </Grid>
+            </MyFlex>
+            <Highlighter>{`<Grid
+  templateColumns={[
+    "repeat(1, 1fr)",
+    "repeat(2, 1fr)",
+    "repeat(3, 1fr)",
+  ]}
+  gap={1}
+>
+  <Box bg="blue.300" height="30px" p={1}>One</Box>
+  <Box bg="blue.300" height="30px" p={1}>Two</Box>
+  <Box bg="blue.300" height="30px" p={1}>Three</Box>
+</Grid>`}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Chakra UI's Grid component uses CSS Grid Layout under the hood? This
+            means you have access to properties like grid-auto-flow, which lets
+            you control the direction in which items are placed in the grid. You
+            can create interesting and dynamic layouts that aren't limited to a
+            top-to-bottom, left-to-right flow.
+            <br />
+            In this example, the Grid component will first try to fill each
+            column before moving on to the next row.
+            <MyFlex>
+              <Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
+                <Box bg="red.300" h="60px" w="60px"></Box>
+                <Box bg="green.300" h="60px" w="60px"></Box>
+                <Box bg="blue.300" h="60px" w="60px"></Box>
+              </Grid>
+            </MyFlex>
+            <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
+  <Box bg="red.300" h="60px" w="60px"></Box>
+  <Box bg="green.300" h="60px" w="60px"></Box>
+  <Box bg="blue.300" h="60px" w="60px"></Box>
+</Grid>`}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Chakra UI's Grid component supports <b>auto-fit</b> and{" "}
+            <b>auto-fill</b>keywords? These are powerful tools for creating
+            flexible and responsive layouts that adapt to the content. For
+            instance, with <b>auto-fit</b>, the grid will create as many columns
+            as it can fit into the container and will expand the columns to fill
+            any leftover space when there are fewer items than columns.
+            <br />
+            In the following example, the <b>Grid</b> component will
+            automatically adjust the number of columns based on the minimum size
+            specified. If a new column cannot fit into the container, it's added
+            as a new row instead.
+            <MyFlex>
+              <Grid
+                templateColumns="repeat(auto-fit, minmax(100, 1fr))"
+                gap="2"
+              >
+                <Box bg="red.300" h="60px" p={2}>
+                  One
+                </Box>
+                <Box bg="green.300" h="60px" p={2}>
+                  Two
+                </Box>
+                <Box bg="blue.300" h="60px" p={2}>
+                  Three
+                </Box>
+              </Grid>
+            </MyFlex>
+            <Highlighter>{`<Grid
+  templateColumns="repeat(auto-fit, minmax(100, 1fr))"
+  gap="2"
+>
+  <Box bg="red.300" h="60px" p={2}>One</Box>
+  <Box bg="green.300" h="60px" p={2}>Two</Box>
+  <Box bg="blue.300" h="60px" p={2}>Three</Box>
+</Grid>`}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
     </BigBackgroundBox>

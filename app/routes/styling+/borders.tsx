@@ -25,6 +25,8 @@ import {
   GridBoxTwo,
   HighlightColumn,
   SingleExample,
+  MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -52,11 +54,11 @@ export default function chakra_section() {
           {/*  Section Introduction */}
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
-            <BasicText color={colors.mainAccent3}>
+            <SectionDescription>
               ⦾ Chakra UI makes it easy to style elements with borders, offering
               a flexible, prop-based interface for defining the style, width,
               and color of borders.
-            </BasicText>
+            </SectionDescription>
             <BulletBox>
               <BasicText>
                 The primary properties for controlling borders in Chakra UI are:
@@ -184,8 +186,24 @@ export default function chakra_section() {
             component different borders by specifying <b>borderTop</b>,{" "}
             <b>borderRight</b>, <b>borderBottom</b>, and <b>borderLeft</b>{" "}
             separately. For example,{" "}
-            <Highlighter>{`<Box borderTop="2px solid red.500" 
-  borderBottom="1px dashed blue.500">`}</Highlighter>
+            <MyFlex>
+              <Box
+                w="150px"
+                p={2}
+                borderTop="2px solid red"
+                borderBottom="2px dashed blue"
+                bg="white"
+              >
+                I am a Box.
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Box
+  w="150px"
+  p={2}
+  borderTop="2px solid red"
+  borderBottom="2px dashed blue"
+  bg="white"
+  >`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Transparent Borders</b>: Chakra UI allows you to create
@@ -193,15 +211,41 @@ export default function chakra_section() {
             <b>borderColor</b> to transparent. This can be useful when you want
             an element to maintain the same layout even when its border is
             invisible.
+            <MyFlex>
+              <Box
+                border="2px solid transparent"
+                borderColor="transparent"
+                borderRadius="md"
+                bg="white"
+                p={4}
+              >
+                I am a box with a transparent border.
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Box
+  border="2px solid transparent"
+  borderColor="transparent"/>`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Responsive Borders</b>: Chakra UI allows you to define responsive
             border styles. This means you can specify different border styles
             for different viewport sizes. You can do this by providing an array
-            of values to the border properties. For example,{" "}
+            of values to the border properties. For example, the following sets
+            a <b>1px border</b> on the smallest viewports, <b>2px</b> on
+            medium-sized viewports, and <b>3px</b> on the largest viewports.
+            <MyFlex>
+              <Box
+                borderWidth={["1px", "2px", "3px"]}
+                p={2}
+                bg="red"
+                color="white"
+                borderColor="black"
+              >
+                {" "}
+                My name is Boxanne.
+              </Box>
+            </MyFlex>
             <Highlighter>{`<Box borderWidth={["1px", "2px", "3px"]}>`}</Highlighter>{" "}
-            would set a <b>1px border</b> on the smallest viewports, <b>2px</b>{" "}
-            on medium-sized viewports, and <b>3px</b> on the largest viewports.
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

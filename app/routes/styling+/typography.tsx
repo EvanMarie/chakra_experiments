@@ -29,6 +29,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -57,10 +58,10 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ Typography in Chakra UI is highly customizable and flexible.
                 Here's a rundown of the main features:
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>
@@ -276,12 +277,7 @@ export default function chakra_section() {
             helps create more breathing space between lines, enhancing
             readability.
             <MyFlex>
-              <Flex
-                w="300px"
-                p={2}
-                justifyContent="center"
-                bg={colors.mainAccent2}
-              >
+              <Flex p={2} justifyContent="center" bg={colors.mainAccent2}>
                 <Text lineHeight="1.5">
                   This text has an increased line height for improved
                   readability.

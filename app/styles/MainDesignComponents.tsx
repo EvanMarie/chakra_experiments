@@ -124,7 +124,7 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
 
 export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   return (
-    <GridItem p="7px" height="100%">
+    <GridItem p="7px" height="100%" overflow-x="hidden">
       <Box height="100%" width="100%" overflow-x="hidden">
         <Box bg={colors.myblue} p={3} borderRadius="sm" height="100%">
           <VStack width="100%" justify="left" align="center" {...rest}>
@@ -268,48 +268,52 @@ export function MyLabel({
 }: MyLabelProps) {
   if (link === "") {
     return (
-      <Flex overflow-x="hidden" direction="column">
-        <Flex justifyContent="space-between" overflow-x="hidden">
-          <Text
-            fontSize={["18px", "30px", size]}
-            color={labelColor}
-            fontWeight="bold"
-            lineHeight="2em"
-          >
-            {children}
-          </Text>
-        </Flex>
+      <VStack>
+        <Text
+          fontSize={["18px", "30px", size]}
+          color={labelColor}
+          fontWeight="bold"
+          lineHeight="2em"
+        >
+          {children}
+        </Text>
+
         <MyDivider mt={2} mb={2} />
-      </Flex>
+      </VStack>
     );
   } else {
     return (
       <Flex overflow-x="hidden" direction="column">
-        <Flex justifyContent="space-between" paddingX={3} overflow-x="hidden">
-          <Text
-            fontSize={["18px", "24px", size]}
-            color={labelColor}
-            fontWeight="bold"
+        <Flex w="100%" justifyContent="center">
+          <Flex
+            w="60%"
+            paddingLeft={2}
+            overflow-x="hidden"
+            justifyContent="flex-end"
           >
-            {children}
-          </Text>
-          <HStack
-            w="300px"
-            spacing={3}
-            alignItems="center"
-            justifyContent="right"
-          >
-            <Text fontSize="28px">|</Text>
-            <CustomLink
-              href={link}
-              target="_blank"
-              fontSize={["sm", "md", size - 12]}
-              color={colors.linkColor}
+            <Text
+              w="100%"
+              fontSize={["18px", "24px", size]}
+              color={labelColor}
+              fontWeight="bold"
             >
-              Chakra Docs
-            </CustomLink>
-            <Text fontSize="28px">|</Text>
-          </HStack>
+              {children}
+            </Text>
+          </Flex>
+          <Flex w="40%" justifyContent="flex-end" paddingRight={2}>
+            <HStack spacing={3} alignItems="center" justifyContent="right">
+              <Text fontSize="28px">|</Text>
+              <CustomLink
+                href={link}
+                target="_blank"
+                fontSize={["sm", "md", size - 12]}
+                color={colors.linkColor}
+              >
+                Chakra Docs
+              </CustomLink>
+              <Text fontSize="28px">|</Text>
+            </HStack>
+          </Flex>
         </Flex>
         <MyDivider mt={2} mb={2} />
       </Flex>
@@ -535,7 +539,7 @@ interface SingleExampleProps extends BoxProps {
 
 export function SingleExample({ children }: SingleExampleProps) {
   return (
-    <VStack w="100%" spacing={3}>
+    <VStack w="100%" spacing={2}>
       {children}
     </VStack>
   );

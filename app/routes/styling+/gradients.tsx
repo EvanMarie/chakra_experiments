@@ -26,6 +26,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -54,11 +55,11 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ Chakra UI supports CSS gradients right out of the box. You can
                 use CSS gradient values directly, or leverage the theme's color
                 palette to create consistent and beautiful gradient effects.
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>
@@ -197,7 +198,7 @@ gradients: {
           <GridBoxTwo>
             <b>Animating Gradients</b>: While Chakra UI does not have built-in
             gradient animation functionality, you can leverage the power of{" "}
-            <b>@keyframes</b> and CSS-in-JS to create beautiful gradient
+            <b>@keyframes</b> and <b>CSS-in-JS</b> to create beautiful gradient
             animations.
             <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
             <Highlighter>{`import { keyframes } from "@emotion/react";

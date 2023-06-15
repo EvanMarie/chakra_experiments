@@ -26,6 +26,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -54,13 +55,13 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <SectionDescription>
                 ⦾ In Chakra UI, the design and styling of components are very
                 flexible. You can control the color of your components (both
                 background and text color) in a variety of ways. Chakra UI has a
                 built-in theme object to specify color, and you can access color
                 scales to apply a consistent design across your application.
-              </BasicText>
+              </SectionDescription>
               <BulletBox>
                 <ul>
                   <li>

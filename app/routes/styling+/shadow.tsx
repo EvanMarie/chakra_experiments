@@ -18,6 +18,8 @@ import {
   GridBoxTwo,
   HighlightColumn,
   SingleExample,
+  MyFlex,
+  SectionDescription,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -37,35 +39,82 @@ export default function chakra_section() {
   return (
     <BigBackgroundBox>
       {/* ********************************************************************* */}
-      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#borders">
-        Name
+      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props#shadow">
+        Shadow
       </MyLabel>
       <MainGrid>
         <GridColumn>
           {/*  Section Introduction */}
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
-            <BasicText color={colors.mainAccent3}>Intro</BasicText>
+            <SectionDescription>
+              ⦾ Chakra UI provides several utilities for working with box
+              shadows. The main prop for shadows is boxShadow, which can be used
+              to add a shadow to a box. Chakra UI comes with some predefined
+              shadows that you can use.
+            </SectionDescription>
+            <BasicText>
+              Chakra UI defines its shadows using CSS box-shadow property. This
+              property describes offsets, blur radius, spread radius, color, and
+              inset of shadows around the box's frame. Below is a brief overview
+              of the built-in shadows provided by Chakra UI:
+            </BasicText>
             <BulletBox>
-              <BasicText>Describe the Bullets:</BasicText>
               <ul>
                 <li>
-                  <HL></HL>:
+                  <HL>sm</HL>: "0 1px 2px 0 rgba(0, 0, 0, 0.05)" - This is a
+                  small shadow, it applies a shadow effect that is slight and
+                  does not protrude much from the box frame. It's good for
+                  subtle highlights and low depth elements.
                 </li>
                 <li>
-                  <HL></HL>:
+                  <HL>md</HL>: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px
+                  -1px rgba(0, 0, 0, 0.06)" - This is a medium shadow, it
+                  applies a more pronounced shadow than sm. It's good for medium
+                  depth elements and for creating a feeling of elevation.
                 </li>
                 <li>
-                  <HL></HL>:
+                  <HL>lg</HL>: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px
+                  -2px rgba(0, 0, 0, 0.05)" This is a large shadow. It applies
+                  an even more pronounced shadow than md. It's good for higher
+                  depth elements and for creating a stronger feeling of
+                  elevation.
                 </li>
                 <li>
-                  <HL></HL>:
+                  <HL>xl</HL>: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px
+                  -5px rgba(0, 0, 0, 0.04)" This is an extra-large shadow. It
+                  applies a very pronounced shadow. It's good for very high
+                  depth elements and for creating a strong feeling of elevation
+                  or focus.
+                </li>
+                <li>
+                  <HL>2xl</HL>: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" This is
+                  an extra-extra-large shadow. It applies an extremely
+                  pronounced shadow, and it's best for elements that need a
+                  significant amount of depth or focus.
+                </li>
+                <li>
+                  <HL>outline</HL>: "0 0 0 3px rgba(66, 153, 225, 0.6)" This is
+                  an outline shadow. It's best used to draw attention to a
+                  particular element, like for highlighting focus on an input or
+                  button.
+                </li>
+                <li>
+                  <HL>inner</HL>: "inset 0 2px 4px 0 rgba(0,0,0,0.06)" This is
+                  an inner shadow. It's applied inside the box borders and is
+                  good for making elements appear as if they're being pressed
+                  down or have an inner depth.
                 </li>
               </ul>
             </BulletBox>
+
             <DescriptionBox>
-              <BasicText>Some Description</BasicText>
-              <Highlighter>{`Some Example`}</Highlighter>
+              <BasicText>
+                As always with CSS, the best way to understand how these shadows
+                affect the visual appearance is to apply them and see how they
+                look. This will give you an intuitive sense of how they can be
+                used effectively in your design.
+              </BasicText>
 
               {/* IMPORT CODE */}
               <ImportBox>
@@ -99,9 +148,19 @@ export default function chakra_section() {
         </GridColumn>
 
         <HighlightColumn>
-          <GridBoxOne>Tip</GridBoxOne>
-          <GridBoxTwo>Tip</GridBoxTwo>
-          <GridBoxThree>Tip</GridBoxThree>
+          <GridBoxOne>
+            Highlight coming soon!
+            <MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxOne>
+          <GridBoxTwo>
+            Highlight coming soon!<MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxTwo>
+          <GridBoxThree>
+            Highlight coming soon!<MyFlex></MyFlex>
+            <Highlighter>{``}</Highlighter>
+          </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
 
