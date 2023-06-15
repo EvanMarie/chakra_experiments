@@ -153,7 +153,7 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box bg={colors.mainText} p={2} mb={2}>
+                <Box bg={"mainText"} p={2} mb={2}>
                   <Grid templateColumns="repeat(3, 1fr)" gap={1}>
                     <Box p={4} boxShadow="xl" bg={colors.mypurple}>
                       <Text fontSize="md" fontWeight="bold">

@@ -261,7 +261,7 @@ export default function chakra_section() {
           <GridBoxTwo>
             <b>Text Alignment</b>: Chakra UI provides the <b>textAlign</b> prop
             to control the alignment of text within a component.
-            <MyFlex bg={colors.mainAccent}>
+            <MyFlex bg={"accent_1"}>
               <Text textAlign="center">
                 This text is centered within its container.
               </Text>
@@ -277,7 +277,7 @@ export default function chakra_section() {
             helps create more breathing space between lines, enhancing
             readability.
             <MyFlex>
-              <Flex p={2} justifyContent="center" bg={colors.mainAccent2}>
+              <Flex p={2} justifyContent="center" bg={"accent_2"}>
                 <Text lineHeight="1.5">
                   This text has an increased line height for improved
                   readability.

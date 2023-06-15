@@ -57,7 +57,7 @@ export const AccordionMain = ({
                 {label}
               </Box>
             </Link>
-            <AccordionIcon boxSize={4} color={colors.mainAccent2} />
+            <AccordionIcon boxSize={4} color={"accent_2"} />
           </HStack>
         </AccordionButton>
       </Box>

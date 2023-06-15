@@ -162,7 +162,7 @@ export default function chakra_section() {
                   <Box
                     display={{ base: "none", md: "block" }}
                     bg={colors.mypurple}
-                    color={colors.mainText}
+                    color={"mainText"}
                     padding={3}
                   >
                     <Mono>base: "none", md: "block" </Mono>configuration sets
@@ -186,7 +186,7 @@ export default function chakra_section() {
                 <FlexibleBox
                   display={{ base: "block", md: "none" }}
                   bg={colors.mypurple}
-                  color={colors.mainText}
+                  color={"mainText"}
                 >
                   <Mono>base: "block", md: "none"</Mono> - hide the element from
                   'md' up
@@ -199,7 +199,7 @@ export default function chakra_section() {
                 <FlexibleBox
                   hideFrom="md"
                   bg={colors.mypurple}
-                  color={colors.mainText}
+                  color={"mainText"}
                 >
                   This box complete disappears at sizes of medium and higher.
                 </FlexibleBox>
@@ -249,7 +249,7 @@ export default function chakra_section() {
                   <Box p={2} bg={colors.mypurple}>
                     This is a grid item
                   </Box>
-                  <Box p={2} bg={colors.mainAccent} color="black">
+                  <Box p={2} bg={"accent_1"} color="black">
                     This is another grid item
                   </Box>
                 </Grid>

@@ -70,7 +70,7 @@ export default function chakra_feedback() {
 
       <SectionContainer>
         <Box mb={3}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             Feedback components in Chakra UI are primarily designed to provide
             visual cues to users indicating the status or result of certain
             actions or processes. They are fundamental in building interactive
@@ -79,7 +79,7 @@ export default function chakra_feedback() {
             enhancing usability and the overall user experience.{" "}
           </BasicText>
         </Box>
-        <FlexibleBox bg={colors.myblue} p={4}>
+        <FlexibleBox bg={"darkAccent_3"} p={4}>
           <BasicText>
             Loading components like <Mono>Spinners</Mono>, <Mono>Progress</Mono>
             , <Mono>Circular Progress</Mono>, and <Mono>Skeletons</Mono> serve
@@ -175,7 +175,7 @@ export default function chakra_feedback() {
       <Box p={3}>
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The <Mono>Alert</Mono> component in Chakra UI is a highly
             customizable and accessible way to provide feedback to users based
             on their interactions or to display system statuses. This component
@@ -263,7 +263,7 @@ export default function chakra_feedback() {
 
       <Box p={3}>
         <SectionContainer>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The <Mono>Circular Progress</Mono> component in Chakra UI is used
             to indicate the status of an ongoing process where the percentage of
             completion is known. It's an effective visual feedback mechanism for
@@ -314,7 +314,7 @@ export default function chakra_feedback() {
               <Highlighter>{`import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";`}</Highlighter>
             </SectionContainer>
           </Box>
-          <ExampleContainer bg={colors.mainAccent4}>
+          <ExampleContainer bg={"darkAccent_2"}>
             <VStack spacing={2} align="center" overflow="hidden">
               <CompWithLabel fontSize={15} split="30% 70%">
                 {[
@@ -400,7 +400,7 @@ export default function chakra_feedback() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The <Mono>Progress</Mono> component in Chakra UI is used to
             represent the completion progress of a task or operation. Similar to
             the <Mono>Circular Progress</Mono> component, it's an effective way
@@ -439,7 +439,7 @@ export default function chakra_feedback() {
             </SectionContainer>
           </Box>
           <Flex p={3} justifyContent="center" alignItems="center" w="100%">
-            <VStack spacing={3} width="100%" bg={colors.mainAccent4}>
+            <VStack spacing={3} width="100%" bg={"darkAccent_2"}>
               <StackedExample>
                 <Highlighter>{`<Progress value={80} />`}</Highlighter>
                 <Progress value={80} w="400px" />
@@ -499,7 +499,7 @@ export default function chakra_feedback() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The <Mono>Skeleton</Mono> component in Chakra UI is a content
             placeholder used to suggest that content is loading. They provide a
             low fidelity representation of the content that is loading and are
@@ -616,7 +616,7 @@ export default function chakra_feedback() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The <HL>Spinners</HL> component in Chakra UI is a feedback
             indicator mainly used for visualizing an unspecified wait time where
             the length of the task is unknown.{" "}
@@ -651,7 +651,7 @@ export default function chakra_feedback() {
               <Highlighter>{`import { Spinner } from '@chakra-ui/react'`}</Highlighter>
             </SectionContainer>
           </Box>
-          <Flex bg={colors.mainAccent4} paddingX={10}>
+          <Flex bg={"darkAccent_2"} paddingX={10}>
             <VStack spacing={5} align="center" w="100%" marginY={5}>
               <CompWithLabel>
                 {[
@@ -741,7 +741,7 @@ export default function chakra_feedback() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ In web design, a toast is a small, non-modal notification popup
             that appears on the screen to provide brief information or alerts to
             the user. It is typically displayed as a small rectangular box

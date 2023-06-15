@@ -48,7 +48,7 @@ export function Experiment({ children }: ExampleProps) {
       p={4}
       margin={4}
       w="100%"
-      bg={colors.mainAccent2}
+      bg={"accent_2"}
       justifyContent="center"
       alignItems="left"
       borderRadius="sm"

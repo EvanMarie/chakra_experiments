@@ -14,13 +14,13 @@ function FadeDurationSkeleton() {
       textAlign="center"
       fontSize="18px"
     >
-      <Skeleton height="40px" isLoaded={isLoaded} bg={colors.mainAccent}>
+      <Skeleton height="40px" isLoaded={isLoaded} bg={"accent_1"}>
         <Box>I hope</Box>
       </Skeleton>
       <Skeleton
         height="40px"
         isLoaded={isLoaded}
-        bg={colors.mainAccent2}
+        bg={"accent_2"}
         fadeDuration={1}
       >
         <Box>that you</Box>
@@ -29,7 +29,7 @@ function FadeDurationSkeleton() {
         height="40px"
         isLoaded={isLoaded}
         fadeDuration={4}
-        bg={colors.mainAccent3}
+        bg={"accent_3"}
       >
         <Box>have a great day!</Box>
       </Skeleton>

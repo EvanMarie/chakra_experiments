@@ -36,7 +36,7 @@ export default function chakra_overlay() {
     <BigBackgroundBox>
       <VStack></VStack>
       <SectionContainer>
-        <BasicText color={colors.mainAccent3}>
+        <BasicText color={"accent_3"}>
           Overlay components in Chakra UI are used to create elements that float
           above the main application content. They are useful for displaying
           additional information or interactive content without navigating away
@@ -44,7 +44,7 @@ export default function chakra_overlay() {
           intuitive and engaging user experience, as they allow users to stay in
           their current workflow while accessing extra features or information.
         </BasicText>
-        <FlexibleBox bg={colors.myblue} p={4}>
+        <FlexibleBox bg={"darkAccent_3"} p={4}>
           <Box>
             <BasicText>Here's an overview of each component:</BasicText>
           </Box>
@@ -117,7 +117,7 @@ export default function chakra_overlay() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer marginY={0}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The Alert Dialog is a component that allows you to display a
             dialog box with a <Mono>title</Mono>, <Mono>description</Mono>, and{" "}
             <Mono>action</Mono> buttons. It is commonly used to confirm or
@@ -245,7 +245,7 @@ export default function chakra_overlay() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2} mb={0}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The Chakra UI Drawer component is a versatile component that
             provides a slide-in panel that can be used for various purposes such
             as displaying menus, sidebars, or modal-like content. It is commonly
@@ -344,7 +344,7 @@ export default function chakra_overlay() {
 //         {/*  Section Introduction */}
 //         {/* COMPONENT DESCRIPTION */}
 //         <SectionContainer paddingBottom={2} mb={0}>
-//           <BasicText color={colors.mainAccent3}>
+//           <BasicText color={"accent_3"}>
 //             ⦾ Some statement about this component
 //           </BasicText>
 //           <Box paddingX={7} paddingY={3}>
@@ -404,7 +404,7 @@ export default function chakra_overlay() {
 //         {/*  Section Introduction */}
 //         {/* COMPONENT DESCRIPTION */}
 //         <SectionContainer paddingBottom={2} mb={0} mb={0}>
-//           <BasicText color={colors.mainAccent3}>
+//           <BasicText color={"accent_3"}>
 //             ⦾ Some statement about this component
 //           </BasicText>
 //           <Box paddingX={7} paddingY={3}>

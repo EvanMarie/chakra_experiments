@@ -24,7 +24,7 @@ const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  mainAccent3: "#05fce8",
+  "accent_3": "#05fce8",
   mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
   myblue: "#0c2b45",
@@ -44,7 +44,7 @@ export const SectionHeadingSize = "23px";
 const CustomLink = chakra(Link, {
   baseStyle: {
     _hover: {
-      color: colors.mainAccent3,
+      color: "accent_3",
       textDecoration: "underline",
     },
   },
@@ -62,7 +62,7 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       w={MainWidth}
       maxWidth={MainMaxWidth}
       bg={colors.mainBackground}
-      color={colors.mainText}
+      color={"mainText"}
       justifyContent={"center"}
       alignItems={"center"}
       overflow-x="hidden"
@@ -126,11 +126,11 @@ export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   return (
     <GridItem p="7px" height="100%" overflow-x="hidden">
       <Box height="100%" width="100%" overflow-x="hidden">
-        <Box bg={colors.myblue} p={3} borderRadius="sm" height="100%">
+        <Box bg={"darkAccent_3"} p={3} borderRadius="sm" height="100%">
           <VStack width="100%" justify="left" align="center" {...rest}>
             <Flex>
               <HStack>
-                <RiBookmark3Line size="25px" color={colors.mainAccent3} />
+                <RiBookmark3Line size="25px" color={"accent_3"} />
                 <Text fontWeight="bold" fontSize="20px">
                   Did you know?
                 </Text>
@@ -170,8 +170,8 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
   return (
     <Box
       {...GridBoxDefaults}
-      bg={colors.mainAccent}
-      color={colors.secondaryText}
+      bg={"accent_1"}
+      color={"darkText"}
       fontSize={SmallTextSize}
     >
       <HStack>
@@ -200,8 +200,8 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
   return (
     <Box
       {...GridBoxDefaults}
-      bg={colors.mainAccent2}
-      color={colors.secondaryText}
+      bg={"accent_2"}
+      color={"darkText"}
       fontSize={SmallTextSize}
     >
       <HStack>
@@ -231,8 +231,8 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
   return (
     <Box
       {...GridBoxDefaults}
-      bg={colors.mainAccent3}
-      color={colors.secondaryText}
+      bg={"accent_3"}
+      color={"darkText"}
       fontSize={SmallTextSize}
     >
       <HStack>
@@ -262,7 +262,7 @@ interface MyLabelProps {
 
 export function MyLabel({
   size = 33,
-  labelColor = colors.mainAccent,
+  labelColor = "accent_1",
   link = "",
   children,
 }: MyLabelProps) {
@@ -400,7 +400,7 @@ export function SectionContainer({
     paddingY: 3,
     paddingX: 5,
     marginBottom: 0,
-    bg: colors.sectionColor,
+    bg: "sectionColor",
     justifyContent: "center",
     alignItems: "left",
     borderRadius: "sm",
@@ -435,7 +435,7 @@ export function ExampleBox({
 }: ExampleBoxProps) {
   return (
     <Box paddingX={paddingX} paddingY={paddingY} w={width} overflow-x="hidden">
-      <BasicText color={colors.mainAccent2} size={SectionHeadingSize} mt={3}>
+      <BasicText color={"accent_2"} size={SectionHeadingSize} mt={3}>
         <b>
           <i>Examples</i>
         </b>
@@ -463,7 +463,7 @@ export function SectionHeading({
   size = SectionHeadingSize,
   mb = 3,
   mt = 0,
-  color = colors.mainAccent2,
+  color = "accent_2",
 }: SectionHeadingProps) {
   return (
     <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
@@ -485,7 +485,7 @@ export function SectionDescription({
   children,
   mb = 1,
   mt = 1,
-  color = colors.mainAccent3,
+  color = "accent_3",
 }: SectionDescriptionProps) {
   return (
     //size={size}
@@ -510,7 +510,7 @@ export function ExampleContainer({
   const defaultFlexProps = {
     p: 4,
     w: "100%",
-    bg: colors.mainAccent2,
+    bg: "accent_2",
     justifyContent: "center",
     alignItems: "left",
     borderRadius: "sm",

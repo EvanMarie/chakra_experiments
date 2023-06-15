@@ -157,7 +157,7 @@ export default function chakra_section() {
                     boxShadow="xs"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="xs"</Highlighter>
                   </Box>
@@ -166,7 +166,7 @@ export default function chakra_section() {
                     boxShadow="sm"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="sm"</Highlighter>
                   </Box>
@@ -175,7 +175,7 @@ export default function chakra_section() {
                     boxShadow="base"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="base"</Highlighter>
                   </Box>
@@ -184,7 +184,7 @@ export default function chakra_section() {
                     boxShadow="md"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="md"</Highlighter>
                   </Box>
@@ -193,7 +193,7 @@ export default function chakra_section() {
                     boxShadow="lg"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="lg"</Highlighter>
                   </Box>
@@ -202,7 +202,7 @@ export default function chakra_section() {
                     boxShadow="xl"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="xl"</Highlighter>
                   </Box>
@@ -211,7 +211,7 @@ export default function chakra_section() {
                     boxShadow="2xl"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="2xl"</Highlighter>
                   </Box>
@@ -220,7 +220,7 @@ export default function chakra_section() {
                     boxShadow="dark-lg"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="dark-lg"</Highlighter>
                   </Box>
@@ -229,7 +229,7 @@ export default function chakra_section() {
                     boxShadow="outline"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="outline"</Highlighter>
                   </Box>
@@ -238,7 +238,7 @@ export default function chakra_section() {
                     boxShadow="inner"
                     p={2}
                     rounded="sm"
-                    bg={colors.mainAccent3}
+                    bg={"darkAccent_3"}
                   >
                     <Highlighter>boxShadow="inner"</Highlighter>
                   </Box>

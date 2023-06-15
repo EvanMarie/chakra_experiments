@@ -64,7 +64,7 @@ export default function chakra_section() {
             {/*  Section Introduction */}
             {/* COMPONENT DESCRIPTION */}
             <SectionContainer paddingBottom={2} mb={0}>
-              <BasicText color={colors.mainAccent3}>
+              <BasicText color={"accent_3"}>
                 ⦾ In Chakra UI, controlling the dimensions of a component, i.e.,
                 its width and height, is straightforward. Chakra provides
                 utility props to adjust these dimensions as per your needs. Here
