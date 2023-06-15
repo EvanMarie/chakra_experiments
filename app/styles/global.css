@@ -2,18 +2,24 @@
 html, body {
 background-color: #211421;
 scroll-behavior: smooth;
+font-size: 0.93rem;
 }
 
 li, ul, ol, p, a {
-    margin-bottom: 0.25rem;
     line-height: 1.5rem;
-    font-size: 16px;
+}
+
+li, p {
+        margin-bottom: 0.8rem;
 }
 
 ul {
     list-style-type: circle;
 }
 
+li::marker {
+    color: #f7e6c1;
+}
 
 a {
     color: deeppink;
@@ -24,10 +30,42 @@ a:hover {
     color: cyan;
 }
 
-li::marker {
-    color: #f7e6c1;
-}
+
 
 .grid {
     overflow:auto;
+}
+
+
+/* Media query for small screens */
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 0.97rem;
+
+    }
+}
+
+
+/* Media query for medium screens */
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 1rem;
+ 
+    }
+}
+
+/* Media query for even large screens */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.11rem;
+     
+    }
+}
+
+/* Media query for even extra large screens */
+@media screen and (min-width: 1280px) {
+    body {
+        font-size: 1.11rem;
+
+    }
 }

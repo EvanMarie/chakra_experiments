@@ -14,7 +14,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
-import { BasicTextSize } from "./MainDesignComponents";
+// import { BasicTextSize } from "./MainDesignComponents";
 
 export const colors = {
   mainBackground: "#211421",
@@ -99,7 +99,6 @@ interface BasicTextProps extends TextProps {
 }
 
 export function BasicText({
-  size = BasicTextSize,
   color = colors.mainText,
   fontWeight = "normal",
   mb = 1,
@@ -107,14 +106,7 @@ export function BasicText({
   children,
 }: BasicTextProps) {
   return (
-    <Text
-      w="100%"
-      fontSize={size}
-      color={color}
-      mb={mb}
-      mt={mt}
-      fontWeight={fontWeight}
-    >
+    <Text w="100%" color={color} mb={mb} mt={mt} fontWeight={fontWeight}>
       {children}
     </Text>
   );
@@ -150,7 +142,6 @@ interface CompWithLabelProps {
 }
 export function CompWithLabel({
   children,
-  fontSize = BasicTextSize,
   split = "40% 60%",
   leftColAlign = "center",
   rightColAlign = "left",
@@ -168,7 +159,6 @@ export function CompWithLabel({
         </Flex>
         <Flex
           w="100%"
-          fontSize={fontSize}
           overflow="scroll"
           justifyContent={rightColAlign}
           alignItems={"center"}
@@ -222,11 +212,10 @@ interface HighlightMeProps {
 export function HL({
   children,
   color = colors.highlighterColor,
-  size = "16px",
   fontWeight = "bold",
 }: HighlightMeProps) {
   return (
-    <Text as="span" color={color} fontSize={size} fontWeight={fontWeight}>
+    <Text as="span" color={color} fontWeight={fontWeight}>
       {children}
     </Text>
   );
@@ -243,7 +232,6 @@ interface MonoProps {
 
 export function Mono({
   children,
-  fontSize = BasicTextSize,
   width = "100%",
   marginY = 0,
   lineHeight = "1",
@@ -255,7 +243,6 @@ export function Mono({
     marginY: `${marginY} !important`,
     lineheight: `${lineHeight} !important`,
     color: colors.codeText,
-    fontSize: `${fontSize} !important`,
     width: `${width} !important`,
   };
   return <span style={monoStyle}>{children}</span>;
@@ -276,7 +263,6 @@ export function StackedExample({
 }: StackedExampleProps) {
   const defaultFlexProps = {
     p: 3,
-    fontSize: BasicTextSize,
     w: "100%",
     bg: undefined,
     justifyContent: "center",

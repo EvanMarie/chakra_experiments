@@ -10,8 +10,8 @@ import {
 import { colors } from "~/styles/DesignComponents";
 import { Link } from "@remix-run/react";
 
-const fontSizeMain = "18px";
-const fontSizeSub = "15px";
+const fontSizeMain = "20px";
+const fontSizeSub = "17px";
 
 // Scoot text to right
 const navHoverMain = {

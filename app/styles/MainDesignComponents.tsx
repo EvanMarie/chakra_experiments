@@ -36,7 +36,7 @@ const colors = {
   linkColor: "deeppink",
 };
 
-export const BasicTextSize = "16px";
+// export const BasicTextSize = "16px";
 export const MainWidth = "100%";
 export const MainMaxWidth = "1000px";
 export const SectionHeadingSize = "23px";
@@ -399,7 +399,6 @@ export function SectionContainer({
   const defaultFlexProps = {
     paddingY: 3,
     paddingX: 5,
-    fontSize: BasicTextSize,
     marginBottom: 0,
     bg: colors.sectionColor,
     justifyContent: "center",
@@ -484,13 +483,13 @@ interface SectionDescriptionProps {
 
 export function SectionDescription({
   children,
-  size = BasicTextSize,
   mb = 1,
   mt = 1,
   color = colors.mainAccent3,
 }: SectionDescriptionProps) {
   return (
-    <BasicText size={size} color={color} mb={mb} mt={mt}>
+    //size={size}
+    <BasicText color={color} mb={mb} mt={mt}>
       {children}
     </BasicText>
   );
@@ -510,7 +509,6 @@ export function ExampleContainer({
 }: ExamplenContainerProps) {
   const defaultFlexProps = {
     p: 4,
-    fontSize: BasicTextSize,
     w: "100%",
     bg: colors.mainAccent2,
     justifyContent: "center",

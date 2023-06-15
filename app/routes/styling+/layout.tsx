@@ -306,7 +306,7 @@ export default function chakra_section() {
             This is useful for creating responsive grids or wrapping items in a
             container when they exceed the container's width. In this example,
             the <b>Wrap</b> component is used to wrap the <b>WrapItem</b>
-            components onto multiple lines based on the available space. The
+            components onto multiple lines based on the available space. The{" "}
             <b>spacing</b> prop defines the gap between the wrapped items. This
             allows you to create responsive grids or wrap elements in a
             container, ensuring they stay within the container's width.

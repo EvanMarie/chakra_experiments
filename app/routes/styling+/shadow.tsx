@@ -27,6 +27,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -126,7 +127,110 @@ export default function chakra_section() {
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
-              <SingleExample>EXAMPLE</SingleExample>
+              <SingleExample>
+                <SimpleGrid
+                  bg="white"
+                  justifyContent="center"
+                  alignContent="center"
+                  columns={{ base: 1, sm: 2 }}
+                  spacing={3}
+                  p={2}
+                  marginTop={2}
+                  textAlign="center"
+                  rounded="lg"
+                >
+                  <Box
+                    margin={3}
+                    boxShadow="xs"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono>boxShadow="xs"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="sm"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> boxShadow="sm"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="base"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> boxShadow="base"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="md"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> boxShadow="md"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="lg"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> boxShadow="lg"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="xl"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> boxShadow="xl"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="2xl"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> boxShadow="2xl"</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="dark-lg"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> {`boxShadow="dark-lg"`}</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="outline"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> {`boxShadow="outline"`}</Mono>
+                  </Box>
+                  <Box
+                    margin={3}
+                    boxShadow="inner"
+                    p="3"
+                    rounded="sm"
+                    bg={colors.myblue}
+                  >
+                    <Mono> {`boxShadow="inner"`}</Mono>
+                  </Box>
+                </SimpleGrid>
+              </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
