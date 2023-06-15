@@ -136,7 +136,7 @@ export default function chakra_basic_styling() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box pt={4} bg={colors.myblue}>
+                <Box pt={4} bg={"darkAccent_3"}>
                   This box has a padding-top of 4 units
                 </Box>
                 <Highlighter>{`<Box pt={4}>`}</Highlighter>
@@ -152,8 +152,8 @@ export default function chakra_basic_styling() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box bg={colors.mainAccent3}>
-                  <Box m={2} bg={colors.myblue} mb={3}>
+                <Box bg={"accent_3"}>
+                  <Box m={2} bg={"darkAccent_3"} mb={3}>
                     This <Mono>Box</Mono> has a margin setting of{" "}
                     <Mono>
                       <i>m={4}</i>
@@ -194,7 +194,7 @@ export default function chakra_basic_styling() {
                 w="150px"
                 justifyContent="center"
                 mt={4}
-                bg={colors.sectionColor}
+                bg={"sectionColor"}
                 p={3}
               >
                 <Stack spacing={4}>

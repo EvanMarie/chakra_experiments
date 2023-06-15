@@ -13,10 +13,10 @@ export default function chakra_basic_styling() {
         Section Name:
       </MyLabel>
       <SectionContainer>
-        <BasicText color={colors.mainAccent3}>
+        <BasicText color={"accent_3"}>
           Introduction to section
         </BasicText>
-        <FlexibleBox bg={colors.myblue} p={4}>
+        <FlexibleBox bg={"darkAccent_3"} p={4}>
           <Box>
             <BasicText>Small Heading</BasicText>
           </Box>

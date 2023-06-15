@@ -41,16 +41,16 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
       nav && nav.label === navElement.label;
 
     const selectedStyles = {
-      bg: colors.mainAccent3,
+      bg: "accent_3",
       color: colors.mainBackground,
       _hover: {
-        color: "deeppink",
+        color: "linkColor",
       },
     };
 
     const unselectedStyles = {
-      bg: colors.myblue,
-      color: "deeppink",
+      bg: "darkAccent_3",
+      color: "linkColor",
     };
 
     const isMediumScreen = useBreakpointValue({
@@ -65,11 +65,11 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
 
     return (
       <Menu>
-        <MenuButton color={"deeppink"} _hover={{ color: "cyan" }}>
+        <MenuButton color={"linkColor"} _hover={{ color: "accent_2" }}>
           <ImMenu size={30} />
         </MenuButton>
-        <MenuList bg={colors.myblue} overflow="hidden">
-          <MenuItem as={RemixLink} to="/" w="210px" bg={colors.myblue}>
+        <MenuList bg={"darkAccent_3"} overflow="hidden">
+          <MenuItem as={RemixLink} to="/" w="210px" bg={"darkAccent_3"}>
             <AiOutlineHome size={30} color={colors.linkColor} />
           </MenuItem>
           {navItems.map((navItem) => {

@@ -27,7 +27,7 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <BigBackgroundBox>
-      <MyHeading color={colors.mainAccent2}>
+      <MyHeading color={"accent_2"}>
         Explorations with Chakra-UI
       </MyHeading>
       <SectionContainer>
@@ -54,7 +54,7 @@ export default function Index() {
           for the specific component or subject. I hope you are as impressed
           with the libary as I am!{" "}
         </BasicText>{" "}
-        <BasicText color={colors.mainAccent2}>
+        <BasicText color={"accent_2"}>
           <b>Enjoy! And never stop learning!</b>
         </BasicText>
         <BasicText>

@@ -39,9 +39,9 @@ export function ToastTwoFunction() {
           position: "bottom-left",
           render: () => (
             <Flex
-              color={colors.mainAccent4}
+              color={"darkAccent_2"}
               p={2}
-              bg={colors.mainAccent3}
+              bg={"accent_3"}
               borderRadius="20px"
               justifyContent={"center"}
               alignItems={"center"}
@@ -61,10 +61,10 @@ export function ToastTwoFunction() {
 }
 
 const buttonStyles = {
-  bg: colors.mainAccent2,
+  bg: "accent_2",
   color: colors.mainBackground,
-  hoverbg: colors.mainAccent3,
-  hovercolor: colors.mainAccent4,
+  hoverbg: "accent_3",
+  hovercolor: "darkAccent_2",
   borderRadius: "sm",
   width: "200px",
   height: "25px",
@@ -213,7 +213,7 @@ export function ToastSevenFunction() {
 
   return (
     <Button
-      bg={colors.mainAccent2}
+      bg={"accent_2"}
       onClick={() => {
         toast({
           containerStyle: {

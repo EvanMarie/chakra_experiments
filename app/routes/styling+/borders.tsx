@@ -136,11 +136,11 @@ export default function chakra_section() {
                 <Box
                   border="2px"
                   fontSize={16}
-                  bg={colors.myblue}
+                  bg={"darkAccent_3"}
                   borderColor="yellow.200"
                   h="60px"
                   marginTop={4}
-                  color={colors.mainText}
+                  color={"mainText"}
                 >
                   <Highlighter>{`<Box 2px border borderColor="yellow.200">`}</Highlighter>
                 </Box>

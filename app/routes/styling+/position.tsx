@@ -151,7 +151,7 @@ function ToggleBox() {
 
   return (
     <div>
-      <Button onClick={toggleBox} bg={colors.mainAccent2} color="black">
+      <Button onClick={toggleBox} bg={"accent_2"} color="black">
         {showBox ? "Ciao, box!" : "Voilà, a box!"}
       </Button>
 
@@ -231,7 +231,7 @@ function ToggleFixedBox() {
 
   return (
     <div>
-      <Button onClick={toggleBox} bg={colors.mainAccent2} color="black">
+      <Button onClick={toggleBox} bg={"accent_2"} color="black">
         {showBox ? "Ciao, box!" : "Fixed position box, appear!"}
       </Button>
 
@@ -302,7 +302,7 @@ export default ToggleFixedBox;
                 position="relative"
                 h="175px"
                 w="175px"
-                bg={colors.mainAccent2}
+                bg={"accent_2"}
               >
                 <Box
                   position="absolute"
@@ -322,7 +322,7 @@ export default ToggleFixedBox;
   position="relative"
   h="175px"
   w="175px"
-  bg={colors.mainAccent2}
+  bg={"accent_2"}
 >
   <Box
     position="absolute"
@@ -341,7 +341,7 @@ export default ToggleFixedBox;
               <Box
                 position="absolute"
                 zIndex="1"
-                bg={colors.mainAccent3}
+                bg={"accent_3"}
                 h="100px"
                 w="100px"
                 p={2}
@@ -352,7 +352,7 @@ export default ToggleFixedBox;
               <Box
                 position="relative"
                 zIndex="0"
-                bg={colors.mainAccent4}
+                bg={"darkAccent_2"}
                 h="175px"
                 w="175px"
                 p={2}

@@ -60,11 +60,11 @@ export default function chakra_basic_styling() {
       <VStack></VStack>
 
       <SectionContainer>
-        <BasicText color={colors.mainAccent3}>
+        <BasicText color={"accent_3"}>
           Chakra UI offers two main components for Disclosure: accordions and
           tabs.
         </BasicText>
-        <FlexibleBox bg={colors.myblue} p={4}>
+        <FlexibleBox bg={"darkAccent_3"} p={4}>
           <BasicText>
             <HL>Accordions</HL> and <HL>tabs</HL> are user interface components
             that can be used to organize and display content in a structured and
@@ -98,7 +98,7 @@ export default function chakra_basic_styling() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2} mb={0}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ The <Mono>Accordion</Mono> component in Chakra UI is a versatile
             component that allows you to provide sections of content that can
             expand or collapse to reveal more information. It can be used to
@@ -210,7 +210,7 @@ export default function chakra_basic_styling() {
         {/*  Section Introduction */}
         {/* COMPONENT DESCRIPTION */}
         <SectionContainer paddingBottom={2} mb={0}>
-          <BasicText color={colors.mainAccent3}>
+          <BasicText color={"accent_3"}>
             ⦾ You can render any element within Tabs, but TabList should only
             have Tab as children, and <Mono>TabPanels</Mono> should have{" "}
             <Mono>TabPanel</Mono> as children.{" "}

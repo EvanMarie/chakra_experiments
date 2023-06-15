@@ -64,7 +64,7 @@ export default function App() {
               >
                 <Box height="100%" paddingBottom="13px" overflow-x="hidden">
                   <Box
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                     display={["none", "none", "block"]}
                     height="100%"
                     width="210px"

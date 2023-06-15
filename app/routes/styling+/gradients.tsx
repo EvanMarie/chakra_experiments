@@ -214,7 +214,7 @@ export function AnimatedGradient({ children }:
     <Flex w="100%" justify="center">
       <Box
         bgGradient={linear(to-l, 
-          {colors.mainAccent}, {colors.mypurple})}
+          {"accent_1"}, {colors.mypurple})}
         backgroundSize="200% 200%"
         animation={{gradient} 2s ease infinite}
         >`}</Highlighter>

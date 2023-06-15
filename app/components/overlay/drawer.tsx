@@ -80,10 +80,10 @@ export function ComponentThree() {
 export function ComponentFour() {
   return (
     <Box marginTop="5px">
-      <BasicText color={colors.mainAccent2} size="18px" fontWeight="bold">
+      <BasicText color={"accent_2"} size="18px" fontWeight="bold">
         HEADING
       </BasicText>
-      <BasicText color={colors.mainAccent3}>⦾ DESCRIPTION</BasicText>
+      <BasicText color={"accent_3"}>⦾ DESCRIPTION</BasicText>
 
       <Box p={5}>
         <Box marginY={1}>COMPONENT</Box>

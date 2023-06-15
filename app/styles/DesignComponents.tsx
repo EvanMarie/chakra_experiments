@@ -22,7 +22,7 @@ export const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  mainAccent3: "#05fce8",
+  "accent_3": "#05fce8",
   mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
   myblue: "#0c2b45",
@@ -47,7 +47,7 @@ export function MyHeading({
   size = 33,
   mb = 3,
   mt = 3,
-  color = colors.mainAccent2,
+  color = "accent_2",
 }: MyHeadingProps) {
   return (
     <Text fontSize={size} color={color} mb={mb} mt={mt} fontWeight="bold">
@@ -73,7 +73,7 @@ export function HorizontalLine({
   h = "1px",
   w = "100%",
   opacity = 0.3,
-  bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
+  bgGradient = `linear(to-t, ${"accent_2"}, ${"accent_1"})`,
 }: HorizontalLineProps) {
   return (
     <Box
@@ -99,7 +99,7 @@ interface BasicTextProps extends TextProps {
 }
 
 export function BasicText({
-  color = colors.mainText,
+  color = "mainText",
   fontWeight = "normal",
   mb = 1,
   mt = 1,
@@ -122,8 +122,8 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
     paddingY: 1,
     paddingX: 5,
     borderRadius: "sm",
-    bg: colors.mainAccent3,
-    color: colors.secondaryText,
+    bg: "accent_3",
+    color: "darkText",
   };
 
   return (
@@ -187,7 +187,7 @@ export function MyDivider({
   h = "1px",
   w = "100%",
   opacity = 0.3,
-  bgGradient = `linear(to-t, ${colors.mainAccent2}, ${colors.mainAccent})`,
+  bgGradient = `linear(to-t, ${"accent_2"}, ${"accent_1"})`,
 }: MyDividerProps) {
   return (
     <HorizontalLine
@@ -242,7 +242,7 @@ export function Mono({
     fontWeight: fontWeight,
     marginY: `${marginY} !important`,
     lineheight: `${lineHeight} !important`,
-    color: colors.codeText,
+    color: "codeText",
     width: `${width} !important`,
   };
   return <span style={monoStyle}>{children}</span>;

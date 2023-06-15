@@ -12,10 +12,10 @@ import { BasicText, Mono, colors } from "~/styles/DesignComponents";
 export function OnChangeTabs() {
   const tabsColors = useColorModeValue(
     [
-      colors.mainAccent,
-      colors.mainAccent2,
-      colors.mainAccent3,
-      colors.mainText,
+      "accent_1",
+      "accent_2",
+      "accent_3",
+      "mainText",
     ],
     ["white", "white", "white", "white"]
   );

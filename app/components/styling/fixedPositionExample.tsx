@@ -11,7 +11,7 @@ function ToggleFixedBox() {
 
   return (
     <div>
-      <Button onClick={toggleBox} bg={colors.mainAccent2} color="black">
+      <Button onClick={toggleBox} bg={"accent_2"} color="black">
         {showBox ? "Ciao, box!" : "Fixed position box, appear!"}
       </Button>
 

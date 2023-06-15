@@ -18,7 +18,7 @@ export function AnimatedGradient({ children }: AnimatedGradientProps) {
     <MyFlex>
       <Box
         p={3}
-        bgGradient={`linear(to-l, ${colors.mainAccent}, ${colors.mypurple})`}
+        bgGradient={`linear(to-l, ${"accent_1"}, ${colors.mypurple})`}
         backgroundSize="200% 200%"
         animation={`${gradient} 2s ease infinite`}
         height="80px"

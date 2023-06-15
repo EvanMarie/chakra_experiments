@@ -20,7 +20,7 @@ export default function chakra_basic_styling() {
           utility functions, components, and design tokens that make it easy to
           create visually appealing and consistent user interfaces.{" "}
         </SectionDescription>
-        <FlexibleBox bg={colors.myblue} p={4}>
+        <FlexibleBox bg={"darkAccent_3"} p={4}>
           <Box>
             <BasicText>
               Here are the key aspects of the Chakra UI Styling system:{" "}

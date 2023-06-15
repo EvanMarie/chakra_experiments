@@ -144,7 +144,7 @@ export default function chakra_section() {
                     boxShadow="xs"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono>boxShadow="xs"</Mono>
                   </Box>
@@ -153,7 +153,7 @@ export default function chakra_section() {
                     boxShadow="sm"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> boxShadow="sm"</Mono>
                   </Box>
@@ -162,7 +162,7 @@ export default function chakra_section() {
                     boxShadow="base"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> boxShadow="base"</Mono>
                   </Box>
@@ -171,7 +171,7 @@ export default function chakra_section() {
                     boxShadow="md"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> boxShadow="md"</Mono>
                   </Box>
@@ -180,7 +180,7 @@ export default function chakra_section() {
                     boxShadow="lg"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> boxShadow="lg"</Mono>
                   </Box>
@@ -189,7 +189,7 @@ export default function chakra_section() {
                     boxShadow="xl"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> boxShadow="xl"</Mono>
                   </Box>
@@ -198,7 +198,7 @@ export default function chakra_section() {
                     boxShadow="2xl"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> boxShadow="2xl"</Mono>
                   </Box>
@@ -207,7 +207,7 @@ export default function chakra_section() {
                     boxShadow="dark-lg"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> {`boxShadow="dark-lg"`}</Mono>
                   </Box>
@@ -216,7 +216,7 @@ export default function chakra_section() {
                     boxShadow="outline"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> {`boxShadow="outline"`}</Mono>
                   </Box>
@@ -225,7 +225,7 @@ export default function chakra_section() {
                     boxShadow="inner"
                     p="3"
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={"darkAccent_3"}
                   >
                     <Mono> {`boxShadow="inner"`}</Mono>
                   </Box>
