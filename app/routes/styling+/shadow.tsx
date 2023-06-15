@@ -63,48 +63,61 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>sm</HL>: "0 1px 2px 0 rgba(0, 0, 0, 0.05)" - This is a
-                  small shadow, it applies a shadow effect that is slight and
-                  does not protrude much from the box frame. It's good for
-                  subtle highlights and low depth elements.
+                  <HL>sm</HL>: <Mono>"0 1px 2px 0 rgba(0, 0, 0, 0.05)"</Mono> -
+                  This is a small shadow, it applies a shadow effect that is
+                  slight and does not protrude much from the box frame. It's
+                  good for subtle highlights and low depth elements.
                 </li>
                 <li>
-                  <HL>md</HL>: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px
-                  -1px rgba(0, 0, 0, 0.06)" - This is a medium shadow, it
-                  applies a more pronounced shadow than sm. It's good for medium
-                  depth elements and for creating a feeling of elevation.
+                  <HL>md</HL>:{" "}
+                  <Mono>
+                    "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0,
+                    0, 0, 0.06)"
+                  </Mono>{" "}
+                  - This is a medium shadow, it applies a more pronounced shadow
+                  than sm. It's good for medium depth elements and for creating
+                  a feeling of elevation.
                 </li>
                 <li>
-                  <HL>lg</HL>: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px
-                  -2px rgba(0, 0, 0, 0.05)" This is a large shadow. It applies
-                  an even more pronounced shadow than md. It's good for higher
-                  depth elements and for creating a stronger feeling of
-                  elevation.
+                  <HL>lg</HL>:{" "}
+                  <Mono>
+                    "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0,
+                    0, 0, 0.05)"{" "}
+                  </Mono>{" "}
+                  - This is a large shadow. It applies an even more pronounced
+                  shadow than md. It's good for higher depth elements and for
+                  creating a stronger feeling of elevation.
                 </li>
                 <li>
-                  <HL>xl</HL>: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px
-                  -5px rgba(0, 0, 0, 0.04)" This is an extra-large shadow. It
-                  applies a very pronounced shadow. It's good for very high
-                  depth elements and for creating a strong feeling of elevation
-                  or focus.
+                  <HL>xl</HL>:{" "}
+                  <Mono>
+                    "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px
+                    rgba(0, 0, 0, 0.04)"
+                  </Mono>{" "}
+                  This is an extra-large shadow. It applies a very pronounced
+                  shadow. It's good for very high depth elements and for
+                  creating a strong feeling of elevation or focus.
                 </li>
                 <li>
-                  <HL>2xl</HL>: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" This is
+                  <HL>2xl</HL>:{" "}
+                  <Mono>"0 25px 50px -12px rgba(0, 0, 0, 0.25)"</Mono> This is
                   an extra-extra-large shadow. It applies an extremely
                   pronounced shadow, and it's best for elements that need a
                   significant amount of depth or focus.
                 </li>
                 <li>
-                  <HL>outline</HL>: "0 0 0 3px rgba(66, 153, 225, 0.6)" This is
-                  an outline shadow. It's best used to draw attention to a
+                  <HL>outline</HL>:{" "}
+                  <Mono>"0 0 0 3px rgba(66, 153, 225, 0.6)"</Mono> This is an
+                  outline shadow. It's best used to draw attention to a
                   particular element, like for highlighting focus on an input or
                   button.
                 </li>
                 <li>
-                  <HL>inner</HL>: "inset 0 2px 4px 0 rgba(0,0,0,0.06)" This is
-                  an inner shadow. It's applied inside the box borders and is
-                  good for making elements appear as if they're being pressed
-                  down or have an inner depth.
+                  <HL>inner</HL>:{" "}
+                  <Mono>"inset 0 2px 4px 0 rgba(0,0,0,0.06)"</Mono> This is an
+                  inner shadow. It's applied inside the box borders and is good
+                  for making elements appear as if they're being pressed down or
+                  have an inner depth.
                 </li>
               </ul>
             </BulletBox>
@@ -140,94 +153,94 @@ export default function chakra_section() {
                   rounded="lg"
                 >
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="xs"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono>boxShadow="xs"</Mono>
+                    <Highlighter>boxShadow="xs"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="sm"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> boxShadow="sm"</Mono>
+                    <Highlighter>boxShadow="sm"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="base"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> boxShadow="base"</Mono>
+                    <Highlighter>boxShadow="base"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="md"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> boxShadow="md"</Mono>
+                    <Highlighter>boxShadow="md"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="lg"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> boxShadow="lg"</Mono>
+                    <Highlighter>boxShadow="lg"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="xl"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> boxShadow="xl"</Mono>
+                    <Highlighter>boxShadow="xl"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="2xl"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> boxShadow="2xl"</Mono>
+                    <Highlighter>boxShadow="2xl"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="dark-lg"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> {`boxShadow="dark-lg"`}</Mono>
+                    <Highlighter>boxShadow="dark-lg"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="outline"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> {`boxShadow="outline"`}</Mono>
+                    <Highlighter>boxShadow="outline"</Highlighter>
                   </Box>
                   <Box
-                    margin={3}
+                    m={4}
                     boxShadow="inner"
-                    p="3"
+                    p={2}
                     rounded="sm"
-                    bg={colors.myblue}
+                    bg={colors.mainAccent3}
                   >
-                    <Mono> {`boxShadow="inner"`}</Mono>
+                    <Highlighter>boxShadow="inner"</Highlighter>
                   </Box>
                 </SimpleGrid>
               </SingleExample>

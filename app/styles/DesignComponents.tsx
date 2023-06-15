@@ -238,7 +238,7 @@ export function Mono({
   fontWeight = "normal",
 }: MonoProps) {
   const monoStyle = {
-    fontFamily: "monospace !important",
+    // fontFamily: "monospace !important",
     fontWeight: fontWeight,
     marginY: `${marginY} !important`,
     lineheight: `${lineHeight} !important`,
