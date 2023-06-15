@@ -52,13 +52,13 @@ export default function chakra_basic_styling() {
         Chakra UI Styling System:
       </MyLabel>
       <SectionContainer>
-        <BasicText color={"accent_3"}>
+        <BasicText color={colors.mainAccent3}>
           The Chakra UI Styling system is a comprehensive and intuitive approach
           to styling React applications using Chakra UI. It provides a set of
           utility functions, components, and design tokens that make it easy to
           create visually appealing and consistent user interfaces.{" "}
         </BasicText>
-        <FlexibleBox bg={"darkAccent_3"} p={4}>
+        <FlexibleBox bg={colors.myblue} p={4}>
           <Box>
             <BasicText>
               Here are the key aspects of the Chakra UI Styling system:{" "}
@@ -125,7 +125,7 @@ export default function chakra_basic_styling() {
           </Mono>
         </Box>
         <Highlighter>{`<Box p={2} mb={3}>`}</Highlighter>
-        <Box m={4} bg={"darkAccent_3"} mb={3}>
+        <Box m={4} bg={colors.myblue} mb={3}>
           This <Mono>Box</Mono> has a margin setting of{" "}
           <Mono>
             <i>m={4}</i>
@@ -221,19 +221,19 @@ export default function chakra_basic_styling() {
         Width & Height:
       </MyLabel>
       <SectionContainer>
-        <FlexibleBox width="100%" height={12} bg={"darkAccent_3"} paddingX={2}>
+        <FlexibleBox width="100%" height={12} bg={colors.myblue} paddingX={2}>
           <Mono>width="100%" height={12}</Mono>
         </FlexibleBox>
-        <FlexibleBox w="100%" h="32px" bg={"darkAccent_3"} paddingX={2}>
+        <FlexibleBox w="100%" h="32px" bg={colors.myblue} paddingX={2}>
           <Mono> w="100%" h="32px"</Mono>{" "}
         </FlexibleBox>
-        <FlexibleBox boxSize="sm" bg={"darkAccent_3"} paddingX={2}>
+        <FlexibleBox boxSize="sm" bg={colors.myblue} paddingX={2}>
           <Mono>boxSize="sm"</Mono>
         </FlexibleBox>
-        <FlexibleBox w={256} bg={"darkAccent_3"} paddingX={2}>
+        <FlexibleBox w={256} bg={colors.myblue} paddingX={2}>
           <Mono>w={256}</Mono>
         </FlexibleBox>
-        <FlexibleBox w="80px" bg={"darkAccent_3"} paddingX={2} fontSize={12}>
+        <FlexibleBox w="80px" bg={colors.myblue} paddingX={2} fontSize={12}>
           <Mono>w='80px'</Mono>
         </FlexibleBox>
       </SectionContainer>
@@ -262,8 +262,8 @@ export default function chakra_basic_styling() {
           <FlexibleBox
             display={{ base: "none", md: "block" }}
             h="100px"
-            bg={"darkAccent_3"}
-            color={"mainText"}
+            bg={colors.myblue}
+            color={colors.mainText}
           >
             <Mono>base: "none", md: "block" </Mono>configuration sets the
             display property to "none" for smaller screens and "block" for
@@ -284,7 +284,7 @@ export default function chakra_basic_styling() {
               The following small bar expands once the screen size reaches{" "}
               <b>md</b> or above.
             </BasicText>
-            <FlexibleBox bg={"darkAccent_3"} color={"mainText"}>
+            <FlexibleBox bg={colors.myblue} color={colors.mainText}>
               <Box hideBelow="md">
                 <Mono>hideBelow='md'</Mono> prop on a Box component is a custom
                 prop used to conditionally hide the component on screens smaller
@@ -307,16 +307,16 @@ export default function chakra_basic_styling() {
           >
             <FlexibleBox
               display={{ base: "block", md: "none" }}
-              bg={"darkAccent_3"}
-              color={"mainText"}
+              bg={colors.myblue}
+              color={colors.mainText}
             >
               <Mono>base: "block", md: "none"</Mono> - hide the element from
               'md' up
             </FlexibleBox>
             <FlexibleBox
               hideFrom="md"
-              bg={"darkAccent_3"}
-              color={"mainText"}
+              bg={colors.myblue}
+              color={colors.mainText}
             >
               This box complete disappears at sizes of medium and higher.
             </FlexibleBox>
@@ -338,15 +338,15 @@ export default function chakra_basic_styling() {
             alignItems="center"
             justifyContent="space-between"
             mt={3}
-            bg={"darkAccent_3"}
-            color={"mainText"}
+            bg={colors.myblue}
+            color={colors.mainText}
           >
             <Text>Child One</Text>
             <Text>Child Two</Text>
             <Text>Child Three</Text>
           </FlexibleBox>
           <Flex
-            bg={"accent_2"}
+            bg={colors.mainAccent2}
             color="black"
             h="100px"
             align="center"
@@ -360,8 +360,8 @@ export default function chakra_basic_styling() {
           Grid Layout
         </MyLabel>
         <FlexibleBox
-          bg={"sectionColor"}
-          color={"mainText"}
+          bg={colors.sectionColor}
+          color={colors.mainText}
           display="grid"
           gridGap={2}
           gridAutoFlow="row dense"
@@ -405,8 +405,8 @@ export default function chakra_basic_styling() {
           gap={2}
           autoFlow="row dense"
           p={2}
-          bg={"darkAccent_3"}
-          color={"mainText"}
+          bg={colors.myblue}
+          color={colors.mainText}
         >
           Grid using Chakra shorthand:{" "}
           <Highlighter>{`<Grid gap={2} autoFlow="row dense">`}</Highlighter>
@@ -478,11 +478,11 @@ h="200px"`}</Highlighter>
       <FlexibleBox
         border="2px"
         fontSize={16}
-        bg={"darkAccent_3"}
+        bg={colors.myblue}
         borderColor="yellow.200"
         h="60px"
         marginTop={4}
-        color={"mainText"}
+        color={colors.mainText}
       >
         <Highlighter>{`<Box 2px border borderColor="yellow.200">`}</Highlighter>
       </FlexibleBox>
@@ -492,13 +492,8 @@ h="200px"`}</Highlighter>
       </MyLabel>
       <Box>
         <SectionContainer>
-          <BasicText>
-            Button with <Mono>RightRadius="0"</Mono>, creating no border radius
-            on right, but default settings on left.
-          </BasicText>
-          <Button borderRightRadius="0" mb={4} w="150px">
-            Button 1
-          </Button>
+          <BasicText></BasicText>
+
           <BasicText>
             Button with <Mono>LeftRadius="0"</Mono>, creating no border radius
             on left, but default settings on right.
@@ -531,22 +526,22 @@ h="200px"`}</Highlighter>
             <Box
               w="100%"
               h="75px"
-              bg={"accent_2"}
+              bg={colors.mainAccent2}
               mb={3}
               position="relative"
             >
-              <FlexibleBox position="absolute" bg={"darkAccent_3"}>
+              <FlexibleBox position="absolute" bg={colors.myblue}>
                 <Mono>position="absolute"</Mono>
               </FlexibleBox>
             </Box>
             <Box
               w="100%"
               h="75px"
-              bg={"accent_2"}
+              bg={colors.mainAccent2}
               mb={3}
               position="relative"
             >
-              <FlexibleBox pos="absolute" bg={"darkAccent_3"}>
+              <FlexibleBox pos="absolute" bg={colors.myblue}>
                 <Mono>pos="absolute"</Mono>
               </FlexibleBox>
             </Box>
@@ -554,15 +549,15 @@ h="200px"`}</Highlighter>
               w="100%"
               h="75px"
               position="relative"
-              bg={"accent_2"}
+              bg={colors.mainAccent2}
               mb={3}
             >
               <FlexibleBox
                 pos="absolute"
                 top="3"
                 left="3"
-                bg={"darkAccent_3"}
-                color={"mainText"}
+                bg={colors.myblue}
+                color={colors.mainText}
               >
                 Absolute (in relation to parent, which is set to relative) with{" "}
                 <Mono>top="3"</Mono> and <Mono>left="3"</Mono>
@@ -607,10 +602,10 @@ h="200px"`}</Highlighter>
           textAlign="center"
           rounded="lg"
         >
-          <Box margin={5} boxShadow="xs" p="5" rounded="sm" bg={"darkAccent_3"}>
+          <Box margin={5} boxShadow="xs" p="5" rounded="sm" bg={colors.myblue}>
             <Mono>boxShadow="xs"</Mono>
           </Box>
-          <Box margin={5} boxShadow="sm" p="5" rounded="sm" bg={"darkAccent_3"}>
+          <Box margin={5} boxShadow="sm" p="5" rounded="sm" bg={colors.myblue}>
             <Mono> boxShadow="sm"</Mono>
           </Box>
           <Box
@@ -618,20 +613,20 @@ h="200px"`}</Highlighter>
             boxShadow="base"
             p="5"
             rounded="sm"
-            bg={"darkAccent_3"}
+            bg={colors.myblue}
           >
             <Mono> boxShadow="base"</Mono>
           </Box>
-          <Box margin={5} boxShadow="md" p="5" rounded="sm" bg={"darkAccent_3"}>
+          <Box margin={5} boxShadow="md" p="5" rounded="sm" bg={colors.myblue}>
             <Mono> boxShadow="md"</Mono>
           </Box>
-          <Box margin={5} boxShadow="lg" p="5" rounded="sm" bg={"darkAccent_3"}>
+          <Box margin={5} boxShadow="lg" p="5" rounded="sm" bg={colors.myblue}>
             <Mono> boxShadow="lg"</Mono>
           </Box>
-          <Box margin={5} boxShadow="xl" p="5" rounded="sm" bg={"darkAccent_3"}>
+          <Box margin={5} boxShadow="xl" p="5" rounded="sm" bg={colors.myblue}>
             <Mono> boxShadow="xl"</Mono>
           </Box>
-          <Box margin={5} boxShadow="2xl" p="5" rounded="sm" bg={"darkAccent_3"}>
+          <Box margin={5} boxShadow="2xl" p="5" rounded="sm" bg={colors.myblue}>
             <Mono> boxShadow="2xl"</Mono>
           </Box>
           <Box
@@ -639,7 +634,7 @@ h="200px"`}</Highlighter>
             boxShadow="dark-lg"
             p="5"
             rounded="sm"
-            bg={"darkAccent_3"}
+            bg={colors.myblue}
           >
             <Mono> {`boxShadow="dark-lg"`}</Mono>
           </Box>
@@ -648,7 +643,7 @@ h="200px"`}</Highlighter>
             boxShadow="outline"
             p="5"
             rounded="sm"
-            bg={"darkAccent_3"}
+            bg={colors.myblue}
           >
             <Mono> {`boxShadow="outline"`}</Mono>
           </Box>
@@ -657,7 +652,7 @@ h="200px"`}</Highlighter>
             boxShadow="inner"
             p="5"
             rounded="sm"
-            bg={"darkAccent_3"}
+            bg={colors.myblue}
           >
             <Mono> {`boxShadow="inner"`}</Mono>
           </Box>
@@ -692,7 +687,7 @@ h="200px"`}</Highlighter>
       </SectionContainer>
       <SectionContainer>
         <Box marginY={3}>
-          <BasicText size="20px" color={"accent_2"}>
+          <BasicText size="20px" color={colors.mainAccent2}>
             <b>Backdrop Filters</b>
           </BasicText>
           <BackdropFilters />
@@ -734,7 +729,7 @@ h="200px"`}</Highlighter>
           <br />
           <VStack w="100%" mt={5}>
             <Box role="group" w="100%">
-              <ExampleContainer bg={"darkAccent_3"} color={"mainText"}>
+              <ExampleContainer bg={colors.myblue} color={colors.mainText}>
                 <FlexibleBox w="100px">
                   <Box
                     _hover={{ fontWeight: "semibold" }}
@@ -751,7 +746,7 @@ h="200px"`}</Highlighter>
             </Box>
           </VStack>
           <VStack w="100%" mt={5}>
-            <ExampleContainer color={"darkText"}>
+            <ExampleContainer color={colors.secondaryText}>
               <Box
                 _before={{
                   content: '"🙂"',
@@ -773,7 +768,7 @@ h="200px"`}</Highlighter>
       </MyLabel>
       <SectionContainer>
         <VStack w="100%" mt={5} fontSize={16}>
-          <ExampleContainer bg={"darkAccent_3"}>
+          <ExampleContainer bg={colors.myblue}>
             <Box>
               <Button
                 as="a"
