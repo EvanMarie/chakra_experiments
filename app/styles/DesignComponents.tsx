@@ -22,7 +22,7 @@ export const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  "accent_3": "#05fce8",
+  accent_3: "#05fce8",
   mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
   myblue: "#0c2b45",
@@ -211,7 +211,8 @@ interface HighlightMeProps {
 
 export function HL({
   children,
-  color = colors.highlighterColor,
+  color = "accent_2",
+  // color = colors.highlighterColor,
   fontWeight = "bold",
 }: HighlightMeProps) {
   return (
@@ -238,14 +239,13 @@ export function Mono({
   fontWeight = "normal",
 }: MonoProps) {
   const monoStyle = {
-    // fontFamily: "monospace !important",
     fontWeight: fontWeight,
     marginY: `${marginY} !important`,
     lineheight: `${lineHeight} !important`,
     color: "codeText",
     width: `${width} !important`,
   };
-  return <span style={monoStyle}>{children}</span>;
+  return <chakra.span {...monoStyle}>{children}</chakra.span>;
 }
 
 interface StackedExampleProps extends FlexProps {

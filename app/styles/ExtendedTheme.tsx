@@ -1,21 +1,19 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const CovertCandyScheme = {
-  50 : "#f7e6c1", // mainText
-  100 : '#faafef', // codeText
-  200 : '#a7d5fa', // accent_2
-  300 : '#faa5b9', // accent_1, 
-  400 : '#05fce8', // accent_3
-  450 : '#fc6598', // linkColor
-  500 : '#532291', // darkAccent_1
-  600 : '#3d3145', // sectionColor
-  700 : '#370a42', // darkAccent_2
-  800 : '#0c2b45', // sidebarBackground, darkAccent_3
-  850 : '#26231a', // darkText
-  900 : '#211421', // background
-}
-
-
+  50: "#f7e6c1", // mainText
+  100: "#fc65e6", // codeText
+  200: "#a7d5fa", // accent_2
+  300: "#faa5b9", // accent_1,
+  400: "#05fce8", // accent_3
+  450: "#fc6598", // linkColor
+  500: "#532291", // darkAccent_1
+  600: "#3d3145", // sectionColor
+  700: "#370a42", // darkAccent_2
+  800: "#0c2b45", // sidebarBackground, darkAccent_3
+  850: "#26231a", // darkText
+  900: "#211421", // background
+};
 
 const theme = extendTheme({
   colors: {

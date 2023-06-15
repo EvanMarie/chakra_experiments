@@ -50,9 +50,9 @@ export default function chakra_section() {
           <SectionContainer paddingBottom={2} mb={0}>
             <SectionDescription>
               ⦾ Chakra UI provides several utilities for working with box
-              shadows. The main prop for shadows is boxShadow, which can be used
-              to add a shadow to a box. Chakra UI comes with some predefined
-              shadows that you can use.
+              shadows. The main prop for shadows is <Mono>boxShadow</Mono>,
+              which can be used to add a shadow to a box. Chakra UI comes with
+              some predefined shadows that you can use.
             </SectionDescription>
             <BasicText>
               Chakra UI defines its shadows using CSS box-shadow property. This
@@ -75,8 +75,8 @@ export default function chakra_section() {
                     0, 0, 0.06)"
                   </Mono>{" "}
                   - This is a medium shadow, it applies a more pronounced shadow
-                  than sm. It's good for medium depth elements and for creating
-                  a feeling of elevation.
+                  than <Mono>sm</Mono>. It's good for medium depth elements and
+                  for creating a feeling of elevation.
                 </li>
                 <li>
                   <HL>lg</HL>:{" "}
@@ -86,7 +86,7 @@ export default function chakra_section() {
                   </Mono>{" "}
                   - This is a large shadow. It applies an even more pronounced
                   shadow than md. It's good for higher depth elements and for
-                  creating a stronger feeling of elevation.
+                  creating a stronger feeling of elevation.{" "}
                 </li>
                 <li>
                   <HL>xl</HL>:{" "}
@@ -152,22 +152,10 @@ export default function chakra_section() {
                   textAlign="center"
                   rounded="lg"
                 >
-                  <Box
-                    m={4}
-                    boxShadow="xs"
-                    p={2}
-                    rounded="sm"
-                    bg={"darkAccent_3"}
-                  >
+                  <Box m={4} boxShadow="xs" p={2} rounded="sm" bg={"accent_3"}>
                     <Highlighter>boxShadow="xs"</Highlighter>
                   </Box>
-                  <Box
-                    m={4}
-                    boxShadow="sm"
-                    p={2}
-                    rounded="sm"
-                    bg={"darkAccent_3"}
-                  >
+                  <Box m={4} boxShadow="sm" p={2} rounded="sm" bg={"accent_3"}>
                     <Highlighter>boxShadow="sm"</Highlighter>
                   </Box>
                   <Box
@@ -175,44 +163,20 @@ export default function chakra_section() {
                     boxShadow="base"
                     p={2}
                     rounded="sm"
-                    bg={"darkAccent_3"}
+                    bg={"accent_3"}
                   >
                     <Highlighter>boxShadow="base"</Highlighter>
                   </Box>
-                  <Box
-                    m={4}
-                    boxShadow="md"
-                    p={2}
-                    rounded="sm"
-                    bg={"darkAccent_3"}
-                  >
+                  <Box m={4} boxShadow="md" p={2} rounded="sm" bg={"accent_3"}>
                     <Highlighter>boxShadow="md"</Highlighter>
                   </Box>
-                  <Box
-                    m={4}
-                    boxShadow="lg"
-                    p={2}
-                    rounded="sm"
-                    bg={"darkAccent_3"}
-                  >
+                  <Box m={4} boxShadow="lg" p={2} rounded="sm" bg={"accent_3"}>
                     <Highlighter>boxShadow="lg"</Highlighter>
                   </Box>
-                  <Box
-                    m={4}
-                    boxShadow="xl"
-                    p={2}
-                    rounded="sm"
-                    bg={"darkAccent_3"}
-                  >
+                  <Box m={4} boxShadow="xl" p={2} rounded="sm" bg={"accent_3"}>
                     <Highlighter>boxShadow="xl"</Highlighter>
                   </Box>
-                  <Box
-                    m={4}
-                    boxShadow="2xl"
-                    p={2}
-                    rounded="sm"
-                    bg={"darkAccent_3"}
-                  >
+                  <Box m={4} boxShadow="2xl" p={2} rounded="sm" bg={"accent_3"}>
                     <Highlighter>boxShadow="2xl"</Highlighter>
                   </Box>
                   <Box
@@ -220,7 +184,7 @@ export default function chakra_section() {
                     boxShadow="dark-lg"
                     p={2}
                     rounded="sm"
-                    bg={"darkAccent_3"}
+                    bg={"accent_3"}
                   >
                     <Highlighter>boxShadow="dark-lg"</Highlighter>
                   </Box>
@@ -229,7 +193,7 @@ export default function chakra_section() {
                     boxShadow="outline"
                     p={2}
                     rounded="sm"
-                    bg={"darkAccent_3"}
+                    bg={"accent_3"}
                   >
                     <Highlighter>boxShadow="outline"</Highlighter>
                   </Box>
@@ -238,7 +202,7 @@ export default function chakra_section() {
                     boxShadow="inner"
                     p={2}
                     rounded="sm"
-                    bg={"darkAccent_3"}
+                    bg={"accent_3"}
                   >
                     <Highlighter>boxShadow="inner"</Highlighter>
                   </Box>

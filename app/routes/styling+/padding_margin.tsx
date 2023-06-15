@@ -61,8 +61,8 @@ export default function chakra_basic_styling() {
                     <HL>Padding</HL>: Padding is the space between the content
                     of a box and its border. It's used to control the space
                     within the component. In Chakra UI, you can control the
-                    padding using the <Mono>p</Mono>
-                    or <Mono>padding</Mono> props.
+                    padding using the <Mono>p</Mono> or <Mono>padding</Mono>{" "}
+                    props.
                   </li>
                   <li>
                     <HL>Margin</HL>: Margin is the space around the outside of a
