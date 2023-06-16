@@ -14,25 +14,21 @@ import { useIsCurrentNavRoute } from "./navigation";
 const fontSizeMain = "20px";
 const fontSizeSub = "17px";
 
-const AccordionLink = chakra('span', {
+const AccordionLink = chakra("span", {
   baseStyle: {
     flex: "1",
     textAlign: "left",
     marginRight: 10,
     w: "100%",
-    color: "linkColor",
-    _hover: {
-      color: "accent_2",
-    },
-  }
-})
-
+  },
+});
 
 // Scoot text to right
 const navHoverMain = {
   _hover: {
     transform: "translateX(12px)",
     transition: "transform 0.2s ease-in-out",
+    color: "accent_2",
   },
 };
 
@@ -40,6 +36,7 @@ const navHoverMini = {
   _hover: {
     transform: "translateX(10px)",
     transition: "transform 0.2s ease-in-out",
+    color: "accent_2",
   },
 };
 
@@ -58,15 +55,15 @@ export const AccordionMain = ({
 }: AccordionMainProps) => {
   const isCurrentRoute = useIsCurrentNavRoute(link);
   return (
-    <Box {...navHoverMain} paddingLeft={1}>
-      <AccordionButton>
-        <HStack w="100%" justifyContent={"space-between"}>
-          <Link to={link} {...navHoverMain}>
+    <Box color="linkColor" {...navHoverMain} paddingLeft={1}>
+    <AccordionButton>
+      <HStack w="100%" justifyContent={"space-between"}>
+        <Link to={link} {...navHoverMain}>
             <AccordionLink fontSize={fontSize}>{label}</AccordionLink>
-          </Link>
-          <AccordionIcon boxSize={4} color={"accent_2"} />
-        </HStack>
-      </AccordionButton>
+        </Link>
+        <AccordionIcon boxSize={4} color={"accent_2"} />
+      </HStack>
+    </AccordionButton>
     </Box>
   );
 };
@@ -81,15 +78,19 @@ interface AccordionSubProps {
 
 export const AccordionSub = ({ link, label }: AccordionSubProps) => {
   const isCurrentRoute = useIsCurrentNavRoute(link);
-  
-  return (
-      <AccordionPanel  {...navHoverMini} pb={0} bg={isCurrentRoute ? "background" : "sidebarBackground"}>
-        <Link to={link} >
-          <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
-            {label}
-          </AccordionLink>
-        </Link>
-      </AccordionPanel>
 
+  return (
+    <Link to={link}>
+      <AccordionPanel
+        color="linkColor"
+        {...navHoverMini}
+        pb={0}
+        bg={isCurrentRoute ? "background" : "sidebarBackground"}
+      >
+        <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
+          {label}
+        </AccordionLink>
+      </AccordionPanel>
+    </Link>
   );
 };
