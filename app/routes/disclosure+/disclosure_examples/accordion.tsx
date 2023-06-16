@@ -11,13 +11,14 @@ import {
 import { Mono, colors } from "~/styles/DesignComponents";
 import {
   ExampleContainer,
+  MyFlex,
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 
 export function AccordionOne() {
   return (
-    <Box marginTop="5px">
+    <MyFlex>
       <SectionHeading>Default Settings</SectionHeading>
       <SectionDescription>
         ⦾ By default, only one item may be expanded and it can only be collapsed
@@ -64,13 +65,13 @@ export function AccordionOne() {
           </Accordion>
         </Box>
       </ExampleContainer>
-    </Box>
+    </MyFlex>
   );
 }
 
 export function AccordionTwo() {
   return (
-    <Box marginTop="5px">
+    <MyFlex>
       <SectionHeading>AllowMultiple</SectionHeading>
       <SectionDescription>
         ⦾ If you set <Mono>allowMultiple</Mono> to true then the accordion will
@@ -116,15 +117,25 @@ export function AccordionTwo() {
           </Accordion>
         </Box>
       </ExampleContainer>
-    </Box>
+    </MyFlex>
   );
 }
 
 export function AccordionThree() {
   return (
-    <Box marginTop="5px">
+    <MyFlex>
       <SectionHeading>AllowToggle</SectionHeading>
+      <SectionDescription>⦾ This is different</SectionDescription>
 
+      <ExampleContainer bg={colors.mainBackground}></ExampleContainer>
+    </MyFlex>
+  );
+}
+
+export function AccordionNotThree() {
+  return (
+    <MyFlex>
+      <SectionHeading>AllowToggle</SectionHeading>
       <SectionDescription>
         ⦾ If you set <Mono>allowToggle</Mono> to true, any expanded item may be
         collapsed again.
@@ -168,13 +179,13 @@ export function AccordionThree() {
           </Accordion>
         </Box>
       </ExampleContainer>
-    </Box>
+    </MyFlex>
   );
 }
 
 export function AccordionFour() {
   return (
-    <Box marginTop="5px">
+    <MyFlex>
       <SectionHeading>Expanded State</SectionHeading>
       <SectionDescription>
         ⦾ The <Mono>AccordionButton</Mono> component has aria-expanded set to
@@ -205,13 +216,13 @@ export function AccordionFour() {
           </Accordion>
         </Box>
       </ExampleContainer>
-    </Box>
+    </MyFlex>
   );
 }
 
 export function AccordionFive() {
   return (
-    <Box marginTop="5px">
+    <MyFlex>
       <SectionHeading>Internal State</SectionHeading>
       <SectionDescription>
         ⦾ If you need access to the internal state of each accordion item, you
@@ -265,6 +276,6 @@ export function AccordionFive() {
           </Accordion>
         </Box>
       </ExampleContainer>
-    </Box>
+    </MyFlex>
   );
 }

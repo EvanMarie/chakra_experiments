@@ -73,6 +73,10 @@ export default function chakra_basic_styling() {
               making it easier to build beautiful and consistent user
               interfaces.
             </BasicText>
+            <BasicText>
+              Use the navigation menu to learn more about each component
+              individually.
+            </BasicText>
           </Box>
         </FlexibleBox>
       </SectionContainer>

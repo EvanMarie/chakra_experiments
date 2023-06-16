@@ -13,6 +13,7 @@ import {
   Spacer,
   useBreakpointValue,
   GridItem,
+  AbsoluteCenter,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
@@ -450,6 +451,8 @@ interface SectionHeadingProps {
   children?: React.ReactNode;
   size?: string;
   color?: string;
+  width?: string;
+  alignSelf?: string;
   mb?: number | string;
   mt?: number | string;
 }
@@ -459,37 +462,51 @@ export function SectionHeading({
   size = SectionHeadingSize,
   mb = 3,
   mt = 0,
+
+  width = "100%",
   color = "accent_2",
 }: SectionHeadingProps) {
+  const title = ({ children }) => {
+    return (
+      <h2>
+        <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
+          {children}
+        </BasicText>
+      </h2>
+    );
+  };
+
   return (
-    <h2>
-      <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
-        {children}
-      </BasicText>
-    </h2>
+    <MyFlex>
+      <AbsoluteCenter bg="white" px="4">
+        {title}
+      </AbsoluteCenter>
+    </MyFlex>
   );
 }
 
 /* ****************************SECTION DESCRIPTION************************************ */
-interface SectionDescriptionProps {
+interface SectionDescriptionProps extends BoxProps {
   children?: React.ReactNode;
-  size?: string;
+  paddingTop?: number | string;
+  paddingBottom?: number | string;
   color?: string;
-  mb?: number | string;
-  mt?: number | string;
+  width?: string;
+  [key: string]: any;
 }
 
 export function SectionDescription({
   children,
-  mb = 1,
-  mt = 1,
+  paddingTop = "10px",
+  paddingBottom = "10px",
   color = "accent_3",
+  width = "100%",
 }: SectionDescriptionProps) {
   return (
     //size={size}
-    <BasicText color={color} mb={mb} mt={mt}>
+    <Box color={color} paddingTop={paddingTop} paddingBottom={paddingBottom}>
       {children}
-    </BasicText>
+    </Box>
   );
 }
 

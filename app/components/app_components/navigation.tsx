@@ -110,16 +110,12 @@ export const navElements: NavElement[] = [
     label: "Disclosure",
     subElements: [
       {
-        link: "/styling/padding_margin",
-        label: "Padding & Margin",
+        link: "/disclosure/accordion",
+        label: "Accordion",
       },
       {
-        link: "/styling/color",
-        label: "Color",
-      },
-      {
-        link: "/styling/css",
-        label: "CSS",
+        link: "/disclosure/tabs",
+        label: "Tabs",
       },
     ],
   },

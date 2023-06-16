@@ -7,7 +7,7 @@ import {
   AccordionOne,
   AccordionThree,
   AccordionTwo,
-} from "~/components/disclosure/accordion";
+} from "~/routes/disclosure+/disclosure_examples/accordion";
 import {
   TabsEight,
   TabsEleven,
@@ -25,7 +25,7 @@ import {
   TabsThree,
   TabsTwelve,
   TabsTwo,
-} from "~/components/disclosure/tabs";
+} from "~/routes/disclosure+/disclosure_examples/tabs";
 import stylesUrl from "~/styles/global.css";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
