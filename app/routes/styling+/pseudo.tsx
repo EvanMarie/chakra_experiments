@@ -33,9 +33,17 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { Box, Input, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Checkbox,
+  CheckboxGroup,
+  Input,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import ClearableInput from "~/components/styling/pseduoExample";
+import { ImCheckboxChecked } from "react-icons/im";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -336,18 +344,62 @@ css={css({
 })}`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
-            EXAMPLE
-            <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            The <b>::checked</b> pseudo-class in CSS is used to select an
+            element that is in a checked state, typically used with form input
+            elements like checkboxes and radio buttons. It represents the state
+            when the user has interacted with the input element and selected it.
+            When an input element with a <b>::checked</b>, you can apply
+            specific styles to customize its appearance. The following example,
+            uses Chakra UI's <b>Checkbox</b> and <b>CheckboxGroup</b> components
+            with the <b>colorScheme</b> prop to customize the checkbox color
+            when it is checked. Chakra UI automatically applies appropriate
+            styling to the checkboxes, including the <b>::checked</b>{" "}
+            pseudo-class, which allows you to define custom styles for the
+            checked state of the checkboxes.
+            <MyFlex>
+              <Box
+                bg="darkText"
+                color="mainText"
+                paddingY={3}
+                paddingX={5}
+                borderRadius="sm"
+              >
+                <VStack alignItems="left">
+                  <CheckboxGroup colorScheme="teal">
+                    <Text fontSize="lg">My Favorite Food: </Text>
+                    <Checkbox size="lg" value="chakra" defaultChecked>
+                      Dark Chocolate
+                    </Checkbox>
+                    <Checkbox size="lg" value="react">
+                      Coffee (it counts)
+                    </Checkbox>
+                    <Checkbox size="lg" value="css">
+                      Sushi
+                    </Checkbox>
+                  </CheckboxGroup>
+                </VStack>
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<CheckboxGroup colorScheme="teal">
+  <Text fontSize="lg">My Favorite Food: </Text>
+ <Checkbox size="lg" value="chakra" defaultChecked>
+    Dark Chocolate
+  </Checkbox>
+  <Checkbox size="lg" value="react">
+    Coffee (it counts)
+  </Checkbox>
+  <Checkbox size="lg" value="css">
+    Sushi
+  </Checkbox>
+</CheckboxGroup>`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Creating a Progress Bar</b>: you can use the{" "}
-            <Mono>::before</Mono>
+            <b>Creating a Progress Bar</b>: you can use the <b>::before</b>
             pseudo-element to create a progress bar. In this example, the
-            <Mono>::before</Mono> pseudo-element is used to create a green bar
-            inside the gray box, simulating a progress bar at 50%. To update the
+            <b>::before</b> pseudo-element is used to create a green bar inside
+            the gray box, simulating a progress bar at 50%. To update the
             progress, you could dynamically change the width value of the{" "}
-            <Mono>::before</Mono> pseudo-element.
+            <b>::before</b> pseudo-element.
             <MyFlex>
               <Box
                 css={css({

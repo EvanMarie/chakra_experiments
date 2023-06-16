@@ -7,12 +7,11 @@ import {
   HStack,
   chakra,
 } from "@chakra-ui/react";
-import { colors } from "~/styles/DesignComponents";
 import { Link } from "@remix-run/react";
 import { useIsCurrentNavRoute } from "./navigation";
 
-const fontSizeMain = "20px";
-const fontSizeSub = "16px";
+const fontSizeMain = ["xl", "xl", "xl", "2xl", "2xl"];
+const fontSizeSub = "lg";
 
 const AccordionLink = chakra("span", {
   baseStyle: {
@@ -43,26 +42,25 @@ interface AccordionMainProps {
   link: string;
   label: string;
   hasIcon?: boolean;
-  fontSize?: string;
 }
 
 export const AccordionMain = ({
   link,
   label,
   hasIcon = true,
-  fontSize = fontSizeMain,
 }: AccordionMainProps) => {
   const isCurrentRoute = useIsCurrentNavRoute(link);
+
   return (
     <Box color="linkColor" {...navHoverMain} paddingLeft={1}>
-    <AccordionButton>
-      <HStack w="100%" justifyContent={"space-between"}>
-        <Link to={link} {...navHoverMain}>
-            <AccordionLink fontSize={fontSize}>{label}</AccordionLink>
-        </Link>
-        <AccordionIcon boxSize={4} color={"accent_2"} />
-      </HStack>
-    </AccordionButton>
+      <AccordionButton>
+        <HStack w="100%" justifyContent={"space-between"}>
+          <Link to={link} {...navHoverMain}>
+            <AccordionLink fontSize={fontSizeMain}>{label}</AccordionLink>
+          </Link>
+          <AccordionIcon boxSize={4} color={"accent_2"} />
+        </HStack>
+      </AccordionButton>
     </Box>
   );
 };

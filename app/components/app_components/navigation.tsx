@@ -9,7 +9,7 @@ import {
   Menu,
   MenuButton,
   MenuList,
-  chakra
+  chakra,
 } from "@chakra-ui/react";
 
 import { AiOutlineHome } from "react-icons/ai";
@@ -100,7 +100,7 @@ export const navElements: NavElement[] = [
       },
       {
         link: "/styling/as_prop",
-        label: "The as Prop",
+        label: 'The "as" Prop',
       },
     ],
   },
@@ -189,7 +189,7 @@ export const useIsCurrentNavRoute = (ownPath: string) => {
     setIsCurrentNavRoute(basePath === ownPath);
   }, [location]);
   return isCurrentNavRoute;
-}
+};
 
 export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
   return ({
@@ -253,4 +253,3 @@ export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
 }
 
 export default makeSideNav({ navElements });
-
