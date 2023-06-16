@@ -195,6 +195,15 @@ export default function chakra_section() {
             <MyFlex>
               <FilterTipThree />
             </MyFlex>
+            <Highlighter>{`const pulse = keyframes
+  0% { filter: brightness(100%); }
+  50% { filter: brightness(150%); }
+  100% { filter: brightness(100%); };
+        
+<Box
+  animation={
+    '{pulse} 3s infinite'}
+>`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

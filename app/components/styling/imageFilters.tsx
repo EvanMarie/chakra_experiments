@@ -2,12 +2,19 @@ import { Box, Flex, Text, VStack, keyframes } from "@chakra-ui/react";
 import { Highlighter } from "./highlighter";
 import { MyFlex } from "~/styles/MainDesignComponents";
 
+const boxSizes = {
+  base: "200px",
+  md: "300px",
+  lg: "250px",
+  xl: "300px",
+};
+
 const basicBoxStyles = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   textAlign: "center",
-  boxSize: "250px",
+  boxSize: boxSizes,
   color: "white",
   textShadow: "0 0 20px black",
   fontWeight: "bold",
@@ -90,7 +97,7 @@ export function Filters() {
 
 export function BackdropFilters() {
   const outerBoxStyles = {
-    boxSize: "250px",
+    boxSize: boxSizes,
     p: "10",
     marginTop: "5px",
     background:
@@ -158,12 +165,34 @@ export function BackdropFilters() {
   );
 }
 
+const highlightboxSizes = {
+  base: "200px",
+  sm: "300px",
+  lg: "175px",
+};
+
+const highlightBoxStyles = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  boxSize: highlightboxSizes,
+  color: "white",
+  textShadow: "0 0 20px black",
+  fontWeight: "bold",
+  fontSize: "20px",
+  px: 4,
+  marginTop: "5px",
+  background:
+    "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
+};
+
 export function FilterTipOne() {
   return (
     <VStack>
       <MyFlex>
         <Box
-          sx={basicBoxStyles}
+          sx={highlightBoxStyles}
           filter="grayscale(100%)"
           _hover={{
             filter: "grayscale(0%)",
@@ -188,11 +217,13 @@ export function FilterTipTwo() {
     <VStack>
       <MyFlex>
         <Box
-          sx={basicBoxStyles}
+          sx={highlightBoxStyles}
           filter="blur(2px) sepia(30%) contrast(130%)"
         ></Box>
         <Highlighter>{`<Box
-  filter="blur(2px) sepia(30%) contrast(130%)"
+  filter="blur(2px) 
+  sepia(30%) 
+  contrast(130%)"
 >`}</Highlighter>
       </MyFlex>
     </VStack>
@@ -207,18 +238,8 @@ export function FilterTipThree() {
 `;
 
   return (
-    <VStack>
-      <MyFlex>
-        <Box sx={basicBoxStyles} animation={`${pulse} 3s infinite`}></Box>
-        <Highlighter>{`const pulse = keyframes
-  0% { filter: brightness(100%); }
-  50% { filter: brightness(150%); }
-  100% { filter: brightness(100%); };
-        
-<Box
-  animation={'{pulse} 3s infinite'}
->`}</Highlighter>
-      </MyFlex>
-    </VStack>
+    <MyFlex>
+      <Box sx={highlightBoxStyles} animation={`${pulse} 3s infinite`}></Box>
+    </MyFlex>
   );
 }
