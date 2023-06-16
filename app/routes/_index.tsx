@@ -1,14 +1,16 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import { BasicText, MyHeading, colors } from "~/styles/DesignComponents";
+import { BasicText, MyDivider, MyHeading } from "~/styles/DesignComponents";
 
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
 import {
   BigBackgroundBox,
+  DescriptionBox,
+  MyFlex,
   SectionContainer,
   SectionDescription,
 } from "~/styles/MainDesignComponents";
+import { Box, HStack, Link, Text } from "@chakra-ui/react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -27,40 +29,60 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <BigBackgroundBox>
-      <MyHeading color={"accent_2"}>
-        Explorations with Chakra-UI
-      </MyHeading>
-      <SectionContainer>
-        <SectionDescription>
-          Chakra UI is a popular, modern, and accessible component library for
-          React that enables developers to quickly build high-quality,
-          accessible user interfaces. Chakra UI uses a responsive, theme-based
-          design system that allows for a great deal of customizability and
-          flexibility.
-        </SectionDescription>
-      </SectionContainer>
-      <SectionContainer>
-        <BasicText>
-          Some of the examples shown here are taken from the Chakra examples in
-          their documentation, and some are my own. Together, they are my own
-          personal explorations and experiments with the various possibilities
-          that Chakra-UI offers as a means of getting to know Chakra and Remix
-          better and to step-up my HTML and CSS game as well. So I put all of
-          that together in this project, because I am nothing if not a
-          multi-tasker.
-        </BasicText>
-        <BasicText>
-          With every example, you can find the link to the Chakra Documentation
-          for the specific component or subject. I hope you are as impressed
-          with the libary as I am!{" "}
-        </BasicText>{" "}
-        <BasicText color={"accent_2"}>
-          <b>Enjoy! And never stop learning!</b>
-        </BasicText>
-        <BasicText>
-          <i>~ Evan Marie Carr</i>
-        </BasicText>
-      </SectionContainer>
+      <MyHeading color={"accent_2"}>Chakra-UI Explorations</MyHeading>
+      <MyDivider mt={0} />
+      <Box fontSize="18px">
+        <SectionContainer p={5}>
+          <SectionDescription>
+            Chakra UI is a powerful, modern, and accessible React component
+            library. Designed to assist developers in rapidly crafting
+            top-notch, accessible user interfaces, Chakra UI leverages a
+            responsive, theme-based design system that provides a considerable
+            degree of customization and adaptability.
+          </SectionDescription>
+          <br />
+          <BasicText>
+            The examples showcased here are a mix of references from Chakra's
+            comprehensive documentation and my own explorations. These serve as
+            a testament to my ongoing journey of understanding the nuances of
+            Chakra and Remix, enhancing my HTML and CSS prowess, and balancing
+            multiple tasks simultaneously.
+          </BasicText>
+          <br />
+          <BasicText>
+            Each example includes a link to the detailed Chakra Documentation
+            for the respective component or topic. I'm confident that you'll
+            find the library as valuable and impressive as I have.{" "}
+          </BasicText>{" "}
+          <br />
+          <BasicText color={"accent_2"}>
+            <b>
+              Enjoy the exploration, and remember: the learning journey never
+              ends!
+            </b>
+          </BasicText>
+          <BasicText>
+            <i>~ Evan Marie Carr</i>
+          </BasicText>
+        </SectionContainer>
+        <HStack
+          spacing={8}
+          p={2}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          color="accent_3"
+          fontWeight="bold"
+        >
+          <Link href="https://chakra-ui.com/" target="_blank">
+            Chakra-ui.com
+          </Link>
+
+          <Link href="https://remix.run/" target="_blank">
+            Remix.run
+          </Link>
+        </HStack>
+      </Box>
     </BigBackgroundBox>
   );
 }

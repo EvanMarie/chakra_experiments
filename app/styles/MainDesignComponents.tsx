@@ -545,6 +545,7 @@ export function SingleExample({ children }: SingleExampleProps) {
 
 interface MyFlexProps extends FlexProps {
   children?: React.ReactNode;
+  bg?: string;
   [key: string]: any;
 }
 

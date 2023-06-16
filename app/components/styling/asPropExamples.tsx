@@ -1,6 +1,7 @@
-import { Box } from "@chakra-ui/react";
 import { useState } from "react";
 import { MyFlex } from "~/styles/MainDesignComponents";
+import { Box, List, ListItem, VStack } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 export function AsPropBox() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,5 +43,29 @@ export function CustomAsPropComponent({
 }: CustomAsPropComponentProps) {
   return (
     <span style={{ color: "darkText", fontWeight: "bold" }}>{children}</span>
+  );
+}
+
+export function AsPropList() {
+  const navItems = ["Home", "About", "Contact"];
+
+  return (
+    <MyFlex>
+      <List display="flex" justifyContent="space-between" width="200px">
+        {navItems.map((item, index) => (
+          <ListItem
+            key={index}
+            bg="accent_1"
+            paddingY={2}
+            paddingX={2}
+            fontWeight="bold"
+            borderRadius="sm"
+            as={RouterLink}
+          >
+            {item}
+          </ListItem>
+        ))}
+      </List>
+    </MyFlex>
   );
 }

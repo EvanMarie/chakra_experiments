@@ -42,7 +42,9 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
 
     const selectedStyles = {
       bg: "accent_3",
-      color: colors.mainBackground,
+      fontSize: "lg",
+      color: "background",
+      fontWeight: "bold",
       _hover: {
         color: "linkColor",
       },
@@ -50,6 +52,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
 
     const unselectedStyles = {
       bg: "darkAccent_3",
+      fontSize: " lg",
       color: "linkColor",
     };
 
@@ -80,7 +83,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
                 key={navItem.label}
                 to={navItem.link}
                 {...(isSelected(navItem) ? selectedStyles : unselectedStyles)}
-                h="20px"
+                h="30px"
               >
                 {navItem.label}
               </MenuItem>

@@ -45,7 +45,7 @@ interface MyHeadingProps {
 export function MyHeading({
   children,
   size = 33,
-  mb = 3,
+  mb = 5,
   mt = 3,
   color = "accent_2",
 }: MyHeadingProps) {

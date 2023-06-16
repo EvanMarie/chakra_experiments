@@ -1,7 +1,6 @@
 import {
   AccordionButton,
   AccordionIcon,
-  AccordionItem,
   AccordionPanel,
   Box,
   HStack,
@@ -22,19 +21,11 @@ const AccordionLink = chakra("span", {
 });
 
 // Scoot text to right
-const navHoverMain = {
+const navHover = {
   _hover: {
-    transform: "translateX(12px)",
-    transition: "transform 0.2s ease-in-out",
-    color: "accent_2",
-  },
-};
-
-const navHoverMini = {
-  _hover: {
+    fontWeight: "bold",
     transform: "translateX(10px)",
-    transition: "transform 0.2s ease-in-out",
-    color: "accent_2",
+    transition: "transform 0.3s ease-in-out",
   },
 };
 
@@ -52,11 +43,22 @@ export const AccordionMain = ({
   const isCurrentRoute = useIsCurrentNavRoute(link);
 
   return (
-    <Box color="linkColor" {...navHoverMain} paddingLeft={1}>
+    <Box
+      {...navHover}
+      color={isCurrentRoute ? "background" : "linkColor"}
+      bg={isCurrentRoute ? "accent_2" : "sidebarBackground"}
+      paddingY={1}
+      paddingLeft={1}
+    >
       <AccordionButton>
         <HStack w="100%" justifyContent={"space-between"}>
-          <Link to={link} {...navHoverMain}>
-            <AccordionLink fontSize={fontSizeMain}>{label}</AccordionLink>
+          <Link to={link}>
+            <AccordionLink
+              fontSize={fontSizeMain}
+              fontWeight={isCurrentRoute ? "bold" : "normal"}
+            >
+              {label}
+            </AccordionLink>
           </Link>
           <AccordionIcon boxSize={4} color={"accent_2"} />
         </HStack>
@@ -79,10 +81,11 @@ export const AccordionSub = ({ link, label }: AccordionSubProps) => {
   return (
     <Link to={link}>
       <AccordionPanel
-        color="linkColor"
-        {...navHoverMini}
-        pb={0}
-        bg={isCurrentRoute ? "background" : "sidebarBackground"}
+        {...navHover}
+        paddingY={1}
+        color={isCurrentRoute ? "background" : "linkColor"}
+        bg={isCurrentRoute ? "accent_2" : "sidebarBackground"}
+        fontWeight={isCurrentRoute ? "bold" : "normal"}
       >
         <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
           {label}

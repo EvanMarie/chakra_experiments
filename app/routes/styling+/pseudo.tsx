@@ -1,18 +1,10 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  HL,
-  Mono,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
-  BulletBox,
-  DescriptionBox,
   ExampleBox,
   MyLabel,
   SectionContainer,
@@ -41,9 +33,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { css } from "@emotion/react";
-import ClearableInput from "~/components/styling/pseduoExample";
-import { ImCheckboxChecked } from "react-icons/im";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -83,14 +72,27 @@ export default function chakra_section() {
               <Mono>::selection</Mono>, <Mono>::backdrop</Mono>, and{" "}
               <Mono>::marker</Mono>.
             </BasicText>
+            <BasicText>
+              The <Mono>sx</Mono> property in Chakra UI provides a powerful way
+              to extend the use of CSS within your components. It allows you to
+              apply custom CSS styles directly to a Chakra UI component using an
+              inline syntax, without the need to write separate CSS files or
+              define additional classes.
+            </BasicText>
+            <BasicText>
+              The <Mono>sx</Mono> property in Chakra UI becomes particularly
+              useful when working with pseudo props. With the <Mono>sx</Mono>{" "}
+              property, you can easily define styles for these pseudo props
+              inline, providing a convenient and concise way to handle
+              state-based styling within your components.
+            </BasicText>
 
             {/* IMPORT CODE */}
             <ImportBox>
               <BasicText>
-                To import the <Mono>Box</Mono> component and enable extended use
-                of CSS as shown below:
+                To import the <Mono>Box</Mono> component used below:
               </BasicText>
-              <Highlighter>{`import { Box, css } from "@chakra-ui/react";`}</Highlighter>
+              <Highlighter>{`import { Box,  } from "@chakra-ui/react";`}</Highlighter>
             </ImportBox>
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
@@ -100,7 +102,7 @@ export default function chakra_section() {
                 <BasicText>
                   <HL>::before and ::after</HL>: These pseudo-elements can be
                   used to add decorative elements or extra content to your
-                  component. In this example, the <Mono>::before</Mono>
+                  component. In this example, the <Mono>::before</Mono>{" "}
                   pseudo-element is used to add a star before the content of the
                   Box. We use position: "absolcontent star relative to the Box.
                   We also use the <Mono>content</Mono> property to include the
@@ -111,7 +113,7 @@ export default function chakra_section() {
                     bg="accent_2"
                     p={3}
                     color="darkText"
-                    css={css({
+                    sx={{
                       position: "relative",
                       "&::before": {
                         content: '"⭐"',
@@ -119,13 +121,13 @@ export default function chakra_section() {
                         top: "0",
                         left: "-20px",
                       },
-                    })}
+                    }}
                   >
                     Starred content
                   </Box>
                 </MyFlex>
                 <Highlighter>{`<Box
-  css={css({
+  sx={{
     position: "relative",
     "&::before": {
       content: '"⭐"',
@@ -133,7 +135,7 @@ export default function chakra_section() {
       top: "0",
       left: "-20px",
     },
-  })}
+  }}
 >`}</Highlighter>
               </SingleExample>
             </SectionContainer>
@@ -152,23 +154,23 @@ export default function chakra_section() {
                     bg="accent_2"
                     p={3}
                     color="darkText"
-                    css={css({
+                    sx={{
                       "&::first-letter": {
                         fontSize: "2em",
                         color: "deeppink",
                       },
-                    })}
+                    }}
                   >
                     The first letter of this sentence is styled.
                   </Box>
                 </MyFlex>
                 <Highlighter>{`<Box
-  css={css({
+  sx={{
     "&::first-letter": {
       fontSize: "2em",
       color: "deeppink",
     },
-  })}
+  }}
 >`}</Highlighter>
               </SingleExample>
             </SectionContainer>
@@ -184,12 +186,12 @@ export default function chakra_section() {
                 </BasicText>
                 <MyFlex>
                   <Box
-                    css={css({
+                    sx={{
                       "&::first-line": {
                         fontWeight: "bold",
                         color: "cyan",
                       },
-                    })}
+                    }}
                   >
                     The first line of this content is bold and cyan.
                     <br />
@@ -200,12 +202,12 @@ export default function chakra_section() {
                   </Box>
                 </MyFlex>
                 <Highlighter>{`<Box
-  css={css({
+  sx={{
     "&::first-line": {
       fontWeight: "bold",
       color: "cyan",
     },
-  })}
+  }}
 >`}</Highlighter>
               </SingleExample>
             </SectionContainer>
@@ -224,21 +226,21 @@ export default function chakra_section() {
                     bg="accent_1"
                     p={3}
                     color="darkText"
-                    css={css({
+                    sx={{
                       "&::selection": {
                         backgroundColor: "cyan",
                       },
-                    })}
+                    }}
                   >
                     Try selecting this text.
                   </Box>
                 </MyFlex>
                 <Highlighter>{` <Box
-  css={css({
+  sx={{
     "&::selection": {
       backgroundColor: "cyan",
     },
-  })}
+  }}
 >`}</Highlighter>
               </SingleExample>
             </SectionContainer>
@@ -260,22 +262,22 @@ export default function chakra_section() {
                   <Input
                     color="darkText"
                     bg="accent_1"
-                    css={css({
+                    sx={{
                       "&::placeholder": {
                         color: "blue",
                         fontStyle: "italic",
                       },
-                    })}
+                    }}
                     placeholder="Type something..."
                   />
                 </MyFlex>
                 <Highlighter>{`<Input
-  css={css({
+  sx={{
     "&::placeholder": {
       color: "blue",
       fontStyle: "italic",
     },
-  })}
+  }}
   placeholder="Type something..."
 />`}</Highlighter>
               </SingleExample>
@@ -298,7 +300,7 @@ export default function chakra_section() {
                 p={3}
                 color="darkText"
                 data-tooltip="I'm a tooltip"
-                css={css({
+                sx={{
                   position: "relative",
                   "&::after": {
                     content: "attr(data-tooltip)",
@@ -316,14 +318,14 @@ export default function chakra_section() {
                   "&:hover::after": {
                     opacity: "1",
                   },
-                })}
+                }}
               >
                 Hover over me
               </Box>
             </MyFlex>
             <Highlighter>{`<Box
 data-tooltip="I'm a tooltip"
-css={css({
+sx={{
   position: "relative",
   "&::after": {
     content: "attr(data-tooltip)",
@@ -402,7 +404,7 @@ css={css({
             <b>::before</b> pseudo-element.
             <MyFlex>
               <Box
-                css={css({
+                sx={{
                   width: "200px",
                   height: "20px",
                   backgroundColor: "lightgray",
@@ -413,11 +415,11 @@ css={css({
                     width: "50%",
                     backgroundColor: "green",
                   },
-                })}
+                }}
               />
             </MyFlex>
             <Highlighter>{`<Box
-    css={css({
+    sx={{
       width: "200px",
       height: "20px",
       backgroundColor: "lightgray",
@@ -428,7 +430,7 @@ css={css({
         width: "50%",
         backgroundColor: "green",
       },
-    })}
+    }}
   />`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>

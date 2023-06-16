@@ -5,8 +5,6 @@ import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
-  BulletBox,
-  DescriptionBox,
   ExampleBox,
   MyLabel,
   SectionContainer,
@@ -21,15 +19,16 @@ import {
   MyFlex,
   SectionDescription,
 } from "~/styles/MainDesignComponents";
-
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { Box, Text } from "@chakra-ui/react";
+import { Button, Link, Text, Box } from "@chakra-ui/react";
+
 import {
   AsPropBox,
+  AsPropList,
   CustomAsPropComponent,
 } from "~/components/styling/asPropExamples";
 
@@ -164,40 +163,77 @@ export default function chakra_section() {
   </Box>`}</Highlighter>
               </SingleExample>
             </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
-              </SingleExample>
-            </SectionContainer>
           </ExampleBox>
         </GridColumn>
 
         <HighlightColumn>
           <GridBoxOne>
-            Tip
-            <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Box as a Semantic HTML Element</b>: Chakra's <b>Box</b> component
+            is a versatile component that you can transform into any <b>HTML</b>{" "}
+            element. For instance, if you need a <b>Box</b> component with a
+            semantic section <b>HTML</b> element.
+            <MyFlex>
+              <Box as="section">
+                <h2>This is a section</h2>
+                <p>This is the section content</p>
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Box as="section">
+  <h2>This is a section</h2>
+  <p>This is the section content</p>
+</Box>`}</Highlighter>
           </GridBoxOne>
 
           <GridBoxTwo>
-            Tip<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Transforming a Link into a Button</b>: You can also easily
+            transform a link to look and behave like a Chakra UI Button using
+            the <b>as prop</b>. This renders a link that looks like a Chakra UI{" "}
+            <b>Button</b> and directs the user.
+            <MyFlex>
+              <Link as={Button} href="https://www.somewhere.com">
+                Go somewhere
+              </Link>
+            </MyFlex>
+            <Highlighter>{`<Link as={Button} href="https://www.somewhere.com">
+  Go somewhere
+</Link>`}</Highlighter>
           </GridBoxTwo>
 
           <GridBoxThree>
-            Tip<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Transforming a List into a Navigation Menu</b>: Suppose you want
+            to create a navigation menu, but you have a list of items. Instead
+            of manually creating a set of Link or Button components, you can use
+            a List and transform its items into clickable links. In the{" "}
+            following example, we are transforming each <b>ListItem</b> into a{" "}
+            <b>RouterLink</b> (from react-router-dom). This allows each list
+            item to behave as a link, directing the user to a different route
+            when clicked. The <b>to</b> prop is dynamically set based on the
+            item value, creating different routes for each item. This approach
+            can also be used to quickly create dynamic breadcrumb navigations,
+            or any similar component.
+            <MyFlex>
+              <AsPropList />
+            </MyFlex>
+            <Highlighter>{`const navItems = [
+  "Home", 
+  "About",
+  "Contact"];
+  return (
+    <MyFlex>
+      <List 
+        display="flex" 
+        justifyContent="space-between"
+        width="200px">
+          {navItems.map((item, index) => (
+            <ListItem
+              key={index}
+              as={RouterLink}
+              to={'/{item.toLowerCase()}'}
+            >
+              {item}
+            </ListItem>
+        ))}
+      </List>`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
