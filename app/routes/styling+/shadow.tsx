@@ -27,7 +27,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -85,8 +85,8 @@ export default function chakra_section() {
                     0, 0, 0.05)"{" "}
                   </Mono>{" "}
                   - This is a large shadow. It applies an even more pronounced
-                  shadow than md. It's good for higher depth elements and for
-                  creating a stronger feeling of elevation.{" "}
+                  shadow than <Mono>md</Mono>. It's good for higher depth
+                  elements and for creating a stronger feeling of elevation.{" "}
                 </li>
                 <li>
                   <HL>xl</HL>:{" "}
@@ -132,8 +132,11 @@ export default function chakra_section() {
 
               {/* IMPORT CODE */}
               <ImportBox>
-                <BasicText>To import this:</BasicText>
-                <Highlighter>{`import { Something } from "Somewhere";`}</Highlighter>
+                <BasicText>
+                  To import the <Mono>Box</Mono> and <Mono>Text</Mono>{" "}
+                  components used below:
+                </BasicText>
+                <Highlighter>{`import { Box, Text } from "@chakra-ui/react";`}</Highlighter>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -211,36 +214,101 @@ export default function chakra_section() {
             </SectionContainer>
 
             <SectionContainer>
-              <SingleExample>EXAMPLE</SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>EXAMPLE</SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>EXAMPLE</SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>EXAMPLE</SingleExample>
+              <SingleExample>
+                <BasicText>
+                  Text With Shadows: you can also apply shadows to text using
+                  the <Mono>textShadow</Mono>. In this example, the{" "}
+                  <Mono>textShadow</Mono> prop is used to create a shadow effect
+                  on the text. It is set to <Mono>"2px 2px red"</Mono>,
+                  specifying a shadow with a horizontal offset of 2 pixels,
+                  vertical offset of 2 pixels, and a shadow color of red.
+                </BasicText>
+                <MyFlex>
+                  <Text color="white" textShadow="2px 2px red" fontSize={28}>
+                    Shadowy Text
+                  </Text>
+                  <Highlighter>
+                    {`<Text color="white" textShadow="2px 2px 5px red" fontSize={28}>`}
+                  </Highlighter>
+                </MyFlex>
+              </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
 
         <HighlightColumn>
           <GridBoxOne>
-            Highlight coming soon!
-            <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            You can use the theme object to define custom shadows. With Chakra
+            UI, you can define custom shadows in your <b>theme</b> and use them
+            across your application. This can be particularly handy if you use
+            the same shadow settings frequently. Here's how you could do it:
+            <Highlighter>
+              {`const theme = extendTheme({
+  shadows: {
+    outline: "0 0 0 3px rgba(66, 153, 225, 0.6)",
+    inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
+  },
+})
+
+// Using your custom shadow
+<Box boxShadow="custom">Hello World</Box>`}
+            </Highlighter>
+            This way, your custom shadow can be used like any of the built-in
+            shadows.
           </GridBoxOne>
           <GridBoxTwo>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            You can animate your <b>boxShadow</b>! With Chakra UI, you can apply
+            CSS transitions or animations to your <b>boxShadow</b>. This can be
+            a great way to draw attention or give feedback to users. For
+            instance, you can have a box that increases its shadow on hover. In
+            the following example, when the user hovers over the box, the shadow
+            will smoothly transition from <b>md</b> (medium) to <b>xl</b> (extra
+            large) over 0.9 seconds.
+            <MyFlex paddingY={4} borderRadius="sm">
+              <Box
+                bg="accent_3"
+                borderRadius="sm"
+                p={2}
+                boxShadow="sm"
+                fontSize="16px"
+                _hover={{
+                  boxShadow: "2xl",
+                  transition: "box-shadow 0.9s ease-in-out",
+                }}
+              >
+                Hover for Shadow!
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Box
+  boxShadow="sm"
+  _hover={{
+    boxShadow: "2xl",
+    transition: "box-shadow 0.9s ease-in-out",
+  }}`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            You can create multi-layered shadows. If you want to achieve a
+            complex, layered shadow effect, you can provide multiple shadow
+            definitions separated by a comma. It's a somewhat advanced use of
+            shadows but it can add some depth and sophistication to your UI. In
+            the following example, the box will have two shadows. The first
+            shadow is broader and lighter, and the second is closer and darker,
+            resulting in a layered, complex shadow effect. The shadows are
+            applied in the order they are listed.
+            <MyFlex>
+              <Box
+                borderRadius="sm"
+                p={3}
+                bg="accent_1"
+                boxShadow="0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05)"
+              >
+                Whazzup, Planet?!
+              </Box>
+            </MyFlex>
+            <Highlighter>{` <Box
+  boxShadow="0px 10px 15px rgba(0, 0, 0, 0.1), 
+             0px 4px 6px rgba(0, 0, 0, 0.05)"
+>`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

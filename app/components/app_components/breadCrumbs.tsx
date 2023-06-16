@@ -1,14 +1,16 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, chakra } from "@chakra-ui/react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  chakra,
+} from "@chakra-ui/react";
 
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "@remix-run/react";
 import { navElements } from "~/components/app_components/navigation";
 import type { NavElement } from "~/components/app_components/navigation";
 
-
-import {
-  getLabelForUrl,
-} from "~/components/app_components/navigation";
+import { getLabelForUrl } from "~/components/app_components/navigation";
 
 import { colors } from "~/styles/DesignComponents";
 const StyledBreadcrumbLink = chakra(BreadcrumbLink, {
@@ -29,7 +31,7 @@ export function BreadCrumbs() {
     <Breadcrumb
       spacing="8px"
       separator={<ChevronRightIcon color="gray.500" />}
-      fontSize="sm"
+      // fontSize="sm"
       mt={2}
     >
       <BreadcrumbItem>

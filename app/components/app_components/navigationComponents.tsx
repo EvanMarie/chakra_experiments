@@ -12,13 +12,12 @@ import { Link } from "@remix-run/react";
 import { useIsCurrentNavRoute } from "./navigation";
 
 const fontSizeMain = "20px";
-const fontSizeSub = "17px";
+const fontSizeSub = "16px";
 
 const AccordionLink = chakra("span", {
   baseStyle: {
     flex: "1",
     textAlign: "left",
-    marginRight: 10,
     w: "100%",
   },
 });

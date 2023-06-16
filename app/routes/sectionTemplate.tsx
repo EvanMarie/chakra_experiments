@@ -28,6 +28,7 @@ import {
   HighlightColumn,
   MyFlex,
   SectionDescription,
+  SingleExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -94,23 +95,53 @@ export default function chakra_section() {
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
-            <VStack w="100%" spacing={0}>
-              <Box></Box>
-              <Highlighter>{``}</Highlighter>
-              <BasicText></BasicText>
-            </VStack>
-            <MyDivider mt={0} mb={0} />
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>Component Section</BasicText>
+                <MyFlex></MyFlex>
+                <Highlighter>{``}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
 
-            <SectionContainer mt={0}>COMPONENT EXAMPLE ONE</SectionContainer>
-            <Highlighter>{``}</Highlighter>
-            <SectionContainer>COMPONENT EXAMPLE TWO</SectionContainer>
-            <Highlighter>{``}</Highlighter>
-            <SectionContainer>COMPONENT EXAMPLE THREE</SectionContainer>
-            <Highlighter>{``}</Highlighter>
-            <SectionContainer>COMPONENT EXAMPLE FOUR</SectionContainer>
-            <Highlighter>{``}</Highlighter>
-            <SectionContainer>COMPONENT EXAMPLE FIVE</SectionContainer>
-            <Highlighter>{``}</Highlighter>
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>Component Section</BasicText>
+                <MyFlex></MyFlex>
+                <Highlighter>{``}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>Component Section</BasicText>
+                <MyFlex></MyFlex>
+                <Highlighter>{``}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>Component Section</BasicText>
+                <MyFlex></MyFlex>
+                <Highlighter>{``}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>Component Section</BasicText>
+                <MyFlex></MyFlex>
+                <Highlighter>{``}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <BasicText>Component Section</BasicText>
+                <MyFlex></MyFlex>
+                <Highlighter>{``}</Highlighter>
+              </SingleExample>
+            </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
