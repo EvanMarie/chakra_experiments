@@ -24,7 +24,7 @@ const colors = {
   secondaryText: "#26231a",
   mainAccent: "#faa5b9",
   mainAccent2: "#a7d5fa",
-  "accent_3": "#05fce8",
+  accent_3: "#05fce8",
   mainAccent4: "#370a42",
   secondaryBackground: "#460b47",
   myblue: "#0c2b45",
@@ -153,19 +153,28 @@ interface GridBoxProps extends BoxProps {
 
 const GridBoxDefaults = {
   width: "100%",
-  padding: 2,
   marginY: 2,
   borderRadius: "sm",
   boxShadow: "lg",
 };
 
+const GridBoxTextSizes = {
+  base: "14px",
+  small: "16px",
+  md: "16px",
+  lg: "14px",
+};
+
+const GridBoxPaddingValues = {
+  base: "5px 10px",
+  small: "20px",
+  md: "10px 20px",
+  lg: "10px",
+};
+
 export function GridBoxOne({ children, ...rest }: GridBoxProps) {
-  const SmallTextSize = useBreakpointValue({
-    base: "13px",
-    small: "15px",
-    md: "16px",
-    lg: "14px",
-  });
+  const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
+  const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
     <Box
@@ -173,6 +182,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
       bg={"accent_1"}
       color={"darkText"}
       fontSize={SmallTextSize}
+      padding={PaddingValues}
     >
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
@@ -191,18 +201,16 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
 }
 
 export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
-  const SmallTextSize = useBreakpointValue({
-    base: "13px",
-    small: "15px",
-    md: "16px",
-    lg: "14px",
-  });
+  const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
+  const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
+
   return (
     <Box
       {...GridBoxDefaults}
       bg={"accent_2"}
       color={"darkText"}
       fontSize={SmallTextSize}
+      padding={PaddingValues}
     >
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
@@ -221,12 +229,8 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
 }
 
 export function GridBoxThree({ children, ...rest }: GridBoxProps) {
-  const SmallTextSize = useBreakpointValue({
-    base: "13px",
-    small: "15px",
-    md: "16px",
-    lg: "14px",
-  });
+  const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
+  const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
     <Box
@@ -234,6 +238,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
       bg={"accent_3"}
       color={"darkText"}
       fontSize={SmallTextSize}
+      padding={PaddingValues}
     >
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
@@ -266,43 +271,28 @@ export function MyLabel({
   link = "",
   children,
 }: MyLabelProps) {
-  if (link === "") {
-    return (
-      <VStack>
-        <Text
-          fontSize={["18px", "30px", size]}
-          color={labelColor}
-          fontWeight="bold"
-          lineHeight="2em"
+  return (
+    <Flex overflow-x="hidden" direction="column">
+      <Flex w="100%" justifyContent="center">
+        <Flex
+          w="60%"
+          paddingLeft={2}
+          overflow-x="hidden"
+          justifyContent="flex-end"
         >
-          {children}
-        </Text>
-
-        <MyDivider mt={2} mb={2} />
-      </VStack>
-    );
-  } else {
-    return (
-      <Flex overflow-x="hidden" direction="column">
-        <Flex w="100%" justifyContent="center">
-          <Flex
-            w="60%"
-            paddingLeft={2}
-            overflow-x="hidden"
-            justifyContent="flex-end"
+          <Text
+            w="100%"
+            fontSize={["18px", "24px", size]}
+            color={labelColor}
+            fontWeight="bold"
           >
-            <Text
-              w="100%"
-              fontSize={["18px", "24px", size]}
-              color={labelColor}
-              fontWeight="bold"
-            >
-              {children}
-            </Text>
-          </Flex>
-          <Flex w="40%" justifyContent="flex-end" paddingRight={2}>
-            <HStack spacing={3} alignItems="center" justifyContent="right">
-              <Text fontSize="28px">|</Text>
+            {children}
+          </Text>
+        </Flex>
+        <Flex w="40%" justifyContent="flex-end" paddingRight={2}>
+          <HStack spacing={3} alignItems="center" justifyContent="right">
+            <Text fontSize="28px">|</Text>
+            <Flex justify="center" align="center" pb={1.5}>
               <CustomLink
                 href={link}
                 target="_blank"
@@ -311,14 +301,14 @@ export function MyLabel({
               >
                 Chakra Docs
               </CustomLink>
-              <Text fontSize="28px">|</Text>
-            </HStack>
-          </Flex>
+            </Flex>
+            <Text fontSize="28px">|</Text>
+          </HStack>
         </Flex>
-        <MyDivider mt={2} mb={2} />
       </Flex>
-    );
-  }
+      <MyDivider mt={0} mb={2} />
+    </Flex>
+  );
 }
 
 /* *******************************DESCR BOX***************************************** */
@@ -430,18 +420,24 @@ interface ExampleBoxProps extends BoxProps {
 export function ExampleBox({
   children,
   paddingX = 0,
-  paddingY = 0,
+  paddingBottom = 0,
+  paddingTop = 3,
   width = "100%",
 }: ExampleBoxProps) {
   return (
-    <Box paddingX={paddingX} paddingY={paddingY} w={width} overflow-x="hidden">
-      <BasicText color={"accent_2"} size={SectionHeadingSize} mt={3}>
-        <b>
-          <i>Examples</i>
-        </b>
-        :
-      </BasicText>
-      <MyDivider mb={3} mt={1} />
+    <Box
+      paddingX={paddingX}
+      paddingBottom={paddingBottom}
+      paddingTop={paddingTop}
+      w={width}
+      overflow-x="hidden"
+    >
+      <h1>
+        <BasicText color="accent_3" mb={0}>
+          Examples
+        </BasicText>
+      </h1>
+      <MyDivider mb={3} mt={0} />
       <VStack w="100%" spacing={3} overflow-x="hidden">
         {children}
       </VStack>
@@ -466,9 +462,11 @@ export function SectionHeading({
   color = "accent_2",
 }: SectionHeadingProps) {
   return (
-    <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
-      {children}
-    </BasicText>
+    <h2>
+      <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
+        {children}
+      </BasicText>
+    </h2>
   );
 }
 

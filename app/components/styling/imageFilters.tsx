@@ -1,37 +1,26 @@
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
-import { BasicText, Mono, colors } from "~/styles/DesignComponents";
+import { Box, Flex, Text, VStack, keyframes } from "@chakra-ui/react";
+import { Highlighter } from "./highlighter";
+import { MyFlex } from "~/styles/MainDesignComponents";
+
+const basicBoxStyles = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  boxSize: "250px",
+  color: "white",
+  textShadow: "0 0 20px black",
+  fontWeight: "bold",
+  fontSize: "20px",
+  px: 4,
+  marginTop: "5px",
+  background:
+    "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
+};
 
 export function Filters() {
-  const basicBoxStyles = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    boxSize: "250px",
-    color: "white",
-    textShadow: "0 0 20px black",
-    fontWeight: "bold",
-    fontSize: "20px",
-    px: 4,
-    background:
-      "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
-  };
   return (
-    <Flex flexWrap="wrap" gap="24px" justifyContent="space-evenly" m={5}>
-      {/* adding filter property to the element */}
-      <VStack>
-        <Flex
-          flexDirection="column"
-          textAlign="center"
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Mono>filter="grayscale(80%)"</Mono>
-          <Box sx={basicBoxStyles} filter="grayscale(80%)">
-            Box with Filter
-          </Box>
-        </Flex>
-      </VStack>
+    <Flex flexWrap="wrap" gap="24px" justifyContent="space-evenly" m={3}>
       {/* adding blur property to the element */}
       <VStack>
         <Flex
@@ -40,25 +29,60 @@ export function Filters() {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Mono>filter="auto" blur="2px"</Mono>
-          <Box sx={basicBoxStyles} filter="auto" blur="2px">
-            Box with Blur
-          </Box>
+          <Highlighter>filter="auto" blur="2px"</Highlighter>
+          <Box sx={basicBoxStyles} filter="auto" blur="2px"></Box>
         </Flex>
       </VStack>
       {/* adding brightness property to the element */}
       <VStack>
-        <Flex
-          flexDirection="column"
-          textAlign="center"
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Mono>filter="auto" brightness="40%"</Mono>
-          <Box sx={basicBoxStyles} filter="auto" brightness="40%">
-            Box with Brightness
-          </Box>
-        </Flex>
+        <MyFlex>
+          <Highlighter>filter="auto" brightness="40%"</Highlighter>
+          <Box sx={basicBoxStyles} filter="auto" brightness="40%"></Box>
+        </MyFlex>
+      </VStack>
+      {/* adding brightness property to the element */}
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="contrast(130%)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="contrast(130%)"></Box>
+        </MyFlex>
+      </VStack>
+      {/* adding filter property to the element */}
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="grayscale(80%)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="grayscale(80%)"></Box>
+        </MyFlex>
+      </VStack>
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="hue-rotate(90deg)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="hue-rotate(90deg)"></Box>
+        </MyFlex>
+      </VStack>
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="invert(100%)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="invert(100%)"></Box>
+        </MyFlex>
+      </VStack>
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="opacity(50%)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="opacity(50%)"></Box>
+        </MyFlex>
+      </VStack>
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="saturate(200%)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="saturate(200%)"></Box>
+        </MyFlex>
+      </VStack>
+      <VStack>
+        <MyFlex>
+          <Highlighter>filter="sepia(100%)"</Highlighter>
+          <Box sx={basicBoxStyles} filter="sepia(100%)"></Box>
+        </MyFlex>
       </VStack>
     </Flex>
   );
@@ -68,6 +92,7 @@ export function BackdropFilters() {
   const outerBoxStyles = {
     boxSize: "250px",
     p: "10",
+    marginTop: "5px",
     background:
       "url(https://picsum.photos/id/1068/200/300) center/cover no-repeat",
   };
@@ -92,45 +117,32 @@ export function BackdropFilters() {
     >
       {/* adding backdrop-filter property to the element */}
       <VStack>
-        <Flex
-          flexDirection="column"
-          textAlign="center"
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Mono>backdropFilter="invert(100%)"</Mono>
+        <MyFlex>
+          <Highlighter>backdropFilter="invert(100%)"</Highlighter>
           <Box sx={outerBoxStyles}>
             <Box sx={innerBoxStyles} backdropFilter="invert(100%)">
               Box with Backdrop Filter
             </Box>
           </Box>
-        </Flex>
+        </MyFlex>
       </VStack>
       {/* adding backdrop-blur property to the element */}
       <VStack>
-        <Flex
-          flexDirection="column"
-          textAlign="center"
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Mono>backdropFilter="auto" backdropBlur="8px"</Mono>
+        <MyFlex>
+          <Highlighter>backdropFilter="auto" backdropBlur="8px"</Highlighter>
           <Box sx={outerBoxStyles}>
             <Box sx={innerBoxStyles} backdropFilter="auto" backdropBlur="8px">
               Box with Backdrop Blur
             </Box>
           </Box>
-        </Flex>
+        </MyFlex>
       </VStack>
       {/* adding backdrop-contrast property to the element */}
       <VStack>
-        <Flex
-          flexDirection="column"
-          textAlign="center"
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Mono>backdropFilter="auto" backdropContrast="30%"</Mono>
+        <MyFlex>
+          <Highlighter>
+            backdropFilter="auto" backdropContrast="30%"
+          </Highlighter>
           <Box sx={outerBoxStyles}>
             <Box
               sx={innerBoxStyles}
@@ -140,8 +152,73 @@ export function BackdropFilters() {
               Box with Backdrop Contrast
             </Box>
           </Box>
-        </Flex>
+        </MyFlex>
       </VStack>
     </Flex>
+  );
+}
+
+export function FilterTipOne() {
+  return (
+    <VStack>
+      <MyFlex>
+        <Box
+          sx={basicBoxStyles}
+          filter="grayscale(100%)"
+          _hover={{
+            filter: "grayscale(0%)",
+            transition: "filter 0.3s",
+          }}
+        ></Box>
+        <Highlighter>{`<Box
+  sx={basicBoxStyles}
+  filter="grayscale(100%)"
+  _hover={{
+    filter: "grayscale(0%)",
+    transition: "filter 0.3s",
+  }}
+>`}</Highlighter>
+      </MyFlex>
+    </VStack>
+  );
+}
+
+export function FilterTipTwo() {
+  return (
+    <VStack>
+      <MyFlex>
+        <Box
+          sx={basicBoxStyles}
+          filter="blur(2px) sepia(30%) contrast(130%)"
+        ></Box>
+        <Highlighter>{`<Box
+  filter="blur(2px) sepia(30%) contrast(130%)"
+>`}</Highlighter>
+      </MyFlex>
+    </VStack>
+  );
+}
+
+export function FilterTipThree() {
+  const pulse = keyframes`
+  0% { filter: brightness(100%); }
+  50% { filter: brightness(150%); }
+  100% { filter: brightness(100%); }
+`;
+
+  return (
+    <VStack>
+      <MyFlex>
+        <Box sx={basicBoxStyles} animation={`${pulse} 3s infinite`}></Box>
+        <Highlighter>{`const pulse = keyframes
+  0% { filter: brightness(100%); }
+  50% { filter: brightness(150%); }
+  100% { filter: brightness(100%); };
+        
+<Box
+  animation={'{pulse} 3s infinite'}
+>`}</Highlighter>
+      </MyFlex>
+    </VStack>
   );
 }

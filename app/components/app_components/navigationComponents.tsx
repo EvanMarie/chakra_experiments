@@ -12,21 +12,19 @@ import { Link } from "@remix-run/react";
 import { useIsCurrentNavRoute } from "./navigation";
 
 const fontSizeMain = "20px";
-const fontSizeSub = "17px";
+const fontSizeSub = "16px";
 
-const AccordionLink = chakra('span', {
+const AccordionLink = chakra("span", {
   baseStyle: {
     flex: "1",
     textAlign: "left",
-    marginRight: 10,
     w: "100%",
     color: "linkColor",
     _hover: {
       color: "accent_2",
     },
-  }
-})
-
+  },
+});
 
 // Scoot text to right
 const navHoverMain = {
@@ -81,15 +79,18 @@ interface AccordionSubProps {
 
 export const AccordionSub = ({ link, label }: AccordionSubProps) => {
   const isCurrentRoute = useIsCurrentNavRoute(link);
-  
-  return (
-      <AccordionPanel  {...navHoverMini} pb={0} bg={isCurrentRoute ? "background" : "sidebarBackground"}>
-        <Link to={link} >
-          <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
-            {label}
-          </AccordionLink>
-        </Link>
-      </AccordionPanel>
 
+  return (
+    <AccordionPanel
+      {...navHoverMini}
+      pb={0}
+      bg={isCurrentRoute ? "background" : "sidebarBackground"}
+    >
+      <Link to={link}>
+        <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
+          {label}
+        </AccordionLink>
+      </Link>
+    </AccordionPanel>
   );
 };

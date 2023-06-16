@@ -30,6 +30,19 @@ a:hover {
     color: cyan;
 }
 
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 550;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: 550;
+}
+
+
 
 
 .grid {
@@ -43,6 +56,17 @@ a:hover {
         font-size: 0.97rem;
 
     }
+
+    h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+
+    }
 }
 
 
@@ -52,6 +76,17 @@ a:hover {
         font-size: 1rem;
  
     }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+
+    }
 }
 
 /* Media query for even large screens */
@@ -59,13 +94,5 @@ a:hover {
     body {
         font-size: 1.11rem;
      
-    }
-}
-
-/* Media query for even extra large screens */
-@media screen and (min-width: 1280px) {
-    body {
-        font-size: 1.11rem;
-
     }
 }

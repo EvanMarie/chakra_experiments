@@ -52,7 +52,7 @@ export default function chakra_basic_styling() {
         Chakra UI Styling System:
       </MyLabel>
       <SectionContainer>
-        <BasicText color={colors.mainAccent3}>
+        <BasicText color={colors.accent_3}>
           The Chakra UI Styling system is a comprehensive and intuitive approach
           to styling React applications using Chakra UI. It provides a set of
           utility functions, components, and design tokens that make it easy to
