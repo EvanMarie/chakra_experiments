@@ -13,7 +13,7 @@ import {
   Spacer,
   useBreakpointValue,
   GridItem,
-  AbsoluteCenter,
+  Divider,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
@@ -62,7 +62,7 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       p="5px"
       w={MainWidth}
       maxWidth={MainMaxWidth}
-      bg={colors.mainBackground}
+      bg="background"
       color={"mainText"}
       justifyContent={"center"}
       alignItems={"center"}
@@ -466,22 +466,15 @@ export function SectionHeading({
   width = "100%",
   color = "accent_2",
 }: SectionHeadingProps) {
-  const title = ({ children }) => {
-    return (
-      <h2>
-        <BasicText size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
-          {children}
-        </BasicText>
-      </h2>
-    );
-  };
-
   return (
-    <MyFlex>
-      <AbsoluteCenter bg="white" px="4">
-        {title}
-      </AbsoluteCenter>
-    </MyFlex>
+    <Box w="100%" justifyContent="left" textAlign="left">
+      <h2>
+        <Text size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
+          {children}
+        </Text>
+      </h2>
+      <Divider color="mainText" opacity="0.3" variant="dashed" mb={3} mt={0} />
+    </Box>
   );
 }
 

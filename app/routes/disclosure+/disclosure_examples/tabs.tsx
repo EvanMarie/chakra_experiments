@@ -35,7 +35,7 @@ export function TabsOne() {
         move focus between accordion buttons.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs>
             <TabList>
@@ -73,7 +73,7 @@ export function TabsTwo() {
         <Mono>unstyled</Mono>
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs variant="enclosed">
             <TabList>
@@ -98,7 +98,6 @@ export function TabsTwo() {
 export function TabsThree() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>Variants and Colors: Example Two</SectionHeading>
       <SectionDescription>
         ⦾ You can also change the color scheme for any specific variant by
         passing the <Mono>colorScheme</Mono>. The value of{" "}
@@ -107,7 +106,7 @@ export function TabsThree() {
         color values.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs variant="soft-rounded" colorScheme="green">
             <TabList>
@@ -140,7 +139,7 @@ export function TabsFour() {
         a red <Mono>colorScheme</Mono>.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs size="sm" variant="soft-rounded" colorScheme="red">
             <TabList>
@@ -172,7 +171,7 @@ export function TabsFive() {
         and <Mono>end</Mono>. The following uses a center alignment.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs align="center" variant="enclosed">
             <TabList>
@@ -203,7 +202,7 @@ export function TabsSix() {
         <Mono>isFitted</Mono> prop.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs isFitted variant="enclosed">
             <TabList mb="1em">
@@ -276,7 +275,7 @@ export function TabsSeven() {
         tabbed interface.
       </BasicText>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs position="relative" variant="unstyled">
             <TabList>
@@ -318,7 +317,7 @@ export function TabsEight() {
         <Mono>_active</Mono> style props.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs variant="unstyled">
             <TabList>
@@ -390,7 +389,7 @@ export function TabsNine() {
         programmatically, use this with the <Mono>index</Mono> prop.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <OnChangeTabs />
         </Box>
@@ -409,7 +408,7 @@ export function TabsTen() {
         move focus between accordion buttons. Here, the{" "}
         <Mono>defaultIndex</Mono> on <Mono>Tabs</Mono> is set to 3.
       </SectionDescription>
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs isFitted defaultIndex={3}>
             <TabPanels>
@@ -463,7 +462,7 @@ export function TabsEleven() {
         on the second tab.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs>
             <TabList>
@@ -499,7 +498,7 @@ export function TabsTwelve() {
         tab by pressing Space or Enter.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs isManual variant="enclosed">
             <TabList>
@@ -536,7 +535,7 @@ export function TabsThirteen() {
 
       <Mono>Tabs: isLazy</Mono>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Tabs isLazy>
             <TabList>
@@ -569,7 +568,7 @@ export function TabsFourteen() {
         include an onChange as well, or else the tabs will not be interactive.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <ControlledTabs />
         </Box>
@@ -588,7 +587,7 @@ export function TabsFifteen() {
         must use <Mono>React.forwardRef</Mono>.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <CustomTabs />
         </Box>
@@ -607,7 +606,7 @@ export function TabsSixteen() {
         component.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <DataArrayTabs />
         </Box>

@@ -42,6 +42,23 @@ import {
   AccordionThree,
   AccordionTwo,
 } from "~/routes/disclosure+/disclosure_examples/accordion";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  HStack,
+  Input,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import {
+  ArrowDownIcon,
+  ChevronDownIcon,
+  TriangleDownIcon,
+} from "@chakra-ui/icons";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -49,6 +66,8 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
   { rel: "stylesheet", href: styles },
 ];
+
+const MotionBox = motion(Box);
 
 export default function chakra_section() {
   return (
@@ -185,17 +204,138 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Highlight coming soon!
-            <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Nested Accordions</b>: you can nest Accordions within Accordions
+            for more complex data organization. It's a handy trick when you need
+            to present multilayered information in a clear and orderly manner.
+            <MyFlex>
+              <Box h="240px" w="100%" bg="gray.700" p={4} color="white">
+                <Accordion allowToggle>
+                  <AccordionItem>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="left">
+                        Section 1 title
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                    <AccordionPanel pb={4}>
+                      Section 1 content
+                      {/* Nested accordion */}
+                      <Accordion allowToggle>
+                        <AccordionItem>
+                          <AccordionButton>
+                            <Box flex="1" textAlign="left">
+                              Nested Section 1 title
+                            </Box>
+                            <AccordionIcon />
+                          </AccordionButton>
+                          <AccordionPanel pb={4}>
+                            Nested Section 1 content
+                          </AccordionPanel>
+                        </AccordionItem>
+                      </Accordion>
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Accordion allowToggle>
+  <AccordionItem>
+    <AccordionButton>
+      <Box flex="1" textAlign="left">
+        Section 1 title
+      </Box>
+      <AccordionIcon />
+    </AccordionButton>
+    <AccordionPanel pb={4}>
+      Section 1 content
+      <Accordion allowToggle>
+        <AccordionItem>
+          <AccordionButton>
+            <Box flex="1" textAlign="left">
+              Nested Section 1 title
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+          <AccordionPanel pb={4}>
+            Nested Section 1 content
+          </AccordionPanel>
+        </AccordionItem>
+      </Accordion>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            One creative idea when working with Accordions could be to replace
+            the default <b>AccordionIcon</b> with custom icons for an expanded
+            and collapsed state. In the following example, instead of the
+            default accordion icon, we're using the ArrowDownIcon from Chakra
+            UI's inbuilt icons. It's important to note that to show a different
+            icon when the accordion item is collapsed, it is necessary to create
+            a custom AccordionButton component.
+            <MyFlex>
+              <Box h="125px" w="100%" bg="gray.700" p={4} color="white">
+                <Accordion allowToggle>
+                  <AccordionItem>
+                    <AccordionButton>
+                      <HStack w="100%" justifyContent="space-between">
+                        <Box>Section 1 Title</Box>
+                        <Box>
+                          <AccordionIcon as={ArrowDownIcon} boxSize={4} />
+                        </Box>
+                      </HStack>
+                    </AccordionButton>
+                    <AccordionPanel pb={4}>Section 1 Content</AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Accordion allowToggle>
+  <AccordionItem>
+    <AccordionButton>
+      <HStack w="100%" justifyContent="space-between">
+        <Box>Section 1 Title</Box>
+        <Box>
+          <AccordionIcon as={ArrowDownIcon} boxSize={4} />
+        </Box>
+      </HStack>
+    </AccordionButton>
+    <AccordionPanel pb={4}>Section 1 Content</AccordionPanel>
+  </AccordionItem>
+</Accordion>`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Embedding components in an accordion</b>: you can embed any
+            component in an accordion panel. In the following example, there is
+            an embedded input form and button within the accordion.
+            <MyFlex>
+              <Box h="135px" w="100%" bg="gray.700" p={4} color="white">
+                <Accordion allowToggle>
+                  <AccordionItem>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="left">
+                        Click for input form
+                      </Box>
+                    </AccordionButton>
+                    <AccordionPanel pb={4}>
+                      <Input placeholder="Type here..." />
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+              </Box>
+            </MyFlex>
+            <Highlighter>{`<Accordion allowToggle>
+  <AccordionItem>
+    <AccordionButton>
+      <Box flex="1" textAlign="left">
+        Click me for input form
+      </Box>
+    </AccordionButton>
+    <AccordionPanel pb={4}>
+      <Input placeholder="Type here..." />
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

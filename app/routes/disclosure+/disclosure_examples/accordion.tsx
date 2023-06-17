@@ -6,7 +6,12 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
+  useColorModeValue,
+  useToast,
+  Input,
+  VStack,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 import { Mono, colors } from "~/styles/DesignComponents";
 import {
@@ -26,7 +31,7 @@ export function AccordionOne() {
         move focus between accordion buttons.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Accordion>
             <AccordionItem>
@@ -78,7 +83,7 @@ export function AccordionTwo() {
         permit multiple items to be expanded at once.
       </SectionDescription>
 
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Accordion defaultIndex={[0]} allowMultiple>
             <AccordionItem>
@@ -125,22 +130,11 @@ export function AccordionThree() {
   return (
     <MyFlex>
       <SectionHeading>AllowToggle</SectionHeading>
-      <SectionDescription>⦾ This is different</SectionDescription>
-
-      <ExampleContainer bg={colors.mainBackground}></ExampleContainer>
-    </MyFlex>
-  );
-}
-
-export function AccordionNotThree() {
-  return (
-    <MyFlex>
-      <SectionHeading>AllowToggle</SectionHeading>
       <SectionDescription>
         ⦾ If you set <Mono>allowToggle</Mono> to true, any expanded item may be
         collapsed again.
       </SectionDescription>
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Accordion allowToggle>
             <AccordionItem>
@@ -192,7 +186,7 @@ export function AccordionFour() {
         true or false depending on the state of the <Mono>AccordionItem</Mono>.
         Use the style prop <Mono>_expanded</Mono> to style this state.
       </SectionDescription>
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Accordion>
             <AccordionItem>
@@ -229,7 +223,7 @@ export function AccordionFive() {
         can use a render prop. It provides 2 internal state props:{" "}
         <Mono>isExpanded</Mono> and <Mono>isDisabled</Mono>.
       </SectionDescription>
-      <ExampleContainer bg={colors.mainBackground}>
+      <ExampleContainer bg="background">
         <Box marginY={1}>
           <Accordion allowMultiple>
             <AccordionItem>
