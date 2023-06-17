@@ -17,7 +17,7 @@ import {
   BsEmojiKiss,
 } from "react-icons/bs";
 import { ControlledTabs } from "./controlledTabs";
-import CustomTabs from "./customTabs";
+import { CustomTabs } from "./customTabs";
 import DataArrayTabs from "./dataTabs";
 import {
   ExampleContainer,
@@ -37,7 +37,7 @@ export function TabsOne() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs>
+          <Tabs colorScheme="cyan">
             <TabList>
               <Tab>One</Tab>
               <Tab>Two</Tab>
@@ -75,7 +75,7 @@ export function TabsTwo() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs variant="enclosed">
+          <Tabs variant="enclosed" colorScheme="cyan">
             <TabList>
               <Tab>One</Tab>
               <Tab>Two</Tab>
@@ -173,7 +173,7 @@ export function TabsFive() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs align="center" variant="enclosed">
+          <Tabs align="center" variant="enclosed" colorScheme="cyan">
             <TabList>
               <Tab>One</Tab>
               <Tab>Two</Tab>
@@ -204,7 +204,7 @@ export function TabsSix() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs isFitted variant="enclosed">
+          <Tabs isFitted variant="enclosed" colorScheme="cyan">
             <TabList mb="1em">
               <Tab>One</Tab>
               <Tab>Two</Tab>
@@ -412,9 +412,9 @@ export function TabsTen() {
         <Box marginY={1}>
           <Tabs isFitted defaultIndex={3}>
             <TabPanels>
-              <TabPanel>
+              {/* <TabPanel>
                 <BsEmojiSunglasses size={100} color="deeppink" />
-              </TabPanel>
+              </TabPanel> */}
               <TabPanel>
                 <BsEmojiWink size={100} color="lime" />
               </TabPanel>
@@ -429,9 +429,9 @@ export function TabsTen() {
               </TabPanel>
             </TabPanels>
             <TabList>
-              <Tab color="deeppink" fontWeight="bold">
+              {/* <Tab color="deeppink" fontWeight="bold">
                 Coolio Face
-              </Tab>
+              </Tab> */}
               <Tab color="lime" fontWeight="bold">
                 Winky Face
               </Tab>
@@ -464,7 +464,7 @@ export function TabsEleven() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs>
+          <Tabs colorScheme="cyan">
             <TabList>
               <Tab>One</Tab>
               <Tab isDisabled>Two</Tab>
@@ -500,7 +500,7 @@ export function TabsTwelve() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs isManual variant="enclosed">
+          <Tabs isManual variant="enclosed" colorScheme="cyan">
             <TabList>
               <Tab>One</Tab>
               <Tab>Two</Tab>
@@ -537,7 +537,7 @@ export function TabsThirteen() {
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
-          <Tabs isLazy>
+          <Tabs isLazy colorScheme="cyan">
             <TabList>
               <Tab>One</Tab>
               <Tab>Two</Tab>

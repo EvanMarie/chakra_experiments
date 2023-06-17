@@ -7,16 +7,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { BasicText, Mono, colors } from "~/styles/DesignComponents";
 
 export function OnChangeTabs() {
   const tabsColors = useColorModeValue(
-    [
-      "accent_1",
-      "accent_2",
-      "accent_3",
-      "mainText",
-    ],
+    ["accent_1", "accent_2", "accent_3", "mainText"],
     ["white", "white", "white", "white"]
   );
   const [tabIndex, setTabIndex] = useState(0);

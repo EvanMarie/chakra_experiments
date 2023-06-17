@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import { tabsTheme } from "./tabStyles";
 
 const CovertCandyScheme = {
   50: "#f7e6c1", // mainText
@@ -49,6 +50,12 @@ const theme = extendTheme({
       md: "1rem", // 16px
       lg: "1.125rem", // 18px
       xl: "1.25rem", // 20px
+    },
+  },
+
+  components: {
+    Tabs: {
+      colorScheme: "red",
     },
   },
 });

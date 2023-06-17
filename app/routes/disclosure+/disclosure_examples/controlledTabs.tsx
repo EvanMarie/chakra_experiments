@@ -22,7 +22,12 @@ export function ControlledTabs() {
         onChange={handleSliderChange}
       />
 
-      <Tabs isFitted index={tabIndex} onChange={handleTabsChange}>
+      <Tabs
+        isFitted
+        index={tabIndex}
+        onChange={handleTabsChange}
+        colorScheme="cyan"
+      >
         <TabList>
           <Tab>One</Tab>
           <Tab>Two</Tab>

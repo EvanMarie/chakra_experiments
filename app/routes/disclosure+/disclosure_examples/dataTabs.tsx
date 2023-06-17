@@ -8,7 +8,7 @@ interface TabData {
 function DataArrayTabs() {
   function DataTabs({ data }: { data: TabData[] }): JSX.Element {
     return (
-      <Tabs>
+      <Tabs colorScheme="cyan">
         <TabList>
           {data.map((tab, index) => (
             <Tab key={index}>{tab.label}</Tab>
