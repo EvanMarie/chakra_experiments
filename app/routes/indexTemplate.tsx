@@ -1,50 +1,88 @@
 import { Box, VStack } from "@chakra-ui/react";
-import { BasicText, FlexibleBox, HL } from "~/styles/DesignComponents";
+import { BsTextareaResize } from "react-icons/bs";
+import { BasicText, FlexibleBox, HL, Mono } from "~/styles/DesignComponents";
 import {
   BigBackgroundBox,
+  BulletBox,
+  MyFlex,
   MyLabel,
   SectionContainer,
   SectionDescription,
 } from "~/styles/MainDesignComponents";
 
-export default function chakra_basic_styling() {
+export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
-      <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props">
-        Chakra-UI Components:
+      <MyLabel link="https://chakra-ui.com/docs/components">
+        Chakra UI: ___ Components
       </MyLabel>
-      <SectionContainer>
-        <SectionDescription>Text</SectionDescription>
-        <FlexibleBox bg={"darkAccent_3"} p={4}>
+      <SectionContainer paddingX={8}>
+        <VStack w="100%" spacing={2}>
+          <SectionDescription>DESCRIPTION</SectionDescription>
+
+          <BasicText>DISCUSS</BasicText>
+          <BasicText>DISCUSS</BasicText>
+
+          <BasicText>DISCUSS</BasicText>
+        </VStack>
+        <MyFlex bg={"darkAccent_3"} p={5} pt={3} mt={5}>
+          <BasicText>DESCRIBE BULLETS</BasicText>
+          <BulletBox>
+            <ul>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+              <li>
+                <BasicText>
+                  <HL></HL>: Point
+                </BasicText>
+              </li>
+            </ul>
+          </BulletBox>
           <Box>
-            <BasicText>Introduce Bullets</BasicText>
+            <BasicText>
+              Use the navigation menu to learn more about each component
+              individually.
+            </BasicText>
           </Box>
-          <Box p={4}>
-            <VStack spacing={1.5}>
-              <BasicText>
-                ⦾ <HL>Topic</HL>: Info
-              </BasicText>
-              <BasicText>
-                ⦾ <HL>Topic</HL>: Info
-              </BasicText>
-              <BasicText>
-                ⦾ <HL>Topic</HL>: Info
-              </BasicText>
-              <BasicText>
-                ⦾ <HL>Topic</HL>: Info
-              </BasicText>
-              <BasicText>
-                ⦾ <HL>Topic</HL>: Info
-              </BasicText>
-              <BasicText>
-                ⦾ <HL>Topic</HL>: Info
-              </BasicText>
-            </VStack>
-          </Box>
-          <Box>
-            <BasicText>Text</BasicText>
-          </Box>
-        </FlexibleBox>
+        </MyFlex>
       </SectionContainer>
     </BigBackgroundBox>
   );

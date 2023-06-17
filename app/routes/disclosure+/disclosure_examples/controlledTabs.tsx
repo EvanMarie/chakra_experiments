@@ -35,13 +35,13 @@ export function ControlledTabs() {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <p>Click the tabs or pull the slider around</p>
+            <p>Slide or click tabs</p>
           </TabPanel>
           <TabPanel>
-            <p>Yeah yeah. What's up?</p>
+            <p>Just tabbing along...</p>
           </TabPanel>
           <TabPanel>
-            <p>Oh, hello there.</p>
+            <p>I am some rad tab content.</p>
           </TabPanel>
         </TabPanels>
       </Tabs>

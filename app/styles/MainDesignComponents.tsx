@@ -575,3 +575,31 @@ export function MyFlex({ children, ...restProps }: MyFlexProps) {
     </Flex>
   );
 }
+
+/* ******************************MY FLEX******************************* */
+
+interface HighlightExampleProps extends BoxProps {
+  children?: React.ReactNode;
+  bg?: string;
+  p?: number;
+  color?: string;
+  height?: string;
+  [key: string]: any;
+}
+
+export function HighlightExample({
+  children,
+  h = "200px",
+  w = "100%",
+  bg = "gray.700",
+  p = 4,
+  color = "white",
+  borderRadius = "sm",
+  ...restProps
+}: HighlightExampleProps) {
+  return (
+    <Box h={h} w={w} bg={bg} p={p} color={color} {...restProps}>
+      {children}
+    </Box>
+  );
+}

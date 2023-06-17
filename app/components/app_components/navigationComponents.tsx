@@ -9,7 +9,7 @@ import {
 import { Link } from "@remix-run/react";
 import { useIsCurrentNavRoute } from "./navigation";
 
-const fontSizeMain = ["xl", "xl", "xl", "2xl", "2xl"];
+const fontSizeMain = "xl";
 const fontSizeSub = "lg";
 
 const AccordionLink = chakra("span", {
