@@ -11,4 +11,6 @@ const baseStyle = definePartsStyle({
 });
 
 // export the component theme
-export const tabsTheme = defineMultiStyleConfig({ baseStyle });
+export const tabsTheme = defineMultiStyleConfig({ 
+  baseStyle,
+});
