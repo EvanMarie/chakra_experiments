@@ -23,38 +23,48 @@ import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import { StyledHomeIcon } from "~/components/app_components/navigation";
 
+type NavItemArray = Array<
+  NavElement & { subItem: boolean; expanded?: boolean }
+>;
+
 export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
   
   // use a Chakra menu to render a dropdown menu for mobile.
   //
   return () => {
-    const [shouldExpand, setShouldExpand] = useState<string | undefined>("");
-    const [shouldHide, setShouldHide] = useState<string | undefined>("");
+    const [shouldExpand, setShouldExpand] = useState<string>("");
+    const [shouldHide, setShouldHide] = useState<string>("");
+    const [expanded, setExpanded] = useState<string[]>([]);
     const [menuOpen, setMenuOpen] = useState(false);
-
-
     const location = useLocation();
     const nav = getNavElementForUrl(location.pathname, navElements) as NavElement;
-    console.log(location.pathname);
-    console.log(navElements);
     const expand = nav ? nav._parent?.label || nav.label : "";
 
-    const [navItems, setNavItems] = useState<Array<
-      NavElement & { subItem: boolean; expanded?: boolean }>>([]);
+    const [navItems, setNavItems] = useState<NavItemArray>([]);
+    const handleOpen = () => {
+      if(expand !== "") {
+        setShouldExpand(expand);
+      }
+    }
 
     useEffect(() => {
-      console.log("shouldHide ", shouldHide);
-      console.log("shouldExpand ", shouldExpand);
-      console.log("expand ", expand);
 
-      const _newNavItems: Array<
-        NavElement & { subItem: boolean; expanded?: boolean }> = [];
+      // remove shouldHide from expanded
+      if(shouldExpand != "") {
+        setExpanded((prev) => [...prev, shouldExpand]);
+      }
+      
+      if (shouldHide != "") {
+        setExpanded((prev) => prev.filter((item) => item !== shouldHide));
+      }
 
+      const _newNavItems: NavItemArray = [];
+      
       navElements.map((navElement) => {
         _newNavItems.push({ ...navElement, subItem: false, expanded: false });
         if (
-          (expand === navElement.label || shouldExpand === navElement.label) &&
-          shouldHide !== navElement.label && navElement.subElements
+          (expanded.includes(navElement.label)) &&
+          navElement.subElements
         ) {
           _newNavItems[_newNavItems.length - 1].expanded = true;
           navElement.subElements?.map((subElement) => {
@@ -62,7 +72,10 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
           });
         }
       });
+
       setNavItems(_newNavItems);
+      setShouldHide("");
+      setShouldExpand("");
     }, [navElements, location, shouldHide, shouldExpand]);
 
     const isSelected = (navElement: NavElement) =>
@@ -95,12 +108,12 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
     }
 
     return (
-      <Menu isOpen={menuOpen}>
+      <Menu isOpen={menuOpen} onOpen={handleOpen}>
         <MenuButton color={"linkColor"} _hover={{ color: "accent_2" }} onClick={()=>setMenuOpen(!menuOpen)}>
           <ImMenu size={30} />
         </MenuButton>
         <MenuList bg={"darkAccent_3"} overflow="hidden">
-          <MenuItem as={RemixLink} to="/" w="210px" bg={"darkAccent_3"}>
+          <MenuItem as={RemixLink} to="/" w="210px" bg={"darkAccent_3"}  onClick={()=>setMenuOpen(false)}>
             <StyledHomeIcon size={30} />
           </MenuItem>
           {navItems.map((navItem) => {
@@ -115,6 +128,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
                   <RemixLink to={navItem.link} onClick={()=>setMenuOpen(false)}>{navItem.label}</RemixLink>
                   {!navItem.subItem ? 
                       <IconButton
+                        variant="unstyled"
                         aria-label="Hide section sub items."
                         icon={navItem.expanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
                         size="xs"
