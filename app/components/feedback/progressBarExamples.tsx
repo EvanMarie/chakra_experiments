@@ -17,18 +17,16 @@ export function CountdownProgressBar() {
     };
   }, [totalSeconds]);
 
+  useEffect(() => {
+    if (value <= 0) {
+      clearInterval(intervalRef.current);
+    }
+    setCurrentSecond(Math.round(value * totalSeconds / ONE_HUNDRED_PERCENT));
+  }, [value]);
+
   const startProgress = () => {
     intervalRef.current = window.setInterval(() => {
-      setValue((oldValue) => {
-        let newValue = oldValue - ONE_HUNDRED_PERCENT / totalSeconds;
-        if (newValue <= 0) {
-          clearInterval(intervalRef.current);
-          setCurrentSecond(0);
-          return 0;
-        }
-        setCurrentSecond((oldSecond) => oldSecond - 1);
-        return newValue;
-      });
+      setValue((oldValue) => oldValue - ONE_HUNDRED_PERCENT / totalSeconds)
     }, 1000);
   };
 
