@@ -38,13 +38,17 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
     const nav = getNavElementForUrl(location.pathname, navElements) as NavElement;
-    const expand = nav ? nav._parent?.label || nav.label : "";
+    
 
     const [navItems, setNavItems] = useState<NavItemArray>([]);
+
+
     const handleOpen = () => {
+      const expand = nav ? nav._parent?.label || nav.label : "";
       if(expand !== "") {
         setShouldExpand(expand);
       }
+      setExpanded([]);
     }
 
     useEffect(() => {
@@ -59,7 +63,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
       }
 
       const _newNavItems: NavItemArray = [];
-      
+
       navElements.map((navElement) => {
         _newNavItems.push({ ...navElement, subItem: false, expanded: false });
         if (
