@@ -8,6 +8,7 @@ import {
   CloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
+import { HighlightExample } from "~/styles/MainDesignComponents";
 
 function CloseButtonAlert() {
   const {
