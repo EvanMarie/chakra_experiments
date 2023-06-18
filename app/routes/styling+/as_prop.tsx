@@ -18,6 +18,8 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -173,15 +175,19 @@ export default function chakra_section() {
             element. For instance, if you need a <b>Box</b> component with a
             semantic section <b>HTML</b> element.
             <MyFlex>
-              <Box as="section">
-                <h2>This is a section</h2>
-                <p>This is the section content</p>
-              </Box>
+              <HighlightExample h="100px">
+                <Box as="section">
+                  <h2>This is a section</h2>
+                  <p>This is the section content</p>
+                </Box>
+              </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Box as="section">
+            <ViewCode>
+              <Highlighter>{`<Box as="section">
   <h2>This is a section</h2>
   <p>This is the section content</p>
 </Box>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
 
           <GridBoxTwo>
@@ -189,14 +195,22 @@ export default function chakra_section() {
             transform a link to look and behave like a Chakra UI Button using
             the <b>as prop</b>. This renders a link that looks like a Chakra UI{" "}
             <b>Button</b> and directs the user.
-            <MyFlex>
-              <Link as={Button} href="https://www.somewhere.com">
-                Go somewhere
-              </Link>
-            </MyFlex>
-            <Highlighter>{`<Link as={Button} href="https://www.somewhere.com">
+            <HighlightExample h="100px">
+              <MyFlex>
+                <Link
+                  as={Button}
+                  href="https://www.somewhere.com"
+                  color="linkColor"
+                >
+                  Go somewhere
+                </Link>
+              </MyFlex>
+            </HighlightExample>
+            <ViewCode>
+              <Highlighter>{`<Link as={Button} href="https://www.somewhere.com">
   Go somewhere
 </Link>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
 
           <GridBoxThree>
@@ -211,29 +225,43 @@ export default function chakra_section() {
             item value, creating different routes for each item. This approach
             can also be used to quickly create dynamic breadcrumb navigations,
             or any similar component.
-            <MyFlex>
-              <AsPropList />
-            </MyFlex>
-            <Highlighter>{`const navItems = [
-  "Home", 
-  "About",
-  "Contact"];
+            <HighlightExample h="80px">
+              <MyFlex p={0}>
+                <AsPropList />
+              </MyFlex>
+            </HighlightExample>
+            <ViewCode>
+              <Highlighter>{`interface CustomAsPropComponentProps {
+  children: React.ReactNode;
+}
+
+export function CustomAsPropComponent({
+  children,
+}: CustomAsPropComponentProps) {
+  return (
+    <span style={{ color: "darkText", fontWeight: "bold" }}>{children}</span>
+  );
+}
+
+export function AsPropList() {
+  const navItems = ["Home", "About", "Contact"];
+
   return (
     <MyFlex>
-      <List 
-        display="flex" 
-        justifyContent="space-between"
-        width="200px">
-          {navItems.map((item, index) => (
-            <ListItem
-              key={index}
-              as={RouterLink}
-              to={'/{item.toLowerCase()}'}
-            >
-              {item}
-            </ListItem>
+      <List display="flex" justifyContent="space-between">
+        {navItems.map((item, index) => (
+          <ListItem
+            key={index}
+            as={RouterLink}
+          >
+            {item}
+          </ListItem>
         ))}
-      </List>`}</Highlighter>
+      </List>
+    </MyFlex>
+  );
+}`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

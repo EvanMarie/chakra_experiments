@@ -56,7 +56,6 @@ export function AsPropList() {
           <ListItem
             key={index}
             bg="accent_1"
-            paddingY={2}
             paddingX={2}
             fontWeight="bold"
             borderRadius="sm"

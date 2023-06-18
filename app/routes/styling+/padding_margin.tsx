@@ -30,6 +30,8 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -190,21 +192,17 @@ export default function chakra_basic_styling() {
             can be useful when you want to create unique visual effects or
             adjust the positioning of elements.
             <MyFlex>
-              <Flex
-                w="150px"
-                justifyContent="center"
-                mt={4}
-                bg={"sectionColor"}
-                p={3}
-              >
-                <Stack spacing={4}>
+              <HighlightExample h="100px" align="center">
+                <Stack spacing={4} align="center">
                   <Box bg="cyan.500" h="40px" w="40px" />
                   <Box bg="yellow.400" h="40px" w="40px" mt="-30px" ml="20px" />
                 </Stack>
-              </Flex>
+              </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Box h="40px" w="40px" />
+            <ViewCode>
+              <Highlighter>{`<Box h="40px" w="40px" />
 <Box h="40px" w="40px" mt="-30px" ml="20px" />`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Responsive padding and margin values</b>: Chakra UI provides
@@ -224,9 +222,11 @@ export default function chakra_basic_styling() {
                 Responsive Padding and Margin
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
+            <ViewCode>
+              <Highlighter>{`<Box
   p={["5px", "10px", "15px"]}
   m={["5px", "10px", "15px"]}>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
 
           <GridBoxThree>
@@ -244,7 +244,9 @@ export default function chakra_basic_styling() {
             >
               Padding and Margin Shorthand
             </Box>
-            <Highlighter>{`<Box p="10px 20px" m="4px 10px">`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box p="10px 20px" m="4px 10px">`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

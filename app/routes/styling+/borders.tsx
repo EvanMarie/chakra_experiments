@@ -27,6 +27,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -197,13 +198,15 @@ export default function chakra_section() {
                 I am a Box.
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
+            <ViewCode>
+              <Highlighter>{`<Box
   w="150px"
   p={2}
   borderTop="2px solid red"
   borderBottom="2px dashed blue"
   bg="white"
   >`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Transparent Borders</b>: Chakra UI allows you to create
@@ -222,9 +225,11 @@ export default function chakra_section() {
                 I am a box with a transparent border.
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
-  border="2px solid transparent"
-  borderColor="transparent"/>`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box
+    border="2px solid transparent"
+    borderColor="transparent"/>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Responsive Borders</b>: Chakra UI allows you to define responsive
@@ -245,7 +250,9 @@ export default function chakra_section() {
                 My name is Boxanne.
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box borderWidth={["1px", "2px", "3px"]}>`}</Highlighter>{" "}
+            <ViewCode>
+              <Highlighter>{`<Box borderWidth={["1px", "2px", "3px"]}>`}</Highlighter>
+            </ViewCode>{" "}
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -20,6 +20,7 @@ import {
   MyFlex,
   SectionDescription,
   SectionHeading,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -195,7 +196,8 @@ export default function chakra_section() {
             <MyFlex>
               <FilterTipThree />
             </MyFlex>
-            <Highlighter>{`const pulse = keyframes
+            <ViewCode>
+              <Highlighter>{`const pulse = keyframes
   0% { filter: brightness(100%); }
   50% { filter: brightness(150%); }
   100% { filter: brightness(100%); };
@@ -204,6 +206,7 @@ export default function chakra_section() {
   animation={
     '{pulse} 3s infinite'}
 >`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

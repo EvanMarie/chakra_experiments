@@ -30,6 +30,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -256,7 +257,9 @@ export default function chakra_section() {
                 This text uses a custom font family.
               </Text>
             </MyFlex>
-            <Highlighter>{`<Text fontFamily="monospace">`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Text fontFamily="monospace">`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Text Alignment</b>: Chakra UI provides the <b>textAlign</b> prop
@@ -266,7 +269,9 @@ export default function chakra_section() {
                 This text is centered within its container.
               </Text>
             </MyFlex>
-            <Highlighter>{`<Text textAlign="center">`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Text textAlign="center">`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Chakra UI provides the <b>lineHeight</b> prop to control the spacing
@@ -284,7 +289,9 @@ export default function chakra_section() {
                 </Text>
               </Flex>
             </MyFlex>
-            <Highlighter>{`<Text lineHeight="1.5">`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Text lineHeight="1.5">`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

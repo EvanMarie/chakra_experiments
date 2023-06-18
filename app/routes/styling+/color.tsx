@@ -27,6 +27,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -195,9 +196,9 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Using Color Mode: Chakra UI supports both a light and dark color
-            mode, and allows developers to toggle between them with ease. This
-            is an incredible tool for enhancing user experience, but some
+            <b>Using Color Mode</b>: Chakra UI supports both a light and dark
+            color mode, and allows developers to toggle between them with ease.
+            This is an incredible tool for enhancing user experience, but some
             developers may not know that you can customize these color modes per
             component. For example, you can set a specific font color that
             applies only when the app is in dark mode. Utilizing this feature
@@ -214,7 +215,9 @@ export default function chakra_section() {
                 current color mode.
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box color={{ light: "teal.500", dark: "teal.300" }}>`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box color={{ light: "teal.500", dark: "teal.300" }}>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Use of ColorScheme Property</b>: Chakra UI has predefined color
@@ -234,8 +237,10 @@ export default function chakra_section() {
                 I am using ColorScheme!
               </Text>
             </Box>
-            <Highlighter>{`<Box bg="teal.500">
+            <ViewCode>
+              <Highlighter>{`<Box bg="teal.500">
   <Text colorScheme="teal">`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Transparent Colors</b>: Chakra UI offers the ability to use
@@ -259,12 +264,20 @@ export default function chakra_section() {
                 </Box>
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box bg="teal.500">
+            <ViewCode>
+              <Highlighter>{`<Box bg="teal.500" p="2" w="300">
   <Box
     bg="blackAlpha.500"
+    p="2"
     borderRadius="md"
-    position="relative">
-    <Box bg="white" borderRadius="md">`}</Highlighter>
+    position="relative"
+  >
+    <Box bg="white" p="2" borderRadius="md" boxShadow="lg">
+      <Box>This is the content inside the overlay box.</Box>
+    </Box>
+  </Box>
+</Box>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

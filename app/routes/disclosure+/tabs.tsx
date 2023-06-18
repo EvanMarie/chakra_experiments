@@ -29,6 +29,7 @@ import {
   SectionDescription,
   SingleExample,
   HighlightExample,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -268,7 +269,8 @@ export default function chakra_section() {
                 </Tabs>
               </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Tabs>
+            <ViewCode>
+              <Highlighter>{`<Tabs>
   <TabList>
     <Tab>Tab 1</Tab>
     <Tab>Tab 2</Tab>
@@ -297,6 +299,7 @@ export default function chakra_section() {
     </TabPanel>
   </TabPanels>
 </Tabs>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Orientation Control</b>: Chakra UI <b>Tabs</b> have support for
@@ -322,7 +325,8 @@ export default function chakra_section() {
                 </Tabs>
               </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Tabs orientation="vertical">
+            <ViewCode>
+              <Highlighter>{`<Tabs orientation="vertical">
   <TabList>
     <Tab>Tab 1</Tab>
     <Tab>Tab 2</Tab>
@@ -337,6 +341,7 @@ export default function chakra_section() {
     </TabPanel>
   </TabPanels>
 </Tabs>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Chakra UI allows you to use custom icons from any icon library or
@@ -362,7 +367,8 @@ export default function chakra_section() {
                 </Tabs>
               </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Tabs>
+            <ViewCode>
+              <Highlighter>{`<Tabs>
   <TabList>
     <Tab>
       <HStack spacing={2}>
@@ -378,6 +384,7 @@ export default function chakra_section() {
     </Tab>
   </TabList>
 </Tabs>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -2,7 +2,15 @@ import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  // Mono,
+  // Flex,
+  // Text,
+  HL,
+  MyDivider,
+  colors,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -21,6 +29,7 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -140,15 +149,21 @@ export default function chakra_section() {
           <GridBoxOne>
             Highlight coming soon!
             <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{``}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{``}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{``}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

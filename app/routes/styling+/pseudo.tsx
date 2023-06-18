@@ -18,6 +18,8 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -323,27 +325,29 @@ export default function chakra_section() {
                 Hover over me
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
-data-tooltip="I'm a tooltip"
-sx={{
-  position: "relative",
-  "&::after": {
-    content: "attr(data-tooltip)",
-    position: "absolute",
-    top: "100%",
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "black",
-    color: "white",
-    padding: "5px",
-    borderRadius: "5px",
-    opacity: "0",
-    transition: "opacity 0.3s",
-  },
-  "&:hover::after": {
-    opacity: "1",
-  },
-})}`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box
+  data-tooltip="I'm a tooltip"
+  sx={{
+    position: "relative",
+    "&::after": {
+      content: "attr(data-tooltip)",
+      position: "absolute",
+      top: "100%",
+      left: "50%",
+      transform: "translateX(-50%)",
+      backgroundColor: "black",
+      color: "white",
+      padding: "5px",
+      borderRadius: "5px",
+      opacity: "0",
+      transition: "opacity 0.3s",
+    },
+    "&:hover::after": {
+      opacity: "1",
+    },
+  })}`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             The <b>::checked</b> pseudo-class in CSS is used to select an
@@ -359,13 +363,7 @@ sx={{
             pseudo-class, which allows you to define custom styles for the
             checked state of the checkboxes.
             <MyFlex>
-              <Box
-                bg="darkText"
-                color="mainText"
-                paddingY={3}
-                paddingX={5}
-                borderRadius="sm"
-              >
+              <HighlightExample h="160px">
                 <VStack alignItems="left">
                   <CheckboxGroup colorScheme="teal">
                     <Text fontSize="lg">My Favorite Food: </Text>
@@ -380,11 +378,12 @@ sx={{
                     </Checkbox>
                   </CheckboxGroup>
                 </VStack>
-              </Box>
+              </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<CheckboxGroup colorScheme="teal">
+            <ViewCode>
+              <Highlighter>{`<CheckboxGroup colorScheme="teal">
   <Text fontSize="lg">My Favorite Food: </Text>
- <Checkbox size="lg" value="chakra" defaultChecked>
+  <Checkbox size="lg" value="chakra" defaultChecked>
     Dark Chocolate
   </Checkbox>
   <Checkbox size="lg" value="react">
@@ -394,6 +393,7 @@ sx={{
     Sushi
   </Checkbox>
 </CheckboxGroup>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Creating a Progress Bar</b>: you can use the <b>::before</b>
@@ -418,20 +418,22 @@ sx={{
                 }}
               />
             </MyFlex>
-            <Highlighter>{`<Box
-    sx={{
-      width: "200px",
-      height: "20px",
-      backgroundColor: "lightgray",
-      "&::before": {
-        content: '""',
-        display: "block",
-        height: "100%",
-        width: "50%",
-        backgroundColor: "green",
-      },
-    }}
-  />`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box
+  sx={{
+    width: "200px",
+    height: "20px",
+    backgroundColor: "lightgray",
+    "&::before": {
+      content: '""',
+      display: "block",
+      height: "100%",
+      width: "50%",
+      backgroundColor: "green",
+    },
+  }}
+/>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

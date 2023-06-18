@@ -2,6 +2,7 @@ import {
   Box,
   CircularProgress,
   CircularProgressLabel,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
@@ -10,11 +11,8 @@ import stylesUrl from "~/styles/global.css";
 import {
   BasicText,
   CollapsibleExample,
-  CompWithLabel,
-  // Mono,
-  // Flex,
-  // Text,
   HL,
+  Mono,
 } from "~/styles/DesignComponents";
 
 import {
@@ -33,8 +31,7 @@ import {
   HighlightColumn,
   MyFlex,
   SectionDescription,
-  SingleExample,
-  ExampleContainer,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -42,6 +39,11 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import {
+  CircularProgressImage,
+  CircularProgressTimer,
+  ScoreIndicator,
+} from "~/components/feedback/circularProgressExamples";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -127,6 +129,15 @@ export default function chakra_section() {
                     >{`<CircularProgress value={80} />`}</Highlighter>,
                   ]}
                 </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    Here, the Chakra UI <Mono>CircularProgress</Mono> component
+                    is being used with the value prop set to 80. This indicates
+                    that the circular progress indicator will be visually filled
+                    up to 80% of its total capacity, reflecting the progress
+                    made towards a specific task or operation.
+                  </BasicText>
+                </MyFlex>
               </SectionContainer>
               <SectionContainer>
                 <CollapsibleExample fontSize={15}>
@@ -137,6 +148,19 @@ export default function chakra_section() {
                     >{`<CircularProgress value={30} size="120px" />`}</Highlighter>,
                   ]}
                 </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    Here, <Mono>CircularProgress</Mono> is being used to display
+                    a circular progress indicator. The value prop is set to 30,
+                    indicating that the progress indicator will be filled up to
+                    30% of its total capacity. To control the size of the{" "}
+                    <Mono>CircularProgress</Mono> component, the{" "}
+                    <Mono>size</Mono> prop is set to "120px". This means that
+                    the circular progress indicator will have a diameter of 120
+                    pixels, influencing its overall visual appearance and
+                    proportion within the user interface.
+                  </BasicText>
+                </MyFlex>
               </SectionContainer>
               <SectionContainer>
                 <CollapsibleExample fontSize={15}>
@@ -149,9 +173,18 @@ export default function chakra_section() {
                     />,
                     <Highlighter
                       key={2}
-                    >{` <CircularProgress value={59} size="100px" thickness="4px" />`}</Highlighter>,
+                    >{` <CircularProgress value={59} thickness="4px" />`}</Highlighter>,
                   ]}
                 </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    In this example, the <Mono>thickness</Mono> prop is set to{" "}
+                    <Mono>"4px"</Mono>, which determines the thickness of the
+                    progress bar or arc within the circular progress indicator.
+                    In this case, the progress bar will have a thickness of 4
+                    pixels, creating a sleak indicator of the progress made.
+                  </BasicText>
+                </MyFlex>
               </SectionContainer>{" "}
               <SectionContainer>
                 <CollapsibleExample fontSize={15}>
@@ -161,19 +194,34 @@ export default function chakra_section() {
                       value={30}
                       color="orange.400"
                       thickness="12px"
+                      size="100px"
                     />,
                     <Highlighter key={2}>
-                      {`<CircularProgress value={30} 
-    color="orange.400" thickness="12px" />`}
+                      {`<CircularProgress value={30} color="orange.400" thickness="12px" />`}
                     </Highlighter>,
                   ]}
                 </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    In this example, the thickness is set again, this time to{" "}
+                    <Mono>12px</Mono>, but we also have utilized the{" "}
+                    <Mono>color</Mono> prop is set to <Mono>"orange.400"</Mono>.
+                    This determines the color of the progress bar or arc within
+                    the circular progress indicator. In this case, the progress
+                    bar will have an orange color with a shade of 400, creating
+                    a visually distinctive indicator.
+                  </BasicText>
+                </MyFlex>
               </SectionContainer>{" "}
               <SectionContainer>
                 <CollapsibleExample fontSize={15}>
                   {[
                     <Box key={1}>
-                      <CircularProgress value={40} color="green.400">
+                      <CircularProgress
+                        value={40}
+                        color="green.400"
+                        size="100px"
+                      >
                         <CircularProgressLabel>40%</CircularProgressLabel>
                       </CircularProgress>
                     </Box>,
@@ -184,6 +232,17 @@ export default function chakra_section() {
 </CircularProgress> `}</Highlighter>,
                   ]}
                 </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    This example highlights another feature of the Chakra UI{" "}
+                    <Mono>CircularProgress</Mono> component, the{" "}
+                    <Mono>CircularProgressLabel</Mono>. This component is used
+                    to display the progress value as <Mono>"40%"</Mono>. The
+                    label is positioned at the center of the circular progress
+                    indicator, providing a textual representation of the
+                    progress made.
+                  </BasicText>
+                </MyFlex>
               </SectionContainer>{" "}
               <SectionContainer>
                 <CollapsibleExample fontSize={15}>
@@ -192,29 +251,197 @@ export default function chakra_section() {
                       key={1}
                       isIndeterminate
                       color="green.300"
+                      size="100px"
                     />,
                     <Highlighter key={2}>
                       {` <CircularProgress isIndeterminate color="green.300" />`}
                     </Highlighter>,
                   ]}
                 </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    In this example, the <Mono>isIndeterminate</Mono> prop is
+                    set to true, indicating that the progress indicator will be
+                    in an indeterminate state. This means that instead of
+                    representing a specific progress value, the indicator will
+                    continuously animate or loop, giving the impression of
+                    ongoing activity or an unknown progress duration.
+                  </BasicText>
+                </MyFlex>
+              </SectionContainer>
+              <SectionContainer>
+                <CollapsibleExample fontSize={15}>
+                  {[
+                    <CircularProgress
+                      key={1}
+                      value={20}
+                      trackColor="red.200"
+                      size="100px"
+                    />,
+                    <Highlighter
+                      key={2}
+                    >{`<CircularProgress value={20} trackColor="red.200" />`}</Highlighter>,
+                  ]}
+                </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    The trackColor prop allows you to specify the color of the
+                    background track behind the progress arc. In this example,
+                    the track color is set to "red.200", to show this option.
+                  </BasicText>
+                </MyFlex>
+              </SectionContainer>
+              <SectionContainer>
+                <CollapsibleExample fontSize={15}>
+                  {[
+                    <CircularProgress
+                      value={50}
+                      capIsRound
+                      key={1}
+                      size="100px"
+                    />,
+                    <Highlighter
+                      key={2}
+                    >{`<CircularProgress value={50} capIsRound />`}</Highlighter>,
+                  ]}
+                </CollapsibleExample>
+                <MyFlex>
+                  <BasicText>
+                    Setting the capIsRound prop to true will make the cap of the
+                    progress indicator rounded instead of having flat edges.
+                  </BasicText>
+                </MyFlex>
               </SectionContainer>
             </VStack>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Highlight coming soon!
-            <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            The <b>CircularProgress</b> component can also be used as a visual
+            timer. Below is an example of a 10-second timer, where every second,
+            we are incrementing the progress by 10%. Once it reaches 100%, it
+            resets to 0 and starts over, acting as a repeating 10-second timer.
+            <MyFlex>
+              <CircularProgressTimer />
+            </MyFlex>
+            <ViewCode>
+              <Highlighter>{`function CircularProgressTimer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(seconds => 
+        (seconds === 100 ? 0 : seconds + 10));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Box display="flex" justifyContent="center">
+      <CircularProgress 
+      value={seconds} 
+      color="blue.500" />
+    </Box>
+  );
+}`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            Images can sometimes take a while to load, especially if they are
+            large or the user's network connection is slow. You can use
+            <b>CircularProgress</b> to show the user that the image is loading.
+            Below is an image loading example, where we'll simulate a delay in
+            loading the image using a timeout function.
+            <MyFlex>
+              <CircularProgressImage />
+            </MyFlex>
+            <ViewCode>
+              <Highlighter>{`function CircularProgressImage() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const loadImage = () => {
+    setIsLoaded(false);
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 3000); 
+    return () => clearTimeout(timer);
+  };
+
+  useEffect(() => {
+    loadImage();
+  }, []);
+
+  return (
+      <Box position="relative">
+        {!isLoaded && (
+<CircularProgress
+  isIndeterminate
+/>
+        )}
+        {isLoaded && (
+          <MyFlex h="200px">
+<Image
+  src="imageLink" alt="Example" />
+          </MyFlex>
+        )}
+      </Box>
+
+      <Button onClick={loadImage} mt={1}>
+        Reload Image
+      </Button>
+  );
+}`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>CircularProgress as a Scoring Indicator</b>: This is somewhat
+            similar to the progress label example, but in a different context.
+            The idea here is to use <b>CircularProgress</b> to visually
+            represent a score out of 100. It can be useful in quizzes, games, or
+            other scoring situations. In this example, the <b>ScoreIndicator</b>
+            component accepts a score prop, which is used to display the score
+            both visually (with CircularProgress) and numerically (with{" "}
+            <b>CircularProgressLabel</b>). You can adjust the color and size to
+            suit your needs.
+            <MyFlex>
+              <ScoreIndicator />
+            </MyFlex>
+            <ViewCode>
+              <Highlighter>{`export function ScoreIndicator() {
+  const [score, setScore] = useState(0);
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newScore = parseInt(event.target.value);
+    if (!isNaN(newScore) && newScore >= 0 && newScore <= 100) {
+      setScore(newScore);
+    }
+  };
+
+  return (
+        <h2>Your score out of 100 </h2>
+        <CircularProgress
+          value={score}
+          size="100px"
+          color="pink.600"
+          trackColor="lightgray"
+        >
+          <CircularProgressLabel>
+            {score}
+          </CircularProgressLabel>
+        </CircularProgress>
+        <Input
+          type="number"
+          placeholder="Enter score (0 - 100)"
+          onChange={handleInputChange}
+          textAlign="center"
+          bg="lightgray"
+          color="black"
+          marginTop="2px"
+          width="200px"
+        />
+  );
+}`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

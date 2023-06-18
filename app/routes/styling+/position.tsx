@@ -20,6 +20,8 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -298,12 +300,7 @@ export default ToggleFixedBox;
             and <b>transform</b>
             properties.
             <MyFlex>
-              <Box
-                position="relative"
-                h="175px"
-                w="175px"
-                bg={"accent_2"}
-              >
+              <Box position="relative" h="175px" w="175px" bg={"accent_2"}>
                 <Box
                   position="absolute"
                   top="50%"
@@ -318,7 +315,8 @@ export default ToggleFixedBox;
                 </Box>
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
+            <ViewCode>
+              <Highlighter>{`<Box
   position="relative"
   h="175px"
   w="175px"
@@ -329,6 +327,7 @@ export default ToggleFixedBox;
     top="50%"
     left="50%"
     transform="translate(-50%, -50%)">`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Stacking Elements</b>: you can use relative and absolute
@@ -361,7 +360,8 @@ export default ToggleFixedBox;
                 I am underneath
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
+            <ViewCode>
+              <Highlighter>{`<Box
   position="absolute"
   zIndex="1"
 >
@@ -373,6 +373,7 @@ export default ToggleFixedBox;
 >
   I am underneath
 </Box>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             In Chakra UI, for RTL (right to left) support, you can use the start
@@ -393,9 +394,12 @@ export default ToggleFixedBox;
             based on user preferences or the language setting of their browser
             or operating system.
             <MyFlex>
-              <RTLPositionExample />
+              <HighlightExample h="125px">
+                <RTLPositionExample />
+              </HighlightExample>
             </MyFlex>
-            <Highlighter>{`import { Box, Button, VStack } from "@chakra-ui/react";
+            <ViewCode>
+              <Highlighter>{`import { Box, Button, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 
 function ToggleBox() {
@@ -440,6 +444,7 @@ function ToggleBox() {
 export default ToggleBox;
 
 `}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

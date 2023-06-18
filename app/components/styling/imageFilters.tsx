@@ -1,6 +1,6 @@
 import { Box, Flex, Text, VStack, keyframes } from "@chakra-ui/react";
 import { Highlighter } from "./highlighter";
-import { MyFlex } from "~/styles/MainDesignComponents";
+import { MyFlex, ViewCode } from "~/styles/MainDesignComponents";
 
 const boxSizes = {
   base: "200px",
@@ -189,7 +189,7 @@ const highlightBoxStyles = {
 
 export function FilterTipOne() {
   return (
-    <VStack>
+    <VStack m={0}>
       <MyFlex>
         <Box
           sx={highlightBoxStyles}
@@ -199,6 +199,8 @@ export function FilterTipOne() {
             transition: "filter 0.3s",
           }}
         ></Box>
+      </MyFlex>
+      <ViewCode>
         <Highlighter>{`<Box
   sx={basicBoxStyles}
   filter="grayscale(100%)"
@@ -207,25 +209,27 @@ export function FilterTipOne() {
     transition: "filter 0.3s",
   }}
 >`}</Highlighter>
-      </MyFlex>
+      </ViewCode>
     </VStack>
   );
 }
 
 export function FilterTipTwo() {
   return (
-    <VStack>
+    <VStack m={0}>
       <MyFlex>
         <Box
           sx={highlightBoxStyles}
           filter="blur(2px) sepia(30%) contrast(130%)"
         ></Box>
+      </MyFlex>
+      <ViewCode>
         <Highlighter>{`<Box
   filter="blur(2px) 
   sepia(30%) 
   contrast(130%)"
 >`}</Highlighter>
-      </MyFlex>
+      </ViewCode>
     </VStack>
   );
 }

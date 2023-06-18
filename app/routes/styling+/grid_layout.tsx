@@ -30,6 +30,7 @@ import {
   SectionContainer,
   SectionDescription,
   SingleExample,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
@@ -393,7 +394,8 @@ return (
                 </Box>
               </Grid>
             </MyFlex>
-            <Highlighter>{`<Grid
+            <ViewCode>
+              <Highlighter>{`<Grid
   templateColumns={[
     "repeat(1, 1fr)",
     "repeat(2, 1fr)",
@@ -405,6 +407,7 @@ return (
   <Box bg="blue.300" height="30px" p={1}>Two</Box>
   <Box bg="blue.300" height="30px" p={1}>Three</Box>
 </Grid>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             Chakra UI's Grid component uses CSS Grid Layout under the hood? This
@@ -422,11 +425,13 @@ return (
                 <Box bg="blue.300" h="60px" w="60px"></Box>
               </Grid>
             </MyFlex>
-            <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
+            <ViewCode>
+              <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
   <Box bg="red.300" h="60px" w="60px"></Box>
   <Box bg="green.300" h="60px" w="60px"></Box>
   <Box bg="blue.300" h="60px" w="60px"></Box>
 </Grid>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Chakra UI's Grid component supports <b>auto-fit</b> and{" "}
@@ -456,7 +461,8 @@ return (
                 </Box>
               </Grid>
             </MyFlex>
-            <Highlighter>{`<Grid
+            <ViewCode>
+              <Highlighter>{`<Grid
   templateColumns="repeat(auto-fit, minmax(100, 1fr))"
   gap="2"
 >
@@ -464,6 +470,7 @@ return (
   <Box bg="green.300" h="60px" p={2}>Two</Box>
   <Box bg="blue.300" h="60px" p={2}>Three</Box>
 </Grid>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

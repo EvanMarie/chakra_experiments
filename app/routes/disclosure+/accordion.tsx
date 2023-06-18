@@ -29,6 +29,7 @@ import {
   SectionDescription,
   SingleExample,
   HighlightExample,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -239,7 +240,8 @@ export default function chakra_section() {
                 </Accordion>
               </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Accordion allowToggle>
+            <ViewCode>
+              <Highlighter>{`<Accordion allowToggle>
   <AccordionItem>
     <AccordionButton>
       <Box flex="1" textAlign="left">
@@ -252,19 +254,20 @@ export default function chakra_section() {
       <Accordion allowToggle>
         <AccordionItem>
           <AccordionButton>
-            <Box flex="1" textAlign="left">
-              Nested Section 1 title
-            </Box>
-            <AccordionIcon />
+<Box flex="1" textAlign="left">
+  Nested Section 1 title
+</Box>
+<AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
-            Nested Section 1 content
+Nested Section 1 content
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
     </AccordionPanel>
   </AccordionItem>
 </Accordion>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             One creative idea when working with Accordions could be to replace
@@ -291,7 +294,8 @@ export default function chakra_section() {
                 </Accordion>
               </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Accordion allowToggle>
+            <ViewCode>
+              <Highlighter>{`<Accordion allowToggle>
   <AccordionItem>
     <AccordionButton>
       <HStack w="100%" justifyContent="space-between">
@@ -304,6 +308,7 @@ export default function chakra_section() {
     <AccordionPanel pb={4}>Section 1 Content</AccordionPanel>
   </AccordionItem>
 </Accordion>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Embedding components in an accordion</b>: you can embed any
@@ -325,7 +330,8 @@ export default function chakra_section() {
                 </Accordion>
               </HighlightExample>
             </MyFlex>
-            <Highlighter>{`<Accordion allowToggle>
+            <ViewCode>
+              <Highlighter>{`<Accordion allowToggle>
   <AccordionItem>
     <AccordionButton>
       <Box flex="1" textAlign="left">
@@ -337,6 +343,7 @@ export default function chakra_section() {
     </AccordionPanel>
   </AccordionItem>
 </Accordion>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -35,6 +35,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -343,7 +344,8 @@ export default function chakra_section() {
                 </Box>
               </Flex>
             </MyFlex>
-            <Highlighter>{`<Flex>
+            <ViewCode>
+              <Highlighter>{`<Flex>
   <Box flex={1} bg="red.300" p={4}>
     Column 1
   </Box>
@@ -354,6 +356,7 @@ export default function chakra_section() {
     Column 3
   </Box>
 </Flex>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Flexbox</b> in Chakra UI enables you to effortlessly create
@@ -393,7 +396,8 @@ export default function chakra_section() {
                 </WrapItem>
               </Wrap>
             </MyFlex>
-            <Highlighter>{`<Wrap spacing={1}>
+            <ViewCode>
+              <Highlighter>{`<Wrap spacing={1}>
   <WrapItem>
     <Box bg="red.300" height="30px" width="220px" />
   </WrapItem>
@@ -404,6 +408,7 @@ export default function chakra_section() {
     <Box bg="blue.300" height="30px" width="220px" />
   </WrapItem>
 </Wrap>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Flexbox</b> in Chakra UI allows you to achieve vertical center
@@ -423,7 +428,8 @@ export default function chakra_section() {
                 </Box>
               </Flex>
             </MyFlex>
-            <Highlighter>{`<Flex height="80px" align="center">
+            <ViewCode>
+              <Highlighter>{`<Flex height="80px" align="center">
   <Box bg="blue.300" p={2}>
     Item 1
   </Box>
@@ -434,6 +440,7 @@ export default function chakra_section() {
     Item 3
   </Box>
 </Flex>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -20,6 +20,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -242,17 +243,22 @@ export default function chakra_section() {
             UI, you can define custom shadows in your <b>theme</b> and use them
             across your application. This can be particularly handy if you use
             the same shadow settings frequently. Here's how you could do it:
-            <Highlighter>
-              {`const theme = extendTheme({
-  shadows: {
-    outline: "0 0 0 3px rgba(66, 153, 225, 0.6)",
-    inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
-  },
-})
+            <MyFlex>
+              (View code below for theme-defined custom shadow...)
+            </MyFlex>
+            <ViewCode>
+              <Highlighter>
+                {`const theme = extendTheme({
+    shadows: {
+      outline: "0 0 0 3px rgba(66, 153, 225, 0.6)",
+      inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
+    },
+  })
 
-// Using your custom shadow
+// Using the custom shadow
 <Box boxShadow="custom">Hello World</Box>`}
-            </Highlighter>
+              </Highlighter>
+            </ViewCode>
             This way, your custom shadow can be used like any of the built-in
             shadows.
           </GridBoxOne>
@@ -279,12 +285,14 @@ export default function chakra_section() {
                 Hover for Shadow!
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
+            <ViewCode>
+              <Highlighter>{`<Box
   boxShadow="sm"
   _hover={{
     boxShadow: "2xl",
     transition: "box-shadow 0.9s ease-in-out",
   }}`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             You can create multi-layered shadows. If you want to achieve a
@@ -305,10 +313,12 @@ export default function chakra_section() {
                 Whazzup, Planet?!
               </Box>
             </MyFlex>
-            <Highlighter>{` <Box
-  boxShadow="0px 10px 15px rgba(0, 0, 0, 0.1), 
-             0px 4px 6px rgba(0, 0, 0, 0.05)"
+            <ViewCode>
+              <Highlighter>{` <Box
+  boxShadow="0px 10px 15px rgba(0, 0, 0, 0.1),
+  0px 4px 6px rgba(0, 0, 0, 0.05)"
 >`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -35,6 +35,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -282,12 +283,14 @@ export default function chakra_section() {
                 Block Box
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box d="inline" bg="green.300" p={4}>
+            <ViewCode>
+              <Highlighter>{`<Box d="inline" bg="green.300" p={4}>
   Inline Box
 </Box>
 <Box d="block" bg="blue.300" p={4}>
   Block Box
 </Box>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             Chakra UI includes the <b>VisuallyHidden</b> component to visually
@@ -305,12 +308,14 @@ export default function chakra_section() {
                 Click me
               </Button>
             </MyFlex>
-            <Highlighter>{`<Button>
+            <ViewCode>
+              <Highlighter>{`<Button>
   <VisuallyHidden>
     Click me to perform an action
   </VisuallyHidden>
   Click me
 </Button>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Chakra UI provides the <b>Flex</b> component that makes it easy to
@@ -337,12 +342,14 @@ export default function chakra_section() {
                 </Box>
               </Flex>
             </MyFlex>
-            <Highlighter>{`<Box bg="red.300" p={4}>
+            <ViewCode>
+              <Highlighter>{`<Box bg="red.300" p={4}>
   Box 1
 </Box>
 <Box bg="blue.300" p={4}>
   Box 2
 </Box>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

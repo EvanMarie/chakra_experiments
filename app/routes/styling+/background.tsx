@@ -28,6 +28,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -229,12 +230,14 @@ export default function ChakraSection() {
                 width="200px"
               />
             </MyFlex>
-            <Highlighter>{`<Box
-  bgImage="url('https://www.wrongaddress.com')"
-  bg="teal.500"
-  height="200px"
-  width="200px"
-/>`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box
+    bgImage="url('https://www.wrongaddress.com')"
+    bg="teal.500"
+    height="200px"
+    width="200px"
+  />`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             Chakra UI provides a <b>bgRepeat</b> property which allows you to
@@ -251,12 +254,14 @@ export default function ChakraSection() {
                 width="200px"
               />
             </MyFlex>
-            <Highlighter>{`<Box
+            <ViewCode>
+              <Highlighter>{`<Box
   bgImage="url('https://picsum.photos/200/200')"
   bgRepeat="no-repeat"
   height="200px"
   width="200px"
 />`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Tou can also use gradients as background images in Chakra UI. Using
@@ -266,16 +271,18 @@ export default function ChakraSection() {
               {" "}
               <Box bgGradient={bgGradient} height="200px" width="200px" />
             </MyFlex>
-            <Highlighter>{`const bgGradient = useColorModeValue(
-  "linear(to-r, green.200, pink.500)",
-  "linear(to-r, green.700, pink.300)"
-)
-return (
-  <Box 
-    bgGradient={bgGradient}
-    height="200px"
-    width="200px"
-    />`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`const bgGradient = useColorModeValue(
+    "linear(to-r, green.200, pink.500)",
+    "linear(to-r, green.700, pink.300)"
+  )
+  return (
+    <Box 
+      bgGradient={bgGradient}
+      height="200px"
+      width="200px"
+      />`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

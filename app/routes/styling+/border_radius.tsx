@@ -20,6 +20,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -171,8 +172,8 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <b>Individual Corner Radius</b>: you can also adjust the border
-            radius of individual corners using the <b>borderTopLeftRadius</b>,
-            <b>borderTopRightRadius</b>, <b>borderBottomRightRadius</b>, and
+            radius of individual corners using the <b>borderTopLeftRadius</b>,{" "}
+            <b>borderTopRightRadius</b>, <b>borderBottomRightRadius</b>, and{" "}
             <b>borderBottomLeftRadius</b> props. In this example, the border
             radius is set individually for the top left and bottom right
             corners.
@@ -187,9 +188,11 @@ export default function chakra_section() {
                 I'm a box with different border radii on different corners.
               </Box>
             </MyFlex>
-            <Highlighter>{`<Box
-    borderTopLeftRadius="lg"
-    borderBottomRightRadius="2xl">`}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Box
+  borderTopLeftRadius="lg"
+  borderBottomRightRadius="2xl">`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Radius with Themes</b>: you can define custom radius values in
@@ -205,8 +208,9 @@ export default function chakra_section() {
                 I'm a box with a super rounded border.
               </Flex>
             </MyFlex>
-            <Highlighter>{`import { extendTheme } from "@chakra-ui/react"
-
+            <ViewCode>
+              <Highlighter>{`import { extendTheme } from "@chakra-ui/react"
+                
 const theme = extendTheme({
   radii: {
     superRound: "50px"
@@ -220,6 +224,7 @@ export default theme
   borderRadius="superround">
   I'm a box with a super rounded border.
 </Flex>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <b>Ellipse Borders</b>: you can create elliptical borders by
@@ -238,10 +243,12 @@ export default theme
                 I'm a box with an elliptical border radius.
               </Flex>
             </MyFlex>
-            <Highlighter>{` <Flex
+            <ViewCode>
+              <Highlighter>{` <Flex
   p={2}
   borderRadius="50% / 20%"
 >`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

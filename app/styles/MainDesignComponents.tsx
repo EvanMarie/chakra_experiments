@@ -14,10 +14,18 @@ import {
   useBreakpointValue,
   GridItem,
   Divider,
+  Button,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalOverlay,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
 import { HiLightBulb } from "react-icons/hi";
+import { useState } from "react";
 
 const colors = {
   mainBackground: "#211421",
@@ -603,3 +611,48 @@ export function HighlightExample({
     </Box>
   );
 }
+
+/* ******************************EXPANDABLE******************************* */
+
+interface ViewCodeProps {
+  children?: React.ReactNode;
+}
+
+export const ViewCode = ({ children }: ViewCodeProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpandClick = () => {
+    setIsExpanded(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsExpanded(false);
+  };
+
+  return (
+    <>
+      <MyFlex p={0}>
+        <Button
+          size="sm"
+          fontSize="sm"
+          paddingX={4}
+          onClick={handleExpandClick}
+          bg="darkAccent_3"
+          color="linkColor"
+          _hover={{ bg: "sectionColor" }}
+        >
+          View Code
+        </Button>
+      </MyFlex>
+      <Modal isOpen={isExpanded} onClose={handleCloseModal} size="xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody>
+            <Box p={4}>{children}</Box>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};

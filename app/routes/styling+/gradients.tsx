@@ -27,6 +27,7 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -192,8 +193,10 @@ gradients: {
                 Gradient Text
               </Text>
             </MyFlex>
-            <Highlighter>{`<Text
+            <ViewCode>
+              <Highlighter>{`<Text
   bgGradient="linear(to-l, #7928CA, #FF0080)">`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <b>Animating Gradients</b>: While Chakra UI does not have built-in
@@ -201,8 +204,9 @@ gradients: {
             <b>@keyframes</b> and <b>CSS-in-JS</b> to create beautiful gradient
             animations.
             <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
-            <Highlighter>{`import { keyframes } from "@emotion/react";
-
+            <ViewCode>
+              <Highlighter>{`import { keyframes } from "@emotion/react";
+              
 const gradient = keyframes
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -218,6 +222,7 @@ export function AnimatedGradient({ children }:
         backgroundSize="200% 200%"
         animation={{gradient} 2s ease infinite}
         >`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
 
           <GridBoxThree>
@@ -236,9 +241,11 @@ export function AnimatedGradient({ children }:
                 Gradient Button
               </Button>
             </MyFlex>
-            <Highlighter>{`<Button
+            <ViewCode>
+              <Highlighter>{`<Button
   bgGradient="linear(to-r, teal.500, green.500)"
 >`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

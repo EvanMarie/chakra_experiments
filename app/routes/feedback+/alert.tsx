@@ -29,6 +29,7 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -171,10 +172,12 @@ export default function chakra_section() {
                 <Box flex="1">A custom error icon for alerts.</Box>
               </Alert>
             </MyFlex>
-            <Highlighter>{`<Alert status="error">
+            <ViewCode>
+              <Highlighter>{`<Alert status="error">
   <AlertIcon as={LuFileWarning} boxSize="30px" />
   <Box flex="1">A custom error icon for alerts.</Box>
 </Alert>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxOne>
             <b>Embedding Links in Alerts</b>: <b>Alerts</b> can contain more
@@ -194,7 +197,18 @@ export default function chakra_section() {
                 </Box>
               </Alert>
             </MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{`<Alert status="info">
+  <AlertIcon />
+  <Box flex="1">
+    For more details, visit{" "}
+    <Link color="teal.500" href="#">
+      our documentation
+    </Link>
+    .
+  </Box>
+</Alert>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxThree>
             <b>Creating a Custom Alert Component:</b> Instead of using the
@@ -215,9 +229,9 @@ export default function chakra_section() {
               <Message status="info">
                 I'm a happy little custom message!
               </Message>
-              ;
             </MyFlex>
-            <Highlighter>{`interface MessageProps {
+            <ViewCode>
+              <Highlighter>{`interface MessageProps {
   status: "info" | "warning" | "success" | "error" | "loading";
   children: React.ReactNode;
 }
@@ -227,11 +241,6 @@ export function Message({ status, children }: MessageProps) {
     <Alert
       status={status}
       variant="subtle"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      textAlign="center"
-      height="200px"
     >
       <AlertIcon as={FaRegLaughBeam} boxSize="40px" />
       <Box as="span" pt={2} fontSize="lg">
@@ -243,6 +252,7 @@ export function Message({ status, children }: MessageProps) {
 
 // usage
 <Message status="info">I'm a happy little custom message!</Message>;`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

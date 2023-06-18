@@ -36,6 +36,7 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -268,16 +269,20 @@ export default function chakra_section() {
             equal column widths (1fr). The gap prop sets the gap between grid
             items. You can customize the number of columns, column widths, and
             gaps according to your layout requirements.
-            <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1}>
-              <Box bg="yellow.300" height="30px" />
-              <Box bg="green.300" height="30px" />
-              <Box bg="blue.300" height="30px" />
-            </Grid>
-            <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
+            <Box p={3}>
+              <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1}>
+                <Box bg="yellow.300" height="30px" />
+                <Box bg="green.300" height="30px" />
+                <Box bg="blue.300" height="30px" />
+              </Grid>
+            </Box>
+            <ViewCode>
+              <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
   <Box bg="yellow.300" height="30px" />
   <Box bg="green.300" height="30px" />
   <Box bg="blue.300" height="30px" />
 </Grid>`}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             Chakra UI's <b>Stack</b> component provides a convenient way to
@@ -289,16 +294,20 @@ export default function chakra_section() {
             <b>Stack</b> component automatically manages the spacing between the
             elements, making it easy to create vertically or horizontally
             aligned layouts.
-            <Stack direction="column" spacing={2} m={1}>
-              <Box bg="yellow.300" height="30px" />
-              <Box bg="purple.300" height="30px" />
-              <Box bg="red.300" height="30px" />
-            </Stack>
-            <Highlighter>{`<Stack direction="column" spacing={2}>
+            <Box p={3}>
+              <Stack direction="column" spacing={2}>
+                <Box bg="yellow.300" height="30px" />
+                <Box bg="purple.300" height="30px" />
+                <Box bg="red.300" height="30px" />
+              </Stack>
+            </Box>
+            <ViewCode>
+              <Highlighter>{`<Stack direction="column" spacing={2}>
   <Box bg="yellow.300" height="30px" /> 
   <Box bg="purple.300" height="30px" />
   <Box bg="red.300" height="30px" />
 </Stack>`}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Chakra UI offers a responsive <b>Wrap</b> component that allows
@@ -323,6 +332,19 @@ export default function chakra_section() {
                 </WrapItem>
               </Wrap>
             </MyFlex>
+            <ViewCode>
+              <Highlighter>{`<Wrap spacing={1}>
+  <WrapItem>
+    <Box bg="red.300" height="30px" width="220px" />
+  </WrapItem>
+  <WrapItem>
+    <Box bg="green.300" height="30px" width="220px" />
+  </WrapItem>
+  <WrapItem>
+    <Box bg="blue.300" height="30px" width="220px" />
+  </WrapItem>
+</Wrap>`}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
