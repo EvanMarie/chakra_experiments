@@ -4,15 +4,22 @@ import {
   AlertIcon,
   AlertTitle,
   Box,
+  Flex,
+  HStack,
   Stack,
   Text,
+  VStack,
 } from "@chakra-ui/react";
-import { BasicText, Mono } from "~/styles/DesignComponents";
+import { Mono } from "~/styles/DesignComponents";
 import CloseButtonAlert from "./closeButtonAlert";
+import * as Feedback from "~/mardownExamples/feedback/index";
 import {
+  MyFlex,
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
+import { Highlighter } from "../styling/highlighter";
+import { FaRegLaughBeam } from "react-icons/fa";
 
 export function AlertOne() {
   return (
@@ -28,16 +35,25 @@ export function AlertOne() {
       <Box p={5}>
         <Box marginY={1}>
           <Alert status="error">
-            <AlertIcon />
-            <AlertTitle color="black">
-              This is a very important Warning!
-            </AlertTitle>
-            <AlertDescription color="black">
-              Be on edge immediately!
-            </AlertDescription>
+            <VStack w="100%" justifyContent="center">
+              <Flex justifyContent="center">
+                {" "}
+                <HStack w="100%">
+                  <AlertIcon />
+                  <AlertTitle color="black">
+                    This is a very important Warning!
+                  </AlertTitle>
+                </HStack>
+              </Flex>
+
+              <AlertDescription color="black">
+                Be on edge immediately!
+              </AlertDescription>
+            </VStack>
           </Alert>
         </Box>
       </Box>
+      <Feedback.E01 />
     </Box>
   );
 }
@@ -47,11 +63,12 @@ export function AlertTwo() {
     <Box marginTop="10px">
       <SectionHeading>Status</SectionHeading>
       <SectionDescription>
-        ⦾ Change the status of the alerts by passing the status prop. This
-        affects the color scheme and icon used. Alert supports{" "}
-        <Mono>error</Mono>, <Mono>success</Mono>, <Mono>warning</Mono>, and{" "}
-        <Mono>info</Mono> statuses. The following use only the{" "}
-        <Mono>Alert</Mono> and <Mono>AlertIcon</Mono> components.
+        ⦾ You can modify the status of the alerts by supplying a{" "}
+        <Mono>status</Mono> prop. This adjustment will influence the color
+        scheme and the icon utilized. The Alert supports statuses such as{" "}
+        <Mono>error</Mono>, <Mono>success</Mono>, <Mono>warning</Mono>, and
+        info. The following examples employ only the <Mono>Alert</Mono> and{" "}
+        <Mono>AlertIcon</Mono> components.
       </SectionDescription>
 
       <Box p={5}>
@@ -61,21 +78,34 @@ export function AlertTwo() {
               <AlertIcon />
               This is a status "error" alert. You done messed up.
             </Alert>
-
+            <Highlighter>{`<Alert status="error" color="black">
+  <AlertIcon />
+  This is a status "error" alert. You done messed up.
+</Alert>`}</Highlighter>
             <Alert status="success" color="black">
               <AlertIcon />
               This is a status "success" alert. You are a golden god.
-            </Alert>
-
+            </Alert>{" "}
+            <Highlighter>{`<Alert status="success" color="black">
+  <AlertIcon />
+  This is a status "success" alert. You are a golden god.
+</Alert>`}</Highlighter>
             <Alert status="warning" color="black">
               <AlertIcon />
               This is a status "warning" alert. Oh no, something might happen.
             </Alert>
-
+            <Highlighter>{`<Alert status="warning" color="black">
+  <AlertIcon />
+  This is a status "warning" alert. Oh no, something might happen.
+</Alert>`}</Highlighter>
             <Alert status="info" color="black">
               <AlertIcon />
               This is an status "info" alert. You should always be informed.
             </Alert>
+            <Highlighter>{`<Alert status="info" color="black">
+  <AlertIcon />
+  This is an status "info" alert. You should always be informed.
+</Alert>`}</Highlighter>
           </Stack>
         </Box>
       </Box>
@@ -100,23 +130,39 @@ export function AlertThree() {
               <AlertIcon />
               This is an alert with a "subtle" variant. You can barely tell.
             </Alert>
+            <Highlighter>{`<Alert status="success" variant="subtle" color="black">
+  <AlertIcon />
+  This is an alert with a "subtle" variant. You can barely tell.
+</Alert>`}</Highlighter>
 
             <Alert status="success" variant="solid" color="black">
               <AlertIcon />
               This is an alert with a "solid" variant. It's pretty solid.
             </Alert>
+            <Highlighter>{`<Alert status="success" variant="solid" color="black">
+  <AlertIcon />
+  This is an alert with a "solid" variant. It's pretty solid.
+</Alert>`}</Highlighter>
 
             <Alert status="success" variant="left-accent" color="black">
               <AlertIcon />
               This is an alert with a "left-accent" variant. See that little
               accent on the left?
             </Alert>
+            <Highlighter>{`<Alert status="success" variant="left-accent" color="black">
+  <AlertIcon />
+  This is an alert with a "left-accent" variant. See that little accent on the left?
+</Alert>`}</Highlighter>
 
             <Alert status="success" variant="top-accent" color="black">
               <AlertIcon />
               This is an alert with a "top-accent" variant. It's like it is
               wearing a hat!
             </Alert>
+            <Highlighter>{`<Alert status="success" variant="top-accent" color="black">
+  <AlertIcon />
+  This is an alert with a "top-accent" variant. It's like it is wearing a hat!
+</Alert>`}</Highlighter>
           </Stack>
         </Box>
       </Box>
@@ -162,18 +208,43 @@ export function AlertFour() {
 export function AlertFive() {
   return (
     <Box marginTop="10px">
-      <SectionHeading>Incorporating a Close Button</SectionHeading>
+      <SectionHeading>Adding a Close Button</SectionHeading>
       <SectionDescription>
-        ⦾ Alert can also incorporate other Chakra components. Here's an example
-        of an alert with wrapping description text and the{" "}
-        <Mono>CloseButton</Mono> component with simple close functionality:
+        ⦾ The <Mono>Alert</Mono> component can also integrate other elements
+        from Chakra. Here's an illustration of an alert thaCloseButton
+        <Mono>CloseButton</Mono> component for straightforward closure
+        functionality, along with text in the description that wraps:
       </SectionDescription>
 
       <Box p={5}>
-        <Box marginY={1}>
+        <Box h="110px">
           <CloseButtonAlert />
         </Box>
       </Box>
     </Box>
+  );
+}
+
+interface MessageProps {
+  status: "info" | "warning" | "success" | "error" | "loading";
+  children: React.ReactNode;
+}
+
+export function Message({ status, children }: MessageProps) {
+  return (
+    <Alert
+      status={status}
+      variant="subtle"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      textAlign="center"
+      height="200px"
+    >
+      <AlertIcon as={FaRegLaughBeam} boxSize="40px" />
+      <Box as="span" pt={2} fontSize="lg">
+        {children}
+      </Box>
+    </Alert>
   );
 }

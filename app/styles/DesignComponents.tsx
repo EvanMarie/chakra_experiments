@@ -12,6 +12,7 @@ import {
   TextProps,
   VStack,
   chakra,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
 // import { BasicTextSize } from "./MainDesignComponents";
@@ -279,6 +280,50 @@ export function StackedExample({
       <VStack spacing={spacing} align="center">
         {children}
       </VStack>
+    </Box>
+  );
+}
+
+interface CollapsibleExampleProps {
+  children: React.ReactNode[];
+  fontSize?: string | number;
+  split?: string;
+  leftColAlign?: string;
+  rightColAlign?: string;
+}
+
+export function CollapsibleExample({
+  children,
+  split = "40% 60%",
+  leftColAlign = "center",
+  rightColAlign = "left",
+}: CollapsibleExampleProps) {
+  const responsiveSplit = useBreakpointValue({ base: "100%", sm: split });
+  const responsiveAlign = useBreakpointValue({
+    base: "center",
+    sm: rightColAlign,
+  });
+
+  return (
+    <Box w="100%" paddingY={3}>
+      <Grid templateColumns={responsiveSplit}>
+        <Flex
+          w="100%"
+          justifyContent={"center"}
+          overflow="scroll"
+          alignItems={leftColAlign}
+        >
+          {children[0]}
+        </Flex>
+        <Flex
+          w="100%"
+          overflow="scroll"
+          justifyContent={responsiveAlign}
+          alignItems={"center"}
+        >
+          {children[1]}
+        </Flex>
+      </Grid>
     </Box>
   );
 }

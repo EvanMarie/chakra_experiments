@@ -14,7 +14,7 @@ import {
   AlertOne,
   AlertThree,
   AlertTwo,
-} from "~/components/feedback/alerts";
+} from "~/components/feedback/alert";
 
 import stylesUrl from "~/styles/global.css";
 
@@ -230,25 +230,17 @@ export default function chakra_feedback() {
 
           <SectionContainer>
             <AlertTwo />
-            <Feedback.E02 />
           </SectionContainer>
 
           <SectionContainer>
             {" "}
             <AlertThree />
-            <Feedback.E03 />
           </SectionContainer>
 
           <SectionContainer>
             {" "}
             <AlertFour />
             <Feedback.E04 />
-          </SectionContainer>
-
-          <SectionContainer>
-            {" "}
-            <AlertFive />
-            <Feedback.E05 />
           </SectionContainer>
         </Box>
       </Box>
