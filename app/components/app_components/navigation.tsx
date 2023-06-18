@@ -1,15 +1,11 @@
 /* eslint-disable react/display-name */
-import { AddIcon } from "@chakra-ui/icons";
+
 import {
   Accordion,
   AccordionItem,
   Box,
   Flex,
-  HStack,
   VStack,
-  Menu,
-  MenuButton,
-  MenuList,
   chakra,
 } from "@chakra-ui/react";
 
@@ -124,16 +120,28 @@ export const navElements: NavElement[] = [
     label: "Feedback",
     subElements: [
       {
-        link: "/styling/padding_margin",
-        label: "Padding & Margin",
+        link: "/feedback/alert",
+        label: "Alert",
       },
       {
-        link: "/styling/color",
-        label: "Color",
+        link: "/feedback/circular_progress",
+        label: "Circular Progress",
       },
       {
-        link: "/styling/css",
-        label: "CSS",
+        link: "/feedback/progress",
+        label: "Progress",
+      },
+      {
+        link: "/feedback/skeletons",
+        label: "Skeletons",
+      },
+      {
+        link: "/feedback/spinners",
+        label: "Spinners",
+      },
+      {
+        link: "/feedback/toast",
+        label: "Toast",
       },
     ],
   },

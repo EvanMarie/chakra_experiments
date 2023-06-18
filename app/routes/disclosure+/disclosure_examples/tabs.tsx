@@ -7,7 +7,7 @@ import {
   Box,
   TabIndicator,
 } from "@chakra-ui/react";
-import { BasicText, Mono, colors } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
 import { OnChangeTabs } from "./tabsOnChange";
 import {
   BsEmojiSunglasses,
@@ -20,6 +20,7 @@ import { ControlledTabs } from "./controlledTabs";
 import { CustomTabs } from "./customTabs";
 import DataArrayTabs from "./dataTabs";
 import {
+  BulletBox,
   ExampleContainer,
   SectionDescription,
   SectionHeading,
@@ -30,9 +31,21 @@ export function TabsOne() {
     <Box marginTop="5px">
       <SectionHeading>Default Settings</SectionHeading>
       <SectionDescription>
-        ⦾ By default, only one item may be expanded and it can only be collapsed
-        again by expanding another. Pressing the up and down arrow keys will
-        move focus between accordion buttons.
+        ⦾ Tabs in Chakra UI are designed to contain any sort of elements,
+        however, there are specific guidelines for what elements should be
+        direct children of <Mono>TabList</Mono> and <Mono>TabPanels</Mono>. Tab
+        elements are expected to be the only direct children of a{" "}
+        <Mono>TabList</Mono>, while <Mono>TabPanel</Mono> elements should be the
+        only direct children of <Mono>TabPanels</Mono>.
+        <BasicText>
+          {" "}
+          The <Mono>Tabs</Mono> component in Chakra UI is quite flexible when it
+          comes to ordering. You are allowed to place <Mono>TabList</Mono> and{" "}
+          <Mono>TabPanels</Mono> in any order within the Tabs component. For
+          instance, you could place the <Mono>TabList</Mono> at the bottom, or
+          even have multiple TabLists. Despite this flexibility, remember to
+          maintain a consistent layout for an optimal user experience.
+        </BasicText>
       </SectionDescription>
 
       <ExampleContainer bg="background">
@@ -67,11 +80,37 @@ export function TabsTwo() {
     <Box marginTop="5px">
       <SectionHeading>Variants and Colors</SectionHeading>
       <SectionDescription>
-        ⦾ Tabs come in 6 different variants to style the tabs: <Mono>line</Mono>
-        , <Mono>enclosed</Mono>, <Mono>enclosed-colored</Mono>,{" "}
-        <Mono>soft-rounded</Mono>, <Mono>solid-rounded</Mono>, and{" "}
-        <Mono>unstyled</Mono>
+        ⦾ Tabs come in 6 variations as shown below, which can be applied using
+        the variant prop on the Tabs component.
       </SectionDescription>
+      <BulletBox>
+        <ul>
+          <li>
+            <HL>line</HL>: displays an underline below the active tab.
+          </li>
+          <li>
+            <HL>enclosed</HL>: adds a border around the active tab and the tab
+            panel.
+          </li>
+          <li>
+            <HL>enclosed-colored</HL>: is similar to the enclosed variant but
+            with a colored background on the active tab.
+          </li>
+          <li>
+            <HL>soft-rounded</HL>: gives the active tab a rounded outline and a
+            slightly shaded background.
+          </li>
+          <li>
+            <HL>solid-rounded</HL>: gives the active tab a solid background and
+            rounded corners.
+          </li>
+          <li>
+            <HL>unstyled</HL>: doesn't apply any styles to the tabs. This is
+            particularly useful when you want to build a completely custom tab
+            design from scratch.
+          </li>
+        </ul>
+      </BulletBox>
 
       <ExampleContainer bg="background">
         <Box marginY={1}>
@@ -99,11 +138,13 @@ export function TabsThree() {
   return (
     <Box marginTop="5px">
       <SectionDescription>
-        ⦾ You can also change the color scheme for any specific variant by
-        passing the <Mono>colorScheme</Mono>. The value of{" "}
-        <Mono>colorScheme</Mono> must exist in the theme object, and must be a
-        key in <Mono>theme.colors</Mono> that has the <Mono>50 - 900</Mono>{" "}
-        color values.
+        ⦾ In Chakra UI, you have the ability to modify the color scheme of any
+        particular variant by supplying a colorScheme prop. The value you
+        provide to <Mono>colorScheme</Mono> should correspond to a key within
+        the <Mono>theme.colors</Mono> object in your theme, and this key should
+        possess a range of color values from 50 to 900. This allows you to
+        seamlessly blend the Tabs component with the overall color scheme of
+        your application.
       </SectionDescription>
 
       <ExampleContainer bg="background">
@@ -133,10 +174,12 @@ export function TabsFour() {
     <Box marginTop="5px">
       <SectionHeading>Tab Sizing</SectionHeading>
       <SectionDescription>
-        ⦾ You can change the size of the tab by passing size prop. Chakra
-        supports 3 sizes <Mono>sm</Mono>, <Mono>md</Mono>, <Mono>lg</Mono>. The
-        following uses size small with the <Mono>soft-rounded</Mono> variant and
-        a red <Mono>colorScheme</Mono>.
+        ⦾ In Chakra UI, you have the option to adjust the size of the tab by
+        utilizing the size prop. There are three supported sizes you can choose
+        from: <Mono>sm</Mono> for small, <Mono>md</Mono> for medium, and{" "}
+        <Mono>lg</Mono> for large. For instance, if you wanted to use a
+        small-sized tab with the soft-rounded variant and a red color scheme,
+        you would specify these options using the respective properties.
       </SectionDescription>
 
       <ExampleContainer bg="background">

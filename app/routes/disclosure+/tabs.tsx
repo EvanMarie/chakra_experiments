@@ -1,17 +1,15 @@
-import { Box, VStack } from "@chakra-ui/react";
+import {
+  HStack,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  // Mono,
-  // Flex,
-  // Text,
-  HL,
-  Mono,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -30,6 +28,7 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -56,6 +55,7 @@ import {
   TabsTwelve,
   TabsTwo,
 } from "./disclosure_examples/tabs";
+import { EmailIcon, InfoIcon } from "@chakra-ui/icons";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -232,17 +232,152 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Highlight coming soon!
-            <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Nested Tabs</b>: It is possible to nest tabs within other tabs.
+            While this can be complex in many UI libraries, Chakra UI makes this
+            quite straightforward.
+            <MyFlex>
+              <HighlightExample>
+                <Tabs colorScheme="cyan">
+                  <TabList>
+                    <Tab>Tab 1</Tab>
+                    <Tab>Tab 2</Tab>
+                  </TabList>
+
+                  <TabPanels>
+                    <TabPanel>
+                      <Tabs variant="enclosed" colorScheme="cyan">
+                        <TabList>
+                          <Tab>Nested Tab 1</Tab>
+                          <Tab>Nested Tab 2</Tab>
+                        </TabList>
+
+                        <TabPanels>
+                          <TabPanel>
+                            <p>Nested Tab 1 Content</p>
+                          </TabPanel>
+                          <TabPanel>
+                            <p>Nested Tab 2 Content</p>
+                          </TabPanel>
+                        </TabPanels>
+                      </Tabs>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>Tab 2 Content</p>
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
+              </HighlightExample>
+            </MyFlex>
+            <Highlighter>{`<Tabs>
+  <TabList>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+  </TabList>
+
+  <TabPanels>
+    <TabPanel>
+      <Tabs variant="enclosed">
+        <TabList>
+          <Tab>Nested Tab 1</Tab>
+          <Tab>Nested Tab 2</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <p>Nested Tab 1 Content</p>
+          </TabPanel>
+          <TabPanel>
+            <p>Nested Tab 2 Content</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </TabPanel>
+    <TabPanel>
+      <p>Tab 2 Content</p>
+    </TabPanel>
+  </TabPanels>
+</Tabs>`}</Highlighter>
           </GridBoxOne>
           <GridBoxTwo>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <b>Orientation Control</b>: Chakra UI <b>Tabs</b> have support for
+            both horizontal and vertical orientations. This might not be
+            immediately apparent to many users, but it can help you create
+            unique layouts.
+            <MyFlex>
+              <HighlightExample h="175px">
+                <Tabs orientation="vertical" colorScheme="cyan">
+                  <TabList>
+                    <Tab>Tab 1</Tab>
+                    <Tab>Tab 2</Tab>
+                  </TabList>
+
+                  <TabPanels>
+                    <TabPanel>
+                      <p>Tab 1 Content</p>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>Tab 2 Content</p>
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
+              </HighlightExample>
+            </MyFlex>
+            <Highlighter>{`<Tabs orientation="vertical">
+  <TabList>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+  </TabList>
+
+  <TabPanels>
+    <TabPanel>
+      <p>Tab 1 Content</p>
+    </TabPanel>
+    <TabPanel>
+      <p>Tab 2 Content</p>
+    </TabPanel>
+  </TabPanels>
+</Tabs>`}</Highlighter>
           </GridBoxTwo>
           <GridBoxThree>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            Chakra UI allows you to use custom icons from any icon library or
+            even your own SVG icons. This can be utilized to make your tabs more
+            visually appealing and intuitive.
+            <MyFlex>
+              <HighlightExample h="175px">
+                <Tabs colorScheme="cyan">
+                  <TabList>
+                    <Tab>
+                      <HStack spacing={2}>
+                        <EmailIcon boxSize={4} />
+                        <span>Email</span>
+                      </HStack>
+                    </Tab>
+                    <Tab>
+                      <HStack spacing={2}>
+                        <InfoIcon boxSize={4} />
+                        <span>Info</span>
+                      </HStack>
+                    </Tab>
+                  </TabList>
+                </Tabs>
+              </HighlightExample>
+            </MyFlex>
+            <Highlighter>{`<Tabs>
+  <TabList>
+    <Tab>
+      <HStack spacing={2}>
+        <EmailIcon boxSize={4} />
+        <span>Email</span>
+      </HStack>
+    </Tab>
+    <Tab>
+      <HStack spacing={2}>
+        <InfoIcon boxSize={4} />
+        <span>Info</span>
+      </HStack>
+    </Tab>
+  </TabList>
+</Tabs>`}</Highlighter>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

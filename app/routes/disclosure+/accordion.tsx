@@ -28,6 +28,7 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -208,7 +209,7 @@ export default function chakra_section() {
             for more complex data organization. It's a handy trick when you need
             to present multilayered information in a clear and orderly manner.
             <MyFlex>
-              <Box h="240px" w="100%" bg="gray.700" p={4} color="white">
+              <HighlightExample h="240px">
                 <Accordion allowToggle>
                   <AccordionItem>
                     <AccordionButton>
@@ -236,7 +237,7 @@ export default function chakra_section() {
                     </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
-              </Box>
+              </HighlightExample>
             </MyFlex>
             <Highlighter>{`<Accordion allowToggle>
   <AccordionItem>
@@ -274,7 +275,7 @@ export default function chakra_section() {
             icon when the accordion item is collapsed, it is necessary to create
             a custom AccordionButton component.
             <MyFlex>
-              <Box h="125px" w="100%" bg="gray.700" p={4} color="white">
+              <HighlightExample h="125px">
                 <Accordion allowToggle>
                   <AccordionItem>
                     <AccordionButton>
@@ -288,7 +289,7 @@ export default function chakra_section() {
                     <AccordionPanel pb={4}>Section 1 Content</AccordionPanel>
                   </AccordionItem>
                 </Accordion>
-              </Box>
+              </HighlightExample>
             </MyFlex>
             <Highlighter>{`<Accordion allowToggle>
   <AccordionItem>
@@ -309,7 +310,7 @@ export default function chakra_section() {
             component in an accordion panel. In the following example, there is
             an embedded input form and button within the accordion.
             <MyFlex>
-              <Box h="135px" w="100%" bg="gray.700" p={4} color="white">
+              <HighlightExample h="135px">
                 <Accordion allowToggle>
                   <AccordionItem>
                     <AccordionButton>
@@ -322,7 +323,7 @@ export default function chakra_section() {
                     </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
-              </Box>
+              </HighlightExample>
             </MyFlex>
             <Highlighter>{`<Accordion allowToggle>
   <AccordionItem>
