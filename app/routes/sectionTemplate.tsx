@@ -29,6 +29,7 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
+  ViewCode,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -148,15 +149,21 @@ export default function chakra_section() {
           <GridBoxOne>
             Highlight coming soon!
             <MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{``}</Highlighter>
+            </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{``}</Highlighter>
+            </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             Highlight coming soon!<MyFlex></MyFlex>
-            <Highlighter>{``}</Highlighter>
+            <ViewCode>
+              <Highlighter>{``}</Highlighter>
+            </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
