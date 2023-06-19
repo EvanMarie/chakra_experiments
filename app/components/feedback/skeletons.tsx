@@ -7,23 +7,34 @@ import {
 } from "~/styles/DesignComponents";
 import {
   Box,
+  Image,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
   Stack,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
 } from "@chakra-ui/react";
 import FadeDurationSkeleton from "./skeletonFadeDuration";
 import {
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
+import { useState } from "react";
 
 export function SkeletonOne() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>As a stand alone component:</SectionHeading>
+      <SectionHeading>Basic Usage::</SectionHeading>
       <SectionDescription>
-        ⦾ The contains three of the most simple use cases for the Skeleton:
+        ⦾ Let's start with a simple yet functional application. Here's an
+        example of a stack of three skeleton components, all having a set
+        height. Until your actual content is ready, these will create an
+        engaging placeholder to keep your design's flow intact.
       </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
@@ -43,10 +54,11 @@ export function SkeletonOne() {
 export function SkeletonTwo() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>Wrapping a Component:</SectionHeading>
+      <SectionHeading>The Invisible Wrapper::</SectionHeading>
       <SectionDescription>
-        ⦾ The contents of the component will not be seen. This will be seen
-        until the contents are loaded.
+        ⦾ This example perfectly demonstrates how the <Mono>Skeleton</Mono>{" "}
+        component can wrap around any content, making it invisible until it's
+        fully loaded. A real game-changer for suspenseful content reveals!
       </SectionDescription>
 
       <Box p={5}>
@@ -66,10 +78,11 @@ export function SkeletonTwo() {
 export function SkeletonThree() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>Fetching Remote Data:</SectionHeading>
+      <SectionHeading>Waiting on Remote Data:</SectionHeading>
       <SectionDescription>
-        ⦾ Skeletons can load and give visual structure to content while waiting
-        for the actual content to load. See code below.
+        ⦾ Skeletons serve as great placeholders while your app is fetching
+        remote data. Watch how in the following code, the Skeleton maintains the
+        visual structure of the content until the actual data is ready.
       </SectionDescription>
     </Box>
   );
@@ -78,10 +91,11 @@ export function SkeletonThree() {
 export function SkeletonFour() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>Circle and Text Skeleton:</SectionHeading>
+      <SectionHeading>Skeleton Shapes and Text:</SectionHeading>
       <SectionDescription>
-        ⦾ This example uses two additional elements: <Mono>SkeletonCircle</Mono>{" "}
-        and <Mono>SkeletonText</Mono>
+        ⦾ In addition to regular bar-like placeholders, Chakra UI provides
+        <Mono>SkeletonCircle</Mono> and <Mono>SkeletonText</Mono> for more
+        variety. Check out how they work in the following snippet.
       </SectionDescription>
 
       <Box p={5}>
@@ -108,8 +122,9 @@ export function SkeletonFive() {
     <Box marginTop="5px">
       <SectionHeading>Color-Changing Skeleton:</SectionHeading>
       <SectionDescription>
-        ⦾ use <Mono>startColor</Mono> and <Mono>endColor</Mono> to create
-        color-changing skeletons.
+        ⦾ With <Mono>startColor</Mono> and <Mono>endColor</Mono> properties, you
+        can create dynamic, color-changing skeletons. It's like a fun little
+        light show while the user waits for content to load.
       </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
@@ -125,15 +140,15 @@ export function SkeletonFive() {
 export function SkeletonSix() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>isLoaded prop:</SectionHeading>
+      <SectionHeading>Using isLoaded Prop:</SectionHeading>
       <SectionDescription>
-        ⦾ to prevent the skeleton from rendering, use <Mono>isLoaded</Mono> as
-        shown below.
+        ⦾ Control the rendering of the skeleton with the <Mono>isLoaded</Mono>{" "}
+        prop. If you don't want a skeleton, this is the way to do it.
       </SectionDescription>
       <Box p={5}>
         <Box marginY={1}>
           <Skeleton isLoaded>
-            <span>No skeleton to see here.</span>
+            <span>A world with no skeletons.</span>
           </Skeleton>
         </Box>
       </Box>
@@ -144,13 +159,12 @@ export function SkeletonSix() {
 export function SkeletonSeven() {
   return (
     <Box marginTop="5px">
-      <SectionHeading>fadeDuration prop:</SectionHeading>
+      <SectionHeading>Controlling Fade Duration::</SectionHeading>
       <SectionDescription>
-        ⦾ <Mono>fadeDuration</Mono> allows you to control the speed at which the
-        content fades into view. The number passed is the number of seconds for
-        the <Mono>animation</Mono> style prop to render. Default is 0.4 seconds.
-        This is best viewd with the <Mono>isLoaded</Mono> prop set to{" "}
-        <Mono>true</Mono>.{" "}
+        ⦾ <Mono>FadeDuration</Mono> prop lets you control the speed of your
+        content fade-in. The number you pass is the duration in seconds for the
+        animation. By default, it's 0.4 seconds. Try it out with{" "}
+        <Mono>isLoaded</Mono> prop set to true!
       </SectionDescription>
 
       <Box p={5}>
@@ -161,5 +175,44 @@ export function SkeletonSeven() {
         </Box>
       </Box>
     </Box>
+  );
+}
+
+export function ImageWithSkeleton() {
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+  return (
+    <Skeleton isLoaded={hasLoaded} boxSize="200px">
+      <Image
+        src="https://placekitten.com/200/200"
+        onLoad={() => setHasLoaded(true)}
+        alt="A cute kitten"
+      />
+    </Skeleton>
+  );
+}
+
+export function DataTableSkeleton() {
+  return (
+    <Table>
+      <Thead>
+        <Tr>
+          <Th color="white">Name</Th>
+          <Th color="white">Email</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        {[...Array(3)].map((_, i) => (
+          <Tr key={i}>
+            <Td>
+              <Skeleton height="20px" speed={1.7} />
+            </Td>
+            <Td>
+              <Skeleton height="20px" speed={1.7} />
+            </Td>
+          </Tr>
+        ))}
+      </Tbody>
+    </Table>
   );
 }

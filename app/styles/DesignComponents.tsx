@@ -306,7 +306,7 @@ export function CollapsibleExample({
 
   return (
     <Box w="100%" paddingY={3}>
-      <Grid templateColumns={responsiveSplit}>
+      <Grid templateColumns={responsiveSplit} gap={3}>
         <Flex
           w="100%"
           justifyContent={"center"}

@@ -20,7 +20,6 @@ import {
   HighlightColumn,
   MyFlex,
   SectionDescription,
-  SingleExample,
   ViewCode,
 } from "~/styles/MainDesignComponents";
 
@@ -29,7 +28,11 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { CountdownProgressBar } from "~/components/feedback/progressBarExamples";
+import {
+  CountdownProgressBar,
+  DynamicProgressBar,
+  StepsProgressBar,
+} from "~/components/feedback/progressBarExamples";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -241,24 +244,169 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Number One
+            <b>Progress bar with dynamic value</b>: This is especially useful
+            for scenarios where the progress value isn't static, like in file
+            uploads or time-bound operations. You can update the value prop with
+            state or any dynamic data.
+            <MyFlex>
+              <DynamicProgressBar />{" "}
+            </MyFlex>
+            <ViewCode>
+              <Highlighter>{`export function DynamicProgressBar() {
+  const [value, setValue] = useState(0);
+  const intervalRef = useRef<number>();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setValue((oldValue) => {
+        let newValue = oldValue + 10;
+        if (newValue > 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return newValue;
+      });
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const resetProgress = () => {
+    clearInterval(intervalRef.current);
+    setValue(0);
+  };
+
+  return (
+
+        <Progress w="90%" value={value} colorScheme="cyan" />
+        <Button size="sm" onClick={resetProgress}>
+          Reset
+        </Button>
+  );
+}`}</Highlighter>
+            </ViewCode>
+          </GridBoxOne>
+          <GridBoxTwo>
+            <b>Progress bar with steps</b>: This can be used when you need to
+            visualize the progress of a multi-step process, like a form wizard
+            or step-by-step tutorial. Here's an example with a three-step
+            process
+            <MyFlex>
+              <StepsProgressBar />
+            </MyFlex>
+            <ViewCode>
+              <Highlighter>{`export function StepsProgressBar() {
+  const steps = 6;
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const nextStep = () => {
+    setCurrentStep((oldStep) => Math.min(oldStep + 1, steps));
+  };
+
+  const prevStep = () => {
+    setCurrentStep((oldStep) => Math.max(oldStep - 1, 1));
+  };
+
+  const value = (currentStep / steps) * 100;
+
+  return (
+        <HStack w="100%" textAlign="center">
+          <Text w="20%">
+            {currentStep} / {steps}
+          </Text>
+          <Progress w="80%" value={value} colorScheme="pink" />
+        </HStack>
+        <HStack spacing={3}>
+          <Button size="sm" onClick={prevStep} disabled={currentStep === 1}>
+            Previous
+          </Button>
+          <Button size="sm" onClick={nextStep} disabled={currentStep === steps}>
+            Next
+          </Button>
+        </HStack>
+  );
+}`}</Highlighter>
+            </ViewCode>
+          </GridBoxTwo>
+          <GridBoxThree>
+            <p>
+              <b>A Countdown Progress Bar</b>: a versatile progress bar with a
+              countdown timer, which displays a progress bar that decreases
+              gradually over the input duration, by default 10 seconds, from
+              100% to 0%.
+            </p>
+
+            <p>
+              The countdown and the progress bar are linked through a useEffect
+              hook that recalculates the <b>currentSecond</b> based on the
+              progress bar's current value. This makes sure the displayed
+              remaining time is always in sync with the progress bar's state.
+            </p>
             <MyFlex>
               <CountdownProgressBar />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
-          </GridBoxOne>
-          <GridBoxTwo>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
-          </GridBoxTwo>
-          <GridBoxThree>
-            Highlight coming soon!<MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Highlighter>{`export function CountdownProgressBar() {
+  const ONE_HUNDRED_PERCENT = 100;
+  const [totalSeconds, setTotalSeconds] = useState(10);
+  const [value, setValue] = useState(ONE_HUNDRED_PERCENT);
+  const [currentSecond, setCurrentSecond] = useState(totalSeconds);
+  const intervalRef = useRef<number>();
+
+  useEffect(() => {
+    setCurrentSecond(totalSeconds);
+    resetProgress();
+
+    return () => {
+      clearInterval(intervalRef.current);
+    };
+  }, [totalSeconds]);
+
+  useEffect(() => {
+    if (value <= 0) {
+      clearInterval(intervalRef.current);
+    }
+    setCurrentSecond(Math.round((value * totalSeconds) / ONE_HUNDRED_PERCENT));
+  }, [value]);
+
+  const startProgress = () => {
+    intervalRef.current = window.setInterval(() => {
+      setValue((oldValue) => oldValue - ONE_HUNDRED_PERCENT / totalSeconds);
+    }, 1000);
+  };
+
+  const resetProgress = () => {
+    clearInterval(intervalRef.current);
+    setValue(ONE_HUNDRED_PERCENT);
+    setCurrentSecond(totalSeconds);
+    startProgress();
+  };
+
+  const handleSecondsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTotalSeconds(Number(event.target.value));
+  };
+
+  return (
+      <VStack spacing={3}>
+        <Input
+          type="number"
+          placeholder="Total seconds"
+          value={totalSeconds}
+          onChange={handleSecondsChange}
+          size="sm"
+        />
+        <Box width="100%">
+          <Progress value={value} colorScheme="pink" width="100%" />
+          <Text textAlign="right">{currentSecond}s</Text>
+        </Box>
+        <Button onClick={resetProgress} size="sm">
+          Reset
+        </Button>
+      </VStack>
+  );
+}`}</Highlighter>
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
