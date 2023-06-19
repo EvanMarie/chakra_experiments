@@ -33,6 +33,7 @@ const theme = extendTheme({
     background: CovertCandyScheme[900],
     linkColor: CovertCandyScheme[450],
     darkAccent_3: CovertCandyScheme[800],
+    highlightExampleBackground: "gray.700",
   },
 
   breakpoints: {
