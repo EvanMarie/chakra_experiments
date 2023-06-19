@@ -1,4 +1,3 @@
-import { colors } from "~/styles/DesignComponents";
 import {
   Drawer,
   DrawerBody,
@@ -9,16 +8,19 @@ import {
   DrawerCloseButton,
   Button,
   useDisclosure,
+  RadioGroup,
+  Stack,
+  Radio,
+  Input,
 } from "@chakra-ui/react";
-import { useRef } from "react";
-import { Input } from "@chakra-ui/react";
-import { ExampleContainer } from "~/styles/MainDesignComponents";
+import { useRef, useState } from "react";
+import { SingleExample } from "~/styles/MainDesignComponents";
 
 export function DrawerFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
   return (
-    <ExampleContainer bg={colors.mainBackground}>
+    <SingleExample bg="background">
       <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
         Open
       </Button>
@@ -45,60 +47,65 @@ export function DrawerFunctionOne() {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </ExampleContainer>
+    </SingleExample>
   );
 }
 
-export function ComponentFunctionTwo() {
+export function DrawerFunctionTwo() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [placement, setPlacement] = useState<
+    "top" | "right" | "bottom" | "left"
+  >("right");
+
   return (
-    <ExampleContainer bg={colors.mainBackground}>
-      {" "}
-      Function Logic
-    </ExampleContainer>
+    <>
+      <RadioGroup
+        defaultValue={placement}
+        onChange={(nextValue) =>
+          setPlacement(nextValue as "top" | "right" | "bottom" | "left")
+        }
+      >
+        <Stack direction="row" mb="4">
+          <Radio value="top">Top</Radio>
+          <Radio value="right">Right</Radio>
+          <Radio value="bottom">Bottom</Radio>
+          <Radio value="left">Left</Radio>
+        </Stack>
+      </RadioGroup>
+      <Button colorScheme="blue" onClick={onOpen}>
+        Open
+      </Button>
+      <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+          <DrawerBody>
+            <p>I am some contents in a paragraph.</p>
+            <p>I am another paragraph utterly full of content.</p>
+            <p>Wow, the content around here is astounding.</p>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </>
   );
 }
 
 export function ComponentFunctionThree() {
-  return (
-    <ExampleContainer bg={colors.mainBackground}>
-      {" "}
-      Function Logic
-    </ExampleContainer>
-  );
+  return <SingleExample bg="background"> Function Logic</SingleExample>;
 }
 
 export function ComponentFunctionFour() {
-  return (
-    <ExampleContainer bg={colors.mainBackground}>
-      {" "}
-      Function Logic
-    </ExampleContainer>
-  );
+  return <SingleExample bg="background"> Function Logic</SingleExample>;
 }
 
 export function ComponentFunctionFive() {
-  return (
-    <ExampleContainer bg={colors.mainBackground}>
-      {" "}
-      Function Logic
-    </ExampleContainer>
-  );
+  return <SingleExample bg="background"> Function Logic</SingleExample>;
 }
 
 export function ComponentFunctionSix() {
-  return (
-    <ExampleContainer bg={colors.mainBackground}>
-      {" "}
-      Function Logic
-    </ExampleContainer>
-  );
+  return <SingleExample bg="background"> Function Logic</SingleExample>;
 }
 
 export function ComponentFunctionSeven() {
-  return (
-    <ExampleContainer bg={colors.mainBackground}>
-      {" "}
-      Function Logic
-    </ExampleContainer>
-  );
+  return <SingleExample bg="background"> Function Logic</SingleExample>;
 }

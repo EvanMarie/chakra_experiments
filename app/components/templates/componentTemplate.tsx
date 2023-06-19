@@ -8,52 +8,68 @@ import {
 
 export function ComponentOne() {
   return (
-    <Box marginTop="5px">
-      <SectionHeading>HEADING</SectionHeading>
-      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading></SectionHeading>
+      <Box>
+        <SectionDescription>⦾</SectionDescription>
+        <BasicText></BasicText>
+        <BasicText></BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionOne />
+      </MyFlex>
+    </SectionContainer>
   );
 }
 
-export function ComponentOne() {
+export function ComponentTwo() {
   return (
-    <Box marginTop="5px">
-      <SectionHeading>HEADING</SectionHeading>
-      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading></SectionHeading>
+      <Box>
+        <SectionDescription>⦾</SectionDescription>
+        <BasicText></BasicText>
+        <BasicText></BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionOne />
+      </MyFlex>
+    </SectionContainer>
   );
 }
 
-export function ComponentOne() {
+export function ComponentThree() {
   return (
-    <Box marginTop="5px">
-      <SectionHeading>HEADING</SectionHeading>
-      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading></SectionHeading>
+      <Box>
+        <SectionDescription>⦾</SectionDescription>
+        <BasicText></BasicText>
+        <BasicText></BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionOne />
+      </MyFlex>
+    </SectionContainer>
   );
 }
 
-export function ComponentOne() {
+export function ComponentFour() {
   return (
-    <Box marginTop="5px">
-      <SectionHeading>HEADING</SectionHeading>
-      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading></SectionHeading>
+      <Box>
+        <SectionDescription>⦾</SectionDescription>
+        <BasicText></BasicText>
+        <BasicText></BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionOne />
+      </MyFlex>
+    </SectionContainer>
   );
 }

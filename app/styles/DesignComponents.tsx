@@ -102,7 +102,7 @@ interface BasicTextProps extends TextProps {
 export function BasicText({
   color = "mainText",
   fontWeight = "normal",
-  mb = 1,
+  mb = 3,
   mt = 1,
   children,
 }: BasicTextProps) {

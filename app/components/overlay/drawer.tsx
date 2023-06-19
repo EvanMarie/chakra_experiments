@@ -1,15 +1,17 @@
 import { Box, Flex } from "@chakra-ui/react";
 
 import { BasicText, Mono, colors } from "~/styles/DesignComponents";
-import { DrawerFunctionOne } from "./drawerFunctions";
+import { DrawerFunctionOne, DrawerFunctionTwo } from "./drawerFunctions";
 import {
+  MyFlex,
+  SectionContainer,
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 
 export function DrawerOne() {
   return (
-    <Box marginTop="5px">
+    <SectionContainer>
       <SectionHeading>Default Usage:</SectionHeading>
       <Box>
         <SectionDescription>
@@ -37,57 +39,77 @@ export function DrawerOne() {
           <Mono>DrawerContent</Mono> , and related components that form the
           structure of the drawer. <Mono>DrawerHeader</Mono>,{" "}
           <Mono>DrawerBody</Mono>, and <Mono>DrawerFooter</Mono> components are
-          used to define the content within the drawer. The <Mono>Input</Mono>
+          used to define the content within the drawer. The <Mono>Input</Mono>{" "}
           component is used for text input within the drawer.
         </BasicText>
       </Box>
 
-      <Box p={5}>
-        <Box marginY={1}>
-          <DrawerFunctionOne />
-        </Box>
-      </Box>
-    </Box>
+      <MyFlex bg="background">
+        <DrawerFunctionOne />
+      </MyFlex>
+    </SectionContainer>
   );
 }
 
-export function ComponentTwo() {
+export function DrawerTwo() {
   return (
-    <Box marginTop="5px">
-      <SectionHeading>HEADING</SectionHeading>
-      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading>Drawer Placement</SectionHeading>
+      <Box>
+        <SectionDescription>
+          ⦾ In the following example, the drawer placement is adjusted based on
+          the value selected in the radio group. It displays a group of radio
+          buttons corresponding to the four possible placements of the drawer:
+          "Top", "Right", "Bottom", and "Left". This radio group allows the user
+          to select the desired placement for the drawer. By default, the drawer
+          placement is set to "right".
+        </SectionDescription>
+        <BasicText>
+          The setPlacement function (which is part of the state returned by
+          useState) is invoked with the new value whenever a different radio
+          button is selected. This updates the state and triggers a re-render of
+          the component, causing the drawer to open in the new direction when
+          the "Open" button is clicked.
+        </BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionTwo />
+      </MyFlex>
+    </SectionContainer>
   );
 }
 
 export function ComponentThree() {
   return (
-    <Box marginTop="5px">
-      <SectionHeading>HEADING</SectionHeading>
-      <SectionDescription>⦾ DESCRIPTION</SectionDescription>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading></SectionHeading>
+      <Box>
+        <SectionDescription>⦾</SectionDescription>
+        <BasicText></BasicText>
+        <BasicText></BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionTwo />
+      </MyFlex>
+    </SectionContainer>
   );
 }
 
 export function ComponentFour() {
   return (
-    <Box marginTop="5px">
-      <BasicText color={"accent_2"} size="18px" fontWeight="bold">
-        HEADING
-      </BasicText>
-      <BasicText color={"accent_3"}>⦾ DESCRIPTION</BasicText>
-
-      <Box p={5}>
-        <Box marginY={1}>COMPONENT</Box>
+    <SectionContainer>
+      <SectionHeading></SectionHeading>
+      <Box>
+        <SectionDescription>⦾</SectionDescription>
+        <BasicText></BasicText>
+        <BasicText></BasicText>
       </Box>
-    </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionOne />
+      </MyFlex>
+    </SectionContainer>
   );
 }

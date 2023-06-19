@@ -2,7 +2,9 @@
 import { default as E01 }  from './01.md';
 import { default as E02 }  from './02.md';
 import { default as E03 }  from './03.md';
+import { default as E04 }  from './04.md';
 
 export { E01};
 export { E02};
 export { E03};
+export { E04};

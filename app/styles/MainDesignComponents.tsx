@@ -306,7 +306,7 @@ export function MyLabel({
           </Text>
         </Flex>
         <Flex w="40%" justifyContent="flex-end" paddingRight={2}>
-          <HStack spacing={3} alignItems="center" justifyContent="right">
+          <HStack spacing={3} alignItems="center" justifyContent="right" pr={3}>
             <Text fontSize="28px">|</Text>
             <Flex justify="center" align="center" pb={1.5}>
               <CustomLink

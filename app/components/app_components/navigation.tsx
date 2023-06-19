@@ -148,6 +148,32 @@ export const navElements: NavElement[] = [
   {
     link: "/overlay",
     label: "Overlay",
+    subElements: [
+      {
+        link: "/overlay/alert_dialog",
+        label: "Alert Dialog",
+      },
+      {
+        link: "/overlay/drawer",
+        label: "Drawer",
+      },
+      {
+        link: "/overlay/menu",
+        label: "Menu",
+      },
+      {
+        link: "/overlay/modal",
+        label: "Modal",
+      },
+      {
+        link: "/overlay/popover",
+        label: "Popover",
+      },
+      {
+        link: "/overlay/tooltip",
+        label: "Tooltip",
+      },
+    ],
   },
 ];
 
