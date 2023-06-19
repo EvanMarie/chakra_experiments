@@ -162,7 +162,7 @@ interface GridBoxProps extends FlexProps {
 
 const GridBoxDefaults = {
   width: "100%",
-  maxWidth: "500px",
+  maxWidth: { base: "450px", sm: "500px", md: "600px", lg: "300px" },
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -609,7 +609,7 @@ export function HighlightText({
   paddingY = { base: 2, sm: 4, md: 4, lg: 1 },
   color = "darkText",
   borderRadius = "sm",
-  maxWidth = "400px",
+  maxWidth = { base: "450px", sm: "500px", md: "600px", lg: "300px" },
   ...restProps
 }: HighlightTextProps) {
   return (
@@ -697,7 +697,12 @@ export const ViewCode = ({ children }: ViewCodeProps) => {
           View Code
         </Button>
       </MyFlex>
-      <Modal isOpen={isExpanded} onClose={handleCloseModal} size="xl">
+      <Modal
+        isOpen={isExpanded}
+        onClose={handleCloseModal}
+        size="xl"
+        colorScheme="teal"
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />

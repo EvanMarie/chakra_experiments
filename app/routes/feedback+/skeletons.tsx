@@ -28,7 +28,6 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
@@ -180,48 +179,7 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <SkeletonSeven />
-                <Highlighter>{`function FadeDurationSkeleton() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  return (
-    <Stack
-      padding={4}
-      spacing={1}
-      color="black"
-      fontWeight="bold"
-      fontFamily="monospace"
-      textAlign="center"
-      fontSize="18px"
-    >
-      <Skeleton height="40px" isLoaded={isLoaded} bg={"accent_1"}>
-        <Box>I hope</Box>
-      </Skeleton>
-      <Skeleton
-        height="40px"
-        isLoaded={isLoaded}
-        bg={"accent_2"}
-        fadeDuration={1}
-      >
-        <Box>that you</Box>
-      </Skeleton>
-      <Skeleton
-        height="40px"
-        isLoaded={isLoaded}
-        fadeDuration={4}
-        bg={"accent_3"}
-      >
-        <Box>have a great day!</Box>
-      </Skeleton>
-
-      <Box textAlign="center">
-        <Button marginTop={2} onClick={() => setIsLoaded((v) => !v)}>
-          Press!
-        </Button>
-      </Box>
-    </Stack>
-  );
-}
-
-export default FadeDurationSkeleton;`}</Highlighter>{" "}
+                <Feedback.E16 />
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -242,10 +200,7 @@ export default FadeDurationSkeleton;`}</Highlighter>{" "}
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Box w="100%" padding={3} boxShadow="lg" bg="white">
-  <Skeleton height="20px" speed={1.7} />
-  <Skeleton height="20px" width="80%" speed={1.7} />
-</Box>`}</Highlighter>
+              <Feedback.H10 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
@@ -261,30 +216,7 @@ export default FadeDurationSkeleton;`}</Highlighter>{" "}
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`export function DataTableSkeleton() {
-  return (
-    <Table>
-      <Thead>
-        <Tr>
-          <Th color="white">Name</Th>
-          <Th color="white">Email</Th>
-        </Tr>
-      </Thead>
-      <Tbody>
-        {[...Array(3)].map((_, i) => (
-          <Tr key={i}>
-            <Td>
-              <Skeleton height="20px" speed={1.7} />
-            </Td>
-            <Td>
-              <Skeleton height="20px" speed={1.7} />
-            </Td>
-          </Tr>
-        ))}
-      </Tbody>
-    </Table>
-  );
-}`}</Highlighter>
+              <Feedback.H11 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
@@ -297,19 +229,7 @@ export default FadeDurationSkeleton;`}</Highlighter>{" "}
               <ImageWithSkeleton />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`export function ImageWithSkeleton() {
-  const [hasLoaded, setHasLoaded] = useState(false);
-
-  return (
-    <Skeleton isLoaded={hasLoaded} boxSize="200px">
-      <Image
-        src="https://placekitten.com/200/200"
-        onLoad={() => setHasLoaded(true)}
-        alt="A cute kitten"
-      />
-    </Skeleton>
-  );
-}`}</Highlighter>
+              <Feedback.H12 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

@@ -245,32 +245,7 @@ export default function chakra_section() {
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Accordion allowToggle>
-  <AccordionItem>
-    <AccordionButton>
-      <Box flex="1" textAlign="left">
-        Section 1 title
-      </Box>
-      <AccordionIcon />
-    </AccordionButton>
-    <AccordionPanel pb={4}>
-      Section 1 content
-      <Accordion allowToggle>
-        <AccordionItem>
-          <AccordionButton>
-<Box flex="1" textAlign="left">
-  Nested Section 1 title
-</Box>
-<AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel pb={4}>
-Nested Section 1 content
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-    </AccordionPanel>
-  </AccordionItem>
-</Accordion>`}</Highlighter>
+              <Disclosure.H01 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
@@ -301,19 +276,7 @@ Nested Section 1 content
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Accordion allowToggle>
-  <AccordionItem>
-    <AccordionButton>
-      <HStack w="100%" justifyContent="space-between">
-        <Box>Section 1 Title</Box>
-        <Box>
-          <AccordionIcon as={ArrowDownIcon} boxSize={4} />
-        </Box>
-      </HStack>
-    </AccordionButton>
-    <AccordionPanel pb={4}>Section 1 Content</AccordionPanel>
-  </AccordionItem>
-</Accordion>`}</Highlighter>
+              <Disclosure.H02 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
@@ -339,18 +302,7 @@ Nested Section 1 content
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Accordion allowToggle>
-  <AccordionItem>
-    <AccordionButton>
-      <Box flex="1" textAlign="left">
-        Click me for input form
-      </Box>
-    </AccordionButton>
-    <AccordionPanel pb={4}>
-      <Input placeholder="Type here..." />
-    </AccordionPanel>
-  </AccordionItem>
-</Accordion>`}</Highlighter>
+              <Disclosure.H03 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

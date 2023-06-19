@@ -35,7 +35,6 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import * as Feedback from "~/mardownExamples/feedback/index";
@@ -176,10 +175,7 @@ export default function chakra_section() {
               </Alert>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Alert status="error">
-  <AlertIcon as={LuFileWarning} boxSize="30px" />
-  <Box flex="1">A custom error icon for alerts.</Box>
-</Alert>`}</Highlighter>
+              <Feedback.H01 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxOne>
@@ -203,16 +199,7 @@ export default function chakra_section() {
               </Alert>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Alert status="info">
-  <AlertIcon />
-  <Box flex="1">
-    For more details, visit{" "}
-    <Link color="teal.500" href="#">
-      our documentation
-    </Link>
-    .
-  </Box>
-</Alert>`}</Highlighter>
+              <Feedback.H02 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxThree>
@@ -238,27 +225,7 @@ export default function chakra_section() {
               </Message>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`interface MessageProps {
-  status: "info" | "warning" | "success" | "error" | "loading";
-  children: React.ReactNode;
-}
-
-export function Message({ status, children }: MessageProps) {
-  return (
-    <Alert
-      status={status}
-      variant="subtle"
-    >
-      <AlertIcon as={FaRegLaughBeam} boxSize="40px" />
-      <Box as="span" pt={2} fontSize="lg">
-        {children}
-      </Box>
-    </Alert>
-  );
-}
-
-// usage
-<Message status="info">I'm a happy little custom message!</Message>;`}</Highlighter>
+              <Feedback.H03 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

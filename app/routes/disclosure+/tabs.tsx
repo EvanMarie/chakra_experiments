@@ -273,35 +273,7 @@ export default function chakra_section() {
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Tabs>
-  <TabList>
-    <Tab>Tab 1</Tab>
-    <Tab>Tab 2</Tab>
-  </TabList>
-
-  <TabPanels>
-    <TabPanel>
-      <Tabs variant="enclosed">
-        <TabList>
-          <Tab>Nested Tab 1</Tab>
-          <Tab>Nested Tab 2</Tab>
-        </TabList>
-
-        <TabPanels>
-          <TabPanel>
-            <p>Nested Tab 1 Content</p>
-          </TabPanel>
-          <TabPanel>
-            <p>Nested Tab 2 Content</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-    </TabPanel>
-    <TabPanel>
-      <p>Tab 2 Content</p>
-    </TabPanel>
-  </TabPanels>
-</Tabs>`}</Highlighter>
+              <Disclosure.H04 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
@@ -331,21 +303,7 @@ export default function chakra_section() {
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Tabs orientation="vertical">
-  <TabList>
-    <Tab>Tab 1</Tab>
-    <Tab>Tab 2</Tab>
-  </TabList>
-
-  <TabPanels>
-    <TabPanel>
-      <p>Tab 1 Content</p>
-    </TabPanel>
-    <TabPanel>
-      <p>Tab 2 Content</p>
-    </TabPanel>
-  </TabPanels>
-</Tabs>`}</Highlighter>
+              <Disclosure.H05 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
@@ -375,22 +333,7 @@ export default function chakra_section() {
               </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`<Tabs>
-  <TabList>
-    <Tab>
-      <HStack spacing={2}>
-        <EmailIcon boxSize={4} />
-        <span>Email</span>
-      </HStack>
-    </Tab>
-    <Tab>
-      <HStack spacing={2}>
-        <InfoIcon boxSize={4} />
-        <span>Info</span>
-      </HStack>
-    </Tab>
-  </TabList>
-</Tabs>`}</Highlighter>
+              <Disclosure.H06 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

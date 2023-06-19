@@ -28,7 +28,6 @@ import {
 import { Highlighter } from "~/components/styling/highlighter";
 import * as Feedback from "~/mardownExamples/feedback/index";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
@@ -222,24 +221,7 @@ export default function chakra_section() {
               <ToastSequentialFunction />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`export function ToastSequentialFunction() {
-  const toast = useToast();
-  const sequence = ["Step 1: Do this", "Step 2: Do that", "Step 3: Done!"];
-  const displaySequence = () => {
-    sequence.forEach((step, index) => {
-      setTimeout(() => {
-        toast({
-          title: step,
-          status: "info",
-          duration: 2000,
-          isClosable: true,
-        });
-      }, index * 1500);
-    });
-  };
-
-  return <Button onClick={displaySequence}>Show Steps</Button>;
-}`}</Highlighter>
+              <Feedback.H16 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
@@ -262,37 +244,7 @@ export default function chakra_section() {
               <ToastCountdownFunction />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`export function ToastCountdownFunction() {
-  const toast = useToast();
-  let counter = 10;
-
-  const startCountdown = () => {
-    const toastId = toast({
-      title: 'Countdown: {counter}',
-      duration: null,
-      isClosable: false,
-    });
-
-    const intervalId = setInterval(() => {
-      counter--;
-      if (counter > 0) {
-        toast.update(toastId, { title: 'Countdown: {counter}' });
-      } else {
-        clearInterval(intervalId);
-        toast.update(toastId, {
-          title: "Countdown Complete!",
-          isClosable: true,
-        });
-      }
-    }, 1000);
-  };
-
-  return (
-    <Button sx={buttonStyles} onClick={startCountdown}>
-      Start Countdown
-    </Button>
-  );
-}`}</Highlighter>
+              <Feedback.H17 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
@@ -315,41 +267,7 @@ export default function chakra_section() {
               <ToastInteractiveFunction />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`export function ToastInteractiveFunction() {
-  const toast = useToast();
-
-  const showToast = () => {
-    toast({
-      title: "Hey there!",
-      description: "Would you like a cup of coffee?",
-      status: "info",
-      duration: null,
-      isClosable: true,
-      render: () => (
-        <Box color="white" sx={buttonStyles}>
-          <Button
-            sx={buttonStyles}
-            onClick={() =>
-              toast({
-                title: "Coffee on the way!",
-                status: "success",
-                duration: 2000,
-              })
-            }
-          >
-            Yes, please!
-          </Button>
-        </Box>
-      ),
-    });
-  };
-
-  return (
-    <Button sx={buttonStyles} onClick={showToast}>
-      Greet me
-    </Button>
-  );
-}`}</Highlighter>
+              <Feedback.H18 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

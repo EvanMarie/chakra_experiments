@@ -37,7 +37,7 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
+import * as Feedback from "~/mardownExamples/feedback/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
@@ -329,25 +329,7 @@ export default function chakra_section() {
               <CircularProgressTimer />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`function CircularProgressTimer() {
-  const [seconds, setSeconds] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSeconds(seconds => 
-        (seconds === 100 ? 0 : seconds + 10));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <Box display="flex" justifyContent="center">
-      <CircularProgress 
-      value={seconds} 
-      color="blue.500" />
-    </Box>
-  );
-}`}</Highlighter>
+              <Feedback.H04 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
@@ -362,41 +344,7 @@ export default function chakra_section() {
               <CircularProgressImage />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`function CircularProgressImage() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  const loadImage = () => {
-    setIsLoaded(false);
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 3000); 
-    return () => clearTimeout(timer);
-  };
-
-  useEffect(() => {
-    loadImage();
-  }, []);
-
-  return (
-      <Box position="relative">
-        {!isLoaded && (
-<CircularProgress
-  isIndeterminate
-/>
-        )}
-        {isLoaded && (
-          <MyFlex h="200px">
-<Image
-  src="imageLink" alt="Example" />
-          </MyFlex>
-        )}
-      </Box>
-
-      <Button onClick={loadImage} mt={1}>
-        Reload Image
-      </Button>
-  );
-}`}</Highlighter>
+              <Feedback.H05 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
@@ -406,50 +354,16 @@ export default function chakra_section() {
               The idea here is to use <b>CircularProgress</b> to visually
               represent a score out of 100. It can be useful in quizzes, games,
               or other scoring situations. In this example, the{" "}
-              <b>ScoreIndicator</b>
-              component accepts a score prop, which is used to display the score
-              both visually (with CircularProgress) and numerically (with{" "}
-              <b>CircularProgressLabel</b>). You can adjust the color and size
-              to suit your needs.
+              <b>ScoreIndicator</b> component accepts a score prop, which is
+              used to display the score both visually (with CircularProgress)
+              and numerically (with <b>CircularProgressLabel</b>). You can
+              adjust the color and size to suit your needs.
             </HighlightText>
             <MyFlex>
               <ScoreIndicator />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{`export function ScoreIndicator() {
-  const [score, setScore] = useState(0);
-
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const newScore = parseInt(event.target.value);
-    if (!isNaN(newScore) && newScore >= 0 && newScore <= 100) {
-      setScore(newScore);
-    }
-  };
-
-  return (
-        <h2>Your score out of 100 </h2>
-        <CircularProgress
-          value={score}
-          size="100px"
-          color="pink.600"
-          trackColor="lightgray"
-        >
-          <CircularProgressLabel>
-            {score}
-          </CircularProgressLabel>
-        </CircularProgress>
-        <Input
-          type="number"
-          placeholder="Enter score (0 - 100)"
-          onChange={handleInputChange}
-          textAlign="center"
-          bg="lightgray"
-          color="black"
-          marginTop="2px"
-          width="200px"
-        />
-  );
-}`}</Highlighter>
+              <Feedback.H06 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>
