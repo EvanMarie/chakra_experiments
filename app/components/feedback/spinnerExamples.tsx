@@ -7,15 +7,17 @@ import {
   TabPanels,
   Tabs,
   Box,
-  SimpleGrid,
-  Text,
-  useBoolean,
+  Slider,
+  SliderTrack,
+  SliderFilledTrack,
+  SliderThumb,
   VStack,
   useColorModeValue,
-  Flex,
+  Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { HighlightExample, MyFlex } from "~/styles/MainDesignComponents";
+import { MyFlex } from "~/styles/MainDesignComponents";
+import { RxWidth } from "react-icons/rx";
 
 export function SubmitButton() {
   const [isLoading, setIsLoading] = useState(false);
@@ -34,69 +36,77 @@ export function SubmitButton() {
   );
 }
 
+/* ********************************************************************* */
+
 interface ScoreSpinnerProps {
   score: number;
 }
 
 export function ScoreSpinner({ score }: ScoreSpinnerProps) {
-  let color = "gray.300";
-  if (score > 70) color = "green.500";
-  else if (score > 40) color = "orange.500";
-  else color = "red.500";
+  let color = "lime";
+  if (score > 70) color = "lime";
+  else if (score > 60) color = "cyan";
+  else if (score > 40) color = "yellow";
+  else if (score > 30) color = "orange";
+  else color = "red";
 
   return <Spinner color={color} size="xl" />;
 }
 
-export function SpinnerGrid() {
-  const [showSpinners, setShowSpinners] = useBoolean(false);
-
-  const colorSchemes = [
-    "whiteAlpha",
-    "blackAlpha",
-    "linkedin",
-    "facebook",
-    "messenger",
-    "whatsapp",
-    "twitter",
-    "telegram",
-  ];
+export function ScoreSlider() {
+  const [score, setScore] = useState(50);
 
   return (
-    <Box w="%100%" h="450px">
-      <VStack w="100%" spacing={4}>
-        <Button onClick={setShowSpinners.toggle}>
-          {showSpinners ? "Hide Spinners" : "Show Spinners"}
-        </Button>
-        {showSpinners && (
-          <SimpleGrid columns={2} spacing={2} w="100%">
-            {colorSchemes.map((colorScheme) => (
-              <Box key={colorScheme} textAlign="center">
-                <Spinner colorScheme={colorScheme} size="xl" />
-                <Text mt={2}>{colorScheme}</Text>
-              </Box>
-            ))}
-          </SimpleGrid>
-        )}
-      </VStack>
-    </Box>
+    <VStack spacing={3}>
+      <ScoreSpinner score={score} />
+
+      <h3>Your score is: {score}</h3>
+
+      <Box w="175px">
+        <Slider
+          min={0}
+          max={100}
+          step={1}
+          value={score}
+          onChange={(value) => setScore(value)}
+        >
+          <SliderTrack>
+            <SliderFilledTrack />
+          </SliderTrack>
+          <SliderThumb />
+        </Slider>
+      </Box>
+    </VStack>
   );
 }
 
+/* ********************************************************************* */
 interface ColorSchemeSpinnerProps {
   colorScheme: string;
+  thickness: number;
 }
 
-const ColorSchemeSpinner = ({ colorScheme }: ColorSchemeSpinnerProps) => {
+const ColorSchemeSpinner = ({
+  colorScheme,
+  thickness,
+}: ColorSchemeSpinnerProps) => {
   const color = useColorModeValue(`${colorScheme}.500`, `${colorScheme}.200`);
 
   return (
-    <Box display="flex" justifyContent="center" mt={4}>
-      <Spinner color={color} size="xl" thickness="4px" />
+    <Box display="flex" justifyContent="center">
+      <Spinner
+        color={color}
+        size="xl"
+        thickness={`${thickness}px`}
+        p={0}
+        m={0}
+      />
     </Box>
   );
 };
 
 export function SpinnerTabs() {
+  const [thickness, setThickness] = useState(4);
   const colorSchemes = [
     "gray",
     "red",
@@ -111,7 +121,7 @@ export function SpinnerTabs() {
   ];
 
   return (
-    <Box w="100%" h="300px" bg="gray.700" color="white" p={2}>
+    <Box w="100%" maxWidth="400px" h="350px" bg="gray.700" color="white" p={2}>
       <Tabs colorScheme="cyan" orientation="vertical" size="sm" isLazy>
         <TabList overflowY="auto" maxH="350px">
           {colorSchemes.map((colorScheme) => (
@@ -132,7 +142,10 @@ export function SpinnerTabs() {
                     p={0}
                     m={0}
                   >
-                    <ColorSchemeSpinner colorScheme={colorScheme} />
+                    <ColorSchemeSpinner
+                      colorScheme={colorScheme}
+                      thickness={thickness}
+                    />
                   </MyFlex>
                   <MyFlex
                     bg="gray.800"
@@ -142,10 +155,29 @@ export function SpinnerTabs() {
                     p={0}
                     m={0}
                   >
-                    <ColorSchemeSpinner colorScheme={colorScheme} />
+                    <ColorSchemeSpinner
+                      colorScheme={colorScheme}
+                      thickness={thickness}
+                    />
                   </MyFlex>
                 </VStack>
               </MyFlex>
+              <Box paddingRight={3}>
+                <Slider
+                  aria-label="slider-ex-5"
+                  value={thickness}
+                  onChange={setThickness}
+                  min={1}
+                  max={12}
+                >
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb boxSize={6}>
+                    <Box color="cyan.400" as={RxWidth} />
+                  </SliderThumb>
+                </Slider>
+              </Box>
             </TabPanel>
           ))}
         </TabPanels>

@@ -348,7 +348,7 @@ export default function chakra_section() {
           </GridBoxOne>
           <GridBoxTwo>
             Images can sometimes take a while to load, especially if they are
-            large or the user's network connection is slow. You can use
+            large or the user's network connection is slow. You can use{" "}
             <b>CircularProgress</b> to show the user that the image is loading.
             Below is an image loading example, where we'll simulate a delay in
             loading the image using a timeout function.

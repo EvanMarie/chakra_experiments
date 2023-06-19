@@ -34,8 +34,8 @@ import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
+  ScoreSlider,
   ScoreSpinner,
-  SpinnerGrid,
   SpinnerTabs,
   SubmitButton,
 } from "~/components/feedback/spinnerExamples";
@@ -271,26 +271,179 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Spinner color schemes</b>: Chakra-UI has predefined colors
-            schemes that are named after popular social media platforms. Chakra
-            UI provides a thoughtful set of color schemes out of the box, and
-            the ones we highlight here are particularly useful when you want
-            your component's design to align with the branding of these social
-            media platforms. Because so many spinners at once can be a bit much
-            eyes, here is a
+            <b>ScoreSpinner</b>: takes a score as its prop. Depending on the
+            score value, the spinner's color varies from bright red when a
+            user's score is not so good to green when a user's score is great.
+            To illustrate this, we've created an interactive slider that adjusts
+            the score value dynamically, altering the spinner's color in
+            real-time. This visually compelling, color-coded spinner provides an
+            immediate, intuitive sense of the score's value, making it a useful
+            tool for displaying data or status in a user-friendly way.
             <MyFlex>
-              <ScoreSpinner score={5} />
+              <HighlightExample h="150px">
+                <ScoreSlider />
+              </HighlightExample>
             </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Highlighter>{`interface ScoreSpinnerProps {
+  score: number;
+}
+
+export function ScoreSpinner({ score }: ScoreSpinnerProps) {
+  let color = "lime";
+  if (score > 70) color = "lime";
+  else if (score > 60) color = "cyan"; 
+  else if (score > 40) color = "yellow"; 
+  else if (score > 30) color = "orange"; 
+  else color = "red"; // bright red color
+
+  return <Spinner color={color} size="xl" />;
+}
+
+export function ScoreSlider() {
+  const [score, setScore] = useState(50);
+
+  return (
+    <VStack spacing={3}>
+      <ScoreSpinner score={score} />
+
+      <h3>Your score is: {score}</h3>
+
+      <Box w="175px">
+        <Slider
+          min={0}
+          max={100}
+          step={1}
+          value={score}
+          onChange={(value) => setScore(value)}
+        >
+          <SliderTrack>
+            <SliderFilledTrack />
+          </SliderTrack>
+          <SliderThumb />
+        </Slider>
+      </Box>
+    </VStack>
+  );
+}`}</Highlighter>
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
+            <b>Spinner color schemes</b>: the following example is a vertical
+            set of tabs where each tab represents a different color scheme. When
+            you click on a tab, you'll see two examples of a spinner with the
+            chosen color scheme - one on a light background and the other on a
+            dark one. This allows you to easily compare how the color scheme
+            affects the spinner's appearance in different environments. You can
+            also see the effects of the thickness of the spinner visually.
             <MyFlex>
               <SpinnerTabs />
             </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Highlighter>{`interface ColorSchemeSpinnerProps {
+  colorScheme: string;
+  thickness: number;
+}
+
+const ColorSchemeSpinner = ({
+  colorScheme,
+  thickness,
+}: ColorSchemeSpinnerProps) => {
+  const color = useColorModeValue('{colorScheme}.500', '{colorScheme}.200');
+
+  return (
+    <Box display="flex" justifyContent="center">
+      <Spinner
+        color={color}
+        size="xl"
+        thickness={'{thickness}px'}
+        p={0}
+        m={0}
+      />
+    </Box>
+  );
+};
+
+export function SpinnerTabs() {
+  const [thickness, setThickness] = useState(4);
+  const colorSchemes = [
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "cyan",
+    "purple",
+    "pink",
+  ];
+
+  return (
+    <Box w="100%" maxWidth="400px" h="350px" bg="gray.700" color="white" p={2}>
+      <Tabs colorScheme="cyan" orientation="vertical" size="sm" isLazy>
+        <TabList overflowY="auto" maxH="350px">
+          {colorSchemes.map((colorScheme) => (
+            <Tab key={colorScheme}>{colorScheme}</Tab>
+          ))}
+        </TabList>
+
+        <TabPanels>
+          {colorSchemes.map((colorScheme) => (
+            <TabPanel key={colorScheme} h="100%" p={0} m={0}>
+              <MyFlex w="100%" h="100%">
+                <VStack w="100%" h="100%" spacing={5} alignItems="space-around">
+                  <MyFlex
+                    bg="white"
+                    h="110px"
+                    justify="center"
+                    align="center"
+                    p={0}
+                    m={0}
+                  >
+                    <ColorSchemeSpinner
+                      colorScheme={colorScheme}
+                      thickness={thickness}
+                    />
+                  </MyFlex>
+                  <MyFlex
+                    bg="gray.800"
+                    h="110px"
+                    justify="center"
+                    align="center"
+                    p={0}
+                    m={0}
+                  >
+                    <ColorSchemeSpinner
+                      colorScheme={colorScheme}
+                      thickness={thickness}
+                    />
+                  </MyFlex>
+                </VStack>
+              </MyFlex>
+              <Box paddingRight={3}>
+                <Slider
+                  aria-label="slider-ex-5"
+                  value={thickness}
+                  onChange={setThickness}
+                  min={1}
+                  max={12}
+                >
+                  <SliderTrack>
+                    <SliderFilledTrack />
+                  </SliderTrack>
+                  <SliderThumb boxSize={6}>
+                    <Box color="cyan.400" as={RxWidth} />
+                  </SliderThumb>
+                </Slider>
+              </Box>
+            </TabPanel>
+          ))}
+        </TabPanels>
+      </Tabs>
+    </Box>
+  );
+}`}</Highlighter>
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

@@ -603,10 +603,19 @@ export function HighlightExample({
   p = 4,
   color = "white",
   borderRadius = "sm",
+  maxWidth = "400px",
   ...restProps
 }: HighlightExampleProps) {
   return (
-    <Box h={h} w={w} bg={bg} p={p} color={color} {...restProps}>
+    <Box
+      h={h}
+      w={w}
+      bg={bg}
+      p={p}
+      color={color}
+      maxWidth={maxWidth}
+      {...restProps}
+    >
       {children}
     </Box>
   );
@@ -649,7 +658,7 @@ export const ViewCode = ({ children }: ViewCodeProps) => {
         <ModalContent>
           <ModalCloseButton />
           <ModalBody>
-            <Box p={4}>{children}</Box>
+            <Box p={2}>{children}</Box>
           </ModalBody>
         </ModalContent>
       </Modal>
