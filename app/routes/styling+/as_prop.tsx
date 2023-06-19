@@ -20,6 +20,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightExample,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -170,10 +171,12 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <b>Box as a Semantic HTML Element</b>: Chakra's <b>Box</b> component
-            is a versatile component that you can transform into any <b>HTML</b>{" "}
-            element. For instance, if you need a <b>Box</b> component with a
-            semantic section <b>HTML</b> element.
+            <HighlightText>
+              <b>Box as a Semantic HTML Element</b>: Chakra's <b>Box</b>{" "}
+              component is a versatile component that you can transform into any{" "}
+              <b>HTML</b> element. For instance, if you need a <b>Box</b>{" "}
+              component with a semantic section <b>HTML</b> element.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="100px">
                 <Box as="section">
@@ -191,10 +194,12 @@ export default function chakra_section() {
           </GridBoxOne>
 
           <GridBoxTwo>
-            <b>Transforming a Link into a Button</b>: You can also easily
-            transform a link to look and behave like a Chakra UI Button using
-            the <b>as prop</b>. This renders a link that looks like a Chakra UI{" "}
-            <b>Button</b> and directs the user.
+            <HighlightText>
+              <b>Transforming a Link into a Button</b>: You can also easily
+              transform a link to look and behave like a Chakra UI Button using
+              the <b>as prop</b>. This renders a link that looks like a Chakra
+              UI <b>Button</b> and directs the user.
+            </HighlightText>
             <HighlightExample h="100px">
               <MyFlex>
                 <Link
@@ -214,17 +219,19 @@ export default function chakra_section() {
           </GridBoxTwo>
 
           <GridBoxThree>
-            <b>Transforming a List into a Navigation Menu</b>: Suppose you want
-            to create a navigation menu, but you have a list of items. Instead
-            of manually creating a set of Link or Button components, you can use
-            a List and transform its items into clickable links. In the{" "}
-            following example, we are transforming each <b>ListItem</b> into a{" "}
-            <b>RouterLink</b> (from react-router-dom). This allows each list
-            item to behave as a link, directing the user to a different route
-            when clicked. The <b>to</b> prop is dynamically set based on the
-            item value, creating different routes for each item. This approach
-            can also be used to quickly create dynamic breadcrumb navigations,
-            or any similar component.
+            <HighlightText>
+              <b>Transforming a List into a Navigation Menu</b>: Suppose you
+              want to create a navigation menu, but you have a list of items.
+              Instead of manually creating a set of Link or Button components,
+              you can use a List and transform its items into clickable links.
+              In the following example, we are transforming each <b>ListItem</b>{" "}
+              into a <b>RouterLink</b> (from react-router-dom). This allows each
+              list item to behave as a link, directing the user to a different
+              route when clicked. The <b>to</b> prop is dynamically set based on
+              the item value, creating different routes for each item. This
+              approach can also be used to quickly create dynamic breadcrumb
+              navigations, or any similar component.
+            </HighlightText>
             <HighlightExample h="80px">
               <MyFlex p={0}>
                 <AsPropList />

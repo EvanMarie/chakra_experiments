@@ -155,13 +155,17 @@ export function HighlightColumn({ children, ...rest }: GridColumnProps) {
 
 /* *******************************GRID BOXES************************************** */
 
-interface GridBoxProps extends BoxProps {
+interface GridBoxProps extends FlexProps {
   children?: React.ReactNode;
   [key: string]: any;
 }
 
 const GridBoxDefaults = {
   width: "100%",
+  maxWidth: "500px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   marginY: 2,
   borderRadius: "sm",
   boxShadow: "lg",
@@ -186,8 +190,9 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Box
+    <Flex
       {...GridBoxDefaults}
+      flexDirection="column"
       bg={"accent_1"}
       color={"darkText"}
       fontSize={SmallTextSize}
@@ -205,7 +210,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
         </Flex>
       </HStack>{" "}
       {children}
-    </Box>
+    </Flex>
   );
 }
 
@@ -214,8 +219,9 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Box
+    <Flex
       {...GridBoxDefaults}
+      flexDirection="column"
       bg={"accent_2"}
       color={"darkText"}
       fontSize={SmallTextSize}
@@ -233,7 +239,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
         </Flex>
       </HStack>{" "}
       {children}
-    </Box>
+    </Flex>
   );
 }
 
@@ -242,8 +248,9 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Box
+    <Flex
       {...GridBoxDefaults}
+      flexDirection="column"
       bg={"accent_3"}
       color={"darkText"}
       fontSize={SmallTextSize}
@@ -261,7 +268,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
         </Flex>
       </HStack>{" "}
       {children}
-    </Box>
+    </Flex>
   );
 }
 
@@ -584,7 +591,44 @@ export function MyFlex({ children, ...restProps }: MyFlexProps) {
   );
 }
 
-/* ******************************MY FLEX******************************* */
+/* ******************************HIGHLIGHT TEXT******************************* */
+
+interface HighlightTextProps extends BoxProps {
+  children?: React.ReactNode;
+  bg?: string;
+  p?: number;
+  color?: string;
+  height?: string;
+  [key: string]: any;
+}
+
+export function HighlightText({
+  children,
+  w = "100%",
+  paddingX = { base: 2, sm: 4, md: 4, lg: 1 },
+  paddingY = { base: 2, sm: 4, md: 4, lg: 1 },
+  color = "darkText",
+  borderRadius = "sm",
+  maxWidth = "400px",
+  ...restProps
+}: HighlightTextProps) {
+  return (
+    <Box
+      textAlign="left"
+      w={w}
+      px={paddingX}
+      py={paddingY}
+      color={color}
+      borderRadius={borderRadius}
+      maxWidth={maxWidth}
+      {...restProps}
+    >
+      {children}
+    </Box>
+  );
+}
+
+/* ******************************HIGHLIGHT EXAMPLE******************************* */
 
 interface HighlightExampleProps extends BoxProps {
   children?: React.ReactNode;
@@ -644,7 +688,7 @@ export const ViewCode = ({ children }: ViewCodeProps) => {
         <Button
           size="sm"
           fontSize="sm"
-          paddingX={4}
+          paddingX={2}
           onClick={handleExpandClick}
           bg="darkAccent_3"
           color="linkColor"
@@ -658,7 +702,7 @@ export const ViewCode = ({ children }: ViewCodeProps) => {
         <ModalContent>
           <ModalCloseButton />
           <ModalBody>
-            <Box p={2}>{children}</Box>
+            <Box p={3}>{children}</Box>
           </ModalBody>
         </ModalContent>
       </Modal>

@@ -30,6 +30,7 @@ import {
   SingleExample,
   HighlightExample,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -206,9 +207,12 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Nested Accordions</b>: you can nest Accordions within Accordions
-            for more complex data organization. It's a handy trick when you need
-            to present multilayered information in a clear and orderly manner.
+            <HighlightText>
+              <b>Nested Accordions</b>: you can nest Accordions within
+              Accordions for more complex data organization. It's a handy trick
+              when you need to present multilayered information in a clear and
+              orderly manner.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="240px">
                 <Accordion allowToggle>
@@ -270,13 +274,15 @@ Nested Section 1 content
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            One creative idea when working with Accordions could be to replace
-            the default <b>AccordionIcon</b> with custom icons for an expanded
-            and collapsed state. In the following example, instead of the
-            default accordion icon, we're using the ArrowDownIcon from Chakra
-            UI's inbuilt icons. It's important to note that to show a different
-            icon when the accordion item is collapsed, it is necessary to create
-            a custom AccordionButton component.
+            <HighlightText>
+              One creative idea when working with Accordions could be to replace
+              the default <b>AccordionIcon</b> with custom icons for an expanded
+              and collapsed state. In the following example, instead of the
+              default accordion icon, we're using the ArrowDownIcon from Chakra
+              UI's inbuilt icons. It's important to note that to show a
+              different icon when the accordion item is collapsed, it is
+              necessary to create a custom AccordionButton component.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="125px">
                 <Accordion allowToggle>
@@ -311,9 +317,11 @@ Nested Section 1 content
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Embedding components in an accordion</b>: you can embed any
-            component in an accordion panel. In the following example, there is
-            an embedded input form and button within the accordion.
+            <HighlightText>
+              <b>Embedding components in an accordion</b>: you can embed any
+              component in an accordion panel. In the following example, there
+              is an embedded input form and button within the accordion.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="135px">
                 <Accordion allowToggle>

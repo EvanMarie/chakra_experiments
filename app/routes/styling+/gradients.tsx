@@ -28,6 +28,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -178,11 +179,14 @@ gradients: {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Gradient Text</b>: While gradients are usually used for
-            backgrounds, you can also apply them to your text in Chakra UI. This
-            could help you to create unique headings or highlight specific parts
-            of your text. It's not a widely used approach, and knowing this
-            could add an extra layer of creativity to your project:
+            <HighlightText>
+              <b>Gradient Text</b>: While gradients are usually used for
+              backgrounds, you can also apply them to your text in Chakra UI.
+              This could help you to create unique headings or highlight
+              specific parts of your text. It's not a widely used approach, and
+              knowing this could add an extra layer of creativity to your
+              project:
+            </HighlightText>
             <MyFlex>
               <Text
                 bgGradient="linear(to-l, #7928CA, #FF0080)"
@@ -199,10 +203,12 @@ gradients: {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Animating Gradients</b>: While Chakra UI does not have built-in
-            gradient animation functionality, you can leverage the power of{" "}
-            <b>@keyframes</b> and <b>CSS-in-JS</b> to create beautiful gradient
-            animations.
+            <HighlightText>
+              <b>Animating Gradients</b>: While Chakra UI does not have built-in
+              gradient animation functionality, you can leverage the power of{" "}
+              <b>@keyframes</b> and <b>CSS-in-JS</b> to create beautiful
+              gradient animations.
+            </HighlightText>
             <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
             <ViewCode>
               <Highlighter>{`import { keyframes } from "@emotion/react";
@@ -226,10 +232,12 @@ export function AnimatedGradient({ children }:
           </GridBoxTwo>
 
           <GridBoxThree>
-            <b>On Buttons</b>: You can use gradients on various interactive
-            components like buttons to add more color depth and make them more
-            appealing. Remember, be sure to maintain a balance, as overuse of
-            gradients can make the UI look chaotic.
+            <HighlightText>
+              <b>On Buttons</b>: You can use gradients on various interactive
+              components like buttons to add more color depth and make them more
+              appealing. Remember, be sure to maintain a balance, as overuse of
+              gradients can make the UI look chaotic.
+            </HighlightText>
             <MyFlex>
               <Button
                 bgGradient="linear(to-r, yellow.500, blue.500)"

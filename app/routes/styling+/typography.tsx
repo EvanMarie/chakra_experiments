@@ -31,6 +31,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -248,10 +249,12 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Custom Font Family</b>: Chakra UI allows you to easily set a
-            custom font family for your text. You can define your font family in
-            the Chakra UI theme or use the <b>fontFamily</b> prop directly on
-            the <b>Text</b> component.
+            <HighlightText>
+              <b>Custom Font Family</b>: Chakra UI allows you to easily set a
+              custom font family for your text. You can define your font family
+              in the Chakra UI theme or use the <b>fontFamily</b> prop directly
+              on the <b>Text</b> component.
+            </HighlightText>
             <MyFlex>
               <Text fontFamily="monospace" fontSize="15px">
                 This text uses a custom font family.
@@ -262,8 +265,10 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Text Alignment</b>: Chakra UI provides the <b>textAlign</b> prop
-            to control the alignment of text within a component.
+            <HighlightText>
+              <b>Text Alignment</b>: Chakra UI provides the <b>textAlign</b>{" "}
+              prop to control the alignment of text within a component.
+            </HighlightText>
             <MyFlex bg={"accent_1"}>
               <Text textAlign="center">
                 This text is centered within its container.
@@ -274,13 +279,15 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Chakra UI provides the <b>lineHeight</b> prop to control the spacing
-            between lines of text. This allows you to adjust the vertical rhythm
-            and improve the readability of your text. In this example, the{" "}
-            <b>Text</b> component applies the <b>lineHeight="1.5"</b> property,
-            which increases the line height to 1.5 times the font size. This
-            helps create more breathing space between lines, enhancing
-            readability.
+            <HighlightText>
+              Chakra UI provides the <b>lineHeight</b> prop to control the
+              spacing between lines of text. This allows you to adjust the
+              vertical rhythm and improve the readability of your text. In this
+              example, the <b>Text</b> component applies the{" "}
+              <b>lineHeight="1.5"</b> property, which increases the line height
+              to 1.5 times the font size. This helps create more breathing space
+              between lines, enhancing readability.
+            </HighlightText>
             <MyFlex>
               <Flex p={2} justifyContent="center" bg={"accent_2"}>
                 <Text lineHeight="1.5">

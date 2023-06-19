@@ -21,6 +21,7 @@ import {
   SectionDescription,
   SectionHeading,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -168,31 +169,37 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <b>Interactive Hover Effect</b>: you know that you can create
-            interactive hover effects using CSS filters with Chakra UI. Here's
-            an example of how you could make an image grayscale by default and
-            then revert it to full color when a user hovers over it.
+            <HighlightText>
+              <b>Interactive Hover Effect</b>: you know that you can create
+              interactive hover effects using CSS filters with Chakra UI. Here's
+              an example of how you could make an image grayscale by default and
+              then revert it to full color when a user hovers over it.
+            </HighlightText>
             <MyFlex>
               <FilterTipOne />
             </MyFlex>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Combining Multiple Filters</b>: you can combine multiple filters
-            to achieve unique effects. For example, you can create a dreamy,
-            vintage effect by combining blur, sepia, and contrast
+            <HighlightText>
+              <b>Combining Multiple Filters</b>: you can combine multiple
+              filters to achieve unique effects. For example, you can create a
+              dreamy, vintage effect by combining blur, sepia, and contrast
+            </HighlightText>
             <MyFlex>
               <FilterTipTwo />
             </MyFlex>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Animating Filters</b>: you can animate filter effects using CSS{" "}
-            <b>transitions</b> and <b>keyframes</b>. This can be used to create
-            engaging effects such as a pulsating brightness effect. In following
-            example, the brightness of the image will increase to 150% halfway
-            through the animation, then return to 100% by the end of the
-            animation. The animation will repeat indefinitely due to the{" "}
-            <b>infinite</b> keyword. The duration of the animation is set to 3
-            seconds with the <b>3s</b> value.
+            <HighlightText>
+              <b>Animating Filters</b>: you can animate filter effects using CSS{" "}
+              <b>transitions</b> and <b>keyframes</b>. This can be used to
+              create engaging effects such as a pulsating brightness effect. In
+              following example, the brightness of the image will increase to
+              150% halfway through the animation, then return to 100% by the end
+              of the animation. The animation will repeat indefinitely due to
+              the <b>infinite</b> keyword. The duration of the animation is set
+              to 3 seconds with the <b>3s</b> value.
+            </HighlightText>
             <MyFlex>
               <FilterTipThree />
             </MyFlex>

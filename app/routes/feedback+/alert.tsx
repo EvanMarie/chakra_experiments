@@ -30,6 +30,7 @@ import {
   SectionDescription,
   SingleExample,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -160,12 +161,14 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxTwo>
-            <b>Custom Alert Icon</b>: you can replace the default{" "}
-            <b>AlertIcon</b> with your own custom icon. This can be helpful for
-            better aligning with the visual language of your application. Here's
-            a simple that eplaces the default <b>AlertIcon</b> with a different
-            icon from the <b>"react-icons"</b> library, which could be adjusted
-            to any custom icon you prefer.
+            <HighlightText>
+              <b>Custom Alert Icon</b>: you can replace the default{" "}
+              <b>AlertIcon</b> with your own custom icon. This can be helpful
+              for better aligning with the visual language of your application.
+              Here's a simple that eplaces the default <b>AlertIcon</b> with a
+              different icon from the <b>"react-icons"</b> library, which could
+              be adjusted to any custom icon you prefer.
+            </HighlightText>
             <MyFlex>
               <Alert status="error">
                 <AlertIcon as={LuFileWarning} boxSize="30px" />
@@ -180,11 +183,13 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxOne>
-            <b>Embedding Links in Alerts</b>: <b>Alerts</b> can contain more
-            than just plain text; they can include hyperlinks as well. This is
-            useful for directing users to more detailed information or related
-            pages. In the following example, a link to the "documentation" page
-            is added directly within the Alert's description.
+            <HighlightText>
+              <b>Embedding Links in Alerts</b>: <b>Alerts</b> can contain more
+              than just plain text; they can include hyperlinks as well. This is
+              useful for directing users to more detailed information or related
+              pages. In the following example, a link to the "documentation"
+              page is added directly within the Alert's description.
+            </HighlightText>
             <MyFlex>
               <Alert status="info">
                 <AlertIcon />
@@ -211,20 +216,22 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxThree>
-            <b>Creating a Custom Alert Component:</b> Instead of using the
-            standard alerts provided by Chakra UI, you can create your own
-            custom alert component. This component can integrate various styles
-            and other Chakra UI components. Here's a simple example of how to
-            create a custom <b>"Message"</b> alert component, which creates a
-            custom Message that aligns content in the center (both horizontally
-            and vertically), uses a laughing emoji as the
-            <b>AlertIcon</b>, and can accept status and children props. The
-            component could be adjusted to include other Chakra UI components or
-            props, or additional formatting or behavior, to suit the needs of
-            your application. The customizability of Chakra UI's components like
-            Alert allows you to create bespoke elements like this to better
-            align with the design and functionality requirements of your
-            project.
+            <HighlightText>
+              <b>Creating a Custom Alert Component:</b> Instead of using the
+              standard alerts provided by Chakra UI, you can create your own
+              custom alert component. This component can integrate various
+              styles and other Chakra UI components. Here's a simple example of
+              how to create a custom <b>"Message"</b> alert component, which
+              creates a custom Message that aligns content in the center (both
+              horizontally and vertically), uses a laughing emoji as the{" "}
+              <b>AlertIcon</b>, and can accept status and children props. The
+              component could be adjusted to include other Chakra UI components
+              or props, or additional formatting or behavior, to suit the needs
+              of your application. The customizability of Chakra UI's components
+              like Alert allows you to create bespoke elements like this to
+              better align with the design and functionality requirements of
+              your project.
+            </HighlightText>
             <MyFlex>
               <Message status="info">
                 I'm a happy little custom message!

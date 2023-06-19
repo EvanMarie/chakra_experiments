@@ -21,6 +21,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -244,10 +245,12 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Progress bar with dynamic value</b>: This is especially useful
-            for scenarios where the progress value isn't static, like in file
-            uploads or time-bound operations. You can update the value prop with
-            state or any dynamic data.
+            <HighlightText>
+              <b>Progress bar with dynamic value</b>: This is especially useful
+              for scenarios where the progress value isn't static, like in file
+              uploads or time-bound operations. You can update the value prop
+              with state or any dynamic data.
+            </HighlightText>
             <MyFlex>
               <DynamicProgressBar />{" "}
             </MyFlex>
@@ -289,10 +292,12 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Progress bar with steps</b>: This can be used when you need to
-            visualize the progress of a multi-step process, like a form wizard
-            or step-by-step tutorial. Here's an example with a three-step
-            process
+            <HighlightText>
+              <b>Progress bar with steps</b>: This can be used when you need to
+              visualize the progress of a multi-step process, like a form wizard
+              or step-by-step tutorial. Here's an example with a three-step
+              process.
+            </HighlightText>
             <MyFlex>
               <StepsProgressBar />
             </MyFlex>
@@ -331,19 +336,21 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <p>
-              <b>A Countdown Progress Bar</b>: a versatile progress bar with a
-              countdown timer, which displays a progress bar that decreases
-              gradually over the input duration, by default 10 seconds, from
-              100% to 0%.
-            </p>
-
-            <p>
-              The countdown and the progress bar are linked through a useEffect
-              hook that recalculates the <b>currentSecond</b> based on the
-              progress bar's current value. This makes sure the displayed
-              remaining time is always in sync with the progress bar's state.
-            </p>
+            <HighlightText>
+              <p>
+                <b>A Countdown Progress Bar</b>: a versatile progress bar with a
+                countdown timer, which displays a progress bar that decreases
+                gradually over the input duration, by default 10 seconds, from
+                100% to 0%.
+              </p>
+              <p>
+                The countdown and the progress bar are linked through a
+                useEffect hook that recalculates the <b>currentSecond</b> based
+                on the progress bar's current value. This makes sure the
+                displayed remaining time is always in sync with the progress
+                bar's state.
+              </p>
+            </HighlightText>
             <MyFlex>
               <CountdownProgressBar />
             </MyFlex>

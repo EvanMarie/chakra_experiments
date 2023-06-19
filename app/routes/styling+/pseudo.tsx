@@ -20,6 +20,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightExample,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -289,13 +290,15 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <b>Creating a Tooltip</b>: you can create a simple tooltip using the{" "}
-            <b>::after</b> pseudo-element! In the following example, the{" "}
-            <b>::after</b> pseudo-element is used to create a tooltip. The
-            tooltip text is stored in a data-tooltip attribute, which is
-            accessed with the <b>attr()</b> function in the content property.
-            The tooltip is initially hidden with <b>opacity: "0"</b>, and made
-            visible on hover with <b>opacity: "1"</b>.
+            <HighlightText>
+              <b>Creating a Tooltip</b>: you can create a simple tooltip using
+              the <b>::after</b> pseudo-element! In the following example, the{" "}
+              <b>::after</b> pseudo-element is used to create a tooltip. The
+              tooltip text is stored in a data-tooltip attribute, which is
+              accessed with the <b>attr()</b> function in the content property.
+              The tooltip is initially hidden with <b>opacity: "0"</b>, and made
+              visible on hover with <b>opacity: "1"</b>.
+            </HighlightText>
             <MyFlex>
               <Box
                 bg="accent_2"
@@ -350,18 +353,20 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            The <b>::checked</b> pseudo-class in CSS is used to select an
-            element that is in a checked state, typically used with form input
-            elements like checkboxes and radio buttons. It represents the state
-            when the user has interacted with the input element and selected it.
-            When an input element with a <b>::checked</b>, you can apply
-            specific styles to customize its appearance. The following example,
-            uses Chakra UI's <b>Checkbox</b> and <b>CheckboxGroup</b> components
-            with the <b>colorScheme</b> prop to customize the checkbox color
-            when it is checked. Chakra UI automatically applies appropriate
-            styling to the checkboxes, including the <b>::checked</b>{" "}
-            pseudo-class, which allows you to define custom styles for the
-            checked state of the checkboxes.
+            <HighlightText>
+              The <b>::checked</b> pseudo-class in CSS is used to select an
+              element that is in a checked state, typically used with form input
+              elements like checkboxes and radio buttons. It represents the
+              state when the user has interacted with the input element and
+              selected it. When an input element with a <b>::checked</b>, you
+              can apply specific styles to customize its appearance. The
+              following example, uses Chakra UI's <b>Checkbox</b> and{" "}
+              <b>CheckboxGroup</b> components with the <b>colorScheme</b> prop
+              to customize the checkbox color when it is checked. Chakra UI
+              automatically applies appropriate styling to the checkboxes,
+              including the <b>::checked</b> pseudo-class, which allows you to
+              define custom styles for the checked state of the checkboxes.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="160px">
                 <VStack alignItems="left">
@@ -396,12 +401,14 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Creating a Progress Bar</b>: you can use the <b>::before</b>
-            pseudo-element to create a progress bar. In this example, the
-            <b>::before</b> pseudo-element is used to create a green bar inside
-            the gray box, simulating a progress bar at 50%. To update the
-            progress, you could dynamically change the width value of the{" "}
-            <b>::before</b> pseudo-element.
+            <HighlightText>
+              <b>Creating a Progress Bar</b>: you can use the <b>::before</b>
+              pseudo-element to create a progress bar. In this example, the
+              <b>::before</b> pseudo-element is used to create a green bar
+              inside the gray box, simulating a progress bar at 50%. To update
+              the progress, you could dynamically change the width value of the{" "}
+              <b>::before</b> pseudo-element.
+            </HighlightText>
             <MyFlex>
               <Box
                 sx={{

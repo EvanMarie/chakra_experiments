@@ -7,73 +7,82 @@ import {
   Stack,
   WrapItem,
   ToastPosition,
+  Text,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { colors } from "~/styles/DesignComponents";
+import { MyFlex } from "~/styles/MainDesignComponents";
+
+const buttonStyles = {
+  bg: "darkAccent_1",
+  color: "mainText",
+  borderRadius: "md",
+  width: { base: "135px", sm: "135px", md: "175px", lg: "135px" },
+  height: "30px",
+  fontWeight: "bold",
+  fontSize: { base: "13px", sm: "13px", md: "15px", lg: "13px" },
+  p: 0.5,
+  mx: 0,
+  _hover: {
+    bg: "darkAccent_2",
+    color: "mainText",
+  },
+};
 
 export function ToastOneFunction() {
   const toast = useToast();
   return (
-    <Button
-      onClick={() =>
-        toast({
-          title: "You did It!",
-          description: "You made toast! Great work!",
-          status: "success",
-          duration: 9000,
-          isClosable: true,
-        })
-      }
-    >
-      Make Toast!
-    </Button>
+    <MyFlex p={0}>
+      <Button
+        sx={buttonStyles}
+        onClick={() =>
+          toast({
+            title: "You did It!",
+            description: "You made toast! Great work!",
+            status: "success",
+            duration: 9000,
+            isClosable: true,
+          })
+        }
+      >
+        Make Toast!
+      </Button>
+    </MyFlex>
   );
 }
 
 export function ToastTwoFunction() {
   const toast = useToast();
   return (
-    <Button
-      onClick={() =>
-        toast({
-          position: "bottom-left",
-          render: () => (
-            <Flex
-              color={"darkAccent_2"}
-              p={2}
-              bg={"accent_3"}
-              borderRadius="20px"
-              justifyContent={"center"}
-              alignItems={"center"}
-              fontFamily="monospace"
-              fontSize="20px"
-              fontWeight="bold"
-            >
-              Is it Friday yet?
-            </Flex>
-          ),
-        })
-      }
-    >
-      Got Toast?
-    </Button>
+    <MyFlex p={0}>
+      <Button
+        sx={buttonStyles}
+        onClick={() =>
+          toast({
+            position: "bottom-left",
+            render: () => (
+              <Flex
+                color={"darkAccent_2"}
+                p={2}
+                bg={"accent_3"}
+                borderRadius="20px"
+                justifyContent={"center"}
+                alignItems={"center"}
+                fontFamily="monospace"
+                fontSize="20px"
+                fontWeight="bold"
+              >
+                Is it Friday yet?
+              </Flex>
+            ),
+          })
+        }
+      >
+        Got Toast?
+      </Button>
+    </MyFlex>
   );
 }
-
-const buttonStyles = {
-  bg: "accent_2",
-  color: colors.mainBackground,
-  hoverbg: "accent_3",
-  hovercolor: "darkAccent_2",
-  borderRadius: "sm",
-  width: "200px",
-  height: "25px",
-  fontWeight: "bold",
-  fontSize: "15px",
-  fontFamily: "monospace",
-  p: 0.5,
-  mx: 0,
-};
 
 export function ToastThreeFunction() {
   const toast = useToast();
@@ -96,7 +105,7 @@ export function ToastThreeFunction() {
   }
 
   return (
-    <Wrap>
+    <Wrap w="100%" justify="center" align="center">
       <Button onClick={addToast} type="button" sx={buttonStyles}>
         Make Toast
       </Button>
@@ -129,13 +138,13 @@ export function ToastFourFunction() {
   }
 
   return (
-    <Stack isInline spacing={2}>
+    <Stack isInline spacing={2} w="100%" justify="center" align="center">
       <Button onClick={addToast} type="button" sx={buttonStyles}>
         Make Toast
       </Button>
 
       <Button onClick={update} type="button" sx={buttonStyles}>
-        Change Last Toast
+        Change Toast
       </Button>
     </Stack>
   );
@@ -152,7 +161,7 @@ export function ToastFiveFunction() {
   ];
 
   return (
-    <Wrap>
+    <Wrap w="100%" justify="center" align="center">
       {statuses.map((currentStatus, i) => (
         <WrapItem key={i}>
           <Button
@@ -166,7 +175,7 @@ export function ToastFiveFunction() {
               })
             }
           >
-            Show {currentStatus} toast
+            Show {currentStatus}
           </Button>
         </WrapItem>
       ))}
@@ -179,7 +188,7 @@ export function ToastSixFunction() {
   const variants = ["solid", "subtle", "left-accent", "top-accent"];
 
   return (
-    <Wrap>
+    <Wrap w="100%" justify="center" align="center">
       {variants.map((variant, i) => (
         <WrapItem key={i}>
           <Button
@@ -192,7 +201,7 @@ export function ToastSixFunction() {
               })
             }
           >
-            {variant} toast
+            {variant}
           </Button>
         </WrapItem>
       ))}
@@ -204,7 +213,7 @@ export function ToastSevenFunction() {
   const toast = useToast({
     position: "top",
     title:
-      "I am some FINE and quite SHINY toast! Honestly though, I look silly, don't I?",
+      "I am some FINE and quite SHINEY toast! Honestly though, I look silly, don't I?",
     containerStyle: {
       width: "400px",
       maxWidth: "80%",
@@ -212,20 +221,22 @@ export function ToastSevenFunction() {
   });
 
   return (
-    <Button
-      bg={"accent_2"}
-      onClick={() => {
-        toast({
-          containerStyle: {
-            boxShadow: "0px 4px 10px rgba(255, 255, 255, 0.9)",
-            fontFamily: "monospace",
-            fontSize: "20px",
-          },
-        });
-      }}
-    >
-      Click for toast with SNAZZY container!
-    </Button>
+    <MyFlex p={0}>
+      <Button
+        bg={"accent_2"}
+        onClick={() => {
+          toast({
+            containerStyle: {
+              boxShadow: "0px 4px 10px rgba(255, 255, 255, 0.9)",
+              fontFamily: "monospace",
+              fontSize: "20px",
+            },
+          });
+        }}
+      >
+        Click for toast with SNAZZY container!
+      </Button>
+    </MyFlex>
   );
 }
 
@@ -241,7 +252,7 @@ export function ToastEightFunction() {
   ];
 
   return (
-    <Wrap>
+    <Wrap w="100%" justify="center" align="center">
       {positions.map((position, i) => (
         <WrapItem key={i}>
           <Button
@@ -266,18 +277,113 @@ export function ToastNineFunction() {
   const toast = useToast();
   const id = "test-toast";
   return (
-    <Button
-      sx={buttonStyles}
-      onClick={() => {
-        if (!toast.isActive(id)) {
-          toast({
-            id,
-            title: "There is no other me. I cannot be duplicated.",
-          });
-        }
-      }}
-    >
-      No duplicates!
+    <MyFlex p={0}>
+      <Button
+        sx={buttonStyles}
+        onClick={() => {
+          if (!toast.isActive(id)) {
+            toast({
+              id,
+              title: "There is no other me. I cannot be duplicated.",
+            });
+          }
+        }}
+      >
+        No duplicates!
+      </Button>
+    </MyFlex>
+  );
+}
+
+/* *********************************** HIGHLIGHTS ********************************** */
+
+export function ToastSequentialFunction() {
+  const toast = useToast();
+  const sequence = ["Step 1: Do this", "Step 2: Do that", "Step 3: Done!"];
+  const displaySequence = () => {
+    sequence.forEach((step, index) => {
+      setTimeout(() => {
+        toast({
+          title: step,
+          status: "info",
+          duration: 1500,
+          isClosable: true,
+        });
+      }, index * 3000);
+    });
+  };
+
+  return (
+    <Button sx={buttonStyles} onClick={displaySequence}>
+      Show Steps
+    </Button>
+  );
+}
+
+export function ToastCountdownFunction() {
+  const toast = useToast();
+  let counter = 10;
+
+  const startCountdown = () => {
+    const toastId = toast({
+      title: `Countdown: ${counter}`,
+      duration: null,
+      isClosable: false,
+    });
+
+    const intervalId = setInterval(() => {
+      counter--;
+      if (counter > 0) {
+        toast.update(toastId, { title: `Countdown: ${counter}` });
+      } else {
+        clearInterval(intervalId);
+        toast.update(toastId, {
+          title: "Countdown Complete!",
+          isClosable: true,
+        });
+      }
+    }, 1000);
+  };
+
+  return (
+    <Button sx={buttonStyles} onClick={startCountdown}>
+      Start Countdown
+    </Button>
+  );
+}
+
+export function ToastInteractiveFunction() {
+  const toast = useToast();
+
+  const showToast = () => {
+    toast({
+      position: "bottom-left",
+      duration: null,
+      isClosable: true,
+      render: ({ onClose }) => (
+        <Box color="white" bg="darkAccent_2" p={4}>
+          <Text>😄 Hey there!</Text>
+          <Text>Would you like a cup of coffee?</Text>
+          <Button
+            onClick={() => {
+              toast({
+                title: "Coffee on the way!",
+                status: "success",
+                duration: 2000,
+              });
+              onClose();
+            }}
+          >
+            Yes, please!
+          </Button>
+        </Box>
+      ),
+    });
+  };
+
+  return (
+    <Button sx={buttonStyles} onClick={showToast}>
+      Greet me
     </Button>
   );
 }

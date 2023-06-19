@@ -28,6 +28,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -183,10 +184,12 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Composite Border Styles</b>: You can give individual sides of a
-            component different borders by specifying <b>borderTop</b>,{" "}
-            <b>borderRight</b>, <b>borderBottom</b>, and <b>borderLeft</b>{" "}
-            separately. For example,{" "}
+            <HighlightText>
+              <b>Composite Border Styles</b>: You can give individual sides of a
+              component different borders by specifying <b>borderTop</b>,{" "}
+              <b>borderRight</b>, <b>borderBottom</b>, and <b>borderLeft</b>{" "}
+              separately. For example,{" "}
+            </HighlightText>
             <MyFlex>
               <Box
                 w="150px"
@@ -209,11 +212,13 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Transparent Borders</b>: Chakra UI allows you to create
-            transparent borders. You can do this by setting the{" "}
-            <b>borderColor</b> to transparent. This can be useful when you want
-            an element to maintain the same layout even when its border is
-            invisible.
+            <HighlightText>
+              <b>Transparent Borders</b>: Chakra UI allows you to create
+              transparent borders. You can do this by setting the{" "}
+              <b>borderColor</b> to transparent. This can be useful when you
+              want an element to maintain the same layout even when its border
+              is invisible.
+            </HighlightText>
             <MyFlex>
               <Box
                 border="2px solid transparent"
@@ -232,12 +237,15 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Responsive Borders</b>: Chakra UI allows you to define responsive
-            border styles. This means you can specify different border styles
-            for different viewport sizes. You can do this by providing an array
-            of values to the border properties. For example, the following sets
-            a <b>1px border</b> on the smallest viewports, <b>2px</b> on
-            medium-sized viewports, and <b>3px</b> on the largest viewports.
+            <HighlightText>
+              <b>Responsive Borders</b>: Chakra UI allows you to define
+              responsive border styles. This means you can specify different
+              border styles for different viewport sizes. You can do this by
+              providing an array of values to the border properties. For
+              example, the following sets a <b>1px border</b> on the smallest
+              viewports, <b>2px</b> on medium-sized viewports, and <b>3px</b> on
+              the largest viewports.
+            </HighlightText>
             <MyFlex>
               <Box
                 borderWidth={["1px", "2px", "3px"]}

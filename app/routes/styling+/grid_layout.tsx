@@ -23,6 +23,7 @@ import {
   GridBoxTwo,
   GridColumn,
   HighlightColumn,
+  HighlightText,
   ImportBox,
   MainGrid,
   MyFlex,
@@ -366,14 +367,16 @@ return (
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            with Chakra UI's Grid component, you can create responsive layouts
-            using array-based syntax? It's not just about defining a fixed
-            number of columns or rows. You can define different numbers of
-            columns or rows based on the size of the viewport. This allows for
-            highly responsive designs with less code. <br />
-            In the following example, the Grid component has one column for
-            extra small screens, two for small screens, and three for medium and
-            larger screens.
+            <HighlightText>
+              With Chakra UI's Grid component, you can create responsive layouts
+              using array-based syntax? It's not just about defining a fixed
+              number of columns or rows. You can define different numbers of
+              columns or rows based on the size of the viewport. This allows for
+              highly responsive designs with less code. <br />
+              In the following example, the Grid component has one column for
+              extra small screens, two for small screens, and three for medium
+              and larger screens.
+            </HighlightText>
             <MyFlex>
               <Grid
                 templateColumns={[
@@ -410,14 +413,16 @@ return (
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            Chakra UI's Grid component uses CSS Grid Layout under the hood? This
-            means you have access to properties like grid-auto-flow, which lets
-            you control the direction in which items are placed in the grid. You
-            can create interesting and dynamic layouts that aren't limited to a
-            top-to-bottom, left-to-right flow.
-            <br />
-            In this example, the Grid component will first try to fill each
-            column before moving on to the next row.
+            <HighlightText>
+              Chakra UI's Grid component uses CSS Grid Layout under the hood?
+              This means you have access to properties like grid-auto-flow,
+              which lets you control the direction in which items are placed in
+              the grid. You can create interesting and dynamic layouts that
+              aren't limited to a top-to-bottom, left-to-right flow.
+              <br />
+              In this example, the Grid component will first try to fill each
+              column before moving on to the next row.
+            </HighlightText>
             <MyFlex>
               <Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
                 <Box bg="red.300" h="60px" w="60px"></Box>
@@ -434,17 +439,20 @@ return (
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Chakra UI's Grid component supports <b>auto-fit</b> and{" "}
-            <b>auto-fill</b>keywords? These are powerful tools for creating
-            flexible and responsive layouts that adapt to the content. For
-            instance, with <b>auto-fit</b>, the grid will create as many columns
-            as it can fit into the container and will expand the columns to fill
-            any leftover space when there are fewer items than columns.
-            <br />
-            In the following example, the <b>Grid</b> component will
-            automatically adjust the number of columns based on the minimum size
-            specified. If a new column cannot fit into the container, it's added
-            as a new row instead.
+            <HighlightText>
+              Chakra UI's Grid component supports <b>auto-fit</b> and{" "}
+              <b>auto-fill</b>keywords? These are powerful tools for creating
+              flexible and responsive layouts that adapt to the content. For
+              instance, with <b>auto-fit</b>, the grid will create as many
+              columns as it can fit into the container and will expand the
+              columns to fill any leftover space when there are fewer items than
+              columns.
+              <br />
+              In the following example, the <b>Grid</b> component will
+              automatically adjust the number of columns based on the minimum
+              size specified. If a new column cannot fit into the container,
+              it's added as a new row instead.
+            </HighlightText>
             <MyFlex>
               <Grid
                 templateColumns="repeat(auto-fit, minmax(100, 1fr))"

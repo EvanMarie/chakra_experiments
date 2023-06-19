@@ -37,6 +37,7 @@ import {
   SingleExample,
   MyFlex,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -261,16 +262,18 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Chakra UI provides a built-in CSS grid system that allows you to
-            create complex and responsive grid layouts easily. You can use the{" "}
-            <b>Grid</b> component and its related props to define the number of
-            columns, column widths, row gaps, and more. In this example, the{" "}
-            <b>Grid</b> component is used to create a 3-column grid layout with
-            equal column widths (1fr). The gap prop sets the gap between grid
-            items. You can customize the number of columns, column widths, and
-            gaps according to your layout requirements.
-            <Box p={3}>
-              <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1}>
+            <HighlightText>
+              Chakra UI provides a built-in CSS grid system that allows you to
+              create complex and responsive grid layouts easily. You can use the{" "}
+              <b>Grid</b> component and its related props to define the number
+              of columns, column widths, row gaps, and more. In this example,
+              the <b>Grid</b> component is used to create a 3-column grid layout
+              with equal column widths (1fr). The gap prop sets the gap between
+              grid items. You can customize the number of columns, column
+              widths, and gaps according to your layout requirements.
+            </HighlightText>
+            <Box p={3} w="100%">
+              <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1} w="100%">
                 <Box bg="yellow.300" height="30px" />
                 <Box bg="green.300" height="30px" />
                 <Box bg="blue.300" height="30px" />
@@ -285,16 +288,18 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            Chakra UI's <b>Stack</b> component provides a convenient way to
-            stack elements vertically or horizontally. It automatically handles
-            spacing and alignment between the elements. In this example, the
-            Stack component stacks the elements vertically (
-            <b>direction="column"</b>) with a <b>spacing</b> of <b>4</b>. You
-            can change the direction to "row" for horizontal stacking. The{" "}
-            <b>Stack</b> component automatically manages the spacing between the
-            elements, making it easy to create vertically or horizontally
-            aligned layouts.
-            <Box p={3}>
+            <HighlightText>
+              Chakra UI's <b>Stack</b> component provides a convenient way to
+              stack elements vertically or horizontally. It automatically
+              handles spacing and alignment between the elements. In this
+              example, the Stack component stacks the elements vertically (
+              <b>direction="column"</b>) with a <b>spacing</b> of <b>4</b>. You
+              can change the direction to "row" for horizontal stacking. The{" "}
+              <b>Stack</b> component automatically manages the spacing between
+              the elements, making it easy to create vertically or horizontally
+              aligned layouts.
+            </HighlightText>
+            <Box p={3} w="100%">
               <Stack direction="column" spacing={2}>
                 <Box bg="yellow.300" height="30px" />
                 <Box bg="purple.300" height="30px" />
@@ -310,17 +315,20 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Chakra UI offers a responsive <b>Wrap</b> component that allows
-            content to wrap onto multiple lines based on the available space.
-            This is useful for creating responsive grids or wrapping items in a
-            container when they exceed the container's width. In this example,
-            the <b>Wrap</b> component is used to wrap the <b>WrapItem</b>
-            components onto multiple lines based on the available space. The{" "}
-            <b>spacing</b> prop defines the gap between the wrapped items. This
-            allows you to create responsive grids or wrap elements in a
-            container, ensuring they stay within the container's width.
+            <HighlightText>
+              Chakra UI offers a responsive <b>Wrap</b> component that allows
+              content to wrap onto multiple lines based on the available space.
+              This is useful for creating responsive grids or wrapping items in
+              a container when they exceed the container's width. In this
+              example, the <b>Wrap</b> component is used to wrap the{" "}
+              <b>WrapItem</b>
+              components onto multiple lines based on the available space. The{" "}
+              <b>spacing</b> prop defines the gap between the wrapped items.
+              This allows you to create responsive grids or wrap elements in a
+              container, ensuring they stay within the container's width.
+            </HighlightText>
             <MyFlex>
-              <Wrap spacing={1}>
+              <Wrap spacing={1} justify="center" align="center" w="100%">
                 <WrapItem>
                   <Box bg="red.300" height="30px" width="220px" />
                 </WrapItem>

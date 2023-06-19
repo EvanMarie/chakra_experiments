@@ -21,6 +21,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -171,12 +172,14 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <b>Individual Corner Radius</b>: you can also adjust the border
-            radius of individual corners using the <b>borderTopLeftRadius</b>,{" "}
-            <b>borderTopRightRadius</b>, <b>borderBottomRightRadius</b>, and{" "}
-            <b>borderBottomLeftRadius</b> props. In this example, the border
-            radius is set individually for the top left and bottom right
-            corners.
+            <HighlightText>
+              <b>Individual Corner Radius</b>: you can also adjust the border
+              radius of individual corners using the <b>borderTopLeftRadius</b>,{" "}
+              <b>borderTopRightRadius</b>, <b>borderBottomRightRadius</b>, and{" "}
+              <b>borderBottomLeftRadius</b> props. In this example, the border
+              radius is set individually for the top left and bottom right
+              corners.
+            </HighlightText>
             <MyFlex>
               <Box
                 borderTopLeftRadius="lg"
@@ -195,8 +198,10 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Radius with Themes</b>: you can define custom radius values in
-            your theme and use them throughout your app.
+            <HighlightText>
+              <b>Radius with Themes</b>: you can define custom radius values in
+              your theme and use them throughout your app.
+            </HighlightText>
             <MyFlex>
               <Flex
                 textAlign="center"
@@ -227,11 +232,13 @@ export default theme
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Ellipse Borders</b>: you can create elliptical borders by
-            applying a large border radius only to the horizontal or vertical
-            axis of a box. In this example, the border radius is applied
-            differently to the horizontal and vertical axes, creating an ellipse
-            effect.
+            <HighlightText>
+              <b>Ellipse Borders</b>: you can create elliptical borders by
+              applying a large border radius only to the horizontal or vertical
+              axis of a box. In this example, the border radius is applied
+              differently to the horizontal and vertical axes, creating an
+              ellipse effect.
+            </HighlightText>
             <MyFlex>
               <Flex
                 p={2}

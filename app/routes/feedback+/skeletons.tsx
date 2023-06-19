@@ -23,6 +23,7 @@ import {
   SingleExample,
   ViewCode,
   HighlightExample,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -227,9 +228,11 @@ export default FadeDurationSkeleton;`}</Highlighter>{" "}
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Skeleton for Card Layout</b>: In case you have a card layout that
-            takes a while to populate, Skeletons can be a visually engaging way
-            to keep the user interested.
+            <HighlightText>
+              <b>Skeleton for Card Layout</b>: In case you have a card layout
+              that takes a while to populate, Skeletons can be a visually
+              engaging way to keep the user interested.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="90px">
                 <Box w="100%" padding={3} boxShadow="lg" bg="white">
@@ -246,9 +249,12 @@ export default FadeDurationSkeleton;`}</Highlighter>{" "}
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Table Data Loading with Skeleton Rows</b>: When fetching data to
-            fill a table, it can be a great UX choice to use <b>Skeleton</b>{" "}
-            rows that correspond to the structure of your actual data rows.
+            <HighlightText>
+              <b>Table Data Loading with Skeleton Rows</b>: When fetching data
+              to fill a table, it can be a great UX choice to use{" "}
+              <b>Skeleton</b> rows that correspond to the structure of your
+              actual data rows.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="220px">
                 <DataTableSkeleton />
@@ -282,9 +288,11 @@ export default FadeDurationSkeleton;`}</Highlighter>{" "}
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Skeleton for Image Loading</b>: Images often take a significant
-            time to load. While waiting for an image to load, you can use the
-            Skeleton component as a placeholder
+            <HighlightText>
+              <b>Skeleton for Image Loading</b>: Images often take a significant
+              time to load. While waiting for an image to load, you can use the
+              Skeleton component as a placeholder.
+            </HighlightText>
             <MyFlex>
               <ImageWithSkeleton />
             </MyFlex>

@@ -32,6 +32,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -317,10 +318,13 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            The <b>CircularProgress</b> component can also be used as a visual
-            timer. Below is an example of a 10-second timer, where every second,
-            we are incrementing the progress by 10%. Once it reaches 100%, it
-            resets to 0 and starts over, acting as a repeating 10-second timer.
+            <HighlightText>
+              The <b>CircularProgress</b> component can also be used as a visual
+              timer. Below is an example of a 10-second timer, where every
+              second, we are incrementing the progress by 10%. Once it reaches
+              100%, it resets to 0 and starts over, acting as a repeating
+              10-second timer.
+            </HighlightText>
             <MyFlex>
               <CircularProgressTimer />
             </MyFlex>
@@ -347,11 +351,13 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            Images can sometimes take a while to load, especially if they are
-            large or the user's network connection is slow. You can use{" "}
-            <b>CircularProgress</b> to show the user that the image is loading.
-            Below is an image loading example, where we'll simulate a delay in
-            loading the image using a timeout function.
+            <HighlightText>
+              Images can sometimes take a while to load, especially if they are
+              large or the user's network connection is slow. You can use{" "}
+              <b>CircularProgress</b> to show the user that the image is
+              loading. Below is an image loading example, where we'll simulate a
+              delay in loading the image using a timeout function.
+            </HighlightText>
             <MyFlex>
               <CircularProgressImage />
             </MyFlex>
@@ -394,15 +400,18 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>CircularProgress as a Scoring Indicator</b>: This is somewhat
-            similar to the progress label example, but in a different context.
-            The idea here is to use <b>CircularProgress</b> to visually
-            represent a score out of 100. It can be useful in quizzes, games, or
-            other scoring situations. In this example, the <b>ScoreIndicator</b>
-            component accepts a score prop, which is used to display the score
-            both visually (with CircularProgress) and numerically (with{" "}
-            <b>CircularProgressLabel</b>). You can adjust the color and size to
-            suit your needs.
+            <HighlightText>
+              <b>CircularProgress as a Scoring Indicator</b>: This is somewhat
+              similar to the progress label example, but in a different context.
+              The idea here is to use <b>CircularProgress</b> to visually
+              represent a score out of 100. It can be useful in quizzes, games,
+              or other scoring situations. In this example, the{" "}
+              <b>ScoreIndicator</b>
+              component accepts a score prop, which is used to display the score
+              both visually (with CircularProgress) and numerically (with{" "}
+              <b>CircularProgressLabel</b>). You can adjust the color and size
+              to suit your needs.
+            </HighlightText>
             <MyFlex>
               <ScoreIndicator />
             </MyFlex>

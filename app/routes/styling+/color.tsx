@@ -28,6 +28,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -196,14 +197,16 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Using Color Mode</b>: Chakra UI supports both a light and dark
-            color mode, and allows developers to toggle between them with ease.
-            This is an incredible tool for enhancing user experience, but some
-            developers may not know that you can customize these color modes per
-            component. For example, you can set a specific font color that
-            applies only when the app is in dark mode. Utilizing this feature
-            allows for more control over the aesthetic of individual components
-            in different color schemes.
+            <HighlightText>
+              <b>Using Color Mode</b>: Chakra UI supports both a light and dark
+              color mode, and allows developers to toggle between them with
+              ease. This is an incredible tool for enhancing user experience,
+              but some developers may not know that you can customize these
+              color modes per component. For example, you can set a specific
+              font color that applies only when the app is in dark mode.
+              Utilizing this feature allows for more control over the aesthetic
+              of individual components in different color schemes.
+            </HighlightText>
             <MyFlex>
               <Box
                 color={{ light: "teal.500", dark: "teal.300" }}
@@ -220,13 +223,15 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Use of ColorScheme Property</b>: Chakra UI has predefined color
-            schemes (like "teal", "red", "green", etc.) and shades (from 50 to
-            900). The colorScheme property often gets overlooked because it's
-            generally used with button, badge, and other similar components, but
-            it can also be used to set the font color and background color. The
-            advantage of using the <b>colorScheme</b> property is that it
-            automatically adjusts the color contrast to be accessible.
+            <HighlightText>
+              <b>Use of ColorScheme Property</b>: Chakra UI has predefined color
+              schemes (like "teal", "red", "green", etc.) and shades (from 50 to
+              900). The colorScheme property often gets overlooked because it's
+              generally used with button, badge, and other similar components,
+              but it can also be used to set the font color and background
+              color. The advantage of using the <b>colorScheme</b> property is
+              that it automatically adjusts the color contrast to be accessible.
+            </HighlightText>
             <Box bg="teal.500" p="2" m={2} borderRadius="md">
               <Text
                 color="white"
@@ -243,13 +248,15 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Transparent Colors</b>: Chakra UI offers the ability to use
-            "transparent" colors. These are like regular colors but have a fixed
-            opacity. This means you can create a background color with a certain
-            level of transparency and not worry about it becoming too
-            transparent if the background color behind it changes. These
-            "transparent" colors are really powerful for creating overlays or
-            backdrop effects, which can create some compelling UI effects.
+            <HighlightText>
+              <b>Transparent Colors</b>: Chakra UI offers the ability to use
+              "transparent" colors. These are like regular colors but have a
+              fixed opacity. This means you can create a background color with a
+              certain level of transparency and not worry about it becoming too
+              transparent if the background color behind it changes. These
+              "transparent" colors are really powerful for creating overlays or
+              backdrop effects, which can create some compelling UI effects.
+            </HighlightText>
             <MyFlex>
               <Box bg="teal.500" p="2" w="300">
                 <Box

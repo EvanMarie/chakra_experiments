@@ -1,10 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
-import {
-  BasicText,
-  FlexibleBox,
-  Mono,
-  colors,
-} from "~/styles/DesignComponents";
+import { Mono, colors } from "~/styles/DesignComponents";
 import {
   ToastEightFunction,
   ToastFiveFunction,

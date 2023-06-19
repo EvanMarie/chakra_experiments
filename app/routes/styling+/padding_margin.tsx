@@ -32,6 +32,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightExample,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -187,10 +188,12 @@ export default function chakra_basic_styling() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Negative margins for overlapping elements</b>: In Chakra UI, you
-            can use negative margin values to create overlapping elements. This
-            can be useful when you want to create unique visual effects or
-            adjust the positioning of elements.
+            <HighlightText>
+              <b>Negative margins for overlapping elements</b>: In Chakra UI,
+              you can use negative margin values to create overlapping elements.
+              This can be useful when you want to create unique visual effects
+              or adjust the positioning of elements.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="100px" align="center">
                 <Stack spacing={4} align="center">
@@ -205,11 +208,14 @@ export default function chakra_basic_styling() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Responsive padding and margin values</b>: Chakra UI provides
-            responsive variants for <b>padding (p)</b> and <b>margin (m)</b>{" "}
-            properties, allowing you to specify different values for different
-            screen sizes. The responsive variants are denoted using the <b>@</b>
-            {""} symbol.
+            <HighlightText>
+              <b>Responsive padding and margin values</b>: Chakra UI provides
+              responsive variants for <b>padding (p)</b> and <b>margin (m)</b>{" "}
+              properties, allowing you to specify different values for different
+              screen sizes. The responsive variants are denoted using the{" "}
+              <b>@</b>
+              {""} symbol.
+            </HighlightText>
             <MyFlex>
               <Box
                 p={["5px", "10px", "15px"]}
@@ -230,11 +236,13 @@ export default function chakra_basic_styling() {
           </GridBoxTwo>
 
           <GridBoxThree>
-            <b>Combining padding and margin shorthand</b>: Chakra UI supports
-            shorthand notations for setting multiple padding <b>(p)</b> and
-            margin <b>(m)</b> values at once. You can use these shorthand
-            notations to specify different values for individual sides of an
-            element
+            <HighlightText>
+              <b>Combining padding and margin shorthand</b>: Chakra UI supports
+              shorthand notations for setting multiple padding <b>(p)</b> and
+              margin <b>(m)</b> values at once. You can use these shorthand
+              notations to specify different values for individual sides of an
+              element
+            </HighlightText>
             <Box
               p="10px 20px"
               m="4px 10px"

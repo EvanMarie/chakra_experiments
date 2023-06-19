@@ -21,6 +21,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -239,10 +240,13 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            You can use the theme object to define custom shadows. With Chakra
-            UI, you can define custom shadows in your <b>theme</b> and use them
-            across your application. This can be particularly handy if you use
-            the same shadow settings frequently. Here's how you could do it:
+            <HighlightText>
+              You can use the theme object to define custom shadows. With Chakra
+              UI, you can define custom shadows in your <b>theme</b> and use
+              them across your application. This can be particularly handy if
+              you use the same shadow settings frequently. Here's how you could
+              do it:
+            </HighlightText>
             <MyFlex>
               (View code below for theme-defined custom shadow...)
             </MyFlex>
@@ -263,13 +267,15 @@ export default function chakra_section() {
             shadows.
           </GridBoxOne>
           <GridBoxTwo>
-            You can animate your <b>boxShadow</b>! With Chakra UI, you can apply
-            CSS transitions or animations to your <b>boxShadow</b>. This can be
-            a great way to draw attention or give feedback to users. For
-            instance, you can have a box that increases its shadow on hover. In
-            the following example, when the user hovers over the box, the shadow
-            will smoothly transition from <b>md</b> (medium) to <b>xl</b> (extra
-            large) over 0.9 seconds.
+            <HighlightText>
+              You can animate your <b>boxShadow</b>! With Chakra UI, you can
+              apply CSS transitions or animations to your <b>boxShadow</b>. This
+              can be a great way to draw attention or give feedback to users.
+              For instance, you can have a box that increases its shadow on
+              hover. In the following example, when the user hovers over the
+              box, the shadow will smoothly transition from <b>md</b> (medium)
+              to <b>xl</b> (extra large) over 0.9 seconds.
+            </HighlightText>
             <MyFlex paddingY={4} borderRadius="sm">
               <Box
                 bg="accent_3"
@@ -295,14 +301,16 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            You can create multi-layered shadows. If you want to achieve a
-            complex, layered shadow effect, you can provide multiple shadow
-            definitions separated by a comma. It's a somewhat advanced use of
-            shadows but it can add some depth and sophistication to your UI. In
-            the following example, the box will have two shadows. The first
-            shadow is broader and lighter, and the second is closer and darker,
-            resulting in a layered, complex shadow effect. The shadows are
-            applied in the order they are listed.
+            <HighlightText>
+              You can create multi-layered shadows. If you want to achieve a
+              complex, layered shadow effect, you can provide multiple shadow
+              definitions separated by a comma. It's a somewhat advanced use of
+              shadows but it can add some depth and sophistication to your UI.
+              In the following example, the box will have two shadows. The first
+              shadow is broader and lighter, and the second is closer and
+              darker, resulting in a layered, complex shadow effect. The shadows
+              are applied in the order they are listed.
+            </HighlightText>
             <MyFlex>
               <Box
                 borderRadius="sm"

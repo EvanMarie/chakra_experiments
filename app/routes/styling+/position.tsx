@@ -22,6 +22,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightExample,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -291,14 +292,16 @@ export default ToggleFixedBox;
 
         <HighlightColumn>
           <GridBoxOne>
-            <b>Centering an Element</b>: you can use absolute positioning to
-            center an element both vertically and horizontally within its
-            parent.
-            <br />
-            In this example, the child box is positioned absolutely and then
-            moved to the center of its parent using the <b>top</b>, <b>left</b>,
-            and <b>transform</b>
-            properties.
+            <HighlightText>
+              <b>Centering an Element</b>: you can use absolute positioning to
+              center an element both vertically and horizontally within its
+              parent.
+              <br />
+              In this example, the child box is positioned absolutely and then
+              moved to the center of its parent using the <b>top</b>,{" "}
+              <b>left</b>, and <b>transform</b>
+              properties.
+            </HighlightText>
             <MyFlex>
               <Box position="relative" h="175px" w="175px" bg={"accent_2"}>
                 <Box
@@ -330,12 +333,15 @@ export default ToggleFixedBox;
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Stacking Elements</b>: you can use relative and absolute
-            positioning to stack elements on top of each other. This can be
-            useful for creating overlays or intricate designs. You can control
-            the stacking order using the <b>zIndex</b> prop. <br /> In this
-            example, two boxes are stacked on top of each other, with the first
-            box appearing above the second due to its higher <b>zIndex</b>.
+            <HighlightText>
+              <b>Stacking Elements</b>: you can use relative and absolute
+              positioning to stack elements on top of each other. This can be
+              useful for creating overlays or intricate designs. You can control
+              the stacking order using the <b>zIndex</b> prop. <br /> In this
+              example, two boxes are stacked on top of each other, with the
+              first box appearing above the second due to its higher{" "}
+              <b>zIndex</b>.
+            </HighlightText>
             <MyFlex>
               <Box
                 position="absolute"
@@ -376,23 +382,26 @@ export default ToggleFixedBox;
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            In Chakra UI, for RTL (right to left) support, you can use the start
-            and end values. These values automatically adjust based on the text
-            direction. The start will represent left in a left-to-right language
-            (like English), and right in a right-to-left language (like Arabic).
-            Similarly, end will represent right in a left-to-right language and
-            left in a right-to-left language.
-            <br />
-            In the following example, if the direction is set to "rtl", the box
-            will appear on the right side of the screen because start represents
-            right in RTL languages. If you change the direction to "ltr", the
-            box will appear on the left side of the screen because start
-            represents left in LTR languages. The box's position automatically
-            adjusts based on the text direction. Please note that this is a very
-            simple example, and in a real-world application, you would probably
-            handle changing the text direction in a more dynamic way, perhaps
-            based on user preferences or the language setting of their browser
-            or operating system.
+            <HighlightText>
+              In Chakra UI, for RTL (right to left) support, you can use the
+              start and end values. These values automatically adjust based on
+              the text direction. The start will represent left in a
+              left-to-right language (like English), and right in a
+              right-to-left language (like Arabic). Similarly, end will
+              represent right in a left-to-right language and left in a
+              right-to-left language.
+              <br />
+              In the following example, if the direction is set to "rtl", the
+              box will appear on the right side of the screen because start
+              represents right in RTL languages. If you change the direction to
+              "ltr", the box will appear on the left side of the screen because
+              start represents left in LTR languages. The box's position
+              automatically adjusts based on the text direction. Please note
+              that this is a very simple example, and in a real-world
+              application, you would probably handle changing the text direction
+              in a more dynamic way, perhaps based on user preferences or the
+              language setting of their browser or operating system.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="125px">
                 <RTLPositionExample />

@@ -30,6 +30,7 @@ import {
   SectionDescription,
   SingleExample,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -147,20 +148,22 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Highlight coming soon!
+            <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
             <ViewCode>
               <Highlighter>{``}</Highlighter>
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            Highlight coming soon!<MyFlex></MyFlex>
+            <HighlightText>Highlight coming soon!</HighlightText>
+            <MyFlex></MyFlex>
             <ViewCode>
               <Highlighter>{``}</Highlighter>
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Highlight coming soon!<MyFlex></MyFlex>
+            <HighlightText>Highlight coming soon!</HighlightText>
+            <MyFlex></MyFlex>
             <ViewCode>
               <Highlighter>{``}</Highlighter>
             </ViewCode>

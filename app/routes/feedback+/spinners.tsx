@@ -26,6 +26,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightExample,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -242,12 +243,14 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Loading state spinner in a button</b>: Suppose we are working on
-            a form submission. Upon clicking the submit button, we can replace
-            the button text with a spinner to indicate the form is being
-            processed. The following example shows a button that, when clicked,
-            will display a spinner instead of its text for two seconds,
-            simulating a form submission process.
+            <HighlightText>
+              <b>Loading state spinner in a button</b>: Suppose we are working
+              on a form submission. Upon clicking the submit button, we can
+              replace the button text with a spinner to indicate the form is
+              being processed. The following example shows a button that, when
+              clicked, will display a spinner instead of its text for two
+              seconds, simulating a form submission process.
+            </HighlightText>
             <MyFlex>
               <SubmitButton />
             </MyFlex>
@@ -271,14 +274,17 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>ScoreSpinner</b>: takes a score as its prop. Depending on the
-            score value, the spinner's color varies from bright red when a
-            user's score is not so good to green when a user's score is great.
-            To illustrate this, we've created an interactive slider that adjusts
-            the score value dynamically, altering the spinner's color in
-            real-time. This visually compelling, color-coded spinner provides an
-            immediate, intuitive sense of the score's value, making it a useful
-            tool for displaying data or status in a user-friendly way.
+            <HighlightText>
+              <b>ScoreSpinner</b>: takes a score as its prop. Depending on the
+              score value, the spinner's color varies from bright red when a
+              user's score is not so good to green when a user's score is great.
+              To illustrate this, we've created an interactive slider that
+              adjusts the score value dynamically, altering the spinner's color
+              in real-time. This visually compelling, color-coded spinner
+              provides an immediate, intuitive sense of the score's value,
+              making it a useful tool for displaying data or status in a
+              user-friendly way.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="150px">
                 <ScoreSlider />
@@ -329,13 +335,16 @@ export function ScoreSlider() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <b>Spinner color schemes</b>: the following example is a vertical
-            set of tabs where each tab represents a different color scheme. When
-            you click on a tab, you'll see two examples of a spinner with the
-            chosen color scheme - one on a light background and the other on a
-            dark one. This allows you to easily compare how the color scheme
-            affects the spinner's appearance in different environments. You can
-            also see the effects of the thickness of the spinner visually.
+            <HighlightText>
+              <b>Spinner color schemes</b>: the following example is a vertical
+              set of tabs where each tab represents a different color scheme.
+              When you click on a tab, you'll see two examples of a spinner with
+              the chosen color scheme - one on a light background and the other
+              on a dark one. This allows you to easily compare how the color
+              scheme affects the spinner's appearance in different environments.
+              You can also see the effects of the thickness of the spinner
+              visually.
+            </HighlightText>
             <MyFlex>
               <SpinnerTabs />
             </MyFlex>

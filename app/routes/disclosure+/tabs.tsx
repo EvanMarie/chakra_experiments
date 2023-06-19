@@ -30,6 +30,7 @@ import {
   SingleExample,
   HighlightExample,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -233,9 +234,11 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <b>Nested Tabs</b>: It is possible to nest tabs within other tabs.
-            While this can be complex in many UI libraries, Chakra UI makes this
-            quite straightforward.
+            <HighlightText>
+              <b>Nested Tabs</b>: It is possible to nest tabs within other tabs.
+              While this can be complex in many UI libraries, Chakra UI makes
+              this quite straightforward.
+            </HighlightText>
             <MyFlex>
               <HighlightExample>
                 <Tabs colorScheme="cyan">
@@ -302,10 +305,12 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <b>Orientation Control</b>: Chakra UI <b>Tabs</b> have support for
-            both horizontal and vertical orientations. This might not be
-            immediately apparent to many users, but it can help you create
-            unique layouts.
+            <HighlightText>
+              <b>Orientation Control</b>: Chakra UI <b>Tabs</b> have support for
+              both horizontal and vertical orientations. This might not be
+              immediately apparent to many users, but it can help you create
+              unique layouts.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="175px">
                 <Tabs orientation="vertical" colorScheme="cyan">
@@ -344,9 +349,11 @@ export default function chakra_section() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Chakra UI allows you to use custom icons from any icon library or
-            even your own SVG icons. This can be utilized to make your tabs more
-            visually appealing and intuitive.
+            <HighlightText>
+              Chakra UI allows you to use custom icons from any icon library or
+              even your own SVG icons. This can be utilized to make your tabs
+              more visually appealing and intuitive.
+            </HighlightText>
             <MyFlex>
               <HighlightExample h="175px">
                 <Tabs colorScheme="cyan">

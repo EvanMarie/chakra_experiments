@@ -29,6 +29,7 @@ import {
   MyFlex,
   SectionDescription,
   ViewCode,
+  HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -217,11 +218,14 @@ export default function ChakraSection() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            Chakra UI allows you to add a fallback background color for your
-            background images. This is helpful to maintain the aesthetic of your
-            design in case the image fails to load. In the following example, if
-            the image fails to load, the <b>Box</b> component will display a
-            fallback background color (in this case, <b>teal.500</b>).
+            <HighlightText>
+              Chakra UI allows you to add a fallback background color for your
+              background images. This is helpful to maintain the aesthetic of
+              your design in case the image fails to load. In the following
+              example, if the image fails to load, the <b>Box</b> component will
+              display a fallback background color (in this case, <b>teal.500</b>
+              ).
+            </HighlightText>
             <MyFlex>
               <Box
                 bgImage="url('https://www.wrongaddress.com')"
@@ -240,12 +244,14 @@ export default function ChakraSection() {
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            Chakra UI provides a <b>bgRepeat</b> property which allows you to
-            control if and how a background image is repeated. You can specify
-            <b>no-repeat</b>, <b>repeat</b>, <b>repeat-x</b>, <b>repeat-y,</b>
-            or <b>round</b> as values. In this example, the image is used as a
-            background image for the <b>Box</b> component and is set not to
-            repeat.
+            <HighlightText>
+              Chakra UI provides a <b>bgRepeat</b> property which allows you to
+              control if and how a background image is repeated. You can specify
+              <b>no-repeat</b>, <b>repeat</b>, <b>repeat-x</b>, <b>repeat-y,</b>
+              or <b>round</b> as values. In this example, the image is used as a
+              background image for the <b>Box</b> component and is set not to
+              repeat.
+            </HighlightText>
             <MyFlex>
               <Box
                 bgImage="url('https://picsum.photos/200/200')"
@@ -264,9 +270,12 @@ export default function ChakraSection() {
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            Tou can also use gradients as background images in Chakra UI. Using
-            the <b>linearGradient</b> or <b>radialGradient</b> utilities, you
-            can create smooth transitions between multiple colors.
+            <HighlightText>
+              You can also use gradients as background images in Chakra UI.
+              Using the <b>linearGradient</b> or <b>radialGradient</b>{" "}
+              utilities, you can create smooth transitions between multiple
+              colors.
+            </HighlightText>
             <MyFlex>
               {" "}
               <Box bgGradient={bgGradient} height="200px" width="200px" />
