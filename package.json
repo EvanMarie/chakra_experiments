@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.1",
+    "@flydotio/dockerfile": "^0.2.15",
     "@remix-run/dev": "^1.17.0",
     "@remix-run/eslint-config": "^1.17.0",
     "@types/marked": "^5.0.0",
