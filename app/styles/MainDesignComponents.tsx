@@ -132,19 +132,35 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
 }
 
 export function HighlightColumn({ children, ...rest }: GridColumnProps) {
+  const fontSizes = useBreakpointValue({
+    base: "14px",
+    small: "16px",
+    md: "16px",
+    lg: "14px",
+  });
   return (
-    <GridItem p="7px" height="100%" overflow-x="hidden">
+    <GridItem
+      p="7px"
+      height="100%"
+      overflow-x="hidden"
+      justifyContent={"center"}
+    >
       <Box height="100%" width="100%" overflow-x="hidden">
         <Box
           bg={{ base: "darkAccent_3", md: "darkAccent_2", lg: "darkAccent_3" }}
           p={3}
           borderRadius="sm"
           height="100%"
+          fontSize={fontSizes}
         >
           <VStack width="100%" justify="left" align="center" {...rest}>
             <Flex>
               <HStack>
-                <RiBookmark3Line size="25px" color={"accent_3"} />
+                <RiBookmark3Line
+                  size="25px"
+                  color={"accent_3"}
+                  style={{ marginBottom: "10px" }}
+                />
                 <Text fontWeight="bold" fontSize="20px">
                   Did you know?
                 </Text>
@@ -165,25 +181,25 @@ interface GridBoxProps extends FlexProps {
   [key: string]: any;
 }
 
-const GridBoxDefaults = {
+export const GridBoxDefaults = {
   width: "100%",
   maxWidth: { base: "450px", sm: "500px", md: "600px", lg: "300px" },
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   marginY: 2,
-  borderRadius: "sm",
+  borderRadius: "md",
   boxShadow: "lg",
 };
 
-const GridBoxTextSizes = {
-  base: "14px",
-  small: "16px",
-  md: "16px",
-  lg: "14px",
-};
+// export const GridBoxTextSizes = {
+//   base: "14px",
+//   small: "16px",
+//   md: "16px",
+//   lg: "14px",
+// };
 
-const GridBoxPaddingValues = {
+export const GridBoxPaddingValues = {
   base: "5px 10px",
   small: "20px",
   md: "10px 20px",
@@ -191,7 +207,7 @@ const GridBoxPaddingValues = {
 };
 
 export function GridBoxOne({ children, ...rest }: GridBoxProps) {
-  const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
+  // const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
@@ -200,7 +216,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
       flexDirection="column"
       bg={"accent_1"}
       color={"darkText"}
-      fontSize={SmallTextSize}
+      // fontSize={SmallTextSize}
       padding={PaddingValues}
     >
       <HStack>
@@ -220,7 +236,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
 }
 
 export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
-  const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
+  // const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
@@ -229,7 +245,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
       flexDirection="column"
       bg={"accent_2"}
       color={"darkText"}
-      fontSize={SmallTextSize}
+      // fontSize={SmallTextSize}
       padding={PaddingValues}
     >
       <HStack>
@@ -249,7 +265,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
 }
 
 export function GridBoxThree({ children, ...rest }: GridBoxProps) {
-  const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
+  // const SmallTextSize = useBreakpointValue(GridBoxTextSizes);
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
@@ -258,7 +274,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
       flexDirection="column"
       bg={"accent_3"}
       color={"darkText"}
-      fontSize={SmallTextSize}
+      // fontSize={SmallTextSize}
       padding={PaddingValues}
     >
       <HStack>

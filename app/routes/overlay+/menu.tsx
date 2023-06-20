@@ -1,4 +1,13 @@
-import { Box, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Menu,
+  MenuButton,
+  MenuDivider,
+  MenuItem,
+  MenuList,
+  VStack,
+} from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -23,13 +32,30 @@ import {
   SingleExample,
   ViewCode,
   HighlightText,
+  SectionHeading,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
+import * as Overlay from "~/mardownExamples/overlay/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import {
+  MenuOne,
+  MenuTwo,
+  MenuThree,
+  MenuFour,
+  MenuFive,
+  MenuSix,
+  MenuSeven,
+  MenuEight,
+} from "~/components/overlay/menu";
+import {
+  FormMenuExample,
+  SplitMenuButton,
+} from "~/components/overlay/properties/menuFunctions";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -150,73 +176,211 @@ export default function chakra_section() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <MenuOne />
+                <Overlay.E08 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <MenuTwo />
+                <Overlay.E09 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <MenuThree />
+                <Overlay.E10 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <MenuFour />
+                <Overlay.E11 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <MenuFive />
+                <Overlay.E12 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <MenuSix />
+                <Overlay.E13 />
               </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <MenuSeven />
+                <Overlay.E14 />
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <MenuEight />
+                <Overlay.E15 />
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SectionHeading>Additional functionality</SectionHeading>
+              <BulletBox>
+                <ul>
+                  <li>
+                    <HL>Lazy Mounting of Menu Items</HL>: YBy default, the Menu
+                    component in Chakra UI renders all children of the MenuList
+                    to the DOM, even if they are not visible. However, there
+                    might be situations where you want to defer the rendering of
+                    each menu item until the menu is actually opened. To achieve
+                    this, you can utilize the isLazy prop. This feature is
+                    particularly useful if you aim to optimize the performance
+                    of your Menu or if you need to make network calls or perform
+                    certain actions on mount that should only occur when the
+                    menu is displayed to the user.
+                  </li>
+                  <li>
+                    <HL>Rendering Menu in a Portal</HL>: To achieve greater
+                    flexibility and control over the placement and behavior of
+                    menus, Chakra UI provides the option to render menus in a
+                    portal. This is accomplished by importing the Portal
+                    component and wrapping the MenuList within it. Let's explore
+                    the benefits and use cases of rendering menus in a portal.
+                    <BasicText>
+                      By utilizing a portal, you gain the ability to render the
+                      menu outside of its parent component's DOM hierarchy. This
+                      allows you to control the menu's positioning and ensure it
+                      appears exactly where desired, even in complex layouts or
+                      nested components. It provides greater control over
+                      z-index stacking and avoids potential overflow or clipping
+                      issues that may occur within parent components.
+                    </BasicText>
+                    <BasicText>
+                      This can be implemented simply by wrapping the{" "}
+                      <Mono>MenuList</Mono> component inside of a{" "}
+                      <Mono>Portal</Mono> component.
+                    </BasicText>
+                  </li>
+                  <li>
+                    <HL>Sorting and Filtering with Menu Option Groups</HL>: In
+                    Chakra UI, you have the ability to compose a menu for table
+                    headers that facilitates sorting and filtering operations.
+                    This can be achieved by utilizing the MenuOptionGroup and
+                    MenuItemOption components. Let's explore how to leverage
+                    these components to create dynamic and interactive menu
+                    option groups.
+                    <BasicText>
+                      The MenuOptionGroup component allows you to group related
+                      menu options together. It acts as a wrapper for the
+                      MenuItemOption components, which represent individual
+                      options within the group. This approach is particularly
+                      useful when dealing with table headers that require
+                      sorting or filtering capabilities.
+                    </BasicText>
+                    <BasicText>
+                      The following shows how to implement this functionality:
+                    </BasicText>
+                    <Highlighter>{`<Menu>
+  <MenuButton>Open menu</MenuButton>
+  <MenuList>
+    <MenuOptionGroup defaultValue="name" type="radio">
+      <MenuItemOption value="name">Sort by Name</MenuItemOption>
+      <MenuItemOption value="date">Sort by Date</MenuItemOption>
+      <MenuItemOption value="price">Sort by Price</MenuItemOption>
+    </MenuOptionGroup>
+  </MenuList>
+</Menu>`}</Highlighter>
+                  </li>
+                </ul>
+              </BulletBox>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              Chakra UI's <b>Menu</b> component can be integrated seamlessly
+              with form controls. By utilizing the <b>useDisclosure</b> hook
+              from Chakra UI, you can create a menu that functions as a custom
+              dropdown select component. Let's consider an example where we use
+              a <b>Menu</b> to pick a fruit from a list and show the chosen
+              fruit in a text box.
+            </HighlightText>
+            <MyFlex>
+              <HighlightExample h="120px">
+                <FormMenuExample />
+              </HighlightExample>
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H07 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Custom Menu Divider</b>: In Chakra UI, you have the flexibility
+              to style the <b>MenuDivider</b> to fit your design. You can change
+              its color, thickness, margin, or add any other CSS properties. You
+              can use the <b>_focus</b> property to change its color when it
+              receives focus. In the following example, the color of the{" "}
+              <b>MenuDivider</b> is set to <b>purple.500</b>, its thickness is
+              set to <b>2px</b>, and the margin is set to <b>10px</b> on top and
+              bottom.
+            </HighlightText>
+            <MyFlex>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  rightIcon={<ChevronDownIcon />}
+                  bg="purple.500"
+                  color="white"
+                  _hover={{ bg: "purple.600" }}
+                >
+                  Actions
+                </MenuButton>
+                <MenuList color="black">
+                  <MenuItem>Option 1</MenuItem>
+                  <MenuDivider
+                    borderColor="purple.500"
+                    borderWidth={2}
+                    m={2}
+                    _focus={{ borderColor: "pink.500" }}
+                  />
+                  <MenuItem>Option 2</MenuItem>
+                </MenuList>
+              </Menu>
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H08 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Split Button Dropdown Menu</b>: This example is a variation of
+              a split button, which is essentially a button with a default
+              action, and an attached list of alternatives. The main button (the
+              one on the left) displays the current action (initially 'Default
+              Action'), and it performs this action when clicked. The smaller
+              button (the one on the right with the chevron icon) opens a
+              dropdown menu with alternative actions.
+              <br />
+              This saves space by grouping related actions in a compact UI
+              component, making it beneficial for limited screen real estate.
+              Additionally, it enables the dynamic updating of the default
+              action based on the user's selection from the dropdown menu,
+              allowing for efficient repetition of the most recent action.
+            </HighlightText>
+            <MyFlex>
+              <SplitMenuButton />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H09 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

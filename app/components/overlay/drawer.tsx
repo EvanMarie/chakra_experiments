@@ -1,6 +1,6 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-import { BasicText, Mono, colors } from "~/styles/DesignComponents";
+import { BasicText, Mono } from "~/styles/DesignComponents";
 import {
   DrawerFunctionFive,
   DrawerFunctionFour,
@@ -18,7 +18,7 @@ import {
 export function DrawerOne() {
   return (
     <SectionContainer>
-      <SectionHeading>Default Usage:</SectionHeading>
+      <SectionHeading>Default Usage</SectionHeading>
       <Box>
         <SectionDescription>
           ⦾ The following is a basic drawer.{" "}

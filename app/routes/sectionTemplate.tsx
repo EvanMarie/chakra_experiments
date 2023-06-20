@@ -59,7 +59,20 @@ export default function chakra_section() {
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
             <SectionDescription>
-              ⦾ Some statement about this component
+              ⦾ ed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+              veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+              vel eum iure reprehenderit qui in ea voluptate velit esse quam
+              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+              voluptas nulla pariatur?
             </SectionDescription>
             <BasicText></BasicText>
             <BulletBox>
@@ -99,68 +112,84 @@ export default function chakra_section() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                {/* <ModalOne />
+                <Overlay.E16 /> */}
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                {/* <ModalTwo />
+                <Overlay.E17 /> */}
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                {/* <ModalThree />
+                <Overlay.E18 /> */}
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                {/* <ModalFour />
+                <Overlay.E19 /> */}
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                {/* <ModalFive />
+                <Overlay.E20 /> */}
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                {/* <ModalSix />
+                <Overlay.E21 /> */}
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                {/* <ModalSeven />
+                <Overlay.E22 /> */}
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                {/* <ModalEight />
+                <Overlay.E23 /> */}
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                {/* <ModalNine />
+                <Overlay.E24 /> */}
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
+
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode></ViewCode>
+            <ViewCode>{/* <Overlay.H10/> */}</ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode></ViewCode>
+            <ViewCode>{/* <Overlay.H11/> */}</ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode></ViewCode>
+            <ViewCode>{/* <Overlay.H12/> */}</ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
