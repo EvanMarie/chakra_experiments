@@ -135,7 +135,12 @@ export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   return (
     <GridItem p="7px" height="100%" overflow-x="hidden">
       <Box height="100%" width="100%" overflow-x="hidden">
-        <Box bg={"darkAccent_3"} p={3} borderRadius="sm" height="100%">
+        <Box
+          bg={{ base: "darkAccent_3", md: "darkAccent_2", lg: "darkAccent_3" }}
+          p={3}
+          borderRadius="sm"
+          height="100%"
+        >
           <VStack width="100%" justify="left" align="center" {...rest}>
             <Flex>
               <HStack>
@@ -205,7 +210,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
             style={{ marginRight: "5px", color: "deeppink" }}
           />
           <Text fontWeight="bold" fontSize="16px">
-            Useful Tip No. 1!
+            Useful Tip No. 1
           </Text>
         </Flex>
       </HStack>{" "}
@@ -234,7 +239,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
             style={{ marginRight: "5px", color: "deeppink" }}
           />
           <Text fontWeight="bold" fontSize="16px">
-            Useful Tip No. 2!
+            Useful Tip No. 2
           </Text>
         </Flex>
       </HStack>{" "}
@@ -263,7 +268,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
             style={{ marginRight: "5px", color: "deeppink" }}
           />
           <Text fontWeight="bold" fontSize="16px">
-            Useful Tip No. 3!
+            Useful Tip No. 3
           </Text>
         </Flex>
       </HStack>{" "}

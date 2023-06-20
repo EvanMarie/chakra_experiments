@@ -39,7 +39,18 @@ import styles from "~/styles/codeMarkdown.css";
 import * as Overlay from "~/mardownExamples/overlay/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { DrawerOne, DrawerTwo } from "~/components/overlay/drawer";
+import {
+  DrawerFive,
+  DrawerFour,
+  DrawerOne,
+  DrawerThree,
+  DrawerTwo,
+} from "~/components/overlay/drawer";
+import {
+  DrawerMultiStepForm,
+  DrawerNestedNavigation,
+  DrawerNotificationsPanel,
+} from "~/components/overlay/drawerFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -145,62 +156,82 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <DrawerTwo />
+                <Overlay.E04 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <DrawerThree />
+                <Overlay.E05 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <DrawerFour />
+                <Overlay.E06 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <DrawerFive />
+                <Overlay.E07 />
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Drawer with Nested Navigation</b>: The following example
+              showcases a drawer that contains nested navigation links, allowing
+              for a collapsible menu. It provides a compact and efficient way to
+              display a hierarchical navigation structure. Here, clicking on the
+              "Menu" button toggles the drawer's visibility. The drawer contains
+              navigation links, and when the "Services" link is clicked, a
+              collapsible submenu expands to reveal additional links.
+            </HighlightText>
+            <MyFlex>
+              <DrawerNestedNavigation />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H04 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Drawer with Multi-step Form</b>: This example demonstrates
+              using a drawer for a multi-step form. It allows users to navigate
+              through different form sections within the drawer, providing a
+              streamlined and compact form experience.
+            </HighlightText>
+            <MyFlex>
+              <DrawerMultiStepForm />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H05 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Notifications Drawer</b>: In the following example, we have a
+              button labeled "Open Notifications" that opens the drawer
+              containing a list of notifications. The notifications are stored
+              in the notifications state array. We use the <b>Stack</b>{" "}
+              component from Chakra-UI to display the notifications as badges.
+              If there are no notifications, we display a message stating "No
+              notifications." Additionally, there's a button labeled "Add
+              Notification" that adds a new notification to the list and
+              displays a success toast notification using the <b>useToast</b>{" "}
+              hook from Chakra-UI.
+            </HighlightText>
+            <MyFlex>
+              <DrawerNotificationsPanel />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H06 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

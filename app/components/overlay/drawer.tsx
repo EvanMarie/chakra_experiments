@@ -1,7 +1,13 @@
 import { Box, Flex } from "@chakra-ui/react";
 
 import { BasicText, Mono, colors } from "~/styles/DesignComponents";
-import { DrawerFunctionOne, DrawerFunctionTwo } from "./drawerFunctions";
+import {
+  DrawerFunctionFive,
+  DrawerFunctionFour,
+  DrawerFunctionOne,
+  DrawerFunctionThree,
+  DrawerFunctionTwo,
+} from "./drawerFunctions";
 import {
   MyFlex,
   SectionContainer,
@@ -80,35 +86,91 @@ export function DrawerTwo() {
   );
 }
 
-export function ComponentThree() {
+export function DrawerThree() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Initial Focus</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ When working with a form inside a drawer, it is sometimes necessary
+          to focus on a specific element as soon as the drawer opens. This can
+          be achieved by using the <Mono>initialFocusRef</Mono> prop. By passing
+          this prop, you can designate which element should receive the initial
+          focus when the drawer is opened. Without the{" "}
+          <Mono>initialFocusRef</Mono> prop, the drawer will automatically set
+          focus on the first focusable element within it when it is opened. This
+          feature allows for improved accessibility and a more streamlined user
+          experience when interacting with forms in drawers.
+        </SectionDescription>
+        <BasicText>
+          In the following example, we have a drawer that contains a few input
+          fields and a save and cancel button. The <Mono>initialFocusRef</Mono>{" "}
+          is used to refer to the input element. When the drawer is opened, the
+          useEffect hook is triggered, and it checks if the
+          <Mono>initialFocusRef.current</Mono> exists. If it does, it sets focus
+          to that input element. This ensures that when the drawer is opened,
+          the input field will receive the initial focus.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <DrawerFunctionTwo />
+        <DrawerFunctionThree />
       </MyFlex>
     </SectionContainer>
   );
 }
 
-export function ComponentFour() {
+export function DrawerFour() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Drawer Sizes</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ The following example is a component that demonstrates the usage of
+          the <Mono>DraDrawer</Mono> from Chakra-UI. It provides a button for
+          each size option and displays a drawer with corresponding contents
+          when a button is clicked.
+        </SectionDescription>
+        <BasicText>
+          Click on the buttons with the various drawer sizes below and see how
+          each default property renders. On the full size, you can hit the ESC
+          key to close the drawer. The drawer will also close when you click on
+          the overlay.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <DrawerFunctionOne />
+        <DrawerFunctionFour />
+      </MyFlex>
+    </SectionContainer>
+  );
+}
+
+export function DrawerFive() {
+  return (
+    <SectionContainer>
+      <SectionHeading>Rendering a Form in a Drawer</SectionHeading>
+      <Box>
+        <SectionDescription>
+          ⦾ When using a form within a drawer, it may be necessary to
+          incorporate a form validation library such as react-hook-form or
+          Formik. This ensures efficient form handling and validation. The
+          recommended approach for integrating a form in a drawer involves
+          leveraging the native HTML form attribute and associating it with a
+          button located outside the form. This allows for seamless form
+          submission and validation.
+        </SectionDescription>
+        <BasicText>
+          The following component demonstrates how to incorporate a form within
+          a drawer using Chakra-UI. It showcases the recommended approach for
+          handling form submission and validation within the context of a
+          drawer, while leveraging the native HTML form attribute and separate
+          button placement.
+        </BasicText>
+      </Box>
+
+      <MyFlex bg="background">
+        <DrawerFunctionFive />
       </MyFlex>
     </SectionContainer>
   );

@@ -150,23 +150,17 @@ export default function chakra_section() {
           <GridBoxOne>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
+            <ViewCode></ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
+            <ViewCode></ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
+            <ViewCode></ViewCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
