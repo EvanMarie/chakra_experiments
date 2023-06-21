@@ -9,6 +9,7 @@ import {
   SectionDescription,
 } from "~/styles/MainDesignComponents";
 import { Box, HStack, Link } from "@chakra-ui/react";
+import Logo from "~/components/app_components/Logo";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },

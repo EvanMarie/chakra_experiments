@@ -336,7 +336,7 @@ interface KodeProps extends TextProps {
   [key: string]: any;
 }
 
-export function Kode({
+export function IHeartComponents({
   children,
   fontFamily = "monospace",
   fontSize = "1.25rem",
@@ -348,6 +348,10 @@ export function Kode({
       bgGradient={bgGradient}
       fontFamily={fontFamily}
       bgClip="text"
+      _hover={{
+        bgGradient: "linear(to-l, #faa5b9, deeppink, #a7d5fa, #05fce8)",
+        textDecor: "none",
+      }}
     >
       {children}
     </chakra.span>
