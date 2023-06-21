@@ -10,7 +10,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { colors } from "./styles/DesignComponents";
 import { MyFlex, SectionHeading } from "./styles/MainDesignComponents";
 import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
@@ -57,7 +56,7 @@ export default function App() {
             bgImage="url('/images/background_triangles3.png')"
             bgPosition="center"
             bgRepeat="repeat"
-            padding={{ base: 1, md: 2, lg: 3 }}
+            padding={{ base: 1, md: 4 }}
           >
             <Flex
               bg="background"
@@ -138,7 +137,7 @@ export default function App() {
                     <Flex w="100%" paddingX={5}>
                       <HStack justify="space-between">
                         <BreadCrumbs />
-                        <Box position="fixed" top="7px" right="30px">
+                        <Box position="fixed" top="13px" right="30px">
                           <NavMenu />
                         </Box>
                       </HStack>

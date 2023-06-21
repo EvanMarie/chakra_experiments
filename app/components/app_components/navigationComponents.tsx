@@ -82,7 +82,7 @@ export const AccordionMain = ({
             </AccordionLink>
           </Link>
           <AccordionIcon
-            boxSize={4}
+            boxSize={6}
             color={isCurrentRoute ? "background" : "accent_2"}
           />
         </HStack>

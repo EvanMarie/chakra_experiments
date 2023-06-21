@@ -8,7 +8,6 @@ import {
   PopoverHeader,
   PopoverBody,
   PopoverCloseButton,
-  Image,
   Portal,
   PopoverFooter,
   PopoverArrow,
