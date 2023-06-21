@@ -327,3 +327,29 @@ export function CollapsibleExample({
     </Box>
   );
 }
+
+interface KodeProps extends TextProps {
+  children?: React.ReactNode;
+  fontFamily?: string;
+  fontSize?: string | number;
+  bgGradient?: string | undefined;
+  [key: string]: any;
+}
+
+export function Kode({
+  children,
+  fontFamily = "monospace",
+  fontSize = "1.25rem",
+  bgGradient = "linear(to-l, #05fce8, #a7d5fa, deeppink, #faa5b9)",
+}: KodeProps) {
+  return (
+    <chakra.span
+      fontSize={fontSize}
+      bgGradient={bgGradient}
+      fontFamily={fontFamily}
+      bgClip="text"
+    >
+      {children}
+    </chakra.span>
+  );
+}

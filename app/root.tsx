@@ -1,12 +1,4 @@
-import {
-  Box,
-  ChakraProvider,
-  Divider,
-  Flex,
-  Grid,
-  HStack,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, HStack, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
 import theme from "./styles/ExtendedTheme";
@@ -24,6 +16,7 @@ import MainNavigation from "./components/app_components/navigation";
 import { useEffect, useState } from "react";
 import { BreadCrumbs } from "./components/app_components/breadCrumbs";
 import NavMenu from "./components/app_components/navMenu";
+import Footer from "./components/app_components/Footer";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStylesUrl },
@@ -43,26 +36,20 @@ export default function App() {
         <ChakraProvider theme={theme}>
           <Flex
             width="100%"
-            minH="100vh"
+            // h="100vh"
             overflow-x="hidden"
             justifyContent="flex-start"
             alignItems="flex-start"
-            bg={colors.mainBackground}
+            bg="background"
             direction="column"
-            flex="1"
           >
-            <Flex
-              width="100%"
-              // maxWidth={["400px", "1600px"]}
-              justifyContent="center"
-              overflow-x="hidden"
-            >
+            <Flex width="100%" justifyContent="center" overflow-x="hidden">
               <Flex
                 justifyContent="flex-start"
                 alignItems="flex-start"
                 overflow-x="hidden"
               >
-                <Box height="100%" paddingBottom="13px" overflow-x="hidden">
+                <Box paddingBottom={4} height="100%" overflow-x="hidden">
                   <Box
                     bg={"darkAccent_3"}
                     display={["none", "none", "block"]}
@@ -70,9 +57,9 @@ export default function App() {
                     width="210px"
                     overflowY="hidden"
                   >
-                    <VStack height="100%" spacing={1}>
+                    <VStack spacing={1}>
                       <MyFlex>
-                        <SectionHeading mb={1}>Chakra-UI</SectionHeading>
+                        <SectionHeading mb={0}>Chakra-UI</SectionHeading>
                       </MyFlex>
 
                       <MainNavigation
@@ -114,6 +101,7 @@ export default function App() {
                 </Flex>
               </Flex>
             </Flex>
+            <Footer />
           </Flex>
         </ChakraProvider>
         <ScrollRestoration />

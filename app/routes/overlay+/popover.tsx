@@ -1,16 +1,7 @@
-import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  // Mono,
-  // Flex,
-  // Text,
-  HL,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,

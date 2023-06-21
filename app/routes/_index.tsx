@@ -5,12 +5,10 @@ import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 import {
   BigBackgroundBox,
-  DescriptionBox,
-  MyFlex,
   SectionContainer,
   SectionDescription,
 } from "~/styles/MainDesignComponents";
-import { Box, HStack, Link, Text } from "@chakra-ui/react";
+import { Box, HStack, Link } from "@chakra-ui/react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -18,21 +16,27 @@ export const links: LinksFunction = () => [
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "Chakra UI Work" },
+    { title: "I♥️Components: Chakra UI" },
     {
       name: "description",
-      content: "Mixing Chakra learning and Remix Learning!",
+      content: "A deep-dive into Chakra-UI!",
     },
   ];
 };
 
 export default function Index() {
   return (
-    <BigBackgroundBox>
+    <BigBackgroundBox height="100%" display="flex" flex="1">
       <MyHeading color={"accent_2"}>Chakra-UI Explorations</MyHeading>
       <MyDivider mt={0} />
-      <Box fontSize="18px">
-        <SectionContainer p={5}>
+      <Box
+        fontSize="18px"
+        h="100%"
+        display="flex"
+        flex="1"
+        flexDirection="column"
+      >
+        <SectionContainer p={5} height="100%" display="flex" flex="1">
           <SectionDescription>
             Chakra UI is a powerful, modern, and accessible React component
             library. Designed to assist developers in rapidly crafting

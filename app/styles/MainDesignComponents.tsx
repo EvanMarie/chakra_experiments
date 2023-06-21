@@ -60,8 +60,9 @@ const CustomLink = chakra(Link, {
 });
 
 /* *********************************BACKGROUND*************************************** */
-interface BigBackgroundBoxProps {
+interface BigBackgroundBoxProps extends BoxProps {
   children: React.ReactNode;
+  [key: string]: any;
 }
 
 export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
