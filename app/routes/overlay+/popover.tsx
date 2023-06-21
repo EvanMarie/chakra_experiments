@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -22,13 +22,15 @@ import {
   SingleExample,
   ViewCode,
   HighlightText,
+  SectionHeading,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
+import * as Overlay from "~/mardownExamples/overlay/index";
 import javascript from "highlight.js/lib/languages/javascript";
+import { PopoverOne, PopoverTwo } from "~/components/overlay/popoverComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -41,8 +43,8 @@ export default function chakra_section() {
   return (
     <BigBackgroundBox>
       {/* ********************************************************************* */}
-      <MyLabel link="https://chakra-ui.com/docs/components/component" size={28}>
-        ComponentName:
+      <MyLabel link="https://chakra-ui.com/docs/components/popover" size={28}>
+        Popover
       </MyLabel>
       <MainGrid>
         <GridColumn>
@@ -50,39 +52,154 @@ export default function chakra_section() {
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
             <SectionDescription>
-              ⦾ Some statement about this component
+              ⦾ Popover is a component that allows you to display additional
+              content or information upon interacting with an element, such as a
+              button or a link. The additional content typically appears in a
+              small overlay on top of the main interface, which is why it's
+              called a "Popover". This can be used for various purposes, such as
+              tooltips, context menus, or even complex dialogues.
             </SectionDescription>
-            <BasicText></BasicText>
+            <BasicText>
+              Useful implementations of the <Mono>Popover</Mono> component
+              include:
+            </BasicText>
             <BulletBox>
               <ul>
                 <li>
-                  <HL></HL>: Description
+                  <HL>Tooltips</HL>: Popovers can be used to provide additional
+                  information about an element when a user hovers over or
+                  focuses on it. This can be useful for explaining complex UI
+                  elements, providing hints, or showing more information about
+                  an item without taking the user away from the current screen.
                 </li>
                 <li>
-                  <HL></HL>: Description
+                  <HL>Contextual Menus</HL>: Popovers can also be used to create
+                  context-specific menus. For example, if a user right-clicks on
+                  an item, a popover could appear with actions relevant to that
+                  item.
+                </li>{" "}
+                <li>
+                  <HL>User Interaction Feedback</HL>: Popovers can be used to
+                  provide instant feedback or extra details when a user performs
+                  an action. For example, after a user submits a form, a popover
+                  could appear confirming the submission and offering next
+                  steps.
                 </li>
                 <li>
-                  <HL></HL>: Description
+                  <HL>Form Inputs</HL>: Sometimes, a form field may require
+                  additional inputs or complex interaction. In such cases, a
+                  popover can be used to contain these interactions. For
+                  example, a date picker input could show a calendar in a
+                  popover.
                 </li>
                 <li>
-                  <HL></HL>: Description
+                  <HL>Detail Previews</HL>: If a user interface contains a list
+                  of items, a popover could be used to show a preview of each
+                  item's details when the user hovers over or clicks the item.
+                  This can be useful to provide more information without needing
+                  to navigate away from the list.
                 </li>
                 <li>
-                  <HL></HL>: Description
+                  <HL>Instructions/Guidance</HL>: A popover can be used to
+                  provide step-by-step instructions or guidance for a complex
+                  task, guiding the user through the process in a non-intrusive
+                  way.
+                </li>
+              </ul>
+            </BulletBox>
+            <SectionHeading>Popover sub-components</SectionHeading>
+            <BasicText>
+              A Popover component consists of several sub-components that make
+              it customizable and flexible for a variety of use cases. Here are
+              the main sub-components:
+            </BasicText>
+            <BulletBox>
+              <ul>
+                <li>
+                  <HL>Popover</HL>: The wrapper component that encloses all the
+                  other sub-components. It manages the state and interaction
+                  logic of the popover. It also provides a context for the
+                  sub-components to communicate with each other.
                 </li>
                 <li>
-                  <HL></HL>: Description
+                  <HL>PopoverTrigger</HL>: This is the component that triggers
+                  the opening and closing of the Popover content when interacted
+                  with (e.g., clicked or hovered). It is typically a button or a
+                  link, but it can also be any other element that can receive
+                  focus.
+                </li>
+                <li>
+                  <HL>PopoverContent</HL>: This component wraps the content that
+                  will be displayed when the Popover is opened. It also
+                  positions the content relative to the trigger element.
+                </li>
+                <li>
+                  <HL>PopoverHeader</HL>: This is an optional component that can
+                  be used to structure the content within the{" "}
+                  <Mono>PopoverContent</Mono>. It is typically used to render a
+                  title for the popover.
+                </li>
+                <li>
+                  <HL>PopoverBody</HL>: This is also an optional component that
+                  can be used to structure the content within the{" "}
+                  <Mono>PopoverContent</Mono>. It is typically used to render
+                  the main content of the popover.
+                </li>
+                <li>
+                  <HL>PopoverAnchor</HL>: This component is used to wrap the
+                  position-reference element. This is useful when you want to
+                  position the popover relative to an element other than the
+                  trigger element. For example, you can use this to position the
+                  popover relative to the trigger's parent element.
+                </li>
+                <li>
+                  <HL>PopoverCloseButton</HL>: A component that renders a button
+                  to close the popover. It is typically rendered in the{" "}
+                  <Mono>PopoverHeader</Mono> component.
+                </li>
+                <li>
+                  <HL>PopoverArrow</HL>: This is an optional component that
+                  renders an arrow pointing towards the trigger element. It is
+                  typically rendered in the <Mono>PopoverContent</Mono>{" "}
+                  component.
                 </li>
               </ul>
             </BulletBox>
             <DescriptionBox>
-              <BasicText>Some description</BasicText>
+              <BasicText>
+                The <Mono>Popover</Mono> component in Chakra UI also has various
+                props to customize its behavior and appearance. For example, you
+                can control the position and alignment of the popover, whether
+                it should close when the user clicks outside of it, whether it
+                should re-focus the trigger when it closes, and so on. We will
+                explore more of this funcitonality and customization in the
+                examples below.
+              </BasicText>
+
+              <BasicText>
+                While popovers can be quite useful, it's also important to use
+                them judiciously. Overuse of popovers can disrupt the user's
+                experience, making it feel cluttered or overwhelming.
+                Additionally, it's essential to ensure that popovers behave well
+                on all devices, including touch devices where hover interactions
+                are not available.
+              </BasicText>
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{``}</Highlighter>
+                <Highlighter>{`import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+} from '@chakra-ui/react'`}</Highlighter>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -90,17 +207,14 @@ export default function chakra_section() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <PopoverOne />
+                <Overlay.E22 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <PopoverTwo />
               </SingleExample>
             </SectionContainer>
 

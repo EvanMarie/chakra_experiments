@@ -9,7 +9,6 @@ import {
   SectionDescription,
 } from "~/styles/MainDesignComponents";
 import { Box, HStack, Link } from "@chakra-ui/react";
-import Logo from "~/components/app_components/Logo";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -27,7 +26,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <BigBackgroundBox height="100%" display="flex" flex="1">
+    <BigBackgroundBox display="flex" flex="1" height="100hv">
       <MyHeading color={"accent_2"}>Chakra-UI Explorations</MyHeading>
       <MyDivider mt={0} />
       <Box

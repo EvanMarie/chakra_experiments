@@ -320,7 +320,7 @@ export function MyLabel({
         >
           <Text
             w="100%"
-            fontSize={["18px", "24px", size]}
+            fontSize={["20px", "24px", size]}
             color={labelColor}
             fontWeight="bold"
           >

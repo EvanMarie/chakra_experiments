@@ -41,7 +41,7 @@ import javascript from "highlight.js/lib/languages/javascript";
 import {
   AlertDialogueOne,
   AlertDialogueTwo,
-} from "~/components/overlay/alertDialog";
+} from "~/components/overlay/alertDialogComponents";
 import * as Overlay from "~/mardownExamples/overlay/index";
 import {
   AgeVerificationDialog,

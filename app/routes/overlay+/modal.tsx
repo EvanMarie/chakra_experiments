@@ -38,7 +38,7 @@ import {
   ModalFour,
   ModalFive,
   ModalSix,
-} from "~/components/overlay/modal";
+} from "~/components/overlay/modalComponents";
 import {
   CustomCloseButtonModal,
   Magic8Modal,

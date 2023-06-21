@@ -12,8 +12,8 @@ import {
 import {
   AlertDialogueOne,
   AlertDialogueTwo,
-} from "~/components/overlay/alertDialog";
-import { DrawerOne } from "~/components/overlay/drawer";
+} from "~/components/overlay/alertDialogComponents";
+import { DrawerOne } from "~/components/overlay/drawerComponents";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import styles from "~/styles/codeMarkdown.css";

@@ -1,5 +1,4 @@
-import { Box } from "@chakra-ui/react";
-import { ExampleContainer, colors } from "~/styles/DesignComponents";
+import { SingleExample } from "~/styles/MainDesignComponents";
 
 export function ComponentFunctionOne() {
   return <SingleExample bg="background"> Function Logic</SingleExample>;

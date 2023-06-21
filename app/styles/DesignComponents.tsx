@@ -6,6 +6,7 @@ import {
   Grid,
   GridProps,
   HStack,
+  Image,
   Link,
   ResponsiveValue,
   Text,
@@ -15,6 +16,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
+import { MyFlex } from "./MainDesignComponents";
 // import { BasicTextSize } from "./MainDesignComponents";
 
 export const colors = {
@@ -328,7 +330,7 @@ export function CollapsibleExample({
   );
 }
 
-interface KodeProps extends TextProps {
+interface IHeartComponentProps extends TextProps {
   children?: React.ReactNode;
   fontFamily?: string;
   fontSize?: string | number;
@@ -341,7 +343,7 @@ export function IHeartComponents({
   fontFamily = "monospace",
   fontSize = "1.25rem",
   bgGradient = "linear(to-l, #05fce8, #a7d5fa, deeppink, #faa5b9)",
-}: KodeProps) {
+}: IHeartComponentProps) {
   return (
     <chakra.span
       fontSize={fontSize}
@@ -355,5 +357,29 @@ export function IHeartComponents({
     >
       {children}
     </chakra.span>
+  );
+}
+
+interface PlaceholderImageProps {
+  width?: number;
+  height?: number;
+  colors?: number;
+  style?: string;
+  gap?: number;
+}
+
+export function PlaceholderImage({
+  width = 200,
+  height = 150,
+  colors = 26,
+  style = "triangles",
+  gap = 100,
+}: PlaceholderImageProps) {
+  return (
+    <MyFlex>
+      <Image
+        src={`https://generative-placeholders.glitch.me/image?width=${width}&height=${height}&style=${style}&gap=${gap}&colors=${colors}`}
+      />
+    </MyFlex>
   );
 }

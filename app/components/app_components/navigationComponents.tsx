@@ -26,6 +26,7 @@ const navHover = {
     fontWeight: "bold",
     transform: "translateX(10px)",
     transition: "transform 0.3s ease-in-out",
+    color: "cyan",
   },
 };
 
@@ -34,6 +35,23 @@ interface AccordionMainProps {
   label: string;
   hasIcon?: boolean;
 }
+
+const currentRouteStyle = {
+  fontWeight: "bold",
+  background: "accent_2",
+  color: "background",
+  ...navHover,
+  _hover: {
+    color: "linkColor",
+  },
+};
+
+const notCurrentRouteStyle = {
+  fontWeight: "normal",
+  background: "sidebarBackground",
+  color: "linkColor",
+  ...navHover,
+};
 
 export const AccordionMain = ({
   link,
@@ -44,23 +62,29 @@ export const AccordionMain = ({
 
   return (
     <Box
-      {...navHover}
-      color={isCurrentRoute ? "background" : "linkColor"}
-      bg={isCurrentRoute ? "accent_2" : "sidebarBackground"}
       paddingY={1}
       paddingLeft={1}
+      bg={isCurrentRoute ? "accent_2" : "sidebarBackground"}
     >
-      <AccordionButton>
+      <AccordionButton
+        {...navHover}
+        color={isCurrentRoute ? "background" : "linkColor"}
+        fontWeight={isCurrentRoute ? "bold" : "normal"}
+      >
         <HStack w="100%" justifyContent={"space-between"}>
           <Link to={link}>
             <AccordionLink
               fontSize={fontSizeMain}
-              fontWeight={isCurrentRoute ? "bold" : "normal"}
+              {...navHover}
+              {...(isCurrentRoute ? currentRouteStyle : notCurrentRouteStyle)}
             >
               {label}
             </AccordionLink>
           </Link>
-          <AccordionIcon boxSize={4} color={"accent_2"} />
+          <AccordionIcon
+            boxSize={4}
+            color={isCurrentRoute ? "background" : "accent_2"}
+          />
         </HStack>
       </AccordionButton>
     </Box>
@@ -77,15 +101,12 @@ interface AccordionSubProps {
 
 export const AccordionSub = ({ link, label }: AccordionSubProps) => {
   const isCurrentRoute = useIsCurrentNavRoute(link);
-
   return (
     <Link to={link}>
       <AccordionPanel
         {...navHover}
         paddingY={1}
-        color={isCurrentRoute ? "background" : "linkColor"}
-        bg={isCurrentRoute ? "accent_2" : "sidebarBackground"}
-        fontWeight={isCurrentRoute ? "bold" : "normal"}
+        {...(isCurrentRoute ? currentRouteStyle : notCurrentRouteStyle)}
       >
         <AccordionLink paddingLeft={5} w="100%" fontSize={fontSizeSub}>
           {label}

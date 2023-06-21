@@ -50,11 +50,11 @@ import {
   MenuSix,
   MenuSeven,
   MenuEight,
-} from "~/components/overlay/menu";
+} from "~/components/overlay/menuComponents";
 import {
   FormMenuExample,
   SplitMenuButton,
-} from "~/components/overlay/properties/menuFunctions";
+} from "~/components/overlay/menuFunctions";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 hljs.registerLanguage("javascript", javascript);

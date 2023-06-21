@@ -5,6 +5,7 @@ import {
   AccordionItem,
   Box,
   Flex,
+  HStack,
   VStack,
   chakra,
 } from "@chakra-ui/react";
@@ -13,6 +14,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { AccordionMain, AccordionSub } from "./navigationComponents";
 import { useLocation, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export type NavElement = {
   link: string;
@@ -244,13 +246,16 @@ export function makeSideNav({ navElements }: { navElements: NavElement[] }) {
       onChange(index);
     };
     return (
-      <Flex w="100%" h="100vh" alignItems={"flex-start"}>
+      <Flex w="100%" alignItems={"flex-start"}>
         <VStack w="100%" alignItems={"flex-start"}>
-          <Link to="/">
-            <Box w="100%>" paddingLeft={15}>
-              <StyledHomeIcon size={30} />
-            </Box>
-          </Link>
+          <HStack paddingRight={2} justifyContent="space-between" w="100%">
+            <Link to="/">
+              <Box w="100%>" paddingLeft={15}>
+                <StyledHomeIcon size={30} />
+              </Box>
+            </Link>
+          </HStack>
+
           <Accordion
             allowToggle
             w="100%"

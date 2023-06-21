@@ -1,8 +1,15 @@
 
 html, body {
+    display: flex;
+    flex:  1 1 auto;
 background-color: #211421;
 scroll-behavior: smooth;
 font-size: 0.93rem;
+width: "100%";
+height: "100%";
+margin: 0;
+padding: 0;
+overflow: "hidden";
 }
 
 li, ul, ol, p, a {
