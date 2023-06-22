@@ -30,7 +30,12 @@ import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import * as Overlay from "~/mardownExamples/overlay/index";
 import javascript from "highlight.js/lib/languages/javascript";
-import { PopoverOne, PopoverTwo } from "~/components/overlay/popoverComponents";
+import {
+  PopoverFour,
+  PopoverOne,
+  PopoverThree,
+  PopoverTwo,
+} from "~/components/overlay/popoverComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -215,22 +220,21 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <PopoverTwo />
+                <Overlay.E23 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <PopoverThree />
+                <Overlay.E25 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <PopoverFour />
+                <Overlay.E24 />
               </SingleExample>
             </SectionContainer>
 

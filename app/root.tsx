@@ -96,7 +96,7 @@ export default function App() {
                     <VStack
                       spacing={1}
                       position="fixed"
-                      maxHeight="95vh"
+                      maxHeight="93vh"
                       overflowY="scroll"
                       w={navMenuWidth}
                       bg="darkAccent_3"

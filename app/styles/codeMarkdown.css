@@ -2,6 +2,8 @@
 pre code.hljs {
     display: block !important;
     overflow-x: scroll !important;
+    max-height: 350px !important;
+    overflow-y: scroll !important;
 }
 
 code.hljs {
