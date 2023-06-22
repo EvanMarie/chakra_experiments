@@ -31,8 +31,11 @@ import * as Overlay from "~/mardownExamples/overlay/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
+  TooltipFive,
   TooltipFour,
   TooltipOne,
+  TooltipSeven,
+  TooltipSix,
   TooltipThree,
   TooltipTwo,
 } from "~/components/overlay/tooltipComponents";
@@ -142,17 +145,22 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <TooltipFive />
+                <Overlay.E32 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <TooltipSix />
+                <Overlay.E33 />
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <TooltipSeven />
+                <Overlay.E34 />
               </SingleExample>
             </SectionContainer>
           </ExampleBox>

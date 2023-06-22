@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import { BasicText, Mono } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import {
+  BulletBox,
   MyFlex,
   SectionContainer,
   SectionDescription,
@@ -218,10 +219,59 @@ export function PopoverSix() {
           placements available for the popover component.
         </SectionDescription>
         <BasicText>
-          Click on each button below and see a placed popover at the labeled
-          position.{" "}
+          Below is a dropdown menu that contains all of the placement options
+          for popovers. It is set to "auto placement" by default. But you can
+          choose from the options to see how a popover placement renders in
+          relation to its trigger element. Just click on the giant button-box to
+          see it in action!
         </BasicText>
-        <BasicText></BasicText>
+        <BasicText>
+          Each placement position is a combination of two parts: an edge (top,
+          bottom, left, or right) and an alignment (start, end, or none).
+          Because these types of spatial relationships can be a bit tricky at
+          first to comprehend, here's what each placement means:
+        </BasicText>
+        <BulletBox>
+          <ul>
+            <li>
+              <HL>auto-start, auto, auto-end</HL>: The <Mono>auto</Mono>{" "}
+              placements will position the popover relative to the trigger based
+              on the available space in the viewport. If 'start' or 'end' is
+              specified, it will align the popover accordingly if space permits.
+            </li>
+            <li>
+              <HL>top-start, top, top-end</HL>: These placements will position
+              the popover above the trigger element. <Mono>top-start</Mono>{" "}
+              aligns the start of the popover with the start of the trigger,{" "}
+              <Mono>top</Mono> centers it, and <Mono>top-end</Mono> aligns the
+              end of the popover with the end of the trigger.
+            </li>
+            <li>
+              <HL>bottom-start, bottom, bottom-end</HL>: These placements will
+              position the popover below the trigger element. Similar to the top
+              placements, <Mono>bottom-start</Mono> aligns the start of the
+              popover with the start of the trigger, <Mono>bottom</Mono> centers
+              it, and <Mono>bottom-end</Mono> aligns the end of the popover with
+              the end of the trigger.
+            </li>
+            <li>
+              <HL>left-start, left, left-end</HL>: These placements will
+              position the popover to the left of the trigger element.{" "}
+              <Mono>left-start</Mono> aligns the top of the popover with the top
+              of the trigger, <Mono>left</Mono>
+              centers it, and <Mono>left-end</Mono> aligns the bottom of the
+              popover with the bottom of the trigger.
+            </li>
+            <li>
+              <HL>right-start, right, right-end</HL>: hese placements will
+              position the popover to the right of the trigger element.{" "}
+              <Mono>right-start</Mono> aligns the top of the popover with the
+              top of the trigger, <Mono>right</Mono> centers it, and{" "}
+              <Mono>right-end aligns</Mono> the bottom of the popover with the
+              bottom of the trigger.
+            </li>
+          </ul>
+        </BulletBox>
       </Box>
 
       <MyFlex bg="background">

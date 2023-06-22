@@ -27,6 +27,8 @@ import {
   SimpleGrid,
   FormControl,
   FormLabel,
+  Select,
+  HStack,
 } from "@chakra-ui/react";
 import { PlaceholderImage } from "~/styles/DesignComponents";
 import React, { useEffect, useRef, useState } from "react";
@@ -401,24 +403,46 @@ export function PopoverFunctionSix() {
     "right-end",
   ];
 
+  const [selectedPlacement, setSelectedPlacement] = useState<Placement>("auto");
+
   return (
     <SingleExample bg="background">
-      <Flex wrap="wrap" justifyContent="space-around">
-        {placements.map((placement) => (
-          <Box p={1} key={placement}>
-            <Popover placement={placement}>
-              <PopoverTrigger>
-                <Button size="sm" p={2} sx={PopoverButtonStyles}>
-                  {placement}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent bg="accent_1" color="black">
-                <Text p={3}>Popover on {placement}</Text>
-              </PopoverContent>
-            </Popover>
-          </Box>
-        ))}
-      </Flex>
+      <HStack w="100%" justifyContent="space-evenly">
+        <Box p={1}>
+          <Popover placement={selectedPlacement}>
+            <PopoverTrigger>
+              <Flex
+                borderRadius="md"
+                sx={PopoverButtonStyles}
+                w="175px"
+                h="150px"
+                justifyContent="center"
+                alignItems="center"
+                textAlign="center"
+              >
+                <h2>Click to see Popover placement.</h2>
+              </Flex>
+            </PopoverTrigger>
+            <PopoverContent bg="accent_1" color="black">
+              <Text p={3}>Popover with {selectedPlacement} placement.</Text>
+            </PopoverContent>
+          </Popover>
+        </Box>
+
+        <Select
+          bg="white"
+          color="black"
+          w="175px"
+          placeholder="Placement Options"
+          onChange={(e) => setSelectedPlacement(e.target.value as Placement)}
+        >
+          {placements.map((placement) => (
+            <option key={placement} value={placement}>
+              {placement}
+            </option>
+          ))}
+        </Select>
+      </HStack>
     </SingleExample>
   );
 }

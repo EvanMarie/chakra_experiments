@@ -1,7 +1,20 @@
 /* eslint-disable react/display-name */
-import { Box, Button, Icon, Tag, Tooltip, forwardRef } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  Icon,
+  Select,
+  SimpleGrid,
+  Tag,
+  Tooltip,
+  VStack,
+  forwardRef,
+} from "@chakra-ui/react";
+import { useState } from "react";
 import { VscSmiley } from "react-icons/vsc";
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
+import { TooltipSeven } from "./tooltipComponents";
 
 const ToolTipButtonStyles = {
   bg: "accent_3",
@@ -109,13 +122,145 @@ export function TooltipFunctionFour() {
 /* ********************************************************************** */
 
 export function TooltipFunctionFive() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  return (
+    <SingleExample bg="background">
+      {" "}
+      <Tooltip sx={TooltipContentStyles} hasArrow label="Click to proceed">
+        <Button sx={ToolTipButtonStyles}>Proceed</Button>
+      </Tooltip>
+    </SingleExample>
+  );
 }
 
+/* ********************************************************************** */
+
+type Placement =
+  | "auto-start"
+  | "auto"
+  | "auto-end"
+  | "top-start"
+  | "top"
+  | "top-end"
+  | "right-start"
+  | "right"
+  | "right-end"
+  | "bottom-start"
+  | "bottom"
+  | "bottom-end"
+  | "left-start"
+  | "left"
+  | "left-end";
+
+const placements: Placement[] = [
+  "auto-start",
+  "auto",
+  "auto-end",
+  "top-start",
+  "top",
+  "top-end",
+  "right-start",
+  "right",
+  "right-end",
+  "bottom-start",
+  "bottom",
+  "bottom-end",
+  "left-start",
+  "left",
+  "left-end",
+];
+
 export function TooltipFunctionSix() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  const [placement, setPlacement] = useState<Placement>("auto");
+
+  return (
+    <SingleExample bg="background">
+      <HStack w="100%" justifyContent="space-evenly">
+        <Select
+          bg="white"
+          color="black"
+          w="175px"
+          placeholder="Placement Options"
+          onChange={(e) => setPlacement(e.target.value as Placement)}
+        >
+          {placements.map((placement, index) => (
+            <option key={index} value={placement}>
+              {placement}
+            </option>
+          ))}
+        </Select>
+        <Tooltip
+          sx={TooltipContentStyles}
+          label={`${placement} placement`}
+          hasArrow
+          placement={placement}
+        >
+          <Button sx={ToolTipButtonStyles} w="175px" h="150px">
+            Hover for Placement
+          </Button>
+        </Tooltip>
+      </HStack>
+    </SingleExample>
+  );
 }
 
 export function TooltipFunctionSeven() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  const ExampleBox = ({ children }: { children: React.ReactNode }) => (
+    <Box
+      bg="darkAccent_2"
+      p="3"
+      borderRadius="sm"
+      color="mmainText"
+      marginY="10px"
+    >
+      {children}
+    </Box>
+  );
+
+  return (
+    <SingleExample bg="background">
+      <SimpleGrid columns={2}>
+        <ExampleBox>
+          <Tooltip label="I close on click">
+            <Button>Close on Click - true(default)</Button>
+          </Tooltip>
+        </ExampleBox>
+
+        <ExampleBox>
+          <Tooltip label="I don't close on click" closeOnClick={false}>
+            <Button>Close on Click - false</Button>
+          </Tooltip>
+        </ExampleBox>
+
+        <ExampleBox>
+          <Tooltip label="I am always open" placement="top" isOpen>
+            <Button>Always Open</Button>
+          </Tooltip>
+        </ExampleBox>
+
+        <ExampleBox>
+          <Tooltip label="I am open by default" placement="left" defaultIsOpen>
+            <Button>Open on startup</Button>
+          </Tooltip>
+        </ExampleBox>
+
+        <ExampleBox>
+          <Tooltip label="Opened after 500ms" openDelay={500}>
+            <Button>Delay Open - 500ms</Button>
+          </Tooltip>
+        </ExampleBox>
+
+        <ExampleBox>
+          <Tooltip label="Closed after 500ms" closeDelay={500}>
+            <Button>Delay Close - 500ms</Button>
+          </Tooltip>
+        </ExampleBox>
+
+        <ExampleBox>
+          <Tooltip label="I have 15px arrow" hasArrow arrowSize={15}>
+            <Button>Arrow size - 15px</Button>
+          </Tooltip>
+        </ExampleBox>
+      </SimpleGrid>
+    </SingleExample>
+  );
 }

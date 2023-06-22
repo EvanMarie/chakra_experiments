@@ -1,14 +1,18 @@
 import { Box } from "@chakra-ui/react";
-import { BasicText, Mono } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import {
+  BulletBox,
   MyFlex,
   SectionContainer,
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 import {
+  TooltipFunctionFive,
   TooltipFunctionFour,
   TooltipFunctionOne,
+  TooltipFunctionSeven,
+  TooltipFunctionSix,
   TooltipFunctionThree,
   TooltipFunctionTwo,
 } from "./tooltipFunctions";
@@ -105,15 +109,19 @@ export function TooltipFour() {
 export function TooltipFive() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Focused Content</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ When the child of a <Mono>Tooltip</Mono> is focusable, such as a{" "}
+          <Mono>Button</Mono>, the tooltip will show when the button is focused
+          or hovered over.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
+        <TooltipFunctionFive />
       </MyFlex>
     </SectionContainer>
   );
@@ -122,15 +130,76 @@ export function TooltipFive() {
 export function TooltipSix() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Tooltip Placement Options</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ The <Mono>placement</Mono> property allows you to adjust the
+          location of your tooltip relative to the child component.
+        </SectionDescription>
+        <BasicText>
+          Below is a dropdown menu that contains all of the placement options
+          for tooltips. It is set to "auto placement" by default. But you can
+          choose from the options to see how a tooltip placement renders in
+          relation to the element around which it is wrapped. Just hover over
+          the giant button-box to see it in action!
+        </BasicText>
+        <BasicText>
+          Each placement position is a combination of two parts: an edge (top,
+          bottom, left, or right) and an alignment (start, end, or none).
+          Because these types of spatial relationships can be a bit tricky at
+          first to comprehend, here's what each placement means:
+        </BasicText>
+        <BulletBox>
+          <ul>
+            <li>
+              <HL>auto-start, auto, auto-end</HL>: The <Mono>auto</Mono>{" "}
+              placements will position the tooltip relative to the target based
+              on the available space in the viewport. If 'start' or 'end' is
+              specified, it will align the tooltip accordingly if space permits.
+            </li>
+            <li>
+              <HL>top-start, top, top-end</HL>: These placements will position
+              the tooltip above the target element. <Mono>top-start</Mono>{" "}
+              aligns the start of the tooltip with the start of the target,{" "}
+              <Mono>top</Mono> centers it, and <Mono>top-end</Mono> aligns the
+              end of the tooltip with the end of the target.
+            </li>
+            <li>
+              <HL>bottom-start, bottom, bottom-end</HL>: These placements will
+              position the tooltip below the target element. Similar to the top
+              placements, <Mono>bottom-start</Mono> aligns the start of the
+              tooltip with the start of the target, <Mono>bottom</Mono> centers
+              it, and <Mono>bottom-end</Mono> aligns the end of the tooltip with
+              the end of the target.
+            </li>
+            <li>
+              <HL>left-start, left, left-end</HL>: These placements will
+              position the tooltip to the left of the target element.{" "}
+              <Mono>left-start</Mono> aligns the top of the tooltip with the top
+              of the target, <Mono>left</Mono>
+              centers it, and <Mono>left-end</Mono> aligns the bottom of the
+              tooltip with the bottom of the target.
+            </li>
+            <li>
+              <HL>right-start, right, right-end</HL>: hese placements will
+              position the tooltip to the right of the target element.{" "}
+              <Mono>right-start</Mono> aligns the top of the tooltip with the
+              top of the target, <Mono>right</Mono> centers it, and{" "}
+              <Mono>right-end aligns</Mono> the bottom of the tooltip with the
+              bottom of the target.
+            </li>
+          </ul>
+        </BulletBox>
+        <BasicText>
+          Keep in mind that the actual placement of the tooltip may vary
+          slightly based on the available space in the viewport. If there is not
+          enough space for the chosen placement, the tooltip will automatically
+          adjust to fit.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
+        <TooltipFunctionSix />
       </MyFlex>
     </SectionContainer>
   );
@@ -147,7 +216,7 @@ export function TooltipSeven() {
       </Box>
 
       <MyFlex bg="background">
-        <></>
+        <TooltipFunctionSeven />
       </MyFlex>
     </SectionContainer>
   );
