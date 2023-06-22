@@ -44,36 +44,36 @@ export default function chakra_feedback() {
             <ul>
               <li>
                 <BasicText>
-                  <HL>Alert Dialog</HL>: You already covered AlertDialog in
-                  detail, so just as a reminder, it is used to prompt user
-                  actions and confirmations, often of a critical nature. Unlike
-                  regular dialogs, alert dialogs are modal, meaning they must be
+                  <HL>Alert Dialog</HL>: This is used to prompt user actions and
+                  confirmations, often of a critical nature. Unlike regular
+                  dialogs, alert dialogs are modal, meaning they must be
                   interacted with before the user can proceed.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Drawer</HL>: The Drawer is another overlay component that
-                  typically slides in from one side of the screen. It's a
-                  versatile component that can be used for numerous
-                  applications, such as housing forms, displaying additional
-                  information, or providing navigation options, especially in
-                  mobile designs.
+                  <HL>Drawer</HL>: The <Mono>Drawer</Mono> is another overlay
+                  component that typically slides in from one side of the
+                  screen. It's a versatile component that can be used for
+                  numerous applications, such as housing forms, displaying
+                  additional information, or providing navigation options,
+                  especially in mobile designs.
                 </BasicText>
 
                 <BasicText>
-                  In Chakra UI, the Drawer component is highly customizable. It
-                  provides a number of props that control the size, placement,
-                  and behavior of the drawer. Drawer also includes
-                  sub-components like DrawerOverlay, DrawerContent,
-                  DrawerCloseButton, DrawerHeader, DrawerBody, and DrawerFooter,
-                  which allow you to structure the content of your drawers
-                  effectively.
+                  In Chakra UI, the <Mono>Drawer</Mono> component is highly
+                  customizable. It provides a number of props that control the
+                  size, placement, and behavior of the drawer. Drawer also
+                  includes sub-components like <Mono>DrawerOverlay</Mono>,{" "}
+                  <Mono>DrawerContent</Mono>,<Mono>DrawerCloseButton</Mono>,{" "}
+                  <Mono>DrawerHeader</Mono>, <Mono>DrawerBody</Mono>, and{" "}
+                  <Mono>DrawerFooter</Mono>, which allow you to structure the
+                  content of your drawers effectively.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Menu</HL>: Menu is an overlay component in Chakra UI
+                  <HL>Menu</HL>: Thisi is an overlay component in Chakra UI
                   designed to display a list of choices or actions. These
                   choices typically appear over the main content, and the menu
                   itself is usually triggered by a button or other interactive
@@ -82,9 +82,10 @@ export default function chakra_feedback() {
                 </BasicText>
                 <BasicText>
                   The Menu component in Chakra UI is quite flexible and comes
-                  with a number of sub-components like MenuButton, MenuList, and
-                  MenuItem that allow you to easily create and customize your
-                  menus.
+                  with a number of sub-components like <Mono>MenuButton</Mono>,{" "}
+                  <Mono>MenuList</Mono>, and
+                  <Mono>MenuItem</Mono> that allow you to easily create and
+                  customize your menus.
                 </BasicText>
               </li>
               <li>
@@ -97,38 +98,42 @@ export default function chakra_feedback() {
                 </BasicText>
                 <BasicText>
                   Modals in Chakra UI are composed of several sub-components:
-                  ModalOverlay, ModalContent, ModalHeader, ModalCloseButton,
-                  ModalBody, and ModalFooter. These components allow you to
-                  structure and style your modals effectively.
+                  <Mono>ModalOverlay</Mono>, <Mono>ModalContent</Mono>,{" "}
+                  <Mono>ModalHeader</Mono>, <Mono>ModalCloseButton</Mono>,
+                  <Mono>ModalBody</Mono>, and <Mono>ModalFooter</Mono>. These
+                  components allow you to structure and style your modals
+                  effectively.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Popover</HL>: Popover is an overlay component that's
-                  similar to Menu, but it can contain more complex content than
-                  just a list of options. Popover can include elements like form
-                  inputs, rich text, or interactive components.
+                  <HL>Popover</HL>: This is an overlay component that's similar
+                  to <Mono>Menu</Mono>, but it can contain more complex content
+                  than just a list of options. <Mono>Popover</Mono> can include
+                  elements like form inputs, rich text, or interactive
+                  components.
                 </BasicText>
                 Like the other overlay components, Popover in Chakra UI comes
-                with several sub-components: PopoverTrigger, PopoverContent,
-                PopoverHeader, PopoverBody, and PopoverFooter. You can control
-                the placement, size, and triggering behavior of the popover
-                using various props.
+                with several sub-components: <Mono>PopoverTrigger</Mono>,{" "}
+                <Mono>PopoverContent</Mono>,<Mono>PopoverHeader</Mono>,{" "}
+                <Mono>PopoverBody</Mono>, and <Mono>PopoverFooter</Mono>. You
+                can control the placement, size, and triggering behavior of the
+                popover using various props.
                 <BasicText></BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Tooltip</HL>: A Tooltip is a small piece of informational
-                  text that appears when the user hovers over or focuses on an
+                  <HL>Tooltip</HL>: This is a small piece of informational text
+                  that appears when the user hovers over or focuses on an
                   element. It's a great way to provide extra guidance or
                   information about a feature without cluttering the interface.
                 </BasicText>
                 <BasicText>
-                  In Chakra UI, Tooltip comes with a number of properties that
-                  allow you to control its appearance and behavior, such as the
-                  label (the tooltip's content), the placement of the tooltip
-                  relative to its child, and whether it should show an arrow
-                  pointing to the child.
+                  In Chakra UI, <Mono>Tooltip</Mono> comes with a number of
+                  properties that allow you to control its appearance and
+                  behavior, such as the label (the tooltip's content), the
+                  placement of the tooltip relative to its child, and whether it
+                  should show an arrow pointing to the child.
                 </BasicText>
               </li>
             </ul>

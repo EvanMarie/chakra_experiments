@@ -22,6 +22,11 @@ import {
   ModalBody,
   ModalFooter,
   Box,
+  Flex,
+  Text,
+  SimpleGrid,
+  FormControl,
+  FormLabel,
 } from "@chakra-ui/react";
 import { PlaceholderImage } from "~/styles/DesignComponents";
 import React, { useEffect, useRef, useState } from "react";
@@ -326,16 +331,179 @@ export function PopoverFunctionFour() {
 /* ******************************* FIVE ************************************ */
 
 export function PopoverFunctionFive() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  return (
+    <SingleExample bg="background">
+      <Popover placement="right-start">
+        <PopoverTrigger>
+          <Box
+            tabIndex={0}
+            textAlign="center"
+            role="button"
+            aria-label="Open Popover"
+            p={2}
+            borderRadius="md"
+            w="120px"
+            bg="gray.700"
+          >
+            Custom Popover
+          </Box>
+        </PopoverTrigger>
+        <PopoverContent bg="teal.500" color="white">
+          <PopoverHeader fontWeight="semibold">Customization</PopoverHeader>
+          <PopoverArrow bg="pink.500" />
+          <PopoverCloseButton bg="yellow.200" color="black" />
+          <PopoverBody>
+            Voila!! The arrow, background, and button colors are all customized.
+            You can check the properties for each component to customize them as
+            needed.
+          </PopoverBody>
+        </PopoverContent>
+      </Popover>
+    </SingleExample>
+  );
 }
 
 /* ******************************* SIX ************************************ */
 
 export function PopoverFunctionSix() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  type Placement =
+    | "bottom-start"
+    | "bottom"
+    | "bottom-end"
+    | "auto-start"
+    | "auto"
+    | "auto-end"
+    | "top-start"
+    | "top"
+    | "top-end"
+    | "left-start"
+    | "left"
+    | "left-end"
+    | "right-start"
+    | "right"
+    | "right-end";
+
+  const placements: Placement[] = [
+    "bottom-start",
+    "bottom",
+    "bottom-end",
+    "auto-start",
+    "auto",
+    "auto-end",
+    "top-start",
+    "top",
+    "top-end",
+    "left-start",
+    "left",
+    "left-end",
+    "right-start",
+    "right",
+    "right-end",
+  ];
+
+  return (
+    <SingleExample bg="background">
+      <Flex wrap="wrap" justifyContent="space-around">
+        {placements.map((placement) => (
+          <Box p={1} key={placement}>
+            <Popover placement={placement}>
+              <PopoverTrigger>
+                <Button size="sm" p={2} sx={PopoverButtonStyles}>
+                  {placement}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent bg="accent_1" color="black">
+                <Text p={3}>Popover on {placement}</Text>
+              </PopoverContent>
+            </Popover>
+          </Box>
+        ))}
+      </Flex>
+    </SingleExample>
+  );
 }
 
-// /* ******************************* SEVEN ************************************ */
-// export function PopoverFunctionSeven() {
-//   return <SingleExample bg="background"> Function Logic</SingleExample>;
-// }
+/* ******************************* HIGHLIGHT ************************************ */
+
+type UserDetails = {
+  name: string;
+  email: string;
+};
+
+export function DynamicContentPopover() {
+  const [userDetails, setUserDetails] = useState<UserDetails | null>(null);
+
+  const handleOpenPopover = () => {
+    // Fetch user details from API or other source
+    setUserDetails({
+      name: "John Doe",
+      email: "john.doe@example.com",
+    });
+  };
+
+  return (
+    <Popover>
+      <PopoverTrigger>
+        <Button sx={PopoverButtonStyles} onClick={handleOpenPopover}>
+          Show User Details
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent sx={PopoverContentStyles}>
+        <PopoverHeader bg="accent_2" color="black">
+          User Details
+        </PopoverHeader>
+        <PopoverBody>
+          {userDetails
+            ? `Name: ${userDetails.name}, Email: ${userDetails.email}`
+            : "Loading..."}
+        </PopoverBody>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export function FormPopover() {
+  return (
+    <Popover>
+      <PopoverTrigger>
+        <Button sx={PopoverButtonStyles}>Subscribe</Button>
+      </PopoverTrigger>
+      <PopoverContent sx={PopoverButtonStyles}>
+        <PopoverHeader>Subscribe to our newsletter</PopoverHeader>
+        <PopoverBody sx={PopoverBodyStyles}>
+          <FormControl id="email">
+            <FormLabel>Email address</FormLabel>
+            <Input bg="white" type="email" />
+          </FormControl>
+        </PopoverBody>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export function ControlledPopover() {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => setIsOpen(!isOpen);
+
+  return (
+    <Box>
+      <Button sx={PopoverButtonStyles} onClick={handleOpen}>
+        Toggle Popover
+      </Button>
+      <Popover isOpen={isOpen} onOpen={handleOpen} onClose={handleOpen}>
+        <PopoverTrigger>
+          <Box visibility="hidden"></Box>
+        </PopoverTrigger>
+        <PopoverContent sx={PopoverContentStyles}>
+          <PopoverHeader sx={PopoverHeaderStyles}>
+            Controlled Popover
+          </PopoverHeader>
+          <PopoverBody sx={PopoverBodyStyles}>
+            The opening and closing of this Popover is controlled manually using
+            state.
+          </PopoverBody>
+        </PopoverContent>
+      </Popover>
+    </Box>
+  );
+}

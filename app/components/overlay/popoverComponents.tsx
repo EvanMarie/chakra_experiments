@@ -7,8 +7,10 @@ import {
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 import {
+  PopoverFunctionFive,
   PopoverFunctionFour,
   PopoverFunctionOne,
+  PopoverFunctionSix,
   PopoverFunctionThree,
   PopoverFunctionTwo,
 } from "./popoverFunctions";
@@ -173,15 +175,30 @@ export function PopoverFour() {
 export function PopoverFive() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Popover Customization</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ In this example, we will create a custom popover with a unique
+          background color, arrow color, and button color, and we'll also
+          specify its placement. The Popover's placement prop is set to
+          "right-start", positioning it to the right of the trigger, aligning
+          with the start edge of the trigger.
+        </SectionDescription>
+        <BasicText>
+          The PopoverTrigger contains a Box which acts as the clickable area to
+          toggle the popover. The Box has a tabIndex of 0, which allows it to be
+          focusable and navigable via keyboard, a role of "button"
+        </BasicText>
+        <BasicText>
+          By using the props available on each component as shown in this
+          example, you can customize almost every aspect of the popover's
+          appearance. This allows you to design a popover that perfectly fits
+          your application's style and theme.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
+        <PopoverFunctionFive />
       </MyFlex>
     </SectionContainer>
   );
@@ -190,32 +207,25 @@ export function PopoverFive() {
 export function PopoverSix() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Popover Placement</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ The purpose of this component is to show you the full range of
+          possibilities, so you can choose the one that works best for your
+          needs. You might want your popover to appear in a certain place to
+          make it more noticeable, or to fit better with the layout of your
+          page. Here you can see a visual representation of the different
+          placements available for the popover component.
+        </SectionDescription>
+        <BasicText>
+          Click on each button below and see a placed popover at the labeled
+          position.{" "}
+        </BasicText>
         <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-export function PopoverSeven() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <></>
+        <PopoverFunctionSix />
       </MyFlex>
     </SectionContainer>
   );

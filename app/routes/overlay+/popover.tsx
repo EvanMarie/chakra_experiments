@@ -1,6 +1,5 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-
 import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
@@ -31,11 +30,18 @@ import hljs from "highlight.js";
 import * as Overlay from "~/mardownExamples/overlay/index";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
+  PopoverFive,
   PopoverFour,
   PopoverOne,
+  PopoverSix,
   PopoverThree,
   PopoverTwo,
 } from "~/components/overlay/popoverComponents";
+import {
+  ControlledPopover,
+  DynamicContentPopover,
+  FormPopover,
+} from "~/components/overlay/popoverFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -240,41 +246,119 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <PopoverFive />
+                <Overlay.E26 />
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <BasicText>Component Section</BasicText>
-                <MyFlex></MyFlex>
-                <Highlighter>{``}</Highlighter>
+                <PopoverSix />
+                <Overlay.E27 />
               </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SectionHeading>
+                Additional Functionality and Considerations:
+              </SectionHeading>
+              <BulletBox>
+                <ul>
+                  <li>
+                    <HL>Deferred Rendering of Popover</HL>: Usually, the Popover
+                    component preloads all the child elements of PopoverContent
+                    onto the DOM even if they are not immediately visible.
+                    However, if you prefer that the popover content gets
+                    rendered only when the Popover is activated, you can make
+                    use of the isLazy property. This can be especially handy
+                    when your PopoverContent needs to be highly efficient or if
+                    it needs to perform network calls upon mounting, which
+                    should only occur when the component is actually shown.
+                  </li>
+                  <li>
+                    <HL>Ease of Use</HL>: Whenever the term "trigger" is
+                    mentioned, it pertains to the elements contained within the
+                    PopoverTrigger. Similarly, the term "content" refers to the
+                    elements contained within the PopoverContent.
+                  </li>
+                  <li>
+                    <HL>Keyboard Usage and Focus Management</HL>: Upon opening
+                    the popover, the focus shifts to the PopoverContent. If the
+                    initialFocusRef is specified, then the focus will go to the
+                    respective element. When the popover is closed, the focus
+                    reverts back to the trigger. If returnFocusOnClose is set to
+                    false, this reversion won't occur. The opening and closing
+                    of the popover can be controlled through both mouse
+                    movements and keyboard inputs, and these interactions can be
+                    configured based on whether the trigger is set to "hover" or
+                    "click".
+                  </li>
+                  <li>
+                    <HL>ARIA Roles and Properties</HL>: The{" "}
+                    <Mono>PopoverContent</Mono> is assigned a role depending on
+                    whether the trigger is set to "click" or "hover",
+                    respectively corresponding to "dialog" and "tooltip".
+                    Additionally, the <Mono>PopoverContent</Mono> has several
+                    ARIA properties set to improve accessibility. These include
+                    aria-labelledby which links to the{" "}
+                    <Mono>PopoverHeader</Mono>'s id, aria-describedby pointing
+                    to the id of the <Mono>PopoverBody</Mono>, and aria-hidden
+                    that toggles depending on whether the popover is open or
+                    closed. The trigger also has several ARIA attributes:
+                    aria-haspopup indicating it activates a popover,
+                    aria-controls linking to the id of the{" "}
+                    <Mono>PopoverContent</Mono>, and aria-expanded reflecting
+                    the open/closed state of the popover.
+                  </li>
+                </ul>
+              </BulletBox>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Dynamic Content</b>: The content inside your <b>Popover</b> can
+              be dynamic. This means you can alter the content based on user
+              interactions or other state changes in your application. Let's
+              consider an example where we display user details in a{" "}
+              <b>Popover</b> upon clicking a user's name. Here's how you might
+              do it
+            </HighlightText>
+            <MyFlex>
+              <DynamicContentPopover />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H13 />
             </ViewCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Popover Form</b>: You can include a form within a{" "}
+              <b>Popover</b>. This can be useful when you need to collect simple
+              information from a user without directing them to a new page.
+              Here's an example of how to create a subscription form within a{" "}
+              <b>Popover</b>.{" "}
+            </HighlightText>
+            <MyFlex>
+              <FormPopover />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H14 />
             </ViewCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Manual Control</b>: You can manually control the open and close
+              state of a <b>Popover</b> using the <b>isOpen</b> and{" "}
+              <b>onOpen</b>/<b>onClose</b> props. This could be useful when you
+              need to trigger the popover from somewhere else in your component.
+            </HighlightText>
+            <MyFlex>
+              <ControlledPopover />
+            </MyFlex>
             <ViewCode>
-              <Highlighter>{``}</Highlighter>
+              <Overlay.H15 />
             </ViewCode>
           </GridBoxThree>
         </HighlightColumn>

@@ -1,4 +1,11 @@
-import { Box, ChakraProvider, Flex, HStack, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  ChakraProvider,
+  Flex,
+  HStack,
+  Link,
+  VStack,
+} from "@chakra-ui/react";
 import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
 import theme from "./styles/ExtendedTheme";
@@ -86,7 +93,8 @@ export default function App() {
                   borderRadius="lg"
                 >
                   <Box
-                    bg="darkAccent_3"
+                    mt={2}
+                    // bg="darkAccent_3"
                     // height="100%"
                     // display={["none", "none", "block"]} // moved higher up
                     width={navMenuWidth}
@@ -96,7 +104,8 @@ export default function App() {
                     <VStack
                       spacing={1}
                       position="fixed"
-                      maxHeight="93vh"
+                      // maxHeight="93vh"
+                      height="93vh"
                       overflowY="scroll"
                       w={navMenuWidth}
                       bg="darkAccent_3"
@@ -104,7 +113,11 @@ export default function App() {
                       pb={3}
                     >
                       <MyFlex>
-                        <SectionHeading mb={0}>Chakra-UI</SectionHeading>
+                        <SectionHeading mb={0}>
+                          <Link href="https://chakra-ui.com/" target="_blank">
+                            Chakra-UI
+                          </Link>
+                        </SectionHeading>
                       </MyFlex>
 
                       <MainNavigation
