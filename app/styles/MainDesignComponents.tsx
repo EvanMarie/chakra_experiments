@@ -28,7 +28,12 @@ import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
 import { HiLightBulb } from "react-icons/hi";
 import { useState } from "react";
-import { Highlighter } from "~/components/styling/highlighter";
+
+const highlightColors = {
+  pinkCardOne: "#de8ea1",
+  blueCardTwo: "#83a8c7",
+  greenCardThree: "#12decd",
+};
 
 const colors = {
   mainBackground: "#211421",
@@ -218,7 +223,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
     <Flex
       {...GridBoxDefaults}
       flexDirection="column"
-      bg={"accent_1"}
+      bg={highlightColors.pinkCardOne}
       color={"darkText"}
       // fontSize={SmallTextSize}
       padding={PaddingValues}
@@ -247,7 +252,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
     <Flex
       {...GridBoxDefaults}
       flexDirection="column"
-      bg={"accent_2"}
+      bg={highlightColors.blueCardTwo}
       color={"darkText"}
       // fontSize={SmallTextSize}
       padding={PaddingValues}
@@ -276,7 +281,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
     <Flex
       {...GridBoxDefaults}
       flexDirection="column"
-      bg={"accent_3"}
+      bg={highlightColors.greenCardThree}
       color={"darkText"}
       // fontSize={SmallTextSize}
       padding={PaddingValues}
