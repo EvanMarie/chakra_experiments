@@ -29,7 +29,7 @@ import { RiBookmark3Line } from "react-icons/ri";
 import { HiLightBulb } from "react-icons/hi";
 import { useState } from "react";
 
-const usefulTipColor = "#aa9ab5";
+const usefulTipColor = "tipBackground";
 const usefulTipLightbulb = "cyan";
 
 const colors = {
@@ -340,7 +340,7 @@ export function MyLabel({
                 href={link}
                 target="_blank"
                 fontSize={["sm", "md", size - 12]}
-                color={colors.linkColor}
+                color="linkColor"
               >
                 Chakra Docs
               </CustomLink>
@@ -534,7 +534,7 @@ export function SectionDescription({
   children,
   paddingTop = "10px",
   paddingBottom = "10px",
-  color = "accent_3",
+  color = "veryDarkText",
   width = "100%",
 }: SectionDescriptionProps) {
   return (

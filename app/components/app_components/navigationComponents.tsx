@@ -25,7 +25,7 @@ const navHover = {
   _hover: {
     fontWeight: "bold", // Original
     transform: "translateX(5px)",
-    color: "cyan",
+    color: "accent_2",
     transition:
       "transform 0.6s ease-in-out, bold 0.6s ease-in-out, color 0.3s ease-in-out",
 

@@ -58,9 +58,10 @@ export default function App() {
             overflowX="hidden"
             justifyContent="flex-start"
             alignItems="center"
-            bg="background"
+            // bg="background"
             direction="column"
-            bgImage="url('/images/cyan_traingles.png')"
+            bgImage="url('/images/calm_triangles_vignette.png')"
+            bgSize="cover"
             bgPosition="center"
             position="fixed"
             // bgRepeat="repeat"
@@ -69,7 +70,7 @@ export default function App() {
             <Flex
               bg="background"
               width="100%" //SPans the whole page
-              maxWidth={{ base: "100%", lg: "1300px" }} // keeps it from getting too wide
+              maxWidth={{ base: "100%", lg: "1333px" }} // keeps it from getting too wide
               flexDirection="column" // separates nav from body
               borderRadius="lg" // trying to enclose footer too
               flex="1"
@@ -89,7 +90,7 @@ export default function App() {
                   display={["none", "none", "block"]}
                   pb={3}
                   bg="background"
-                  paddingLeft={3}
+                  paddingLeft={6}
                   paddingTop={2}
                   borderRadius="lg"
                 >
@@ -98,6 +99,7 @@ export default function App() {
                     // bg="darkAccent_3"
                     // height="100%"
                     // display={["none", "none", "block"]} // moved higher up
+
                     width={navMenuWidth}
                     borderRadius="md"
                     pb={3}

@@ -1,6 +1,5 @@
 import { Box, VStack } from "@chakra-ui/react";
-import { BsTextareaResize } from "react-icons/bs";
-import { BasicText, FlexibleBox, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import {
   BigBackgroundBox,
   BulletBox,

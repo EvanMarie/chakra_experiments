@@ -37,16 +37,17 @@ export const colors = {
   linkColor: "deeppink",
 };
 
-const buttonBackground = "#451451";
+const buttonBackground = "accent_2";
 
 export const ButtonStyles = {
   bg: buttonBackground,
-  color: "accent_2",
+  color: "background",
   border: "1px solid",
   borderColor: "darText",
   _hover: {
-    bg: "accent_2",
-    color: buttonBackground,
+    bg: "sectionColor",
+    color: "linkColor",
+    transition: "all 0.3s ease-in-out",
   },
 };
 
@@ -228,7 +229,6 @@ interface HighlightMeProps {
 export function HL({
   children,
   color = "accent_2",
-  // color = colors.highlighterColor,
   fontWeight = "bold",
 }: HighlightMeProps) {
   return (
@@ -258,7 +258,7 @@ export function Mono({
     fontWeight: fontWeight,
     marginY: `${marginY} !important`,
     lineheight: `${lineHeight} !important`,
-    color: "codeText",
+    color: "accent_2",
     width: `${width} !important`,
   };
   return <chakra.span {...monoStyle}>{children}</chakra.span>;

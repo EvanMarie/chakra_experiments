@@ -39,8 +39,8 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
   };
 
   const ViewCodeButtonStyles = {
-    bg: "accent_3",
-    color: "darkAccent_3",
+    bg: "darkAccent_3",
+    color: "accent_3",
     fontSize: "12px",
     lineHeight: "0.5",
     border: "2px solid",
@@ -50,8 +50,9 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
     borderRadius: "0.25rem",
     cursor: "pointer",
     _hover: {
-      bg: "darkAccent_3",
-      color: "accent_3",
+      bg: "accent_3",
+      color: "darkAccent_3",
+      transition: "all 0.3s ease-in-out",
     },
   };
 
