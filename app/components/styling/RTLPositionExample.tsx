@@ -1,5 +1,6 @@
 import { Box, Button, VStack } from "@chakra-ui/react";
 import { useState } from "react";
+import { ButtonStyles } from "~/styles/DesignComponents";
 
 function ToggleBox() {
   const [showBox, setShowBox] = useState(false);
@@ -15,11 +16,11 @@ function ToggleBox() {
 
   return (
     <VStack>
-      <Button colorScheme="purple" onClick={toggleBox}>
+      <Button sx={ButtonStyles} onClick={toggleBox}>
         {showBox ? "Hide Box" : "Show Box"}
       </Button>
 
-      <Button colorScheme="teal" onClick={toggleRTL} m={1}>
+      <Button sx={ButtonStyles} onClick={toggleRTL} m={1}>
         {isRTL ? "Change to LTR" : "Change to RTL"}
       </Button>
 
@@ -29,8 +30,8 @@ function ToggleBox() {
           p={2}
           marginX={2}
           marginY={-10}
-          bg="pink.300"
-          color="black"
+          bg="accent_2"
+          color="background"
           {...(isRTL ? { right: "0" } : { left: "0 " })}
         >
           I'm a box positioned based on text direction.

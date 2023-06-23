@@ -62,7 +62,7 @@ export default function ChakraSection() {
               </SectionDescription>
               <Flex w="100%" justifyContent="center">
                 <Box
-                  bgImage="url('https://picsum.photos/300/150?random=1')"
+                  bgImage="url('https://generative-placeholders.glitch.me/image?width=300&height=200&style=circles&gap=13&colors=26')"
                   bgPosition="center"
                   bgRepeat="no-repeat"
                   bgSize="cover"
@@ -78,15 +78,17 @@ export default function ChakraSection() {
                 </Box>
               </Flex>
 
-              <MiniCode>{`<Box
-  bgImage="url('https://picsum.photos/200/300')"
+              <MiniCode>
+                {`<Box
+  bgImage="url('imageURL')"
   bgPosition="center"
   bgRepeat="no-repeat"
   bgSize="cover"
   height="150px"
 >
   Content goes here
-</Box>`}</MiniCode>
+</Box>`}
+              </MiniCode>
               <BasicText>
                 In this example, I've used the Box component to create a div
                 that has a background image.
@@ -122,7 +124,7 @@ export default function ChakraSection() {
                 image into your component file and use it like so:
               </BasicText>
               <MiniCode>{`<Box
-  bgImage={url({'./path-to-your-image.jpg'})}
+  bgImage={url({'./local-image.png'})}
   bgPosition="center"
   bgRepeat="no-repeat"
   bgSize="cover"
@@ -149,7 +151,7 @@ export default function ChakraSection() {
                 <BasicText>Box with Background Image:</BasicText>
                 <Box>
                   <Box
-                    backgroundImage="url('https://picsum.photos/200/300')"
+                    backgroundImage="url('https://generative-placeholders.glitch.me/image?width=300&height=200&style=triangles&gap=24&colors=26')"
                     backgroundPosition="center"
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
@@ -171,7 +173,7 @@ export default function ChakraSection() {
                 <BasicText>Same values with Chakra shorthand:</BasicText>
                 <Box>
                   <Box
-                    bgImage="url('https://picsum.photos/200/300')"
+                    bgImage="url('https://generative-placeholders.glitch.me/image?width=300&height=200&style=triangles&gap=24&colors=26')"
                     bgPosition="center"
                     bgRepeat="no-repeat"
                     bgSize="cover"
@@ -194,7 +196,7 @@ export default function ChakraSection() {
                 </BasicText>
                 <Box>
                   <Box
-                    bgImage="url('https://picsum.photos/200/300')"
+                    bgImage="url('https://generative-placeholders.glitch.me/image?width=300&height=200&style=triangles&gap=24&colors=26')"
                     bgPosition="center"
                     bgRepeat="no-repeat"
                     bgSize="cover"
@@ -247,7 +249,7 @@ export default function ChakraSection() {
             </HighlightText>
             <MyFlex>
               <Box
-                bgImage="url('https://picsum.photos/200/200')"
+                bgImage="url('https://generative-placeholders.glitch.me/image?width=200&height=200&style=cubic-disarray&&colors=26')"
                 bgRepeat="no-repeat"
                 height="200px"
                 width="200px"

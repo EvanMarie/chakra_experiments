@@ -64,7 +64,10 @@ export function CircularProgressImage() {
         )}
         {isLoaded && (
           <MyFlex h="200px">
-            <Image src="https://picsum.photos/200/200" alt="Example" />
+            <Image
+              src="https://generative-placeholders.glitch.me/image?width=200&height=200&style=123&colors=57"
+              alt="Example"
+            />
           </MyFlex>
         )}
       </Box>

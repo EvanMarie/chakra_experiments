@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MyFlex } from "~/styles/MainDesignComponents";
 import { Box, List, ListItem, VStack } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import { ButtonStyles } from "~/styles/DesignComponents";
 
 export function AsPropBox() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,7 @@ export function AsPropBox() {
       <Box
         as="button"
         p={2}
-        color="white"
-        backgroundColor="teal.500"
+        sx={ButtonStyles}
         borderRadius="sm"
         _hover={{ backgroundColor: "teal.600" }}
         onClick={() => setIsOpen(!isOpen)}
@@ -55,11 +55,10 @@ export function AsPropList() {
         {navItems.map((item, index) => (
           <ListItem
             key={index}
-            bg="accent_1"
-            paddingX={2}
-            fontWeight="bold"
-            borderRadius="sm"
+            p="5px 10px"
+            sx={ButtonStyles}
             as={RouterLink}
+            borderRadius="sm"
           >
             {item}
           </ListItem>

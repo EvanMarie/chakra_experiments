@@ -147,7 +147,8 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <Flex
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   h="75px"
                   p={2}
                   align="center"
@@ -160,7 +161,13 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Flex direction="row" bg={colors.mypurple} w={350} p={3}>
+                <Flex
+                  direction="row"
+                  bg="accent_2"
+                  color="background"
+                  w={350}
+                  p={3}
+                >
                   <Text>Child One</Text>
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
@@ -178,7 +185,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Flex
                   direction="column"
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   w={350}
                   px={3}
                   py={1}
@@ -195,7 +203,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Flex
                   justify="center"
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   w={350}
                   px={3}
                   py={1}
@@ -212,7 +221,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Flex
                   justify="space-between"
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   w={350}
                   px={3}
                   py={1}
@@ -227,7 +237,14 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Flex align="center" bg={colors.mypurple} w={350} px={3} py={1}>
+                <Flex
+                  align="center"
+                  bg="accent_2"
+                  color="background"
+                  w={350}
+                  px={3}
+                  py={1}
+                >
                   <Text>Child One</Text>
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
@@ -240,7 +257,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Flex
                   align="stretch"
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   w={350}
                   px={3}
                   py={1}
@@ -255,7 +273,14 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Flex wrap="wrap" bg={colors.mypurple} w={200} px={3} py={1}>
+                <Flex
+                  wrap="wrap"
+                  bg="accent_2"
+                  color="background"
+                  w={200}
+                  px={3}
+                  py={1}
+                >
                   <Text>Child One</Text>
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
@@ -266,7 +291,14 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Flex wrap="nowrap" bg={colors.mypurple} w={200} px={3} py={1}>
+                <Flex
+                  wrap="nowrap"
+                  bg="accent_2"
+                  color="background"
+                  w={200}
+                  px={3}
+                  py={1}
+                >
                   <Text>Child One</Text>
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
@@ -279,7 +311,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Flex
                   direction={{ base: "column", md: "row" }}
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   w={350}
                   px={3}
                   py={1}
@@ -297,7 +330,7 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Flex bg={colors.mypurple} w={350} px={3} py={1}>
+                <Flex bg="accent_2" color="background" w={350} px={3} py={1}>
                   <Box flexGrow={1}>Child One</Box>
                   <Box flexShrink={2}>Child Two</Box>
                   <Box>Child Three</Box>
@@ -321,26 +354,26 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <Flex>
-                <Box flex={1} bg="red.300" p={4}>
+                <Box flex={1} bg="red.400" p={4}>
                   Column 1
                 </Box>
-                <Box flex={1} bg="blue.300" p={4}>
+                <Box flex={1} bg="blue.400" p={4}>
                   Column 2
                 </Box>
-                <Box flex={1} bg="green.300" p={4}>
+                <Box flex={1} bg="green.400" p={4}>
                   Column 3
                 </Box>
               </Flex>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Flex>
-  <Box flex={1} bg="red.300" p={4}>
+  <Box flex={1} bg="red.400" p={4}>
     Column 1
   </Box>
-  <Box flex={1} bg="blue.300" p={4}>
+  <Box flex={1} bg="blue.400" p={4}>
     Column 2
   </Box>
-  <Box flex={1} bg="green.300" p={4}>
+  <Box flex={1} bg="green.400" p={4}>
     Column 3
   </Box>
 </Flex>`}</Highlighter>
@@ -379,26 +412,26 @@ export default function chakra_section() {
             <MyFlex>
               <Wrap spacing={1}>
                 <WrapItem>
-                  <Box bg="red.300" height="30px" width="220px" />
+                  <Box bg="red.400" height="30px" width="220px" />
                 </WrapItem>
                 <WrapItem>
-                  <Box bg="green.300" height="30px" width="220px" />
+                  <Box bg="green.400" height="30px" width="220px" />
                 </WrapItem>
                 <WrapItem>
-                  <Box bg="blue.300" height="30px" width="220px" />
+                  <Box bg="blue.400" height="30px" width="220px" />
                 </WrapItem>
               </Wrap>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Wrap spacing={1}>
   <WrapItem>
-    <Box bg="red.300" height="30px" width="220px" />
+    <Box bg="red.400" height="30px" width="220px" />
   </WrapItem>
   <WrapItem>
-    <Box bg="green.300" height="30px" width="220px" />
+    <Box bg="green.400" height="30px" width="220px" />
   </WrapItem>
   <WrapItem>
-    <Box bg="blue.300" height="30px" width="220px" />
+    <Box bg="blue.400" height="30px" width="220px" />
   </WrapItem>
 </Wrap>`}</Highlighter>
             </ModalCode>
@@ -412,26 +445,26 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <Flex height="80px" align="center">
-                <Box bg="blue.300" p={2}>
+                <Box bg="blue.400" p={2}>
                   Item 1
                 </Box>
-                <Box bg="green.300" p={2}>
+                <Box bg="green.400" p={2}>
                   Item 2
                 </Box>
-                <Box bg="red.300" p={2}>
+                <Box bg="red.400" p={2}>
                   Item 3
                 </Box>
               </Flex>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Flex height="80px" align="center">
-  <Box bg="blue.300" p={2}>
+  <Box bg="blue.400" p={2}>
     Item 1
   </Box>
-  <Box bg="green.300" p={2}>
+  <Box bg="green.400" p={2}>
     Item 2
   </Box>
-  <Box bg="red.300" p={2}>
+  <Box bg="red.400" p={2}>
     Item 3
   </Box>
 </Flex>`}</Highlighter>

@@ -1,5 +1,4 @@
 import { Grid, Box, Text, GridItem, Image } from "@chakra-ui/react";
-import { colors } from "~/styles/DesignComponents";
 
 export function Profiles() {
   const profiles = ["Alice", "Bob", "Charlie", "Dave"]; // Sample data
@@ -9,7 +8,8 @@ export function Profiles() {
       autoRows="minmax(20px, auto)"
       autoColumns="minmax(125px, auto)"
       gap={1}
-      bg={colors.mypurple}
+      bg="accent_2"
+      color="background"
     >
       {profiles.map((profile) => (
         <Box key={profile} p={1} boxShadow="base" borderRadius="md">
@@ -22,7 +22,13 @@ export function Profiles() {
 
 export function Dashboard() {
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap={2} bg={colors.mypurple} p={1}>
+    <Grid
+      templateColumns="repeat(3, 1fr)"
+      gap={2}
+      bg="accent_2"
+      color="background"
+      p={1}
+    >
       <GridItem colSpan={1}>
         <Box p={3} bg="green.500">
           Widget 1

@@ -1,7 +1,13 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  ButtonStyles,
+  HL,
+  Mono,
+  colors,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -204,6 +210,7 @@ export default function chakra_section() {
               <MyFlex>
                 <Link
                   as={Button}
+                  sx={ButtonStyles}
                   href="https://www.somewhere.com"
                   color="linkColor"
                 >

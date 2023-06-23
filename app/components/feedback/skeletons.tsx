@@ -184,9 +184,9 @@ export function ImageWithSkeleton() {
   return (
     <Skeleton isLoaded={hasLoaded} boxSize="200px">
       <Image
-        src="https://placekitten.com/200/200"
+        src="https://generative-placeholders.glitch.me/image?width=200&height=200&style=circles&colors=33"
         onLoad={() => setHasLoaded(true)}
-        alt="A cute kitten"
+        alt="Kinda looks like bubbles..."
       />
     </Skeleton>
   );

@@ -1,17 +1,13 @@
-import { Box, Grid, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, Text } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, Mono, HL, colors } from "~/styles/DesignComponents";
+import { BasicText, Mono, HL } from "~/styles/DesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import {
-  Dashboard,
-  ImageGallery,
-  Profiles,
-} from "./exampleComponents/gridExamples";
+
 import {
   BigBackgroundBox,
   BulletBox,
@@ -30,9 +26,13 @@ import {
   SectionContainer,
   SectionDescription,
   SingleExample,
-  ViewCode,
 } from "~/styles/MainDesignComponents";
 import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
+import {
+  Dashboard,
+  ImageGallery,
+  Profiles,
+} from "~/components/styling/gridExamples";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -139,7 +139,8 @@ export default function chakra_section() {
                   </Box>
                 </Grid>
 
-                <MiniCode>{`<Grid templateColumns="repeat(3, 1fr)">
+                <ModalCode>
+                  <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)">
   <Box bg="blue.500" h="10" w="100%">
     Box One
   </Box>
@@ -149,7 +150,8 @@ export default function chakra_section() {
   <Box bg="pink.500" h="10" w="100%">
     Box Three
   </Box>
-</Grid>`}</MiniCode>
+</Grid>`}</Highlighter>
+                </ModalCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -157,7 +159,7 @@ export default function chakra_section() {
               <SingleExample>
                 <Box bg={"mainText"} p={2} mb={2}>
                   <Grid templateColumns="repeat(3, 1fr)" gap={1}>
-                    <Box p={4} boxShadow="xl" bg={colors.mypurple}>
+                    <Box p={4} boxShadow="xl" bg="accent_2" color="background">
                       <Text fontSize="md" fontWeight="bold">
                         Item One
                       </Text>
@@ -166,7 +168,7 @@ export default function chakra_section() {
                         Details...
                       </Text>
                     </Box>
-                    <Box p={4} boxShadow="xl" bg={colors.mypurple}>
+                    <Box p={4} boxShadow="xl" bg="accent_2" color="background">
                       <Text fontSize="md" fontWeight="bold">
                         Item Two
                       </Text>
@@ -175,7 +177,7 @@ export default function chakra_section() {
                         Details...
                       </Text>
                     </Box>
-                    <Box p={4} boxShadow="xl" bg={colors.mypurple}>
+                    <Box p={4} boxShadow="xl" bg="accent_2" color="background">
                       <Text fontSize="md" fontWeight="bold">
                         Item Three
                       </Text>
@@ -187,8 +189,9 @@ export default function chakra_section() {
                   </Grid>
                 </Box>
 
-                <MiniCode>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
-  <Box p={4} boxShadow="xl" bg={colors.mypurple}>
+                <ModalCode>
+                  <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
+  <Box p={4} boxShadow="xl" bg="accent_2" color="background">
     <Text fontSize="md" fontWeight="bold">
       Item One
     </Text>
@@ -197,7 +200,7 @@ export default function chakra_section() {
       Details...
     </Text>
   </Box>
-  <Box p={4} boxShadow="xl" bg={colors.mypurple}>
+  <Box p={4} boxShadow="xl" bg="accent_2" color="background">
     <Text fontSize="md" fontWeight="bold">
       Item Two
     </Text>
@@ -206,7 +209,7 @@ export default function chakra_section() {
       Details...
     </Text>
   </Box>
-  <Box p={4} boxShadow="xl" bg={colors.mypurple}>
+  <Box p={4} boxShadow="xl" bg="accent_2" color="background">
     <Text fontSize="md" fontWeight="bold">
       Item Three
     </Text>
@@ -215,19 +218,20 @@ export default function chakra_section() {
       Details...
     </Text>
   </Box>
-</Grid>`}</MiniCode>
+</Grid>`}</Highlighter>
+                </ModalCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Grid gap={3} bg={colors.mypurple} p={2}>
+                <Grid gap={3} bg="accent_2" color="background" p={2}>
                   <Text>Thing One</Text>
                   <Text>Thing Two</Text>
                   <Text>Thing Three</Text>
                 </Grid>
 
-                <MiniCode>{`<Grid gap={3} bg={colors.mypurple} p={2}>
+                <MiniCode>{`<Grid gap={3} bg="accent_2" color="background" p={2}>
   <Text>Thing One</Text>
   <Text>Thing Two</Text>
   <Text>Thing Three</Text>
@@ -238,7 +242,8 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <Profiles />
-                <MiniCode>{`export function Profiles() {
+                <ModalCode>
+                  <Highlighter>{`export function Profiles() {
   const profiles = ["Alice", "Bob", 
                     "Charlie", "Dave"];
 
@@ -247,7 +252,7 @@ export default function chakra_section() {
       autoRows="minmax(20px, auto)"
       autoColumns="minmax(125px, auto)"
       gap={1}
-      bg={colors.mypurple}
+      bg="accent_2" color="background"
     >
       {profiles.map((profile) => (
         <Box key={profile} p={1} boxShadow="base" 
@@ -257,7 +262,8 @@ export default function chakra_section() {
       ))}
     </Grid>
   );
-}`}</MiniCode>
+}`}</Highlighter>
+                </ModalCode>
                 <BasicText>
                   <HL>Auto Columns and Rows</HL>: Let's say we're creating a
                   grid to display profile cards. We don't know how many profiles
@@ -276,10 +282,11 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <Dashboard />
-                <MiniCode>{`export function Dashboard() {
+                <ModalCode>
+                  <Highlighter>{`export function Dashboard() {
   return (
     <Grid templateColumns="repeat(3, 1fr)" 
-    gap={6} bg={colors.mypurple} p={1}>
+    gap={6} bg="accent_2" color="background" p={1}>
       <GridItem colSpan={1}>
         <Box p={3} bg="green.500">
           Widget 1
@@ -307,7 +314,8 @@ export default function chakra_section() {
       </GridItem>
     </Grid>
   );
-}`}</MiniCode>
+}`}</Highlighter>
+                </ModalCode>
                 <BasicText>
                   <HL>Grid Item Placement</HL>: Let's imagine a dashboard with
                   various widgets. We can use <Mono>colSpan</Mono> to specify
@@ -323,7 +331,9 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <ImageGallery />
-                <MiniCode>{`export function ImageGallery() {
+                <ModalCode>
+                  <Highlighter>
+                    {`export function ImageGallery() {
 const images = Array(5).fill(null); // Array of 5 nulls
 return (
   <Grid
@@ -345,7 +355,9 @@ return (
     ))}
   </Grid>
 );
-}`}</MiniCode>
+}`}
+                  </Highlighter>
+                </ModalCode>
                 <BasicText>
                   {" "}
                   <HL>Responsive Design</HL>: Let's create a responsive image

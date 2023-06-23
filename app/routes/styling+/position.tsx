@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -20,7 +20,6 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
-  ViewCode,
   HighlightExample,
   HighlightText,
 } from "~/styles/MainDesignComponents";
@@ -108,8 +107,8 @@ export default function chakra_section() {
                 <MyFlex>
                   <Box
                     position="static"
-                    bg={colors.mypurple}
-                    color="white"
+                    bg="accent_2"
+                    color="background"
                     p={2}
                     textAlign="center"
                   >
@@ -125,8 +124,8 @@ export default function chakra_section() {
                 <MyFlex>
                   <Box
                     position="relative"
-                    bg={colors.mypurple}
-                    color="white"
+                    bg="accent_2"
+                    color="background"
                     p={2}
                     textAlign="center"
                   >
@@ -308,10 +307,10 @@ export default ToggleFixedBox;
                   top="50%"
                   left="50%"
                   transform="translate(-50%, -50%)"
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   p={3}
                   borderRadius="sm"
-                  color="white"
                 >
                   I'm a box centered within my parent
                 </Box>
@@ -356,7 +355,7 @@ export default ToggleFixedBox;
               <Box
                 position="relative"
                 zIndex="0"
-                bg={"darkAccent_2"}
+                bg={"background"}
                 h="175px"
                 w="175px"
                 p={2}

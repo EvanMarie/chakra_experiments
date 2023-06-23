@@ -234,7 +234,7 @@ export function AlertFive() {
       </SectionDescription>
 
       <Box p={5}>
-        <Box h="110px">
+        <Box h="75px">
           <CloseButtonAlert />
         </Box>
       </Box>

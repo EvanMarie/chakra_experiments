@@ -1,6 +1,6 @@
 import { Box, Button } from "@chakra-ui/react";
 import { useState } from "react";
-import { colors } from "~/styles/DesignComponents";
+import { ButtonStyles, colors } from "~/styles/DesignComponents";
 
 function ToggleBox() {
   const [showBox, setShowBox] = useState(false);
@@ -11,7 +11,7 @@ function ToggleBox() {
 
   return (
     <div>
-      <Button onClick={toggleBox} bg={"accent_2"} color="black">
+      <Button onClick={toggleBox} sx={ButtonStyles} color="black">
         {showBox ? "Ciao, box!" : "Voilà, a box!"}
       </Button>
 

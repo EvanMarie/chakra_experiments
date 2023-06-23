@@ -132,7 +132,8 @@ export default function chakra_section() {
                 <FlexibleBox
                   width="100%"
                   height={12}
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   paddingX={2}
                 >
                   <Mono>width="100%" height={12}</Mono>
@@ -143,7 +144,8 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <FlexibleBox
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   w="100%"
                   h="32px"
                   paddingX={2}
@@ -155,7 +157,12 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <FlexibleBox boxSize="xs" bg={colors.mypurple} paddingX={2}>
+                <FlexibleBox
+                  boxSize="xs"
+                  bg="accent_2"
+                  color="background"
+                  paddingX={2}
+                >
                   <Mono>boxSize="sm"</Mono>
                 </FlexibleBox>
                 <MiniCode>{`<Box boxSize="xs"`}</MiniCode>
@@ -164,7 +171,12 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <FlexibleBox w={256} bg={colors.mypurple} paddingX={2}>
+                <FlexibleBox
+                  w={256}
+                  bg="accent_2"
+                  color="background"
+                  paddingX={2}
+                >
                   <Mono>w={256}</Mono>
                 </FlexibleBox>
                 <MiniCode>{`<Box w={256}`}</MiniCode>
@@ -175,7 +187,8 @@ export default function chakra_section() {
               <SingleExample>
                 <FlexibleBox
                   w="120px"
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   paddingX={2}
                   fontSize={12}
                 >
@@ -189,7 +202,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Box
                   w={{ base: "100%", md: "50%", lg: "25%" }}
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   p={3}
                 >
                   This is a responsive box
@@ -210,7 +224,8 @@ export default function chakra_section() {
               <SingleExample>
                 <Box
                   h={{ base: "50px", md: "100px", lg: "150px" }}
-                  bg={colors.mypurple}
+                  bg="accent_2"
+                  color="background"
                   p={3}
                 >
                   This is a responsive box
@@ -226,8 +241,14 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box minW="100px" maxW="500px" bg={colors.mypurple} p={3}>
-                  This box has a minimum and maximum width
+                <Box
+                  minW="100px"
+                  maxW="500px"
+                  bg="accent_2"
+                  color="background"
+                  p={3}
+                >
+                  This box has a minimum and maximum width.
                 </Box>
 
                 <MiniCode>{`<Box minW="100px" maxW="500px">`}</MiniCode>
@@ -235,16 +256,22 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box minH="50px" maxH="200px" bg={colors.mypurple} p={3}>
-                  This box has a minimum and maximum height
+                <Box
+                  minH="50px"
+                  maxH="200px"
+                  bg="accent_2"
+                  color="background"
+                  p={3}
+                >
+                  This box has a minimum and maximum height.
                 </Box>
                 <MiniCode>{`<Box minH="50px" maxH="200px">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box display="flex" bg={colors.mypurple} p={3}>
-                  This box is a flex container
+                <Box display="flex" bg="accent_2" color="background" p={3}>
+                  This box is a flex container.
                 </Box>
                 <MiniCode>{`<Box display="flex">`}</MiniCode>
                 <BasicText></BasicText>
@@ -252,8 +279,13 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box display="inline-block" bg={colors.mypurple} p={3}>
-                  This box is an inline-block element
+                <Box
+                  display="inline-block"
+                  bg="accent_2"
+                  color="background"
+                  p={3}
+                >
+                  This box is an inline-block element.
                 </Box>
                 <MiniCode>{`<Box display="inline-block">`}</MiniCode>
                 <BasicText></BasicText>
@@ -275,16 +307,16 @@ export default function chakra_section() {
             </HighlightText>
             <Box p={3} w="100%">
               <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1} w="100%">
-                <Box bg="yellow.300" height="30px" />
-                <Box bg="green.300" height="30px" />
-                <Box bg="blue.300" height="30px" />
+                <Box bg="yellow.400" height="30px" />
+                <Box bg="green.400" height="30px" />
+                <Box bg="blue.400" height="30px" />
               </Grid>
             </Box>
             <ModalCode>
               <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
-  <Box bg="yellow.300" height="30px" />
-  <Box bg="green.300" height="30px" />
-  <Box bg="blue.300" height="30px" />
+  <Box bg="yellow.400" height="30px" />
+  <Box bg="green.400" height="30px" />
+  <Box bg="blue.400" height="30px" />
 </Grid>`}</Highlighter>
             </ModalCode>
           </GridBoxOne>
@@ -302,16 +334,16 @@ export default function chakra_section() {
             </HighlightText>
             <Box p={3} w="100%">
               <Stack direction="column" spacing={2}>
-                <Box bg="yellow.300" height="30px" />
-                <Box bg="purple.300" height="30px" />
-                <Box bg="red.300" height="30px" />
+                <Box bg="yellow.400" height="30px" />
+                <Box bg="purple.400" height="30px" />
+                <Box bg="red.400" height="30px" />
               </Stack>
             </Box>
             <ModalCode>
               <Highlighter>{`<Stack direction="column" spacing={2}>
-  <Box bg="yellow.300" height="30px" /> 
-  <Box bg="purple.300" height="30px" />
-  <Box bg="red.300" height="30px" />
+  <Box bg="yellow.400" height="30px" /> 
+  <Box bg="purple.400" height="30px" />
+  <Box bg="red.400" height="30px" />
 </Stack>`}</Highlighter>
             </ModalCode>
           </GridBoxTwo>
@@ -331,26 +363,26 @@ export default function chakra_section() {
             <MyFlex>
               <Wrap spacing={1} justify="center" align="center" w="100%">
                 <WrapItem>
-                  <Box bg="red.300" height="30px" width="220px" />
+                  <Box bg="red.400" height="30px" width="220px" />
                 </WrapItem>
                 <WrapItem>
-                  <Box bg="green.300" height="30px" width="220px" />
+                  <Box bg="green.400" height="30px" width="220px" />
                 </WrapItem>
                 <WrapItem>
-                  <Box bg="blue.300" height="30px" width="220px" />
+                  <Box bg="blue.400" height="30px" width="220px" />
                 </WrapItem>
               </Wrap>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Wrap spacing={1}>
   <WrapItem>
-    <Box bg="red.300" height="30px" width="220px" />
+    <Box bg="red.400" height="30px" width="220px" />
   </WrapItem>
   <WrapItem>
-    <Box bg="green.300" height="30px" width="220px" />
+    <Box bg="green.400" height="30px" width="220px" />
   </WrapItem>
   <WrapItem>
-    <Box bg="blue.300" height="30px" width="220px" />
+    <Box bg="blue.400" height="30px" width="220px" />
   </WrapItem>
 </Wrap>`}</Highlighter>
             </ModalCode>

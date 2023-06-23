@@ -124,7 +124,7 @@ export default function chakra_section() {
                   <Mono>display='none'</Mono> makes an element not appear. (The
                   following element does not appear.)
                 </BasicText>
-                <FlexibleBox bg={colors.mypurple} display="none">
+                <FlexibleBox bg="accent_2" color="background" display="none">
                   display='none'
                 </FlexibleBox>
                 <MiniCode>{`<Box display="none">`}</MiniCode>
@@ -141,7 +141,8 @@ export default function chakra_section() {
                     hideFrom="md"
                     h="100px"
                     w="100px"
-                    bg={colors.mypurple}
+                    bg="accent_2"
+                    color="background"
                   ></Box>{" "}
                 </Box>
                 <MiniCode>{`<Box hideFrom="md" h="100px" w="100px">`}</MiniCode>
@@ -156,8 +157,8 @@ export default function chakra_section() {
                 <Box h={200}>
                   <Box
                     display={{ base: "none", md: "block" }}
-                    bg={colors.mypurple}
-                    color={"mainText"}
+                    bg="accent_2"
+                    color="background"
                     padding={3}
                   >
                     <Mono>base: "none", md: "block" </Mono>configuration sets
@@ -180,8 +181,8 @@ export default function chakra_section() {
 
                 <FlexibleBox
                   display={{ base: "block", md: "none" }}
-                  bg={colors.mypurple}
-                  color={"mainText"}
+                  bg="accent_2"
+                  color="background"
                 >
                   <Mono>base: "block", md: "none"</Mono> - hide the element from
                   'md' up
@@ -191,11 +192,7 @@ export default function chakra_section() {
 
                 <br />
 
-                <FlexibleBox
-                  hideFrom="md"
-                  bg={colors.mypurple}
-                  color={"mainText"}
-                >
+                <FlexibleBox hideFrom="md" bg="accent_2" color="background">
                   This box complete disappears at sizes of medium and higher.
                 </FlexibleBox>
 
@@ -204,7 +201,7 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box display="block" bg={colors.mypurple}>
+                <Box display="block" bg="accent_2" color="background">
                   This is a block-level element
                 </Box>
                 <MiniCode>{`<Box display="block">`}</MiniCode>
@@ -213,7 +210,7 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box display="inline-block" bg={colors.mypurple}>
+                <Box display="inline-block" bg="accent_2" color="background">
                   This is an inline-block element
                 </Box>
                 <MiniCode>{`<Box display="inline-block"?`}</MiniCode>
@@ -222,7 +219,7 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box display="flex" bg={colors.mypurple}>
+                <Box display="flex" bg="accent_2" color="background">
                   This box is a flex container
                 </Box>
                 <MiniCode>{`<Box display="flex">`}</MiniCode>
@@ -231,7 +228,7 @@ export default function chakra_section() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Flex bg={colors.mypurple}>
+                <Flex bg="accent_2" color="background">
                   This flex component is also a flex container
                 </Flex>
                 <MiniCode>{`<Flex>`}</MiniCode>
@@ -241,7 +238,7 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-                  <Box p={2} bg={colors.mypurple}>
+                  <Box p={2} bg="accent_2" color="background">
                     This is a grid item
                   </Box>
                   <Box p={2} bg={"accent_1"} color="black">
@@ -272,18 +269,18 @@ export default function chakra_section() {
               a block-level element.
             </HighlightText>
             <MyFlex>
-              <Box display="inline" bg="green.300" p={4}>
+              <Box display="inline" bg="green.400" p={4}>
                 Inline Box
               </Box>
-              <Box display="block" bg="blue.300" p={4}>
+              <Box display="block" bg="blue.400" p={4}>
                 Block Box
               </Box>
             </MyFlex>
             <ModalCode>
-              <Highlighter>{`<Box d="inline" bg="green.300" p={4}>
+              <Highlighter>{`<Box d="inline" bg="green.400" p={4}>
   Inline Box
 </Box>
-<Box d="block" bg="blue.300" p={4}>
+<Box d="block" bg="blue.400" p={4}>
   Block Box
 </Box>`}</Highlighter>
             </ModalCode>
@@ -331,19 +328,19 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <Flex direction="row" justifyContent="center" alignItems="center">
-                <Box bg="red.300" p={4}>
+                <Box bg="red.400" p={4}>
                   Box 1
                 </Box>
-                <Box bg="blue.300" p={4}>
+                <Box bg="blue.400" p={4}>
                   Box 2
                 </Box>
               </Flex>
             </MyFlex>
             <ModalCode>
-              <Highlighter>{`<Box bg="red.300" p={4}>
+              <Highlighter>{`<Box bg="red.400" p={4}>
   Box 1
 </Box>
-<Box bg="blue.300" p={4}>
+<Box bg="blue.400" p={4}>
   Box 2
 </Box>`}</Highlighter>
             </ModalCode>

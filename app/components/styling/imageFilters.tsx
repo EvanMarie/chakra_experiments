@@ -23,7 +23,7 @@ const basicBoxStyles = {
   px: 4,
   marginTop: "5px",
   background:
-    "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
+    "url(https://generative-placeholders.glitch.me/image?width=200&height=200&style=tiles&colors=26 ) center/cover no-repeat",
 };
 
 export function Filters() {
@@ -102,7 +102,7 @@ export function BackdropFilters() {
     p: "10",
     marginTop: "5px",
     background:
-      "url(https://picsum.photos/id/1068/200/300) center/cover no-repeat",
+      "url(https://generative-placeholders.glitch.me/image?width=200&height=200&style=tiles&colors=26 ) center/cover no-repeat",
   };
 
   const innerBoxStyles = {
@@ -185,7 +185,7 @@ const highlightBoxStyles = {
   px: 4,
   marginTop: "5px",
   background:
-    "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
+    "url(https://generative-placeholders.glitch.me/image?width=200&height=200&style=tiles&colors=26) center/cover no-repeat",
 };
 
 export function FilterTipOne() {

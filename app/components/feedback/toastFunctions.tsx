@@ -10,13 +10,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { colors } from "~/styles/DesignComponents";
+import { ButtonStyles, colors } from "~/styles/DesignComponents";
 import { MyFlex } from "~/styles/MainDesignComponents";
 
 const buttonStyles = {
-  bg: "darkAccent_3",
-  color: "accent_3",
-  border: "0.5px solid",
+  ...ButtonStyles,
+
   borderRadius: "md",
   width: { base: "135px", sm: "135px", md: "175px", lg: "135px" },
   height: "30px",
@@ -25,9 +24,7 @@ const buttonStyles = {
   p: 0.5,
   mx: 0,
   _hover: {
-    bg: "accent_3",
-    color: "darkAccent_3",
-    border: "0.5px solid",
+    bg: "linkColor",
   },
 };
 
@@ -363,10 +360,11 @@ export function ToastInteractiveFunction() {
       duration: null,
       isClosable: true,
       render: ({ onClose }) => (
-        <Box color="white" bg="darkAccent_2" p={4}>
+        <Box color="sidebarBackground" bg="linkColor" fontWeight="bold" p={4}>
           <Text>😄 Hey there!</Text>
           <Text>Would you like a cup of coffee?</Text>
           <Button
+            sx={buttonStyles}
             onClick={() => {
               toast({
                 title: "Coffee on the way!",

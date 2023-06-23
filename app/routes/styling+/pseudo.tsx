@@ -421,7 +421,7 @@ export default function chakra_section() {
                     display: "block",
                     height: "100%",
                     width: "50%",
-                    backgroundColor: "green",
+                    backgroundColor: "cyan",
                   },
                 }}
               />

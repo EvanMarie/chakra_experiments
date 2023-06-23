@@ -670,15 +670,19 @@ export function HighlightExample({
   children,
   h = "200px",
   w = "100%",
-  bg = "gray.700",
-  p = 4,
+  bg = "background",
+  p = 2,
   color = "white",
   borderRadius = "sm",
-  maxWidth = "400px",
+  maxWidth = { base: "300px", sm: "400px", md: "400px", lg: "250px" },
   ...restProps
 }: HighlightExampleProps) {
   return (
     <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      borderRadius="sm"
       h={h}
       w={w}
       bg={bg}

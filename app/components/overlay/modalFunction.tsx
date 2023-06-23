@@ -18,7 +18,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import { ButtonStyles } from "~/styles/DesignComponents";
+import { ButtonStyles, PlaceholderImage } from "~/styles/DesignComponents";
 
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
 
@@ -246,7 +246,7 @@ export function ModalFunctionFive() {
           <ModalCloseButton />
           <ModalBody>
             <MyFlex>
-              <Image src="https://placekitten.com/640/360" />
+              <PlaceholderImage type="cubic-disarray" colors={26} />
             </MyFlex>
           </ModalBody>
           <ModalFooter>

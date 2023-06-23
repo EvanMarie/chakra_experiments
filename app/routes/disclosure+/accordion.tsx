@@ -225,8 +225,12 @@ export default function chakra_section() {
               orderly manner.
             </HighlightText>
             <MyFlex>
-              <HighlightExample h="240px">
-                <Accordion allowToggle>
+              <HighlightExample
+                h="240px"
+                alignItems="flex-start"
+                justifyContent="flexstart"
+              >
+                <Accordion allowToggle w="100%" p={2}>
                   <AccordionItem>
                     <AccordionButton>
                       <Box flex="1" textAlign="left">
@@ -270,8 +274,12 @@ export default function chakra_section() {
               necessary to create a custom AccordionButton component.
             </HighlightText>
             <MyFlex>
-              <HighlightExample h="125px">
-                <Accordion allowToggle>
+              <HighlightExample
+                h="125px"
+                alignItems="flex-start"
+                justifyContent="flexstart"
+              >
+                <Accordion allowToggle w="100%" p={2}>
                   <AccordionItem>
                     <AccordionButton>
                       <HStack w="100%" justifyContent="space-between">
@@ -297,8 +305,12 @@ export default function chakra_section() {
               is an embedded input form and button within the accordion.
             </HighlightText>
             <MyFlex>
-              <HighlightExample h="135px">
-                <Accordion allowToggle>
+              <HighlightExample
+                h="135px"
+                alignItems="flex-start"
+                justifyContent="flexstart"
+              >
+                <Accordion allowToggle w="100%" p={2}>
                   <AccordionItem>
                     <AccordionButton>
                       <Box flex="1" textAlign="left">

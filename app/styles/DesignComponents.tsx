@@ -42,11 +42,11 @@ const buttonBackground = "accent_2";
 export const ButtonStyles = {
   bg: buttonBackground,
   color: "background",
-  border: "1px solid",
+  border: "2px solid",
   borderColor: "darText",
   _hover: {
-    bg: "sectionColor",
-    color: "linkColor",
+    bg: "linkColor",
+    color: "background",
     transition: "all 0.3s ease-in-out",
   },
 };
@@ -169,14 +169,14 @@ export function CompWithLabel({
         <Flex
           w="100%"
           justifyContent={"center"}
-          overflow="scroll"
+          overflow="hidden"
           alignItems={leftColAlign}
         >
           {children[0]}
         </Flex>
         <Flex
           w="100%"
-          overflow="scroll"
+          overflow="hidden"
           justifyContent={rightColAlign}
           alignItems={"center"}
         >
@@ -325,14 +325,14 @@ export function CollapsibleExample({
         <Flex
           w="100%"
           justifyContent={"center"}
-          overflow="scroll"
+          overflow="hidden"
           alignItems={leftColAlign}
         >
           {children[0]}
         </Flex>
         <Flex
           w="100%"
-          overflow="scroll"
+          overflow="hidden"
           justifyContent={responsiveAlign}
           alignItems={"center"}
         >
@@ -377,7 +377,7 @@ interface PlaceholderImageProps {
   width?: number;
   height?: number;
   colors?: number;
-  style?: string;
+  type?: string;
   gap?: number;
 }
 
@@ -385,13 +385,13 @@ export function PlaceholderImage({
   width = 200,
   height = 150,
   colors = 26,
-  style = "triangles",
+  type = "triangles",
   gap = 100,
 }: PlaceholderImageProps) {
   return (
     <MyFlex>
       <Image
-        src={`https://generative-placeholders.glitch.me/image?width=${width}&height=${height}&style=${style}&gap=${gap}&colors=${colors}`}
+        src={`https://generative-placeholders.glitch.me/image?width=${width}&height=${height}&style=${type}&gap=${gap}&colors=${colors}`}
       />
     </MyFlex>
   );

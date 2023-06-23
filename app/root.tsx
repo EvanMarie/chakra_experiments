@@ -110,6 +110,7 @@ export default function App() {
                       // maxHeight="93vh"
                       height="93vh"
                       overflowY="auto"
+                      overflowX="hidden"
                       w={navMenuWidth}
                       bg="darkAccent_3"
                       borderRadius="md"

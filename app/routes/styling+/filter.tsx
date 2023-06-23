@@ -20,7 +20,6 @@ import {
   MyFlex,
   SectionDescription,
   SectionHeading,
-  ViewCode,
   HighlightText,
 } from "~/styles/MainDesignComponents";
 

@@ -5,11 +5,12 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
+  Text,
 } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, Mono } from "~/styles/DesignComponents";
+import { BasicText, Mono, PlaceholderImage } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -274,7 +275,7 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <HighlightExample>
-                <Tabs colorScheme="cyan">
+                <Tabs colorScheme="cyan" w="100%" p={2} h="100%">
                   <TabList>
                     <Tab>Tab 1</Tab>
                     <Tab>Tab 2</Tab>
@@ -317,19 +318,31 @@ export default function chakra_section() {
               unique layouts.
             </HighlightText>
             <MyFlex>
-              <HighlightExample h="175px">
-                <Tabs orientation="vertical" colorScheme="cyan">
+              <HighlightExample h="225px">
+                <Tabs
+                  orientation="vertical"
+                  colorScheme="cyan"
+                  w="100%"
+                  p={2}
+                  h="100%"
+                >
                   <TabList>
                     <Tab>Tab 1</Tab>
                     <Tab>Tab 2</Tab>
                   </TabList>
 
                   <TabPanels>
-                    <TabPanel>
-                      <p>Tab 1 Content</p>
+                    <TabPanel p={1}>
+                      <Text m={0} lineHeight={1}>
+                        Tab 1 Content
+                      </Text>
+                      <PlaceholderImage type={"circles"} colors={26} />
                     </TabPanel>
-                    <TabPanel>
-                      <p>Tab 2 Content</p>
+                    <TabPanel p={1}>
+                      <Text m={0} lineHeight={1}>
+                        Tab 2 Content
+                      </Text>
+                      <PlaceholderImage type={"triangles"} colors={26} />
                     </TabPanel>
                   </TabPanels>
                 </Tabs>
@@ -347,7 +360,7 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <HighlightExample h="175px">
-                <Tabs colorScheme="cyan">
+                <Tabs colorScheme="cyan" w="100%" p={2} h="100%">
                   <TabList>
                     <Tab>
                       <HStack spacing={2}>

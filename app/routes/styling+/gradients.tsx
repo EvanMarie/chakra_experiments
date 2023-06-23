@@ -29,6 +29,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
@@ -101,15 +102,15 @@ export default function chakra_section() {
                 <Box
                   w="100%"
                   p={2}
-                  bgGradient={"linear(to-t, green.700, pink.700)"}
+                  bgGradient={"linear(to-t, exampleRed, examplePurple)"}
                   borderRadius={"sm"}
                 >
                   This <Mono>Box</Mono> has a <Mono>linear gradient</Mono>{" "}
                   background.
                 </Box>
                 <MiniCode>{`<Box bgGradient={"linear(to-t, 
-  green.700, 
-  pink.700)"}>`}</MiniCode>
+  purple.500, 
+  red.500)"}>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -194,14 +195,17 @@ gradients: {
               project:
             </HighlightText>
             <MyFlex>
-              <Text
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
-                bgClip="text"
-                fontSize="3xl"
-                fontWeight="bold"
-              >
-                Gradient Text
-              </Text>
+              <HighlightExample h="50px">
+                <Text
+                  bgGradient="linear(to-l, #7928CA, #FF0080)"
+                  bgClip="text"
+                  fontSize="3xl"
+                  fontWeight="bold"
+                  m={0}
+                >
+                  Gradient Text
+                </Text>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Text
@@ -215,7 +219,9 @@ gradients: {
               <b>@keyframes</b> and <b>CSS-in-JS</b> to create beautiful
               gradient animations.
             </HighlightText>
-            <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
+            <HighlightExample h="125px">
+              <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
+            </HighlightExample>
             <ModalCode>
               <Highlighter>{`import { keyframes } from "@emotion/react";
               
@@ -245,15 +251,17 @@ export function AnimatedGradient({ children }:
               gradients can make the UI look chaotic.
             </HighlightText>
             <MyFlex>
-              <Button
-                bgGradient="linear(to-r, yellow.500, blue.500)"
-                w="150px"
-                color="white"
-                _hover={{ bgGradient: "linear(to-r, yellow.500, blue.500)" }}
-                _active={{ bgGradient: "linear(to-r, blue.500, yellow.500)" }}
-              >
-                Gradient Button
-              </Button>
+              <HighlightExample h="60px">
+                <Button
+                  bgGradient="linear(to-r, yellow.500, blue.500)"
+                  w="150px"
+                  color="white"
+                  _hover={{ bgGradient: "linear(to-r, yellow.500, blue.500)" }}
+                  _active={{ bgGradient: "linear(to-r, blue.500, yellow.500)" }}
+                >
+                  Gradient Button
+                </Button>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Button

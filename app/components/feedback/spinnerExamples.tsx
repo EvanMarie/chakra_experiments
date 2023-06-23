@@ -18,6 +18,7 @@ import {
 import { useState } from "react";
 import { MyFlex } from "~/styles/MainDesignComponents";
 import { RxWidth } from "react-icons/rx";
+import { ButtonStyles } from "~/styles/DesignComponents";
 
 export function SubmitButton() {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +31,13 @@ export function SubmitButton() {
   };
 
   return (
-    <Button w="80px" onClick={handleClick} isLoading={isLoading} loadingText="">
+    <Button
+      sx={ButtonStyles}
+      w="80px"
+      onClick={handleClick}
+      isLoading={isLoading}
+      loadingText=""
+    >
       {isLoading ? <Spinner color="white" w="80px" /> : "Submit"}
     </Button>
   );
@@ -121,7 +128,14 @@ export function SpinnerTabs() {
   ];
 
   return (
-    <Box w="100%" maxWidth="400px" h="350px" bg="gray.700" color="white" p={2}>
+    <Box
+      w="100%"
+      maxWidth="400px"
+      h="350px"
+      bg="background"
+      color="white"
+      p={2}
+    >
       <Tabs colorScheme="cyan" orientation="vertical" size="sm" isLazy>
         <TabList overflowY="auto" maxH="350px">
           {colorSchemes.map((colorScheme) => (

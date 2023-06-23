@@ -43,16 +43,17 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
     color: "accent_3",
     fontSize: "12px",
     lineHeight: "0.5",
-    border: "2px solid",
+    border: "3px solid",
     borderColor: "darText",
     padding: "0px 0px",
     paddingRight: "6px",
     borderRadius: "0.25rem",
     cursor: "pointer",
     _hover: {
-      bg: "accent_3",
-      color: "darkAccent_3",
+      bg: "linkColor",
+      color: "background",
       transition: "all 0.3s ease-in-out",
+      border: "3px solid",
     },
   };
 

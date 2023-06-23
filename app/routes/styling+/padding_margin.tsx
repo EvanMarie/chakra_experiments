@@ -115,11 +115,11 @@ export default function chakra_basic_styling() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
-                <Box p={2} bg={colors.mypurple}>
-                  This <Mono>Box</Mono> has a padding setting of{" "}
-                  <Mono>
+                <Box p={2} bg="accent_2" color="background">
+                  This <b>Box</b> has a padding setting of{" "}
+                  <b>
                     <i>p={2}</i>
-                  </Mono>
+                  </b>
                 </Box>
                 <MiniCode>{`<Box p={2}>`}</MiniCode>
                 <BasicText>
@@ -160,7 +160,7 @@ export default function chakra_basic_styling() {
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
-                <Box mt={4} bg={colors.mypurple}>
+                <Box mt={4} bg="accent_2" color="background">
                   This box has a margin-top of 4 units
                 </Box>
 
@@ -211,7 +211,8 @@ export default function chakra_basic_styling() {
               <Box
                 p={["5px", "10px", "15px"]}
                 m={["5px", "10px", "15px"]}
-                bg="deeppink"
+                bg="accent_2"
+                color="background"
                 w="200px"
                 fontSize="15px"
                 fontWeight="bold"
@@ -237,8 +238,8 @@ export default function chakra_basic_styling() {
             <Box
               p="10px 20px"
               m="4px 10px"
-              bg={colors.mypurple}
-              color="white"
+              bg="accent_2"
+              color="background"
               fontWeight="bold"
             >
               Padding and Margin Shorthand

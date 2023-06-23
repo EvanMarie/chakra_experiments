@@ -95,7 +95,7 @@ export function PopoverFunctionTwo() {
             <PopoverCloseButton />
             <PopoverBody>
               <Button colorScheme="teal">Popover Button</Button>
-              <PlaceholderImage colors={24} style={"cubic-disarray"} />{" "}
+              <PlaceholderImage colors={26} type="cubic-disarray" />{" "}
             </PopoverBody>
             <PopoverFooter sx={PopoverHeaderStyles}>
               Popover Footer 1
@@ -116,7 +116,7 @@ export function PopoverFunctionTwo() {
             <PopoverCloseButton />
             <PopoverBody>
               <Button colorScheme="teal">Popover Button</Button>
-              <PlaceholderImage style={"circles"} colors={95} />{" "}
+              <PlaceholderImage type="circles" colors={26} />{" "}
             </PopoverBody>
             <PopoverFooter sx={PopoverHeaderStyles}>
               Popover Footer 2
@@ -149,11 +149,11 @@ export function PopoverFunctionThree() {
                 <PopoverBody sx={PopoverContentStyles}>
                   <Box>
                     Hello. Would you like some art?
-                    <PlaceholderImage style={"circles"} colors={33} />
+                    <PlaceholderImage type="123" colors={26} />
                   </Box>
                   <Button
                     mt={4}
-                    colorScheme="teal"
+                    sx={ButtonStyles}
                     onClick={onClose}
                     ref={initRef}
                   >

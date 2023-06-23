@@ -22,6 +22,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -226,9 +227,16 @@ export default function chakra_section() {
                   vertical offset of 2 pixels, and a shadow color of red.
                 </BasicText>
                 <MyFlex>
-                  <Text color="white" textShadow="2px 2px red" fontSize={28}>
-                    Shadowy Text
-                  </Text>
+                  <HighlightExample h="50px">
+                    <Text
+                      m={0}
+                      color="white"
+                      textShadow="2px 2px red"
+                      fontSize={28}
+                    >
+                      Shadowy Text
+                    </Text>
+                  </HighlightExample>
                   <MiniCode>
                     {`<Text color="white" 
   textShadow="2px 2px 5px red" 

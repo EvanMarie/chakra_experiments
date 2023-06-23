@@ -19,18 +19,19 @@ import { tabsTheme } from "./tabStyles";
 const CovertCandyScheme = {
   50: "#E0DEBF", // mainText * adobe
   200: "#44EAFA", // accent_2
+  220: "#1FD4D5", // exampleBlue
+  240: "#1FE098", // exampleGreen
   250: "#aa9ab5", // TipBackground
   300: "#FFA6AA", // accent_1, * adobe
   400: "#a7d5fa", // accent_3 * old accent 2
+  425: "#7D3080", // examplePurple
   450: "#E26BB2", // linkColor *
+  475: "#B8264D", // exampleRed
   500: "#532291", // darkAccent_1
   600: "#5E515B", // sectionColor *adobe
-  700: "#370a42", // darkAccent_2
   800: "#433A47", // sidebarBackground, darkAccent_3 * adobe
   850: "#26231a", // darkText
-  // 900: "#383640", // background *adobe
   900: "#2D2B38", // background *adobe
-  999: "#121114", // newDarkText
 };
 
 const theme = extendTheme({
@@ -38,19 +39,20 @@ const theme = extendTheme({
     CovertCandyScheme,
     mainText: CovertCandyScheme[50],
     accent_2: CovertCandyScheme[200],
+    exampleBlue: CovertCandyScheme[220],
+    exampleGreen: CovertCandyScheme[240],
     tipBackground: CovertCandyScheme[250],
     accent_1: CovertCandyScheme[300],
     accent_3: CovertCandyScheme[400],
+    examplePurple: CovertCandyScheme[425],
+    exampleRed: CovertCandyScheme[475],
     darkAccent_1: CovertCandyScheme[500],
     sectionColor: CovertCandyScheme[600],
-    darkAccent_2: CovertCandyScheme[700],
     sidebarBackground: CovertCandyScheme[800],
     darkText: CovertCandyScheme[850],
     background: CovertCandyScheme[900],
     linkColor: CovertCandyScheme[450],
     darkAccent_3: CovertCandyScheme[800],
-    highlightExampleBackground: "gray.700",
-    veryDark: CovertCandyScheme[999],
   },
 
   breakpoints: {

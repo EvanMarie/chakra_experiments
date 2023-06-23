@@ -92,7 +92,9 @@ export default function chakra_section() {
                   To import the <Mono>Button</Mono>, <Mono>Flex</Mono>, and{" "}
                   <Mono>Box</Mono> components:
                 </BasicText>
-                <MiniCode>{`<import { Button, Flex, Box } from "@chakra-ui/react";`}</MiniCode>
+                <MiniCode>{`<import { Button, 
+  Flex, 
+  Box } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -109,7 +111,7 @@ export default function chakra_section() {
                     Button 2
                   </Button>
                 </MyFlex>
-                <MiniCode>{`<Button borderLeftRadius="0" mb={4} w="150px">`}</MiniCode>
+                <MiniCode>{`<Button borderLeftRadius="0">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -122,7 +124,7 @@ export default function chakra_section() {
                 <Button borderTopRadius="0" mb={4} w="150px">
                   Button 3
                 </Button>
-                <MiniCode>{`<Button borderTopRadius="0" mb={4} w="150px">`}</MiniCode>
+                <MiniCode>{`<Button borderTopRadius="0">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -135,7 +137,7 @@ export default function chakra_section() {
                 <Button borderBottomRadius="0" mb={4} w="150px">
                   Button 4
                 </Button>
-                <MiniCode>{`<Button borderBottomRadius="0" mb={4} w="150px">`}</MiniCode>
+                <MiniCode>{`<Button borderBottomRadius="0">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -163,7 +165,7 @@ export default function chakra_section() {
                     Diagonal Split View Box
                   </Flex>
                 </MyFlex>
-                <MiniCode>{`<Button borderBottomRadius="0" mb={4} w="150px">`}</MiniCode>
+                <MiniCode>{`<Button borderBottomRadius="0">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -184,9 +186,9 @@ export default function chakra_section() {
                 maxWidth="200px"
                 borderTopLeftRadius="lg"
                 borderBottomRightRadius="2xl"
-                bg={colors.mypurple}
+                bg="accent_2"
+                color="background"
                 p={2}
-                color="white"
               >
                 I'm a box with different border radii on different corners.
               </Box>
@@ -207,8 +209,8 @@ export default function chakra_section() {
                 maxWidth="200px"
                 textAlign="center"
                 borderRadius="50px"
-                color="white"
-                bg={colors.mypurple}
+                bg="accent_2"
+                color="background"
                 p={4}
               >
                 I'm a box with a super rounded border.
@@ -246,8 +248,8 @@ export default theme
                 maxWidth="200px"
                 textAlign="center"
                 borderRadius="50% / 20%"
-                bg={colors.mypurple}
-                color="white"
+                bg="accent_2"
+                color="background"
               >
                 I'm a box with an elliptical border radius.
               </Flex>

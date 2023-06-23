@@ -29,7 +29,7 @@ export function ToastOne() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastOneFunction />
         </ExampleContainer>
       </Box>
@@ -88,7 +88,7 @@ export function ToastTwo() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastTwoFunction />
         </ExampleContainer>
       </Box>
@@ -107,7 +107,7 @@ export function ToastThree() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastThreeFunction />
         </ExampleContainer>
       </Box>
@@ -125,7 +125,7 @@ export function ToastFour() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastFourFunction />
         </ExampleContainer>
       </Box>
@@ -142,7 +142,7 @@ export function ToastFive() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastFiveFunction />
         </ExampleContainer>
       </Box>
@@ -176,7 +176,7 @@ export function ToastSix() {
         </ul>
       </Box>
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastSixFunction />
         </ExampleContainer>
       </Box>
@@ -194,7 +194,7 @@ export function ToastSeven() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastSevenFunction />
         </ExampleContainer>
       </Box>
@@ -212,7 +212,7 @@ export function ToastEight() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastEightFunction />
         </ExampleContainer>
       </Box>
@@ -232,7 +232,7 @@ export function ToastNine() {
       </SectionDescription>
 
       <Box p={1}>
-        <ExampleContainer bg={colors.mainBackground}>
+        <ExampleContainer bg="background">
           <ToastNineFunction />
         </ExampleContainer>
       </Box>
