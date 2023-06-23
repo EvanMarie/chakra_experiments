@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -26,10 +26,10 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -138,7 +138,7 @@ export default function chakra_section() {
                   To import the <Mono>Box</Mono> and <Mono>Text</Mono>{" "}
                   components used below:
                 </BasicText>
-                <Highlighter>{`import { Box, Text } from "@chakra-ui/react";`}</Highlighter>
+                <MiniCode>{`import { Box, Text } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -158,10 +158,10 @@ export default function chakra_section() {
                   rounded="lg"
                 >
                   <Box m={4} boxShadow="xs" p={2} rounded="sm" bg={"accent_3"}>
-                    <Highlighter>boxShadow="xs"</Highlighter>
+                    <MiniCode>boxShadow="xs"</MiniCode>
                   </Box>
                   <Box m={4} boxShadow="sm" p={2} rounded="sm" bg={"accent_3"}>
-                    <Highlighter>boxShadow="sm"</Highlighter>
+                    <MiniCode>boxShadow="sm"</MiniCode>
                   </Box>
                   <Box
                     m={4}
@@ -170,19 +170,19 @@ export default function chakra_section() {
                     rounded="sm"
                     bg={"accent_3"}
                   >
-                    <Highlighter>boxShadow="base"</Highlighter>
+                    <MiniCode>boxShadow="base"</MiniCode>
                   </Box>
                   <Box m={4} boxShadow="md" p={2} rounded="sm" bg={"accent_3"}>
-                    <Highlighter>boxShadow="md"</Highlighter>
+                    <MiniCode>boxShadow="md"</MiniCode>
                   </Box>
                   <Box m={4} boxShadow="lg" p={2} rounded="sm" bg={"accent_3"}>
-                    <Highlighter>boxShadow="lg"</Highlighter>
+                    <MiniCode>boxShadow="lg"</MiniCode>
                   </Box>
                   <Box m={4} boxShadow="xl" p={2} rounded="sm" bg={"accent_3"}>
-                    <Highlighter>boxShadow="xl"</Highlighter>
+                    <MiniCode>boxShadow="xl"</MiniCode>
                   </Box>
                   <Box m={4} boxShadow="2xl" p={2} rounded="sm" bg={"accent_3"}>
-                    <Highlighter>boxShadow="2xl"</Highlighter>
+                    <MiniCode>boxShadow="2xl"</MiniCode>
                   </Box>
                   <Box
                     m={4}
@@ -191,7 +191,7 @@ export default function chakra_section() {
                     rounded="sm"
                     bg={"accent_3"}
                   >
-                    <Highlighter>boxShadow="dark-lg"</Highlighter>
+                    <MiniCode>boxShadow="dark-lg"</MiniCode>
                   </Box>
                   <Box
                     m={4}
@@ -200,7 +200,7 @@ export default function chakra_section() {
                     rounded="sm"
                     bg={"accent_3"}
                   >
-                    <Highlighter>boxShadow="outline"</Highlighter>
+                    <MiniCode>boxShadow="outline"</MiniCode>
                   </Box>
                   <Box
                     m={4}
@@ -209,7 +209,7 @@ export default function chakra_section() {
                     rounded="sm"
                     bg={"accent_3"}
                   >
-                    <Highlighter>boxShadow="inner"</Highlighter>
+                    <MiniCode>boxShadow="inner"</MiniCode>
                   </Box>
                 </SimpleGrid>
               </SingleExample>
@@ -229,9 +229,11 @@ export default function chakra_section() {
                   <Text color="white" textShadow="2px 2px red" fontSize={28}>
                     Shadowy Text
                   </Text>
-                  <Highlighter>
-                    {`<Text color="white" textShadow="2px 2px 5px red" fontSize={28}>`}
-                  </Highlighter>
+                  <MiniCode>
+                    {`<Text color="white" 
+  textShadow="2px 2px 5px red" 
+  fontSize={28}>`}
+                  </MiniCode>
                 </MyFlex>
               </SingleExample>
             </SectionContainer>
@@ -250,7 +252,7 @@ export default function chakra_section() {
             <MyFlex>
               (View code below for theme-defined custom shadow...)
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>
                 {`const theme = extendTheme({
     shadows: {
@@ -262,7 +264,7 @@ export default function chakra_section() {
 // Using the custom shadow
 <Box boxShadow="custom">Hello World</Box>`}
               </Highlighter>
-            </ViewCode>
+            </ModalCode>
             This way, your custom shadow can be used like any of the built-in
             shadows.
           </GridBoxOne>
@@ -291,14 +293,14 @@ export default function chakra_section() {
                 Hover for Shadow!
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
   boxShadow="sm"
   _hover={{
     boxShadow: "2xl",
     transition: "box-shadow 0.9s ease-in-out",
   }}`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -321,12 +323,12 @@ export default function chakra_section() {
                 Whazzup, Planet?!
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{` <Box
   boxShadow="0px 10px 15px rgba(0, 0, 0, 0.1),
   0px 4px 6px rgba(0, 0, 0, 0.05)"
 >`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

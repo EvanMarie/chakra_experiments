@@ -14,6 +14,17 @@ import { useRef } from "react";
 import { colors } from "~/styles/DesignComponents";
 import { ExampleContainer } from "~/styles/MainDesignComponents";
 
+const ButtonStyles = {
+  bg: "accent_3",
+  color: "darkAccent_3",
+  border: "1px solid",
+  borderColor: "darText",
+  _hover: {
+    bg: "darkAccent_3",
+    color: "accent_3",
+  },
+};
+
 export function AlertDialogFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = useRef<HTMLButtonElement>(null);
@@ -40,7 +51,7 @@ export function AlertDialogFunctionOne() {
             </AlertDialogBody>
 
             <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={onClose}>
+              <Button {...ButtonStyles} ref={cancelRef} onClick={onClose}>
                 Cancel
               </Button>
               <Button colorScheme="red" onClick={onClose} ml={3}>
@@ -60,7 +71,9 @@ export function AlertDialogFunctionTwo() {
 
   return (
     <ExampleContainer bg={colors.mainBackground}>
-      <Button onClick={onOpen}>Are you sure?</Button>
+      <Button {...ButtonStyles} onClick={onOpen}>
+        Are you sure?
+      </Button>
       <AlertDialog
         motionPreset="slideInBottom"
         leastDestructiveRef={cancelRef}
@@ -101,7 +114,9 @@ export const AgeVerificationDialog: React.FC = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>Enter Site</Button>
+      <Button {...ButtonStyles} onClick={onOpen}>
+        Enter Site
+      </Button>
       <AlertDialog
         isOpen={isOpen}
         leastDestructiveRef={cancelRef}
@@ -121,7 +136,7 @@ export const AgeVerificationDialog: React.FC = () => {
               <Button ref={cancelRef} onClick={onClose}>
                 No
               </Button>
-              <Button colorScheme="green" onClick={verifyAge} ml={3}>
+              <Button {...ButtonStyles} onClick={verifyAge} ml={3}>
                 Yes, I am over 18
               </Button>
             </AlertDialogFooter>
@@ -143,7 +158,9 @@ export const UnsavedChangesAlert: React.FC = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>Navigate Away</Button>
+      <Button {...ButtonStyles} onClick={onOpen}>
+        Navigate Away
+      </Button>
       <AlertDialog
         isOpen={isOpen}
         leastDestructiveRef={cancelRef}
@@ -160,7 +177,7 @@ export const UnsavedChangesAlert: React.FC = () => {
             </AlertDialogBody>
 
             <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={onClose}>
+              <Button {...ButtonStyles} ref={cancelRef} onClick={onClose}>
                 No, Keep Editing
               </Button>
               <Button colorScheme="red" onClick={confirmNavigation} ml={3}>
@@ -185,7 +202,9 @@ export const RateUsDialog: React.FC = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>Rate Us</Button>
+      <Button {...ButtonStyles} onClick={onOpen}>
+        Rate Us
+      </Button>
       <AlertDialog
         isOpen={isOpen}
         leastDestructiveRef={cancelRef}
@@ -205,7 +224,7 @@ export const RateUsDialog: React.FC = () => {
               <Button ref={cancelRef} onClick={onClose}>
                 Not Now
               </Button>
-              <Button colorScheme="green" onClick={submitRating} ml={3}>
+              <Button {...ButtonStyles} onClick={submitRating} ml={3}>
                 Rate Now
               </Button>
             </AlertDialogFooter>

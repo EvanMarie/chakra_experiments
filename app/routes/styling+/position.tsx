@@ -27,13 +27,13 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { Box } from "@chakra-ui/react";
 import ToggleBox from "~/components/styling/absolutePositionExample";
 import ToggleFixedBox from "~/components/styling/fixedPositionExample";
 import RTLPositionExample from "~/components/styling/RTLPositionExample";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -97,7 +97,7 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>To import this components used below:</BasicText>
-                <Highlighter>{`import { Box, Flex } from "@chakra-ui/react";`}</Highlighter>
+                <MiniCode>{`import { Box, Flex } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -116,7 +116,7 @@ export default function chakra_section() {
                     I'm a statically positioned box
                   </Box>
                 </MyFlex>
-                <Highlighter>{`<Box position="static">`}</Highlighter>
+                <MiniCode>{`<Box position="static">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -133,7 +133,7 @@ export default function chakra_section() {
                     I'm a relatively positioned box
                   </Box>
                 </MyFlex>
-                <Highlighter>{`<Box position="relative">`}</Highlighter>
+                <MiniCode>{`<Box position="relative">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -142,7 +142,8 @@ export default function chakra_section() {
                 <MyFlex>
                   <ToggleBox />
                 </MyFlex>
-                <Highlighter>{`import { Box, Button } from "@chakra-ui/react";
+                <ModalCode>
+                  <Highlighter>{`import { Box, Button } from "@chakra-ui/react";
 import { useState } from "react";
 
 function ToggleBox() {
@@ -173,6 +174,7 @@ function ToggleBox() {
 
 export default ToggleBox;
 `}</Highlighter>
+                </ModalCode>
                 <BasicText>
                   In this example, we use React's <Mono>useState</Mono> hook to
                   create a<Mono>showBox</Mono> state variable and a{" "}
@@ -185,7 +187,7 @@ export default ToggleBox;
                   The Box component is only rendered if <Mono>showBox</Mono> is
                   true, thanks to the{" "}
                 </BasicText>
-                <Highlighter>{`{showBox && <Box>}`}</Highlighter>{" "}
+                <MiniCode>{`{showBox && <Box>}`}</MiniCode>{" "}
                 <BasicText>
                   line. This line says "if showBox is true, then render the Box
                   component". When <Mono>showBox</Mono> is false, the{" "}
@@ -222,7 +224,8 @@ export default ToggleBox;
                 <MyFlex>
                   <ToggleFixedBox />
                 </MyFlex>
-                <Highlighter>{`import { Box, Button } from "@chakra-ui/react";
+                <ModalCode>
+                  <Highlighter>{`import { Box, Button } from "@chakra-ui/react";
 import { useState } from "react";
 
 function ToggleFixedBox() {
@@ -253,6 +256,7 @@ function ToggleFixedBox() {
 
 export default ToggleFixedBox;
 `}</Highlighter>
+                </ModalCode>
                 <BasicText>
                   In this example, we have a <Mono>Box</Mono> with{" "}
                   <Mono>position="fixed"</Mono>, and it's placed at the bottom
@@ -280,12 +284,7 @@ export default ToggleFixedBox;
                   sticky, it must be inside a container that has a defined
                   height, and it must have a defined top or bottom value.
                 </BasicText>
-                <MyFlex></MyFlex>
               </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>EXAMPLE</SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
@@ -318,8 +317,8 @@ export default ToggleFixedBox;
                 </Box>
               </Box>
             </MyFlex>
-            <ViewCode>
-              <Highlighter>{`<Box
+            <ModalCode>
+              <MiniCode>{`<Box
   position="relative"
   h="175px"
   w="175px"
@@ -329,8 +328,8 @@ export default ToggleFixedBox;
     position="absolute"
     top="50%"
     left="50%"
-    transform="translate(-50%, -50%)">`}</Highlighter>
-            </ViewCode>
+    transform="translate(-50%, -50%)">`}</MiniCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -366,7 +365,7 @@ export default ToggleFixedBox;
                 I am underneath
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
   position="absolute"
   zIndex="1"
@@ -379,7 +378,7 @@ export default ToggleFixedBox;
 >
   I am underneath
 </Box>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -407,7 +406,7 @@ export default ToggleFixedBox;
                 <RTLPositionExample />
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`import { Box, Button, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -453,7 +452,7 @@ function ToggleBox() {
 export default ToggleBox;
 
 `}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

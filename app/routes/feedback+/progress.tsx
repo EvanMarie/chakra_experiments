@@ -34,6 +34,7 @@ import {
   DynamicProgressBar,
   StepsProgressBar,
 } from "~/components/feedback/progressBarExamples";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -118,7 +119,7 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>To import this component:</BasicText>
-                <Highlighter>{`import { Progress } from '@chakra-ui/react'`}</Highlighter>
+                <MiniCode>{`import { Progress } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -127,7 +128,7 @@ export default function chakra_section() {
             <VStack spacing={3} width="100%">
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>{`<Progress value={80} />`}</Highlighter>
+                  <MiniCode>{`<Progress value={80} />`}</MiniCode>
                   <Progress value={80} w="400px" />
                 </StackedExample>
                 <BasicText>
@@ -137,7 +138,7 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>{`<Progress hasStripe value={64} />`}</Highlighter>
+                  <MiniCode>{`<Progress hasStripe value={64} />`}</MiniCode>
                   <Progress hasStripe value={64} w="400px" />
                 </StackedExample>
                 <BasicText>
@@ -148,7 +149,7 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>{`<Progress colorScheme="red" size="sm" value={20} />`}</Highlighter>
+                  <MiniCode>{`<Progress colorScheme="red" size="sm" value={20} />`}</MiniCode>
                   <Progress colorScheme="red" size="sm" value={20} w="400px" />
                 </StackedExample>
                 <BasicText>
@@ -160,7 +161,7 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>{`<Progress colorScheme="orange" size="md" value={30} />`}</Highlighter>
+                  <MiniCode>{`<Progress colorScheme="orange" size="md" value={30} />`}</MiniCode>
                   <Progress
                     colorScheme="orange"
                     size="md"
@@ -176,7 +177,7 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>{`<Progress colorScheme="yellow" size="lg" value={40} />`}</Highlighter>
+                  <MiniCode>{`<Progress colorScheme="yellow" size="lg" value={40} />`}</MiniCode>
                   <Progress
                     colorScheme="yellow"
                     size="lg"
@@ -192,9 +193,12 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>
-                    {`<Progress colorScheme="green" height="32px" value={50} w="400px" />`}
-                  </Highlighter>
+                  <MiniCode>
+                    {`<Progress colorScheme="green" 
+  height="32px" 
+  value={50} 
+  w="400px" />`}
+                  </MiniCode>
                   <Progress
                     colorScheme="green"
                     height="32px"
@@ -211,7 +215,9 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>{`<Progress value={60} size="sm" colorScheme="blue" />`}</Highlighter>
+                  <MiniCode>{`<Progress value={60} 
+  size="sm" 
+  colorScheme="blue" />`}</MiniCode>
                   <Progress value={60} size="sm" colorScheme="blue" w="400px" />
                 </StackedExample>
                 <BasicText>
@@ -222,9 +228,11 @@ export default function chakra_section() {
               </SectionContainer>
               <SectionContainer>
                 <StackedExample>
-                  <Highlighter>
-                    {`<Progress size="sm" colorScheme="purple" isIndeterminate />`}
-                  </Highlighter>
+                  <MiniCode>
+                    {`<Progress size="sm" 
+  colorScheme="purple" 
+  isIndeterminate />`}
+                  </MiniCode>
                   <Progress
                     size="sm"
                     colorScheme="purple"
@@ -254,9 +262,9 @@ export default function chakra_section() {
             <MyFlex>
               <DynamicProgressBar />{" "}
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H07 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -268,9 +276,9 @@ export default function chakra_section() {
             <MyFlex>
               <StepsProgressBar />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H08 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -291,9 +299,9 @@ export default function chakra_section() {
             <MyFlex>
               <CountdownProgressBar />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H09 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -1,42 +1,41 @@
 /* The original Night Owl theme */
 pre code.hljs {
-    display: block !important;
-    overflow-x: scroll !important;
-    max-height: 350px !important;
-    overflow-y: scroll !important;
+    display: block ;
+    /* overflow-x: scroll ; */
+    max-height: 600px ;
+    overflow-y: auto ;
 }
 
 code.hljs {
-    padding: 10px 15px 10px 15px !important;
-        margin: 0 auto !important;
-        margin-top: 5px !important;
-        font-size: 12px !important;
-        border-radius: 4px !important;
-        max-width: 600px !important;
-        overflow-x:scroll !important;
+    padding: 10px 15px 10px 15px ;
+        margin: 0 auto ;
+        margin-top: 5px ;
+        font-size: 11px ;
+        border-radius: 4px ;
+        max-width: 800px ;
+        /* overflow-x:scroll ; */
 }
 
 /* Font size for medium screens */
 @media (max-width: 900px) {
     code.hljs {
-        font-size: 11px !important;
-        max-width: 500px !important;
+        font-size: 11px ;
     }
 }
 
 /* Font size for small screens */
 @media (max-width: 700px) {
     code.hljs {
-        font-size: 11px !important;
-        max-width: 60ch !important;
+        font-size: 11px ;
+
     }
 }
 
 /* Font size for small screens */
 @media (max-width: 468px) {
     code.hljs {
-        font-size: 11px !important;
-                max-width: 46ch !important;
+        font-size: 10px ;
+     
     }
 }
 

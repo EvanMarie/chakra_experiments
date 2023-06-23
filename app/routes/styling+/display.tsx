@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  VStack,
-  VisuallyHidden,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, VisuallyHidden } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -13,7 +6,6 @@ import {
   BasicText,
   Mono,
   HL,
-  MyDivider,
   colors,
   FlexibleBox,
 } from "~/styles/DesignComponents";
@@ -44,6 +36,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -118,7 +111,7 @@ export default function chakra_section() {
                   <BasicText>
                     To import the <Mono>Box</Mono> component used below:
                   </BasicText>
-                  <Highlighter>{`import { Box } from "@chakra-ui/react";`}</Highlighter>
+                  <MiniCode>{`import { Box } from "@chakra-ui/react";`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -134,7 +127,7 @@ export default function chakra_section() {
                 <FlexibleBox bg={colors.mypurple} display="none">
                   display='none'
                 </FlexibleBox>
-                <Highlighter>{`<Box display="none">`}</Highlighter>
+                <MiniCode>{`<Box display="none">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -151,7 +144,7 @@ export default function chakra_section() {
                     bg={colors.mypurple}
                   ></Box>{" "}
                 </Box>
-                <Highlighter>{`<Box hideFrom="md" h="100px" w="100px">`}</Highlighter>
+                <MiniCode>{`<Box hideFrom="md" h="100px" w="100px">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -175,7 +168,7 @@ export default function chakra_section() {
                     block on larger screens.
                   </Box>
                 </Box>
-                <Highlighter>{`<Box display={{ base: "none", md: "block" }}>`}</Highlighter>
+                <MiniCode>{`<Box display={{ base: "none", md: "block" }}>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -194,7 +187,7 @@ export default function chakra_section() {
                   'md' up
                 </FlexibleBox>
 
-                <Highlighter>{`<Box display={{ base: "block", md: "none" }}>`}</Highlighter>
+                <MiniCode>{`<Box display={{ base: "block", md: "none" }}>`}</MiniCode>
 
                 <br />
 
@@ -206,7 +199,7 @@ export default function chakra_section() {
                   This box complete disappears at sizes of medium and higher.
                 </FlexibleBox>
 
-                <Highlighter>{`<Box hideFrom="md">`}</Highlighter>
+                <MiniCode>{`<Box hideFrom="md">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -214,7 +207,7 @@ export default function chakra_section() {
                 <Box display="block" bg={colors.mypurple}>
                   This is a block-level element
                 </Box>
-                <Highlighter>{`<Box display="block">`}</Highlighter>
+                <MiniCode>{`<Box display="block">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -223,7 +216,7 @@ export default function chakra_section() {
                 <Box display="inline-block" bg={colors.mypurple}>
                   This is an inline-block element
                 </Box>
-                <Highlighter>{`<Box display="inline-block"?`}</Highlighter>
+                <MiniCode>{`<Box display="inline-block"?`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -232,7 +225,7 @@ export default function chakra_section() {
                 <Box display="flex" bg={colors.mypurple}>
                   This box is a flex container
                 </Box>
-                <Highlighter>{`<Box display="flex">`}</Highlighter>
+                <MiniCode>{`<Box display="flex">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -241,7 +234,7 @@ export default function chakra_section() {
                 <Flex bg={colors.mypurple}>
                   This flex component is also a flex container
                 </Flex>
-                <Highlighter>{`<Flex>`}</Highlighter>
+                <MiniCode>{`<Flex>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -256,11 +249,11 @@ export default function chakra_section() {
                   </Box>
                 </Grid>
 
-                <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" gap={6}>
+                <MiniCode>{`<Grid templateColumns="repeat(2, 1fr)" gap={6}>
   <Box>This is a grid item</Box>
   <Box>This is another grid item</Box>
 </Grid>
-`}</Highlighter>
+`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -286,14 +279,14 @@ export default function chakra_section() {
                 Block Box
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box d="inline" bg="green.300" p={4}>
   Inline Box
 </Box>
 <Box d="block" bg="blue.300" p={4}>
   Block Box
 </Box>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -313,14 +306,14 @@ export default function chakra_section() {
                 Click me
               </Button>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Button>
   <VisuallyHidden>
     Click me to perform an action
   </VisuallyHidden>
   Click me
 </Button>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -346,14 +339,14 @@ export default function chakra_section() {
                 </Box>
               </Flex>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box bg="red.300" p={4}>
   Box 1
 </Box>
 <Box bg="blue.300" p={4}>
   Box 2
 </Box>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

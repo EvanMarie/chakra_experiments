@@ -2,13 +2,7 @@ import { Box, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  HL,
-  Mono,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -33,9 +27,9 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -104,7 +98,7 @@ export default function chakra_section() {
                     Top import the <Mono>Box</Mono> and <Mono>Text</Mono>
                     components used below:
                   </BasicText>
-                  <Highlighter>{`import { Box, Text } from "@chakra-ui/react";`}</Highlighter>
+                  <MiniCode>{`import { Box, Text } from "@chakra-ui/react";`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -117,7 +111,7 @@ export default function chakra_section() {
                   This <Mono>Box</Mono> has a <Mono>bg</Mono> of "blue".
                 </Box>
 
-                <Highlighter>{`<Box bg="blue">`}</Highlighter>
+                <MiniCode>{`<Box bg="blue">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -128,7 +122,7 @@ export default function chakra_section() {
                   <Mono>color</Mono> (font) of "white".
                 </Box>
 
-                <Highlighter>{`<Box bg="green.700" color="white">`}</Highlighter>
+                <MiniCode>{`<Box bg="green.700" color="white">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -139,7 +133,7 @@ export default function chakra_section() {
                   <Mono>red.700</Mono>.
                 </Box>
 
-                <Highlighter>{`<Box backgroundColor="red.700">`}</Highlighter>
+                <MiniCode>{`<Box backgroundColor="red.700">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -147,7 +141,7 @@ export default function chakra_section() {
               <SingleExample>
                 <Box bg="teal.500">This is a box with a background color</Box>
 
-                <Highlighter>{`<Box bg="teal.500">`}</Highlighter>
+                <MiniCode>{`<Box bg="teal.500">`}</MiniCode>
                 <BasicText>
                   In this example, <Mono>teal.500 </Mono>is a color from the
                   Chakra UI color palette, and it applies to the Box's
@@ -161,7 +155,7 @@ export default function chakra_section() {
                   This is some text with a color of <Mono>teal.500</Mono>
                 </Text>
 
-                <Highlighter>{`<Text color="teal.500">`}</Highlighter>
+                <MiniCode>{`<Text color="teal.500">`}</MiniCode>
                 <BasicText>
                   Here, <Mono>teal.500</Mono> is applied as the text color.
                 </BasicText>
@@ -175,8 +169,8 @@ export default function chakra_section() {
                 </Box>
                 <Text color="rgb(255, 255, 255)"> Some Text </Text>
 
-                <Highlighter>{`<Box bg="#F0F0F0">...</Box>
-<Text color="rgb(255, 255, 255)">...</Text>`}</Highlighter>
+                <MiniCode>{`<Box bg="#F0F0F0">...</Box>
+<Text color="rgb(255, 255, 255)">...</Text>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -185,7 +179,9 @@ export default function chakra_section() {
                   Responsive color
                 </Text>
 
-                <Highlighter>{`<Text color={["teal.500", "green.500", "blue.500"]}>`}</Highlighter>
+                <MiniCode>{`<Text color={["teal.500", 
+  "green.500", 
+  "blue.500"]}>`}</MiniCode>
                 <BasicText>
                   In this example, the text color will be <Mono>teal.500</Mono>{" "}
                   on mobile devices, <Mono>green.500</Mono> on tablet devices,
@@ -218,9 +214,9 @@ export default function chakra_section() {
                 current color mode.
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box color={{ light: "teal.500", dark: "teal.300" }}>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -242,10 +238,12 @@ export default function chakra_section() {
                 I am using ColorScheme!
               </Text>
             </Box>
-            <ViewCode>
-              <Highlighter>{`<Box bg="teal.500">
-  <Text colorScheme="teal">`}</Highlighter>
-            </ViewCode>
+            <ModalCode>
+              <Highlighter>
+                {`<Box bg="teal.500">
+  <Text colorScheme="teal">`}
+              </Highlighter>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -271,8 +269,9 @@ export default function chakra_section() {
                 </Box>
               </Box>
             </MyFlex>
-            <ViewCode>
-              <Highlighter>{`<Box bg="teal.500" p="2" w="300">
+            <ModalCode>
+              <Highlighter>
+                {`<Box bg="teal.500" p="2" w="300">
   <Box
     bg="blackAlpha.500"
     p="2"
@@ -283,8 +282,9 @@ export default function chakra_section() {
       <Box>This is the content inside the overlay box.</Box>
     </Box>
   </Box>
-</Box>`}</Highlighter>
-            </ViewCode>
+</Box>`}
+              </Highlighter>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

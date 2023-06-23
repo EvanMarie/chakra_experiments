@@ -14,8 +14,9 @@ import { colors } from "~/styles/DesignComponents";
 import { MyFlex } from "~/styles/MainDesignComponents";
 
 const buttonStyles = {
-  bg: "darkAccent_1",
-  color: "mainText",
+  bg: "darkAccent_3",
+  color: "accent_3",
+  border: "0.5px solid",
   borderRadius: "md",
   width: { base: "135px", sm: "135px", md: "175px", lg: "135px" },
   height: "30px",
@@ -24,8 +25,9 @@ const buttonStyles = {
   p: 0.5,
   mx: 0,
   _hover: {
-    bg: "darkAccent_2",
-    color: "mainText",
+    bg: "accent_3",
+    color: "darkAccent_3",
+    border: "0.5px solid",
   },
 };
 

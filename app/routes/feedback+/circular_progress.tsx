@@ -45,6 +45,7 @@ import {
   CircularProgressTimer,
   ScoreIndicator,
 } from "~/components/feedback/circularProgressExamples";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -112,9 +113,9 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>To import these components:</BasicText>
-                <Highlighter>{`import { 
+                <MiniCode>{`import { 
   CircularProgress, 
-  CircularProgressLabel } from "@chakra-ui/react";`}</Highlighter>
+  CircularProgressLabel } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -125,9 +126,9 @@ export default function chakra_section() {
                 <CollapsibleExample fontSize={15}>
                   {[
                     <CircularProgress key={1} value={80} />,
-                    <Highlighter
+                    <MiniCode
                       key={2}
-                    >{`<CircularProgress value={80} />`}</Highlighter>,
+                    >{`<CircularProgress value={80} />`}</MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -144,9 +145,9 @@ export default function chakra_section() {
                 <CollapsibleExample fontSize={15}>
                   {[
                     <CircularProgress key={1} value={30} size="120px" />,
-                    <Highlighter
+                    <MiniCode
                       key={2}
-                    >{`<CircularProgress value={30} size="120px" />`}</Highlighter>,
+                    >{`<CircularProgress value={30} size="120px" />`}</MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -172,9 +173,8 @@ export default function chakra_section() {
                       size="100px"
                       thickness="4px"
                     />,
-                    <Highlighter
-                      key={2}
-                    >{` <CircularProgress value={59} thickness="4px" />`}</Highlighter>,
+                    <MiniCode key={2}>{` <CircularProgress value={59} 
+  thickness="4px" />`}</MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -197,9 +197,11 @@ export default function chakra_section() {
                       thickness="12px"
                       size="100px"
                     />,
-                    <Highlighter key={2}>
-                      {`<CircularProgress value={30} color="orange.400" thickness="12px" />`}
-                    </Highlighter>,
+                    <MiniCode key={2}>
+                      {`<CircularProgress value={30} 
+  color="orange.400" 
+  thickness="12px" />`}
+                    </MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -226,11 +228,12 @@ export default function chakra_section() {
                         <CircularProgressLabel>40%</CircularProgressLabel>
                       </CircularProgress>
                     </Box>,
-                    <Highlighter
-                      key={2}
-                    >{`<CircularProgress value={40} color="green.400">
-  <CircularProgressLabel>40%</CircularProgressLabel>
-</CircularProgress> `}</Highlighter>,
+                    <MiniCode key={2}>{`<CircularProgress value={40} 
+  color="green.400">
+    <CircularProgressLabel>
+    40%
+      </CircularProgressLabel>
+</CircularProgress> `}</MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -254,9 +257,10 @@ export default function chakra_section() {
                       color="green.300"
                       size="100px"
                     />,
-                    <Highlighter key={2}>
-                      {` <CircularProgress isIndeterminate color="green.300" />`}
-                    </Highlighter>,
+                    <MiniCode key={2}>
+                      {` <CircularProgress isIndeterminate 
+  color="green.300" />`}
+                    </MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -279,9 +283,8 @@ export default function chakra_section() {
                       trackColor="red.200"
                       size="100px"
                     />,
-                    <Highlighter
-                      key={2}
-                    >{`<CircularProgress value={20} trackColor="red.200" />`}</Highlighter>,
+                    <MiniCode key={2}>{`<CircularProgress value={20} 
+  trackColor="red.200" />`}</MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -301,9 +304,8 @@ export default function chakra_section() {
                       key={1}
                       size="100px"
                     />,
-                    <Highlighter
-                      key={2}
-                    >{`<CircularProgress value={50} capIsRound />`}</Highlighter>,
+                    <MiniCode key={2}>{`<CircularProgress value={50} 
+  capIsRound />`}</MiniCode>,
                   ]}
                 </CollapsibleExample>
                 <MyFlex>
@@ -328,9 +330,9 @@ export default function chakra_section() {
             <MyFlex>
               <CircularProgressTimer />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H04 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -343,9 +345,9 @@ export default function chakra_section() {
             <MyFlex>
               <CircularProgressImage />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H05 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -362,9 +364,9 @@ export default function chakra_section() {
             <MyFlex>
               <ScoreIndicator />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H06 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

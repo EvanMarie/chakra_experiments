@@ -2,16 +2,7 @@ import { Box, Flex, Stack, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  // Mono,
-  // Flex,
-  // Text,
-  HL,
-  Mono,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -40,6 +31,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 export default function chakra_basic_styling() {
   return (
@@ -84,18 +76,17 @@ export default function chakra_basic_styling() {
                   {" "}
                   <li>
                     A number from the spacing scale:{" "}
-                    <Highlighter>{`<Box p={4}>...</Box>`}</Highlighter> This
-                    will look up the 4th value on the spacing scale in the
-                    theme.{" "}
+                    <MiniCode>{`<Box p={4}>...</Box>`}</MiniCode> This will look
+                    up the 4th value on the spacing scale in the theme.{" "}
                   </li>
                   <li>
                     A string value:{" "}
-                    <Highlighter>{`<Box p="2em">...</Box>.`}</Highlighter>
+                    <MiniCode>{`<Box p="2em">...</Box>.`}</MiniCode>
                     This will apply the string as a CSS value directly.{" "}
                   </li>
                   <li>
                     An array for responsive design:{" "}
-                    <Highlighter>{`<Box p={[2, 4, 6]}>...</Box>`}</Highlighter>
+                    <MiniCode>{`<Box p={[2, 4, 6]}>...</Box>`}</MiniCode>
                     Here, padding will be <Mono>2</Mono> for mobile devices,{" "}
                     <Mono>4</Mono> for tablet devices, and <Mono>6</Mono> for
                     desktop devices.
@@ -115,7 +106,7 @@ export default function chakra_basic_styling() {
                     The <Mono>Box</Mono> component shown below can be imported
                     as:
                   </BasicText>
-                  <Highlighter>{`import { Box } from "@chakra-ui/react";`}</Highlighter>
+                  <MiniCode>{`import { Box } from "@chakra-ui/react";`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -130,7 +121,7 @@ export default function chakra_basic_styling() {
                     <i>p={2}</i>
                   </Mono>
                 </Box>
-                <Highlighter>{`<Box p={2}>`}</Highlighter>
+                <MiniCode>{`<Box p={2}>`}</MiniCode>
                 <BasicText>
                   Here <Mono>4</Mono> is not pixels, but units from the Chakra
                   UI's theme spacing scale.
@@ -142,7 +133,7 @@ export default function chakra_basic_styling() {
                 <Box pt={4} bg={"darkAccent_3"}>
                   This box has a padding-top of 4 units
                 </Box>
-                <Highlighter>{`<Box pt={4}>`}</Highlighter>
+                <MiniCode>{`<Box pt={4}>`}</MiniCode>
                 <BasicText>
                   In this case, <Mono>pt</Mono> stands for padding-top. You can
                   use similar conventions for padding-right (<Mono>pr</Mono>),
@@ -163,7 +154,7 @@ export default function chakra_basic_styling() {
                     </Mono>
                   </Box>
                 </Box>
-                <Highlighter>{`<Box m={4}>`}</Highlighter>
+                <MiniCode>{`<Box m={4}>`}</MiniCode>
                 <BasicText>Margin works just like padding.</BasicText>
               </SingleExample>
             </SectionContainer>
@@ -173,7 +164,7 @@ export default function chakra_basic_styling() {
                   This box has a margin-top of 4 units
                 </Box>
 
-                <Highlighter>{`<Box mt={4}>`}</Highlighter>
+                <MiniCode>{`<Box mt={4}>`}</MiniCode>
                 <BasicText>
                   Here, <Mono>mt</Mono> stands for <Mono>margin-top</Mono>.
                   Similar to padding, you can also use <Mono>margin-right</Mono>{" "}
@@ -202,10 +193,10 @@ export default function chakra_basic_styling() {
                 </Stack>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
-              <Highlighter>{`<Box h="40px" w="40px" />
-<Box h="40px" w="40px" mt="-30px" ml="20px" />`}</Highlighter>
-            </ViewCode>
+            <ModalCode>
+              <MiniCode>{`<Box h="40px" w="40px" />
+<Box h="40px" w="40px" mt="-30px" ml="20px" />`}</MiniCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -228,11 +219,11 @@ export default function chakra_basic_styling() {
                 Responsive Padding and Margin
               </Box>
             </MyFlex>
-            <ViewCode>
-              <Highlighter>{`<Box
+            <ModalCode>
+              <MiniCode>{`<Box
   p={["5px", "10px", "15px"]}
-  m={["5px", "10px", "15px"]}>`}</Highlighter>
-            </ViewCode>
+  m={["5px", "10px", "15px"]}>`}</MiniCode>
+            </ModalCode>
           </GridBoxTwo>
 
           <GridBoxThree>
@@ -252,9 +243,9 @@ export default function chakra_basic_styling() {
             >
               Padding and Margin Shorthand
             </Box>
-            <ViewCode>
-              <Highlighter>{`<Box p="10px 20px" m="4px 10px">`}</Highlighter>
-            </ViewCode>
+            <ModalCode>
+              <MiniCode>{`<Box p="10px 20px" m="4px 10px">`}</MiniCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

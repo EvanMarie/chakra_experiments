@@ -1,4 +1,3 @@
-import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -21,7 +20,6 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
-  ViewCode,
   HighlightText,
 } from "~/styles/MainDesignComponents";
 
@@ -39,6 +37,8 @@ import {
   TooltipThree,
   TooltipTwo,
 } from "~/components/overlay/tooltipComponents";
+import { TooltipFormValidityCheck } from "~/components/overlay/tooltipFunctions";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -109,7 +109,7 @@ export default function chakra_section() {
                 <BasicText>
                   This component can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import { Tooltip } from '@chakra-ui/react'`}</Highlighter>
+                <MiniCode>{`import { Tooltip } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -118,49 +118,60 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <TooltipOne />
-                <Overlay.E28 />
+                <ModalCode>
+                  <Overlay.E28 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TooltipTwo />
-                <Overlay.E29 />
+                <ModalCode>
+                  <Overlay.E29 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TooltipThree />
-                <Overlay.E30 />
+                <ModalCode>
+                  <Overlay.E30 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TooltipFour />
-                <Overlay.E31 />
+                <ModalCode>
+                  <Overlay.E31 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TooltipFive />
-                <Overlay.E32 />
+                <ModalCode>
+                  <Overlay.E32 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TooltipSix />
-                <Overlay.E33 />
+                <ModalCode>
+                  <Overlay.E33 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TooltipSeven />
-                <Overlay.E34 />
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -168,24 +179,24 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
+            <MyFlex>
+              <TooltipFormValidityCheck />
+            </MyFlex>
+            <ModalCode>
+              <Overlay.H16 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
+            <MyFlex>
+              {" "}
+              {/* <MiniCode>{`import {Tooltip} from '@chakra-ui/react'`}</MiniCode> */}
+            </MyFlex>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>Highlight coming soon!</HighlightText>
             <MyFlex></MyFlex>
-            <ViewCode>
-              <Highlighter>{``}</Highlighter>
-            </ViewCode>
+            <ModalCode></ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

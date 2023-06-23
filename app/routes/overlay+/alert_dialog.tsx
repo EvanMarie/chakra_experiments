@@ -1,17 +1,7 @@
-import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  // Mono,
-  // Flex,
-  // Text,
-  HL,
-  Mono,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -48,6 +38,7 @@ import {
   RateUsDialog,
   UnsavedChangesAlert,
 } from "~/components/overlay/alertDialogFunctions";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -171,14 +162,14 @@ export default function chakra_section() {
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import { AlertDialog,
+                <MiniCode>{`import { AlertDialog,
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogContent,
     AlertDialogOverlay,
     AlertDialogCloseButton,
-  } from '@chakra-ui/react'`}</Highlighter>
+  } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -187,14 +178,18 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <AlertDialogueOne />
-                <Overlay.E01 />
+                <ModalCode>
+                  <Overlay.E01 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <AlertDialogueTwo />
-                <Overlay.E02 />
+                <ModalCode>
+                  <Overlay.E02 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -219,9 +214,9 @@ export default function chakra_section() {
             <MyFlex>
               <AgeVerificationDialog />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H01 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -240,9 +235,9 @@ export default function chakra_section() {
             <MyFlex>
               <RateUsDialog />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H02 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -264,9 +259,9 @@ export default function chakra_section() {
             <MyFlex>
               <UnsavedChangesAlert />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H03 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

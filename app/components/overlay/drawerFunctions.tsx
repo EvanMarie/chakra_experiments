@@ -26,12 +26,23 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { SingleExample } from "~/styles/MainDesignComponents";
 
+const ButtonStyles = {
+  bg: "accent_3",
+  color: "darkAccent_3",
+  border: "1px solid",
+  borderColor: "darText",
+  _hover: {
+    bg: "darkAccent_3",
+    color: "accent_3",
+  },
+};
+
 export function DrawerFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
   return (
     <SingleExample bg="background">
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+      <Button {...ButtonStyles} ref={btnRef} onClick={onOpen}>
         Open
       </Button>
       <Drawer
@@ -50,10 +61,15 @@ export function DrawerFunctionOne() {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button
+              {...ButtonStyles}
+              variant="outline"
+              mr={3}
+              onClick={onClose}
+            >
               Cancel
             </Button>
-            <Button colorScheme="blue">Save</Button>
+            <Button {...ButtonStyles}>Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -82,7 +98,7 @@ export function DrawerFunctionTwo() {
           <Radio value="left">Left</Radio>
         </Stack>
       </RadioGroup>
-      <Button colorScheme="blue" onClick={onOpen}>
+      <Button {...ButtonStyles} onClick={onOpen}>
         Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
@@ -117,7 +133,7 @@ export function DrawerFunctionThree() {
 
   return (
     <SingleExample bg="background">
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+      <Button ref={btnRef} {...ButtonStyles} onClick={onOpen}>
         Open
       </Button>
 
@@ -137,10 +153,15 @@ export function DrawerFunctionThree() {
           <Input mb={3} ref={initialFocusRef} placeholder="Enter your name" />
           <Textarea placeholder="Enter your message" mb={4} />
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose} color="white">
+            <Button
+              variant="outline"
+              mr={3}
+              onClick={onClose}
+              {...ButtonStyles}
+            >
               Cancel
             </Button>
-            <Button colorScheme="blue">Save</Button>
+            <Button {...ButtonStyles}>Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -162,6 +183,7 @@ export function DrawerFunctionFour() {
     <SingleExample bg="background">
       {sizes.map((size) => (
         <Button
+          {...ButtonStyles}
           size="sm"
           w="100px"
           onClick={() => handleClick(size)}
@@ -227,7 +249,9 @@ export function DrawerFunctionFive() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <SingleExample bg="background">
-      <Button onClick={onOpen}>Open</Button>
+      <Button {...ButtonStyles} onClick={onOpen}>
+        Open
+      </Button>
       <Drawer isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -247,7 +271,7 @@ export function DrawerFunctionFive() {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button type="submit" form="my-form">
+            <Button {...ButtonStyles} type="submit" form="my-form">
               Save
             </Button>
           </DrawerFooter>
@@ -267,7 +291,12 @@ export const DrawerNestedNavigation = () => {
   return (
     <>
       <Box>
-        <Button onClick={toggleSubMenu} cursor="pointer" fontWeight="bold">
+        <Button
+          {...ButtonStyles}
+          onClick={toggleSubMenu}
+          cursor="pointer"
+          fontWeight="bold"
+        >
           Menu
         </Button>
       </Box>
@@ -347,7 +376,9 @@ export const DrawerMultiStepForm = () => {
           <>
             <h2>Step 3</h2>
             This is step three. I think it is about time we wrap this up...
-            <Button onClick={handleFinish}>Finish</Button>
+            <Button {...ButtonStyles} onClick={handleFinish}>
+              Finish
+            </Button>
           </>
         );
       default:
@@ -357,7 +388,9 @@ export const DrawerMultiStepForm = () => {
 
   return (
     <>
-      <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
+      <Button {...ButtonStyles} onClick={() => setIsOpen(true)}>
+        Open Drawer
+      </Button>
       <Drawer isOpen={isOpen} onClose={handleClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -369,10 +402,18 @@ export const DrawerMultiStepForm = () => {
               {renderFormStep()}
               {step !== 3 && (
                 <>
-                  <Button onClick={handlePreviousStep} disabled={step === 1}>
+                  <Button
+                    {...ButtonStyles}
+                    onClick={handlePreviousStep}
+                    disabled={step === 1}
+                  >
                     Previous
                   </Button>
-                  <Button onClick={handleNextStep} disabled={step === 3}>
+                  <Button
+                    {...ButtonStyles}
+                    onClick={handleNextStep}
+                    disabled={step === 3}
+                  >
                     Next
                   </Button>
                 </>
@@ -415,7 +456,9 @@ export const DrawerNotificationsPanel = () => {
 
   return (
     <VStack spacing={3} w="100%">
-      <Button onClick={handleOpenDrawer}>Open Notifications</Button>
+      <Button {...ButtonStyles} onClick={handleOpenDrawer}>
+        Open Notifications
+      </Button>
       <Drawer
         isOpen={isOpen}
         onClose={handleCloseDrawer}
@@ -437,7 +480,9 @@ export const DrawerNotificationsPanel = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-      <Button onClick={handleAddNotification}>Add Notification</Button>
+      <Button {...ButtonStyles} onClick={handleAddNotification}>
+        Add Notification
+      </Button>
     </VStack>
   );
 };

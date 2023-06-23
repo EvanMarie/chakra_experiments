@@ -20,16 +20,15 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
-  ViewCode,
   HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { Box, Button, Flex } from "@chakra-ui/react";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -93,7 +92,7 @@ export default function chakra_section() {
                   To import the <Mono>Button</Mono>, <Mono>Flex</Mono>, and{" "}
                   <Mono>Box</Mono> components:
                 </BasicText>
-                <Highlighter>{`<import { Button, Flex, Box } from "@chakra-ui/react";`}</Highlighter>
+                <MiniCode>{`<import { Button, Flex, Box } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -110,7 +109,7 @@ export default function chakra_section() {
                     Button 2
                   </Button>
                 </MyFlex>
-                <Highlighter>{`<Button borderLeftRadius="0" mb={4} w="150px">`}</Highlighter>
+                <MiniCode>{`<Button borderLeftRadius="0" mb={4} w="150px">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -123,7 +122,7 @@ export default function chakra_section() {
                 <Button borderTopRadius="0" mb={4} w="150px">
                   Button 3
                 </Button>
-                <Highlighter>{`<Button borderTopRadius="0" mb={4} w="150px">`}</Highlighter>
+                <MiniCode>{`<Button borderTopRadius="0" mb={4} w="150px">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -136,7 +135,7 @@ export default function chakra_section() {
                 <Button borderBottomRadius="0" mb={4} w="150px">
                   Button 4
                 </Button>
-                <Highlighter>{`<Button borderBottomRadius="0" mb={4} w="150px">`}</Highlighter>
+                <MiniCode>{`<Button borderBottomRadius="0" mb={4} w="150px">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -164,7 +163,7 @@ export default function chakra_section() {
                     Diagonal Split View Box
                   </Flex>
                 </MyFlex>
-                <Highlighter>{`<Button borderBottomRadius="0" mb={4} w="150px">`}</Highlighter>
+                <MiniCode>{`<Button borderBottomRadius="0" mb={4} w="150px">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -182,6 +181,7 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <Box
+                maxWidth="200px"
                 borderTopLeftRadius="lg"
                 borderBottomRightRadius="2xl"
                 bg={colors.mypurple}
@@ -191,11 +191,11 @@ export default function chakra_section() {
                 I'm a box with different border radii on different corners.
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
   borderTopLeftRadius="lg"
   borderBottomRightRadius="2xl">`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -204,6 +204,7 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <Flex
+                maxWidth="200px"
                 textAlign="center"
                 borderRadius="50px"
                 color="white"
@@ -213,7 +214,7 @@ export default function chakra_section() {
                 I'm a box with a super rounded border.
               </Flex>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`import { extendTheme } from "@chakra-ui/react"
                 
 const theme = extendTheme({
@@ -229,7 +230,7 @@ export default theme
   borderRadius="superround">
   I'm a box with a super rounded border.
 </Flex>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -242,6 +243,7 @@ export default theme
             <MyFlex>
               <Flex
                 p={2}
+                maxWidth="200px"
                 textAlign="center"
                 borderRadius="50% / 20%"
                 bg={colors.mypurple}
@@ -250,12 +252,12 @@ export default theme
                 I'm a box with an elliptical border radius.
               </Flex>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{` <Flex
   p={2}
   borderRadius="50% / 20%"
 >`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

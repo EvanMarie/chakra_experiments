@@ -21,11 +21,14 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalOverlay,
+  CodeProps,
+  Code,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
 import { HiLightBulb } from "react-icons/hi";
 import { useState } from "react";
+import { Highlighter } from "~/components/styling/highlighter";
 
 const colors = {
   mainBackground: "#211421",
@@ -720,9 +723,10 @@ export const ViewCode = ({ children }: ViewCodeProps) => {
         </Button>
       </MyFlex>
       <Modal
+        allowPinchZoom={true}
         isOpen={isExpanded}
         onClose={handleCloseModal}
-        size="xl"
+        size="2xl"
         colorScheme="teal"
       >
         <ModalOverlay />

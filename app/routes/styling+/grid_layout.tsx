@@ -5,7 +5,6 @@ import stylesUrl from "~/styles/global.css";
 import { BasicText, Mono, HL, colors } from "~/styles/DesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
@@ -33,6 +32,7 @@ import {
   SingleExample,
   ViewCode,
 } from "~/styles/MainDesignComponents";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -118,7 +118,7 @@ export default function chakra_section() {
                   <BasicText>
                     These components can be imported as follows:
                   </BasicText>
-                  <Highlighter>{`import { Box, Grid } from "@chakra-ui/react"`}</Highlighter>
+                  <MiniCode>{`import { Box, Grid } from "@chakra-ui/react"`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -139,7 +139,7 @@ export default function chakra_section() {
                   </Box>
                 </Grid>
 
-                <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)">
+                <MiniCode>{`<Grid templateColumns="repeat(3, 1fr)">
   <Box bg="blue.500" h="10" w="100%">
     Box One
   </Box>
@@ -149,7 +149,7 @@ export default function chakra_section() {
   <Box bg="pink.500" h="10" w="100%">
     Box Three
   </Box>
-</Grid>`}</Highlighter>
+</Grid>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -187,7 +187,7 @@ export default function chakra_section() {
                   </Grid>
                 </Box>
 
-                <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
+                <MiniCode>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
   <Box p={4} boxShadow="xl" bg={colors.mypurple}>
     <Text fontSize="md" fontWeight="bold">
       Item One
@@ -215,7 +215,7 @@ export default function chakra_section() {
       Details...
     </Text>
   </Box>
-</Grid>`}</Highlighter>
+</Grid>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -227,18 +227,18 @@ export default function chakra_section() {
                   <Text>Thing Three</Text>
                 </Grid>
 
-                <Highlighter>{`<Grid gap={3} bg={colors.mypurple} p={2}>
+                <MiniCode>{`<Grid gap={3} bg={colors.mypurple} p={2}>
   <Text>Thing One</Text>
   <Text>Thing Two</Text>
   <Text>Thing Three</Text>
-</Grid>`}</Highlighter>
+</Grid>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Profiles />
-                <Highlighter>{`export function Profiles() {
+                <MiniCode>{`export function Profiles() {
   const profiles = ["Alice", "Bob", 
                     "Charlie", "Dave"];
 
@@ -257,7 +257,7 @@ export default function chakra_section() {
       ))}
     </Grid>
   );
-}`}</Highlighter>
+}`}</MiniCode>
                 <BasicText>
                   <HL>Auto Columns and Rows</HL>: Let's say we're creating a
                   grid to display profile cards. We don't know how many profiles
@@ -276,7 +276,7 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <Dashboard />
-                <Highlighter>{`export function Dashboard() {
+                <MiniCode>{`export function Dashboard() {
   return (
     <Grid templateColumns="repeat(3, 1fr)" 
     gap={6} bg={colors.mypurple} p={1}>
@@ -307,7 +307,7 @@ export default function chakra_section() {
       </GridItem>
     </Grid>
   );
-}`}</Highlighter>
+}`}</MiniCode>
                 <BasicText>
                   <HL>Grid Item Placement</HL>: Let's imagine a dashboard with
                   various widgets. We can use <Mono>colSpan</Mono> to specify
@@ -323,7 +323,7 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <ImageGallery />
-                <Highlighter>{`export function ImageGallery() {
+                <MiniCode>{`export function ImageGallery() {
 const images = Array(5).fill(null); // Array of 5 nulls
 return (
   <Grid
@@ -345,7 +345,7 @@ return (
     ))}
   </Grid>
 );
-}`}</Highlighter>
+}`}</MiniCode>
                 <BasicText>
                   {" "}
                   <HL>Responsive Design</HL>: Let's create a responsive image
@@ -397,7 +397,7 @@ return (
                 </Box>
               </Grid>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Grid
   templateColumns={[
     "repeat(1, 1fr)",
@@ -410,7 +410,7 @@ return (
   <Box bg="blue.300" height="30px" p={1}>Two</Box>
   <Box bg="blue.300" height="30px" p={1}>Three</Box>
 </Grid>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -430,13 +430,13 @@ return (
                 <Box bg="blue.300" h="60px" w="60px"></Box>
               </Grid>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
   <Box bg="red.300" h="60px" w="60px"></Box>
   <Box bg="green.300" h="60px" w="60px"></Box>
   <Box bg="blue.300" h="60px" w="60px"></Box>
 </Grid>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -469,7 +469,7 @@ return (
                 </Box>
               </Grid>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Grid
   templateColumns="repeat(auto-fit, minmax(100, 1fr))"
   gap="2"
@@ -478,7 +478,7 @@ return (
   <Box bg="green.300" h="60px" p={2}>Two</Box>
   <Box bg="blue.300" h="60px" p={2}>Three</Box>
 </Grid>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

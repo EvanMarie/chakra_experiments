@@ -44,6 +44,7 @@ import {
   Magic8Modal,
   NestedModal,
 } from "~/components/overlay/modalFunction";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -189,7 +190,7 @@ export default function chakra_section() {
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import {
+                <MiniCode>{`import {
   Modal,
   ModalOverlay,
   ModalContent,
@@ -197,7 +198,7 @@ export default function chakra_section() {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from '@chakra-ui/react'`}</Highlighter>
+} from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -206,42 +207,54 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <ModalOne />
-                <Overlay.E16 />
+                <ModalCode>
+                  <Overlay.E16 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ModalTwo />
-                <Overlay.E17 />
+                <ModalCode>
+                  <Overlay.E17 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ModalThree />
-                <Overlay.E18 />
+                <ModalCode>
+                  <Overlay.E18 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ModalFour />
-                <Overlay.E19 />
+                <ModalCode>
+                  <Overlay.E19 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ModalFive />
-                <Overlay.E20 />
+                <ModalCode>
+                  <Overlay.E20 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ModalSix />
-                <Overlay.E21 />
+                <ModalCode>
+                  <Overlay.E21 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -357,9 +370,10 @@ export default function chakra_section() {
             <MyFlex>
               <NestedModal />
             </MyFlex>
-            <ViewCode>
+
+            <ModalCode>
               <Overlay.H10 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -372,9 +386,10 @@ export default function chakra_section() {
             <MyFlex>
               <CustomCloseButtonModal />
             </MyFlex>
-            <ViewCode>
+
+            <ModalCode>
               <Overlay.H11 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -387,9 +402,10 @@ export default function chakra_section() {
             <MyFlex>
               <Magic8Modal />
             </MyFlex>
-            <ViewCode>
+
+            <ModalCode>
               <Overlay.H12 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

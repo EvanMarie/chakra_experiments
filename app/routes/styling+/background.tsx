@@ -1,15 +1,8 @@
-import { Box, Flex, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  Mono,
-  HL,
-  MyDivider,
-  colors,
-  FlexibleBox,
-} from "~/styles/DesignComponents";
+import { BasicText, Mono, HL } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -28,15 +21,15 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
-  ViewCode,
   HighlightText,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
+
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -85,7 +78,7 @@ export default function ChakraSection() {
                 </Box>
               </Flex>
 
-              <Highlighter>{`<Box
+              <MiniCode>{`<Box
   bgImage="url('https://picsum.photos/200/300')"
   bgPosition="center"
   bgRepeat="no-repeat"
@@ -93,7 +86,7 @@ export default function ChakraSection() {
   height="150px"
 >
   Content goes here
-</Box>`}</Highlighter>
+</Box>`}</MiniCode>
               <BasicText>
                 In this example, I've used the Box component to create a div
                 that has a background image.
@@ -128,7 +121,7 @@ export default function ChakraSection() {
                 using a typical React setup with Webpack, you can import the
                 image into your component file and use it like so:
               </BasicText>
-              <Highlighter>{`<Box
+              <MiniCode>{`<Box
   bgImage={url({'./path-to-your-image.jpg'})}
   bgPosition="center"
   bgRepeat="no-repeat"
@@ -136,7 +129,7 @@ export default function ChakraSection() {
   height="200px"
 >
   Content goes here
-</Box>`}</Highlighter>
+</Box>`}</MiniCode>
               <DescriptionBox>
                 <BasicText>Some description</BasicText>
                 {/* IMPORT CODE */}
@@ -144,7 +137,7 @@ export default function ChakraSection() {
                   <BasicText>
                     To import the <Mono>Box</Mono> component:
                   </BasicText>
-                  <Highlighter>{`import { Box } from "@chakra-ui/react"`}</Highlighter>
+                  <MiniCode>{`import { Box } from "@chakra-ui/react"`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -163,11 +156,11 @@ export default function ChakraSection() {
                     height="200px"
                   ></Box>{" "}
                   <Box paddingBottom={4}>
-                    <Highlighter>{`<Box backgroundImage="url('URL.png')"
+                    <MiniCode>{`<Box backgroundImage="url('URL.png')"
   backgroundPosition="center"
   backgroundRepeat="no-repeat"
   backgroundSize="cover"
-  h="200px">`}</Highlighter>
+  h="200px">`}</MiniCode>
                   </Box>
                 </Box>
               </SingleExample>
@@ -185,11 +178,11 @@ export default function ChakraSection() {
                     height="200px"
                   ></Box>{" "}
                   <Box paddingBottom={4}>
-                    <Highlighter>{`<Box backgroundImage="url('URL.png')"
+                    <MiniCode>{`<Box backgroundImage="url('URL.png')"
   bgPosition="center"
   bgRepeat="no-repeat"
   bgSize="cover"
-  h="200px">`}</Highlighter>
+  h="200px">`}</MiniCode>
                   </Box>
                 </Box>
               </SingleExample>
@@ -208,8 +201,8 @@ export default function ChakraSection() {
                     height="300px"
                   ></Box>{" "}
                   <Box paddingBottom={4}>
-                    <Highlighter>{`<Box backgroundImage="url('URL.png')"
-  h="300px">`}</Highlighter>
+                    <MiniCode>{`<Box backgroundImage="url('URL.png')"
+  h="300px">`}</MiniCode>
                   </Box>
                 </Box>
               </SingleExample>
@@ -234,14 +227,14 @@ export default function ChakraSection() {
                 width="200px"
               />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
     bgImage="url('https://www.wrongaddress.com')"
     bg="teal.500"
     height="200px"
     width="200px"
   />`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -260,14 +253,14 @@ export default function ChakraSection() {
                 width="200px"
               />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
   bgImage="url('https://picsum.photos/200/200')"
   bgRepeat="no-repeat"
   height="200px"
   width="200px"
 />`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -280,7 +273,7 @@ export default function ChakraSection() {
               {" "}
               <Box bgGradient={bgGradient} height="200px" width="200px" />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`const bgGradient = useColorModeValue(
     "linear(to-r, green.200, pink.500)",
     "linear(to-r, green.700, pink.300)"
@@ -291,7 +284,7 @@ export default function ChakraSection() {
       height="200px"
       width="200px"
       />`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

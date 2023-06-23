@@ -2,8 +2,11 @@
 import {
   Box,
   Button,
+  FormControl,
+  FormLabel,
   HStack,
   Icon,
+  Input,
   Select,
   SimpleGrid,
   Tag,
@@ -15,6 +18,7 @@ import { useState } from "react";
 import { VscSmiley } from "react-icons/vsc";
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
 import { TooltipSeven } from "./tooltipComponents";
+import { Highlighter } from "../styling/highlighter";
 
 const ToolTipButtonStyles = {
   bg: "accent_3",
@@ -203,64 +207,157 @@ export function TooltipFunctionSix() {
   );
 }
 
-export function TooltipFunctionSeven() {
-  const ExampleBox = ({ children }: { children: React.ReactNode }) => (
-    <Box
-      bg="darkAccent_2"
-      p="3"
-      borderRadius="sm"
-      color="mmainText"
-      marginY="10px"
-    >
-      {children}
-    </Box>
-  );
+/* ********************************************************************** */
+const TinyContent = {
+  bg: "accent_1",
+  fontSize: "xs",
+  color: "darkAccent_3",
+  border: "1px solid accent_3",
+  borderColor: "darkAccent_3",
+  p: 1,
+  textAlign: "center",
+  width: "fit-content",
+};
 
+export function TooltipFunctionSeven() {
   return (
     <SingleExample bg="background">
-      <SimpleGrid columns={2}>
-        <ExampleBox>
-          <Tooltip label="I close on click">
-            <Button>Close on Click - true(default)</Button>
+      <SimpleGrid columns={2} gap={2}>
+        <Box>
+          <Tooltip label="Click to close me." sx={TinyContent}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`closeOnClick=true`}</Highlighter>
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
 
-        <ExampleBox>
-          <Tooltip label="I don't close on click" closeOnClick={false}>
-            <Button>Close on Click - false</Button>
+        <Box>
+          <Tooltip
+            label="Clicking does nothing here."
+            closeOnClick={false}
+            sx={TinyContent}
+          >
+            <Button h="60px" p={1} mb="12px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`closeOnClick=false`}</Highlighter>{" "}
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
 
-        <ExampleBox>
-          <Tooltip label="I am always open" placement="top" isOpen>
-            <Button>Always Open</Button>
+        <Box>
+          <Tooltip
+            label="Always open..."
+            placement="left"
+            isOpen
+            sx={TinyContent}
+          >
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`isOpen`}</Highlighter>
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
 
-        <ExampleBox>
-          <Tooltip label="I am open by default" placement="left" defaultIsOpen>
-            <Button>Open on startup</Button>
+        <Box>
+          <Tooltip
+            placement="right"
+            sx={TinyContent}
+            label="I am open by default"
+            defaultIsOpen
+          >
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`defaultIsOpen`}</Highlighter>
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
 
-        <ExampleBox>
-          <Tooltip label="Opened after 500ms" openDelay={500}>
-            <Button>Delay Open - 500ms</Button>
+        <Box>
+          <Tooltip sx={TinyContent} label="Opened after 500ms" openDelay={500}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`openDelay={500}`}</Highlighter>
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
 
-        <ExampleBox>
-          <Tooltip label="Closed after 500ms" closeDelay={500}>
-            <Button>Delay Close - 500ms</Button>
+        <Box>
+          <Tooltip sx={TinyContent} label="Closed after 500ms" closeDelay={500}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`closeDelay={500}`}</Highlighter>
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
 
-        <ExampleBox>
-          <Tooltip label="I have 15px arrow" hasArrow arrowSize={15}>
-            <Button>Arrow size - 15px</Button>
+        <Box>
+          <Tooltip
+            sx={TinyContent}
+            label="I have 15px arrow"
+            hasArrow
+            arrowSize={15}
+          >
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+              <Highlighter>{`arrowSize={15}`}</Highlighter>
+            </Button>
           </Tooltip>
-        </ExampleBox>
+        </Box>
       </SimpleGrid>
     </SingleExample>
+  );
+}
+
+/* ********************************************************************** */
+
+export function TooltipFormValidityCheck() {
+  const [word, setWord] = useState("");
+  const [number, setNumber] = useState("");
+  const [isFormValid, setFormValid] = useState<boolean | null>(null);
+
+  const handleCheckFormClick = () => {
+    // Check if the word contains only alphabets and the number is a valid number
+    if (/^[A-Za-z]+$/.test(word) && !isNaN(parseFloat(number))) {
+      setFormValid(true);
+    } else {
+      setFormValid(false);
+    }
+  };
+
+  const handleWordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setWord(event.target.value);
+  };
+
+  const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNumber(event.target.value);
+  };
+
+  let tooltipLabel;
+  if (isFormValid === null) {
+    tooltipLabel = "Press to validate the form";
+  } else {
+    tooltipLabel = isFormValid
+      ? "Form is valid!"
+      : "Form is invalid. Please check your inputs.";
+  }
+
+  return (
+    <VStack spacing={1}>
+      <FormControl id="word">
+        <FormLabel mb={0}>Enter a word</FormLabel>
+        <Input
+          bg="white"
+          type="text"
+          value={word}
+          onChange={handleWordChange}
+        />
+      </FormControl>
+      <FormControl id="number">
+        <FormLabel mb={0}>Enter a number</FormLabel>
+        <Input
+          bg="white"
+          type="text"
+          value={number}
+          onChange={handleNumberChange}
+        />
+      </FormControl>
+      <Tooltip label={tooltipLabel} placement="top">
+        <Button onClick={handleCheckFormClick}>Check Form</Button>
+      </Tooltip>
+    </VStack>
   );
 }

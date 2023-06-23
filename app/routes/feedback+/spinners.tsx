@@ -24,7 +24,6 @@ import {
   HighlightColumn,
   MyFlex,
   SectionDescription,
-  ViewCode,
   HighlightExample,
   HighlightText,
 } from "~/styles/MainDesignComponents";
@@ -36,10 +35,10 @@ import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
   ScoreSlider,
-  ScoreSpinner,
   SpinnerTabs,
   SubmitButton,
 } from "~/components/feedback/spinnerExamples";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -93,7 +92,7 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>To import this component:</BasicText>
-                <Highlighter>{`import { Spinner } from '@chakra-ui/react'`}</Highlighter>
+                <MiniCode>{`import { Spinner } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -104,7 +103,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner />`}</Highlighter>
+                    <MiniCode>{`<Spinner />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -119,7 +118,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} color="red.500" />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner color="red.500" />`}</Highlighter>
+                    <MiniCode>{`<Spinner color="red.500" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -135,7 +134,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} size="xs" />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner size="xs" />`}</Highlighter>
+                    <MiniCode>{`<Spinner size="xs" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -151,7 +150,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} size="sm" />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner size="sm" />`}</Highlighter>
+                    <MiniCode>{`<Spinner size="sm" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -167,7 +166,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} size="md" />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner size="md" />`}</Highlighter>
+                    <MiniCode>{`<Spinner size="md" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -182,7 +181,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} size="lg" />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner size="lg" />`}</Highlighter>
+                    <MiniCode>{`<Spinner size="lg" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -197,7 +196,7 @@ export default function chakra_section() {
                 {[
                   <Spinner key={1} size="xl" />,
                   <Box key={2}>
-                    <Highlighter>{`<Spinner size="xl" />`}</Highlighter>
+                    <MiniCode>{`<Spinner size="xl" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -220,9 +219,9 @@ export default function chakra_section() {
                   />,
 
                   <Box key={2}>
-                    <Highlighter>{`<Spinner thickness="4px" speed="0.65s"
+                    <MiniCode>{`<Spinner thickness="4px" speed="0.65s"
     emptyColor="gray.200" color="blue.500" 
-    size="xl" />`}</Highlighter>
+    size="xl" />`}</MiniCode>
                   </Box>,
                 ]}
               </CollapsibleExample>
@@ -254,9 +253,9 @@ export default function chakra_section() {
             <MyFlex>
               <SubmitButton />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H13 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -275,9 +274,9 @@ export default function chakra_section() {
                 <ScoreSlider />
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H14 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -293,9 +292,9 @@ export default function chakra_section() {
             <MyFlex>
               <SpinnerTabs />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H15 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

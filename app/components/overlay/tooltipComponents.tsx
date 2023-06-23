@@ -208,11 +208,12 @@ export function TooltipSix() {
 export function TooltipSeven() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Other Properties</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ Below are more tooltips. Each <Mono>Button</Mono> shows in code how
+          to achieve its respective effect.
+        </SectionDescription>
       </Box>
 
       <MyFlex bg="background">

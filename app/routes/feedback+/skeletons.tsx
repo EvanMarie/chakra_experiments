@@ -42,6 +42,7 @@ import {
   SkeletonTwo,
 } from "~/components/feedback/skeletons";
 import { Box, Skeleton } from "@chakra-ui/react";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -118,10 +119,10 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>To import these components:</BasicText>
-                <Highlighter>{`import { 
+                <MiniCode>{`import { 
   Skeleton, 
   SkeletonCircle, 
-  SkeletonText } from '@chakra-ui/react'`}</Highlighter>
+  SkeletonText } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -130,56 +131,66 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <SkeletonOne />
-                <Highlighter>{`<Stack>
+                <MiniCode>{`<Stack>
   <Skeleton height="20px" />
   <Skeleton height="20px" />
   <Skeleton height="20px" />
-</Stack>`}</Highlighter>
+</Stack>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <SkeletonTwo />
-                <Highlighter>{`<Skeleton>
+                <MiniCode>{`<Skeleton>
   <div>contents wrapped</div>
   <div>won't be visible</div>
-</Skeleton>`}</Highlighter>
+</Skeleton>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <SkeletonThree />
-                <Feedback.E06 />
+                <ModalCode>
+                  <Feedback.E06 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <SkeletonFour />
-                <Highlighter>{`<SkeletonText mt="4" noOfLines={4} spacing="4" skeletonHeight="2" />`}</Highlighter>
+                <ModalCode>
+                  <Highlighter>{`<SkeletonText mt="4" noOfLines={4} spacing="4" skeletonHeight="2" />`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <SkeletonFive />
-                <Highlighter>{`<Skeleton startColor="pink.500" endColor="blue.500" height="20px" />`}</Highlighter>
+                <ModalCode>
+                  <Highlighter>{`<Skeleton startColor="pink.500" endColor="blue.500" height="20px" />`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <SkeletonSix />
-                <Highlighter>{`<Skeleton isLoaded><span>No skeleton to see here.</span></Skeleton>`}</Highlighter>
+                <ModalCode>
+                  <Highlighter>{`<Skeleton isLoaded><span>No skeleton to see here.</span></Skeleton>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <SkeletonSeven />
-                <Feedback.E16 />
+                <ModalCode>
+                  <Feedback.E16 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>

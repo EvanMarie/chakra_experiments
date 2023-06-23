@@ -24,7 +24,6 @@ import {
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { Button, Link, Text, Box } from "@chakra-ui/react";
@@ -34,6 +33,7 @@ import {
   AsPropList,
   CustomAsPropComponent,
 } from "~/components/styling/asPropExamples";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -83,7 +83,7 @@ export default function chakra_section() {
                 To import the <Mono>Box</Mono> and <Mono>Text</Mono> components
                 used below:
               </BasicText>
-              <Highlighter>{`import { Box, Text } from "@chakra-ui/react";`}</Highlighter>
+              <MiniCode>{`import { Box, Text } from "@chakra-ui/react";`}</MiniCode>
             </ImportBox>
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
@@ -99,7 +99,7 @@ export default function chakra_section() {
                 <MyFlex>
                   <Text as="h1">This is a Heading using an "as" prop.</Text>
                 </MyFlex>
-                <Highlighter>{`<Text as="h1">This is a Heading</Text>`}</Highlighter>
+                <MiniCode>{`<Text as="h1">This is a Heading</Text>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -120,7 +120,7 @@ export default function chakra_section() {
                     This is a custom component using an "as" prop.
                   </Box>
                 </MyFlex>
-                <Highlighter>{`function CustomComponent({ children }) {
+                <MiniCode>{`function CustomComponent({ children }) {
   return <span style={{ 
     color: "blue", 
     fontWeight: "bold" }}>
@@ -130,7 +130,7 @@ export default function chakra_section() {
 
 <Box as={CustomComponent}>
   This is a custom component
-</Box>`}</Highlighter>
+</Box>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -150,7 +150,7 @@ export default function chakra_section() {
                 <MyFlex>
                   <AsPropBox />
                 </MyFlex>
-                <Highlighter>{`<Box
+                <MiniCode>{`<Box
   as="button"
   _hover={{ backgroundColor: "teal.600" }}
   onClick={() => setIsOpen(!isOpen)}
@@ -163,7 +163,7 @@ export default function chakra_section() {
     borderColor="gray.200"
   >
     This is a message in a box!
-  </Box>`}</Highlighter>
+  </Box>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -185,12 +185,12 @@ export default function chakra_section() {
                 </Box>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box as="section">
   <h2>This is a section</h2>
   <p>This is the section content</p>
 </Box>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
 
           <GridBoxTwo>
@@ -211,11 +211,11 @@ export default function chakra_section() {
                 </Link>
               </MyFlex>
             </HighlightExample>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Link as={Button} href="https://www.somewhere.com">
   Go somewhere
 </Link>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
 
           <GridBoxThree>
@@ -237,7 +237,7 @@ export default function chakra_section() {
                 <AsPropList />
               </MyFlex>
             </HighlightExample>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`interface CustomAsPropComponentProps {
   children: React.ReactNode;
 }
@@ -268,7 +268,7 @@ export function AsPropList() {
     </MyFlex>
   );
 }`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

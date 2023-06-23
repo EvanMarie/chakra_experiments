@@ -1,22 +1,8 @@
-import {
-  Box,
-  Flex,
-  Spacer,
-  Text,
-  VStack,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  Mono,
-  HL,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, Mono, HL, colors } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -44,6 +30,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -150,7 +137,7 @@ export default function chakra_section() {
                     To import the <Mono>Flex</Mono> component:
                   </BasicText>
 
-                  <Highlighter>{`import { Flex } from "@chakra-ui/react";`}</Highlighter>
+                  <MiniCode>{`import { Flex } from "@chakra-ui/react";`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -168,9 +155,7 @@ export default function chakra_section() {
                 >
                   Very centered, indeed!
                 </Flex>
-                <Highlighter>
-                  {`<Flex align="center" justify="center">`}
-                </Highlighter>
+                <MiniCode>{`<Flex align="center" justify="center">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -180,13 +165,13 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>
+                <MiniCode>
                   {`<Flex display="row">
   <Text>Child One</Text>
   <Text>Child Two</Text>
   <Text>Child Three</Text>
 </Flex>`}
-                </Highlighter>
+                </MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -202,7 +187,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex direction="column">`}</Highlighter>
+                <MiniCode>{`<Flex direction="column">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -219,7 +204,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex justify="center">`}</Highlighter>
+                <MiniCode>{`<Flex justify="center">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -236,7 +221,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex justify="space-between">`}</Highlighter>
+                <MiniCode>{`<Flex justify="space-between">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -247,7 +232,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex align="center">`}</Highlighter>
+                <MiniCode>{`<Flex align="center">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -264,7 +249,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex align="stretch">`}</Highlighter>
+                <MiniCode>{`<Flex align="stretch">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -275,7 +260,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex wrap="wrap">`}</Highlighter>
+                <MiniCode>{`<Flex wrap="wrap">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -286,7 +271,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex wrap="nowrap">`}</Highlighter>
+                <MiniCode>{`<Flex wrap="nowrap">`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -303,7 +288,7 @@ export default function chakra_section() {
                   <Text>Child Two</Text>
                   <Text>Child Three</Text>
                 </Flex>
-                <Highlighter>{`<Flex direction={{ base: "column", md: "row" }}>`}</Highlighter>
+                <MiniCode>{`<Flex direction={{ base: "column", md: "row" }}>`}</MiniCode>
                 <BasicText>
                   On mobile and smaller screens, this will be column-wrap. At
                   medium sized screens and above, this will switch to row-wrap.
@@ -317,11 +302,11 @@ export default function chakra_section() {
                   <Box flexShrink={2}>Child Two</Box>
                   <Box>Child Three</Box>
                 </Flex>
-                <Highlighter>{`<Flex>
+                <MiniCode>{`<Flex>
   <Box flexGrow={1}>Child One</Box>
   <Box flexShrink={2}>Child Two</Box>
   <Box>Child Three</Box>
-</Flex>`}</Highlighter>
+</Flex>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -347,7 +332,7 @@ export default function chakra_section() {
                 </Box>
               </Flex>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Flex>
   <Box flex={1} bg="red.300" p={4}>
     Column 1
@@ -359,7 +344,7 @@ export default function chakra_section() {
     Column 3
   </Box>
 </Flex>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -404,7 +389,7 @@ export default function chakra_section() {
                 </WrapItem>
               </Wrap>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Wrap spacing={1}>
   <WrapItem>
     <Box bg="red.300" height="30px" width="220px" />
@@ -416,7 +401,7 @@ export default function chakra_section() {
     <Box bg="blue.300" height="30px" width="220px" />
   </WrapItem>
 </Wrap>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -438,7 +423,7 @@ export default function chakra_section() {
                 </Box>
               </Flex>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Flex height="80px" align="center">
   <Box bg="blue.300" p={2}>
     Item 1
@@ -450,7 +435,7 @@ export default function chakra_section() {
     Item 3
   </Box>
 </Flex>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

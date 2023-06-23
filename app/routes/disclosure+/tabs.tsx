@@ -58,6 +58,7 @@ import {
   TabsTwo,
 } from "./disclosure_examples/tabs";
 import { EmailIcon, InfoIcon } from "@chakra-ui/icons";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -113,12 +114,12 @@ export default function chakra_section() {
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import { 
+                <MiniCode>{`import { 
   Tabs, 
   TabList, 
   TabPanels, 
   Tab, 
-  TabPanel } from '@chakra-ui/react'`}</Highlighter>
+  TabPanel } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -127,107 +128,139 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <TabsOne />
-                <Disclosure.E06 />
+                <ModalCode>
+                  <Disclosure.E06 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsTwo />
-                <Disclosure.E07 />
+                <ModalCode>
+                  <Disclosure.E07 />
+                </ModalCode>
                 <TabsThree />
-                <Disclosure.E08 />
+                <ModalCode>
+                  <Disclosure.E08 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsFour />
-                <Disclosure.E09 />
+                <ModalCode>
+                  <Disclosure.E09 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsFive />
-                <Disclosure.E16 />
+                <ModalCode>
+                  <Disclosure.E16 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsSix />
-                <Disclosure.E10 />
+                <ModalCode>
+                  <Disclosure.E10 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsSeven />
-                <Disclosure.E11 />
+                <ModalCode>
+                  <Disclosure.E11 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsEight />
-                <Disclosure.E12 />
+                <ModalCode>
+                  <Disclosure.E12 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsNine />
-                <Disclosure.E21 />
+                <ModalCode>
+                  <Disclosure.E21 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsTen />
-                <Disclosure.E13 />
+                <ModalCode>
+                  <Disclosure.E13 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsEleven />
-                <Disclosure.E14 />
+                <ModalCode>
+                  <Disclosure.E14 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsTwelve />
-                <Disclosure.E15 />
+                <ModalCode>
+                  <Disclosure.E15 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsThirteen />
-                <Disclosure.E17 />
+                <ModalCode>
+                  <Disclosure.E17 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsFourteen />
-                <Disclosure.E18 />
+                <ModalCode>
+                  <Disclosure.E18 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsFifteen />
-                <Disclosure.E19 />
+                <ModalCode>
+                  <Disclosure.E19 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TabsSixteen />
-                <Disclosure.E20 />
+                <ModalCode>
+                  <Disclosure.E20 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -272,9 +305,9 @@ export default function chakra_section() {
                 </Tabs>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Disclosure.H04 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -302,9 +335,9 @@ export default function chakra_section() {
                 </Tabs>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Disclosure.H05 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -332,9 +365,9 @@ export default function chakra_section() {
                 </Tabs>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Disclosure.H06 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

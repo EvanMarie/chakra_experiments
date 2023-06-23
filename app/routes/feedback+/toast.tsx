@@ -21,7 +21,6 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
-  ViewCode,
   HighlightText,
 } from "~/styles/MainDesignComponents";
 
@@ -46,6 +45,7 @@ import {
   ToastInteractiveFunction,
   ToastSequentialFunction,
 } from "~/components/feedback/toastFunctions";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -131,7 +131,7 @@ export default function chakra_section() {
                 <BasicText>
                   To import the toast component into your project:
                 </BasicText>
-                <Highlighter>{`import { useToast } from '@chakra-ui/react'`}</Highlighter>
+                <MiniCode>{`import { useToast } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -140,63 +140,81 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <ToastOne />
-                <Feedback.E07 />
+                <ModalCode>
+                  <Feedback.E07 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastTwo />
-                <Feedback.E08 />
+                <ModalCode>
+                  <Feedback.E08 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastThree />
-                <Feedback.E09 />
+                <ModalCode>
+                  <Feedback.E09 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastFour />
-                <Feedback.E10 />
+                <ModalCode>
+                  <Feedback.E10 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastFive />
-                <Feedback.E11 />
+                <ModalCode>
+                  <Feedback.E11 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastSix />
-                <Feedback.E12 />
+                <ModalCode>
+                  <Feedback.E12 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastSeven />
-                <Feedback.E13 />
+                <ModalCode>
+                  <Feedback.E13 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastEight />
-                <Feedback.E14 />
+                <ModalCode>
+                  <Feedback.E14 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <ToastNine />
-                <Feedback.E15 />
+                <ModalCode>
+                  <Feedback.E15 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -220,9 +238,9 @@ export default function chakra_section() {
             <MyFlex>
               <ToastSequentialFunction />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H16 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -243,9 +261,9 @@ export default function chakra_section() {
             <MyFlex>
               <ToastCountdownFunction />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H17 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -266,9 +284,9 @@ export default function chakra_section() {
             <MyFlex>
               <ToastInteractiveFunction />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H18 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

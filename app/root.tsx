@@ -62,7 +62,8 @@ export default function App() {
             direction="column"
             bgImage="url('/images/background_triangles3.png')"
             bgPosition="center"
-            bgRepeat="repeat"
+            position="fixed"
+            // bgRepeat="repeat"
             padding={{ base: 1, md: 4 }}
           >
             <Flex

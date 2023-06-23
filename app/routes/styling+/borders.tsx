@@ -1,14 +1,8 @@
-import { Box, Link, VStack } from "@chakra-ui/react";
+import { Box, Link } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  HL,
-  Mono,
-  MyDivider,
-  colors,
-} from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -36,6 +30,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -106,7 +101,7 @@ export default function chakra_section() {
                 <BasicText>
                   To import the <Mono>Box</Mono> component used below:
                 </BasicText>
-                <Highlighter>{`import { Box } from "@chakra-ui/react";`}</Highlighter>
+                <MiniCode>{`import { Box } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -124,12 +119,12 @@ export default function chakra_section() {
                   Have you ever seen such a box?
                 </Box>
 
-                <Highlighter>{`<Box
+                <MiniCode>{`<Box
   borderWidth="1px"
   borderStyle="solid"
   borderColor="blue.500"
   borderRadius="lg"
-                >`}</Highlighter>
+                >`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -144,7 +139,7 @@ export default function chakra_section() {
                   marginTop={4}
                   color={"mainText"}
                 >
-                  <Highlighter>{`<Box 2px border borderColor="yellow.200">`}</Highlighter>
+                  <MiniCode>{`<Box 2px border borderColor="yellow.200">`}</MiniCode>
                 </Box>
 
                 <br />
@@ -156,7 +151,7 @@ export default function chakra_section() {
                 <Box borderWidth="1px" borderRadius="md" p={4}>
                   Whaddabox!
                 </Box>
-                <Highlighter>{`<Box borderWidth="1px" borderRadius="md" p={4}>`}</Highlighter>
+                <MiniCode>{`<Box borderWidth="1px" borderRadius="md" p={4}>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -166,7 +161,7 @@ export default function chakra_section() {
                 <Box borderWidth="1px" borderStyle="dashed" p={4}>
                   Dashes are grand!
                 </Box>
-                <Highlighter>{`<Box borderWidth="1px" borderStyle="dashed" p={4}>`}</Highlighter>
+                <MiniCode>{`<Box borderWidth="1px" borderStyle="dashed" p={4}>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -176,7 +171,7 @@ export default function chakra_section() {
                 <Box border="2px solid red" p={4}>
                   Lovely in Red!
                 </Box>
-                <Highlighter>{`<Box border="2px solid red" p={4}>`}</Highlighter>
+                <MiniCode>{`<Box border="2px solid red" p={4}>`}</MiniCode>
                 <BasicText></BasicText>
               </SingleExample>
             </SectionContainer>
@@ -201,15 +196,15 @@ export default function chakra_section() {
                 I am a Box.
               </Box>
             </MyFlex>
-            <ViewCode>
-              <Highlighter>{`<Box
+            <ModalCode>
+              <MiniCode>{`<Box
   w="150px"
   p={2}
   borderTop="2px solid red"
   borderBottom="2px dashed blue"
   bg="white"
-  >`}</Highlighter>
-            </ViewCode>
+  >`}</MiniCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -230,11 +225,11 @@ export default function chakra_section() {
                 I am a box with a transparent border.
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
     border="2px solid transparent"
     borderColor="transparent"/>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -258,9 +253,9 @@ export default function chakra_section() {
                 My name is Boxanne.
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box borderWidth={["1px", "2px", "3px"]}>`}</Highlighter>
-            </ViewCode>{" "}
+            </ModalCode>{" "}
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -42,6 +42,7 @@ import {
   DrawerNestedNavigation,
   DrawerNotificationsPanel,
 } from "~/components/overlay/drawerFunctions";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -123,7 +124,7 @@ export default function chakra_section() {
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import {
+                <MiniCode>{`import {
   Drawer,
   DrawerBody,
   DrawerFooter,
@@ -131,7 +132,7 @@ export default function chakra_section() {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-} from '@chakra-ui/react'`}</Highlighter>
+} from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -140,35 +141,45 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <DrawerOne />
-                <Overlay.E03 />
+                <ModalCode>
+                  <Overlay.E03 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <DrawerTwo />
-                <Overlay.E04 />
+                <ModalCode>
+                  <Overlay.E04 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <DrawerThree />
-                <Overlay.E05 />
+                <ModalCode>
+                  <Overlay.E05 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <DrawerFour />
-                <Overlay.E06 />
+                <ModalCode>
+                  <Overlay.E06 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <DrawerFive />
-                <Overlay.E07 />
+                <ModalCode>
+                  <Overlay.E07 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -187,9 +198,9 @@ export default function chakra_section() {
             <MyFlex>
               <DrawerNestedNavigation />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H04 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -201,9 +212,9 @@ export default function chakra_section() {
             <MyFlex>
               <DrawerMultiStepForm />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H05 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -221,9 +232,9 @@ export default function chakra_section() {
             <MyFlex>
               <DrawerNotificationsPanel />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H06 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

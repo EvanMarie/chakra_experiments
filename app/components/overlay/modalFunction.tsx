@@ -13,23 +13,32 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Radio,
-  RadioGroup,
   SimpleGrid,
-  Stack,
   Text,
-  Wrap,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useReducer, useRef, useState } from "react";
-import { BsLayoutThreeColumns } from "react-icons/bs";
+import { useRef, useState } from "react";
+
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
+
+const ButtonStyles = {
+  bg: "accent_3",
+  color: "darkAccent_3",
+  border: "1px solid",
+  borderColor: "darText",
+  _hover: {
+    bg: "darkAccent_3",
+    color: "accent_3",
+  },
+};
 
 export function ModalFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <SingleExample bg="background">
-      <Button onClick={onOpen}>Trigger Modal</Button>
+      <Button sx={ButtonStyles} onClick={onOpen}>
+        Trigger Modal
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -41,10 +50,17 @@ export function ModalFunctionOne() {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="green" mr={3} onClick={onClose}>
+            <Button
+              sx={ButtonStyles}
+              colorScheme="green"
+              mr={3}
+              onClick={onClose}
+            >
               Dismiss
             </Button>
-            <Button variant="outline">Other Action</Button>
+            <Button sx={ButtonStyles} variant="outline">
+              Other Action
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -58,7 +74,7 @@ export function ModalFunctionTwo() {
   return (
     <SingleExample bg="background">
       <>
-        <Button mt={4} onClick={onOpen}>
+        <Button sx={ButtonStyles} mt={4} onClick={onOpen}>
           Launch Modal
         </Button>
 
@@ -75,10 +91,17 @@ export function ModalFunctionTwo() {
             </ModalBody>
 
             <ModalFooter>
-              <Button colorScheme="purple" mr={3} onClick={onClose}>
+              <Button
+                sx={ButtonStyles}
+                colorScheme="purple"
+                mr={3}
+                onClick={onClose}
+              >
                 Close
               </Button>
-              <Button variant="outline">Other Action</Button>
+              <Button sx={ButtonStyles} variant="outline">
+                Other Action
+              </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
@@ -107,7 +130,9 @@ export function ModalFunctionThree() {
   return (
     <SingleExample bg="background">
       <>
-        <Button onClick={onOpen}>Launch Modal</Button>
+        <Button sx={ButtonStyles} onClick={onOpen}>
+          Launch Modal
+        </Button>
         <Box ref={endRef} bg="accent_2" p={[4, 1]} mt={2} color="darkText">
           Focus will move here when modal closes
         </Box>
@@ -134,10 +159,12 @@ export function ModalFunctionThree() {
             </ModalBody>
 
             <ModalFooter>
-              <Button colorScheme="green" mr={3}>
+              <Button sx={ButtonStyles} colorScheme="green" mr={3}>
                 Submit
               </Button>
-              <Button onClick={onClose}>Dismiss</Button>
+              <Button sx={ButtonStyles} onClick={onClose}>
+                Dismiss
+              </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
@@ -156,7 +183,9 @@ export function ModalFunctionFour() {
   return (
     <SingleExample bg="background">
       <>
-        <Button onClick={onOpen}>Show Jokes</Button>
+        <Button sx={ButtonStyles} onClick={onOpen}>
+          Show Jokes
+        </Button>
         <Modal
           isCentered
           onClose={onClose}
@@ -175,7 +204,12 @@ export function ModalFunctionFour() {
               ))}
             </ModalBody>
             <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
+              <Button
+                sx={ButtonStyles}
+                colorScheme="blue"
+                mr={3}
+                onClick={onClose}
+              >
                 Close
               </Button>
             </ModalFooter>
@@ -206,6 +240,7 @@ export function ModalFunctionFive() {
       <SimpleGrid columns={2} gap={2}>
         {sizes.map((size) => (
           <Button
+            sx={ButtonStyles}
             size="sm"
             onClick={() => handleSizeClick(size)}
             key={size}
@@ -225,7 +260,9 @@ export function ModalFunctionFive() {
             </MyFlex>
           </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
+            <Button sx={ButtonStyles} onClick={onClose}>
+              Close
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -313,6 +350,7 @@ export function ModalFunctionSix() {
         <SimpleGrid columns={2} gap={2}>
           {overlays.map((Overlay, index) => (
             <Button
+              sx={ButtonStyles}
               size="sm"
               m={2}
               onClick={() => {
@@ -334,7 +372,9 @@ export function ModalFunctionSix() {
               <Text>How do you like that overlay?</Text>
             </ModalBody>
             <ModalFooter>
-              <Button onClick={onClose}>Close</Button>
+              <Button sx={ButtonStyles} onClick={onClose}>
+                Close
+              </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
@@ -353,7 +393,9 @@ export function NestedModal() {
 
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button sx={ButtonStyles} onClick={onOpen}>
+        Open Modal
+      </Button>
 
       <Modal size="xl" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -361,7 +403,7 @@ export function NestedModal() {
           <Image src="https://generative-placeholders.glitch.me/image?width=600&height=300&style=cubic-disarray" />
           <ModalHeader>First Modal</ModalHeader>
           <ModalBody>
-            <Button bg="accent_2" onClick={secondOnOpen}>
+            <Button sx={ButtonStyles} onClick={secondOnOpen}>
               Open Nested Modal
             </Button>
 
@@ -384,7 +426,9 @@ export function CustomCloseButtonModal() {
 
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button sx={ButtonStyles} onClick={onOpen}>
+        Open Modal
+      </Button>
 
       <Modal isOpen={isOpen} size="lg" onClose={onClose}>
         <ModalOverlay />
@@ -452,7 +496,9 @@ export function Magic8Modal() {
 
   return (
     <>
-      <Button onClick={handleOpen}>Ask the Magic 8 Ball</Button>
+      <Button sx={ButtonStyles} onClick={handleOpen}>
+        Ask the Magic 8 Ball
+      </Button>
 
       <Modal isOpen={isOpen} onClose={handleClose}>
         <ModalOverlay />
@@ -476,15 +522,36 @@ export function Magic8Modal() {
           </ModalBody>
           <ModalFooter>
             {!answer ? (
-              <Button size="sm" m={3} w="80px" onClick={handleAsk} mr={2}>
+              <Button
+                sx={ButtonStyles}
+                size="sm"
+                m={3}
+                w="80px"
+                onClick={handleAsk}
+                mr={2}
+              >
                 Ask
               </Button>
             ) : (
-              <Button size="sm" m={3} w="80px" onClick={handleAskAgain} mr={2}>
+              <Button
+                sx={ButtonStyles}
+                size="sm"
+                m={3}
+                w="80px"
+                onClick={handleAskAgain}
+                mr={2}
+              >
                 Ask Again
               </Button>
             )}
-            <Button size="sm" m={3} w="80px" onClick={handleClose} mr={2}>
+            <Button
+              sx={ButtonStyles}
+              size="sm"
+              m={3}
+              w="80px"
+              onClick={handleClose}
+              mr={2}
+            >
               Close
             </Button>
           </ModalFooter>

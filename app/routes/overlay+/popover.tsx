@@ -42,6 +42,7 @@ import {
   DynamicContentPopover,
   FormPopover,
 } from "~/components/overlay/popoverFunctions";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -200,7 +201,7 @@ export default function chakra_section() {
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import {
+                <MiniCode>{`import {
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -210,7 +211,7 @@ export default function chakra_section() {
   PopoverArrow,
   PopoverCloseButton,
   PopoverAnchor,
-} from '@chakra-ui/react'`}</Highlighter>
+} from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -219,42 +220,54 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <PopoverOne />
-                <Overlay.E22 />
+                <ModalCode>
+                  <Overlay.E22 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <PopoverTwo />
-                <Overlay.E23 />
+                <ModalCode>
+                  <Overlay.E23 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <PopoverThree />
-                <Overlay.E25 />
+                <ModalCode>
+                  <Overlay.E25 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <PopoverFour />
-                <Overlay.E24 />
+                <ModalCode>
+                  <Overlay.E24 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <PopoverFive />
-                <Overlay.E26 />
+                <ModalCode>
+                  <Overlay.E26 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <PopoverSix />
-                <Overlay.E27 />
+                <ModalCode>
+                  <Overlay.E27 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -328,9 +341,9 @@ export default function chakra_section() {
             <MyFlex>
               <DynamicContentPopover />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H13 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -343,9 +356,9 @@ export default function chakra_section() {
             <MyFlex>
               <FormPopover />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H14 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -357,9 +370,9 @@ export default function chakra_section() {
             <MyFlex>
               <ControlledPopover />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H15 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

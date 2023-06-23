@@ -56,6 +56,7 @@ import {
   SplitMenuButton,
 } from "~/components/overlay/menuFunctions";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -159,7 +160,7 @@ export default function chakra_section() {
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import {
+                <MiniCode>{`import {
   Menu,
   MenuButton,
   MenuList,
@@ -168,7 +169,7 @@ export default function chakra_section() {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
-} from '@chakra-ui/react'`}</Highlighter>
+} from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -177,56 +178,72 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <MenuOne />
-                <Overlay.E08 />
+                <ModalCode>
+                  <Overlay.E08 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuTwo />
-                <Overlay.E09 />
+                <ModalCode>
+                  <Overlay.E09 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuThree />
-                <Overlay.E10 />
+                <ModalCode>
+                  <Overlay.E10 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuFour />
-                <Overlay.E11 />
+                <ModalCode>
+                  <Overlay.E11 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuFive />
-                <Overlay.E12 />
+                <ModalCode>
+                  <Overlay.E12 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuSix />
-                <Overlay.E13 />
+                <ModalCode>
+                  <Overlay.E13 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuSeven />
-                <Overlay.E14 />
+                <ModalCode>
+                  <Overlay.E14 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <MenuEight />
-                <Overlay.E15 />
+                <ModalCode>
+                  <Overlay.E15 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -287,7 +304,8 @@ export default function chakra_section() {
                     <BasicText>
                       The following shows how to implement this functionality:
                     </BasicText>
-                    <Highlighter>{`<Menu>
+                    <ModalCode>
+                      <Highlighter>{`<Menu>
   <MenuButton>Open menu</MenuButton>
   <MenuList>
     <MenuOptionGroup defaultValue="name" type="radio">
@@ -297,6 +315,7 @@ export default function chakra_section() {
     </MenuOptionGroup>
   </MenuList>
 </Menu>`}</Highlighter>
+                    </ModalCode>
                   </li>
                 </ul>
               </BulletBox>
@@ -318,9 +337,9 @@ export default function chakra_section() {
                 <FormMenuExample />
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H07 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -356,9 +375,9 @@ export default function chakra_section() {
                 </MenuList>
               </Menu>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H08 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -379,9 +398,9 @@ export default function chakra_section() {
             <MyFlex>
               <SplitMenuButton />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Overlay.H09 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -36,6 +36,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -95,7 +96,7 @@ export default function chakra_section() {
               <BasicText>
                 To import the <Mono>Box</Mono> component used below:
               </BasicText>
-              <Highlighter>{`import { Box,  } from "@chakra-ui/react";`}</Highlighter>
+              <MiniCode>{`import { Box,  } from "@chakra-ui/react";`}</MiniCode>
             </ImportBox>
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
@@ -129,7 +130,7 @@ export default function chakra_section() {
                     Starred content
                   </Box>
                 </MyFlex>
-                <Highlighter>{`<Box
+                <MiniCode>{`<Box
   sx={{
     position: "relative",
     "&::before": {
@@ -139,7 +140,7 @@ export default function chakra_section() {
       left: "-20px",
     },
   }}
->`}</Highlighter>
+>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -167,14 +168,14 @@ export default function chakra_section() {
                     The first letter of this sentence is styled.
                   </Box>
                 </MyFlex>
-                <Highlighter>{`<Box
+                <MiniCode>{`<Box
   sx={{
     "&::first-letter": {
       fontSize: "2em",
       color: "deeppink",
     },
   }}
->`}</Highlighter>
+>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -204,14 +205,14 @@ export default function chakra_section() {
                     <br />
                   </Box>
                 </MyFlex>
-                <Highlighter>{`<Box
+                <MiniCode>{`<Box
   sx={{
     "&::first-line": {
       fontWeight: "bold",
       color: "cyan",
     },
   }}
->`}</Highlighter>
+>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -238,13 +239,13 @@ export default function chakra_section() {
                     Try selecting this text.
                   </Box>
                 </MyFlex>
-                <Highlighter>{` <Box
+                <MiniCode>{` <Box
   sx={{
     "&::selection": {
       backgroundColor: "cyan",
     },
   }}
->`}</Highlighter>
+>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
 
@@ -274,7 +275,7 @@ export default function chakra_section() {
                     placeholder="Type something..."
                   />
                 </MyFlex>
-                <Highlighter>{`<Input
+                <MiniCode>{`<Input
   sx={{
     "&::placeholder": {
       color: "blue",
@@ -282,7 +283,7 @@ export default function chakra_section() {
     },
   }}
   placeholder="Type something..."
-/>`}</Highlighter>
+/>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -328,7 +329,7 @@ export default function chakra_section() {
                 Hover over me
               </Box>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
   data-tooltip="I'm a tooltip"
   sx={{
@@ -350,7 +351,7 @@ export default function chakra_section() {
       opacity: "1",
     },
   })}`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -385,7 +386,7 @@ export default function chakra_section() {
                 </VStack>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<CheckboxGroup colorScheme="teal">
   <Text fontSize="lg">My Favorite Food: </Text>
   <Checkbox size="lg" value="chakra" defaultChecked>
@@ -398,7 +399,7 @@ export default function chakra_section() {
     Sushi
   </Checkbox>
 </CheckboxGroup>`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -425,7 +426,7 @@ export default function chakra_section() {
                 }}
               />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Box
   sx={{
     width: "200px",
@@ -440,7 +441,7 @@ export default function chakra_section() {
     },
   }}
 />`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

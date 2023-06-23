@@ -26,7 +26,6 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
@@ -36,6 +35,7 @@ import {
   FilterTipThree,
   FilterTipTwo,
 } from "~/components/styling/imageFilters";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -130,7 +130,7 @@ export default function chakra_section() {
                 Here is how you can apply these CSS filters to an image using
                 Chakra UI:
               </BasicText>
-              <Highlighter>{`import { Box } from "@chakra-ui/react";
+              <MiniCode>{`import { Box } from "@chakra-ui/react";
 
 <Box
   as="img"
@@ -138,7 +138,7 @@ export default function chakra_section() {
   alt="Sample Image"
   filter="blur(5px) brightness(80%)"
 />
-`}</Highlighter>
+`}</MiniCode>
             </DescriptionBox>
           </SectionContainer>
           {/* COMPONENT EXAMPLES */}
@@ -203,7 +203,7 @@ export default function chakra_section() {
             <MyFlex>
               <FilterTipThree />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`const pulse = keyframes
   0% { filter: brightness(100%); }
   50% { filter: brightness(150%); }
@@ -213,7 +213,7 @@ export default function chakra_section() {
   animation={
     '{pulse} 3s infinite'}
 >`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

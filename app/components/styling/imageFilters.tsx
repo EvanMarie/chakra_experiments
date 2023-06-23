@@ -1,6 +1,7 @@
 import { Box, Flex, Text, VStack, keyframes } from "@chakra-ui/react";
 import { Highlighter } from "./highlighter";
 import { MyFlex, ViewCode } from "~/styles/MainDesignComponents";
+import { ModalCode } from "~/styles/CodeDesignComponents";
 
 const boxSizes = {
   base: "200px",
@@ -200,7 +201,7 @@ export function FilterTipOne() {
           }}
         ></Box>
       </MyFlex>
-      <ViewCode>
+      <ModalCode>
         <Highlighter>{`<Box
   sx={basicBoxStyles}
   filter="grayscale(100%)"
@@ -209,7 +210,7 @@ export function FilterTipOne() {
     transition: "filter 0.3s",
   }}
 >`}</Highlighter>
-      </ViewCode>
+      </ModalCode>
     </VStack>
   );
 }
@@ -223,13 +224,13 @@ export function FilterTipTwo() {
           filter="blur(2px) sepia(30%) contrast(130%)"
         ></Box>
       </MyFlex>
-      <ViewCode>
+      <ModalCode>
         <Highlighter>{`<Box
   filter="blur(2px) 
   sepia(30%) 
   contrast(130%)"
 >`}</Highlighter>
-      </ViewCode>
+      </ModalCode>
     </VStack>
   );
 }

@@ -7,19 +7,18 @@ import {
   Flex,
   HStack,
   Stack,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 import { Mono } from "~/styles/DesignComponents";
 import CloseButtonAlert from "./closeButtonAlert";
 import * as Feedback from "~/mardownExamples/feedback/index";
 import {
-  MyFlex,
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 import { Highlighter } from "../styling/highlighter";
 import { FaRegLaughBeam } from "react-icons/fa";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 export function AlertOne() {
   return (
@@ -53,7 +52,9 @@ export function AlertOne() {
           </Alert>
         </Box>
       </Box>
-      <Feedback.E01 />
+      <ModalCode>
+        <Feedback.E01 />
+      </ModalCode>
     </Box>
   );
 }
@@ -78,34 +79,42 @@ export function AlertTwo() {
               <AlertIcon />
               This is a status "error" alert. You done messed up.
             </Alert>
-            <Highlighter>{`<Alert status="error" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="error" color="black">
   <AlertIcon />
   This is a status "error" alert. You done messed up.
 </Alert>`}</Highlighter>
+            </ModalCode>
             <Alert status="success" color="black">
               <AlertIcon />
               This is a status "success" alert. You are a golden god.
             </Alert>{" "}
-            <Highlighter>{`<Alert status="success" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="success" color="black">
   <AlertIcon />
   This is a status "success" alert. You are a golden god.
 </Alert>`}</Highlighter>
+            </ModalCode>
             <Alert status="warning" color="black">
               <AlertIcon />
               This is a status "warning" alert. Oh no, something might happen.
             </Alert>
-            <Highlighter>{`<Alert status="warning" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="warning" color="black">
   <AlertIcon />
   This is a status "warning" alert. Oh no, something might happen.
 </Alert>`}</Highlighter>
+            </ModalCode>
             <Alert status="info" color="black">
               <AlertIcon />
               This is an status "info" alert. You should always be informed.
             </Alert>
-            <Highlighter>{`<Alert status="info" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="info" color="black">
   <AlertIcon />
   This is an status "info" alert. You should always be informed.
 </Alert>`}</Highlighter>
+            </ModalCode>
           </Stack>
         </Box>
       </Box>
@@ -130,39 +139,47 @@ export function AlertThree() {
               <AlertIcon />
               This is an alert with a "subtle" variant. You can barely tell.
             </Alert>
-            <Highlighter>{`<Alert status="success" variant="subtle" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="success" variant="subtle" color="black">
   <AlertIcon />
   This is an alert with a "subtle" variant. You can barely tell.
 </Alert>`}</Highlighter>
+            </ModalCode>
 
             <Alert status="success" variant="solid" color="black">
               <AlertIcon />
               This is an alert with a "solid" variant. It's pretty solid.
             </Alert>
-            <Highlighter>{`<Alert status="success" variant="solid" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="success" variant="solid" color="black">
   <AlertIcon />
   This is an alert with a "solid" variant. It's pretty solid.
 </Alert>`}</Highlighter>
+            </ModalCode>
 
             <Alert status="success" variant="left-accent" color="black">
               <AlertIcon />
               This is an alert with a "left-accent" variant. See that little
               accent on the left?
             </Alert>
-            <Highlighter>{`<Alert status="success" variant="left-accent" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="success" variant="left-accent" color="black">
   <AlertIcon />
   This is an alert with a "left-accent" variant. See that little accent on the left?
 </Alert>`}</Highlighter>
+            </ModalCode>
 
             <Alert status="success" variant="top-accent" color="black">
               <AlertIcon />
               This is an alert with a "top-accent" variant. It's like it is
               wearing a hat!
             </Alert>
-            <Highlighter>{`<Alert status="success" variant="top-accent" color="black">
+            <ModalCode>
+              <Highlighter>{`<Alert status="success" variant="top-accent" color="black">
   <AlertIcon />
   This is an alert with a "top-accent" variant. It's like it is wearing a hat!
 </Alert>`}</Highlighter>
+            </ModalCode>
           </Stack>
         </Box>
       </Box>

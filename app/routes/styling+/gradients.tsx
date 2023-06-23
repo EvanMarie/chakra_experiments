@@ -36,6 +36,7 @@ import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { AnimatedGradient } from "~/components/styling/animatedGradient";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -87,7 +88,7 @@ export default function chakra_section() {
                   <BasicText>
                     To import the <Mono>Box</Mono> component used below:
                   </BasicText>
-                  <Highlighter>{`import { Box } from "@chakra-ui/react";`}</Highlighter>
+                  <MiniCode>{`import { Box } from "@chakra-ui/react";`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -106,7 +107,9 @@ export default function chakra_section() {
                   This <Mono>Box</Mono> has a <Mono>linear gradient</Mono>{" "}
                   background.
                 </Box>
-                <Highlighter>{`<Box bgGradient={"linear(to-t, green.700, pink.700)"}>`}</Highlighter>
+                <MiniCode>{`<Box bgGradient={"linear(to-t, 
+  green.700, 
+  pink.700)"}>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -119,7 +122,9 @@ export default function chakra_section() {
                   This <Mono>Box</Mono> has a <Mono>radial gradient</Mono>{" "}
                   background.
                 </Box>
-                <Highlighter>{`<Box bgGradient="radial(blue, yellow.700, pink.700)">`}</Highlighter>
+                <MiniCode>{`<Box bgGradient="radial(blue, 
+  yellow.700, 
+  pink.700)">`}</MiniCode>
 
                 <BasicText></BasicText>
               </SingleExample>
@@ -133,8 +138,9 @@ export default function chakra_section() {
                   This is a box with a linear gradient
                 </Box>
 
-                <Highlighter>{`<Box bgGradient="linear-gradient(to right, 
-    red.500, blue.500)">`}</Highlighter>
+                <MiniCode>{`<Box bgGradient="linear-gradient(to right, 
+  red.500, 
+  blue.500)">`}</MiniCode>
 
                 <BasicText></BasicText>
               </SingleExample>
@@ -148,8 +154,8 @@ export default function chakra_section() {
                   This is a box with a radial gradient
                 </Box>
 
-                <Highlighter>{`<Box bgGradient="radial-gradient(circle, 
-    red.500, blue.500)">`}</Highlighter>
+                <MiniCode>{`<Box bgGradient="radial-gradient(circle, 
+    red.500, blue.500)">`}</MiniCode>
 
                 <BasicText></BasicText>
               </SingleExample>
@@ -160,19 +166,19 @@ export default function chakra_section() {
                   To work around the limitation mentioned above, you can define
                   gradient values in the theme and reference them by name:
                 </BasicText>
-                <Highlighter>{`const theme = extendTheme({
+                <MiniCode>{`const theme = extendTheme({
 gradients: {
   redToBlue: "linear-gradient(to right, red.500, 
     blue.500)",
   greenToYellow: "linear-gradient(to right, 
     green.500, yellow.500)",
 },
-})`}</Highlighter>
-                <Highlighter>
+})`}</MiniCode>
+                <MiniCode>
                   {`// In your component:
 <Box bg={{ base: "gradients.redToBlue", 
   md: "gradients.greenToYellow" }}>...</Box>`}
-                </Highlighter>
+                </MiniCode>
               </VStack>
             </SectionContainer>
           </ExampleBox>
@@ -197,10 +203,10 @@ gradients: {
                 Gradient Text
               </Text>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Text
   bgGradient="linear(to-l, #7928CA, #FF0080)">`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -210,7 +216,7 @@ gradients: {
               gradient animations.
             </HighlightText>
             <AnimatedGradient>I am an animated Gradient.</AnimatedGradient>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`import { keyframes } from "@emotion/react";
               
 const gradient = keyframes
@@ -228,7 +234,7 @@ export function AnimatedGradient({ children }:
         backgroundSize="200% 200%"
         animation={{gradient} 2s ease infinite}
         >`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
 
           <GridBoxThree>
@@ -249,11 +255,11 @@ export function AnimatedGradient({ children }:
                 Gradient Button
               </Button>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Button
   bgGradient="linear(to-r, teal.500, green.500)"
 >`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

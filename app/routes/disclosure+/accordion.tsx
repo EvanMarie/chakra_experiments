@@ -62,6 +62,7 @@ import {
   ChevronDownIcon,
   TriangleDownIcon,
 } from "@chakra-ui/icons";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -156,12 +157,12 @@ export default function chakra_section() {
                 <BasicText>
                   The Accordion components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import { 
+                <MiniCode>{`import { 
   Accordion, 
   AccordionItem, 
   AccordionButton, 
   AccordionPanel, 
-  AccordionIcon, } from '@chakra-ui/react'`}</Highlighter>
+  AccordionIcon, } from '@chakra-ui/react'`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -170,21 +171,27 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <AccordionOne />
-                <Disclosure.E01 />
+                <ModalCode>
+                  <Disclosure.E01 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <AccordionTwo />
-                <Disclosure.E02 />
+                <ModalCode>
+                  <Disclosure.E02 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <AccordionThree />
-                <Disclosure.E03 />
+                <ModalCode>
+                  <Disclosure.E03 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -192,7 +199,9 @@ export default function chakra_section() {
               <SingleExample>
                 {" "}
                 <AccordionFour />
-                <Disclosure.E04 />
+                <ModalCode>
+                  <Disclosure.E04 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -200,7 +209,9 @@ export default function chakra_section() {
               <SingleExample>
                 {" "}
                 <AccordionFive />
-                <Disclosure.E05 />
+                <ModalCode>
+                  <Disclosure.E05 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -244,9 +255,9 @@ export default function chakra_section() {
                 </Accordion>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Disclosure.H01 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -275,9 +286,9 @@ export default function chakra_section() {
                 </Accordion>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Disclosure.H02 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -301,9 +312,9 @@ export default function chakra_section() {
                 </Accordion>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Disclosure.H03 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

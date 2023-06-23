@@ -39,6 +39,7 @@ import styles from "~/styles/codeMarkdown.css";
 // import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -113,7 +114,7 @@ export default function chakra_section() {
                   <BasicText>
                     To import the <Mono>Text</Mono> component:
                   </BasicText>
-                  <Highlighter>{`import { Text } from "@chakra-ui/react";}`}</Highlighter>
+                  <MiniCode>{`import { Text } from "@chakra-ui/react";}`}</MiniCode>
                 </ImportBox>
               </DescriptionBox>
             </SectionContainer>
@@ -126,38 +127,38 @@ export default function chakra_section() {
                 <Heading as="h1" size="lg">
                   I'm a large heading
                 </Heading>
-                <Highlighter>{`<Heading as="h1" size="lg">`}</Highlighter>
+                <MiniCode>{`<Heading as="h1" size="lg">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontSize="md">I'm some medium-sized text</Text>
-                <Highlighter>{`<Text fontSize="md">`}</Highlighter>
+                <MiniCode>{`<Text fontSize="md">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Code>I'm a code snippet</Code>
-                <Highlighter>{`<Code>I'm a code snippet</Code>`}</Highlighter>
+                <MiniCode>{`<Code>I'm a code snippet</Code>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontSize="md">I'm some medium-sized text</Text>
-                <Highlighter>{`<Text fontSize="md">`}</Highlighter>
+                <MiniCode>{`<Text fontSize="md">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontSize={["sm", "md", "lg"]}>I'm responsive text</Text>
-                <Highlighter>{`<Text fontSize={["sm", "md", "lg"]}>`}</Highlighter>
+                <MiniCode>{`<Text fontSize={["sm", "md", "lg"]}>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontWeight="bold">I'm bold text</Text>
 
-                <Highlighter>{`<Text fontWeight="bold">`}</Highlighter>
+                <MiniCode>{`<Text fontWeight="bold">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -166,14 +167,14 @@ export default function chakra_section() {
                   I'm text with wide letter spacing
                 </Text>
 
-                <Highlighter>{`<Text letterSpacing="wide">`}</Highlighter>
+                <MiniCode>{`<Text letterSpacing="wide">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text lineHeight="tall">I'm text with tall line height</Text>
 
-                <Highlighter>{`<Text lineHeight="tall">`}</Highlighter>
+                <MiniCode>{`<Text lineHeight="tall">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -182,31 +183,31 @@ export default function chakra_section() {
                   I'm centered, underlined text
                 </Text>
 
-                <Highlighter>{`<Text textAlign="center" textDecoration="underline">`}</Highlighter>
+                <MiniCode>{`<Text textAlign="center" textDecoration="underline">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontSize={32}>fontSize={32}</Text>
-                <Highlighter>{`<Text fontSize={32}>`}</Highlighter>
+                <MiniCode>{`<Text fontSize={32}>`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontSize="1.5em">fontSize="1.5em"</Text>
-                <Highlighter>{`<Text fontSize="1.5em">`}</Highlighter>
+                <MiniCode>{`<Text fontSize="1.5em">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text fontSize="md">fontSize="md"</Text>
-                <Highlighter>{`<Text fontSize="md">`}</Highlighter>
+                <MiniCode>{`<Text fontSize="md">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text textTransform="uppercase">textTransform="uppercase"</Text>
-                <Highlighter>{`<Text textTransform="uppercase">`}</Highlighter>
+                <MiniCode>{`<Text textTransform="uppercase">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -214,13 +215,13 @@ export default function chakra_section() {
                 <Text textTransform="capitalize">
                   textTransform="capitalize"
                 </Text>
-                <Highlighter>{`<Text textTransform="capitalize">`}</Highlighter>
+                <MiniCode>{`<Text textTransform="capitalize">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text textTransform="lowercase">textTransform="lowercase"</Text>
-                <Highlighter>{`<Text textTransform="lowercase">`}</Highlighter>
+                <MiniCode>{`<Text textTransform="lowercase">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -228,13 +229,13 @@ export default function chakra_section() {
                 <Text textDecoration="underline">
                   textDecoration="underline"
                 </Text>
-                <Highlighter>{`<Text textDecoration="underline">`}</Highlighter>
+                <MiniCode>{`<Text textDecoration="underline">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
               <SingleExample>
                 <Text textDecoration="overline">textDecoration="overline"</Text>
-                <Highlighter>{`<Text textDecoration="overline">`}</Highlighter>
+                <MiniCode>{`<Text textDecoration="overline">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
             <SectionContainer>
@@ -242,7 +243,7 @@ export default function chakra_section() {
                 <Text textDecoration="line-through">
                   textDecoration="line-through"
                 </Text>
-                <Highlighter>{`<Text textDecoration="line-through">`}</Highlighter>
+                <MiniCode>{`<Text textDecoration="line-through">`}</MiniCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -260,9 +261,9 @@ export default function chakra_section() {
                 This text uses a custom font family.
               </Text>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Text fontFamily="monospace">`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -274,9 +275,9 @@ export default function chakra_section() {
                 This text is centered within its container.
               </Text>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Text textAlign="center">`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -296,9 +297,9 @@ export default function chakra_section() {
                 </Text>
               </Flex>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Highlighter>{`<Text lineHeight="1.5">`}</Highlighter>
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

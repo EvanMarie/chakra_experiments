@@ -20,29 +20,32 @@ import {
   MenuDivider,
   MenuGroup,
   MenuItem,
-  MenuItemOption,
   MenuList,
-  MenuOptionGroup,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  Table,
-  Tbody,
-  Td,
-  Text,
-  Th,
-  Thead,
-  Tr,
   useDisclosure,
 } from "@chakra-ui/react";
 import { forwardRef, useState } from "react";
 import { SingleExample } from "~/styles/MainDesignComponents";
 
+const ButtonStyles = {
+  bg: "accent_3",
+  color: "darkAccent_3",
+  border: "1px solid",
+  borderColor: "darText",
+  _hover: {
+    bg: "darkAccent_3",
+    color: "accent_3",
+  },
+};
+
 export function MenuFunctionOne() {
   return (
     <SingleExample bg="background">
       <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+        <MenuButton
+          {...ButtonStyles}
+          as={Button}
+          rightIcon={<ChevronDownIcon />}
+        >
           Things to Do:
         </MenuButton>
         <MenuList color="black">
@@ -63,6 +66,7 @@ export function MenuFunctionTwo() {
         {({ isOpen }) => (
           <>
             <MenuButton
+              {...ButtonStyles}
               isActive={isOpen}
               as={Button}
               rightIcon={<ChevronDownIcon />}
@@ -86,6 +90,7 @@ export function MenuFunctionTwo() {
 const CustomButton = forwardRef<HTMLButtonElement, any>((props, ref) => {
   return (
     <Box
+      {...ButtonStyles}
       as="button"
       bg="purple.300"
       color="blue.700"
@@ -153,7 +158,11 @@ export function MenuFunctionFive() {
   return (
     <SingleExample bg="background">
       <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+        <MenuButton
+          {...ButtonStyles}
+          as={Button}
+          rightIcon={<ChevronDownIcon />}
+        >
           Which Keanu?
         </MenuButton>
         <MenuList color="black">
@@ -198,6 +207,7 @@ export function MenuFunctionSix() {
       <Menu>
         <HStack spacing={6}>
           <MenuButton
+            {...ButtonStyles}
             as={IconButton}
             aria-label="Options"
             icon={<HamburgerIcon color="deeppink" />}
@@ -228,7 +238,7 @@ export function MenuFunctionSeven() {
   return (
     <SingleExample bg="background">
       <Menu>
-        <MenuButton as={Button} colorScheme="pink">
+        <MenuButton as={Button} {...ButtonStyles}>
           Things
         </MenuButton>
         <MenuList color="black">
@@ -253,7 +263,7 @@ export function MenuFunctionEight() {
   return (
     <SingleExample bg="background">
       <Menu>
-        <MenuButton bg="accent_3" color="black" p={2} borderRadius="md">
+        <MenuButton {...ButtonStyles} p={2}>
           Open menu
         </MenuButton>
         <MenuList color="black">
@@ -291,7 +301,11 @@ export function FormMenuExample() {
   return (
     <Box>
       <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+        <MenuButton
+          {...ButtonStyles}
+          as={Button}
+          rightIcon={<ChevronDownIcon />}
+        >
           {fruit}
         </MenuButton>
         <MenuList color="black">
@@ -324,6 +338,7 @@ export function SplitMenuButton() {
       <Menu>
         <ButtonGroup>
           <Button
+            {...ButtonStyles}
             w="140px"
             colorScheme="teal"
             onClick={() => console.log(action)}
@@ -331,6 +346,7 @@ export function SplitMenuButton() {
             {action}
           </Button>
           <MenuButton
+            {...ButtonStyles}
             as={Button}
             rightIcon={<ChevronDownIcon />}
             colorScheme="teal"

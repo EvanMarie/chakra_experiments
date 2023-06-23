@@ -29,7 +29,6 @@ import {
   MyFlex,
   SectionDescription,
   SingleExample,
-  ViewCode,
   HighlightText,
 } from "~/styles/MainDesignComponents";
 
@@ -49,6 +48,7 @@ import {
   Message,
 } from "~/components/feedback/alert";
 import { Alert, AlertIcon, Box, Link } from "@chakra-ui/react";
+import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -115,11 +115,11 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>To import these components:</BasicText>
-                <Highlighter>{`import { 
+                <MiniCode>{`import { 
   Alert,
   AlertIcon, 
   AlertTitle, 
-  AlertDescription } from "@chakra-ui/react";`}</Highlighter>
+  AlertDescription } from "@chakra-ui/react";`}</MiniCode>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -146,14 +146,18 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <AlertFour />
-                <Feedback.E04 />
+                <ModalCode>
+                  <Feedback.E04 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <AlertFive />
-                <Feedback.E05 />
+                <ModalCode>
+                  <Feedback.E05 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -174,9 +178,9 @@ export default function chakra_section() {
                 <Box flex="1">A custom error icon for alerts.</Box>
               </Alert>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H01 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxOne>
             <HighlightText>
@@ -198,9 +202,9 @@ export default function chakra_section() {
                 </Box>
               </Alert>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H02 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxThree>
             <HighlightText>
@@ -224,9 +228,9 @@ export default function chakra_section() {
                 I'm a happy little custom message!
               </Message>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H03 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

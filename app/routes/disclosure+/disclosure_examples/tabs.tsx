@@ -7,10 +7,9 @@ import {
   Box,
   TabIndicator,
 } from "@chakra-ui/react";
-import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import { OnChangeTabs } from "./tabsOnChange";
 import {
-  BsEmojiSunglasses,
   BsEmojiWink,
   BsEmojiFrown,
   BsEmojiDizzy,
@@ -306,11 +305,10 @@ export function TabsSeven() {
         appearance of the <Mono>TabIndicator</Mono> based on the selected tab.
         It updates its position and size when the active tab changes, providing
         a smooth transition between tabs. You can customize the appearance of
-        the
-        <Mono>TabIndicator</Mono> by modifying the styles associated with the
-        active tab. Chakra UI provides a range of styling options to customize
-        the <Mono>TabIndicator</Mono>'s color, size, position, and animation
-        using its theme and style props.
+        the <Mono>TabIndicator</Mono> by modifying the styles associated with
+        the active tab. Chakra UI provides a range of styling options to
+        customize the <Mono>TabIndicator</Mono>'s color, size, position, and
+        animation using its theme and style props.
       </BasicText>
       <BasicText>
         The <b>TabIndicator</b> in Chakra UI's Tabs component serves as a visual
