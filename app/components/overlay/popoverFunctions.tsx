@@ -407,8 +407,8 @@ export function PopoverFunctionSix() {
 
   return (
     <SingleExample bg="background">
-      <HStack w="100%" justifyContent="space-evenly">
-        <Box p={1}>
+      <SimpleGrid columns={{ base: 1, sm: 2 }} w="100%" gap={10}>
+        <MyFlex p={1}>
           <Popover placement={selectedPlacement}>
             <PopoverTrigger>
               <Flex
@@ -416,6 +416,7 @@ export function PopoverFunctionSix() {
                 sx={PopoverButtonStyles}
                 w="175px"
                 h="150px"
+                p={2}
                 justifyContent="center"
                 alignItems="center"
                 textAlign="center"
@@ -427,22 +428,23 @@ export function PopoverFunctionSix() {
               <Text p={3}>Popover with {selectedPlacement} placement.</Text>
             </PopoverContent>
           </Popover>
-        </Box>
-
-        <Select
-          bg="white"
-          color="black"
-          w="175px"
-          placeholder="Placement Options"
-          onChange={(e) => setSelectedPlacement(e.target.value as Placement)}
-        >
-          {placements.map((placement) => (
-            <option key={placement} value={placement}>
-              {placement}
-            </option>
-          ))}
-        </Select>
-      </HStack>
+        </MyFlex>
+        <MyFlex p={1}>
+          <Select
+            bg="white"
+            color="black"
+            w="175px"
+            placeholder="Placement Options"
+            onChange={(e) => setSelectedPlacement(e.target.value as Placement)}
+          >
+            {placements.map((placement) => (
+              <option key={placement} value={placement}>
+                {placement}
+              </option>
+            ))}
+          </Select>
+        </MyFlex>
+      </SimpleGrid>
     </SingleExample>
   );
 }

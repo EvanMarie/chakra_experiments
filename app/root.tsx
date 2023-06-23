@@ -60,7 +60,7 @@ export default function App() {
             alignItems="center"
             bg="background"
             direction="column"
-            bgImage="url('/images/background_triangles3.png')"
+            bgImage="url('/images/cyan_traingles.png')"
             bgPosition="center"
             position="fixed"
             // bgRepeat="repeat"

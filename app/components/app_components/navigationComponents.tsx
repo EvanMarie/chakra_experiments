@@ -23,10 +23,32 @@ const AccordionLink = chakra("span", {
 // Scoot text to right
 const navHover = {
   _hover: {
-    fontWeight: "bold",
-    transform: "translateX(10px)",
-    transition: "transform 0.3s ease-in-out",
+    fontWeight: "bold", // Original
+    transform: "translateX(5px)",
     color: "cyan",
+    transition:
+      "transform 0.6s ease-in-out, bold 0.6s ease-in-out, color 0.3s ease-in-out",
+
+    // fontWeight: "bold",
+    // boxShadow: "0px 0px 10px 0px cyan", // glow from under, kinda weird
+    // transform: "translateY(-3px)",
+    // transition: "transform 0.3s, box-shadow 0.3s",
+
+    // backgroundImage: "linear-gradient(to top, accent_1, transparent)", // Glows
+    // transition: "background-image 0.6s",
+
+    // fontWeight: "bold",                   // Weird border animation
+    // borderColor: "cyan",
+    // borderWidth: "4px",
+    // borderImage: "linear-gradient(to top, cyan, transparent) 1",
+    // borderImageSlice: "1",
+    // transition: "border-color 0.3s, border-width 0.3s",
+    // color: "cyan",
+
+    // fontWeight: "bold", // Weird slow burn animation
+    // color: "cyan",
+    // boxShadow: "0px 0px 5px 2px cyan",
+    // transition: "color 0.9s, box-shadow 0.9s",
   },
 };
 

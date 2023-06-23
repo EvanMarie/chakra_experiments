@@ -178,31 +178,35 @@ export function TooltipFunctionSix() {
 
   return (
     <SingleExample bg="background">
-      <HStack w="100%" justifyContent="space-evenly">
-        <Select
-          bg="white"
-          color="black"
-          w="175px"
-          placeholder="Placement Options"
-          onChange={(e) => setPlacement(e.target.value as Placement)}
-        >
-          {placements.map((placement, index) => (
-            <option key={index} value={placement}>
-              {placement}
-            </option>
-          ))}
-        </Select>
-        <Tooltip
-          sx={TooltipContentStyles}
-          label={`${placement} placement`}
-          hasArrow
-          placement={placement}
-        >
-          <Button sx={ToolTipButtonStyles} w="175px" h="150px">
-            Hover for Placement
-          </Button>
-        </Tooltip>
-      </HStack>
+      <SimpleGrid columns={{ base: 1, sm: 2 }} w="100%" gap={10}>
+        <MyFlex p={1}>
+          <Select
+            bg="white"
+            color="black"
+            w="175px"
+            placeholder="Placement Options"
+            onChange={(e) => setPlacement(e.target.value as Placement)}
+          >
+            {placements.map((placement, index) => (
+              <option key={index} value={placement}>
+                {placement}
+              </option>
+            ))}
+          </Select>
+        </MyFlex>
+        <MyFlex p={1}>
+          <Tooltip
+            sx={TooltipContentStyles}
+            label={`${placement} placement`}
+            hasArrow
+            placement={placement}
+          >
+            <Button sx={ToolTipButtonStyles} w="175px" h="150px">
+              Hover for Placement
+            </Button>
+          </Tooltip>
+        </MyFlex>
+      </SimpleGrid>
     </SingleExample>
   );
 }

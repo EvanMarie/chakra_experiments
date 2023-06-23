@@ -20,7 +20,7 @@ const Footer = () => {
       marginRight={0}
       marginLeft={0}
       mt={0}
-      mb={1}
+      mb={0}
       p={0}
       textAlign="center"
     >
@@ -47,6 +47,24 @@ const Footer = () => {
             and{" "}
             <Link color="linkColor" href="https://remix.run/" target="_blank">
               Remix
+            </Link>
+          </Text>
+          <Text fontSize="sm">
+            Special thanks to{" "}
+            <Link
+              color="linkColor"
+              href="https://stefanbohacek.online/@stefan"
+              target="_blank"
+            >
+              Stefan Bohacek
+            </Link>{" "}
+            and his project,{" "}
+            <Link
+              color="linkColor"
+              href="https://generative-placeholders.glitch.me/"
+              target="_blank"
+            >
+              Generative Placeholders.
             </Link>
           </Text>
         </MyFlex>
