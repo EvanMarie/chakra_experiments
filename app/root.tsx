@@ -107,7 +107,7 @@ export default function App() {
                       position="fixed"
                       // maxHeight="93vh"
                       height="93vh"
-                      overflowY="scroll"
+                      overflowY="auto"
                       w={navMenuWidth}
                       bg="darkAccent_3"
                       borderRadius="md"

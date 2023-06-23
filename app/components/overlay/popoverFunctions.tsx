@@ -30,21 +30,9 @@ import {
   Select,
   HStack,
 } from "@chakra-ui/react";
-import { PlaceholderImage } from "~/styles/DesignComponents";
+import { ButtonStyles, PlaceholderImage } from "~/styles/DesignComponents";
 import React, { useEffect, useRef, useState } from "react";
-
 import { BiHappy } from "react-icons/bi";
-
-const PopoverButtonStyles = {
-  bg: "accent_3",
-  color: "darkAccent_3",
-  border: "1px solid",
-  borderColor: "darText",
-  _hover: {
-    bg: "darkAccent_3",
-    color: "accent_3",
-  },
-};
 
 const PopoverContentStyles = {
   bg: "accent_3",
@@ -72,7 +60,7 @@ export function PopoverFunctionOne() {
     <SingleExample bg="background">
       <Popover>
         <PopoverTrigger>
-          <Button sx={PopoverButtonStyles}>Trigger Me!</Button>
+          <Button sx={ButtonStyles}>Trigger Me!</Button>
         </PopoverTrigger>
         <PopoverContent sx={PopoverContentStyles}>
           <PopoverHeader sx={PopoverHeaderStyles}>Popover Title</PopoverHeader>
@@ -96,7 +84,7 @@ export function PopoverFunctionTwo() {
     <SingleExample bg="background">
       <Popover>
         <PopoverTrigger>
-          <Button sx={PopoverButtonStyles}>Popover Trigger 1</Button>
+          <Button sx={ButtonStyles}>Popover Trigger 1</Button>
         </PopoverTrigger>
         <Portal>
           <PopoverContent sx={PopoverContentStyles}>
@@ -117,7 +105,7 @@ export function PopoverFunctionTwo() {
       </Popover>
       <Popover>
         <PopoverTrigger>
-          <Button sx={PopoverButtonStyles}>Popover Trigger 2</Button>
+          <Button sx={ButtonStyles}>Popover Trigger 2</Button>
         </PopoverTrigger>
         <Portal>
           <PopoverContent sx={PopoverContentStyles}>
@@ -150,9 +138,7 @@ export function PopoverFunctionThree() {
         {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
-              <Button sx={PopoverButtonStyles}>
-                {isOpen ? "Close" : "Open"}
-              </Button>
+              <Button sx={ButtonStyles}>{isOpen ? "Close" : "Open"}</Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent>
@@ -298,7 +284,7 @@ export function PopoverFunctionFour() {
         </PopoverContent>
       </Popover>
       <Button
-        sx={PopoverButtonStyles}
+        sx={ButtonStyles}
         variant="solid"
         ref={buttonRef}
         _focus={{ bg: "pink" }}
@@ -413,7 +399,7 @@ export function PopoverFunctionSix() {
             <PopoverTrigger>
               <Flex
                 borderRadius="md"
-                sx={PopoverButtonStyles}
+                sx={ButtonStyles}
                 w="175px"
                 h="150px"
                 p={2}
@@ -470,7 +456,7 @@ export function DynamicContentPopover() {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button sx={PopoverButtonStyles} onClick={handleOpenPopover}>
+        <Button sx={ButtonStyles} onClick={handleOpenPopover}>
           Show User Details
         </Button>
       </PopoverTrigger>
@@ -492,9 +478,9 @@ export function FormPopover() {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button sx={PopoverButtonStyles}>Subscribe</Button>
+        <Button sx={ButtonStyles}>Subscribe</Button>
       </PopoverTrigger>
-      <PopoverContent sx={PopoverButtonStyles}>
+      <PopoverContent sx={PopoverContentStyles}>
         <PopoverHeader>Subscribe to our newsletter</PopoverHeader>
         <PopoverBody sx={PopoverBodyStyles}>
           <FormControl id="email">
@@ -513,7 +499,7 @@ export function ControlledPopover() {
 
   return (
     <Box>
-      <Button sx={PopoverButtonStyles} onClick={handleOpen}>
+      <Button sx={ButtonStyles} onClick={handleOpen}>
         Toggle Popover
       </Button>
       <Popover isOpen={isOpen} onOpen={handleOpen} onClose={handleOpen}>

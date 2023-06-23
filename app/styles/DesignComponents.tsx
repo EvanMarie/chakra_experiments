@@ -37,6 +37,19 @@ export const colors = {
   linkColor: "deeppink",
 };
 
+const buttonBackground = "#451451";
+
+export const ButtonStyles = {
+  bg: buttonBackground,
+  color: "accent_2",
+  border: "1px solid",
+  borderColor: "darText",
+  _hover: {
+    bg: "accent_2",
+    color: buttonBackground,
+  },
+};
+
 interface MyHeadingProps {
   children: React.ReactNode;
   size?: number;

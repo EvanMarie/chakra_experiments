@@ -65,7 +65,7 @@ export default function chakra_feedback() {
                   customizable. It provides a number of props that control the
                   size, placement, and behavior of the drawer. Drawer also
                   includes sub-components like <Mono>DrawerOverlay</Mono>,{" "}
-                  <Mono>DrawerContent</Mono>,<Mono>DrawerCloseButton</Mono>,{" "}
+                  <Mono>DrawerContent</Mono>, <Mono>DrawerCloseButton</Mono>,{" "}
                   <Mono>DrawerHeader</Mono>, <Mono>DrawerBody</Mono>, and{" "}
                   <Mono>DrawerFooter</Mono>, which allow you to structure the
                   content of your drawers effectively.
@@ -83,9 +83,8 @@ export default function chakra_feedback() {
                 <BasicText>
                   The Menu component in Chakra UI is quite flexible and comes
                   with a number of sub-components like <Mono>MenuButton</Mono>,{" "}
-                  <Mono>MenuList</Mono>, and
-                  <Mono>MenuItem</Mono> that allow you to easily create and
-                  customize your menus.
+                  <Mono>MenuList</Mono>, and <Mono>MenuItem</Mono> that allow
+                  you to easily create and customize your menus.
                 </BasicText>
               </li>
               <li>
@@ -97,9 +96,9 @@ export default function chakra_feedback() {
                   application until it is dismissed.
                 </BasicText>
                 <BasicText>
-                  Modals in Chakra UI are composed of several sub-components:
+                  Modals in Chakra UI are composed of several sub-components:{" "}
                   <Mono>ModalOverlay</Mono>, <Mono>ModalContent</Mono>,{" "}
-                  <Mono>ModalHeader</Mono>, <Mono>ModalCloseButton</Mono>,
+                  <Mono>ModalHeader</Mono>, <Mono>ModalCloseButton</Mono>,{" "}
                   <Mono>ModalBody</Mono>, and <Mono>ModalFooter</Mono>. These
                   components allow you to structure and style your modals
                   effectively.
@@ -115,7 +114,7 @@ export default function chakra_feedback() {
                 </BasicText>
                 Like the other overlay components, Popover in Chakra UI comes
                 with several sub-components: <Mono>PopoverTrigger</Mono>,{" "}
-                <Mono>PopoverContent</Mono>,<Mono>PopoverHeader</Mono>,{" "}
+                <Mono>PopoverContent</Mono>, <Mono>PopoverHeader</Mono>,{" "}
                 <Mono>PopoverBody</Mono>, and <Mono>PopoverFooter</Mono>. You
                 can control the placement, size, and triggering behavior of the
                 popover using various props.

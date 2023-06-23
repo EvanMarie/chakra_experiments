@@ -29,11 +29,8 @@ import { RiBookmark3Line } from "react-icons/ri";
 import { HiLightBulb } from "react-icons/hi";
 import { useState } from "react";
 
-const highlightColors = {
-  pinkCardOne: "#de8ea1",
-  blueCardTwo: "#83a8c7",
-  greenCardThree: "#12decd",
-};
+const usefulTipColor = "#aa9ab5";
+const usefulTipLightbulb = "cyan";
 
 const colors = {
   mainBackground: "#211421",
@@ -223,7 +220,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
     <Flex
       {...GridBoxDefaults}
       flexDirection="column"
-      bg={highlightColors.pinkCardOne}
+      bg={usefulTipColor}
       color={"darkText"}
       // fontSize={SmallTextSize}
       padding={PaddingValues}
@@ -232,7 +229,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
             size={23}
-            style={{ marginRight: "5px", color: "deeppink" }}
+            style={{ marginRight: "5px", color: usefulTipLightbulb }}
           />
           <Text fontWeight="bold" fontSize="16px">
             Useful Tip No. 1
@@ -252,7 +249,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
     <Flex
       {...GridBoxDefaults}
       flexDirection="column"
-      bg={highlightColors.blueCardTwo}
+      bg={usefulTipColor}
       color={"darkText"}
       // fontSize={SmallTextSize}
       padding={PaddingValues}
@@ -261,7 +258,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
             size={23}
-            style={{ marginRight: "5px", color: "deeppink" }}
+            style={{ marginRight: "5px", color: usefulTipLightbulb }}
           />
           <Text fontWeight="bold" fontSize="16px">
             Useful Tip No. 2
@@ -281,7 +278,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
     <Flex
       {...GridBoxDefaults}
       flexDirection="column"
-      bg={highlightColors.greenCardThree}
+      bg={usefulTipColor}
       color={"darkText"}
       // fontSize={SmallTextSize}
       padding={PaddingValues}
@@ -290,7 +287,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
             size={23}
-            style={{ marginRight: "5px", color: "deeppink" }}
+            style={{ marginRight: "5px", color: usefulTipLightbulb }}
           />
           <Text fontWeight="bold" fontSize="16px">
             Useful Tip No. 3

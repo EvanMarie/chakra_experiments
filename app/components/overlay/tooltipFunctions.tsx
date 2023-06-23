@@ -19,17 +19,7 @@ import { VscSmiley } from "react-icons/vsc";
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
 import { TooltipSeven } from "./tooltipComponents";
 import { Highlighter } from "../styling/highlighter";
-
-const ToolTipButtonStyles = {
-  bg: "accent_3",
-  color: "darkAccent_3",
-  border: "1px solid",
-  borderColor: "darText",
-  _hover: {
-    bg: "darkAccent_3",
-    color: "accent_3",
-  },
-};
+import { ButtonStyles } from "~/styles/DesignComponents";
 
 const TooltipContentStyles = {
   bg: "accent_1",
@@ -49,7 +39,7 @@ export function TooltipFunctionOne() {
         sx={TooltipContentStyles}
         label="I am a simple and basic yet most intriguing tooltip. :)"
       >
-        <Button sx={ToolTipButtonStyles}>Hover for Tooltip!</Button>
+        <Button sx={ButtonStyles}>Hover for Tooltip!</Button>
       </Tooltip>
     </SingleExample>
   );
@@ -68,7 +58,7 @@ export function TooltipFunctionTwo() {
         hasArrow
         sx={TooltipContentStyles}
       >
-        <Button sx={ToolTipButtonStyles}>Fancier Tooltip</Button>
+        <Button sx={ButtonStyles}>Fancier Tooltip</Button>
       </Tooltip>
     </SingleExample>
   );
@@ -81,7 +71,7 @@ interface TagProps {
 }
 
 const CustomTag = forwardRef(({ children, ...rest }: TagProps, ref) => (
-  <Box p="3" sx={ToolTipButtonStyles} borderRadius="md">
+  <Box p="3" sx={ButtonStyles} borderRadius="md">
     <Tag ref={ref} {...rest}>
       {children}
     </Tag>
@@ -97,7 +87,7 @@ export function TooltipFunctionThree() {
         hasArrow
         sx={TooltipContentStyles}
       >
-        <CustomTag sx={ToolTipButtonStyles}>Custom Tag in a Box</CustomTag>
+        <CustomTag sx={ButtonStyles}>Custom Tag in a Box</CustomTag>
       </Tooltip>
     </SingleExample>
   );
@@ -108,7 +98,7 @@ export function TooltipFunctionThree() {
 export function TooltipFunctionFour() {
   return (
     <SingleExample bg="background">
-      <MyFlex bg="accent_3" w="fit-content" borderRadius="md">
+      <MyFlex bg="accent_2" w="fit-content" borderRadius="md">
         <Tooltip
           label="Have a great day!"
           fontSize="md"
@@ -130,7 +120,7 @@ export function TooltipFunctionFive() {
     <SingleExample bg="background">
       {" "}
       <Tooltip sx={TooltipContentStyles} hasArrow label="Click to proceed">
-        <Button sx={ToolTipButtonStyles}>Proceed</Button>
+        <Button sx={ButtonStyles}>Proceed</Button>
       </Tooltip>
     </SingleExample>
   );
@@ -201,7 +191,7 @@ export function TooltipFunctionSix() {
             hasArrow
             placement={placement}
           >
-            <Button sx={ToolTipButtonStyles} w="175px" h="150px">
+            <Button sx={ButtonStyles} w="175px" h="150px">
               Hover for Placement
             </Button>
           </Tooltip>
@@ -229,7 +219,7 @@ export function TooltipFunctionSeven() {
       <SimpleGrid columns={2} gap={2}>
         <Box>
           <Tooltip label="Click to close me." sx={TinyContent}>
-            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ButtonStyles}>
               <Highlighter>{`closeOnClick=true`}</Highlighter>
             </Button>
           </Tooltip>
@@ -241,7 +231,7 @@ export function TooltipFunctionSeven() {
             closeOnClick={false}
             sx={TinyContent}
           >
-            <Button h="60px" p={1} mb="12px" sx={ToolTipButtonStyles}>
+            <Button h="60px" p={1} mb="12px" sx={ButtonStyles}>
               <Highlighter>{`closeOnClick=false`}</Highlighter>{" "}
             </Button>
           </Tooltip>
@@ -254,7 +244,7 @@ export function TooltipFunctionSeven() {
             isOpen
             sx={TinyContent}
           >
-            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ButtonStyles}>
               <Highlighter>{`isOpen`}</Highlighter>
             </Button>
           </Tooltip>
@@ -267,7 +257,7 @@ export function TooltipFunctionSeven() {
             label="I am open by default"
             defaultIsOpen
           >
-            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ButtonStyles}>
               <Highlighter>{`defaultIsOpen`}</Highlighter>
             </Button>
           </Tooltip>
@@ -275,7 +265,7 @@ export function TooltipFunctionSeven() {
 
         <Box>
           <Tooltip sx={TinyContent} label="Opened after 500ms" openDelay={500}>
-            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ButtonStyles}>
               <Highlighter>{`openDelay={500}`}</Highlighter>
             </Button>
           </Tooltip>
@@ -283,7 +273,7 @@ export function TooltipFunctionSeven() {
 
         <Box>
           <Tooltip sx={TinyContent} label="Closed after 500ms" closeDelay={500}>
-            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ButtonStyles}>
               <Highlighter>{`closeDelay={500}`}</Highlighter>
             </Button>
           </Tooltip>
@@ -296,7 +286,7 @@ export function TooltipFunctionSeven() {
             hasArrow
             arrowSize={15}
           >
-            <Button h="60px" w="160px" p={1} mb="16px" sx={ToolTipButtonStyles}>
+            <Button h="60px" w="160px" p={1} mb="16px" sx={ButtonStyles}>
               <Highlighter>{`arrowSize={15}`}</Highlighter>
             </Button>
           </Tooltip>

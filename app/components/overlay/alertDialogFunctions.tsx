@@ -13,17 +13,7 @@ import {
 import { useRef } from "react";
 import { colors } from "~/styles/DesignComponents";
 import { ExampleContainer } from "~/styles/MainDesignComponents";
-
-const ButtonStyles = {
-  bg: "accent_3",
-  color: "darkAccent_3",
-  border: "1px solid",
-  borderColor: "darText",
-  _hover: {
-    bg: "darkAccent_3",
-    color: "accent_3",
-  },
-};
+import { ButtonStyles } from "~/styles/DesignComponents";
 
 export function AlertDialogFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();

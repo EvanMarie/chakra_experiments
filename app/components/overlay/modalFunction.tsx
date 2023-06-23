@@ -18,19 +18,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
+import { ButtonStyles } from "~/styles/DesignComponents";
 
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
-
-const ButtonStyles = {
-  bg: "accent_3",
-  color: "darkAccent_3",
-  border: "1px solid",
-  borderColor: "darText",
-  _hover: {
-    bg: "darkAccent_3",
-    color: "accent_3",
-  },
-};
 
 export function ModalFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();

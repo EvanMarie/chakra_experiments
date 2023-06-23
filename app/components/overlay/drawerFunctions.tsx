@@ -24,18 +24,8 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
+import { ButtonStyles } from "~/styles/DesignComponents";
 import { SingleExample } from "~/styles/MainDesignComponents";
-
-const ButtonStyles = {
-  bg: "accent_3",
-  color: "darkAccent_3",
-  border: "1px solid",
-  borderColor: "darText",
-  _hover: {
-    bg: "darkAccent_3",
-    color: "accent_3",
-  },
-};
 
 export function DrawerFunctionOne() {
   const { isOpen, onOpen, onClose } = useDisclosure();
