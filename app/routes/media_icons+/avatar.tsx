@@ -28,12 +28,20 @@ import * as Media from "~/mardownExamples/media_icons/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import {
+  AvatarFive,
+  AvatarFour,
   AvatarOne,
+  AvatarSix,
   AvatarThree,
   AvatarTwo,
 } from "~/components/media_icons/avatarComponents";
 import { ModalCode } from "~/styles/CodeDesignComponents";
 import { Box } from "@chakra-ui/react";
+import {
+  AvatarTipOne,
+  AvatarTipThree,
+  AvatarTipTwo,
+} from "~/components/media_icons/avatarFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -236,49 +244,36 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <AvatarThree />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Media.E03 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <AvatarFour />
+                <ModalCode>
+                  <Media.E04 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <AvatarFive />
+                <ModalCode>
+                  <Media.E05 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <AvatarSix />
+                <ModalCode>
+                  <Media.E06 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -286,19 +281,49 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <HighlightText>
+              <b>Avatars as Buttons</b>: While not an obvious use case, you can
+              wrap the Avatar component in a button or link to create a
+              clickable avatar. This is useful in cases where you want users to
+              click on an avatar, perhaps to view a user's profile or start a
+              chat.
+            </HighlightText>
+            <MyFlex>
+              <AvatarTipOne />
+            </MyFlex>
+            <ModalCode>
+              <Media.H01 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <HighlightText>
+              <b>Gradient Background Avatars</b>: The <Mono>Avatar</Mono>{" "}
+              component's <Mono>bg</Mono> prop doesn't only accept solid colors.
+              You can also pass in gradient values to create a more vibrant and
+              dynamic avatar, especially when no image is provided. This can
+              help make your interface more colorful and engaging.
+            </HighlightText>
+            <MyFlex>
+              <AvatarTipTwo />
+            </MyFlex>
+            <ModalCode>
+              <Media.H02 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <HighlightText>
+              <b>Custom Shapes</b>: Although avatars are usually round, you can
+              change their shape by manipulating the borderRadius prop. If you
+              want to distinguish certain avatars or just prefer a different
+              style, this can be a unique way to customize the appearance of
+              your avatars.
+            </HighlightText>
+            <MyFlex>
+              <AvatarTipThree />
+            </MyFlex>
+            <ModalCode>
+              <Media.H03 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

@@ -7,8 +7,10 @@ import {
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 import {
+  AvatarFunctionFive,
   AvatarFunctionFour,
   AvatarFunctionOne,
+  AvatarFunctionSix,
   AvatarFunctionThree,
   AvatarFunctionTwo,
 } from "./avatarFunctions";
@@ -68,7 +70,7 @@ export function AvatarTwo() {
 export function AvatarThree() {
   return (
     <SectionContainer>
-      <SectionHeading>Fallback for Loading Errors</SectionHeading>
+      <SectionHeading>Fallback for Avatar Loading Errors</SectionHeading>
       <Box>
         <SectionDescription>
           ⦾ The <Mono>Avatar</Mono> component in Chakra UI provides flexible and
@@ -113,10 +115,42 @@ export function AvatarThree() {
 export function AvatarFour() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Using Avatar Badges</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ Avatar badges are incredibly useful for indicating additional
+          information such as the online status of a user. They are placed in
+          the corner of the avatar image and can be fully customized to fit the
+          design of your application.{" "}
+        </SectionDescription>
+        <BasicText>
+          In this example, we have a row of three <Mono>Avatar</Mono>{" "}
+          components, each representing a different person with a respective
+          image provided by the <Mono>src</Mono> prop. Nested within each{" "}
+          <Mono>Avatar</Mono> component is an <Mono>AvatarBadge</Mono>. The{" "}
+          <Mono>boxSize</Mono> prop is used to determine the size of each badge
+          relative to the avatar's font size. For the first avatar, the badge
+          has a green background, indicating that the user is online.
+        </BasicText>
+        <BasicText>
+          For the second and third avatars, we not only change the background
+          color of the badge using the <Mono>bg</Mono> prop but also specify a
+          border color using the <Mono>borderColor</Mono> prop. These badges
+          could signify different statuses - for example, the "deeppink" badge
+          could indicate a 'busy' status, and a yellow one could denote 'away'
+          status.
+        </BasicText>
+        <BasicText>
+          By using these props, we can manipulate the appearance of each badge
+          to suit our design needs, providing a clear and efficient way to
+          visually communicate additional information to our users.
+        </BasicText>
+        <BasicText>
+          It's important to highlight that the em unit is used for sizing the{" "}
+          <Mono>AvatarBadge</Mono>. This approach is beneficial because it
+          allows the badge's size to adjust proportionally to the avatar's font
+          size.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -131,15 +165,35 @@ export function AvatarFour() {
 export function AvatarFive() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Displaying an Avatar Group</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ When you need to display a group of users or a team, you can use
+          Chakra UI's <Mono>AvatarGroup</Mono> component. It allows you to
+          neatly stack multiple <Mono>Avatar</Mono> components together. You can
+          limit the number of visible avatars and adjust their size and spacing.{" "}
+        </SectionDescription>
+        <BasicText>
+          In this example, we have an <Mono>AvatarGroup</Mono> component that
+          contains five individual <Mono>Avatar</Mono> components. The{" "}
+          <Mono>size</Mono> prop in <Mono>AvatarGroup</Mono> applies to all{" "}
+          <Mono>Avatars</Mono>, making them 'large'. The <Mono>max</Mono> prop
+          limits the number of visible avatars to three. Avatars beyond this
+          limit are not shown individually but are represented by a{" "}
+          <Mono>"+2" badge</Mono>. The <Mono>spacing</Mono>
+          prop is used to set the degree of overlap between the avatars,
+          providing a compact, visually appealing user group display.
+        </BasicText>
+        <BasicText>
+          This functionality is useful, for instance, in a chat application
+          where you may want to show a preview of the group's members, or in a
+          project management tool where you would want to display the project's
+          team members.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
+        <AvatarFunctionFive />
       </MyFlex>
     </SectionContainer>
   );
@@ -150,34 +204,29 @@ export function AvatarFive() {
 export function AvatarSix() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Modifying the Initials Logic</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ The <Mono>getInitials</Mono> prop is introduced to give developers
+          control over how the initials are derived from the name. By default,
+          the logic combines the first characters of each word in the name prop.
+        </SectionDescription>
+        <BasicText>
+          In this example, we've replaced the default initials logic with a new
+          function that generates initials in reverse order. So, for 'Person
+          One', the Avatar component will display 'OP' instead of the default
+          'PO'.
+        </BasicText>
+        <BasicText>
+          Remember, the <Mono>getInitials</Mono> prop accepts a function that
+          takes the full name as an argument and returns the initials string.
+          This means you can implement any initials logic that fits your
+          specific needs.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function AvatarSeven() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <></>
+        <AvatarFunctionSix />
       </MyFlex>
     </SectionContainer>
   );

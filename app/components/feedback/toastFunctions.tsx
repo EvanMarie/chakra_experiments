@@ -10,12 +10,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { ButtonStyles, colors } from "~/styles/DesignComponents";
+import { ButtonStyles } from "~/styles/DesignComponents";
 import { MyFlex } from "~/styles/MainDesignComponents";
 
 const buttonStyles = {
   ...ButtonStyles,
-
   borderRadius: "md",
   width: { base: "135px", sm: "135px", md: "175px", lg: "135px" },
   height: "30px",
@@ -23,9 +22,6 @@ const buttonStyles = {
   fontSize: { base: "13px", sm: "13px", md: "15px", lg: "13px" },
   p: 0.5,
   mx: 0,
-  _hover: {
-    bg: "linkColor",
-  },
 };
 
 export function ToastOneFunction() {

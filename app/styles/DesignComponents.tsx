@@ -37,17 +37,19 @@ export const colors = {
   linkColor: "deeppink",
 };
 
-const buttonBackground = "accent_2";
+export const ButtonBackground = "accent_2";
+export const ButtonHoverBG = "accent_1";
+export const CatsBouncing = "https://cat-bounce.com/";
 
 export const ButtonStyles = {
-  bg: buttonBackground,
+  bg: ButtonBackground,
   color: "background",
   border: "2px solid",
   borderColor: "darText",
   _hover: {
-    bg: "accent_1",
+    bg: ButtonHoverBG,
     color: "background",
-    transition: "all 0.3s ease-in-out",
+    transition: "all 0.4s ease-in-out",
   },
 };
 

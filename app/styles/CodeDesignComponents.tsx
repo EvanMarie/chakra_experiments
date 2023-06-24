@@ -19,7 +19,7 @@ import { useEffect, useRef, useState } from "react";
 
 import javascript from "highlight.js/lib/languages/javascript";
 import { DiCode } from "react-icons/di";
-import { ButtonStyles } from "./DesignComponents";
+import { ButtonHoverBG, ButtonStyles } from "./DesignComponents";
 hljs.registerLanguage("javascript", javascript);
 
 /* ******************************EXPANDABLE******************************* */
@@ -52,9 +52,9 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
     borderRadius: "0.25rem",
     cursor: "pointer",
     _hover: {
-      bg: "accent_1",
+      bg: ButtonHoverBG,
       color: "background",
-      transition: "all 0.3s ease-in-out",
+      transition: "all 0.4s ease-in-out",
       border: "2px solid",
     },
   };
