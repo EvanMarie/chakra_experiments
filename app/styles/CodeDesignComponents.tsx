@@ -85,7 +85,7 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
         >
           <ModalOverlay
             bg="rgba(0,0,0,0.5)"
-            backdropFilter="blur(3px) hue-rotate(90deg)"
+            backdropFilter="blur(3px) hue-rotate(23deg)"
           />
           <ModalContent bg="tipBackground">
             <ModalHeader>Example in Code:</ModalHeader>
