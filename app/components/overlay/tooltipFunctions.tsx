@@ -350,7 +350,9 @@ export function TooltipFormValidityCheck() {
         />
       </FormControl>
       <Tooltip label={tooltipLabel} placement="top">
-        <Button onClick={handleCheckFormClick}>Check Form</Button>
+        <Button sx={ButtonStyles} onClick={handleCheckFormClick}>
+          Check Form
+        </Button>
       </Tooltip>
     </VStack>
   );

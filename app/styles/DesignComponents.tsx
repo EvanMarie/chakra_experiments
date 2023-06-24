@@ -45,7 +45,7 @@ export const ButtonStyles = {
   border: "2px solid",
   borderColor: "darText",
   _hover: {
-    bg: "linkColor",
+    bg: "accent_1",
     color: "background",
     transition: "all 0.3s ease-in-out",
   },

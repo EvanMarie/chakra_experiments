@@ -178,7 +178,15 @@ export default function chakra_section() {
         </GridColumn>
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
+            <HighlightText>
+              <b>Tooltip with Input Form:</b> At the core of this component are
+              two FormControl sections, each composed of a FormLabel and an
+              Input field. Chakra UI's FormControl provides a streamlined way to
+              manage related form elements and their respective labels, ensuring
+              a consistent layout and behavior. The input fields leverage Chakra
+              UI's design system, including the bg="white" style attribute, to
+              create visually appealing text inputs for users.
+            </HighlightText>
             <MyFlex>
               <TooltipFormValidityCheck />
             </MyFlex>

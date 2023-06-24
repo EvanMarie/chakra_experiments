@@ -50,7 +50,7 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
     borderRadius: "0.25rem",
     cursor: "pointer",
     _hover: {
-      bg: "linkColor",
+      bg: "accent_1",
       color: "background",
       transition: "all 0.3s ease-in-out",
       border: "3px solid",
