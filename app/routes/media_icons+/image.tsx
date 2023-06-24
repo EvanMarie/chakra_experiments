@@ -25,7 +25,7 @@ import {
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-// import * as COMPONENT from "~/mardownExamples/COMPONENT/index"; <- for  markdown examples
+import * as Media from "~/mardownExamples/media_icons/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";

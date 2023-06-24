@@ -45,7 +45,7 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
     color: "accent_3",
     fontSize: "12px",
     lineHeight: "0.5",
-    border: "3px solid",
+    border: "2px solid",
     borderColor: "darText",
     padding: "0px 0px",
     paddingRight: "6px",
@@ -55,7 +55,7 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
       bg: "accent_1",
       color: "background",
       transition: "all 0.3s ease-in-out",
-      border: "3px solid",
+      border: "2px solid",
     },
   };
 
@@ -71,7 +71,7 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
           <HStack m={0} p={0} spacing={0}>
             <DiCode size={23} style={{ verticalAlign: "middle" }} />
             <p style={{ margin: 0, verticalAlign: "middle", lineHeight: "1" }}>
-              View Code
+              Code
             </p>
           </HStack>
         </Box>
@@ -88,8 +88,10 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
             backdropFilter="blur(3px) hue-rotate(23deg)"
           />
           <ModalContent bg="tipBackground">
-            <ModalHeader>Example in Code:</ModalHeader>
-            <ModalCloseButton top={1} insetEnd={1} />
+            <ModalHeader bg="background" color="accent_1">
+              Example in Code:
+            </ModalHeader>
+            <ModalCloseButton top={1} insetEnd={1} color="accent_1" />
             <ModalBody>
               <Box p={3}>{children}</Box>
             </ModalBody>

@@ -14,7 +14,7 @@ export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
       <MyLabel link="https://chakra-ui.com/docs/components">
-        Chakra UI: Feedback Components
+        Chakra UI: Feedback
       </MyLabel>
       <SectionContainer paddingX={8}>
         <VStack w="100%" spacing={2}>
@@ -23,26 +23,27 @@ export default function chakra_feedback() {
             offering visual indicators to users. These indicators signify the
             outcomes or status of certain processes or actions. They play a
             crucial role in creating responsive, interactive user interfaces. By
-            leveraging these components, developers can convey the state of the
+            utilizing these components, developers can convey the state of the
             application to users, thereby boosting usability and the overall
             user experience.
           </SectionDescription>
 
           <BasicText>
-            Components that signify loading state, such as Spinners, Progress,
-            Circular Progress, and Skeletons, are used to inform users about
-            ongoing processes or operations. These components help manage users'
+            Components that signify loading state, such as <Mono>Spinners</Mono>
+            , <Mono>Progress</Mono>, <Mono>Circular Progress</Mono>, and{" "}
+            <Mono>Skeletons</Mono>, are used to inform users about ongoing
+            processes or operations. These components help manage users'
             expectations during waiting periods or times of uncertainty, thereby
             keeping users engaged and averting potential confusion or
             frustration.
           </BasicText>
           <BasicText>
-            Components for messaging like Alerts and Toasts are key in
-            delivering instant feedback to users about their actions or the
-            status of the system. These components enable applications to
-            provide relevant context about successes, warnings, errors, or
-            general information, helping users comprehend the system's reactions
-            to their actions.
+            Components for messaging like <Mono>Alerts</Mono> and{" "}
+            <Mono>Toasts</Mono> are key in delivering instant feedback to users
+            about their actions or the status of the system. These components
+            enable applications to provide relevant context about successes,
+            warnings, errors, or general information, helping users comprehend
+            the system's reactions to their actions.
           </BasicText>
 
           <BasicText>

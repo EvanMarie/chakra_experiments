@@ -7,6 +7,8 @@ import {
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 
+/* ********************************************************************** */
+
 export function ComponentOne() {
   return (
     <SectionContainer>
@@ -23,6 +25,8 @@ export function ComponentOne() {
     </SectionContainer>
   );
 }
+
+/* ********************************************************************** */
 
 export function ComponentTwo() {
   return (
@@ -41,6 +45,8 @@ export function ComponentTwo() {
   );
 }
 
+/* ********************************************************************** */
+
 export function ComponentThree() {
   return (
     <SectionContainer>
@@ -57,6 +63,8 @@ export function ComponentThree() {
     </SectionContainer>
   );
 }
+
+/* ********************************************************************** */
 
 export function ComponentFour() {
   return (
@@ -75,6 +83,8 @@ export function ComponentFour() {
   );
 }
 
+/* ********************************************************************** */
+
 export function ComponentFive() {
   return (
     <SectionContainer>
@@ -92,6 +102,8 @@ export function ComponentFive() {
   );
 }
 
+/* ********************************************************************** */
+
 export function ComponentSix() {
   return (
     <SectionContainer>
@@ -108,6 +120,8 @@ export function ComponentSix() {
     </SectionContainer>
   );
 }
+
+/* ********************************************************************** */
 
 export function ComponentSeven() {
   return (

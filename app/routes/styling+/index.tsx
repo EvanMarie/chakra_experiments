@@ -11,7 +11,7 @@ export default function chakra_basic_styling() {
   return (
     <BigBackgroundBox>
       <MyLabel link="https://chakra-ui.com/docs/styled-system/style-props">
-        The Chakra UI Styling System
+        Chakra UI: Styling
       </MyLabel>
       <SectionContainer>
         <SectionDescription>

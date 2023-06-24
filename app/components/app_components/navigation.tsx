@@ -177,6 +177,24 @@ export const navElements: NavElement[] = [
       },
     ],
   },
+  {
+    link: "/media_icons",
+    label: "Media & Icons",
+    subElements: [
+      {
+        link: "/media_icons/avatar",
+        label: "Avatar",
+      },
+      {
+        link: "/media_icons/icon",
+        label: "Icon",
+      },
+      {
+        link: "/media_icons/image",
+        label: "Image",
+      },
+    ],
+  },
 ];
 
 export const getNavElementForUrl = (

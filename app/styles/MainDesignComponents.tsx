@@ -32,25 +32,6 @@ import { useState } from "react";
 const usefulTipColor = "tipBackground";
 const usefulTipLightbulb = "cyan";
 
-const colors = {
-  mainBackground: "#211421",
-  mainText: "#f7e6c1",
-  secondaryText: "#26231a",
-  mainAccent: "#faa5b9",
-  mainAccent2: "#a7d5fa",
-  accent_3: "#05fce8",
-  mainAccent4: "#370a42",
-  secondaryBackground: "#460b47",
-  myblue: "#0c2b45",
-  mygrayblue: "#23394a",
-  mypurple: "#532291",
-  codeText: "#faafef",
-  sectionColor: "#3d3145",
-  highlighterColor: "#a7d5fa",
-  linkColor: "deeppink",
-};
-
-// export const BasicTextSize = "16px";
 export const MainWidth = "100%";
 export const MainMaxWidth = "1000px";
 export const SectionHeadingSize = "23px";
@@ -476,7 +457,7 @@ export function ExampleBox({
       overflow-x="hidden"
     >
       <h1>
-        <BasicText color="accent_3" mb={0}>
+        <BasicText color="accent_2" mb={0} fontWeight="bold">
           Examples
         </BasicText>
       </h1>
@@ -504,15 +485,16 @@ export function SectionHeading({
   size = SectionHeadingSize,
   mb = 3,
   mt = 0,
-
   width = "100%",
   color = "accent_2",
 }: SectionHeadingProps) {
   return (
     <Box w="100%" justifyContent="left" textAlign="left">
-      <Text size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
-        {children}
-      </Text>
+      <h2>
+        <BasicText size={size} color={color} mb={mb} mt={mt}>
+          {children}
+        </BasicText>
+      </h2>
 
       <Divider color="mainText" opacity="0.3" variant="dashed" mb={3} mt={0} />
     </Box>
@@ -586,7 +568,7 @@ interface SingleExampleProps extends BoxProps {
 
 export function SingleExample({ children }: SingleExampleProps) {
   return (
-    <VStack w="100%" spacing={2}>
+    <VStack w="100%" spacing={2} verticalAlign="middle">
       {children}
     </VStack>
   );
@@ -609,6 +591,7 @@ export function MyFlex({ children, ...restProps }: MyFlexProps) {
       align="center"
       p={3}
       m={1}
+      borderRadius="3px"
       flexDirection={{ base: "column" }}
       {...restProps}
     >
