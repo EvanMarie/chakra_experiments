@@ -19,24 +19,31 @@ import {
   HighlightColumn,
   MyFlex,
   SectionDescription,
-  SingleExample,
   HighlightText,
-  SectionHeading,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
-import * as Media from "~/mardownExamples/media_icons/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
 import {
-  IconFive,
   IconFour,
   IconOne,
   IconThree,
   IconTwo,
 } from "~/components/media_icons/iconComponents";
+import {
+  Icon,
+  IconButton,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  List,
+  ListItem,
+} from "@chakra-ui/react";
+import { AiFillDelete, AiFillLock, AiFillStar } from "react-icons/ai";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -128,25 +135,104 @@ npm i react-icons`}</Highlighter>
             <IconTwo />
             <IconThree />
             <IconFour />
-            <IconFive />
           </ExampleBox>
         </GridColumn>
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <HighlightText>
+              <b>Icon as Button</b>: You can use an <b>Icon</b> as a clickable
+              button in your application. This is handy for actions like delete,
+              edit, close etc. In this example, we're using the{" "}
+              <b>IconButton</b> component of Chakra UI, which lets you use an
+              icon as a button. The icon prop is provided with an icon from
+              react-icons library, and we attach a callback function to the
+              onClick prop to handle the click event.
+            </HighlightText>
+            <HighlightExample h="80px">
+              <MyFlex>
+                <IconButton
+                  bg="accent_2"
+                  boxSize={12}
+                  aria-label="Delete button"
+                  icon={<AiFillDelete />}
+                  onClick={() => console.log("Deleted")}
+                />
+              </MyFlex>
+            </HighlightExample>
+            <ModalCode>
+              <Highlighter>{`<IconButton
+  boxSize={12}
+  aria-label="Delete button"
+  icon={<AiFillDelete />}
+  onClick={() => console.log("Deleted")}
+/>`}</Highlighter>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <HighlightText>
+              <b>Icon as List Bullets</b>: You can use an Icon as bullet points
+              in your list. In this example, we're using the <b>Icon</b>{" "}
+              component as bullet points for the <b>ListItem</b> component. The
+              as prop is provided with an icon from react-icons library, and
+              we've added a margin to separate the icon from the text.
+            </HighlightText>
+            <HighlightExample h="80px">
+              <MyFlex>
+                <List>
+                  <ListItem>
+                    <Icon as={AiFillStar} color="yellow.400" mr="2" />
+                    Starred item 1
+                  </ListItem>
+                  <ListItem>
+                    <Icon as={AiFillStar} color="yellow.400" mr="2" />
+                    Starred item 2
+                  </ListItem>
+                </List>
+              </MyFlex>
+            </HighlightExample>
+            <ModalCode>
+              <Highlighter>{`<List>
+  <ListItem>
+    <Icon as={AiFillStar} color="yellow.400" mr="2" />
+    Starred item 1
+  </ListItem>
+  <ListItem>
+    <Icon as={AiFillStar} color="yellow.400" mr="2" />
+    Starred item 2
+  </ListItem>
+</List>`}</Highlighter>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <HighlightText>
+              <b>Icon as Form Input Addons</b>: Icons can be used inside form
+              inputs as addons to provide context to the user. In this example,
+              we're using the <b>Icon</b> inside an <b>InputGroup</b> component
+              to indicate that it's a password input field. The{" "}
+              <b>InputLeftElement</b> component is used to place an element at
+              the left of the input field.
+            </HighlightText>
+            <HighlightExample h="80px">
+              <MyFlex>
+                <InputGroup>
+                  <InputLeftElement
+                    pointerEvents="none"
+                    children={<AiFillLock color="gray.300" />}
+                  />
+                  <Input type="password" placeholder="Enter password" />
+                </InputGroup>
+              </MyFlex>
+            </HighlightExample>
+            <ModalCode>
+              <Highlighter>{`<InputGroup>
+  <InputLeftElement
+    pointerEvents="none"
+    children={<AiFillLock color="gray.300" />}
+  />
+  <Input type="password" placeholder="Enter password" />
+</InputGroup>`}</Highlighter>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

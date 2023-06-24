@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useState, useEffect, useRef } from "react";
-import { MyDivider } from "~/styles/DesignComponents";
+import { ButtonStyles, MyDivider } from "~/styles/DesignComponents";
 import { HighlightExample } from "~/styles/MainDesignComponents";
 
 export function CountdownProgressBar() {
@@ -76,7 +76,7 @@ export function CountdownProgressBar() {
             </Box>
           </HStack>
 
-          <Button onClick={resetProgress} size="sm">
+          <Button sx={ButtonStyles} onClick={resetProgress} size="sm">
             Reset
           </Button>
         </VStack>
@@ -115,7 +115,7 @@ export function DynamicProgressBar() {
     <HighlightExample h="90px">
       <VStack w="100%" spacing={4}>
         <Progress w="90%" value={value} colorScheme="cyan" />
-        <Button size="sm" onClick={resetProgress}>
+        <Button sx={ButtonStyles} size="sm" onClick={resetProgress}>
           Reset
         </Button>
       </VStack>
@@ -147,10 +147,20 @@ export function StepsProgressBar() {
           <Progress w="80%" value={value} colorScheme="pink" />
         </HStack>
         <HStack spacing={3}>
-          <Button size="sm" onClick={prevStep} disabled={currentStep === 1}>
+          <Button
+            sx={ButtonStyles}
+            size="sm"
+            onClick={prevStep}
+            disabled={currentStep === 1}
+          >
             Previous
           </Button>
-          <Button size="sm" onClick={nextStep} disabled={currentStep === steps}>
+          <Button
+            sx={ButtonStyles}
+            size="sm"
+            onClick={nextStep}
+            disabled={currentStep === steps}
+          >
             Next
           </Button>
         </HStack>

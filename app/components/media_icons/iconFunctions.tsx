@@ -14,7 +14,7 @@ export function IconCircleExample(props: IconProps) {
 
 /* ********************************************************************** */
 
-export const IconExampleTwo = createIcon({
+export const IconCirlceCreateIcon = createIcon({
   displayName: "UpDownIcon",
   viewBox: "0 0 200 200",
   path: (

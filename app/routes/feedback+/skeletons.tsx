@@ -210,9 +210,9 @@ export default function chakra_section() {
                 </Box>
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H10 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -226,9 +226,9 @@ export default function chakra_section() {
                 <DataTableSkeleton />
               </HighlightExample>
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H11 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
@@ -239,9 +239,9 @@ export default function chakra_section() {
             <MyFlex>
               <ImageWithSkeleton />
             </MyFlex>
-            <ViewCode>
+            <ModalCode>
               <Feedback.H12 />
-            </ViewCode>
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

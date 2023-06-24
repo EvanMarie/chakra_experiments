@@ -21,6 +21,7 @@ import {
   SectionDescription,
   SingleExample,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -155,17 +156,23 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightExample h="80px">
+              <MyFlex></MyFlex>
+            </HighlightExample>
             <ModalCode>Highlight Example Code</ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightExample h="80px">
+              <MyFlex></MyFlex>
+            </HighlightExample>
             <ModalCode>Highlight Example Code</ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
+            <HighlightExample h="80px">
+              <MyFlex></MyFlex>
+            </HighlightExample>
             <ModalCode>Highlight Example Code</ModalCode>
           </GridBoxThree>
         </HighlightColumn>

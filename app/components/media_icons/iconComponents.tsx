@@ -1,7 +1,8 @@
-import { Box, HStack, Icon, Link } from "@chakra-ui/react";
+import { HStack, Icon, Link } from "@chakra-ui/react";
 import { ModalCode } from "~/styles/CodeDesignComponents";
 import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import {
+  BulletBox,
   MyFlex,
   SectionContainer,
   SectionDescription,
@@ -22,7 +23,7 @@ import { TiBell } from "react-icons/Ti";
 import { SiAdobe } from "react-icons/Si";
 import { TfiApple } from "react-icons/Tfi";
 import { WiDayLightning } from "react-icons/Wi";
-import { IconCircleExample, IconExampleTwo } from "./iconFunctions";
+import { IconCircleExample, IconCirlceCreateIcon } from "./iconFunctions";
 
 /* ********************************************************************** */
 
@@ -189,23 +190,6 @@ export function IconCircleExample(props: IconProps) {
           </ModalCode>
         </SingleExample>
       </SingleExample>
-      <SingleExample>
-        <br />
-        <BasicText>
-          ⦾ <HL>Using the createIcon Function</HL>: The <Mono>createIcon</Mono>{" "}
-          function is a convenient way to generate icons. It wraps around the
-          <Mono>Icon</Mono> component and offers similar functionality with less
-          effort.
-        </BasicText>
-        <SingleExample>
-          <MyFlex bg="background">
-            <IconExampleTwo color="accent_1" />
-          </MyFlex>
-          <ModalCode>
-            <Highlighter>{`Code`}</Highlighter>
-          </ModalCode>
-        </SingleExample>
-      </SingleExample>
     </SectionContainer>
   );
 }
@@ -215,71 +199,84 @@ export function IconCircleExample(props: IconProps) {
 export function IconFour() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <SectionDescription>⦾</SectionDescription>
+      <SectionHeading>Using the createIcon Function</SectionHeading>
+      <BasicText>
+        ⦾ The <Mono>createIcon</Mono> function is a convenient way to generate
+        icons. It wraps around the <Mono>Icon</Mono> component and offers
+        similar functionality with less effort.
+      </BasicText>
+      <BasicText>
+        The <Mono>createIcon</Mono> function provides a streamlined way to
+        create icons in your Chakra UI powered applications, and can often lead
+        to cleaner, more maintainable code. Here are a few reasons why it may be
+        preferred:
+      </BasicText>
+      <BulletBox>
+        <ul>
+          <li>
+            <HL>Code Clarity</HL>: <Mono>createIcon</Mono> provides a clear and
+            simple way to define an icon. It encapsulates the underlying SVG
+            structure and abstracts it into a simple object-based structure. The
+            function takes care of setting up the SVG for you, and you just need
+            to specify the path data and viewBox. This makes your icon
+            definitions more compact and easier to read and understand.
+          </li>
+          <li>
+            <HL>Better Typing for TypeScript</HL>: If you're using TypeScript,
+            <Mono>createIcon</Mono> allows for better type safety as it defines
+            what a Chakra UI Icon should be. The <Mono>IconProps</Mono> used in{" "}
+            <Mono>createIcon</Mono> make it easier for TypeScript to infer the
+            correct types and provide better autocompletion and error checking
+            in your IDE.
+          </li>
+          <li>
+            <HL>Less Boilerplate</HL>: With <Mono>createIcon</Mono>, you do not
+            need to write the common SVG attributes every time you want to
+            define a new icon. It takes care of the repetitive tasks for you,
+            keeping your code DRY (Don't Repeat Yourself).
+          </li>
+          <li>
+            <HL>Default Props</HL>: <Mono>createIcon</Mono> allows you to set
+            default props for your icons. For example, you can set a default
+            color for your icon using the defaultProps attribute. This is more
+            difficult to achieve if you are creating icons using the Icon
+            component directly.
+          </li>
+          <li>
+            <HL>Consistency</HL>: Using <Mono>createIcon</Mono> helps to
+            maintain consistency across your application as all icons are
+            created in a similar manner.
+          </li>
+        </ul>
+      </BulletBox>
+
       <SingleExample>
-        <SingleExample>
-          <MyFlex bg="background">Example</MyFlex>
-        </SingleExample>
+        <MyFlex bg="background">
+          <HStack spacing={4}>
+            <IconCirlceCreateIcon color="accent_1" />
+            <IconCirlceCreateIcon boxSize={6} color="accent_2" />
+            <IconCirlceCreateIcon boxSize={8} color="deeppink" />
+            <IconCirlceCreateIcon boxSize={10} color="cyan" />
+          </HStack>
+        </MyFlex>
         <ModalCode>
-          <Highlighter>{`Code`}</Highlighter>
-        </ModalCode>
-      </SingleExample>
-    </SectionContainer>
-  );
-}
+          <Highlighter>{`export const IconCirlceCreateIcon = createIcon({
+  displayName: "UpDownIcon",
+  viewBox: "0 0 200 200",
+  path: (
+    <path
+      fill="currentColor"
+      d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
+    />
+  ),
+});
 
-/* ********************************************************************** */
-
-export function IconFive() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <SectionDescription>⦾</SectionDescription>
-      <SingleExample>
-        <SingleExample>
-          <MyFlex bg="background">Example</MyFlex>
-        </SingleExample>
-        <ModalCode>
-          <Highlighter>{`Code`}</Highlighter>
-        </ModalCode>
-      </SingleExample>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function IconSix() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <SectionDescription>⦾</SectionDescription>
-      <SingleExample>
-        <SingleExample>
-          <MyFlex bg="background">Example</MyFlex>
-        </SingleExample>
-        <ModalCode>
-          <Highlighter>{`Code`}</Highlighter>
-        </ModalCode>
-      </SingleExample>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function IconSeven() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <SectionDescription>⦾</SectionDescription>
-      <SingleExample>
-        <SingleExample>
-          <MyFlex bg="background">Example</MyFlex>
-        </SingleExample>
-        <ModalCode>
-          <Highlighter>{`Code`}</Highlighter>
+<HStack spacing={4}>
+  <IconCirlceCreateIcon color="accent_1" />
+  <IconCirlceCreateIcon boxSize={6} color="accent_2" />
+  <IconCirlceCreateIcon boxSize={8} color="deeppink" />
+  <IconCirlceCreateIcon boxSize={10} color="cyan" />
+</HStack>`}</Highlighter>
         </ModalCode>
       </SingleExample>
     </SectionContainer>

@@ -7,8 +7,10 @@ import {
   GridProps,
   HStack,
   Image,
+  ImageProps,
   Link,
   ResponsiveValue,
+  Skeleton,
   Text,
   TextProps,
   VStack,
@@ -17,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
 import { MyFlex } from "./MainDesignComponents";
+import { useState } from "react";
 // import { BasicTextSize } from "./MainDesignComponents";
 
 export const colors = {
