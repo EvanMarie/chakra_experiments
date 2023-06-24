@@ -37,7 +37,11 @@ import {
   TooltipThree,
   TooltipTwo,
 } from "~/components/overlay/tooltipComponents";
-import { TooltipFormValidityCheck } from "~/components/overlay/tooltipFunctions";
+import {
+  DelayedTooltipExample,
+  DynamicTooltipExample,
+  TooltipFormValidityCheck,
+} from "~/components/overlay/tooltipFunctions";
 import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
@@ -179,13 +183,15 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>
-              <b>Tooltip with Input Form:</b> At the core of this component are
-              two FormControl sections, each composed of a FormLabel and an
-              Input field. Chakra UI's FormControl provides a streamlined way to
-              manage related form elements and their respective labels, ensuring
-              a consistent layout and behavior. The input fields leverage Chakra
-              UI's design system, including the bg="white" style attribute, to
-              create visually appealing text inputs for users.
+              <b>Tooltip with Input Form:</b> The following example contains two
+              FormControl sections, each composed of a FormLabel and an Input
+              field. Chakra UI's <b>FormControl</b> provides a streamlined way
+              to manage related form elements and their respective labels,
+              ensuring a consistent layout and behavior. The Tooltip wraps
+              around a Button element, providing extra information to the user
+              when they hover over or focus on the button. The tooltip's text is
+              dynamically sourced from the tooltipLabel variable, demonstrating
+              the ease of injecting dynamic content into Chakra UI components.
             </HighlightText>
             <MyFlex>
               <TooltipFormValidityCheck />
@@ -195,16 +201,44 @@ export default function chakra_section() {
             </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
+            <HighlightText>
+              <b>Dynamic Tooltip</b>: In this example, the tooltip's content
+              changes based on the current state of the component, which makes
+              for a responsive and interactive user experience. Here, the
+              <b>Tooltip</b> wraps around a Button element, and the tooltip's
+              label changes depending on whether the button has been clicked or
+              not. We use the <b>useBoolean</b> hook from Chakra UI to manage
+              the button's clicked state, and the <b>handleClick</b> function
+              toggles this state. The tooltip's label then displays different
+              text based on this state, providing a dynamic tooltip experience.
+            </HighlightText>
             <MyFlex>
-              {" "}
-              {/* <MiniCode>{`import {Tooltip} from '@chakra-ui/react'`}</MiniCode> */}
+              <DynamicTooltipExample />
             </MyFlex>
+            <ModalCode>
+              <Overlay.H17 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <MyFlex></MyFlex>
-            <ModalCode></ModalCode>
+            <HighlightText>
+              <b>Using Tooltip Delay</b>: This example shows a tooltip that only
+              appears after a certain delay, which can be used to prevent
+              accidental reveals of tooltips. In this instance, the{" "}
+              <b>Tooltip</b>
+              component wraps around a <b>Button</b> and uses the{" "}
+              <b>openDelay</b> property to specify a delay of 1000 milliseconds
+              (or 1 second) before the tooltip will appear. This feature is
+              useful when you want to prevent tooltips from appearing instantly,
+              such as when a user accidentally hovers over a button. The
+              openDelay property showcases Chakra UI's flexibility and attention
+              to enhancing user experience.
+            </HighlightText>
+            <MyFlex>
+              <DelayedTooltipExample />
+            </MyFlex>
+            <ModalCode>
+              <Overlay.H18 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

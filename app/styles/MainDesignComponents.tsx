@@ -510,11 +510,10 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <Box w="100%" justifyContent="left" textAlign="left">
-      <h2>
-        <Text size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
-          {children}
-        </Text>
-      </h2>
+      <Text size={size} color={color} mb={mb} mt={mt} fontWeight="bold">
+        {children}
+      </Text>
+
       <Divider color="mainText" opacity="0.3" variant="dashed" mb={3} mt={0} />
     </Box>
   );

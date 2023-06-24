@@ -25,7 +25,7 @@ const CovertCandyScheme = {
   300: "#FFA6AA", // accent_1, * adobe
   400: "#a7d5fa", // accent_3 * old accent 2
   425: "#7D3080", // examplePurple
-  450: "#E26BB2", // linkColor *
+  450: "#D667A4", // linkColor *
   475: "#B8264D", // exampleRed
   500: "#532291", // darkAccent_1
   600: "#5E515B", // sectionColor *adobe

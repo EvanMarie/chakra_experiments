@@ -13,21 +13,22 @@ import {
   Tooltip,
   VStack,
   forwardRef,
+  useBoolean,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { VscSmiley } from "react-icons/vsc";
 import { MyFlex, SingleExample } from "~/styles/MainDesignComponents";
-import { TooltipSeven } from "./tooltipComponents";
 import { Highlighter } from "../styling/highlighter";
 import { ButtonStyles } from "~/styles/DesignComponents";
 
 const TooltipContentStyles = {
-  bg: "accent_1",
-  color: "darkAccent_3",
+  bg: "tipBackground",
+  color: "background",
   border: "1px solid accent_3",
   borderColor: "darText",
   p: 2,
   textAlign: "center",
+  boxShadow: "2xl",
   width: "250px",
 };
 
@@ -98,7 +99,7 @@ export function TooltipFunctionThree() {
 export function TooltipFunctionFour() {
   return (
     <SingleExample bg="background">
-      <MyFlex bg="accent_2" w="fit-content" borderRadius="md">
+      <MyFlex bg="tipBackground" w="fit-content" borderRadius="md">
         <Tooltip
           label="Have a great day!"
           fontSize="md"
@@ -349,11 +350,51 @@ export function TooltipFormValidityCheck() {
           onChange={handleNumberChange}
         />
       </FormControl>
-      <Tooltip label={tooltipLabel} placement="top">
+      <Tooltip
+        bg="accent_1"
+        color="background"
+        label={tooltipLabel}
+        placement="bottom"
+      >
         <Button sx={ButtonStyles} onClick={handleCheckFormClick}>
           Check Form
         </Button>
       </Tooltip>
     </VStack>
+  );
+}
+
+/* ********************************************************************** */
+export function DynamicTooltipExample() {
+  const [isClicked, setIsClicked] = useBoolean(false);
+
+  const handleClick = () => setIsClicked.toggle();
+
+  return (
+    <Tooltip
+      bg="accent_1"
+      color="background"
+      placement="bottom"
+      label={isClicked ? "You did it!!" : "Click me"}
+      closeDelay={3000}
+    >
+      <Button sx={ButtonStyles} onClick={handleClick}>
+        Dynamic Tooltip
+      </Button>
+    </Tooltip>
+  );
+}
+
+/* ********************************************************************** */
+export function DelayedTooltipExample() {
+  return (
+    <Tooltip
+      bg="accent_1"
+      color="background"
+      label="I appear after 1 second"
+      openDelay={1000}
+    >
+      <Button sx={ButtonStyles}>Wait for it...</Button>
+    </Tooltip>
   );
 }

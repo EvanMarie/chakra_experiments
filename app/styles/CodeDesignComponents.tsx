@@ -9,6 +9,7 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
+  ModalHeader,
   ModalOverlay,
   Portal,
   Text,
@@ -18,6 +19,7 @@ import { useEffect, useRef, useState } from "react";
 
 import javascript from "highlight.js/lib/languages/javascript";
 import { DiCode } from "react-icons/di";
+import { ButtonStyles } from "./DesignComponents";
 hljs.registerLanguage("javascript", javascript);
 
 /* ******************************EXPANDABLE******************************* */
@@ -80,11 +82,14 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
           isOpen={isExpanded}
           onClose={handleCloseModal}
           size="2xl"
-          colorScheme="teal"
         >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalCloseButton />
+          <ModalOverlay
+            bg="rgba(0,0,0,0.5)"
+            backdropFilter="blur(3px) hue-rotate(90deg)"
+          />
+          <ModalContent bg="tipBackground">
+            <ModalHeader>Example in Code:</ModalHeader>
+            <ModalCloseButton top={1} insetEnd={1} />
             <ModalBody>
               <Box p={3}>{children}</Box>
             </ModalBody>
