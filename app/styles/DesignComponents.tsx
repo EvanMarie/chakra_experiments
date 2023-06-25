@@ -351,7 +351,7 @@ export function CollapsibleExample({
 interface IHeartComponentProps extends TextProps {
   children?: React.ReactNode;
   fontFamily?: string;
-  fontSize?: string | number;
+  fontSize?: string | number | object;
   bgGradient?: string | undefined;
   [key: string]: any;
 }

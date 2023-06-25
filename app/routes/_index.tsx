@@ -1,6 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { BasicText, HL, MyDivider, MyHeading } from "~/styles/DesignComponents";
-
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 import {
@@ -10,6 +9,7 @@ import {
   SectionDescription,
 } from "~/styles/MainDesignComponents";
 import { Box, HStack, Link } from "@chakra-ui/react";
+import WelcomeBanner from "~/components/app_components/welcomeBanner";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -28,6 +28,7 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <BigBackgroundBox display="flex" flex="1" height="100hv">
+      <WelcomeBanner />
       <MyHeading color={"accent_2"}>The Chakra-UI Library</MyHeading>
       <MyDivider mt={0} />
       <Box

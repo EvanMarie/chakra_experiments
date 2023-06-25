@@ -165,7 +165,7 @@ export function BadgeFive() {
       <MyFlex bg="background">
         <Text fontSize="xl" fontWeight="bold">
           Jasper Jenkins
-          <Badge ml="3" fontSize="0.6em" colorScheme="pink">
+          <Badge ml="3" fontSize="0.5em" colorScheme="pink">
             New
           </Badge>
         </Text>

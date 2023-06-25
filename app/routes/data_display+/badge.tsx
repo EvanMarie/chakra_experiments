@@ -1,7 +1,13 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, ButtonStyles, HL, Mono } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  ButtonStyles,
+  CatsBouncing,
+  HL,
+  Mono,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -197,21 +203,33 @@ export default function chakra_section() {
             <HighlightExample h="175px">
               <MyFlex p={0}>
                 {" "}
-                <VStack spacing={2}>
-                  <HStack alignItems="start" w="100%">
+                <VStack spacing={2} mt={2}>
+                  <HStack
+                    alignItems="start"
+                    justifyContent="space-between"
+                    w="100%"
+                  >
                     <Text m={0} w="50%">
                       Finish project report
                     </Text>
 
                     <Badge colorScheme="yellow">In Progress</Badge>
                   </HStack>
-                  <HStack alignItems="start" w="100%">
+                  <HStack
+                    alignItems="start"
+                    w="100%"
+                    justifyContent="space-between"
+                  >
                     <Text m={0} w="50%">
                       Update client on project status
                     </Text>
                     <Badge colorScheme="green">Completed</Badge>
                   </HStack>
-                  <HStack alignItems="start" w="100%">
+                  <HStack
+                    alignItems="start"
+                    w="100%"
+                    justifyContent="space-between"
+                  >
                     <Text m={0} w="50%">
                       Organize project files
                     </Text>
@@ -254,11 +272,13 @@ export default function chakra_section() {
             </HighlightText>
             <HighlightExample h="80px">
               <MyFlex>
-                <Button sx={ButtonStyles}>
-                  <BellIcon />
-                  <Badge colorScheme="red" ml="1">
-                    3
-                  </Badge>
+                <Button sx={ButtonStyles} w="80px">
+                  <HStack justifyContent="space-evenly">
+                    <BellIcon boxSize={6} />
+                    <Badge colorScheme="red" ml="1" fontSize="0.9em" p="5px">
+                      3
+                    </Badge>
+                  </HStack>
                 </Button>
               </MyFlex>
             </HighlightExample>

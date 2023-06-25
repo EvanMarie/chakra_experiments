@@ -126,11 +126,11 @@ import { TfiApple } from "react-icons/Tfi";
 import { WiDayLightning } from "react-icons/Wi";
 
 <HStack spacing={4}>
-  <Icon as={TbLollipop} boxSize={9} color="pink.400" />
-  <Icon as={TiBell} boxSize={9} color="yellow.400" />
-  <Icon as={SiAdobe} boxSize={9} color="purple.400" />
-  <Icon as={TfiApple} boxSize={9} color="orange.400" />
-  <Icon as={WiDayLightning} boxSize={9} color="red.400" />
+  <Icon as={FaAppStoreIos} boxSize={9} color="pink.400" />
+  <Icon as={FaBluetooth} boxSize={9} color="yellow.400" />
+  <Icon as={FaCodepen} boxSize={9} color="purple.400" />
+  <Icon as={FaGooglePlay} boxSize={9} color="orange.400" />
+  <Icon as={FaKickstarterK} boxSize={9} color="red.400" />
 </HStack>
 `}</Highlighter>
         </ModalCode>

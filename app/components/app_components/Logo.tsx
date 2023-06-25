@@ -3,7 +3,7 @@ import { IHeartComponents } from "~/styles/DesignComponents";
 import { Link as RemixLink } from "@remix-run/react";
 
 interface LogoProps {
-  fontSize?: string | undefined;
+  fontSize?: string | number | object;
 }
 
 const Logo = ({ fontSize = "16px" }: LogoProps) => {
