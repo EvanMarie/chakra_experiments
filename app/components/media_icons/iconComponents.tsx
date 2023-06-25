@@ -18,12 +18,14 @@ import {
   EmailIcon,
   HamburgerIcon,
 } from "@chakra-ui/icons";
-import { TbLollipop } from "react-icons/Tb";
-import { TiBell } from "react-icons/Ti";
-import { SiAdobe } from "react-icons/Si";
-import { TfiApple } from "react-icons/Tfi";
-import { WiDayLightning } from "react-icons/Wi";
 import { IconCircleExample, IconCirlceCreateIcon } from "./iconFunctions";
+import {
+  FaAppStoreIos,
+  FaBluetooth,
+  FaCodepen,
+  FaGooglePlay,
+  FaKickstarterK,
+} from "react-icons/fa";
 
 /* ********************************************************************** */
 
@@ -107,11 +109,11 @@ export function IconTwo() {
         <SingleExample>
           <MyFlex bg="background">
             <HStack spacing={4}>
-              <Icon as={TbLollipop} boxSize={9} color="pink.400" />
-              <Icon as={TiBell} boxSize={9} color="yellow.400" />
-              <Icon as={SiAdobe} boxSize={9} color="purple.400" />
-              <Icon as={TfiApple} boxSize={9} color="orange.400" />
-              <Icon as={WiDayLightning} boxSize={9} color="red.400" />
+              <Icon as={FaAppStoreIos} boxSize={9} color="pink.400" />
+              <Icon as={FaBluetooth} boxSize={9} color="yellow.400" />
+              <Icon as={FaCodepen} boxSize={9} color="purple.400" />
+              <Icon as={FaGooglePlay} boxSize={9} color="orange.400" />
+              <Icon as={FaKickstarterK} boxSize={9} color="red.400" />
             </HStack>
           </MyFlex>
         </SingleExample>
