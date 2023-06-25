@@ -92,7 +92,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
       nav && nav.label === navElement.label;
 
     const selectedStyles = {
-      bg: "accent_3",
+      bg: "accent_2",
       fontSize: "lg",
       color: "background",
       fontWeight: "bold",

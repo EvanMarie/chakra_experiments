@@ -195,6 +195,48 @@ export const navElements: NavElement[] = [
       },
     ],
   },
+  {
+    link: "/data_display",
+    label: "Data Display",
+    subElements: [
+      {
+        link: "/data_display/badge",
+        label: "Badge",
+      },
+      {
+        link: "/data_display/card",
+        label: "Card",
+      },
+      {
+        link: "/data_display/code",
+        label: "Code",
+      },
+      {
+        link: "/data_display/divider",
+        label: "Divider",
+      },
+      {
+        link: "/data_display/keyboard",
+        label: "Keyboard",
+      },
+      {
+        link: "/data_display/list",
+        label: "List",
+      },
+      {
+        link: "/data_display/statistics",
+        label: "Statistics",
+      },
+      {
+        link: "/data_display/table",
+        label: "Table",
+      },
+      {
+        link: "/data_display/tag",
+        label: "Tag",
+      },
+    ],
+  },
 ];
 
 export const getNavElementForUrl = (
