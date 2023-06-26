@@ -77,7 +77,24 @@ const theme = extendTheme({
     Tabs: {
       colorScheme: "red",
     },
+    Kbd: {
+      baseStyle: {
+        bg: "background",
+        color: "accent_2",
+        p: "0.1rem 0.4rem",
+        marginX: "0.2rem",
+      },
+    },
+    Code: {
+      baseStyle: {
+        bg: "sidebarBackground",
+        color: "accent_2",
+        paddingX: "0.6rem",
+        marginY: "0rem",
+        borderRadius: "0.2rem",
+        fontSize: "0.8rem",
+      },
+    },
   },
 });
-
 export default theme;

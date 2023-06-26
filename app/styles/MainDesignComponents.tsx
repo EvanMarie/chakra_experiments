@@ -175,16 +175,11 @@ export const GridBoxDefaults = {
   justifyContent: "center",
   alignItems: "center",
   marginY: 2,
+  color: "black",
   borderRadius: "md",
   boxShadow: "lg",
+  bg: "tipBackground",
 };
-
-// export const GridBoxTextSizes = {
-//   base: "14px",
-//   small: "16px",
-//   md: "16px",
-//   lg: "14px",
-// };
 
 export const GridBoxPaddingValues = {
   base: "5px 10px",
@@ -198,14 +193,7 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Flex
-      {...GridBoxDefaults}
-      flexDirection="column"
-      bg={usefulTipColor}
-      color={"darkText"}
-      // fontSize={SmallTextSize}
-      padding={PaddingValues}
-    >
+    <Flex {...GridBoxDefaults} flexDirection="column" padding={PaddingValues}>
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
@@ -227,14 +215,7 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Flex
-      {...GridBoxDefaults}
-      flexDirection="column"
-      bg={usefulTipColor}
-      color={"darkText"}
-      // fontSize={SmallTextSize}
-      padding={PaddingValues}
-    >
+    <Flex {...GridBoxDefaults} flexDirection="column" padding={PaddingValues}>
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
@@ -256,14 +237,7 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Flex
-      {...GridBoxDefaults}
-      flexDirection="column"
-      bg={usefulTipColor}
-      color={"darkText"}
-      // fontSize={SmallTextSize}
-      padding={PaddingValues}
-    >
+    <Flex {...GridBoxDefaults} flexDirection="column" padding={PaddingValues}>
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
@@ -655,7 +629,7 @@ export function HighlightExample({
   bg = "background",
   p = 2,
   color = "white",
-  borderRadius = "sm",
+  borderRadius = "md",
   maxWidth = { base: "300px", sm: "400px", md: "400px", lg: "250px" },
   ...restProps
 }: HighlightExampleProps) {
@@ -664,7 +638,7 @@ export function HighlightExample({
       display="flex"
       justifyContent="center"
       alignItems="center"
-      borderRadius="sm"
+      borderRadius={borderRadius}
       h={h}
       w={w}
       bg={bg}

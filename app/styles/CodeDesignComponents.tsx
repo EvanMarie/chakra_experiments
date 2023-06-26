@@ -13,6 +13,7 @@ import {
   ModalOverlay,
   Portal,
   Text,
+  VStack,
 } from "@chakra-ui/react";
 import hljs from "highlight.js";
 import { useEffect, useRef, useState } from "react";
@@ -114,4 +115,14 @@ const MiniCodeStyle = { maxWidth: "375px", padding: "6px 8px" };
 
 export function MiniCode({ style = MiniCodeStyle, children }: MiniCodeProps) {
   return <Highlighter style={style}>{children}</Highlighter>;
+}
+
+/* ******************************CODE BLOCK******************************* */
+
+export function CBlock({ children }: MiniCodeProps) {
+  return (
+    <VStack alignItems="left" spacing={0}>
+      {children}
+    </VStack>
+  );
 }

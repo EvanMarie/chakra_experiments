@@ -1,4 +1,4 @@
-import { Flex, Link, Text, VStack } from "@chakra-ui/react";
+import { Flex, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { LinksFunction } from "@remix-run/node";
 import { IHeartComponents, Mono } from "~/styles/DesignComponents";
 import { MyFlex } from "~/styles/MainDesignComponents";
@@ -33,8 +33,13 @@ const Footer = () => {
             copyright © 2023{" "}
             <Link href="http://www.iheartcomponents.com" target="_blank">
               <IHeartComponents>IHeartComponents</IHeartComponents>
+            </Link>{" "}
+            |{" "}
+            <Link href="https://evanmarie.com" target="_blank">
+              <Mono>evanmarie.com</Mono>
             </Link>
           </Text>
+
           <Text m={0}>
             created with love by the <Logo /> team using{" "}
             <Link
