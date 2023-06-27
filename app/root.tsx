@@ -1,6 +1,7 @@
 import {
   Box,
   ChakraProvider,
+  ColorModeProvider,
   Flex,
   HStack,
   Link,
@@ -52,121 +53,123 @@ export default function App() {
       </head>
       <body>
         <ChakraProvider theme={theme}>
-          <Flex
-            width="100%"
-            h="100%"
-            overflowX="hidden"
-            justifyContent="flex-start"
-            alignItems="center"
-            // bg="background"
-            direction="column"
-            bgImage="url('/images/calm_triangles_vignette.png')"
-            bgSize="cover"
-            bgPosition="center"
-            position="fixed"
-            // bgRepeat="repeat"
-            padding={{ base: 1, md: 4 }}
-          >
+          <ColorModeProvider options={{ initialColorMode: "dark" }}>
             <Flex
-              bg="background"
-              width="100%" //SPans the whole page
-              maxWidth={{ base: "100%", lg: "1333px" }} // keeps it from getting too wide
-              flexDirection="column" // separates nav from body
-              borderRadius="lg" // trying to enclose footer too
-              flex="1"
+              width="100%"
+              h="100%"
+              overflowX="hidden"
               justifyContent="flex-start"
-              overflow-x="hidden"
+              alignItems="center"
+              // bg="background"
+              direction="column"
+              bgImage="url('/images/calm_triangles_vignette.png')"
+              bgSize="cover"
+              bgPosition="center"
+              position="fixed"
+              // bgRepeat="repeat"
+              padding={{ base: 1, md: 4 }}
             >
               <Flex
-                justifyContent="flex-start"
-                alignItems="flex-start"
-                overflow-x="hidden"
                 bg="background"
-                borderRadius="lg"
+                width="100%" //SPans the whole page
+                maxWidth={{ base: "100%", lg: "1333px" }} // keeps it from getting too wide
+                flexDirection="column" // separates nav from body
+                borderRadius="lg" // trying to enclose footer too
+                flex="1"
+                justifyContent="flex-start"
+                overflow-x="hidden"
               >
-                <Box
-                  height="100%"
+                <Flex
+                  justifyContent="flex-start"
+                  alignItems="flex-start"
                   overflow-x="hidden"
-                  display={["none", "none", "block"]}
-                  pb={3}
                   bg="background"
-                  paddingLeft={6}
-                  paddingTop={2}
                   borderRadius="lg"
                 >
                   <Box
-                    mt={2}
-                    // bg="darkAccent_3"
-                    // height="100%"
-                    // display={["none", "none", "block"]} // moved higher up
-
-                    width={navMenuWidth}
-                    borderRadius="md"
+                    height="100%"
+                    overflow-x="hidden"
+                    display={["none", "none", "block"]}
                     pb={3}
+                    bg="background"
+                    paddingLeft={6}
+                    paddingTop={2}
+                    borderRadius="lg"
                   >
-                    <VStack
-                      spacing={1}
-                      position="fixed"
-                      // maxHeight="93vh"
-                      height="93vh"
-                      overflowY="auto"
-                      overflowX="hidden"
-                      w={navMenuWidth}
-                      bg="darkAccent_3"
+                    <Box
+                      mt={2}
+                      // bg="darkAccent_3"
+                      // height="100%"
+                      // display={["none", "none", "block"]} // moved higher up
+
+                      width={navMenuWidth}
                       borderRadius="md"
                       pb={3}
                     >
-                      <MyFlex>
-                        <SectionHeading mb={0}>
-                          <Link href="https://chakra-ui.com/" target="_blank">
-                            Chakra-UI
-                          </Link>
-                        </SectionHeading>
-                      </MyFlex>
+                      <VStack
+                        spacing={1}
+                        position="fixed"
+                        // maxHeight="93vh"
+                        height="93vh"
+                        overflowY="auto"
+                        overflowX="hidden"
+                        w={navMenuWidth}
+                        bg="darkAccent_3"
+                        borderRadius="md"
+                        pb={3}
+                      >
+                        <MyFlex>
+                          <SectionHeading mb={0}>
+                            <Link href="https://chakra-ui.com/" target="_blank">
+                              Chakra-UI
+                            </Link>
+                          </SectionHeading>
+                        </MyFlex>
 
-                      <MainNavigation
-                        initialIndex={navIndex}
-                        onChange={setNavIndex}
-                      />
-                    </VStack>
+                        <MainNavigation
+                          initialIndex={navIndex}
+                          onChange={setNavIndex}
+                        />
+                      </VStack>
+                    </Box>
                   </Box>
-                </Box>
-                <Flex
-                  flex="1"
-                  justifyContent="flex-start"
-                  alignItems="center"
-                  direction="column"
-                  overflow-x="hidden"
-                  borderRadius="lg"
-                >
                   <Flex
-                    direction="column"
-                    width="100%"
-                    bg="background"
-                    overflow="hidden"
-                    paddingX={1}
-                    maxWidth="100%"
-                    justifyContent="center"
+                    flex="1"
+                    justifyContent="flex-start"
                     alignItems="center"
+                    direction="column"
                     overflow-x="hidden"
                     borderRadius="lg"
                   >
-                    <Flex w="100%" paddingX={5}>
-                      <HStack justify="space-between">
-                        <BreadCrumbs />
-                        <Box position="fixed" top="13px" right="30px">
-                          <NavMenu />
-                        </Box>
-                      </HStack>
-                    </Flex>
+                    <Flex
+                      direction="column"
+                      width="100%"
+                      bg="background"
+                      overflow="hidden"
+                      paddingX={1}
+                      maxWidth="100%"
+                      justifyContent="center"
+                      alignItems="center"
+                      overflow-x="hidden"
+                      borderRadius="lg"
+                    >
+                      <Flex w="100%" paddingX={5}>
+                        <HStack justify="space-between">
+                          <BreadCrumbs />
+                          <Box position="fixed" top="13px" right="30px">
+                            <NavMenu />
+                          </Box>
+                        </HStack>
+                      </Flex>
 
-                    <Outlet />
+                      <Outlet />
+                    </Flex>
+                    <Footer />
                   </Flex>
-                  <Footer />
                 </Flex>
               </Flex>
             </Flex>
-          </Flex>
+          </ColorModeProvider>
         </ChakraProvider>
         <ScrollRestoration />
         <Scripts />

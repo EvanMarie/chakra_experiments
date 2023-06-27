@@ -10,7 +10,12 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, Mono, PlaceholderImage } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  HL,
+  Mono,
+  PlaceholderImage,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -92,18 +97,17 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <Mono>Tabs</Mono>: Provides context and state for all
-                  components
+                  <HL>Tabs</HL>: Provides context and state for all components
                 </li>
                 <li>
-                  <Mono>TabList</Mono>: Wrapper for the Tab components
+                  <HL>TabList</HL>: Wrapper for the Tab components
                 </li>
                 <li>
-                  <Mono>Tab</Mono>: element that serves as a label for one of
-                  the tab panels and can be activated to display that panel.
+                  <HL>Tab</HL>: element that serves as a label for one of the
+                  tab panels and can be activated to display that panel.
                 </li>
                 <li>
-                  <Mono>TabPanels</Mono>: Wrapper for the TabPanel components
+                  <HL>TabPanels</HL>: Wrapper for the TabPanel components
                   TabPanel: element that contains the content associated with a
                   tab
                 </li>

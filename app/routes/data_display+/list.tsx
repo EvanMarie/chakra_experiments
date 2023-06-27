@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, CatsBouncing, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -26,7 +26,7 @@ import {
 } from "~/styles/MainDesignComponents";
 import { BiCheckboxMinus, BiCheckboxChecked } from "react-icons/bi";
 import { MdPerson } from "react-icons/md";
-
+import * as Data from "~/mardownExamples/data_display/index";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
@@ -385,33 +385,52 @@ export default function chakra_section() {
               items triggering actions when clicked. This is especially useful
               for navigational menus or selectable items.
               <br />
-              In this example, we're giving each ListItem a cursor style of
-              pointer to indicate that it's clickable. The _hover prop adds a
-              background color when the item is hovered over, providing a visual
-              feedback to users. The onClick prop is used to handle click
-              events.
+              In this example, we're giving each <b>ListItem</b> a cursor style
+              of pointer to indicate that it's clickable. The <b>_hover</b> prop
+              adds a background color when the item is hovered over, providing a
+              visual feedback to users. Voilá, a navigation menu!
             </HighlightText>
-            <HighlightExample h="80px">
+            <HighlightExample h="120px">
               <MyFlex>
                 <List as="nav" width="200px">
                   <ListItem
+                    p={2}
                     cursor="pointer"
-                    _hover={{ bg: "gray.100" }}
-                    onClick={() => console.log("First Item Clicked")}
+                    fontWeight="bold"
+                    color="linkColor"
+                    _hover={{
+                      bg: "accent_1",
+                      color: "background",
+                      borderRadius: "sm",
+                    }}
+                    onClick={() => {
+                      window.open(CatsBouncing, "_blank");
+                    }}
                   >
                     First Item
                   </ListItem>
                   <ListItem
+                    p={2}
                     cursor="pointer"
-                    _hover={{ bg: "gray.100" }}
-                    onClick={() => console.log("Second Item Clicked")}
+                    fontWeight="bold"
+                    color="linkColor"
+                    _hover={{
+                      bg: "accent_1",
+                      color: "background",
+                      borderRadius: "sm",
+                    }}
+                    onClick={() => {
+                      window.open(CatsBouncing, "_blank");
+                    }}
                   >
                     Second Item
                   </ListItem>
                 </List>
               </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Data.H04 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
@@ -421,9 +440,9 @@ export default function chakra_section() {
               profiles, where each list item shows user's avatar and their
               details.
             </HighlightText>
-            <HighlightExample h="80px">
+            <HighlightExample h="120px">
               <MyFlex>
-                <List spacing={3}>
+                <List spacing={1}>
                   <ListItem>
                     <ListIcon as={MdPerson} boxSize={6} />
                     <Box>
@@ -431,29 +450,40 @@ export default function chakra_section() {
                       <Text fontSize="sm">janedoe@example.com</Text>
                     </Box>
                   </ListItem>
-                  {/* Add more list items here */}
                 </List>
               </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Highlighter>{`<List spacing={1}>
+  <ListItem>
+    <ListIcon as={MdPerson} boxSize={6} />
+    <Box>
+      <Text fontWeight="bold">Jane Doe</Text>
+      <Text fontSize="sm">janedoe@example.com</Text>
+    </Box>
+  </ListItem>
+</List>`}</Highlighter>
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
-              <b>Breadcrumbs with List</b>: You can use Chakra UI's List
-              component to create breadcrumbs, which can provide navigation aid
-              in user interfaces. A breadcrumb can be particularly beneficial
-              for complex interfaces with hierarchical structures.
+              <b>Breadcrumbs with List</b>: The <b>List</b>
+              component is a great way to create breadcrumbs, which can provide
+              navigation aid in user interfaces. A breadcrumb can be
+              particularly beneficial for complex interfaces with hierarchical
+              structures.
               <br />
-              In this example, we're using the List and ListItem components to
-              create a breadcrumb navigation. Each ListItem is either a
-              navigational link created using react-router-dom's Link component,
-              or a divider represented by /. We use the mx prop to add
-              horizontal margin to the dividers, and display="flex" on the List
-              to align the items horizontally.
+              In this example, we're using the <b>List</b> and <b>ListItem</b>{" "}
+              components to create a breadcrumb navigation. Each <b>ListItem</b>{" "}
+              is either a navigational link created using a <b>Link</b>{" "}
+              component, or a divider represented by <b>/</b>. We use the{" "}
+              <b>mx</b> prop to add horizontal margin to the dividers, and{" "}
+              <b>display="flex"</b> on the <b>List</b> to align the items
+              horizontally.
             </HighlightText>
             <HighlightExample h="80px">
               <MyFlex>
-                <List display="flex">
+                <List display="flex" color="linkColor">
                   <ListItem>
                     <Link href="/">Home</Link>
                   </ListItem>

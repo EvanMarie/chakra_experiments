@@ -54,7 +54,7 @@ interface BigBackgroundBoxProps extends BoxProps {
 export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
   return (
     <Box
-      p="5px"
+      p={{ base: 1, sm: 3, md: 4, lg: 5 }}
       w={MainWidth}
       maxWidth={MainMaxWidth}
       bg="background"
@@ -62,6 +62,7 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       justifyContent={"center"}
       alignItems={"center"}
       overflow-x="hidden"
+      borderRadius="sm"
     >
       <Box margin="auto 0" overflow-x="hidden">
         <Box
@@ -386,7 +387,7 @@ export function SectionContainer({
 }: SectionContainerProps) {
   const defaultFlexProps = {
     paddingY: 3,
-    paddingX: 5,
+    paddingX: { base: 1, sm: 4, md: 4, lg: 5 },
     marginBottom: 0,
     bg: "sectionColor",
     justifyContent: "center",
@@ -493,7 +494,6 @@ export function SectionDescription({
   width = "100%",
 }: SectionDescriptionProps) {
   return (
-    //size={size}
     <Box color={color} paddingTop={paddingTop} paddingBottom={paddingBottom}>
       {children}
     </Box>
@@ -542,7 +542,14 @@ interface SingleExampleProps extends BoxProps {
 
 export function SingleExample({ children }: SingleExampleProps) {
   return (
-    <VStack w="100%" spacing={2} verticalAlign="middle">
+    <VStack
+      w="100%"
+      spacing={2}
+      verticalAlign="middle"
+      m={0}
+      paddingX={{ base: 1, sm: 2, md: 3 }}
+      paddingY={{ base: 1, sm: 2, md: 3 }}
+    >
       {children}
     </VStack>
   );
@@ -627,7 +634,9 @@ export function HighlightExample({
   h = "200px",
   w = "100%",
   bg = "background",
-  p = 2,
+  paddingX = { base: 2, sm: 4, md: 4, lg: 1 },
+  paddingY = 2,
+  mt = 3,
   color = "white",
   borderRadius = "md",
   maxWidth = { base: "300px", sm: "400px", md: "400px", lg: "250px" },
@@ -642,7 +651,8 @@ export function HighlightExample({
       h={h}
       w={w}
       bg={bg}
-      p={p}
+      paddingX={paddingX}
+      paddingY={paddingY}
       color={color}
       maxWidth={maxWidth}
       {...restProps}

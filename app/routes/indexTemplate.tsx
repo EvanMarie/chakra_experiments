@@ -31,47 +31,47 @@ export default function chakra_feedback() {
             <ul>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL></HL>: Point
+                  <HL>🔗</HL>: Point
                 </BasicText>
               </li>
             </ul>

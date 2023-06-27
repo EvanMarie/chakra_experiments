@@ -1,6 +1,8 @@
 import {
   Box,
   BoxProps,
+  Code,
+  CodeProps,
   Flex,
   FlexProps,
   Grid,
@@ -224,25 +226,6 @@ export function MyDivider({
   );
 }
 
-interface HighlightMeProps {
-  children?: React.ReactNode;
-  color?: string;
-  fontWeight?: string;
-  size?: string | number;
-}
-
-export function HL({
-  children,
-  color = "accent_2",
-  fontWeight = "bold",
-}: HighlightMeProps) {
-  return (
-    <Text as="span" color={color} fontWeight={fontWeight}>
-      {children}
-    </Text>
-  );
-}
-
 interface MonoProps {
   children?: React.ReactNode;
   fontSize?: string | number;
@@ -399,5 +382,50 @@ export function PlaceholderImage({
         src={`https://generative-placeholders.glitch.me/image?width=${width}&height=${height}&style=${type}&gap=${gap}&colors=${colors}`}
       />
     </MyFlex>
+  );
+}
+
+// interface HighlightMeProps {
+//   children?: React.ReactNode;
+//   color?: string;
+//   fontWeight?: string;
+//   size?: string | number;
+// }
+
+// export function HL({
+//   children,
+//   color = "accent_2",
+//   fontWeight = "bold",
+// }: HighlightMeProps) {
+//   return (
+//     <Text as="span" color={color} fontWeight={fontWeight}>
+//       {children}
+//     </Text>
+//   );
+// }
+
+interface HighlightMeProps extends CodeProps {
+  children?: React.ReactNode;
+  fontweight?: string;
+  fontSize?: string | object | number;
+  background?: string;
+  color?: string;
+}
+
+export function HL({ children, fontWeight = "normal" }: HighlightMeProps) {
+  const HLSizes = useBreakpointValue({
+    base: "1em",
+    sm: "1em",
+    md: "1em",
+    lg: "1em",
+    xl: "1em",
+  });
+  return (
+    <Code
+      fontWeight={fontWeight}
+      bg="background"
+      color="accent_2"
+      fontSize={HLSizes}
+    >{`${children}`}</Code>
   );
 }

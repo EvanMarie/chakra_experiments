@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Link, VStack } from "@chakra-ui/react";
 
 import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import {
@@ -45,43 +45,60 @@ export default function chakra_feedback() {
             <ul>
               <li>
                 <BasicText>
-                  <HL>Badge</HL>: A lightweight and minimalistic component that
-                  allows you to draw attention or represent a status, category,
-                  or a count of items. Badges can be customized in various
-                  colors and sizes.
+                  <Link href="/data_display/badge">
+                    <HL>Badge 🔗</HL>
+                  </Link>
+                  : A lightweight and minimalistic component that allows you to
+                  draw attention or represent a status, category, or a count of
+                  items. Badges can be customized in various colors and sizes.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Card</HL>: A versatile component for displaying grouped
-                  content or information in an encapsulated view. It provides a
-                  great way to organize and visually separate your content.
+                  <Link href="/data_display/card">
+                    <HL>Card 🔗</HL>
+                  </Link>
+                  : A versatile component for displaying grouped content or
+                  information in an encapsulated view. It provides a great way
+                  to organize and visually separate your content.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Code</HL>: This component is used to display inline code
-                  snippets. It's perfect for technical documentation or
-                  tutorials where you need to showcase code examples.
+                  <Link href="/data_display/code">
+                    <HL>Code 🔗</HL>
+                  </Link>
+                  : This component is used to display inline code snippets. It's
+                  perfect for technical documentation or tutorials where you
+                  need to showcase code examples.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Divider</HL>: As the name suggests, the{" "}
-                  <Mono>Divider</Mono> component is used to create horizontal or
-                  vertical lines to visually separate sections of your UI.
+                  <Link href="/data_display/divider">
+                    <HL>Divider 🔗</HL>
+                  </Link>
+                  : As the name suggests, the <Mono>Divider</Mono> component is
+                  used to create horizontal or vertical lines to visually
+                  separate sections of your UI.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Kbd</HL>: The Kbd (short for Keyboard) component is used
-                  to display keyboard inputs. It's useful in technical documents
-                  or software instructions to represent keyboard shortcuts.
+                  <Link href="/data_display/keyboard">
+                    <HL>Kbd 🔗</HL>
+                  </Link>
+                  : The Kbd (short for Keyboard) component is used to display
+                  keyboard inputs. It's useful in technical documents or
+                  software instructions to represent keyboard shortcuts.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>List</HL>: The <Mono>List</Mono> component, along with{" "}
+                  <Link href="/data_display/list">
+                    <HL>List 🔗</HL>
+                  </Link>
+                  : The <Mono>List</Mono> component, along with{" "}
                   <Mono>ListItem</Mono>, provides an easy way to display a list
                   of items. It supports ordered, unordered, and description
                   lists.
@@ -89,28 +106,36 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <HL>Stat</HL>: This component is designed to display
-                  statistics. It consists of four subcomponents:{" "}
-                  <Mono>StatLabel</Mono>, <Mono>StatNumber</Mono>,{" "}
-                  <Mono>StatHelpText</Mono>, and <Mono>StatArrow</Mono>, which
-                  can be combined to create a rich statistical display.
+                  <Link href="/data_display/statistics">
+                    <HL>Stat 🔗</HL>
+                  </Link>
+                  : This component is designed to display statistics. It
+                  consists of four subcomponents: <Mono>StatLabel</Mono>,{" "}
+                  <Mono>StatNumber</Mono>, <Mono>StatHelpText</Mono>, and{" "}
+                  <Mono>StatArrow</Mono>, which can be combined to create a rich
+                  statistical display.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Table</HL>: The Table component provides a way to create
-                  responsive and accessible tables. It supports several
-                  subcomponents like <Mono>TableCaption</Mono>,{" "}
-                  <Mono>Tbody</Mono>, <Mono>Td</Mono>, <Mono>Th</Mono>,{" "}
-                  <Mono>Thead</Mono>, <Mono>Tr</Mono>, etc., making it easier to
-                  structure and style your tables.
+                  <Link href="/data_display/table">
+                    <HL>Table 🔗</HL>
+                  </Link>
+                  : The Table component provides a way to create responsive and
+                  accessible tables. It supports several subcomponents like{" "}
+                  <Mono>TableCaption</Mono>, <Mono>Tbody</Mono>, <Mono>Td</Mono>
+                  , <Mono>Th</Mono>, <Mono>Thead</Mono>, <Mono>Tr</Mono>, etc.,
+                  making it easier to structure and style your tables.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Tag</HL>: The <Mono>Tag</Mono> component is similar to the{" "}
-                  <Mono>Badge</Mono> but is more suited to represent categories
-                  or labels. It includes <Mono>TagLabel</Mono> and{" "}
+                  <Link href="/data_display/tag">
+                    <HL>Tag 🔗</HL>
+                  </Link>
+                  : The <Mono>Tag</Mono> component is similar to the{" "}
+                  <Mono>Badge 🔗</Mono> but is more suited to represent
+                  categories or labels. It includes <Mono>TagLabel</Mono> and{" "}
                   <Mono>TagCloseButton</Mono> subcomponents which make it
                   possible to create tags with labels and optional close
                   buttons.

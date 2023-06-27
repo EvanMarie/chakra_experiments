@@ -54,6 +54,15 @@ const theme = extendTheme({
     linkColor: CovertCandyScheme[450],
     darkAccent_3: CovertCandyScheme[800],
   },
+  // mode: {
+  //     dark: {
+  //       // Define dark mode colors
+  //       primary: "background",
+  //       secondary: "#718096",
+  //       background: "#1a202c",
+  //       text: "mainText",
+  //     },
+  //   },
 
   breakpoints: {
     base: "0em", // 0px
@@ -89,12 +98,66 @@ const theme = extendTheme({
       baseStyle: {
         bg: "sidebarBackground",
         color: "accent_2",
-        paddingX: "0.6rem",
-        marginY: "0rem",
+        paddingX: "0.2rem",
+        marginY: "0.2rem",
         borderRadius: "0.2rem",
         fontSize: "0.8rem",
       },
     },
+    Table: {
+      baseStyle: {
+        container: {
+          magin: 0,
+        },
+        table: {
+          margin: 0,
+          borderRadius: "lg",
+          overflow: "auto",
+          maxWidth: {
+            base: "325px",
+            sm: "450px",
+            md: "600px",
+            lg: "700px",
+            xl: "900px",
+          },
+          th: {
+            bg: "tipBackground",
+            whiteSpace: "pre-wrap",
+            color: "background",
+            fontSize: {
+              xs: "10px",
+              sm: "0.75rem", // 14px
+              md: "1rem", // 16px
+              lg: "1.125rem", // 18px
+              xl: "1.25rem", // 20px
+            },
+          },
+          tr: {
+            bg: "mainText",
+            color: "background",
+            whiteSpace: "pre-wrap",
+          },
+          td: {
+            bg: "mainText",
+            paddingX: "0.5rem",
+            paddingY: "0.5rem",
+            color: "background",
+            whiteSpace: "pre-wrap",
+            fontSize: {
+              base: "12px",
+              sm: "0.75rem", // 14px
+              md: "1rem", // 16px
+              lg: "1rem", // 18px
+              xl: "1rem", // 20px
+            },
+          },
+          caption: {
+            color: "mainText",
+          },
+        },
+      },
+    },
   },
 });
+
 export default theme;

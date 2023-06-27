@@ -1,4 +1,3 @@
-```javascript
 import { Stat, StatLabel, StatNumber, StatHelpText } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
@@ -22,7 +21,7 @@ const RealTimeStat = () => {
   }, []);
 
   return (
-    <Stat>
+    <Stat textAlign="center">
       <StatLabel>Total Users</StatLabel>
       <StatNumber>{users}</StatNumber>
       <StatHelpText>Updated every second</StatHelpText>
@@ -31,4 +30,3 @@ const RealTimeStat = () => {
 };
 
 export default RealTimeStat;
-```

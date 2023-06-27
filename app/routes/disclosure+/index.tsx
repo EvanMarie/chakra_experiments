@@ -1,4 +1,5 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { LinkIcon } from "@chakra-ui/icons";
+import { Box, Link, VStack } from "@chakra-ui/react";
 import { BasicText, FlexibleBox, HL, Mono } from "~/styles/DesignComponents";
 import {
   BigBackgroundBox,
@@ -28,9 +29,9 @@ export default function chakra_disclosure() {
           </SectionDescription>
           <BasicText>
             Chakra UI offers two main components for Disclosure: accordions and
-            tabs. <HL>Accordions</HL> and <HL>tabs</HL> are user interface
-            components that can be used to organize and display content in a
-            structured and user-friendly way.{" "}
+            tabs. <Mono>Accordions</Mono> and <Mono>tabs</Mono> are user
+            interface components that can be used to organize and display
+            content in a structured and user-friendly way.{" "}
           </BasicText>
           <BasicText>
             In Chakra UI, the <Mono>Accordion</Mono> component is a wrapper that
@@ -45,29 +46,35 @@ export default function chakra_disclosure() {
             <ul>
               <li>
                 <BasicText>
-                  An <Mono>Accordion</Mono> is a UI pattern where content panels
-                  are visible often at a time. The Accordion component is a
-                  vertically stacked set of interactive headings (or "panels")
-                  that each contain a title and a section of content. The
-                  primary use case for this is to collapse and expand content
-                  panels to provide a more manageable view to the user and
-                  reduce information overload. When a user clicks on a panel's
-                  title, the content section expands to reveal the content. If
-                  another panel is clicked, the previous panel often
-                  automatically closes, and the new panel's content expands.
+                  <Link href="/disclosure/accordion">
+                    <HL>Accordion 🔗</HL>
+                  </Link>
+                  : a UI pattern where content panels are visible often at a
+                  time. The Accordion component is a vertically stacked set of
+                  interactive headings (or "panels") that each contain a title
+                  and a section of content. The primary use case for this is to
+                  collapse and expand content panels to provide a more
+                  manageable view to the user and reduce information overload.
+                  When a user clicks on a panel's title, the content section
+                  expands to reveal the content. If another panel is clicked,
+                  the previous panel often automatically closes, and the new
+                  panel's content expands.
                 </BasicText>{" "}
               </li>
               <li>
                 <BasicText>
-                  The <Mono>Tabs</Mono> component, on the other hand, can be
-                  used to create tabbed interfaces in React applications,
-                  allowing users to switch between different sections of content
-                  without leaving the page. <Mono>Tabs</Mono> are also a common
-                  pattern for segmenting identical data into multiple blocks.
-                  The <Mono>Tabs</Mono> component is used to organize and allow
-                  navigation between groups of content that are related and at
-                  the same level of hierarchy. In essence, they are like
-                  "lightweight" pages within a page. Each Tab is associated with{" "}
+                  <Link href="/disclosure/tabs">
+                    <HL>Tabs 🔗</HL>
+                  </Link>
+                  : can be used to create tabbed interfaces in React
+                  applications, allowing users to switch between different
+                  sections of content without leaving the page.{" "}
+                  <Mono>Tabs</Mono> are also a common pattern for segmenting
+                  identical data into multiple blocks. The <Mono>Tabs</Mono>{" "}
+                  component is used to organize and allow navigation between
+                  groups of content that are related and at the same level of
+                  hierarchy. In essence, they are like "lightweight" pages
+                  within a page. Each Tab is associated with{" "}
                   <Mono>TabPanel</Mono>, and only one <Mono>TabPanel</Mono> is
                   active and visible at a time. When a user clicks on a
                   different Tab, its associated <Mono>TabPanel</Mono> becomes

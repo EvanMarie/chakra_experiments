@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Link, VStack } from "@chakra-ui/react";
 import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 import {
   BigBackgroundBox,
@@ -43,20 +43,26 @@ export default function chakra_feedback() {
             <ul>
               <li>
                 <BasicText>
-                  <HL>Alert Dialog</HL>: This is used to prompt user actions and
-                  confirmations, often of a critical nature. Unlike regular
-                  dialogs, alert dialogs are modal, meaning they must be
-                  interacted with before the user can proceed.
+                  <Link href="/overlay/alert_dialog">
+                    <HL>Alert Dialog 🔗</HL>
+                  </Link>
+                  : This is used to prompt user actions and confirmations, often
+                  of a critical nature. Unlike regular dialogs, alert dialogs
+                  are modal, meaning they must be interacted with before the
+                  user can proceed.
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>Drawer</HL>: The <Mono>Drawer</Mono> is another overlay
-                  component that typically slides in from one side of the
-                  screen. It's a versatile component that can be used for
-                  numerous applications, such as housing forms, displaying
-                  additional information, or providing navigation options,
-                  especially in mobile designs.
+                  <Link href="/overlay/drawer">
+                    <HL>Drawer 🔗</HL>
+                  </Link>
+                  : The <Mono>Drawer</Mono> is another overlay component that
+                  typically slides in from one side of the screen. It's a
+                  versatile component that can be used for numerous
+                  applications, such as housing forms, displaying additional
+                  information, or providing navigation options, especially in
+                  mobile designs.
                 </BasicText>
 
                 <BasicText>
@@ -72,12 +78,15 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <HL>Menu</HL>: Thisi is an overlay component in Chakra UI
-                  designed to display a list of choices or actions. These
-                  choices typically appear over the main content, and the menu
-                  itself is usually triggered by a button or other interactive
-                  element. Once a choice is selected or the user clicks away,
-                  the menu disappears.
+                  <Link href="/overlay/menu">
+                    <HL>Menu 🔗</HL>
+                  </Link>
+                  : This is an overlay component in Chakra UI designed to
+                  display a list of choices or actions. These choices typically
+                  appear over the main content, and the menu itself is usually
+                  triggered by a button or other interactive element. Once a
+                  choice is selected or the user clicks away, the menu
+                  disappears.
                 </BasicText>
                 <BasicText>
                   The Menu component in Chakra UI is quite flexible and comes
@@ -88,11 +97,14 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <HL>Modal</HL>: Modal is a type of overlay component that is
-                  typically used to command user attention for actions or input.
-                  This dialog box or content overlay requires user interaction
-                  and often disables interaction with the rest of the
-                  application until it is dismissed.
+                  <Link href="/overlay/modal">
+                    <HL>Modal 🔗</HL>
+                  </Link>
+                  : Modal is a type of overlay component that is typically used
+                  to command user attention for actions or input. This dialog
+                  box or content overlay requires user interaction and often
+                  disables interaction with the rest of the application until it
+                  is dismissed.
                 </BasicText>
                 <BasicText>
                   Modals in Chakra UI are composed of several sub-components:{" "}
@@ -105,8 +117,11 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <HL>Popover</HL>: This is an overlay component that's similar
-                  to <Mono>Menu</Mono>, but it can contain more complex content
+                  <Link href="/overlay/popover">
+                    <HL>Popover 🔗</HL>
+                  </Link>
+                  : This is an overlay component that's similar to{" "}
+                  <Mono>Menu</Mono>, but it can contain more complex content
                   than just a list of options. <Mono>Popover</Mono> can include
                   elements like form inputs, rich text, or interactive
                   components.
@@ -121,10 +136,13 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <HL>Tooltip</HL>: This is a small piece of informational text
-                  that appears when the user hovers over or focuses on an
-                  element. It's a great way to provide extra guidance or
-                  information about a feature without cluttering the interface.
+                  <Link href="/overlay/tooltip">
+                    <HL>Tooltip 🔗</HL>
+                  </Link>
+                  : This is a small piece of informational text that appears
+                  when the user hovers over or focuses on an element. It's a
+                  great way to provide extra guidance or information about a
+                  feature without cluttering the interface.
                 </BasicText>
                 <BasicText>
                   In Chakra UI, <Mono>Tooltip</Mono> comes with a number of
