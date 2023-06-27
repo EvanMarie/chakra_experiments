@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -78,44 +78,45 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Tooltips</HL>: Popovers can be used to provide additional
-                  information about an element when a user hovers over or
-                  focuses on it. This can be useful for explaining complex UI
-                  elements, providing hints, or showing more information about
-                  an item without taking the user away from the current screen.
+                  <BlueBold>Tooltips</BlueBold>: Popovers can be used to provide
+                  additional information about an element when a user hovers
+                  over or focuses on it. This can be useful for explaining
+                  complex UI elements, providing hints, or showing more
+                  information about an item without taking the user away from
+                  the current screen.
                 </li>
                 <li>
-                  <HL>Contextual Menus</HL>: Popovers can also be used to create
-                  context-specific menus. For example, if a user right-clicks on
-                  an item, a popover could appear with actions relevant to that
-                  item.
+                  <BlueBold>Contextual Menus</BlueBold>: Popovers can also be
+                  used to create context-specific menus. For example, if a user
+                  right-clicks on an item, a popover could appear with actions
+                  relevant to that item.
                 </li>{" "}
                 <li>
-                  <HL>User Interaction Feedback</HL>: Popovers can be used to
-                  provide instant feedback or extra details when a user performs
-                  an action. For example, after a user submits a form, a popover
-                  could appear confirming the submission and offering next
-                  steps.
+                  <BlueBold>User Interaction Feedback</BlueBold>: Popovers can
+                  be used to provide instant feedback or extra details when a
+                  user performs an action. For example, after a user submits a
+                  form, a popover could appear confirming the submission and
+                  offering next steps.
                 </li>
                 <li>
-                  <HL>Form Inputs</HL>: Sometimes, a form field may require
-                  additional inputs or complex interaction. In such cases, a
-                  popover can be used to contain these interactions. For
-                  example, a date picker input could show a calendar in a
+                  <BlueBold>Form Inputs</BlueBold>: Sometimes, a form field may
+                  require additional inputs or complex interaction. In such
+                  cases, a popover can be used to contain these interactions.
+                  For example, a date picker input could show a calendar in a
                   popover.
                 </li>
                 <li>
-                  <HL>Detail Previews</HL>: If a user interface contains a list
-                  of items, a popover could be used to show a preview of each
-                  item's details when the user hovers over or clicks the item.
-                  This can be useful to provide more information without needing
-                  to navigate away from the list.
+                  <BlueBold>Detail Previews</BlueBold>: If a user interface
+                  contains a list of items, a popover could be used to show a
+                  preview of each item's details when the user hovers over or
+                  clicks the item. This can be useful to provide more
+                  information without needing to navigate away from the list.
                 </li>
                 <li>
-                  <HL>Instructions/Guidance</HL>: A popover can be used to
-                  provide step-by-step instructions or guidance for a complex
-                  task, guiding the user through the process in a non-intrusive
-                  way.
+                  <BlueBold>Instructions/Guidance</BlueBold>: A popover can be
+                  used to provide step-by-step instructions or guidance for a
+                  complex task, guiding the user through the process in a
+                  non-intrusive way.
                 </li>
               </ul>
             </BulletBox>
@@ -278,36 +279,37 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Deferred Rendering of Popover</HL>: Usually, the Popover
-                    component preloads all the child elements of PopoverContent
-                    onto the DOM even if they are not immediately visible.
-                    However, if you prefer that the popover content gets
-                    rendered only when the Popover is activated, you can make
-                    use of the isLazy property. This can be especially handy
-                    when your PopoverContent needs to be highly efficient or if
-                    it needs to perform network calls upon mounting, which
+                    <BlueBold>Deferred Rendering of Popover</BlueBold>: Usually,
+                    the Popover component preloads all the child elements of
+                    PopoverContent onto the DOM even if they are not immediately
+                    visible. However, if you prefer that the popover content
+                    gets rendered only when the Popover is activated, you can
+                    make use of the isLazy property. This can be especially
+                    handy when your PopoverContent needs to be highly efficient
+                    or if it needs to perform network calls upon mounting, which
                     should only occur when the component is actually shown.
                   </li>
                   <li>
-                    <HL>Ease of Use</HL>: Whenever the term "trigger" is
-                    mentioned, it pertains to the elements contained within the
-                    PopoverTrigger. Similarly, the term "content" refers to the
-                    elements contained within the PopoverContent.
+                    <BlueBold>Ease of Use</BlueBold>: Whenever the term
+                    "trigger" is mentioned, it pertains to the elements
+                    contained within the PopoverTrigger. Similarly, the term
+                    "content" refers to the elements contained within the
+                    PopoverContent.
                   </li>
                   <li>
-                    <HL>Keyboard Usage and Focus Management</HL>: Upon opening
-                    the popover, the focus shifts to the PopoverContent. If the
-                    initialFocusRef is specified, then the focus will go to the
-                    respective element. When the popover is closed, the focus
-                    reverts back to the trigger. If returnFocusOnClose is set to
-                    false, this reversion won't occur. The opening and closing
-                    of the popover can be controlled through both mouse
-                    movements and keyboard inputs, and these interactions can be
-                    configured based on whether the trigger is set to "hover" or
-                    "click".
+                    <BlueBold>Keyboard Usage and Focus Management</BlueBold>:
+                    Upon opening the popover, the focus shifts to the
+                    PopoverContent. If the initialFocusRef is specified, then
+                    the focus will go to the respective element. When the
+                    popover is closed, the focus reverts back to the trigger. If
+                    returnFocusOnClose is set to false, this reversion won't
+                    occur. The opening and closing of the popover can be
+                    controlled through both mouse movements and keyboard inputs,
+                    and these interactions can be configured based on whether
+                    the trigger is set to "hover" or "click".
                   </li>
                   <li>
-                    <HL>ARIA Roles and Properties</HL>: The{" "}
+                    <BlueBold>ARIA Roles and Properties</BlueBold>: The{" "}
                     <Mono>PopoverContent</Mono> is assigned a role depending on
                     whether the trigger is set to "click" or "hover",
                     respectively corresponding to "dialog" and "tooltip".

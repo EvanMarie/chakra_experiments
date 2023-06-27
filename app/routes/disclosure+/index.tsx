@@ -90,12 +90,6 @@ export default function chakra_disclosure() {
               </li>
             </ul>
           </BulletBox>
-          <Box>
-            <BasicText>
-              Use the navigation menu to learn more about each component
-              individually.
-            </BasicText>
-          </Box>
         </MyFlex>
       </SectionContainer>
     </BigBackgroundBox>

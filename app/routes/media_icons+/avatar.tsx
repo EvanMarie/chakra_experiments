@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -80,48 +80,49 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Fallback Support</HL>: If an image fails to load or isn't
-                  provided, the Avatar component can automatically display the
-                  user's initials instead. This is achieved by passing the
-                  user's name to the name prop of the Avatar component.
+                  <BlueBold>Fallback Support</BlueBold>: If an image fails to
+                  load or isn't provided, the Avatar component can automatically
+                  display the user's initials instead. This is achieved by
+                  passing the user's name to the name prop of the Avatar
+                  component.
                 </li>
                 <li>
-                  <HL>Size Adjustments</HL>: Chakra UI allows you to adjust the
-                  size of the avatar to better fit your interface design. This
-                  can be done by passing predefined values like "xs", "sm",
-                  "md", "lg", "xl", "2xl", etc., to the size prop.
+                  <BlueBold>Size Adjustments</BlueBold>: Chakra UI allows you to
+                  adjust the size of the avatar to better fit your interface
+                  design. This can be done by passing predefined values like
+                  "xs", "sm", "md", "lg", "xl", "2xl", etc., to the size prop.
                 </li>
                 <li>
-                  <HL>Shape Customization</HL>: The shape of the Avatar can be
-                  customized by modifying the borderRadius prop. While avatars
-                  are typically round, you can set it to a square, or any other
-                  shape that CSS border-radius supports.
+                  <BlueBold>Shape Customization</BlueBold>: The shape of the
+                  Avatar can be customized by modifying the borderRadius prop.
+                  While avatars are typically round, you can set it to a square,
+                  or any other shape that CSS border-radius supports.
                 </li>
                 <li>
-                  <HL>Border Customization</HL>: You can add a border to the
-                  Avatar by using <Mono>borderColor</Mono> and{" "}
+                  <BlueBold>Border Customization</BlueBold>: You can add a
+                  border to the Avatar by using <Mono>borderColor</Mono> and{" "}
                   <Mono>borderWidth</Mono> props. This is useful in situations
                   where you want the <Mono>Avatar</Mono> to stand out from the
                   background.
                 </li>
                 <li>
-                  <HL>Grouping Avatars</HL>: Chakra UI also provides an{" "}
-                  <Mono>AvatarGroup</Mono> component which allows you to display
-                  a stack of avatars, useful for showing multiple users or
-                  contributors. This component can also show the excess number
-                  of avatars if they exceed the limit set.
+                  <BlueBold>Grouping Avatars</BlueBold>: Chakra UI also provides
+                  an <Mono>AvatarGroup</Mono> component which allows you to
+                  display a stack of avatars, useful for showing multiple users
+                  or contributors. This component can also show the excess
+                  number of avatars if they exceed the limit set.
                 </li>
                 <li>
-                  <HL>Badges</HL>: The Chakra UI <Mono>Avatar</Mono> component
-                  can also be combined with the <Mono>Badge</Mono> component to
-                  display statuses like "online", "offline", "do not disturb",
-                  etc.
+                  <BlueBold>Badges</BlueBold>: The Chakra UI <Mono>Avatar</Mono>{" "}
+                  component can also be combined with the <Mono>Badge</Mono>{" "}
+                  component to display statuses like "online", "offline", "do
+                  not disturb", etc.
                 </li>
                 <li>
-                  <HL>Custom Default Avatar</HL>: In scenarios where you don't
-                  want to fall back to initials, Chakra UI also allows you to
-                  set a custom default avatar that will be used when the src
-                  prop is falsy.
+                  <BlueBold>Custom Default Avatar</BlueBold>: In scenarios where
+                  you don't want to fall back to initials, Chakra UI also allows
+                  you to set a custom default avatar that will be used when the{" "}
+                  <Mono>src</Mono> prop is falsy.
                 </li>
               </ul>
             </BulletBox>
@@ -297,11 +298,11 @@ export default function chakra_section() {
           </GridBoxOne>
           <GridBoxTwo>
             <HighlightText>
-              <b>Gradient Background Avatars</b>: The <Mono>Avatar</Mono>{" "}
-              component's <Mono>bg</Mono> prop doesn't only accept solid colors.
-              You can also pass in gradient values to create a more vibrant and
-              dynamic avatar, especially when no image is provided. This can
-              help make your interface more colorful and engaging.
+              <b>Gradient Background Avatars</b>: The <b>Avatar</b> component's{" "}
+              <Mono>bg</Mono> prop doesn't only accept solid colors. You can
+              also pass in gradient values to create a more vibrant and dynamic
+              avatar, especially when no image is provided. This can help make
+              your interface more colorful and engaging.
             </HighlightText>
             <MyFlex>
               <AvatarTipTwo />

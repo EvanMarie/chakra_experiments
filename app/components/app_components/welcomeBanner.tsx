@@ -6,7 +6,6 @@ import Logo from "./Logo";
 
 const color01 = "sectionColor";
 const color02 = "background";
-const animationTime = "3s";
 const textFontSize = { base: "30px", sm: "40px", md: "42px", lg: "48px" };
 const logoFontSize = { base: "40px", sm: "50px", md: "50px", lg: "64px" };
 

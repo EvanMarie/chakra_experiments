@@ -82,7 +82,7 @@ export function AvatarThree() {
         </SectionDescription>
         <BasicText>
           In this example, we have an <Mono>Avatar</Mono> component for three
-          different people, each with a different size and a broken link for the
+          different people, each with a different size and a broken link for the{" "}
           <Mono>src</Mono> prop, hence the images will not load. This provides
           us with an opportunity to explore the fallbacks provided by the{" "}
           <Mono>Avatar</Mono> component.
@@ -180,9 +180,9 @@ export function AvatarFive() {
           <Mono>Avatars</Mono>, making them 'large'. The <Mono>max</Mono> prop
           limits the number of visible avatars to three. Avatars beyond this
           limit are not shown individually but are represented by a{" "}
-          <Mono>"+2" badge</Mono>. The <Mono>spacing</Mono>
-          prop is used to set the degree of overlap between the avatars,
-          providing a compact, visually appealing user group display.
+          <Mono>"+2" badge</Mono>. The <Mono>spacing</Mono> prop is used to set
+          the degree of overlap between the avatars, providing a compact,
+          visually appealing user group display.
         </BasicText>
         <BasicText>
           This functionality is useful, for instance, in a chat application

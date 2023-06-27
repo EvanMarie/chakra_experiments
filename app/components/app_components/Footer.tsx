@@ -1,7 +1,7 @@
-import { Flex, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Code, Flex, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { LinksFunction } from "@remix-run/node";
 import { IHeartComponents, Mono } from "~/styles/DesignComponents";
-import { MyFlex } from "~/styles/MainDesignComponents";
+import { MyFlex, linkStyle } from "~/styles/MainDesignComponents";
 import stylesUrl from "~/styles/global.css";
 import Logo from "./Logo";
 import { FooterCrumbs } from "./breadCrumbs";
@@ -24,7 +24,7 @@ const Footer = () => {
       p={0}
       textAlign="center"
     >
-      <VStack w="100%" justifyContent="center" spacing={0}>
+      <VStack w="100%" justifyContent="center" spacing={0} sx={linkStyle}>
         <Flex mb={0} textAlign="center" paddingX={10}>
           <FooterCrumbs />
         </Flex>
@@ -36,7 +36,7 @@ const Footer = () => {
             </Link>{" "}
             |{" "}
             <Link href="https://evanmarie.com" target="_blank">
-              <Mono>evanmarie.com</Mono>
+              <Code sx={linkStyle}>{`evanmarie.com`}</Code>
             </Link>
           </Text>
 

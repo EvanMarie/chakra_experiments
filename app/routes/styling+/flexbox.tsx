@@ -2,7 +2,13 @@ import { Box, Flex, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, Mono, HL, colors } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  Mono,
+  HL,
+  colors,
+  BlueBold,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -62,35 +68,36 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Flex Direction</HL>: The <Mono>direction</Mono> prop
-                    corresponds to the <Mono>flex-direction</Mono> CSS property,
-                    which defines the direction of the flex items in the flex
-                    container. It accepts values like <Mono>row</Mono>,{" "}
-                    <Mono>column</Mono>, <Mono>row-reverse</Mono>, and{" "}
-                    <Mono>column-reverse</Mono>.
+                    <BlueBold>Flex Direction</BlueBold>: The{" "}
+                    <Mono>direction</Mono> prop corresponds to the{" "}
+                    <Mono>flex-direction</Mono> CSS property, which defines the
+                    direction of the flex items in the flex container. It
+                    accepts values like <Mono>row</Mono>, <Mono>column</Mono>,{" "}
+                    <Mono>row-reverse</Mono>, and <Mono>column-reverse</Mono>.
                   </li>
                   <li>
-                    <HL>Justify Content</HL>: The <Mono>justify</Mono> prop is a
-                    shorthand for the CSS <Mono>justify-content</Mono> property.
-                    It defines how the browser distributes space between and
-                    around content items along the main-axis of a flex
-                    container. It accepts standard CSS{" "}
-                    <Mono>justify-content</Mono> values like
+                    <BlueBold>Justify Content</BlueBold>: The{" "}
+                    <Mono>justify</Mono> prop is a shorthand for the CSS{" "}
+                    <Mono>justify-content</Mono> property. It defines how the
+                    browser distributes space between and around content items
+                    along the main-axis of a flex container. It accepts standard
+                    CSS <Mono>justify-content</Mono> values like
                     <Mono>flex-start</Mono>, <Mono>flex-end</Mono>,{" "}
                     <Mono></Mono>
                     center, <Mono>space-between</Mono>,{" "}
                     <Mono>space-around</Mono>,<Mono>space-evenly</Mono>.
                   </li>
                   <li>
-                    <HL>Align Items</HL>: The align prop is short for
-                    align-items. It defines the default behavior for how flex
-                    items are laid out along the cross-axis on the current line.
-                    It accepts values like <Mono>stretch</Mono>,{" "}
+                    <BlueBold>Align Items</BlueBold>: The align prop is short
+                    for align-items. It defines the default behavior for how
+                    flex items are laid out along the cross-axis on the current
+                    line. It accepts values like <Mono>stretch</Mono>,{" "}
                     <Mono>flex-start</Mono>, <Mono>flex-end,</Mono>{" "}
                     <Mono>center</Mono>, and <Mono>baseline</Mono>.
                   </li>
                   <li>
-                    <HL>Wrap</HL>: The wrap prop is short for <Mono></Mono>
+                    <BlueBold>Wrap</BlueBold>: The wrap prop is short for{" "}
+                    <Mono></Mono>
                     flex-wrap. It controls whether the flex container is
                     single-lined or multi-lined, and the direction of the
                     cross-axis, which determines the direction new lines are
@@ -98,29 +105,31 @@ export default function chakra_section() {
                     <Mono>wrap</Mono>,<Mono>wrap-reverse</Mono> .
                   </li>
                   <li>
-                    <HL>Responsive Design</HL>: All of these props can accept
-                    responsive array values or object values to apply different
-                    styles at different breakpoints.
+                    <BlueBold>Responsive Design</BlueBold>: All of these props
+                    can accept responsive array values or object values to apply
+                    different styles at different breakpoints.
                   </li>
                   <li>
-                    <HL>Flex Children (Flex Items)</HL>: You can also control
-                    the flex properties of child elements using Chakra UI props.
-                    For example, you can use the <Mono>flexGrow</Mono>,{" "}
-                    <Mono>flexShrink</Mono>, and <Mono>flexBasis</Mono> props on
-                    children of a Flex component to control how they flex.
+                    <BlueBold>Flex Children (Flex Items)</BlueBold>: You can
+                    also control the flex properties of child elements using
+                    Chakra UI props. For example, you can use the{" "}
+                    <Mono>flexGrow</Mono>, <Mono>flexShrink</Mono>, and{" "}
+                    <Mono>flexBasis</Mono> props on children of a Flex component
+                    to control how they flex.
                   </li>
                   <li>
-                    <HL>Flex shorthand</HL>: The <Mono>flex</Mono> prop provides
-                    a shorthand to specify the <Mono>flexGrow</Mono>,{" "}
-                    <Mono>flexShrink</Mono>, and <Mono>flexBasis</Mono>{" "}
-                    properties simultaneously. For instance,{" "}
-                    <Mono>flex="1"</Mono> would be equivalent to setting{" "}
-                    <Mono>flexGrow={1}</Mono>, <Mono>flexShrink={1}</Mono>,{" "}
-                    <Mono>flexBasis="0%"</Mono>.
+                    <BlueBold>Flex shorthand</BlueBold>: The <Mono>flex</Mono>{" "}
+                    prop provides a shorthand to specify the{" "}
+                    <Mono>flexGrow</Mono>, <Mono>flexShrink</Mono>, and{" "}
+                    <Mono>flexBasis</Mono> properties simultaneously. For
+                    instance, <Mono>flex="1"</Mono> would be equivalent to
+                    setting <Mono>flexGrow={1}</Mono>,{" "}
+                    <Mono>flexShrink={1}</Mono>, <Mono>flexBasis="0%"</Mono>.
                   </li>
                   <li>
-                    <HL>Other Box Props</HL>: Since <Mono>Flex</Mono> is a{" "}
-                    <Mono>Box</Mono>, you can use all the <Mono></Mono>
+                    <BlueBold>Other Box Props</BlueBold>: Since{" "}
+                    <Mono>Flex</Mono> is a <Mono>Box</Mono>, you can use all the{" "}
+                    <Mono></Mono>
                     <Mono>Box</Mono> props for spacing, color, typography, and
                     more, in addition to the flex-specific props.
                   </li>

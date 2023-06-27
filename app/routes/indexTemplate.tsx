@@ -1,4 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Link, VStack } from "@chakra-ui/react";
 import { BsTextareaResize } from "react-icons/bs";
 import { BasicText, FlexibleBox, HL, Mono } from "~/styles/DesignComponents";
 import {
@@ -27,55 +27,68 @@ export default function chakra_feedback() {
         </VStack>
         <MyFlex bg={"darkAccent_3"} p={5} pt={3} mt={5}>
           <BasicText>DESCRIBE BULLETS</BasicText>
+
           <BulletBox>
             <ul>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
               <li>
                 <BasicText>
-                  <HL>🔗</HL>: Point
-                </BasicText>
-              </li>
-              <li>
-                <BasicText>
-                  <HL>🔗</HL>: Point
-                </BasicText>
-              </li>
-              <li>
-                <BasicText>
-                  <HL>🔗</HL>: Point
+                  <Link href="/category/component">
+                    <HL>🔗</HL>
+                  </Link>
+                  : Point
                 </BasicText>
               </li>
             </ul>
           </BulletBox>
+
           <Box>
             <BasicText>
               Use the navigation menu to learn more about each component

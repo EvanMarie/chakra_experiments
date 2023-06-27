@@ -2,7 +2,7 @@ import { Box, Grid, Text } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, Mono, HL } from "~/styles/DesignComponents";
+import { BasicText, Mono, HL, BlueBold } from "~/styles/DesignComponents";
 import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
@@ -62,40 +62,40 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Grid Template</HL>: <Mono>Grid</Mono> uses the{" "}
-                    <Mono>templateColumns</Mono>, <Mono>templateRows</Mono>,{" "}
+                    <BlueBold>Grid Template</BlueBold>: <Mono>Grid</Mono> uses
+                    the <Mono>templateColumns</Mono>, <Mono>templateRows</Mono>,{" "}
                     <Mono>templateAreas</Mono> props to create a grid template.
                   </li>
                   <li>
-                    <HL>Gap</HL>: The <Mono>gap</Mono> property (a shorthand for{" "}
-                    <Mono>rowGap</Mono> and <Mono>columnGap</Mono>) can be used
-                    to set the gaps (gutters) between rows and columns. It's
-                    responsive and theme-aware.
+                    <BlueBold>Gap</BlueBold>: The <Mono>gap</Mono> property (a
+                    shorthand for <Mono>rowGap</Mono> and <Mono>columnGap</Mono>
+                    ) can be used to set the gaps (gutters) between rows and
+                    columns. It's responsive and theme-aware.
                   </li>
                   <li>
-                    <HL>Auto Columns and Rows</HL>: You can use the{" "}
+                    <BlueBold>Auto Columns and Rows</BlueBold>: You can use the{" "}
                     <Mono>autoColumns</Mono> and <Mono>autoRows</Mono> props to
                     specify the size of the rows and columns when they are
                     created with grid auto-placement algorithms.
                   </li>
                   <li>
-                    <HL>Grid Item Placement</HL>: <Mono>GridItem</Mono> is a
-                    component that can be a child of Grid. You can control
-                    placement of <Mono>GridItem</Mono> with the{" "}
-                    <Mono>colSpan</Mono>, <Mono>rowSpan</Mono>,{" "}
+                    <BlueBold>Grid Item Placement</BlueBold>:{" "}
+                    <Mono>GridItem</Mono> is a component that can be a child of
+                    Grid. You can control placement of <Mono>GridItem</Mono>{" "}
+                    with the <Mono>colSpan</Mono>, <Mono>rowSpan</Mono>,{" "}
                     <Mono>colStart</Mono>, <Mono>colEnd</Mono>,{" "}
                     <Mono>rowStart</Mono>, and <Mono>rowEnd</Mono> props.
                   </li>
                   <li>
-                    <HL>Responsive Design</HL>: All of the grid-related props
-                    accept responsive array values or object values to apply
-                    different styles at different breakpoints.
+                    <BlueBold>Responsive Design</BlueBold>: All of the
+                    grid-related props accept responsive array values or object
+                    values to apply different styles at different breakpoints.
                   </li>
                   <li>
-                    <HL>Other Box Props</HL>: Since <Mono>Grid</Mono> is a{" "}
-                    <Mono>Box</Mono>, you can use all the <Mono>Box</Mono> props
-                    for spacing, color, typography, and more, in addition to the
-                    grid-specific props.
+                    <BlueBold>Other Box Props</BlueBold>: Since{" "}
+                    <Mono>Grid</Mono> is a <Mono>Box</Mono>, you can use all the{" "}
+                    <Mono>Box</Mono> props for spacing, color, typography, and
+                    more, in addition to the grid-specific props.
                   </li>
                 </ul>
               </BulletBox>

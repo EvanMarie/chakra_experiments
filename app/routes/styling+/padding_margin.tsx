@@ -2,7 +2,13 @@ import { Box, Flex, Stack, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono, colors } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  BlueBold,
+  HL,
+  Mono,
+  colors,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -53,18 +59,18 @@ export default function chakra_basic_styling() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Padding</HL>: Padding is the space between the content
-                    of a box and its border. It's used to control the space
-                    within the component. In Chakra UI, you can control the
-                    padding using the <Mono>p</Mono> or <Mono>padding</Mono>{" "}
-                    props.
+                    <BlueBold>Padding</BlueBold>: Padding is the space between
+                    the content of a box and its border. It's used to control
+                    the space within the component. In Chakra UI, you can
+                    control the padding using the <Mono>p</Mono> or{" "}
+                    <Mono>padding</Mono> props.
                   </li>
                   <li>
-                    <HL>Margin</HL>: Margin is the space around the outside of a
-                    box. It's used to control the space or distance between
-                    different components. Similar to padding, you can control
-                    the margin using the <Mono>m</Mono> or <Mono>margin</Mono>{" "}
-                    props.
+                    <BlueBold>Margin</BlueBold>: Margin is the space around the
+                    outside of a box. It's used to control the space or distance
+                    between different components. Similar to padding, you can
+                    control the margin using the <Mono>m</Mono> or{" "}
+                    <Mono>margin</Mono> props.
                   </li>
                 </ul>
               </BulletBox>

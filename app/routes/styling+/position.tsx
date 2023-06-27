@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -66,29 +66,33 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Static Positioning</HL>: This is the default value.
-                  Elements layout in their normal document flow.
+                  <BlueBold>Static Positioning</BlueBold>: This is the default
+                  value. Elements layout in their normal document flow.
                 </li>
                 <li>
-                  <HL>Relative Positioning</HL>: An element with position
-                  "relative" is positioned relative to its normal position.
+                  <BlueBold>Relative Positioning</BlueBold>: An element with
+                  position "relative" is positioned relative to its normal
+                  position.
                 </li>
                 <li>
-                  <HL>Absolute Positioning</HL>: An element with position
-                  "absolute" is positioned relative to the nearest positioned
-                  ancestor (instead of positioned relative to the viewport).
+                  <BlueBold>Absolute Positioning</BlueBold>: An element with
+                  position "absolute" is positioned relative to the nearest
+                  positioned ancestor (instead of positioned relative to the
+                  viewport).
                 </li>
                 <li>
-                  <HL>Fixed Positioning</HL>: An element with position "fixed"
-                  is positioned relative to the viewport, which means it always
-                  stays in the same place even if the page is scrolled.
+                  <BlueBold>Fixed Positioning</BlueBold>: An element with
+                  position "fixed" is positioned relative to the viewport, which
+                  means it always stays in the same place even if the page is
+                  scrolled.
                 </li>
                 <li>
-                  <HL>Sticky Positioning</HL>: An element with position "sticky"
-                  is positioned based on the user's scroll position. It toggles
-                  between relative and fixed, depending on the scroll position.
-                  It's positioned relative until a given offset position is met
-                  in the viewport, then it "sticks" in place.
+                  <BlueBold>Sticky Positioning</BlueBold>: An element with
+                  position "sticky" is positioned based on the user's scroll
+                  position. It toggles between relative and fixed, depending on
+                  the scroll position. It's positioned relative until a given
+                  offset position is met in the viewport, then it "sticks" in
+                  place.
                 </li>
               </ul>
             </BulletBox>
@@ -176,7 +180,7 @@ export default ToggleBox;
                 </ModalCode>
                 <BasicText>
                   In this example, we use React's <Mono>useState</Mono> hook to
-                  create a<Mono>showBox</Mono> state variable and a{" "}
+                  create a <Mono>showBox</Mono> state variable and a{" "}
                   <Mono>setShowBox</Mono> function to update it. When the Button
                   is clicked, the <Mono>toggleBox</Mono> function is called,
                   which updates <Mono>showBox</Mono> to its opposite value
@@ -200,7 +204,7 @@ export default ToggleBox;
                   relative to the body.
                 </BasicText>
                 <BasicText>
-                  The button's text is determined by the <Mono>showBox</Mono>
+                  The button's text is determined by the <Mono>showBox</Mono>{" "}
                   state. If <Mono>showBox</Mono> is true (meaning the box is
                   currently showing), the button text says "Ciao, Box!". If{" "}
                   <Mono>showBox</Mono> is false (meaning the box is not

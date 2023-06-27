@@ -17,6 +17,7 @@ import type { NavElement } from "~/components/app_components/navigation";
 import { getLabelForUrl } from "~/components/app_components/navigation";
 
 import Logo from "./Logo";
+import { linkStyle } from "~/styles/MainDesignComponents";
 const StyledBreadcrumbLink = chakra(BreadcrumbLink, {
   baseStyle: {
     color: "linkColor",
@@ -45,6 +46,7 @@ export function BreadCrumbs() {
       gap={0}
       mt={2}
       mb={0}
+      sx={linkStyle}
     >
       <GridItem w="150px">
         <Box>
@@ -52,14 +54,11 @@ export function BreadCrumbs() {
         </Box>
       </GridItem>
 
-      {/* <Text color="white"> | </Text> */}
-
       <GridItem mt={0.5}>
         <Breadcrumb
           alignSelf="flex-start"
           spacing="5px"
           separator={<ChevronRightIcon color="gray.500" />}
-          // fontSize="sm"
         >
           <BreadcrumbItem>
             <StyledBreadcrumbLink as={Link} to="/">
@@ -93,6 +92,7 @@ export function FooterCrumbs() {
       alignSelf="flex-end"
       spacing="5px"
       separator={<ChevronRightIcon color="gray.500" />}
+      sx={linkStyle}
       // fontSize="sm"
     >
       <BreadcrumbItem>

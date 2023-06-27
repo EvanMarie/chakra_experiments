@@ -4,6 +4,7 @@ import stylesUrl from "~/styles/global.css";
 
 import {
   BasicText,
+  BlueBold,
   // Mono,
   // Flex,
   // Text,
@@ -68,40 +69,41 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Typography Components</HL>: These are covered in much
-                    more detail in the components-typography section, but it is
-                    important to note that Chakra UI provides a variety of
-                    components for common typographical elements, including{" "}
-                    <Mono>Heading</Mono>, <Mono>Text</Mono>, and{" "}
+                    <BlueBold>Typography Components</BlueBold>: These are
+                    covered in much more detail in the components-typography
+                    section, but it is important to note that Chakra UI provides
+                    a variety of components for common typographical elements,
+                    including <Mono>Heading</Mono>, <Mono>Text</Mono>, and{" "}
                     <Mono>Code</Mono>.
                   </li>
                   <li>
-                    <HL>Responsive Font Sizes</HL>: Like many other props in
-                    Chakra UI, <Mono>fontSize</Mono> can take an array or object
-                    to specify different values at different breakpoints.
+                    <BlueBold>Responsive Font Sizes</BlueBold>: Like many other
+                    props in Chakra UI, <Mono>fontSize</Mono> can take an array
+                    or object to specify different values at different
+                    breakpoints.
                   </li>
                   <li>
-                    <HL>Font Weights</HL>: Chakra UI provides props for
-                    controlling font weight: <Mono>fontWeight</Mono>.
+                    <BlueBold>Font Weights</BlueBold>: Chakra UI provides props
+                    for controlling font weight: <Mono>fontWeight</Mono>.
                   </li>
                   <li>
-                    <HL>Text Colors</HL>: Text color can be controlled using the{" "}
-                    <Mono>color</Mono> prop, as we've seen in examples on{" "}
-                    <Link href="/styling/color">color</Link>.
+                    <BlueBold>Text Colors</BlueBold>: Text color can be
+                    controlled using the <Mono>color</Mono> prop, as we've seen
+                    in examples on <Link href="/styling/color">color</Link>.
                   </li>
                   <li>
-                    <HL>Line Heights</HL>: Line height can be controlled using
-                    the <Mono>lineHeight</Mono> prop.
+                    <BlueBold>Line Heights</BlueBold>: Line height can be
+                    controlled using the <Mono>lineHeight</Mono> prop.
                   </li>
                   <li>
-                    <HL>Text Alignment and Decoration</HL>: Text alignment can
-                    be controlled with the <Mono>textAlign</Mono> prop, and{" "}
-                    <Mono>decoration</Mono> (like underlining) can be controlled
-                    with the <Mono>textDecoration</Mono> prop.
+                    <BlueBold>Text Alignment and Decoration</BlueBold>: Text
+                    alignment can be controlled with the <Mono>textAlign</Mono>{" "}
+                    prop, and <Mono>decoration</Mono> (like underlining) can be
+                    controlled with the <Mono>textDecoration</Mono> prop.
                   </li>
                   <li>
-                    <HL>Theme Customization</HL>: Chakra UI's theme object
-                    allows you to define default styles for typography
+                    <BlueBold>Theme Customization</BlueBold>: Chakra UI's theme
+                    object allows you to define default styles for typography
                     components, customize the font sizes, weights, and line
                     heights available, and more. You can extend the theme to
                     include custom fonts as well.

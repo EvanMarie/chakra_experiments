@@ -60,7 +60,7 @@ export default function chakra_section() {
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
             <SectionDescription>
-              ⦾ The <HL>Spinners</HL> component in Chakra UI is a feedback
+              ⦾ The <HL>Spinner</HL> component in Chakra UI is a feedback
               indicator mainly used for visualizing an unspecified wait time
               where the length of the task is unknown.{" "}
             </SectionDescription>

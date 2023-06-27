@@ -10,6 +10,7 @@ import stylesUrl from "~/styles/global.css";
 
 import {
   BasicText,
+  BlueBold,
   CollapsibleExample,
   HL,
   Mono,
@@ -98,14 +99,14 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Determinate progress</HL>: This mode colorfully fills the
-                  circular track as the indicator progresses from 0 to 360
-                  degrees.
+                  <BlueBold>Determinate progress</BlueBold>: This mode
+                  colorfully fills the circular track as the indicator
+                  progresses from 0 to 360 degrees.
                 </li>
                 <li>
-                  <HL>Indeterminate progress</HL>: In this mode, the indicator
-                  expands and contracts while revolving around the circular
-                  track.
+                  <BlueBold>Indeterminate progress</BlueBold>: In this mode, the
+                  indicator expands and contracts while revolving around the
+                  circular track.
                 </li>
               </ul>
             </BulletBox>
@@ -289,9 +290,10 @@ export default function chakra_section() {
                 </CollapsibleExample>
                 <MyFlex>
                   <BasicText>
-                    The trackColor prop allows you to specify the color of the
-                    background track behind the progress arc. In this example,
-                    the track color is set to "red.200", to show this option.
+                    The <Mono>trackColor</Mono> prop allows you to specify the
+                    color of the background track behind the progress arc. In
+                    this example, the track color is set to "red.200", to show
+                    this option.
                   </BasicText>
                 </MyFlex>
               </SectionContainer>
@@ -310,8 +312,9 @@ export default function chakra_section() {
                 </CollapsibleExample>
                 <MyFlex>
                   <BasicText>
-                    Setting the capIsRound prop to true will make the cap of the
-                    progress indicator rounded instead of having flat edges.
+                    Setting the <Mono>capIsRound</Mono> prop to true will make
+                    the cap of the progress indicator rounded instead of having
+                    flat edges.
                   </BasicText>
                 </MyFlex>
               </SectionContainer>

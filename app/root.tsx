@@ -146,7 +146,7 @@ export default function App() {
                       width="100%"
                       bg="background"
                       overflow="hidden"
-                      paddingX={1}
+                      paddingX={{ base: 0, sm: 1 }}
                       maxWidth="100%"
                       justifyContent="center"
                       alignItems="center"

@@ -8,6 +8,7 @@ import {
   HL,
   colors,
   FlexibleBox,
+  BlueBold,
 } from "~/styles/DesignComponents";
 
 import {
@@ -67,37 +68,39 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Standard Display</HL>: The display prop can be set to
-                    any valid CSS display value
+                    <BlueBold>Standard Display</BlueBold>: The display prop can
+                    be set to any valid CSS display value
                   </li>
                   <li>
-                    <HL>Flexbox</HL>: Chakra UI has first-class support for{" "}
-                    <Mono>Flexbox</Mono> layouts, which is integrated directly
-                    into the <Mono>Box</Mono> component and also has a dedicated{" "}
-                    <Mono>Flex</Mono> component. Chakra UI provides props for
-                    all the common <Mono>Flexbox</Mono> properties, such as{" "}
-                    <Mono>alignItems</Mono>, <Mono>justifyContent</Mono>,{" "}
-                    <Mono>flexWrap</Mono>, <Mono>flexDirection</Mono>, and more.
+                    <BlueBold>Flexbox</BlueBold>: Chakra UI has first-class
+                    support for <Mono>Flexbox</Mono> layouts, which is
+                    integrated directly into the <Mono>Box</Mono> component and
+                    also has a dedicated <Mono>Flex</Mono> component. Chakra UI
+                    provides props for all the common <Mono>Flexbox</Mono>{" "}
+                    properties, such as <Mono>alignItems</Mono>,{" "}
+                    <Mono>justifyContent</Mono>, <Mono>flexWrap</Mono>,{" "}
+                    <Mono>flexDirection</Mono>, and more.
                   </li>
                   <li>
-                    <HL>Grid</HL>: Similar to <Mono>Flexbox</Mono>, Chakra UI
-                    also has excellent support for <Mono>CSS Grid</Mono>{" "}
-                    layouts, with a dedicated <Mono>Grid</Mono> component
+                    <BlueBold>Grid</BlueBold>: Similar to <Mono>Flexbox</Mono>,
+                    Chakra UI also has excellent support for{" "}
+                    <Mono>CSS Grid</Mono> layouts, with a dedicated{" "}
+                    <Mono>Grid</Mono> component
                   </li>
                   <li>
-                    <HL>None</HL>: You can hide elements by setting the display
-                    prop to <Mono>"none"</Mono>
+                    <BlueBold>None</BlueBold>: You can hide elements by setting
+                    the display prop to <Mono>"none"</Mono>
                   </li>
                   <li>
-                    <HL>Responsive Display</HL>: As with many other props in
-                    Chakra UI, display can take an array or an object to specify
-                    different values at different breakpoints
+                    <BlueBold>Responsive Display</BlueBold>: As with many other
+                    props in Chakra UI, display can take an array or an object
+                    to specify different values at different breakpoints
                   </li>
                   <li>
-                    <HL>Box Visibility</HL>: Apart from the display property,
-                    visibility of components can also be controlled using the{" "}
-                    <Mono>visibility</Mono> prop, which can take values of{" "}
-                    <Mono>"visible"</Mono> or <Mono>"hidden"</Mono>
+                    <BlueBold>Box Visibility</BlueBold>: Apart from the display
+                    property, visibility of components can also be controlled
+                    using the <Mono>visibility</Mono> prop, which can take
+                    values of <Mono>"visible"</Mono> or <Mono>"hidden"</Mono>
                   </li>
                 </ul>
               </BulletBox>

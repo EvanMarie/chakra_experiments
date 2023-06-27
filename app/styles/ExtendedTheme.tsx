@@ -82,6 +82,16 @@ const theme = extendTheme({
     },
   },
 
+  a: {
+    baseStyle: {
+      color: "linkColor",
+      _hover: {
+        color: "accent_3",
+        textDecoration: "none",
+      },
+    },
+  },
+
   components: {
     Tabs: {
       colorScheme: "red",
@@ -154,6 +164,24 @@ const theme = extendTheme({
           caption: {
             color: "mainText",
           },
+        },
+      },
+    },
+    Link: {
+      baseStyle: {
+        color: "linkColor",
+        _hover: {
+          color: "accent_3",
+          textDecoration: "none",
+        },
+      },
+    },
+    BreadcrumbLink: {
+      baseStyle: {
+        color: "linkColor",
+        _hover: {
+          color: "accent_3",
+          textDecoration: "none",
         },
       },
     },

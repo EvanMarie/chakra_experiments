@@ -3,6 +3,7 @@ import stylesUrl from "~/styles/global.css";
 
 import {
   BasicText,
+  BlueBold,
   ButtonStyles,
   HL,
   Mono,
@@ -97,9 +98,9 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <BasicText>
-                  <HL>Rendering a Text Component as a h1</HL>: This example
-                  demonstrates rendering a Text component as a h1. Here, the
-                  component will retain all the functionalities of the Text
+                  <BlueBold>Rendering a Text Component as a h1</BlueBold>: This
+                  example demonstrates rendering a Text component as a h1. Here,
+                  the component will retain all the functionalities of the Text
                   component, but be semantically rendered as a h1.
                 </BasicText>
                 <MyFlex>
@@ -112,11 +113,11 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <BasicText>
-                  <HL>Using a Custom Component with as prop</HL>: You can also
-                  pass a custom component to the as prop. This is particularly
-                  useful if you have a component that should sometimes render as
-                  one type of element and sometimes as another. In this example,
-                  a <Mono>Box</Mono> is rendered as a{" "}
+                  <BlueBold>Using a Custom Component with as prop</BlueBold>:
+                  You can also pass a custom component to the as prop. This is
+                  particularly useful if you have a component that should
+                  sometimes render as one type of element and sometimes as
+                  another. In this example, a <Mono>Box</Mono> is rendered as a{" "}
                   <Mono>CustomComponent</Mono>. This means the <Mono>Box</Mono>{" "}
                   will now have the appearance defined in the{" "}
                   <Mono>CustomComponent</Mono>.

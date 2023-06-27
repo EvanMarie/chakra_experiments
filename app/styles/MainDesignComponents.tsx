@@ -28,6 +28,14 @@ import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
 import { HiLightBulb } from "react-icons/hi";
 import { useState } from "react";
+import { LinksFunction } from "@remix-run/node";
+import styles from "~/styles/codeMarkdown.css";
+import stylesUrl from "~/styles/global.css";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesUrl },
+  { rel: "stylesheet", href: styles },
+];
 
 const usefulTipColor = "tipBackground";
 const usefulTipLightbulb = "cyan";
@@ -35,6 +43,17 @@ const usefulTipLightbulb = "cyan";
 export const MainWidth = "100%";
 export const MainMaxWidth = "1000px";
 export const SectionHeadingSize = "23px";
+
+export const linkStyle = {
+  a: {
+    color: "linkColor",
+    _hover: {
+      color: "accent_3",
+      textDecoration: "none",
+      transform: "scale(1.05)",
+    },
+  },
+};
 
 const CustomLink = chakra(Link, {
   baseStyle: {
@@ -63,6 +82,7 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       alignItems={"center"}
       overflow-x="hidden"
       borderRadius="sm"
+      sx={linkStyle}
     >
       <Box margin="auto 0" overflow-x="hidden">
         <Box
@@ -87,6 +107,7 @@ interface MainGridProps extends GridProps {
 export function MainGrid({ children, ...rest }: MainGridProps) {
   return (
     <Grid
+      sx={linkStyle}
       templateColumns={{ base: "1fr", lg: "70% 30%" }}
       alignItems="start"
       width="100%"
@@ -107,6 +128,8 @@ export function GridColumn({ children, ...rest }: GridColumnProps) {
   return (
     <GridItem p="7px" height="100%">
       <VStack
+        sx={linkStyle}
+        p={0}
         width="100%"
         justify="center"
         overflow-x="hidden"
@@ -128,6 +151,7 @@ export function HighlightColumn({ children, ...rest }: GridColumnProps) {
   });
   return (
     <GridItem
+      sx={linkStyle}
       p="7px"
       height="100%"
       overflow-x="hidden"
@@ -194,7 +218,12 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Flex {...GridBoxDefaults} flexDirection="column" padding={PaddingValues}>
+    <Flex
+      {...GridBoxDefaults}
+      sx={linkStyle}
+      flexDirection="column"
+      padding={PaddingValues}
+    >
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
@@ -216,7 +245,12 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Flex {...GridBoxDefaults} flexDirection="column" padding={PaddingValues}>
+    <Flex
+      sx={linkStyle}
+      {...GridBoxDefaults}
+      flexDirection="column"
+      padding={PaddingValues}
+    >
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
@@ -238,7 +272,12 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
   const PaddingValues = useBreakpointValue(GridBoxPaddingValues);
 
   return (
-    <Flex {...GridBoxDefaults} flexDirection="column" padding={PaddingValues}>
+    <Flex
+      sx={linkStyle}
+      {...GridBoxDefaults}
+      flexDirection="column"
+      padding={PaddingValues}
+    >
       <HStack>
         <Flex h="20px" justify="left" mb={2}>
           <HiLightBulb
@@ -271,7 +310,7 @@ export function MyLabel({
   children,
 }: MyLabelProps) {
   return (
-    <Flex overflow-x="hidden" direction="column">
+    <Flex sx={linkStyle} overflow-x="hidden" direction="column">
       <Flex w="100%" justifyContent="center">
         <Flex
           w="60%"
@@ -324,7 +363,7 @@ export function DescriptionBox({
   paddingY = 2,
 }: DescriptionBoxProps) {
   return (
-    <Box paddingX={paddingX} paddingY={paddingY}>
+    <Box sx={linkStyle} paddingX={paddingX} paddingY={paddingY}>
       {children}
     </Box>
   );
@@ -344,7 +383,7 @@ export function BulletBox({
   paddingY = 3,
 }: BulletBoxProps) {
   return (
-    <Box paddingX={paddingX} paddingY={paddingY}>
+    <Box sx={linkStyle} paddingX={paddingX} paddingY={paddingY}>
       {children}
     </Box>
   );
@@ -366,6 +405,7 @@ export function ImportBox({
 }: ImportBoxProps) {
   return (
     <Box
+      sx={linkStyle}
       paddingX={paddingX}
       paddingTop={paddingTop}
       marginBottom={marginBottom}
@@ -387,7 +427,7 @@ export function SectionContainer({
 }: SectionContainerProps) {
   const defaultFlexProps = {
     paddingY: 3,
-    paddingX: { base: 1, sm: 4, md: 4, lg: 5 },
+    paddingX: { base: 2, sm: 4, md: 5, lg: 5 },
     marginBottom: 0,
     bg: "sectionColor",
     justifyContent: "center",
@@ -398,6 +438,7 @@ export function SectionContainer({
 
   return (
     <Flex
+      sx={linkStyle}
       overflow-x="hidden"
       {...defaultFlexProps}
       flexDirection={{ base: "column" }}
@@ -425,6 +466,7 @@ export function ExampleBox({
 }: ExampleBoxProps) {
   return (
     <Box
+      sx={linkStyle}
       paddingX={paddingX}
       paddingBottom={paddingBottom}
       paddingTop={paddingTop}
@@ -464,7 +506,7 @@ export function SectionHeading({
   color = "accent_2",
 }: SectionHeadingProps) {
   return (
-    <Box w="100%" justifyContent="left" textAlign="left">
+    <Box sx={linkStyle} w="100%" justifyContent="left" textAlign="left">
       <h2>
         <BasicText size={size} color={color} mb={mb} mt={mt}>
           {children}
@@ -494,7 +536,12 @@ export function SectionDescription({
   width = "100%",
 }: SectionDescriptionProps) {
   return (
-    <Box color={color} paddingTop={paddingTop} paddingBottom={paddingBottom}>
+    <Box
+      sx={linkStyle}
+      color={color}
+      paddingTop={paddingTop}
+      paddingBottom={paddingBottom}
+    >
       {children}
     </Box>
   );
@@ -523,6 +570,7 @@ export function ExampleContainer({
 
   return (
     <Box
+      sx={linkStyle}
       overflow-x="hidden"
       {...defaultFlexProps}
       flexDirection={{ base: "column" }}
@@ -543,6 +591,7 @@ interface SingleExampleProps extends BoxProps {
 export function SingleExample({ children }: SingleExampleProps) {
   return (
     <VStack
+      sx={linkStyle}
       w="100%"
       spacing={2}
       verticalAlign="middle"
@@ -566,6 +615,7 @@ interface MyFlexProps extends FlexProps {
 export function MyFlex({ children, ...restProps }: MyFlexProps) {
   return (
     <Flex
+      sx={linkStyle}
       overflow-x="hidden"
       w="98%"
       justify="center"
@@ -604,6 +654,7 @@ export function HighlightText({
 }: HighlightTextProps) {
   return (
     <Box
+      sx={linkStyle}
       textAlign="left"
       w={w}
       px={paddingX}
@@ -654,7 +705,9 @@ export function HighlightExample({
       paddingX={paddingX}
       paddingY={paddingY}
       color={color}
+      sx={linkStyle}
       maxWidth={maxWidth}
+      overflow-x="hidden"
       {...restProps}
     >
       {children}
@@ -705,7 +758,9 @@ export const ViewCode = ({ children }: ViewCodeProps) => {
         <ModalContent>
           <ModalCloseButton />
           <ModalBody>
-            <Box p={3}>{children}</Box>
+            <Box sx={linkStyle} p={3}>
+              {children}
+            </Box>
           </ModalBody>
         </ModalContent>
       </Modal>

@@ -2,7 +2,13 @@ import { Box, Progress, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono, StackedExample } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  BlueBold,
+  HL,
+  Mono,
+  StackedExample,
+} from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -90,28 +96,29 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Basic Progress Bar</HL>: Use the <Mono>Progress</Mono>{" "}
-                  component to create a simple progress bar. The value prop sets
-                  the current progress.
+                  <BlueBold>Basic Progress Bar</BlueBold>: Use the{" "}
+                  <Mono>Progress</Mono> component to create a simple progress
+                  bar. The value prop sets the current progress.
                 </li>
                 <li>
-                  <HL>Customized Progress Bar</HL>: You can customize the
-                  progress bar's color, size, and other properties.
+                  <BlueBold>Customized Progress Bar</BlueBold>: You can
+                  customize the progress bar's color, size, and other
+                  properties.
                 </li>
                 <li>
-                  <HL>Animated Progress Bar</HL>: To animate the progress bar,
-                  add the <Mono>isAnimated</Mono> prop.
+                  <BlueBold>Animated Progress Bar</BlueBold>: To animate the
+                  progress bar, add the <Mono>isAnimated</Mono> prop.
                 </li>
                 <li>
-                  <HL>Progress Bar with Stripe</HL>: You can add a stripe to the
-                  progress bar for a different visual effect using the{" "}
-                  <Mono>isAnimated</Mono> and <Mono>hasStripe</Mono> props.
+                  <BlueBold>Progress Bar with Stripe</BlueBold>: You can add a
+                  stripe to the progress bar for a different visual effect using
+                  the <Mono>isAnimated</Mono> and <Mono>hasStripe</Mono> props.
                 </li>
 
                 <li>
-                  <HL>Indeterminate Progress Bar</HL>: If you don't know the
-                  value or it's not yet ready, you can show an indeterminate
-                  progress bar.
+                  <BlueBold>Indeterminate Progress Bar</BlueBold>: If you don't
+                  know the value or it's not yet ready, you can show an
+                  indeterminate progress bar.
                 </li>
               </ul>
             </BulletBox>

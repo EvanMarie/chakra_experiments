@@ -8,6 +8,7 @@ import {
   HL,
   MyDivider,
   colors,
+  BlueBold,
 } from "~/styles/DesignComponents";
 
 import {
@@ -67,12 +68,12 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Linear Gradient</HL>: You can apply linear gradients
-                    using standard CSS syntax.
+                    <BlueBold>Linear Gradient</BlueBold>: You can apply linear
+                    gradients using standard CSS syntax.
                   </li>
                   <li>
-                    <HL>Radial Gradient</HL>: Similarly, you can apply radial
-                    gradients using CSS syntax.
+                    <BlueBold>Radial Gradient</BlueBold>: Similarly, you can
+                    apply radial gradients using CSS syntax.
                   </li>
                 </ul>
               </BulletBox>

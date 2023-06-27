@@ -2,7 +2,7 @@ import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -91,44 +91,44 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Ease of Use</HL>: Chakra provides several built-in
-                  components for creating modals, including <Mono>Modal</Mono>,{" "}
-                  <Mono>ModalOverlay</Mono>, <Mono>ModalContent</Mono>,{" "}
-                  <Mono>ModalHeader</Mono>, <Mono>ModalFooter</Mono>,{" "}
-                  <Mono>ModalBody</Mono>, and <Mono>ModalCloseButton</Mono>.
-                  These components encapsulate common modal patterns, making it
-                  easy to create modals without having to build everything from
-                  scratch.
+                  <BlueBold>Ease of Use</BlueBold>: Chakra provides several
+                  built-in components for creating modals, including{" "}
+                  <Mono>Modal</Mono>, <Mono>ModalOverlay</Mono>,{" "}
+                  <Mono>ModalContent</Mono>, <Mono>ModalHeader</Mono>,{" "}
+                  <Mono>ModalFooter</Mono>, <Mono>ModalBody</Mono>, and{" "}
+                  <Mono>ModalCloseButton</Mono>. These components encapsulate
+                  common modal patterns, making it easy to create modals without
+                  having to build everything from scratch.
                 </li>
 
                 <li>
-                  <HL>Flexibility</HL>: Chakra's modal components are highly
-                  customizable. You can control their appearance and behavior
-                  using props, and you can add custom components to the modal
-                  body.
+                  <BlueBold>Flexibility</BlueBold>: Chakra's modal components
+                  are higBlueBoldy customizable. You can control their
+                  appearance and behavior using props, and you can add custom
+                  components to the modal body.
                 </li>
 
                 <li>
-                  <HL>Accessibility</HL>: Chakra's modals are designed with
-                  accessibility in mind. For example, when a modal is open,
-                  focus is trapped within it, preventing users from accidentally
-                  interacting with the rest of the application. This is a key
-                  requirement for accessibility, and Chakra handles it
-                  automatically.
+                  <BlueBold>Accessibility</BlueBold>: Chakra's modals are
+                  designed with accessibility in mind. For example, when a modal
+                  is open, focus is trapped within it, preventing users from
+                  accidentally interacting with the rest of the application.
+                  This is a key requirement for accessibility, and Chakra
+                  handles it automatically.
                 </li>
 
                 <li>
-                  <HL>Integration</HL>: Chakra's modals are designed to work
-                  well with other Chakra components. For example, you can use
-                  Chakra's <Mono>Button</Mono> component for the modal's close
-                  button, or Chakra's <Mono>Text</Mono> component for the
+                  <BlueBold>Integration</BlueBold>: Chakra's modals are designed
+                  to work well with other Chakra components. For example, you
+                  can use Chakra's <Mono>Button</Mono> component for the modal's
+                  close button, or Chakra's <Mono>Text</Mono> component for the
                   modal's content.
                 </li>
 
                 <li>
-                  <HL>Theming</HL>: Chakra's modals support Chakra's theming
-                  system. This means you can easily adjust their appearance to
-                  match your application's theme.
+                  <BlueBold>Theming</BlueBold>: Chakra's modals support Chakra's
+                  theming system. This means you can easily adjust their
+                  appearance to match your application's theme.
                 </li>
               </ul>
             </BulletBox>
@@ -263,21 +263,21 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Block Scrolling Upon Opening</HL>: When a modal is
-                    active, it's typically a best practice to disable scrolling
-                    on the main document to keep the user's focus on the content
-                    within the modal. Chakra UI respects this accessibility
-                    guideline and has this feature enabled by default. However,
-                    there might be specific scenarios where you'd want to allow
-                    users to scroll the main document while the modal is open.
-                    In such cases, Chakra UI provides the{" "}
+                    <BlueBold>Block Scrolling Upon Opening</BlueBold>: When a
+                    modal is active, it's typically a best practice to disable
+                    scrolling on the main document to keep the user's focus on
+                    the content within the modal. Chakra UI respects this
+                    accessibility guideline and has this feature enabled by
+                    default. However, there might be specific scenarios where
+                    you'd want to allow users to scroll the main document while
+                    the modal is open. In such cases, Chakra UI provides the{" "}
                     <Mono>blockScrollOnMount</Mono> prop, which you can set to{" "}
                     <Mono>false</Mono> to allow scrolling on the main document.
                   </li>
                   <li>
-                    <HL>Overlay Click Closes Modal</HL>: by default, clicking
-                    outside the modal content of a Chakra UI modal will close
-                    it. This can be a useful feature for users who want to
+                    <BlueBold>Overlay Click Closes Modal</BlueBold>: by default,
+                    clicking outside the modal content of a Chakra UI modal will
+                    close it. This can be a useful feature for users who want to
                     quickly exit the modal without having to specifically click
                     a close button. However, you might want to prevent this
                     behavior in certain cases, such as when the modal contains a
@@ -289,66 +289,66 @@ export default function chakra_section() {
                     <Mono>ESC</Mono> key to close the modal.
                   </li>
                   <li>
-                    <HL>Vertically Centered Modal</HL>: In its default state, a
-                    Chakra UI modal is positioned with a vertical offset of{" "}
-                    <Mono>3.75rem</Mono> from the top. However, for aesthetic or
-                    visibility reasons, you might want the modal to be
-                    vertically centered on the page. Chakra UI provides an easy
-                    way to do this with the <Mono>isCentered</Mono> prop. When
-                    you pass the <Mono>isCentered</Mono> prop to the{" "}
-                    <Mono>Modal</Mono> component, the modal will be vertically
-                    centered on the screen, regardless of the viewport height.
-                    If you wish to adjust the default offset, you can pass a
-                    custom value to the top prop in the{" "}
-                    <Mono>ModalContent</Mono>.
+                    <BlueBold>Vertically Centered Modal</BlueBold>: In its
+                    default state, a Chakra UI modal is positioned with a
+                    vertical offset of <Mono>3.75rem</Mono> from the top.
+                    However, for aesthetic or visibility reasons, you might want
+                    the modal to be vertically centered on the page. Chakra UI
+                    provides an easy way to do this with the{" "}
+                    <Mono>isCentered</Mono> prop. When you pass the{" "}
+                    <Mono>isCentered</Mono> prop to the <Mono>Modal</Mono>{" "}
+                    component, the modal will be vertically centered on the
+                    screen, regardless of the viewport height. If you wish to
+                    adjust the default offset, you can pass a custom value to
+                    the top prop in the <Mono>ModalContent</Mono>.
                   </li>
                   <li>
-                    <HL>Scroll Behavior</HL>: Modal overflow behavior refers to
-                    the way scrolling is handled when the content within a modal
-                    exceeds the visible area of the screen (viewport). To
-                    control the scrolling behavior in such situations, the{" "}
-                    <Mono>scrollBehavior</Mono> property can be utilized. When{" "}
-                    <Mono>scrollBehavior</Mono> is set to <Mono>inside</Mono>,
-                    scrolling is limited to the <Mono>ModalBody</Mono>. This
-                    means that if the content within the modal exceeds the
-                    available space, a scrollbar will appear within the modal
-                    body itself, allowing users to scroll through the content
-                    without affecting the rest of the page. This is useful when
-                    you want to keep the modal's overall position fixed and
-                    maintain a consistent layout. On the other hand, when{" "}
-                    <Mono>scrollBehavior</Mono> is set to <Mono>outside</Mono>,
-                    the entire <Mono>ModalContent</Mono>, including the modal
-                    header, body, and footer, will scroll within the viewport.
-                    In this case, if the modal content overflows, a scrollbar
-                    will appear at the edge of the viewport, allowing users to
-                    scroll through the content. This approach is suitable when
-                    you want the entire modal to be scrollable, giving users the
-                    ability to view all the content within the modal without any
-                    restrictions.
+                    <BlueBold>Scroll Behavior</BlueBold>: Modal overflow
+                    behavior refers to the way scrolling is handled when the
+                    content within a modal exceeds the visible area of the
+                    screen (viewport). To control the scrolling behavior in such
+                    situations, the <Mono>scrollBehavior</Mono> property can be
+                    utilized. When <Mono>scrollBehavior</Mono> is set to{" "}
+                    <Mono>inside</Mono>, scrolling is limited to the{" "}
+                    <Mono>ModalBody</Mono>. This means that if the content
+                    within the modal exceeds the available space, a scrollbar
+                    will appear within the modal body itself, allowing users to
+                    scroll through the content without affecting the rest of the
+                    page. This is useful when you want to keep the modal's
+                    overall position fixed and maintain a consistent layout. On
+                    the other hand, when <Mono>scrollBehavior</Mono> is set to{" "}
+                    <Mono>outside</Mono>, the entire <Mono>ModalContent</Mono>,
+                    including the modal header, body, and footer, will scroll
+                    within the viewport. In this case, if the modal content
+                    overflows, a scrollbar will appear at the edge of the
+                    viewport, allowing users to scroll through the content. This
+                    approach is suitable when you want the entire modal to be
+                    scrollable, giving users the ability to view all the content
+                    within the modal without any restrictions.
                   </li>
                   <li>
-                    <HL>Rendering Elements as Inactive</HL>: When the modal is
-                    active or open, it's displayed within a unique portal, and
-                    all its sibling elements have the <Mono>aria-hidden</Mono>{" "}
-                    attribute assigned as <Mono>true</Mono>. This means that the
-                    only visible element to screen readers is the modal. If you
-                    wish to alter this behavior, you can deactivate it by
-                    setting the <Mono>useInert</Mono> property to{" "}
-                    <Mono>false</Mono>.
+                    <BlueBold>Rendering Elements as Inactive</BlueBold>: When
+                    the modal is active or open, it's displayed within a unique
+                    portal, and all its sibling elements have the{" "}
+                    <Mono>aria-hidden</Mono> attribute assigned as{" "}
+                    <Mono>true</Mono>. This means that the only visible element
+                    to screen readers is the modal. If you wish to alter this
+                    behavior, you can deactivate it by setting the{" "}
+                    <Mono>useInert</Mono> property to <Mono>false</Mono>.
                   </li>
                   <li>
-                    <HL>Disabling Focus Locking</HL>: By default, modal, alert
-                    dialog, and drawer components are designed to lock the focus
-                    within them, as a standard accessibility feature. This is
-                    generally encouraged to meet accessibility standards,
-                    ensuring user interaction is concentrated within these
-                    components. However, despite its impact on accessibility,
-                    there could be certain scenarios where focus trapping within
-                    the modal might not be ideal or necessary. If you want to
-                    disable this focus trapping feature, you can do so by
-                    setting the <Mono>trapFocus</Mono> property and assigning
-                    its value to <Mono>false</Mono>. This change will prevent
-                    the modal from locking user focus within itself.
+                    <BlueBold>Disabling Focus Locking</BlueBold>: By default,
+                    modal, alert dialog, and drawer components are designed to
+                    lock the focus within them, as a standard accessibility
+                    feature. This is generally encouraged to meet accessibility
+                    standards, ensuring user interaction is concentrated within
+                    these components. However, despite its impact on
+                    accessibility, there could be certain scenarios where focus
+                    trapping within the modal might not be ideal or necessary.
+                    If you want to disable this focus trapping feature, you can
+                    do so by setting the <Mono>trapFocus</Mono> property and
+                    assigning its value to <Mono>false</Mono>. This change will
+                    prevent the modal from locking user focus within itself.
                   </li>
                 </ul>
               </BulletBox>

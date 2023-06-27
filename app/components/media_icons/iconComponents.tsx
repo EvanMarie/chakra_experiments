@@ -1,6 +1,6 @@
 import { HStack, Icon, Link } from "@chakra-ui/react";
 import { ModalCode } from "~/styles/CodeDesignComponents";
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 import {
   BulletBox,
   MyFlex,
@@ -156,10 +156,11 @@ export function IconThree() {
       <SingleExample>
         <br />
         <BasicText>
-          ⦾ <HL>Using the Icon Component</HL>: The <Mono>Icon</Mono> component
-          is an SVG element that allows you to create your own SVG paths. Here's
-          an example where I have created a function that produces a custom
-          icon, which implement in the same way as Chakra icons or react-icons.
+          ⦾ <BlueBold>Using the Icon Component</BlueBold>: The <Mono>Icon</Mono>{" "}
+          component is an SVG element that allows you to create your own SVG
+          paths. Here's an example where I have created a function that produces
+          a custom icon, which implement in the same way as Chakra icons or
+          react-icons.
         </BasicText>
         <SingleExample>
           <MyFlex bg="background">
@@ -216,38 +217,39 @@ export function IconFour() {
       <BulletBox>
         <ul>
           <li>
-            <HL>Code Clarity</HL>: <Mono>createIcon</Mono> provides a clear and
-            simple way to define an icon. It encapsulates the underlying SVG
-            structure and abstracts it into a simple object-based structure. The
-            function takes care of setting up the SVG for you, and you just need
-            to specify the path data and viewBox. This makes your icon
-            definitions more compact and easier to read and understand.
+            <BlueBold>Code Clarity</BlueBold>: <Mono>createIcon</Mono> provides
+            a clear and simple way to define an icon. It encapsulates the
+            underlying SVG structure and abstracts it into a simple object-based
+            structure. The function takes care of setting up the SVG for you,
+            and you just need to specify the path data and viewBox. This makes
+            your icon definitions more compact and easier to read and
+            understand.
           </li>
           <li>
-            <HL>Better Typing for TypeScript</HL>: If you're using TypeScript,
-            <Mono>createIcon</Mono> allows for better type safety as it defines
-            what a Chakra UI Icon should be. The <Mono>IconProps</Mono> used in{" "}
-            <Mono>createIcon</Mono> make it easier for TypeScript to infer the
-            correct types and provide better autocompletion and error checking
-            in your IDE.
+            <BlueBold>Better Typing for TypeScript</BlueBold>: If you're using
+            TypeScript, <Mono>createIcon</Mono> allows for better type safety as
+            it defines what a Chakra UI Icon should be. The{" "}
+            <Mono>IconProps</Mono> used in <Mono>createIcon</Mono> make it
+            easier for TypeScript to infer the correct types and provide better
+            autocompletion and error checking in your IDE.
           </li>
           <li>
-            <HL>Less Boilerplate</HL>: With <Mono>createIcon</Mono>, you do not
-            need to write the common SVG attributes every time you want to
-            define a new icon. It takes care of the repetitive tasks for you,
-            keeping your code DRY (Don't Repeat Yourself).
+            <BlueBold>Less Boilerplate</BlueBold>: With <Mono>createIcon</Mono>,
+            you do not need to write the common SVG attributes every time you
+            want to define a new icon. It takes care of the repetitive tasks for
+            you, keeping your code DRY (Don't Repeat Yourself).
           </li>
           <li>
-            <HL>Default Props</HL>: <Mono>createIcon</Mono> allows you to set
-            default props for your icons. For example, you can set a default
-            color for your icon using the defaultProps attribute. This is more
-            difficult to achieve if you are creating icons using the Icon
-            component directly.
+            <BlueBold>Default Props</BlueBold>: <Mono>createIcon</Mono> allows
+            you to set default props for your icons. For example, you can set a
+            default color for your icon using the defaultProps attribute. This
+            is more difficult to achieve if you are creating icons using the
+            Icon component directly.
           </li>
           <li>
-            <HL>Consistency</HL>: Using <Mono>createIcon</Mono> helps to
-            maintain consistency across your application as all icons are
-            created in a similar manner.
+            <BlueBold>Consistency</BlueBold>: Using <Mono>createIcon</Mono>{" "}
+            helps to maintain consistency across your application as all icons
+            are created in a similar manner.
           </li>
         </ul>
       </BulletBox>

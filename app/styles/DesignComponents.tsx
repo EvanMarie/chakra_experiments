@@ -20,9 +20,17 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
-import { MyFlex } from "./MainDesignComponents";
+import { MyFlex, linkStyle } from "./MainDesignComponents";
 import { useState } from "react";
 // import { BasicTextSize } from "./MainDesignComponents";
+import styles from "~/styles/codeMarkdown.css";
+import stylesUrl from "~/styles/global.css";
+import { LinksFunction } from "@remix-run/node";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesUrl },
+  { rel: "stylesheet", href: styles },
+];
 
 export const colors = {
   mainBackground: "#211421",
@@ -108,6 +116,7 @@ export function HorizontalLine({
       opacity={opacity}
       bgGradient={bgGradient}
       bg={bg}
+      sx={linkStyle}
     />
   );
 }
@@ -151,7 +160,7 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
   };
 
   return (
-    <Box overflow-x="hidden" {...defaultBoxProps} {...restProps}>
+    <Box sx={linkStyle} overflow-x="hidden" {...defaultBoxProps} {...restProps}>
       {children}
     </Box>
   );
@@ -171,7 +180,7 @@ export function CompWithLabel({
   rightColAlign = "left",
 }: CompWithLabelProps) {
   return (
-    <Box w="100%">
+    <Box w="100%" sx={linkStyle}>
       <Grid templateColumns={split}>
         <Flex
           w="100%"
@@ -246,7 +255,7 @@ export function Mono({
     fontWeight: fontWeight,
     marginY: `${marginY} !important`,
     lineheight: `${lineHeight} !important`,
-    color: "accent_2",
+    color: "accent_1",
     width: `${width} !important`,
   };
   return <chakra.span {...monoStyle}>{children}</chakra.span>;
@@ -279,6 +288,7 @@ export function StackedExample({
       {...defaultFlexProps}
       flexDirection={{ base: "column" }}
       {...restProps}
+      sx={linkStyle}
     >
       <VStack spacing={spacing} align="center">
         {children}
@@ -309,7 +319,7 @@ export function CollapsibleExample({
 
   return (
     <Box w="100%" paddingY={3}>
-      <Grid templateColumns={responsiveSplit} gap={3}>
+      <Grid templateColumns={responsiveSplit} gap={3} sx={linkStyle}>
         <Flex
           w="100%"
           justifyContent={"center"}
@@ -351,6 +361,7 @@ export function IHeartComponents({
       bgGradient={bgGradient}
       fontFamily={fontFamily}
       bgClip="text"
+      sx={linkStyle}
       _hover={{
         bgGradient: "linear(to-l, #faa5b9, deeppink, #a7d5fa, #05fce8)",
         textDecor: "none",
@@ -385,24 +396,35 @@ export function PlaceholderImage({
   );
 }
 
-// interface HighlightMeProps {
-//   children?: React.ReactNode;
-//   color?: string;
-//   fontWeight?: string;
-//   size?: string | number;
-// }
+/* ***************************************************************************************** */
 
-// export function HL({
-//   children,
-//   color = "accent_2",
-//   fontWeight = "bold",
-// }: HighlightMeProps) {
-//   return (
-//     <Text as="span" color={color} fontWeight={fontWeight}>
-//       {children}
-//     </Text>
-//   );
-// }
+interface BlueBoldProps {
+  children?: React.ReactNode;
+  color?: string;
+  fontWeight?: string;
+  size?: string | number;
+}
+
+export function BlueBold({
+  children,
+  color = "accent_2",
+  fontWeight = "bold",
+}: BlueBoldProps) {
+  return (
+    <Text
+      as="span"
+      // bg={"sidebarBackground"}
+      // p="3px"
+      // borderRadius="sm"
+      color={color}
+      fontWeight={fontWeight}
+    >
+      {children}
+    </Text>
+  );
+}
+
+/* *************************************************************************** */
 
 interface HighlightMeProps extends CodeProps {
   children?: React.ReactNode;
@@ -422,6 +444,7 @@ export function HL({ children, fontWeight = "normal" }: HighlightMeProps) {
   });
   return (
     <Code
+      sx={linkStyle}
       fontWeight={fontWeight}
       bg="background"
       color="accent_2"

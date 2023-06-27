@@ -2,7 +2,7 @@ import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -70,9 +70,9 @@ export default function chakra_section() {
               ⦾ In the realm of digital interface design, a toast represents a
               compact, non-intrusive popup notification intended to furnish
               users with short, transient alerts or pieces of information.
-              Typically, toasts manifest themselves as minor rectangular boxes,
-              strategically positioned on the screen's corners or along the top
-              or bottom edge.
+              Typically, toasts are minor rectangular boxes, strategically
+              positioned on the screen's corners or along the top or bottom
+              edge.
             </SectionDescription>
             <BasicText>
               Toasts aim to deliver critical or time-bound information without
@@ -86,26 +86,27 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Succinctness</HL>: A toast tends to carry short, crisp
-                  messages designed to capture the user's attention effectively
-                  and communicate the intended information.
+                  <BlueBold>Succinctness</BlueBold>: A toast tends to carry
+                  short, crisp messages designed to capture the user's attention
+                  effectively and communicate the intended information.
                 </li>
                 <li>
-                  <HL>Non-interference</HL>: Toasts do not necessitate any user
-                  interaction and are designed to vanish automatically after a
-                  predetermined duration or upon user dismissal. They
-                  momentarily appear and avoid any disruptions to the user's
-                  ongoing actions.
+                  <BlueBold>Non-interference</BlueBold>: Toasts do not
+                  necessitate any user interaction and are designed to vanish
+                  automatically after a predetermined duration or upon user
+                  dismissal. They momentarily appear and avoid any disruptions
+                  to the user's ongoing actions.
                 </li>
                 <li>
-                  <HL>Temporariness</HL>: Toasts serve as ephemeral
+                  <BlueBold>Temporariness</BlueBold>: Toasts serve as ephemeral
                   notifications and do not persist on the screen. Their purpose
                   is to deliver momentary information or feedback.
                 </li>
                 <li>
-                  <HL>Responsiveness</HL>: Toasts are typically built to adapt
-                  to various screen sizes and devices, ensuring their visibility
-                  and readability across a range of screen resolutions.
+                  <BlueBold>Responsiveness</BlueBold>: Toasts are typically
+                  built to adapt to various screen sizes and devices, ensuring
+                  their visibility and readability across a range of screen
+                  resolutions.
                 </li>
               </ul>
             </BulletBox>
@@ -113,18 +114,19 @@ export default function chakra_section() {
               <BasicText>
                 The inclusion of toasts in web and mobile applications
                 significantly improves the user experience by offering timely
-                feedback and information. They play a crucial role in conveying
-                important messages without disturbing the user's workflow or
-                compelling them to divert from their current context.
+                feedback and information. They play an important role in
+                conveying important messages without disturbing the user's
+                workflow or compelling them to divert from their current
+                context.
               </BasicText>
               <br />
               <BasicText>
-                The Chakra UI's Toast component provides all these benefits with
-                a customizable and easy-to-use interface. It allows developers
-                to display temporary, auto-dismissing alerts with various visual
-                styles to indicate the nature of the notification. Moreover, it
-                supports different positions on the screen and offers control
-                over its behavior and duration.
+                The Chakra UI's <Mono>Toast</Mono> component provides all these
+                benefits with a customizable and easy-to-use interface. It
+                allows developers to display temporary, auto-dismissing alerts
+                with various visual styles to indicate the nature of the
+                notification. Moreover, it supports different positions on the
+                screen and offers control over its behavior and duration.
               </BasicText>
               {/* IMPORT CODE */}
               <ImportBox>

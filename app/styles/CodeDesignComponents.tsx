@@ -1,5 +1,5 @@
 import { Highlighter } from "~/components/styling/highlighter";
-import { MyFlex } from "./MainDesignComponents";
+import { MyFlex, linkStyle } from "./MainDesignComponents";
 import {
   Box,
   Button,
@@ -17,11 +17,19 @@ import {
 } from "@chakra-ui/react";
 import hljs from "highlight.js";
 import { useEffect, useRef, useState } from "react";
+import styles from "~/styles/codeMarkdown.css";
+import stylesUrl from "~/styles/global.css";
 
 import javascript from "highlight.js/lib/languages/javascript";
 import { DiCode } from "react-icons/di";
 import { ButtonHoverBG, ButtonStyles } from "./DesignComponents";
+import { LinksFunction } from "@remix-run/node";
 hljs.registerLanguage("javascript", javascript);
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesUrl },
+  { rel: "stylesheet", href: styles },
+];
 
 /* ******************************EXPANDABLE******************************* */
 
@@ -62,7 +70,7 @@ export const ModalCode = ({ children }: ModalCodeProps) => {
 
   return (
     <>
-      <MyFlex p={0}>
+      <MyFlex p={0} sx={linkStyle}>
         <Box
           {...ViewCodeButtonStyles}
           onClick={handleExpandClick}

@@ -2,7 +2,7 @@ import { Box, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -61,23 +61,23 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Background color</HL>: You can control the background
-                    color of a component using the <Mono>bg</Mono> or{" "}
+                    <BlueBold>Background color</BlueBold>: You can control the
+                    background color of a component using the <Mono>bg</Mono> or{" "}
                     <Mono>backgroundColor</Mono> prop.
                   </li>
                   <li>
-                    <HL>Font color</HL>: You can control the text color of a
-                    component using the <Mono>color</Mono> prop.
+                    <BlueBold>Font color</BlueBold>: You can control the text
+                    color of a component using the <Mono>color</Mono> prop.
                   </li>
                   <li>
-                    <HL>CSS colors</HL>: Colors in Chakra UI aren't just limited
-                    to the built-in color palette. You can use any valid CSS
-                    color name, a hex color code, an rgb value, etc.
+                    <BlueBold>CSS colors</BlueBold>: Colors in Chakra UI aren't
+                    just limited to the built-in color palette. You can use any
+                    valid CSS color name, a hex color code, an rgb value, etc.
                   </li>
                   <li>
-                    <HL>Responsive design</HL>: When using color props in Chakra
-                    UI, you can also use responsive arrays to specify different
-                    values for different breakpoints.
+                    <BlueBold>Responsive design</BlueBold>: When using color
+                    props in Chakra UI, you can also use responsive arrays to
+                    specify different values for different breakpoints.
                   </li>
                 </ul>
               </BulletBox>

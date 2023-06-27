@@ -2,7 +2,7 @@ import { Box, VStack } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL, Mono } from "~/styles/DesignComponents";
+import { BasicText, BlueBold, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -77,38 +77,39 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Placement</HL>: You can specify the placement of the
-                  drawer, such as "left", "right", "top", or "bottom", to
+                  <BlueBold>Placement</BlueBold>: You can specify the placement
+                  of the drawer, such as "left", "right", "top", or "bottom", to
                   determine from which direction it will slide into view.
                 </li>
                 <li>
-                  <HL>Size</HL>: You can control the size of the drawer by
-                  setting the size prop to values like "xs", "sm", "md", "lg",
-                  or "xl", or you can provide custom values.
+                  <BlueBold>Size</BlueBold>: You can control the size of the
+                  drawer by setting the size prop to values like "xs", "sm",
+                  "md", "lg", or "xl", or you can provide custom values.
                 </li>
                 <li>
-                  <HL>Overlay</HL>: The drawer component automatically adds an
-                  overlay to the rest of the screen when it is open, making the
-                  content outside the drawer less prominent. The overlay can be
-                  customized with various properties such as opacity and
-                  background color.{" "}
+                  <BlueBold>Overlay</BlueBold>: The drawer component
+                  automatically adds an overlay to the rest of the screen when
+                  it is open, making the content outside the drawer less
+                  prominent. The overlay can be customized with various
+                  properties such as opacity and background color.{" "}
                 </li>
                 <li>
-                  <HL>Animation</HL>: The drawer component provides smooth
-                  animation when opening and closing. You can customize the
-                  animation using CSS transitions or other animation libraries.{" "}
+                  <BlueBold>Animation</BlueBold>: The drawer component provides
+                  smooth animation when opening and closing. You can customize
+                  the animation using CSS transitions or other animation
+                  libraries.{" "}
                 </li>
                 <li>
-                  <HL>Controlled or Uncontrolled</HL>: You have the flexibility
-                  to use the drawer as a controlled or uncontrolled component.
-                  You can manually control its open/close state, or you can use
-                  the <Mono>isOpen</Mono> and <Mono>onClose</Mono> props to let
-                  Chakra UI handle the state for you.{" "}
+                  <BlueBold>Controlled or Uncontrolled</BlueBold>: You have the
+                  flexibility to use the drawer as a controlled or uncontrolled
+                  component. You can manually control its open/close state, or
+                  you can use the <Mono>isOpen</Mono> and <Mono>onClose</Mono>{" "}
+                  props to let Chakra UI handle the state for you.{" "}
                 </li>
                 <li>
-                  <HL>Accessibility</HL>: : The Chakra Drawer component is built
-                  with accessibility in mind. It ensures proper focus management
-                  and screen reader compatibility.
+                  <BlueBold>Accessibility</BlueBold>: : The Chakra Drawer
+                  component is built with accessibility in mind. It ensures
+                  proper focus management and screen reader compatibility.
                 </li>
               </ul>
             </BulletBox>
@@ -119,6 +120,57 @@ export default function chakra_section() {
                 component. You can control the visibility of the drawer by
                 toggling its open state using the <Mono>isOpen</Mono> prop.
               </BasicText>
+              <BasicText>
+                The <Mono>Drawer</Mono> component is made up of the following
+                parts. These subcomponents work together to create a flexible
+                and customizable drawer component within the Chakra framework.
+                By using these components, you can easily structure and organize
+                the content within the drawer while maintaining consistent
+                styling and behavior.
+              </BasicText>
+              <BulletBox>
+                <ul>
+                  <li>
+                    <HL>Drawer</HL>: serves as the main container for the
+                    drawer. It typically wraps the entire drawer content and
+                    manages its open/closed state.
+                  </li>
+                  <li>
+                    <HL>DrawerBody</HL>: used to represent the main content area
+                    of the drawer. It is where you place the primary content or
+                    components that should be displayed within the drawer.
+                  </li>
+                  <li>
+                    <HL>DrawerFooter</HL>: used to represent the footer section
+                    of the drawer. It is commonly used for placing actions or
+                    additional content related to the drawer's context or
+                    purpose.
+                  </li>
+                  <li>
+                    <HL>DrawerHeader</HL>: used to represent the header section
+                    of the drawer. It typically contains a title or any other
+                    relevant information about the content within the drawer.
+                  </li>
+                  <li>
+                    <HL>DrawerOverlay</HL>: serves as the overlay layer that
+                    covers the rest of the page when the drawer is open. It
+                    helps create the modal-like behavior by blocking
+                    interactions with the underlying content.
+                  </li>
+                  <li>
+                    <HL>DrawerContent</HL>: the container for the entire
+                    drawer's content. It provides a default background and
+                    styling for the drawer and acts as a parent container for
+                    the header, body, and footer components.
+                  </li>
+                  <li>
+                    <HL>DrawerCloseButton</HL>: a small button typically placed
+                    within the header section. It allows users to close the
+                    drawer by clicking on it, providing a convenient way to
+                    dismiss the drawer.
+                  </li>
+                </ul>
+              </BulletBox>
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>

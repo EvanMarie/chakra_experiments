@@ -10,7 +10,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 
-import { AiOutlineHome } from "react-icons/ai";
+import { AiFillAlert, AiOutlineHome } from "react-icons/ai";
 import { AccordionMain, AccordionSub } from "./navigationComponents";
 import { useLocation, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
@@ -234,6 +234,32 @@ export const navElements: NavElement[] = [
       {
         link: "/data_display/tag",
         label: "Tag",
+      },
+    ],
+  },
+  {
+    link: "/navigation",
+    label: "Navigation",
+    subElements: [
+      {
+        link: "/navigation/breadcrumb",
+        label: "Breadcrumb",
+      },
+      {
+        link: "/navigation/link",
+        label: "Link",
+      },
+      {
+        link: "/navigation/link_overlay",
+        label: "Link Overlay",
+      },
+      {
+        link: "/navigation/skipnav",
+        label: "Skip Nav",
+      },
+      {
+        link: "/navigation/stepper",
+        label: "Stepper",
       },
     ],
   },

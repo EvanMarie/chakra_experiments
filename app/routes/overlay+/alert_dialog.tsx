@@ -131,9 +131,9 @@ export default function chakra_section() {
                 <li>
                   <HL>AlertDialogContent</HL>: This serves as a wrapper for the{" "}
                   <Mono>AlertDialogHeader</Mono>, <Mono>AlertDialogBody</Mono>,
-                  and <Mono>AlertDialogFooter</Mono>
-                  components. It helps in structuring the dialog box and can
-                  also be styled to fit your UI design requirements.
+                  and <Mono>AlertDialogFooter</Mono> components. It helps in
+                  structuring the dialog box and can also be styled to fit your
+                  UI design requirements.
                 </li>
                 <li>
                   <HL>AlertDialogFooter</HL>: This is used for displaying

@@ -13,6 +13,7 @@ import stylesUrl from "~/styles/global.css";
 
 import {
   BasicText,
+  BlueBold,
   FlexibleBox,
   HL,
   Mono,
@@ -76,34 +77,37 @@ export default function chakra_section() {
               <BulletBox>
                 <ul>
                   <li>
-                    <HL>Width</HL>: You can control the width of a component
-                    using the <Mono>w</Mono> or <Mono>width</Mono> prop.
+                    <BlueBold>Width</BlueBold>: You can control the width of a
+                    component using the <Mono>w</Mono> or <Mono>width</Mono>{" "}
+                    prop.
                   </li>
                   <li>
-                    <HL>Height</HL>: You can control the height of a component
-                    using the <Mono>h</Mono> or <Mono>height</Mono> prop.
+                    <BlueBold>Height</BlueBold>: You can control the height of a
+                    component using the <Mono>h</Mono> or <Mono>height</Mono>{" "}
+                    prop.
                   </li>
                   <li>
-                    <HL>Min/Max Width and Height</HL>: You can control the
-                    minimum and maximum dimensions of a component using the{" "}
-                    <Mono>minW</Mono>, <Mono>maxW</Mono>, <Mono>minH</Mono>, and{" "}
-                    <Mono>maxH</Mono>
+                    <BlueBold>Min/Max Width and Height</BlueBold>: You can
+                    control the minimum and maximum dimensions of a component
+                    using the <Mono>minW</Mono>, <Mono>maxW</Mono>,{" "}
+                    <Mono>minH</Mono>, and <Mono>maxH</Mono>
                     props
                   </li>
                   <li>
-                    <HL>Box Sizing</HL>: Chakra UI sets the box-sizing property
-                    to <Mono>border-box</Mono> globally. This means padding and
-                    border are included in an element's total width and height.
-                    You don't have to worry about adding padding or border to a
-                    box and accidentally making it larger than you expected
+                    <BlueBold>Box Sizing</BlueBold>: Chakra UI sets the
+                    box-sizing property to <Mono>border-box</Mono> globally.
+                    This means padding and border are included in an element's
+                    total width and height. You don't have to worry about adding
+                    padding or border to a box and accidentally making it larger
+                    than you expected
                   </li>
                   <li>
-                    <HL>Display</HL>: The <Mono>display</Mono> property
-                    determines the type of rendering box used for an element.
-                    You can use the display prop to control this
+                    <BlueBold>Display</BlueBold>: The <Mono>display</Mono>{" "}
+                    property determines the type of rendering box used for an
+                    element. You can use the display prop to control this
                   </li>
                   <li>
-                    <HL>Size</HL>: For square components where{" "}
+                    <BlueBold>Size</BlueBold>: For square components where{" "}
                     <Mono>width</Mono> and <Mono>height</Mono> are equal, you
                     can use the <Mono>size</Mono> prop to set both at once
                   </li>
