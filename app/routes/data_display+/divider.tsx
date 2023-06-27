@@ -139,8 +139,8 @@ export default function chakra_section() {
                       However, Chakra UI provides you the flexibility to change
                       its orientation to vertical. This can be achieved by
                       passing the <Mono>orientation</Mono> prop. <b>Note</b>{" "}
-                      that when using a vertical divider, it's crucial to assign
-                      a height to the parent element.
+                      that when using a vertical divider, it's necessary to
+                      assign a height to the parent element.
                     </SectionDescription>
                     <BasicText></BasicText>
                     <BasicText></BasicText>
