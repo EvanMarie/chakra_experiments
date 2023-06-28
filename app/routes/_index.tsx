@@ -1,5 +1,11 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import { BasicText, HL, MyDivider, MyHeading } from "~/styles/DesignComponents";
+import {
+  BasicText,
+  HL,
+  Mono,
+  MyDivider,
+  MyHeading,
+} from "~/styles/DesignComponents";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 import {
@@ -148,6 +154,20 @@ export default function Index() {
           <BasicText>
             <i>~ Evan Marie Carr</i>
           </BasicText>
+          <Box px={9} fontSize="1rem">
+            <BasicText>
+              <Mono>
+                <i>
+                  Note: This project began in the summer of 2023, at which time
+                  the most recent Chakra-UI version is 2.7.0. Therefore, the
+                  examples, descriptions, and illustrations herein are based on
+                  that version. For the most up to date information, and as
+                  always, be sure to check out the official Chakra-UI
+                  documentation. The link is provided below.
+                </i>
+              </Mono>
+            </BasicText>
+          </Box>
         </SectionContainer>
         <HStack
           spacing={8}

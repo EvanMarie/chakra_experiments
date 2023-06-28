@@ -263,6 +263,68 @@ export const navElements: NavElement[] = [
       },
     ],
   },
+  {
+    link: "/form",
+    label: "Form",
+    subElements: [
+      {
+        link: "/form/button",
+        label: "Button",
+      },
+      {
+        link: "/form/checkbox",
+        label: "Checkbox",
+      },
+      {
+        link: "/form/editable",
+        label: "Editable",
+      },
+      {
+        link: "/form/form_control",
+        label: "Form Control",
+      },
+      {
+        link: "/form/icon_button",
+        label: "Icon Button",
+      },
+      {
+        link: "/form/input",
+        label: "Input",
+      },
+      {
+        link: "/form/number_input",
+        label: "Number Input",
+      },
+      {
+        link: "/form/pin_input",
+        label: "Pin Input",
+      },
+      {
+        link: "/form/radio",
+        label: "Radio",
+      },
+      {
+        link: "/form/range_slider",
+        label: "Range Slider",
+      },
+      {
+        link: "/form/select",
+        label: "Select",
+      },
+      {
+        link: "/form/slider",
+        label: "Slider",
+      },
+      {
+        link: "/form/switch",
+        label: "Switch",
+      },
+      {
+        link: "/form/textarea",
+        label: "Textarea",
+      },
+    ],
+  },
 ];
 
 export const getNavElementForUrl = (

@@ -31,9 +31,21 @@ import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
 import { Box } from "@chakra-ui/react";
-import { StepperFunctionOne } from "~/components/navigation/stepperFunctions";
 import {
+  StepperFunctionOne,
+  StepperFunctionSeven,
+  StepperTipOne,
+  StepperTipTwo,
+  TipStepperThree,
+} from "~/components/navigation/stepperFunctions";
+import {
+  StepperEight,
+  StepperFive,
+  StepperFour,
   StepperOne,
+  StepperSeven,
+  StepperSix,
+  StepperThree,
   StepperTwo,
 } from "~/components/navigation/stepperComponents";
 
@@ -150,7 +162,7 @@ export default function chakra_section() {
               <SingleExample>
                 <StepperOne />
                 <ModalCode>
-                  <Navigation.E13 />
+                  <Navigation.E15 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -159,57 +171,62 @@ export default function chakra_section() {
               <SingleExample>
                 <StepperTwo />
                 <ModalCode>
-                  <Navigation.E14 />
+                  <Navigation.E16 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <StepperThree />
+                <ModalCode>
+                  <Navigation.E17 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <StepperFour />
+                <ModalCode>
+                  <Navigation.E18 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <StepperFive />
+                <ModalCode>
+                  <Navigation.E19 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <StepperSix />
+                <ModalCode>
+                  <Navigation.E20 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <StepperSeven />
+                <ModalCode>
+                  <Navigation.E21 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <StepperEight />
+                <ModalCode>
+                  <Navigation.E22 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -217,25 +234,61 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Animating Step Transitions</b>: To enhance the user experience
+              further, consider adding animations during step transitions. This
+              can be done using a third-party library like
+              react-transition-group.
+            </HighlightText>
+            <HighlightExample
+              h={{ base: "190px", sm: "215px", md: "225px", lg: "175px" }}
+            >
+              <MyFlex>
+                <StepperTipOne />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Navigation.H08 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Interactive Step Indicator</b>: In this use-case, each step
+              indicator not only shows the step status, but also provides more
+              information about the step through a tooltip on hover. This can
+              enhance the user experience by providing context-sensitive help or
+              additional details.
+            </HighlightText>
+            <HighlightExample
+              h={{ base: "100px", sm: "125px", md: "125px", lg: "100px" }}
+            >
+              <MyFlex>
+                <StepperTipTwo />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Navigation.H09 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Dynamic Steps</b>: Sometimes, we don't know the exact number of
+              steps at the beginning. In such cases, we can dynamically generate
+              steps.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <TipStepperThree
+                  initialSteps={[
+                    { title: "Step 1", description: "Choose Size" },
+                    { title: "Step 2", description: "Choose Toppings" },
+                  ]}
+                />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Navigation.H10 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

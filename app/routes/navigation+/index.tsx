@@ -31,9 +31,9 @@ export default function chakra_feedback() {
 
           <BasicText>
             The navigation components in Chakra UI include{" "}
-            <Mono>Breadcrumb</Mono>, <Mono>Link</Mono>,<Mono>Linkoverlay</Mono>,{" "}
-            <Mono>Skipnav</Mono>, and <Mono>Stepper</Mono>. These components are
-            very helpful in structuring websites and applications, guiding
+            <Mono>Breadcrumb</Mono>, <Mono>Link</Mono>, <Mono>Linkoverlay</Mono>
+            , <Mono>Skipnav</Mono>, and <Mono>Stepper</Mono>. These components
+            are very helpful in structuring websites and applications, guiding
             users, and improving overall user experience.
           </BasicText>
 
@@ -46,7 +46,6 @@ export default function chakra_feedback() {
           </BasicText>
         </VStack>
         <MyFlex bg={"darkAccent_3"} p={5} pt={3} mt={5}>
-          <BasicText>DESCRIBE BULLETS</BasicText>
           <BulletBox>
             <ul>
               <li>
