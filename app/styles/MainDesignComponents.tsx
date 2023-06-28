@@ -23,6 +23,7 @@ import {
   ModalOverlay,
   CodeProps,
   Code,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
@@ -295,20 +296,47 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
 }
 
 /* ********************************MAIN LABEL**************************************** */
+interface FontSizeProps {
+  base: number;
+  sm: number;
+  md: number;
+  lg: number;
+}
 
-interface MyLabelProps {
-  children?: React.ReactNode;
-  size?: number;
+interface MyLabelProps extends FlexProps {
+  size?: FontSizeProps | number;
   labelColor?: string;
   link?: string;
+  children?: React.ReactNode;
 }
 
 export function MyLabel({
-  size = 33,
+  size = { base: 24, sm: 27, md: 30, lg: 36 },
   labelColor = "accent_1",
+  lineHeight = "0.7rem",
   link = "",
   children,
 }: MyLabelProps) {
+  const [isSm] = useMediaQuery("(min-width: 30em)");
+  const [isMd] = useMediaQuery("(min-width: 48em)");
+  const [isLg] = useMediaQuery("(min-width: 62em)");
+
+  let currentFontSize: number;
+
+  if (typeof size === "number") {
+    currentFontSize = size;
+  } else {
+    currentFontSize = isLg
+      ? size.lg
+      : isMd
+      ? size.md
+      : isSm
+      ? size.sm
+      : size.base;
+  }
+
+  const chakraFontSize = currentFontSize - 12;
+
   return (
     <Flex sx={linkStyle} overflow-x="hidden" direction="column">
       <Flex w="100%" justifyContent="center">
@@ -320,9 +348,10 @@ export function MyLabel({
         >
           <Text
             w="100%"
-            fontSize={["24px", "27px", "30px", "36px"]}
+            fontSize={currentFontSize}
             color={labelColor}
             fontWeight="bold"
+            lineHeight={lineHeight}
           >
             {children}
           </Text>
@@ -334,7 +363,7 @@ export function MyLabel({
               <CustomLink
                 href={link}
                 target="_blank"
-                fontSize={["sm", "md", size - 12]}
+                fontSize={chakraFontSize}
                 color="linkColor"
               >
                 Chakra Docs

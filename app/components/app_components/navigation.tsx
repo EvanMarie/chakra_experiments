@@ -268,23 +268,28 @@ export const navElements: NavElement[] = [
     label: "Form",
     subElements: [
       {
-        link: "/form/button",
+        // link: "/form/button",
+        link: "/on_my_way",
         label: "Button",
       },
       {
-        link: "/form/checkbox",
+        // link: "/form/checkbox",
+        link: "/on_my_way",
         label: "Checkbox",
       },
       {
-        link: "/form/editable",
+        // link: "/form/editable",
+        link: "/on_my_way",
         label: "Editable",
       },
       {
-        link: "/form/form_control",
+        // link: "/form/form_control",
+        link: "/on_my_way",
         label: "Form Control",
       },
       {
-        link: "/form/icon_button",
+        // link: "/form/icon_button",
+        link: "/on_my_way",
         label: "Icon Button",
       },
       {
@@ -292,35 +297,43 @@ export const navElements: NavElement[] = [
         label: "Input",
       },
       {
-        link: "/form/number_input",
+        // link: "/form/number_input",
+        link: "/on_my_way",
         label: "Number Input",
       },
       {
-        link: "/form/pin_input",
+        // link: "/form/pin_input",
+        link: "/on_my_way",
         label: "Pin Input",
       },
       {
-        link: "/form/radio",
+        // link: "/form/radio",
+        link: "/form/pin_input",
         label: "Radio",
       },
       {
-        link: "/form/range_slider",
+        // link: "/form/range_slider",
+        link: "/form/pin_input",
         label: "Range Slider",
       },
       {
-        link: "/form/select",
+        // link: "/form/select",
+        link: "/form/pin_input",
         label: "Select",
       },
       {
-        link: "/form/slider",
+        // link: "/form/slider",
+        link: "/form/pin_input",
         label: "Slider",
       },
       {
-        link: "/form/switch",
+        // link: "/form/switch",
+        link: "/form/pin_input",
         label: "Switch",
       },
       {
-        link: "/form/textarea",
+        // link: "/form/textarea",
+        link: "/form/pin_input",
         label: "Textarea",
       },
     ],
