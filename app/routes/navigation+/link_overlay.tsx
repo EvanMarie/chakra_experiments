@@ -32,9 +32,16 @@ import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
 import { Box, Code } from "@chakra-ui/react";
 import {
+  LinkOverlayFour,
   LinkOverlayOne,
+  LinkOverlayThree,
   LinkOverlayTwo,
 } from "~/components/navigation/linkOverlayComponents";
+import {
+  GridCard,
+  ImageCard,
+  NavigationList,
+} from "~/components/navigation/linkOverlayFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -144,50 +151,16 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <LinkOverlayThree />
+                <ModalCode>
+                  <Navigation.E10 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <LinkOverlayFour />
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -195,25 +168,68 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Overlay with Image and Caption</b>: You might not think about
+              using <b>LinkOverlay</b> with an image and caption, but this can
+              be a great way to create linked images for blog posts, articles,
+              or portfolio pieces. This allows the whole card, including image
+              and caption, to act as a link. Here, the entire figure, including
+              the image and caption, behaves as a single link, providing an
+              intuitive navigation experience for the user. This usage also has
+              accessibility benefits, as the image and its related text are
+              semantically grouped together as a single navigable element.
+            </HighlightText>
+            <HighlightExample h="275px">
+              <MyFlex>
+                <ImageCard />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Navigation.H05 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Overlay with Complex Layout</b>: <b>LinkOverlay</b> is not
+              limited to just text or simple layouts. It can be used in
+              combination with complex layout components to create interesting
+              interactive elements. This shows how <b>LinkOverlay</b> can be
+              used with more complex layout components like <b>Grid</b>. Each
+              box within the grid can contain separate links, but visually, they
+              all belong to one unit. This can be useful in scenarios like
+              dashboard UIs, where different parts of a larger component might
+              need to link to different resources or sections of the
+              application.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <GridCard />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Navigation.H06 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Overlay with List Elements</b>: <b>LinkOverlay</b> can be
+              paired with list elements to create interesting navigation menus
+              or linked list items. Using <b>LinkOverlay</b> with <b>LinkBox</b>{" "}
+              in a list structure, as opposed to using <b>Link</b> directly, is
+              beneficial when you want the entire list item, including any
+              padding or margin, to be clickable, rather than just the text or
+              icon inside it. This can enhance usability, especially on mobile
+              devices, where precise clicking or tapping can be more
+              challenging.
+            </HighlightText>
+            <HighlightExample h="120px">
+              <MyFlex>
+                <NavigationList />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Navigation.H07 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

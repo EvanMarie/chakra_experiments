@@ -1,184 +1,114 @@
-import type { LinksFunction } from "@remix-run/node";
-import stylesUrl from "~/styles/global.css";
-
-import { BasicText, HL } from "~/styles/DesignComponents";
+import { Box, Code, Link, VStack } from "@chakra-ui/react";
+import { BsTextareaResize } from "react-icons/bs";
+import { Highlighter } from "~/components/styling/highlighter";
+import { BasicText, FlexibleBox, HL, Mono } from "~/styles/DesignComponents";
+import * as Navigation from "~/mardownExamples/navigation/index";
 
 import {
   BigBackgroundBox,
   BulletBox,
   DescriptionBox,
-  ExampleBox,
+  ImportBox,
+  MyFlex,
   MyLabel,
   SectionContainer,
-  ImportBox,
-  MainGrid,
-  GridColumn,
-  GridBoxOne,
-  GridBoxThree,
-  GridBoxTwo,
-  HighlightColumn,
-  MyFlex,
   SectionDescription,
-  SingleExample,
-  HighlightText,
-  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
-import { Highlighter } from "~/components/styling/highlighter";
-import styles from "~/styles/codeMarkdown.css";
-import * as Navigation from "~/mardownExamples/navigation/index";
-import hljs from "highlight.js";
-import javascript from "highlight.js/lib/languages/javascript";
-import { ModalCode } from "~/styles/CodeDesignComponents";
-import { Box } from "@chakra-ui/react";
-
-hljs.registerLanguage("javascript", javascript);
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesUrl },
-  { rel: "stylesheet", href: styles },
-];
-
-export default function chakra_section() {
+export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
-      {/* ********************************************************************* */}
-      <MyLabel link="https://chakra-ui.com/docs/components/skip-nav" size={28}>
-        Skip Nav
+      <MyLabel link="https://chakra-ui.com/docs/components/skip-nav">
+        SkipNav
       </MyLabel>
-      <MainGrid>
-        <GridColumn>
-          {/*  Section Introduction */}
-          {/* COMPONENT DESCRIPTION */}
-          <SectionContainer paddingBottom={2} mb={0}>
-            <SectionDescription>⦾ Describe</SectionDescription>
-            <BasicText></BasicText>
-            <BulletBox>
-              <ul>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-              </ul>
-            </BulletBox>
-            <DescriptionBox>
-              <BasicText>Some description</BasicText>
-              {/* IMPORT CODE */}
-              <ImportBox>
-                <BasicText>
-                  These components can be imported as follows:
-                </BasicText>
-                <Highlighter>{``}</Highlighter>
-              </ImportBox>
-            </DescriptionBox>
-          </SectionContainer>
-          {/* COMPONENT EXAMPLES */}
-          <ExampleBox>
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
+      <SectionContainer pb={5} mb={0}>
+        <Box px={5}>
+          <SectionDescription>
+            ⦾ The <Mono>SkipNav</Mono> component is a useful tool in creating
+            accessible web applications, offering keyboard users a fast track to
+            the core content of a webpage.
+          </SectionDescription>
+          <BasicText>
+            <Mono>SkipNav</Mono> is essentially composed of two components,{" "}
+            <Mono>SkipNavLink</Mono> and <Mono>SkipNavContent</Mono>. These
+            components come into play in enhancing website accessibility,
+            particularly for keyboard users and screen readers. They offer a
+            mechanism to bypass blocks of content that are repetitive across
+            multiple pages, such as navigation links, allowing users to quickly
+            access the main content of the page.
+          </BasicText>
 
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
+          <BulletBox>
+            <ul>
+              <li>
+                <HL>SkipNavLink</HL>: one of the two primary components of the{" "}
+                <Mono>SkipNav</Mono> functionality in Chakra UI. Its primary
+                purpose is to create a hyperlink at the top of your application
+                that enables keyboard users to swiftly skip to the main content
+                of the webpage, bypassing repetitive elements. This component
+                renders an <Code>{`<a>`}</Code> tag and automatically
+                establishes a link with an <Code>{`href`}</Code> attribute that
+                targets <Mono>SkipNavContent</Mono>. This link typically becomes
+                one of the first items a user interacts with when they begin
+                navigating a page after it has loaded. Hence, it is highly
+                recommended to place it as high as possible in your app's
+                structure.
+              </li>
+              <li>
+                <HL>SkipNavContent</HL>: works in tandem with{" "}
+                <Mono>SkipNavLink</Mono> to enhance the navigation experience
+                for keyboard users and those using screen readers. This
+                component serves as the target for the link generated by{" "}
+                <Mono>SkipNavLink</Mono>. When the link is clicked or activated
+                via keyboard, the focus shifts to the content encapsulated by{" "}
+                <Mono>SkipNavContent</Mono>. When using a custom id with{" "}
+                <Mono>SkipNavLink</Mono>, you'll need to ensure that the same id
+                is utilized with <Mono>SkipNavContent</Mono>.{" "}
+                <Mono>SkipNavContent</Mono> generates a <Code>{`<div>`}</Code>{" "}
+                and can be employed as a self-closing component or used to wrap
+                the main content.
+              </li>
+            </ul>
+          </BulletBox>
+          <DescriptionBox>
+            {/* IMPORT CODE */}
+            <ImportBox>
+              <BasicText>
+                These components can be imported as follows:
+              </BasicText>
+              <Highlighter>{`import { 
+  SkipNavLink, 
+  SkipNavContent } from '@chakra-ui/skip-nav'`}</Highlighter>
+            </ImportBox>
+          </DescriptionBox>
 
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
-              </SingleExample>
-            </SectionContainer>
-          </ExampleBox>
-        </GridColumn>
-
-        <HighlightColumn>
-          <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
-            </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
-          </GridBoxOne>
-          <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
-            </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
-          </GridBoxTwo>
-          <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
-            </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
-          </GridBoxThree>
-        </HighlightColumn>
-      </MainGrid>
-
-      {/* ********************************************************************* */}
+          <BasicText>
+            In terms of usage, the <Mono>SkipNavLink</Mono> should ideally be
+            one of the first items a user comes across when they start
+            navigating a page after it has loaded. As such, it's best to
+            position this component as high as possible within the application.
+            This component generates an <Code>{`<a>`}</Code> tag and
+            automatically creates a link with an href attribute pointing towards{" "}
+            <Mono>SkipNavContent</Mono>.
+          </BasicText>
+          <BasicText>
+            On the other hand, <Mono>SkipNavContent</Mono> is employed as the
+            target for the link, setting the keyboard focus onto the first piece
+            of main content. This component generates a <Code>{`<div>`}</Code>{" "}
+            and can either be self-closing or wrap around the main content.
+          </BasicText>
+          <Navigation.E11 />
+          <BasicText>
+            The above code is an illustrative example of using the SkipNavLink
+            and
+            <Mono>SkipNavContent</Mono>. You can assign a custom id value using
+            the id prop. However, make sure to use the same id for both the{" "}
+            <Mono>SkipNavLink</Mono> and <Mono>SkipNavContent</Mono> components,
+            ensuring they correspond to each other.
+          </BasicText>
+          <Navigation.E12 />
+        </Box>
+      </SectionContainer>
     </BigBackgroundBox>
   );
 }

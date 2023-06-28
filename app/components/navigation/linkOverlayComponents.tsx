@@ -8,6 +8,7 @@ import {
 } from "~/styles/MainDesignComponents";
 import {
   LinkOverlayFunctionOne,
+  LinkOverlayFunctionThree,
   LinkOverlayFunctionTwo,
 } from "./linkOverlayFunctions";
 
@@ -84,15 +85,20 @@ export function LinkOverlayTwo() {
 export function LinkOverlayThree() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Using with Routing</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ <Mono>LinkOverlay</Mono> is also compatible with external routing
+          libraries such as <Mono>React Router</Mono>, <Mono>Next.js</Mono> and{" "}
+          <Mono>Gatsby</Mono>. You can either wrap the <Mono>LinkOverlay</Mono>{" "}
+          component around the external link or use the <Mono>as</Mono> prop.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
-        <></>
+        <LinkOverlayFunctionThree />
       </MyFlex>
     </SectionContainer>
   );
@@ -103,73 +109,23 @@ export function LinkOverlayThree() {
 export function LinkOverlayFour() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>One Drawback</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ There's a particular issue associated with using the{" "}
+          <Mono>LinkOverlay</Mono> technique. Specifically, the content inside a{" "}
+          <Mono>LinkOverlay</Mono> is not selectable using a pointing device
+          such as a mouse or trackpad. Essentially, you cannot highlight the
+          text or elements within the <Mono>LinkOverlay</Mono> like you
+          typically would with regular text. Despite this limitation, it's
+          considered a relatively minor issue when weighed against the
+          advantages provided by <Mono>LinkOverlay</Mono>. These include
+          semantic correctness, improved accessibility, and the ability to
+          create complex, interactive link structures.
+        </SectionDescription>
       </Box>
-
-      <MyFlex bg="background">
-        <></>
-      </MyFlex>
     </SectionContainer>
   );
 }
 
 /* ********************************************************************** */
-
-export function LinkOverlayFive() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <></>
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function LinkOverlaySix() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <></>
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function LinkOverlaySeven() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <></>
-      </MyFlex>
-    </SectionContainer>
-  );
-}

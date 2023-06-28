@@ -30,12 +30,7 @@ import * as Navigation from "~/mardownExamples/navigation/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
-import { Box } from "@chakra-ui/react";
-import { StepperFunctionOne } from "~/components/navigation/stepperFunctions";
-import {
-  StepperOne,
-  StepperTwo,
-} from "~/components/navigation/stepperComponents";
+import { Box, Code } from "@chakra-ui/react";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -48,8 +43,8 @@ export default function chakra_section() {
   return (
     <BigBackgroundBox>
       {/* ********************************************************************* */}
-      <MyLabel link="https://chakra-ui.com/docs/components/stepper" size={28}>
-        Stepper
+      <MyLabel link="https://chakra-ui.com/docs/components/skip-nav" size={28}>
+        Skip Nav
       </MyLabel>
       <MainGrid>
         <GridColumn>
@@ -57,90 +52,71 @@ export default function chakra_section() {
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
             <SectionDescription>
-              ⦾ The Chakra UI <Mono>Stepper</Mono> component is designed to
-              provide users with a clear visual representation of their
-              progression through a multi-step process. Often seen in scenarios
-              such as form filling, onboarding flows, or any other multi-phase
-              operation, a well-designed stepper can greatly enhance user
-              experience. It is a comprehensive solution that encapsulates best
-              practices for step-based user interfaces, while also offering
-              great flexibility and customization for diverse use cases.
+              ⦾ The <Mono>SkipNav</Mono> component is a useful tool in creating
+              accessible web applications, offering keyboard users a fast track
+              to the core content of a webpage.
             </SectionDescription>
             <BasicText>
-              The <Mono>Stepper</Mono> component is a versatile tool that allows
-              developers to create a highly customizable step-based interface.
-              It provides a variety of subcomponents that can be tailored to
-              suit different use cases. use-cases.
+              <Mono>SkipNav</Mono> is essentially composed of two components,{" "}
+              <Mono>SkipNavLink</Mono> and <Mono>SkipNavContent</Mono>. These
+              components come into play in enhancing website accessibility,
+              particularly for keyboard users and screen readers. They offer a
+              mechanism to bypass blocks of content that are repetitive across
+              multiple pages, such as navigation links, allowing users to
+              quickly access the main content of the page.
             </BasicText>
             <BasicText>
-              The many parts of the <Mono>Stepper</Mono> component are as
-              follows:{" "}
+              Compliance with Web Accessibility Guidelines (WCAG) 2.4.1 is
+              facilitated by <Mono>SkipNav</Mono>'s operation. WCAG 2.4.1
+              emphasizes the inclusion of a mechanism to skip blocks, especially
+              since the main content isn't always the first thing encountered on
+              a webpage. While users equipped with a screen reader or specific
+              software could bypass content via headings or main regions,
+              sighted users who primarily navigate with a keyboard often find
+              such a skip mechanism beneficial.
             </BasicText>
             <BulletBox>
               <ul>
                 <li>
-                  <HL>Step</HL>: This is the main component for an individual
-                  step. It holds the components that make up the content of the
-                  step.
+                  <HL>SkipNavLink</HL>: one of the two primary components of the
+                  SkipNav functionality in Chakra UI. Its primary purpose is to
+                  create a hyperlink at the top of your application that enables
+                  keyboard users to swiftly skip to the main content of the
+                  webpage, bypassing repetitive elements such as the site's
+                  navigation bar. This component renders an <Code>{`<a>`}</Code>{" "}
+                  tag and automatically establishes a link with an{" "}
+                  <Code>{`href`}</Code> attribute that targets SkipNavContent.
+                  This link typically becomes one of the first items a user
+                  interacts with when they begin navigating a page after it has
+                  loaded. Hence, it is highly recommended to place it as high as
+                  possible in your app's structure.
                 </li>
                 <li>
-                  <HL>StepDescription</HL>: This component is used to provide a
-                  brief description of the particular step.
-                </li>
-                <li>
-                  <HL>StepIcon</HL>: This component is used to display an icon
-                  for the step. It's commonly used to indicate the completion of
-                  a step.
-                </li>
-                <li>
-                  <HL>StepIndicator</HL>: This component wraps around the step's
-                  status elements, such as the <Mono>StepIcon</Mono> and{" "}
-                  <Mono>StepNumber</Mono>.
-                </li>
-                <li>
-                  <HL>StepNumber</HL>: This component is used to display the
-                  numeric value of the step.
-                </li>
-                <li>
-                  <HL>StepSeparator</HL>: This component is used to visually
-                  separate individual steps.
-                </li>
-                <li>
-                  <HL>StepStatus</HL>: This component is used to switch between
-                  different step states, like complete, incomplete, and active.
-                  It usually wraps around the <Mono>StepIcon</Mono> or{" "}
-                  <Mono>StepNumber</Mono> component.
-                </li>
-                <li>
-                  <HL>StepTitle</HL>: This component is used to display the
-                  title of a particular step.
-                </li>
-                <li>
-                  <HL>Stepper</HL>: This is the parent component that holds and
-                  manages all the <Mono>Step</Mono> components. It keeps track
-                  of the current active step and can control the orientation and
-                  size of the stepper.
+                  <HL>SkipNavContent</HL>: works in tandem with{" "}
+                  <Mono>SkipNavLink</Mono> to enhance the navigation experience
+                  for keyboard users and those using screen readers. This
+                  component serves as the target for the link generated by{" "}
+                  <Mono>SkipNavLink</Mono>. When the link is clicked or
+                  activated via keyboard, the focus shifts to the content
+                  encapsulated by <Mono>SkipNavContent</Mono>. When using a
+                  custom id with SkipNavLink, you'll need to ensure that the
+                  same id is utilized with <Mono>SkipNavContent</Mono>{" "}
+                  <Mono>SkipNavContent</Mono> generates a <Code>{`<div>`}</Code>{" "}
+                  and can be employed as a self-closing component or used to
+                  wrap the main content.
                 </li>
               </ul>
             </BulletBox>
             <DescriptionBox>
+              <BasicText>Some description</BasicText>
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>
                   These components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import {
-  Step,
-  StepDescription,
-  StepIcon,
-  StepIndicator,
-  StepNumber,
-  StepSeparator,
-  StepStatus,
-  StepTitle,
-  Stepper,
-  useSteps,
-} from '@chakra-ui/react'`}</Highlighter>
+                <Highlighter>{`import { 
+  SkipNavLink, 
+  SkipNavContent } from '@chakra-ui/skip-nav'`}</Highlighter>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -148,19 +124,15 @@ export default function chakra_section() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
-                <StepperOne />
-                <ModalCode>
-                  <Navigation.E13 />
-                </ModalCode>
+                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                <ModalCode>EXAMPLE CODE</ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
-                <StepperTwo />
-                <ModalCode>
-                  <Navigation.E14 />
-                </ModalCode>
+                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                <ModalCode>EXAMPLE CODE</ModalCode>
               </SingleExample>
             </SectionContainer>
 

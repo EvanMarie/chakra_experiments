@@ -125,8 +125,12 @@ export default function chakra_section() {
                 <BasicText>
                   The <Mono>Link</Mono> components can be imported as follows:
                 </BasicText>
-                <Highlighter>{`import { Link } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+                <Highlighter>{`import { 
+  Link 
+  } from '@chakra-ui/react';
+import { 
+  ExternalLinkIcon 
+  } from '@chakra-ui/icons';
 `}</Highlighter>
               </ImportBox>
             </DescriptionBox>

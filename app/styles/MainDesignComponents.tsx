@@ -400,7 +400,7 @@ interface ImportBoxProps extends BoxProps {
 export function ImportBox({
   children,
   paddingX = 5,
-  paddingTop = 5,
+  paddingTop = 3,
   marginBottom = 1,
 }: ImportBoxProps) {
   return (
