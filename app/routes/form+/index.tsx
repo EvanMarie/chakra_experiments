@@ -46,7 +46,8 @@ export default function chakra_feedback() {
             <ul>
               <li>
                 <BasicText>
-                  <Link href="/form/button">
+                  {/* <Link href="/form/button"> */}
+                  <Link href="/on_my_way">
                     <HL>Button 🔗</HL>
                   </Link>
                   : This is one of the most frequently used components in any UI
@@ -58,7 +59,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/checkbox">
+                  {/* <Link href="/form/checkbox"> */}
+                  <Link href="/on_my_way">
                     <HL>Checkbox 🔗</HL>
                   </Link>
                   : This component allows the user to make multiple selections
@@ -69,7 +71,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/editable">
+                  {/* <Link href="/form/editable"> */}
+                  <Link href="/on_my_way">
                     <HL>Editable 🔗</HL>
                   </Link>
                   : In Chakra UI this is an intuitive component that allows
@@ -80,7 +83,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/form_control">
+                  {/* <Link href="/form/form_control"> */}
+                  <Link href="/on_my_way">
                     <HL>Form Control 🔗</HL>
                   </Link>
                   : This is a wrapper component that provides context and
@@ -91,7 +95,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/icon_button">
+                  {/* <Link href="/form/icon_button"> */}
+                  <Link href="/on_my_way">
                     <HL>Icon Button 🔗</HL>
                   </Link>
                   : This component allows users to take actions and make
@@ -102,7 +107,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/input">
+                  {/* <Link href="/form/input"> */}
+                  <Link href="/on_my_way">
                     <HL>Input 🔗</HL>
                   </Link>
                   : This is an essential form element that allows users to enter
@@ -113,7 +119,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/number_input">
+                  {/* <Link href="/form/number_input"> */}
+                  <Link href="/on_my_way">
                     <HL>Number Input🔗</HL>
                   </Link>
                   : This is a component that allows users to input numerical
@@ -124,7 +131,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/pin_input">
+                  {/* <Link href="/form/pin_input"> */}
+                  <Link href="/on_my_way">
                     <HL>Pin Input 🔗</HL>
                   </Link>
                   : This is a specialized input component, used primarily for
@@ -134,7 +142,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/radio">
+                  {/* <Link href="/form/radio"> */}
+                  <Link href="/on_my_way">
                     <HL>Radio 🔗</HL>
                   </Link>
                   : This component allows the user to make a single selection
@@ -145,7 +154,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/range_slider">
+                  {/* <Link href="/form/range_slider"> */}
+                  <Link href="/on_my_way">
                     <HL>Range Slider🔗</HL>
                   </Link>
                   : This component is a user input where the user selects a
@@ -156,7 +166,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/select">
+                  {/* <Link href="/form/select"> */}
+                  <Link href="/on_my_way">
                     <HL>Select 🔗</HL>
                   </Link>
                   : This allows users to choose one option from a list. It's a
@@ -167,7 +178,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/slider">
+                  {/* <Link href="/form/slider"> */}
+                  <Link href="/on_my_way">
                     <HL>Slider 🔗</HL>
                   </Link>
                   : Similar to the <Mono>Range Slider</Mono>, a{" "}
@@ -179,7 +191,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/switch">
+                  {/* <Link href="/form/switch"> */}
+                  <Link href="/on_my_way">
                     <HL>Switch 🔗</HL>
                   </Link>
                   : This is a checkbox with a physical toggle-like interaction
@@ -189,7 +202,8 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/form/textarea">
+                  {/* <Link href="/form/textarea"> */}
+                  <Link href="/on_my_way">
                     <HL>Textarea 🔗</HL>
                   </Link>
                   : This is an input component designed for multi-line text
