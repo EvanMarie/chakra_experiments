@@ -269,7 +269,6 @@ export const navElements: NavElement[] = [
     subElements: [
       {
         link: "/form/button",
-        // link: "/on_my_way",
         label: "Button",
       },
       {

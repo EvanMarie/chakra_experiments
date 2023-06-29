@@ -46,8 +46,7 @@ export default function chakra_feedback() {
             <ul>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/button"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/button">
                     <HL>Button 🔗</HL>
                   </Link>
                   : This is one of the most frequently used components in any UI
