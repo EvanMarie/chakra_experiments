@@ -272,18 +272,15 @@ export const navElements: NavElement[] = [
         label: "Button",
       },
       {
-        // link: "/form/checkbox",
-        link: "/on_my_way",
+        link: "/form/checkbox",
         label: "Checkbox",
       },
       {
-        // link: "/form/editable",
-        link: "/on_my_way",
+        link: "/form/editable",
         label: "Editable",
       },
       {
-        // link: "/form/form_control",
-        link: "/on_my_way",
+        link: "/form/form_control",
         label: "Form Control",
       },
       {

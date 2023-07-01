@@ -74,7 +74,7 @@ interface BigBackgroundBoxProps extends BoxProps {
 export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
   return (
     <Box
-      p={{ base: 1, sm: 3, md: 4, lg: 5 }}
+      p={{ base: 2, sm: 3, md: 4, lg: 5 }}
       w={MainWidth}
       maxWidth={MainMaxWidth}
       bg="background"

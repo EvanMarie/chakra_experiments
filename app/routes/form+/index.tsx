@@ -58,8 +58,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/checkbox"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/checkbox">
                     <HL>Checkbox 🔗</HL>
                   </Link>
                   : This component allows the user to make multiple selections
@@ -70,8 +69,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/editable"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/editable">
                     <HL>Editable 🔗</HL>
                   </Link>
                   : In Chakra UI this is an intuitive component that allows
@@ -82,8 +80,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/form_control"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/form_control">
                     <HL>Form Control 🔗</HL>
                   </Link>
                   : This is a wrapper component that provides context and
