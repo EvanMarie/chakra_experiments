@@ -91,8 +91,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/icon_button"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/icon_button">
                     <HL>Icon Button 🔗</HL>
                   </Link>
                   : This component allows users to take actions and make

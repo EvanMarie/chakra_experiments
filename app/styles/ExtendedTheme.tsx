@@ -36,7 +36,7 @@ const CovertCandyScheme = {
 
 const theme = extendTheme(
   withDefaultColorScheme({
-    colorScheme: "red",
+    colorScheme: "cyan",
   }),
   {
     colors: {

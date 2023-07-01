@@ -15,6 +15,7 @@ import {
   Radio,
   RadioGroup,
   Select,
+  Stack,
   VStack,
 } from "@chakra-ui/react";
 import { BasicText, Mono } from "~/styles/DesignComponents";
@@ -115,12 +116,17 @@ export function FormControlThree() {
             <FormControl as="fieldset" w="100%">
               <FormLabel as="legend">Favorite Ghibli Character</FormLabel>
               <RadioGroup defaultValue="Totoro" colorScheme="cyan">
-                <HStack spacing="24px">
+                <Stack
+                  w="100%"
+                  direction={["column", "row"]}
+                  alignItems="flex-start"
+                  spacing={[1, 7]}
+                >
                   <Radio value="Totoro">Totoro</Radio>
                   <Radio value="Princess Mononoke">Spirited Away</Radio>
                   <Radio value="Howl">Howl</Radio>
                   <Radio value="Nausicaa">Ponyo</Radio>
-                </HStack>
+                </Stack>
               </RadioGroup>
               <FormHelperText color="mainText">
                 Select if you're a fan of Studio Ghibli.

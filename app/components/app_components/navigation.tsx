@@ -284,8 +284,7 @@ export const navElements: NavElement[] = [
         label: "Form Control",
       },
       {
-        // link: "/form/icon_button",
-        link: "/on_my_way",
+        link: "/form/icon_button",
         label: "Icon Button",
       },
       {
