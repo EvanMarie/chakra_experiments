@@ -102,8 +102,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/input"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/input">
                     <HL>Input 🔗</HL>
                   </Link>
                   : This is an essential form element that allows users to enter

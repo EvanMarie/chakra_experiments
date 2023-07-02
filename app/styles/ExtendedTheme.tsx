@@ -1,20 +1,31 @@
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
-import { tabsTheme } from "./tabStyles";
 
-// const CovertCandyScheme = {
-//   50: "#f7e6c1", // mainText
-//   100: "#fc65e6", // codeText
-//   200: "#a7d5fa", // accent_2
-//   300: "#faa5b9", // accent_1,
-//   400: "#05fce8", // accent_3
-//   450: "#fc6598", // linkColor
-//   500: "#532291", // darkAccent_1
-//   600: "#3d3145", // sectionColor
-//   700: "#370a42", // darkAccent_2
-//   800: "#0c2b45", // sidebarBackground, darkAccent_3
-//   850: "#26231a", // darkText
-//   900: "#211421", // background
-// };
+const defaultStyles = {
+  baseStyle: {
+    bg: "sidebarBackground",
+    color: "mainText",
+  },
+  variants: {
+    outline: {
+      field: {
+        _placeholder: {
+          color: "tipBackground",
+          opacity: 1,
+        },
+        bg: "sidebarBackground",
+        color: "mainText",
+        _hover: {
+          bg: "mainText",
+          color: "background",
+        },
+        _focus: {
+          bg: "mainText",
+          color: "background",
+        },
+      },
+    },
+  },
+};
 
 const CovertCandyScheme = {
   50: "#E0DEBF", // mainText * adobe
@@ -58,15 +69,6 @@ const theme = extendTheme(
       linkColor: CovertCandyScheme[450],
       darkAccent_3: CovertCandyScheme[800],
     },
-    // mode: {
-    //     dark: {
-    //       // Define dark mode colors
-    //       primary: "background",
-    //       secondary: "#718096",
-    //       background: "#1a202c",
-    //       text: "mainText",
-    //     },
-    //   },
 
     breakpoints: {
       base: "0em", // 0px
@@ -121,7 +123,7 @@ const theme = extendTheme(
       Table: {
         baseStyle: {
           container: {
-            magin: 0,
+            margin: 0,
           },
           table: {
             margin: 0,
@@ -189,6 +191,41 @@ const theme = extendTheme(
           },
         },
       },
+      Form: {
+        baseStyle: {
+          // Add your desired form styles here
+        },
+      },
+      Input: defaultStyles,
+      NumberInput: defaultStyles,
+      PinInput: defaultStyles,
+
+      Textarea: defaultStyles,
+      Select: defaultStyles,
+      Checkbox: defaultStyles,
+      Radio: defaultStyles,
+      Tab: defaultStyles,
+      Switch: defaultStyles,
+      Slider: defaultStyles,
+      Progress: defaultStyles,
+      // Skeleton: defaultStyles,
+      // Spinner: defaultStyles,
+      // LinkBox: defaultStyles,
+      // LinkOverlay: defaultStyles,
+      // Menu: defaultStyles,
+      // MenuItem: defaultStyles,
+      // MenuButton: defaultStyles,
+      // MenuList: defaultStyles,
+      // MenuGroup: defaultStyles,
+      // MenuCommand: defaultStyles,
+      // MenuOptionGroup: defaultStyles,
+      // MenuIcon: defaultStyles,
+      // Modal: defaultStyles,
+      // ModalOverlay: defaultStyles,
+      // ModalContent: defaultStyles,
+      // ModalHeader: defaultStyles,
+      // ModalFooter: defaultStyles,
+      // ModalBody: defaultStyles,
     },
   }
 );
