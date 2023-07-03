@@ -48,7 +48,7 @@ const CovertCandyScheme = {
   500: "#532291", // darkAccent_1
   600: "#5E515B", // sectionColor *adobe
   // 800: "#433A47", // sidebarBackground, darkAccent_3 * adobe
-  800: "rgba(67, 58, 71, 0.5)", // sidebarBackground, darkAccent_3 * adobe
+  800: "rgba(67, 58, 71, 0.8)", // sidebarBackground, darkAccent_3 * adobe
   850: "#26231a", // darkText
   900: "#2D2B38", // background *adobe
 };

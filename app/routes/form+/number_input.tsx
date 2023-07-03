@@ -32,14 +32,23 @@ import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
 import { Box } from "@chakra-ui/react";
 import {
+  NumberInputEight,
+  NumberInputEleven,
   NumberInputFive,
   NumberInputFour,
+  NumberInputNine,
   NumberInputOne,
   NumberInputSeven,
   NumberInputSix,
+  NumberInputTen,
   NumberInputThree,
+  NumberInputTwelve,
   NumberInputTwo,
 } from "~/components/form/numberInputComponents";
+import {
+  NumberInputFunctionFour,
+  NumberInputFunctionSeven,
+} from "~/components/form/numberInputFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -163,35 +172,147 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <NumberInputThree />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{`<NumberInput
+  step={10}
+  defaultValue={80}
+  min={10}
+  max={500}
+  maxWidth="100px"
+>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <NumberInputFour />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{`<NumberInput
+  defaultValue={23}
+  precision={3}
+  step={0.3}
+  maxWidth="100px"
+>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <NumberInputFive />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{`<NumberInput
+  defaultValue={23}
+  min={23}
+  max={123}
+  clampValueOnBlur={false}
+  maxWidth="100px"
+>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <NumberInputSix />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{`<NumberInput
+  defaultValue={23}
+  max={123}
+  keepWithinRange={false}
+  clampValueOnBlur={false}
+  maxWidth="100px"
+>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <NumberInputSeven />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Form.E22 />
+                </ModalCode>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <NumberInputEight />
+                <ModalCode>
+                  <Highlighter>{`<NumberInput size="md" defaultValue={123} min={10} w="125">
+  <NumberInputField borderColor="cyan" />
+  <NumberInputStepper>
+    <NumberIncrementStepper
+      bg="accent_3"
+      _active={{ bg: "accent_1" }}
+      children="↑"
+    />
+    <NumberDecrementStepper
+      bg="accent_3"
+      _active={{ bg: "accent_1" }}
+      children="↓"
+    />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <NumberInputNine />
+                <ModalCode></ModalCode>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <NumberInputTen />
+
+                <ModalCode>
+                  <Form.E24 />
+                </ModalCode>
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <NumberInputEleven />
+              </SingleExample>
+            </SectionContainer>
+
+            <SectionContainer>
+              <SingleExample>
+                <NumberInputTwelve />
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>

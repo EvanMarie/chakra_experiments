@@ -113,8 +113,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/number_input"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/number_input">
                     <HL>Number Input🔗</HL>
                   </Link>
                   : This is a component that allows users to input numerical

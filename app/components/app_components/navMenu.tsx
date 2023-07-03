@@ -102,7 +102,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
     };
 
     const unselectedStyles = {
-      bg: "darkAccent_3",
+      bg: "#433A47",
       fontSize: " lg",
       color: "linkColor",
     };
@@ -127,7 +127,7 @@ export function makeNavMenu({ navElements }: { navElements: NavElement[] }) {
           <ImMenu size={30} />
         </MenuButton>
         <Portal>
-          <MenuList bg={"darkAccent_3"} overflow="hidden">
+          <MenuList bg={"#433A47"} overflow="hidden">
             <MenuItem
               as={RemixLink}
               to="/"

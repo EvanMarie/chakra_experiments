@@ -292,8 +292,7 @@ export const navElements: NavElement[] = [
         label: "Input",
       },
       {
-        // link: "/form/number_input",
-        link: "/on_my_way",
+        link: "/form/number_input",
         label: "Number Input",
       },
       {

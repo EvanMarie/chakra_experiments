@@ -20,6 +20,25 @@ import { default as E18 }  from './18.md';
 import { default as E19 }  from './19.md';
 import { default as E20 }  from './20.md';
 import { default as E21 }  from './21.md';
+import { default as E22 }  from './22.md';
+import { default as E23 }  from './23.md';
+import { default as E24 }  from './24.md';
+import { default as E25 }  from './25.md';
+import { default as E26 }  from './26.md';
+import { default as E27 }  from './27.md';
+import { default as E28 }  from './28.md';
+import { default as E29 }  from './29.md';
+import { default as E30 }  from './30.md';
+import { default as E31 }  from './31.md';
+import { default as E32 }  from './32.md';
+import { default as E33 }  from './33.md';
+import { default as E34 }  from './34.md';
+import { default as E35 }  from './35.md';
+import { default as E36 }  from './36.md';
+import { default as E37 }  from './37.md';
+import { default as E38 }  from './38.md';
+import { default as E39 }  from './39.md';
+import { default as E40 }  from './40.md';
 
 import { default as H01 }  from './h01.md';
 import { default as H02 }  from './h02.md';
@@ -62,6 +81,28 @@ export { E18};
 export { E19};
 export { E20};
 export { E21};
+export { E22};
+export { E23};
+export { E24};
+export { E25};
+export { E26};
+export { E27};
+export { E28};
+export { E29};
+export { E30};
+export { E31};
+export { E32};
+export { E33};
+export { E34};
+export { E35};
+export { E36};
+export { E37};
+export { E38};
+export { E39};
+export { E40};
+
+
+
 
 export { H01};
 export { H02};
