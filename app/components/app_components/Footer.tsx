@@ -5,6 +5,7 @@ import { MyFlex, linkStyle } from "~/styles/MainDesignComponents";
 import stylesUrl from "~/styles/global.css";
 import Logo from "./Logo";
 import { FooterCrumbs } from "./breadCrumbs";
+import { transparentBackground } from "~/styles/ExtendedTheme";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -15,7 +16,6 @@ const Footer = () => {
     <Flex
       w="100%"
       flex="1"
-      bg="background"
       color="mainText"
       marginRight={0}
       marginLeft={0}

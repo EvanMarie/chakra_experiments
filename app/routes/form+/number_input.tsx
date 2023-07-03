@@ -133,14 +133,30 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <NumberInputOne />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{`<NumberInput>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <NumberInputTwo />
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{`<NumberInput defaultValue={44} min={23} max={53}>
+  <NumberInputField />
+  <NumberInputStepper>
+    <NumberIncrementStepper />
+    <NumberDecrementStepper />
+  </NumberInputStepper>
+</NumberInput>`}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 

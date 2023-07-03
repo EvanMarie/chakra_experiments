@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
 import globalStylesUrl from "~/styles/global.css";
-import theme from "./styles/ExtendedTheme";
+import theme, { transparentBackground } from "./styles/ExtendedTheme";
 import {
   Links,
   LiveReload,
@@ -60,17 +60,14 @@ export default function App() {
               overflowX="hidden"
               justifyContent="flex-start"
               alignItems="center"
-              // bg="background"
               direction="column"
               bgImage="url('/images/calm_triangles_vignette.png')"
               bgSize="cover"
               bgPosition="center"
               position="fixed"
-              // bgRepeat="repeat"
               padding={{ base: 1, md: 4 }}
             >
               <Flex
-                bg="background"
                 width="100%" //SPans the whole page
                 maxWidth={{ base: "100%", lg: "1333px" }} // keeps it from getting too wide
                 flexDirection="column" // separates nav from body
@@ -83,7 +80,7 @@ export default function App() {
                   justifyContent="flex-start"
                   alignItems="flex-start"
                   overflow-x="hidden"
-                  bg="background"
+                  bg={transparentBackground}
                   borderRadius="lg"
                 >
                   <Box
@@ -91,21 +88,11 @@ export default function App() {
                     overflow-x="hidden"
                     display={["none", "none", "block"]}
                     pb={3}
-                    bg="background"
                     paddingLeft={6}
                     paddingTop={2}
                     borderRadius="lg"
                   >
-                    <Box
-                      mt={2}
-                      // bg="darkAccent_3"
-                      // height="100%"
-                      // display={["none", "none", "block"]} // moved higher up
-
-                      width={navMenuWidth}
-                      borderRadius="md"
-                      pb={3}
-                    >
+                    <Box mt={2} width={navMenuWidth} borderRadius="md" pb={3}>
                       <VStack
                         spacing={1}
                         position="fixed"
@@ -144,7 +131,6 @@ export default function App() {
                     <Flex
                       direction="column"
                       width="100%"
-                      bg="background"
                       overflow="hidden"
                       paddingX={{ base: 0, sm: 1 }}
                       maxWidth="100%"

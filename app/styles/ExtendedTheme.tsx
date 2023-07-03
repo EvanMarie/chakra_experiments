@@ -1,29 +1,36 @@
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
+export const transparentBackground = "rgba(45, 43, 56, 0.95)";
+
+const formVariants = {
+  field: {
+    _placeholder: {
+      color: "background",
+      opacity: 0.7,
+    },
+    bg: "mainText",
+    color: "background",
+    _hover: {
+      bg: "mainText",
+      color: "background",
+    },
+    _focus: {
+      bg: "mainText",
+      color: "background",
+    },
+  },
+};
+
 const defaultStyles = {
   baseStyle: {
     bg: "sidebarBackground",
     color: "mainText",
   },
   variants: {
-    outline: {
-      field: {
-        _placeholder: {
-          color: "tipBackground",
-          opacity: 1,
-        },
-        bg: "sidebarBackground",
-        color: "mainText",
-        _hover: {
-          bg: "mainText",
-          color: "background",
-        },
-        _focus: {
-          bg: "mainText",
-          color: "background",
-        },
-      },
-    },
+    outline: formVariants,
+    filled: formVariants,
+    flushed: formVariants,
+    unstyled: formVariants,
   },
 };
 
@@ -40,7 +47,8 @@ const CovertCandyScheme = {
   475: "#B8264D", // exampleRed
   500: "#532291", // darkAccent_1
   600: "#5E515B", // sectionColor *adobe
-  800: "#433A47", // sidebarBackground, darkAccent_3 * adobe
+  // 800: "#433A47", // sidebarBackground, darkAccent_3 * adobe
+  800: "rgba(67, 58, 71, 0.5)", // sidebarBackground, darkAccent_3 * adobe
   850: "#26231a", // darkText
   900: "#2D2B38", // background *adobe
 };
@@ -197,7 +205,8 @@ const theme = extendTheme(
         },
       },
       Input: defaultStyles,
-      NumberInput: defaultStyles,
+      NumberInput: { ...defaultStyles },
+
       PinInput: defaultStyles,
 
       Textarea: defaultStyles,

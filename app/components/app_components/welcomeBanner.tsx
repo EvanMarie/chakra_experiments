@@ -50,8 +50,6 @@ export function AnimatedGradient({ children }: AnimatedGradientProps) {
 function WelcomeBanner() {
   return (
     <Flex
-      bgImage="url('/images/calm_triangles_vignette.png')"
-      bgSize="cover"
       justifyContent="center"
       alignItems="center"
       p={1}

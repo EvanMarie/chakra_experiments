@@ -132,15 +132,15 @@ export function InputFunctionFive() {
         <Input placeholder="default placeholder" />
         <Input
           placeholder="custom placeholder"
-          _placeholder={{ opacity: 1, color: "gray.100" }}
+          _placeholder={{ opacity: 1, color: "purple.500" }}
         />
         <Input
-          color="cyan"
+          color="cyan.600"
           placeholder="custom placeholder"
           _placeholder={{ color: "inherit" }}
         />
         <Input
-          color="deeppink"
+          color="pink.600"
           placeholder="custom placeholder"
           _placeholder={{ opacity: 0.6, color: "inherit" }}
         />

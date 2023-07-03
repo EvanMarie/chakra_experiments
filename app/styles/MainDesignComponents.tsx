@@ -77,7 +77,6 @@ export function BigBackgroundBox({ children }: BigBackgroundBoxProps) {
       p={{ base: 2, sm: 3, md: 4, lg: 5 }}
       w={MainWidth}
       maxWidth={MainMaxWidth}
-      bg="background"
       color={"mainText"}
       justifyContent={"center"}
       alignItems={"center"}
