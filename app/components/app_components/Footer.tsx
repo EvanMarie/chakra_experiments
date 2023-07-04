@@ -1,4 +1,5 @@
 import {
+  Box,
   Code,
   Flex,
   HStack,
@@ -38,7 +39,13 @@ const Footer = () => {
           <FooterCrumbs />
         </Flex>
 
-        <MyFlex mb={0} textAlign="center" paddingX={2}>
+        <MyFlex
+          mb={0}
+          textAlign="center"
+          paddingX={2}
+          w="100%"
+          direction="column"
+        >
           <HStack spacing={3} w="100%" justify="center">
             <Text m={0}>
               copyright © 2023{" "}
@@ -54,10 +61,12 @@ const Footer = () => {
             </Text>
           </HStack>
 
-          <Stack direction={["column", "row"]} spacing={0} w="100%">
-            <Text m={0}>
-              created with love by the <Logo /> team using
-            </Text>{" "}
+          <Stack direction={["column"]} spacing={0} w="100%" justify="center">
+            <Box w="100%">
+              <Text m={0}>
+                created with love by the <Logo /> team using
+              </Text>{" "}
+            </Box>
             <HStack w="100%" spacing={4} textAlign="center" justify="center">
               <Link
                 color="linkColor"
