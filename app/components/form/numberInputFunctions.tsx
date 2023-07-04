@@ -13,11 +13,13 @@ import {
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
+  Text,
   VStack,
   useNumberInput,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { MiniCode } from "~/styles/CodeDesignComponents";
+import { BasicText } from "~/styles/DesignComponents";
 import { SingleExample } from "~/styles/MainDesignComponents";
 
 export function NumberInputFunctionOne() {
@@ -131,37 +133,34 @@ export function NumberInputFunctionFour() {
   const handleSliderChange = (sliderValue: number) => setValue(sliderValue);
 
   return (
-    console.log(input),
-    (
-      <SingleExample bg="background">
-        <VStack maxWidth="300px">
-          <HStack>
-            <Button {...dec}>-</Button>
-            <Input {...input} value={value} w="125px" />
-            <Button {...inc}>+</Button>
-          </HStack>
-          <Slider
-            flex="1"
-            value={value}
-            min={inputDetails.min}
-            max={inputDetails.max}
-            onChange={handleSliderChange}
-          >
-            {" "}
-            <SliderTrack>
-              <SliderFilledTrack />
-            </SliderTrack>
-            <SliderThumb
-              fontSize="sm"
-              boxSize="32px"
-              children={value}
-              bg="tipBackground"
-              color="background"
-            />
-          </Slider>
-        </VStack>
-      </SingleExample>
-    )
+    <SingleExample bg="background">
+      <VStack maxWidth="300px">
+        <HStack>
+          <Button {...dec}>-</Button>
+          <Input {...input} value={value} w="125px" />
+          <Button {...inc}>+</Button>
+        </HStack>
+        <Slider
+          flex="1"
+          value={value}
+          min={inputDetails.min}
+          max={inputDetails.max}
+          onChange={handleSliderChange}
+        >
+          {" "}
+          <SliderTrack>
+            <SliderFilledTrack />
+          </SliderTrack>
+          <SliderThumb
+            fontSize="sm"
+            boxSize="32px"
+            children={value}
+            bg="tipBackground"
+            color="background"
+          />
+        </Slider>
+      </VStack>
+    </SingleExample>
   );
 }
 
@@ -211,11 +210,138 @@ export function NumberInputFunctionFive() {
 /* ********************************************************************** */
 
 export function NumberInputFunctionSix() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  const [fontSize, setFontSize] = useState(16);
+
+  const handleChange = (value: string) => {
+    setFontSize(Number(value));
+  };
+  return (
+    <SingleExample bg="background">
+      <VStack w="100%">
+        <HStack w="100%" align="center" justify="center">
+          <Text>Font Size:</Text>
+          <NumberInput
+            w="75px"
+            value={fontSize}
+            size="sm"
+            onChange={handleChange}
+            min={10}
+            max={35}
+          >
+            <NumberInputField />
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+          </NumberInput>
+        </HStack>
+        <Flex
+          w="100%"
+          bg="mainText"
+          color="background"
+          borderRadius="md"
+          h="100px"
+          justify="center"
+          align="center"
+          p={{ base: 2, sm: 3, lg: 1 }}
+        >
+          <p style={{ fontSize: `${fontSize}px` }}>Adjustable Text Size</p>
+        </Flex>
+      </VStack>
+    </SingleExample>
+  );
 }
 
 /* ********************************************************************** */
 
 export function NumberInputFunctionSeven() {
-  return <SingleExample bg="background"> Function Logic</SingleExample>;
+  const [opacity, setOpacity] = useState(1);
+
+  const handleChange = (value: string) => {
+    setOpacity(Number(value));
+  };
+  return (
+    <SingleExample bg="background">
+      <VStack w="100%" spacing={4}>
+        <HStack w="100%" align="center" justify="center">
+          <Text>Opacity:</Text>
+          <NumberInput
+            w="75px"
+            value={opacity}
+            onChange={handleChange}
+            step={0.1}
+            min={0}
+            max={1}
+          >
+            <NumberInputField maxWidth="100px" />
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+          </NumberInput>
+        </HStack>
+        <Box>
+          <img
+            src="https://placebear.com/g/200/200"
+            alt="very precious bear"
+            style={{ opacity: opacity }}
+          />
+        </Box>
+      </VStack>
+    </SingleExample>
+  );
+}
+
+/* ********************************************************************** */
+
+export function NumberInputFunctionEight() {
+  const [celsius, setCelsius] = useState(0);
+  const [fahrenheit, setFahrenheit] = useState(32);
+
+  const handleCelsiusChange = (value: string) => {
+    setCelsius(Number(value));
+    setFahrenheit((Number(value) * 9) / 5 + 32);
+  };
+
+  const handleFahrenheitChange = (value: String) => {
+    setFahrenheit(Number(value));
+    setCelsius((Number(value) * 5) / 9);
+  };
+
+  return (
+    <SingleExample>
+      <VStack w="100%" spacing={4}>
+        <HStack w="100%" spacing={3} justify="center">
+          <NumberInput
+            size="sm"
+            value={celsius}
+            onChange={handleCelsiusChange}
+            maxWidth="100px"
+          >
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+            <NumberInputField />
+          </NumberInput>
+          <span>°C</span>
+        </HStack>
+        <HStack w="100%" spacing={3} justify="center">
+          <NumberInput
+            maxWidth="100px"
+            size="sm"
+            value={fahrenheit}
+            onChange={handleFahrenheitChange}
+          >
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+            <NumberInputField />
+          </NumberInput>
+          <span>°F</span>
+        </HStack>
+      </VStack>
+    </SingleExample>
+  );
 }

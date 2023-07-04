@@ -341,6 +341,8 @@ export function CollapsibleExample({
   );
 }
 
+/* ***************************************************************************************** */
+
 interface IHeartComponentProps extends TextProps {
   children?: React.ReactNode;
   fontFamily?: string;
@@ -371,6 +373,8 @@ export function IHeartComponents({
     </chakra.span>
   );
 }
+
+/* ***************************************************************************************** */
 
 interface PlaceholderImageProps {
   width?: number;

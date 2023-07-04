@@ -46,8 +46,10 @@ import {
   NumberInputTwo,
 } from "~/components/form/numberInputComponents";
 import {
+  NumberInputFunctionEight,
   NumberInputFunctionFour,
   NumberInputFunctionSeven,
+  NumberInputFunctionSix,
 } from "~/components/form/numberInputFunctions";
 
 hljs.registerLanguage("javascript", javascript);
@@ -320,25 +322,73 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Dynamic Font Size Control</b>: The <b>NumberInput</b> can be
+              used to dynamically control the font size of a text element. By
+              adjusting the numerical value in the <b>NumberInput</b>, the font
+              size of the associated text will increase or decrease accordingly.
+              In the example below, a user can increment or decrement the font
+              size to anything between 10 and 35 pixels. The current font size
+              is stored in the <b>fontSize</b> state variable. The{" "}
+              <b>handleChange</b> function is invoked whenever the value in the{" "}
+              <b>NumberInput</b> changes, updating the <b>fontSize</b> state.
+              The font size of the text element is dynamically updated based on
+              the value of <b>fontSize</b>.
+            </HighlightText>
+            <HighlightExample h="200px">
+              <MyFlex>
+                <NumberInputFunctionSix />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H13 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Image Opacity Control</b>: The <b>NumberInput</b> can be used
+              to adjust the opacity of an image. By changing the numerical value
+              in the <b>NumberInput</b>, the opacity of the image will be
+              modified in real-time. The current opacity value is stored in the
+              opacity state variable. The <b>handleChange</b> function is called
+              whenever the value in the <b>NumberInput</b> changes, updating the
+              opacity state. The opacity of the image is adjusted in real-time
+              based on the value selected.
+            </HighlightText>
+            <HighlightExample h="275px">
+              <MyFlex>
+                {" "}
+                <NumberInputFunctionSeven />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H14 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Temperature Conversion</b>: The <b>NumberInput</b> can be
+              utilized to convert temperatures between Celsius and Fahrenheit.
+              Users can enter a value in either Celsius or Fahrenheit, and the{" "}
+              <b>NumberInput</b> will dynamically convert and display the
+              corresponding temperature in the other unit. The current values in
+              Celsius and Fahrenheit are stored in separate state variables,
+              celsius and fahrenheit. When the Celsius value changes, the{" "}
+              <b>handleCelsiusChange</b> function is called, updating both the
+              celsius and fahrenheit states by performing the temperature
+              conversion. Similarly, when the Fahrenheit value changes, the{" "}
+              <b>handleFahrenheitChange</b> function is called, updating both
+              the fahrenheit and celsius states by performing the reverse
+              temperature conversion.
+            </HighlightText>
+            <HighlightExample h="150px">
+              <MyFlex>
+                <NumberInputFunctionEight />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H15 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
