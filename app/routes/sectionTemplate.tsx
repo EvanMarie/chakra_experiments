@@ -86,58 +86,75 @@ export default function chakra_section() {
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
+          {/* /* ********************************************************** */}
           {/* COMPONENT EXAMPLES */}
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <Box>IMPORT EXAMPLE & FUNCTION</Box>
-                <ModalCode>EXAMPLE CODE</ModalCode>
+                <ModalCode>
+                  <Highlighter>{``}</Highlighter>
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
         </GridColumn>
+
+        {/* /* ********************************************************** */}
 
         <HighlightColumn>
           <GridBoxOne>

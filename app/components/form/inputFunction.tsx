@@ -24,20 +24,12 @@ export function InputFunctionOne() {
       {" "}
       <Stack spacing={4}>
         <InputGroup>
-          <InputLeftAddon
-            children="+001"
-            bg="tipBackground"
-            color="background"
-          />
+          <InputLeftAddon children="+001" />
           <Input type="tel" placeholder="Phone number" />
         </InputGroup>
 
         <InputGroup size="sm">
-          <InputLeftAddon
-            children="http://"
-            bg="tipBackground"
-            color="background"
-          />
+          <InputLeftAddon children="http://" />
 
           <Input placeholder="yourdomain" />
 

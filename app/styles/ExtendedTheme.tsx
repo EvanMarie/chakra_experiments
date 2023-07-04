@@ -1,30 +1,54 @@
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import {
+  extendTheme,
+  withDefaultColorScheme,
+  withDefaultVariant,
+  withDefaultProps,
+} from "@chakra-ui/react";
+import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 
 export const transparentBackground = "rgba(45, 43, 56, 0.95)";
+const pinInputStyles = {
+  bg: "mainText",
+  color: "background",
+  _focus: {
+    borderColor: "accent_1",
+    bg: "tipBackground",
+    color: "background",
+  },
+  _hover: {
+    bg: "tipBackground",
+    color: "background",
+  },
+};
 
 const formVariants = {
   field: {
-    _placeholder: {
-      color: "background",
-      opacity: 0.7,
-    },
     bg: "mainText",
     color: "background",
     _hover: {
       bg: "mainText",
       color: "background",
     },
+    _placeholder: {
+      color: "background",
+      opacity: 0.7,
+    },
     _focus: {
       bg: "mainText",
       color: "background",
+      borderColor: "bacground",
     },
+  },
+  addon: {
+    bg: "tipBackground",
+    color: "background",
   },
 };
 
 const defaultStyles = {
   baseStyle: {
-    bg: "sidebarBackground",
-    color: "mainText",
+    bg: "mainText",
+    color: "background",
   },
   variants: {
     outline: formVariants,
@@ -57,6 +81,36 @@ const theme = extendTheme(
   withDefaultColorScheme({
     colorScheme: "cyan",
   }),
+  withDefaultVariant({
+    variant: "filled",
+    components: [
+      "Input",
+      "Select",
+      "Textarea",
+      "Checkbox",
+      "Radio",
+      "PinInput",
+      "NumberInput",
+    ],
+  }),
+  withDefaultProps({
+    defaultProps: {
+      // size: "md",
+      bg: "mainText",
+      color: "background",
+    },
+    components: [
+      "Button",
+      "Input",
+      "Select",
+      "Textarea",
+      "Checkbox",
+      "Radio",
+      "PinInput",
+      "NumberInput",
+    ],
+  }),
+
   {
     colors: {
       CovertCandyScheme,
@@ -205,8 +259,8 @@ const theme = extendTheme(
         },
       },
       Input: defaultStyles,
-      NumberInput: { ...defaultStyles },
-
+      NumberInput: defaultStyles,
+      PinInputField: defaultStyles,
       PinInput: defaultStyles,
 
       Textarea: defaultStyles,

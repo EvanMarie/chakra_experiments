@@ -124,8 +124,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/pin_input"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/pin_input">
                     <HL>Pin Input 🔗</HL>
                   </Link>
                   : This is a specialized input component, used primarily for

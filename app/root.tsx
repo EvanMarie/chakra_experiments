@@ -92,7 +92,13 @@ export default function App() {
                     paddingTop={2}
                     borderRadius="lg"
                   >
-                    <Box mt={2} width={navMenuWidth} borderRadius="md" pb={3}>
+                    <Box
+                      mt={2}
+                      width={navMenuWidth}
+                      borderLeftRadius="lg"
+                      borderRightRadius="none"
+                      pb={3}
+                    >
                       <VStack
                         spacing={1}
                         position="fixed"
