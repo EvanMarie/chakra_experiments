@@ -43,6 +43,11 @@ import {
   PinInputTwo,
   pinInputStyles,
 } from "~/components/form/pinInputComponents";
+import {
+  PinInputFunctionFive,
+  PinInputFunctionFour,
+  PinInputFunctionTwo,
+} from "~/components/form/pinInputFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -308,46 +313,62 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>
-              <b>Multi-factor Authentication (MFA) Input</b>: PinInput can be
-              used to create a seamless and secure multi-factor authentication
-              (MFA) input experience. By dividing the authentication code into
-              separate input fields, users can easily enter their unique code
-              without the risk of mistyping or errors. You can enhance the MFA
-              input by customizing the appearance and adding additional security
-              features. In this example, the <b>otp</b> prop is used to indicate
-              that the <b>PinInput</b> is being used for a one-time password
-              (OTP) input. This sets the <b>autocomplete</b> attribute to
-              "one-time-code" for all the <b>PinInputField</b> components,
-              improving the user experience and ensuring compatibility with
-              autofill features in modern browsers.
+              <b>Password Strength Indicator</b>: By combining the{" "}
+              <b>PinInput</b> component with custom password strength
+              calculation logic, the example below extends the functionality of
+              the significantly. The password strength algorithm employed in
+              this component is very simple and merely evaluates the password
+              based on the presence of numbers, uppercase letters, lowercase
+              letters, and the mixing of these characters. The password strength
+              is then displayed to the user in the form of a progress bar as
+              well as verbal feedback.
             </HighlightText>
-            <HighlightExample h="80px">
+            <HighlightExample h="150px">
               <MyFlex>
-                <HStack>
-                  <PinInput otp>
-                    <PinInputField sx={pinInputStyles} />
-                    <PinInputField sx={pinInputStyles} />
-                    <PinInputField sx={pinInputStyles} />
-                    <PinInputField sx={pinInputStyles} />
-                  </PinInput>
-                </HStack>
+                <PinInputFunctionFive />
               </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H16 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Dynamic Quiz Answer Field</b>: Consider a situation where
+              you're building a fun trivia app that includes questions with
+              numeric answers. In such a scenario, using a <b>PinInput</b>{" "}
+              component can add to the user experience by creating a more
+              engaging interaction. As the user fills in the answer digit by
+              digit, suspense builds until they've filled out all the numbers
+              and the answer is automatically validated. (Hint: the answer is
+              2023.)
+            </HighlightText>
+            <HighlightExample h="250px">
+              <MyFlex>
+                <PinInputFunctionTwo />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              {" "}
+              <Form.H17 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Timed OTP (One-Time-Password)</b>: In this example, we have
+              added a timer to the one-time-password concept. The timer is set
+              to 23 seconds. So if a user fails to enter a value before the
+              countdown finishes, they will be alerted that the timer has run
+              out.
+            </HighlightText>
+            <HighlightExample h="200px">
+              <MyFlex>
+                <PinInputFunctionFour />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H18 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
