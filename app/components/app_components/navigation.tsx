@@ -308,8 +308,7 @@ export const navElements: NavElement[] = [
         label: "Range Slider",
       },
       {
-        // link: "/form/select",
-        link: "/on_my_way",
+        link: "/form/select",
         label: "Select",
       },
       {

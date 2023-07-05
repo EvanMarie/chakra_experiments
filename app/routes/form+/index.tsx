@@ -156,8 +156,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/select"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/select">
                     <HL>Select 🔗</HL>
                   </Link>
                   : This allows users to choose one option from a list. It's a

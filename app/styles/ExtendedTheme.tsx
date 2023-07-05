@@ -27,6 +27,7 @@ const formVariants = {
   field: {
     bg: "mainText",
     color: "background",
+    borderRadius: "lg",
     _hover: {
       bg: "mainText",
       color: "background",
@@ -38,12 +39,18 @@ const formVariants = {
     _focus: {
       bg: "mainText",
       color: "background",
-      borderColor: "bacground",
+      borderColor: "accent_2",
+      focusBorderColor: "accent_2",
     },
+    errorBorderColor: "accent_1",
   },
   addon: {
     bg: "tipBackground",
     color: "background",
+  },
+  icon: {
+    color: "background",
+    size: "xl",
   },
 };
 
@@ -58,6 +65,7 @@ const defaultStyles = {
     flushed: formVariants,
     unstyled: formVariants,
   },
+  iconColor: "background",
 };
 
 const CovertCandyScheme = {

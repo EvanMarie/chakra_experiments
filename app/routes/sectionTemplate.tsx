@@ -91,7 +91,7 @@ export default function chakra_section() {
           <ExampleBox>
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentOne /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>
@@ -100,7 +100,7 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentTwo /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>
@@ -109,7 +109,7 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentThree /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>
@@ -118,7 +118,7 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentFour /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>
@@ -127,7 +127,7 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentFive /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>
@@ -136,7 +136,7 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentSix /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>
@@ -145,7 +145,7 @@ export default function chakra_section() {
 
             <SectionContainer>
               <SingleExample>
-                <Box>IMPORT EXAMPLE & FUNCTION</Box>
+                {/* <ComponentSeven /> */}
                 <ModalCode>
                   <Highlighter>{``}</Highlighter>
                 </ModalCode>

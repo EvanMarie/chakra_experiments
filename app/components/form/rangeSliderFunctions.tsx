@@ -206,7 +206,7 @@ export function GradientBox() {
   };
 
   return (
-    <Box w="100%">
+    <Box w="100%" maxWidth="250px">
       <VStack w="100%">
         <VStack w="100%" spacing={1}>
           <Select size="xs" value={color1} onChange={handleColor1Change} mr={2}>
@@ -335,6 +335,7 @@ export function AlphabetRangeSlider() {
       </VStack>
       <VStack
         w="100%"
+        maxWidth="250px"
         align="flex-start"
         bg="sidebarBackground"
         color="mainText"
@@ -403,6 +404,7 @@ export function NumberRangeSlider() {
 
       <VStack
         w="100%"
+        maxWidth="250px"
         align="flex-start"
         bg="sidebarBackground"
         color="mainText"
