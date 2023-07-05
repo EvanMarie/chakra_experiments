@@ -300,8 +300,7 @@ export const navElements: NavElement[] = [
         label: "Pin Input",
       },
       {
-        // link: "/form/radio",
-        link: "/on_my_way",
+        link: "/form/radio",
         label: "Radio",
       },
       {

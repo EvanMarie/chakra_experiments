@@ -134,8 +134,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/radio"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/radio">
                     <HL>Radio 🔗</HL>
                   </Link>
                   : This component allows the user to make a single selection

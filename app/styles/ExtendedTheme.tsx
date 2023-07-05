@@ -7,19 +7,6 @@ import {
 import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 
 export const transparentBackground = "rgba(45, 43, 56, 0.95)";
-const pinInputStyles = {
-  bg: "mainText",
-  color: "background",
-  _focus: {
-    borderColor: "accent_1",
-    bg: "tipBackground",
-    color: "background",
-  },
-  _hover: {
-    bg: "tipBackground",
-    color: "background",
-  },
-};
 
 const formVariants = {
   field: {
