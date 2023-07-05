@@ -4,9 +4,24 @@ import {
   withDefaultVariant,
   withDefaultProps,
 } from "@chakra-ui/react";
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 
 export const transparentBackground = "rgba(45, 43, 56, 0.95)";
+export const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: true,
+};
+
+const rangeSliderStyles = {
+  filledTrack: {
+    bg: "mainText",
+  },
+  thumb: {
+    bg: "mainText",
+  },
+  track: {
+    bg: "mainText",
+  },
+};
 
 const formVariants = {
   field: {
@@ -78,6 +93,7 @@ const theme = extendTheme(
       "Radio",
       "PinInput",
       "NumberInput",
+      "RangeSlider",
     ],
   }),
   withDefaultProps({
@@ -95,6 +111,7 @@ const theme = extendTheme(
       "Radio",
       "PinInput",
       "NumberInput",
+      "RangeSlider",
     ],
   }),
 
@@ -240,11 +257,8 @@ const theme = extendTheme(
           },
         },
       },
-      Form: {
-        baseStyle: {
-          // Add your desired form styles here
-        },
-      },
+      RangeSlider: rangeSliderStyles,
+
       Input: defaultStyles,
       NumberInput: defaultStyles,
       PinInputField: defaultStyles,

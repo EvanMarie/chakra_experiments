@@ -145,8 +145,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/range_slider"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/range_slider">
                     <HL>Range Slider🔗</HL>
                   </Link>
                   : This component is a user input where the user selects a

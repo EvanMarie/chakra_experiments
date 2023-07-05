@@ -170,10 +170,10 @@ export function HighlightColumn({ children, ...rest }: GridColumnProps) {
               <HStack>
                 <RiBookmark3Line
                   size="25px"
-                  color={"accent_3"}
+                  color="accent_1"
                   style={{ marginBottom: "10px" }}
                 />
-                <Text fontWeight="bold" fontSize="20px">
+                <Text color="accent_2" fontWeight="bold" fontSize="20px">
                   Did you know?
                 </Text>
               </HStack>

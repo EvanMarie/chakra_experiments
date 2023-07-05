@@ -304,8 +304,7 @@ export const navElements: NavElement[] = [
         label: "Radio",
       },
       {
-        // link: "/form/range_slider",
-        link: "/on_my_way",
+        link: "/form/range_slider",
         label: "Range Slider",
       },
       {

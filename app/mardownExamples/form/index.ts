@@ -39,6 +39,7 @@ import { default as E37 }  from './37.md';
 import { default as E38 }  from './38.md';
 import { default as E39 }  from './39.md';
 import { default as E40 }  from './40.md';
+import { default as E41 }  from './41.md';
 
 import { default as H01 }  from './h01.md';
 import { default as H02 }  from './h02.md';
@@ -122,7 +123,7 @@ export { E37};
 export { E38};
 export { E39};
 export { E40};
-
+export { E41};
 
 
 
