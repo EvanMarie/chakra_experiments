@@ -171,8 +171,6 @@ export function IconButtonSeven() {
       <SectionHeading></SectionHeading>
       <Box>
         <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">

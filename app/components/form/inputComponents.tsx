@@ -296,7 +296,6 @@ export function InputEight() {
           opacity of <Mono>0.6</Mono>. If you want to specify a specific color
           for the placeholder, you may need to set the opacity to 1.
         </SectionDescription>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">

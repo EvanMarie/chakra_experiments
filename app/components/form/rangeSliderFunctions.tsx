@@ -21,7 +21,7 @@ export function RangeSliderFunctionOne() {
   return (
     <SingleExample bg="background">
       {" "}
-      <RangeSlider defaultValue={[23, 53]}>
+      <RangeSlider defaultValue={[23, 53]} maxWidth="400px">
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
         </RangeSliderTrack>
@@ -41,6 +41,7 @@ export function RangeSliderFunctionTwo() {
         aria-label={["Minimum Value", "Maximum Value"]}
         colorScheme="pink"
         defaultValue={[20, 80]}
+        maxWidth="400px"
       >
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
@@ -81,6 +82,7 @@ export function RangeSliderFunctionFour() {
       <RangeSlider
         aria-label={["Minimum Value", "Maximum Value"]}
         defaultValue={[30, 70]}
+        maxWidth="400px"
       >
         <RangeSliderTrack>
           <RangeSliderFilledTrack bg="accent_1" />
@@ -108,6 +110,7 @@ export function RangeSliderFunctionFive() {
         onChangeEnd={(value) => setSelectedRange(value)}
         min={0}
         max={300}
+        maxWidth="400px"
         step={10}
       >
         <RangeSliderTrack bg="red.100">
@@ -137,6 +140,7 @@ export function RangeSliderFunctionSix() {
         aria-label={["Minimum Value", "Maximum Value"]}
         defaultValue={[min, max]}
         onChangeEnd={(value) => setSelectedRange(value)}
+        maxWidth="400px"
       >
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
@@ -240,6 +244,7 @@ export function GradientBox() {
             value={gradientValue}
             onChange={handleSliderChange}
             width="100%"
+            maxWidth="400px"
             mr={2}
           >
             <RangeSliderTrack>
@@ -314,6 +319,7 @@ export function AlphabetRangeSlider() {
     <VStack w="100%">
       <Text>Filter Users:</Text>
       <RangeSlider
+        maxWidth="400px"
         min={65}
         max={90}
         step={1}
@@ -382,6 +388,7 @@ export function NumberRangeSlider() {
   return (
     <VStack w="100%" spacing={4}>
       <RangeSlider
+        maxWidth="400px"
         min={0}
         max={200}
         step={10}

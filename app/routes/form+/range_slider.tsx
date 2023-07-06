@@ -105,7 +105,6 @@ export default function chakra_section() {
               </ul>
             </BulletBox>
             <DescriptionBox>
-              <BasicText>Some description</BasicText>
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>

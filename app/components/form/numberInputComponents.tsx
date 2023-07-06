@@ -153,7 +153,6 @@ export function NumberInputFour() {
           rounded to three decimal points, and each increment or decrement will
           change the value by 0.3.
         </BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -307,7 +306,6 @@ export function NumberInputEight() {
           size of the input field.
         </SectionDescription>
         <BasicText>Here is a visual representation of these options:</BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -334,8 +332,6 @@ export function NumberInputNine() {
           buttons. Additionally, you can change the icons used in the increment
           and decrement buttons by specifying custom children.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -408,7 +404,6 @@ export function NumberInputEleven() {
           ⦾ The following two examples show two different ways you can integrate
           a number input with a slider component.
         </SectionDescription>
-        <BasicText></BasicText>
       </Box>
 
       <VStack w="100%" spacing={4}>
@@ -477,7 +472,6 @@ export function NumberInputTwelve() {
           feature.
         </SectionDescription>
       </Box>
-      <BasicText></BasicText>
 
       <MyFlex bg="background">
         <NumberInput allowMouseWheel>

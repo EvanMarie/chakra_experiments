@@ -51,8 +51,6 @@ export function RangeSliderTwo() {
           component by specifying a different color from the theme. The
           following example demonstrates a RangeSlider with a pink color scheme.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -77,8 +75,6 @@ export function RangeSliderThree() {
           'vertical', and the <Mono>minH</Mono> prop defines the minimum height
           of the RangeSlider component.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -100,8 +96,6 @@ export function RangeSliderFour() {
           composing it with other Chakra UI components. The following example
           showcases a customized RangeSlider with custom styles.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -126,8 +120,6 @@ export function RangeSliderFive() {
           increments of 30. The <Mono>RangeSliderThumbs</Mono> can snap to these
           predefined values, providing a more granular selection experience.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -157,7 +149,6 @@ export function RangeSliderSix() {
           the user finishes dragging the thumbs, this event handler updates the
           selectedRange state variable with the new values.
         </BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">

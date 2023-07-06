@@ -78,7 +78,7 @@ export default function chakra_section() {
             <DescriptionBox>
               <ImportBox>
                 <BasicText>
-                  These components can be imported as follows:
+                  The <Mono>Slider</Mono> component can be imported as follows:
                 </BasicText>
                 <Highlighter>{`import { Select } from '@chakra-ui/react'`}</Highlighter>
               </ImportBox>

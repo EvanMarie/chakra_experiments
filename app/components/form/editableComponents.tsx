@@ -55,8 +55,6 @@ export function EditableOne() {
           mode. However, clicking on the text will transform it into an input
           field where the text can be modified.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background" p={5}>
@@ -86,8 +84,6 @@ export function EditableTwo() {
           to the single line <Mono>EditableInput</Mono>, but allows for handling
           more extensive content.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background" p={5}>
@@ -119,8 +115,6 @@ export function EditableThree() {
           by clicking the custom edit icon, and changes can be saved or
           cancelled with the custom save and cancel icons.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background" p={5}>

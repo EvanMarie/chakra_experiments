@@ -35,8 +35,6 @@ export function PinInputOne() {
           is configured to accept a 6-digit PIN code. Each{" "}
           <Mono>PinInputField</Mono> represents a single digit of the PIN code.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -68,8 +66,6 @@ export function PinInputTwo() {
           type prop to '<Mono>alphanumeric</Mono>', the <Mono>PinInput</Mono>{" "}
           component accepts both numbers and letters as input.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -102,8 +98,6 @@ export function PinInputThree() {
           This feature enhances the user experience when entering a one-time
           password.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -141,7 +135,6 @@ export function PinInputFour() {
           security. Users' inputs are visually obscured to protect sensitive
           information from unauthorized viewing.
         </BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -173,8 +166,6 @@ export function PinInputFive() {
           can customize it by setting the size prop to one of the available
           options: 'xs' (24px), 'sm' (32px), 'md' (40px), or 'lg' (48px).
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">

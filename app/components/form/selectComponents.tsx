@@ -38,7 +38,6 @@ export function SelectOne() {
           appearance, size, and other aspects of the <Mono>Select</Mono>{" "}
           component using the various props.
         </BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -84,8 +83,6 @@ export function SelectThree() {
           variants. The <Mono>variant</Mono> prop controls the appearance of the
           <Mono>Select</Mono> component.{" "}
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -109,8 +106,6 @@ export function SelectFour() {
           Additionally, the <Mono>iconSize</Mono> prop allows you to adjust the
           size of the custom icon.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -134,8 +129,6 @@ export function SelectFive() {
           <Mono>borderColor</Mono>, and <Mono>color</Mono> to suit your design
           requirements.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">

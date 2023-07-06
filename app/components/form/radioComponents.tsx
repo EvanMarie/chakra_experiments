@@ -29,8 +29,6 @@ export function RadioOne() {
           one option at a time. The Radio buttons are visually styled, and the
           selected option is highlighted.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
