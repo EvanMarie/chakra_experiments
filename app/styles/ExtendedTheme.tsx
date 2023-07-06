@@ -3,6 +3,9 @@ import {
   withDefaultColorScheme,
   withDefaultVariant,
   withDefaultProps,
+  Button,
+  defineStyle,
+  defineStyleConfig,
 } from "@chakra-ui/react";
 
 export const transparentBackground = "rgba(45, 43, 56, 0.95)";
@@ -10,6 +13,33 @@ export const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,
 };
+
+/* ********************************* BUTTON ************************************ */
+
+export const ButtonBackground = "accent_2";
+export const ButtonHoverBG = "accent_1";
+
+const myButtonStyles = defineStyle({
+  bg: ButtonBackground,
+  color: "background",
+  border: "2px solid",
+  borderColor: "darText",
+  _hover: {
+    bg: ButtonHoverBG,
+    color: "background",
+    transition: "all 0.4s ease-in-out",
+  },
+});
+
+export const buttonTheme = defineStyleConfig({
+  variants: { myButtonStyles },
+  defaultProps: {
+    size: "md",
+    variant: "myButtonStyles",
+  },
+});
+
+/* ********************************* RANGE SLIDER ************************************ */
 
 const rangeSliderStyles = {
   filledTrack: {
@@ -22,6 +52,8 @@ const rangeSliderStyles = {
     bg: "mainText",
   },
 };
+
+/* ********************************* FIELDS ************************************ */
 
 const formVariants = {
   field: {
@@ -68,6 +100,8 @@ const defaultStyles = {
   iconColor: "background",
 };
 
+/* ********************************* COLORS ************************************ */
+
 const CovertCandyScheme = {
   50: "#E0DEBF", // mainText * adobe
   200: "#44EAFA", // accent_2
@@ -86,6 +120,8 @@ const CovertCandyScheme = {
   850: "#26231a", // darkText
   900: "#2D2B38", // background *adobe
 };
+
+/* ********************************* THEME ************************************ */
 
 const theme = extendTheme(
   withDefaultColorScheme({
@@ -265,8 +301,9 @@ const theme = extendTheme(
           },
         },
       },
-      RangeSlider: rangeSliderStyles,
 
+      RangeSlider: rangeSliderStyles,
+      Button: buttonTheme,
       Input: defaultStyles,
       NumberInput: defaultStyles,
       PinInputField: defaultStyles,

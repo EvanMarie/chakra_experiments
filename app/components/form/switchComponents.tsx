@@ -6,10 +6,19 @@ import {
   SectionDescription,
   SectionHeading,
 } from "~/styles/MainDesignComponents";
+import {
+  SwitchFunctionFive,
+  SwitchFunctionFour,
+  SwitchFunctionOne,
+  SwitchFunctionSeven,
+  SwitchFunctionSix,
+  SwitchFunctionThree,
+  SwitchFunctionTwo,
+} from "./switchFunctions";
 
 /* ********************************************************************** */
 
-export function ComponentOne() {
+export function SwitchOne() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -20,7 +29,7 @@ export function ComponentOne() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionOne />
+        <SwitchFunctionOne />
       </MyFlex>
     </SectionContainer>
   );
@@ -28,7 +37,7 @@ export function ComponentOne() {
 
 /* ********************************************************************** */
 
-export function ComponentTwo() {
+export function SwitchTwo() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -39,7 +48,7 @@ export function ComponentTwo() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionTwo />
+        <SwitchFunctionTwo />
       </MyFlex>
     </SectionContainer>
   );
@@ -47,7 +56,7 @@ export function ComponentTwo() {
 
 /* ********************************************************************** */
 
-export function ComponentThree() {
+export function SwitchThree() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -58,7 +67,7 @@ export function ComponentThree() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionThree />
+        <SwitchFunctionThree />
       </MyFlex>
     </SectionContainer>
   );
@@ -66,7 +75,7 @@ export function ComponentThree() {
 
 /* ********************************************************************** */
 
-export function ComponentFour() {
+export function SwitchFour() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -77,7 +86,7 @@ export function ComponentFour() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionFour />
+        <SwitchFunctionFour />
       </MyFlex>
     </SectionContainer>
   );
@@ -85,7 +94,7 @@ export function ComponentFour() {
 
 /* ********************************************************************** */
 
-export function ComponentFive() {
+export function SwitchFive() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -96,7 +105,7 @@ export function ComponentFive() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionFive />
+        <SwitchFunctionFive />
       </MyFlex>
     </SectionContainer>
   );
@@ -104,7 +113,7 @@ export function ComponentFive() {
 
 /* ********************************************************************** */
 
-export function ComponentSix() {
+export function SwitchSix() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -115,7 +124,7 @@ export function ComponentSix() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionSix />
+        <SwitchFunctionSix />
       </MyFlex>
     </SectionContainer>
   );
@@ -123,7 +132,7 @@ export function ComponentSix() {
 
 /* ********************************************************************** */
 
-export function ComponentSeven() {
+export function SwitchSeven() {
   return (
     <SectionContainer>
       <SectionHeading></SectionHeading>
@@ -134,7 +143,7 @@ export function ComponentSeven() {
       </Box>
 
       <MyFlex bg="background">
-        <ComponentFunctionSeven />
+        <SwitchFunctionSeven />
       </MyFlex>
     </SectionContainer>
   );

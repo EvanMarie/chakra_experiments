@@ -167,8 +167,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/slider"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/slider">
                     <HL>Slider 🔗</HL>
                   </Link>
                   : Similar to the <Mono>Range Slider</Mono>, a{" "}

@@ -9,10 +9,19 @@ import {
   SliderTrack,
   VStack,
   Tooltip,
+  Image,
+  IconButton,
+  HStack,
 } from "@chakra-ui/react";
 import { SingleExample } from "~/styles/MainDesignComponents";
-import { BsSliders } from "react-icons/bs";
-import { useState } from "react";
+import {
+  BsFillPlayCircleFill,
+  BsFillVolumeUpFill,
+  BsSliders,
+  BsStopBtnFill,
+} from "react-icons/bs";
+import { useRef, useState } from "react";
+import { FaArrowsAltH } from "react-icons/fa";
 
 export function SliderFunctionOne() {
   return (
@@ -241,5 +250,160 @@ export function SliderFunctionSeven() {
         </Tooltip>
       </Slider>
     </Flex>
+  );
+}
+
+/* ********************************************************************** */
+export function ImageGallerySlider() {
+  const [selectedImage, setSelectedImage] = useState(0);
+  const images = [
+    "https://placebear.com/300/300",
+    "http://placekitten.com/300/300",
+    "https://place-puppy.com/300x300",
+  ];
+
+  const handleSliderChange = (value: number) => {
+    setSelectedImage(value);
+  };
+
+  return (
+    <VStack w="100%" spacing={6}>
+      <Slider
+        maxWidth={{ base: "300px", sm: "400px", lg: "150px" }}
+        aria-label="image-gallery-slider"
+        defaultValue={selectedImage}
+        min={0}
+        max={images.length - 1}
+        step={1}
+        onChange={handleSliderChange}
+      >
+        <SliderTrack>
+          <SliderFilledTrack />
+        </SliderTrack>
+        {images.map((image, index) => (
+          <SliderThumb key={index} boxSize={5} bg="accent_1">
+            <Box color="background" as={FaArrowsAltH} />
+          </SliderThumb>
+        ))}
+      </Slider>
+      <Image
+        src={images[selectedImage]}
+        alt={`Image ${selectedImage + 1}`}
+        w={{ base: "250px", sm: "300px", lg: "150px" }}
+        objectFit="cover"
+      />
+    </VStack>
+  );
+}
+
+/* ********************************************************************** */
+
+export function ColorPickerSlider() {
+  const [selectedColor, setSelectedColor] = useState("#44EAFA");
+
+  const handleSliderChange = (value: number) => {
+    const hue = Math.floor((value / 100) * 360);
+    setSelectedColor(`hsl(${hue}, 100%, 50%)`);
+  };
+
+  return (
+    <VStack w="100%" spacing={5}>
+      <Slider
+        maxWidth={{ base: "300px", sm: "400px", lg: "150px" }}
+        aria-label="color-picker-slider"
+        defaultValue={0}
+        min={0}
+        max={100}
+        step={1}
+        onChange={handleSliderChange}
+      >
+        <SliderTrack>
+          <SliderFilledTrack />
+        </SliderTrack>
+        <SliderThumb boxSize={5} bg="accent_1">
+          <Box color="background" as={FaArrowsAltH} />
+        </SliderThumb>
+      </Slider>
+      <Box width="150px" height="150px" bg={selectedColor}></Box>
+    </VStack>
+  );
+}
+
+/* ********************************************************************** */
+
+export function VolumeControlSlider() {
+  const [volume, setVolume] = useState(50);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handleSliderChange = (value: number) => {
+    setVolume(value);
+    // Adjust the volume of the audio player
+    if (audioRef.current) {
+      audioRef.current.volume = value / 100;
+    }
+  };
+
+  const handlePlay = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleStop = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+
+  return (
+    <VStack w="100%" spacing={8}>
+      <VStack w="100%" spacing={4}>
+        <audio ref={audioRef}>
+          <source
+            src="https://diviextended.com/wp-content/uploads/2021/10/sound-of-waves-marine-drive-mumbai.mp3"
+            type="audio/mp3"
+          />
+          Your browser does not support the audio element.
+        </audio>
+        <HStack spacing={6}>
+          <IconButton
+            aria-label="play-audio"
+            onClick={handlePlay}
+            disabled={isPlaying}
+            icon={<BsFillPlayCircleFill size={25} />}
+          >
+            Play
+          </IconButton>
+          <IconButton
+            aria-label="stop-audio"
+            onClick={handleStop}
+            disabled={!isPlaying}
+            icon={<BsStopBtnFill size={25} />}
+          >
+            Stop
+          </IconButton>
+        </HStack>
+        <Slider
+          aria-label="volume-control-slider"
+          defaultValue={volume}
+          min={0}
+          max={100}
+          step={1}
+          onChange={handleSliderChange}
+        >
+          <SliderTrack>
+            <SliderFilledTrack />
+          </SliderTrack>
+          <SliderThumb boxSize={5} bg="accent_1">
+            <Box color="background" as={BsFillVolumeUpFill} />
+          </SliderThumb>
+        </Slider>
+        <Box w="100%">Volume: {volume}%</Box>
+      </VStack>
+    </VStack>
   );
 }

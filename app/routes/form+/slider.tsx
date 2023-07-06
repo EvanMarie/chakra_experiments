@@ -40,6 +40,11 @@ import {
   SliderThree,
   SliderTwo,
 } from "~/components/form/sliderComponents";
+import {
+  ColorPickerSlider,
+  ImageGallerySlider,
+  VolumeControlSlider,
+} from "~/components/form/sliderFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -131,7 +136,14 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderOne />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Slider 
+  aria-label="basic_slider" 
+  defaultValue={88}>
+  <SliderTrack>
+    <SliderFilledTrack />
+  </SliderTrack>
+  <SliderThumb />
+</Slider>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -140,7 +152,7 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderTwo />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Form.E42 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -149,7 +161,17 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderThree />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Slider
+  aria-label="vertical-slider"
+  defaultValue={88}
+  orientation="vertical"
+  minH="200px"
+>
+  <SliderTrack>
+    <SliderFilledTrack />
+  </SliderTrack>
+  <SliderThumb />
+</Slider>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -158,7 +180,16 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderFour />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Slider 
+  aria-label="custom-slider" 
+  defaultValue={88}>
+  <SliderTrack bg="mainText">
+    <SliderFilledTrack bg="accent_2" />
+  </SliderTrack>
+  <SliderThumb boxSize={6} bg="sidebarBackground">
+    <Box color="accent_1" as={BsSliders} />
+  </SliderThumb>
+</Slider>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -167,7 +198,17 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderFive />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Slider 
+  defaultValue={88} 
+  min={0} 
+  max={300} 
+  step={30}>
+  <SliderTrack bg="accent_1">
+    <Box position="relative" right={10} />
+    <SliderFilledTrack bg="accent_2" />
+  </SliderTrack>
+  <SliderThumb boxSize={6} />
+</Slider>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -176,7 +217,7 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderSix />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Form.E43 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -185,7 +226,7 @@ export default function chakra_section() {
               <SingleExample>
                 <SliderSeven />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Form.E44 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -196,25 +237,57 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Image Gallery Slider</b>: You can use the <b>Slider</b>{" "}
+              component to create an interactive image gallery slider. Instead
+              of using the default <b>SliderThumb</b>, you can customize it to
+              display thumbnail images. When users drag the slider, the main
+              image updates to correspond with the selected thumbnail. This
+              provides a visually engaging way to navigate through a collection
+              of images.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <ImageGallerySlider />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H26 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Color Picker Slider</b>: You can use the <b>Slider</b>{" "}
+              component to create a color picker. By mapping the <b>Slider</b>{" "}
+              value to the color's hue, you can allow users to slide through a
+              range of colors and dynamically update a visual representation of
+              the selected color.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <ColorPickerSlider />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H27 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Volume Control Slider</b>: You can use the <b>Slider</b>{" "}
+              component to create a sound volume control. By associating the{" "}
+              <b>Slider</b> value with the volume level, you can allow users to
+              adjust the volume of an audio or video player by sliding the
+              control.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <VolumeControlSlider />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Form.H28 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
