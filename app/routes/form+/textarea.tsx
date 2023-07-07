@@ -73,7 +73,8 @@ export default function chakra_section() {
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>
-                  These components can be imported as follows:
+                  The <Mono>Textarea</Mono> component can be imported as
+                  follows:
                 </BasicText>
                 <Highlighter>{`import { Textarea } from '@chakra-ui/react'`}</Highlighter>
               </ImportBox>
