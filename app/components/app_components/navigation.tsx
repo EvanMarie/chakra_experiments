@@ -320,8 +320,7 @@ export const navElements: NavElement[] = [
         label: "Switch",
       },
       {
-        // link: "/form/textarea",
-        link: "/on_my_way",
+        link: "/form/textarea",
         label: "Textarea",
       },
     ],

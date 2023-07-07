@@ -189,8 +189,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/textarea"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/textarea">
                     <HL>Textarea 🔗</HL>
                   </Link>
                   : This is an input component designed for multi-line text

@@ -3,7 +3,6 @@ import {
   withDefaultColorScheme,
   withDefaultVariant,
   withDefaultProps,
-  Button,
   defineStyle,
   defineStyleConfig,
 } from "@chakra-ui/react";
@@ -50,6 +49,33 @@ const rangeSliderStyles = {
   },
   track: {
     bg: "mainText",
+  },
+};
+
+/* ********************************* TEXTAREA ************************************ */
+
+export const textareaStyles = {
+  w: "100%",
+  maxWidth: "500px",
+  bg: "mainText",
+  color: "background",
+  border: "2px solid",
+  borderColor: "tipBackground",
+  borderRadius: "lg",
+  _hover: {
+    bg: "mainText",
+    color: "background",
+  },
+  focusBorderColor: "accent_2",
+  _focus: {
+    bg: "mainText",
+    color: "background",
+    borderColor: "accent_2",
+    focusBorderColor: "accent_2",
+  },
+  _placeholder: {
+    color: "background",
+    opacity: 0.7,
   },
 };
 
@@ -144,17 +170,18 @@ const theme = extendTheme(
       "PinInput",
       "NumberInput",
       "RangeSlider",
+      "Tag",
     ],
   }),
   withDefaultProps({
     defaultProps: {
-      // size: "md",
       bg: "mainText",
       color: "background",
     },
 
     components: [
       "Button",
+      "Tag",
       "Input",
       "Select",
       "Textarea",
@@ -308,15 +335,13 @@ const theme = extendTheme(
           },
         },
       },
-
+      Textarea: { textareaStyles },
       RangeSlider: rangeSliderStyles,
       Button: buttonTheme,
       Input: defaultStyles,
       NumberInput: defaultStyles,
       PinInputField: defaultStyles,
       PinInput: defaultStyles,
-
-      Textarea: defaultStyles,
       Select: defaultStyles,
       Checkbox: defaultStyles,
       Radio: defaultStyles,
