@@ -260,8 +260,8 @@ export function SwitchFunctionSeven() {
   const raveEmoji = isRave ? "🌟" : "🦄";
 
   return (
-    <VStack spacing={4}>
-      <HStack spacing={5}>
+    <VStack spacing={4} w="100%">
+      <HStack spacing={5} w="100%" textAlign="center" justify="center">
         <Text fontSize="4xl">😐</Text>
         <Switch
           id="rave-mode-toggle"
@@ -273,6 +273,7 @@ export function SwitchFunctionSeven() {
       </HStack>
 
       <Box
+        w="100%"
         bg={raveMode ? bg : "black"}
         color={raveMode ? color : "lightgray"}
         p={5}
