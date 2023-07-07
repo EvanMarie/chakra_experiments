@@ -281,7 +281,7 @@ export function SwitchFunctionSeven() {
         borderRadius="lg"
       >
         {raveMode ? (
-          <VStack spacing={4} w="100%">
+          <VStack spacing={4} w="100%" h="100%" justify="space-around">
             <HStack justify="space-between" w="100%">
               <Text fontSize="4xl">{raveEmoji}</Text>
               <Text fontSize="4xl">{raveEmoji}</Text>
@@ -296,7 +296,7 @@ export function SwitchFunctionSeven() {
             </HStack>
           </VStack>
         ) : (
-          <VStack spacing={4} w="100%">
+          <VStack spacing={4} w="100%" h="100%" justify="space-around">
             <HStack justify="space-between" w="100%">
               <Text fontSize="4xl">⛔️</Text>
               <Text fontSize="4xl">⛔️</Text>
