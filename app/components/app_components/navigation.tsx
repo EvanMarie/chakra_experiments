@@ -325,6 +325,51 @@ export const navElements: NavElement[] = [
       },
     ],
   },
+  {
+    link: "/layout",
+    label: "Layout",
+    subElements: [
+      {
+        link: "/layout/box",
+        label: "Box",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/center",
+        label: "Center",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/container",
+        label: "Container",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/flex",
+        label: "Flex",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/grid",
+        label: "Grid",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/simple_grid",
+        label: "Simple Grid",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/stack",
+        label: "Stack",
+      },
+      {
+        link: "/on_my_way",
+        // link: "/layout/wrap",
+        label: "Wrap",
+      },
+    ],
+  },
 ];
 
 export const getNavElementForUrl = (
