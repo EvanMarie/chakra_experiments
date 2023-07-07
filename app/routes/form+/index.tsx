@@ -179,8 +179,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  {/* <Link href="/form/switch"> */}
-                  <Link href="/on_my_way">
+                  <Link href="/form/switch">
                     <HL>Switch 🔗</HL>
                   </Link>
                   : This is a checkbox with a physical toggle-like interaction

@@ -252,7 +252,7 @@ export default function chakra_section() {
               </MyFlex>
             </HighlightExample>
             <ModalCode>
-              <Form.H26 />
+              <Form.H28 />
             </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
@@ -269,7 +269,7 @@ export default function chakra_section() {
               </MyFlex>
             </HighlightExample>
             <ModalCode>
-              <Form.H27 />
+              <Form.H29 />
             </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
@@ -286,7 +286,7 @@ export default function chakra_section() {
               </MyFlex>
             </HighlightExample>
             <ModalCode>
-              <Form.H28 />
+              <Form.H30 />
             </ModalCode>
           </GridBoxThree>
         </HighlightColumn>

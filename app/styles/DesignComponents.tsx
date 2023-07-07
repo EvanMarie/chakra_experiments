@@ -219,7 +219,7 @@ export function MyDivider({
   mt = 6,
   h = "1px",
   w = "100%",
-  opacity = 0.3,
+  opacity = 0.5,
   bgGradient = `linear(to-t, ${"accent_2"}, ${"accent_1"})`,
 }: MyDividerProps) {
   return (

@@ -124,6 +124,12 @@ const CovertCandyScheme = {
 /* ********************************* THEME ************************************ */
 
 const theme = extendTheme(
+  {
+    config: {
+      initialColorMode: "light",
+      useSystemColorMode: false,
+    },
+  },
   withDefaultColorScheme({
     colorScheme: "cyan",
   }),
@@ -146,6 +152,7 @@ const theme = extendTheme(
       bg: "mainText",
       color: "background",
     },
+
     components: [
       "Button",
       "Input",

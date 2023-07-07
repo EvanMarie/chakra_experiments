@@ -316,8 +316,7 @@ export const navElements: NavElement[] = [
         label: "Slider",
       },
       {
-        // link: "/form/switch",
-        link: "/on_my_way",
+        link: "/form/switch",
         label: "Switch",
       },
       {

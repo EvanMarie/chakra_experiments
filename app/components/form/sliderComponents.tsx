@@ -28,8 +28,6 @@ export function SliderOne() {
           <Mono>Slider</Mono>, <Mono>SliderTrack</Mono>,{" "}
           <Mono>SliderFilledTrack</Mono>, and <Mono>SliderThumb</Mono>.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -52,8 +50,6 @@ export function SliderTwo() {
           these, simply use its respective prop definition as labeled above the
           slider.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -75,8 +71,6 @@ export function SliderThree() {
           using the orientation prop. You can also adjust the minimum height of
           the slider track using the <Mono>minH</Mono> prop.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -99,8 +93,6 @@ export function SliderFour() {
           <Mono>SliderFilledTrack</Mono>, and even replace the{" "}
           <Mono>SliderThumb</Mono> with custom content.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -122,8 +114,6 @@ export function SliderFive() {
           This can be achieved by setting the step prop to define the interval
           between values.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -153,7 +143,6 @@ export function SliderSix() {
           slider. It uses the <Mono>sliderValue</Mono> state variable as the
           <Mono>value</Mono> prop, displaying the current value dynamically.
         </BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="sectionColor" mt={5}>
@@ -178,8 +167,6 @@ export function SliderSeven() {
           label, therefore it only shows up on hover with the settings used
           below.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="sectionColor">
