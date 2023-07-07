@@ -253,7 +253,7 @@ export default function chakra_section() {
           </GridBoxTwo>
           <GridBoxThree>
             <HighlightText>
-              <b>Event-Driven Effects</b>: This example illustrates how the
+              <b>Event-Driven Effects</b>: This example illustrates how the{" "}
               <b>Switch</b> component can be used to drive visual changes on the
               screen. By toggling the switch, a color-altering effect, labeled
               here as "Rave Mode", is activated within the rave box. The colors
