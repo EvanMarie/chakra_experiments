@@ -7,6 +7,16 @@ import {
   SectionHeading,
 } from "~/styles/MainDesignComponents";
 
+import {
+  ComponentFunctionOne, 
+  ComponentFunctionTwo,
+  ComponentFunctionThree,
+  ComponentFunctionFour,
+  ComponentFunctionFive,
+  ComponentFunctionSix,
+  ComponentFunctionSeven,
+} from ./ComponentFunctions;
+
 /* ********************************************************************** */
 
 export function ComponentOne() {
