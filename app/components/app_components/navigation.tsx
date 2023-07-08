@@ -334,8 +334,7 @@ export const navElements: NavElement[] = [
         label: "Box",
       },
       {
-        link: "/on_my_way",
-        // link: "/layout/center",
+        link: "/layout/center",
         label: "Center",
       },
       {
