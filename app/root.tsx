@@ -41,7 +41,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function App() {
   const [navIndex, setNavIndex] = useState<number | undefined>(undefined);
-  const navMenuWidth = { base: "0px", md: "225px", lg: "275px" };
+  const navMenuWidth = { base: "0px", md: "200px", lg: "225px" };
 
   return (
     <html lang="en">

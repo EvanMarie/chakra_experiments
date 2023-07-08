@@ -624,8 +624,8 @@ export function SingleExample({ children }: SingleExampleProps) {
       spacing={2}
       verticalAlign="middle"
       m={0}
-      paddingX={{ base: 1, sm: 2, md: 3 }}
-      paddingY={{ base: 1, sm: 2, md: 3 }}
+      paddingX={{ base: 1, sm: 2, md: 3, lg: 2 }}
+      paddingY={{ base: 1, sm: 2, md: 3, lg: 2 }}
     >
       {children}
     </VStack>
