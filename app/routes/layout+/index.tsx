@@ -117,8 +117,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/center"> */}
+                  <Link href="/layout/center">
                     <HL>Center 🔗</HL>
                   </Link>
                   : allows you to effortlessly center content both vertically

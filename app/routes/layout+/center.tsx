@@ -36,10 +36,12 @@ import * as Layout from "~/mardownExamples/layout/index";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Code, VStack } from "@chakra-ui/react";
 import {
   CenterFunctionFive,
   CenterFunctionFour,
+  CenterFunctionSix,
+  CenterFunctionSeven,
 } from "~/components/layout/centerFunctions";
 
 hljs.registerLanguage("javascript", javascript);
@@ -75,7 +77,7 @@ export default function chakra_section() {
                 <li>
                   <HL>Center</HL>: centers its child element based on the
                   specified width and height. It ensures that the child is
-                  perfectly aligned both horizontally and vertically within the
+                  perfectly aligned both horizontally and vertically within the{" "}
                   <Mono>Center</Mono> component
                 </li>
                 <li>
@@ -166,9 +168,11 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>
-              <b>Animated Squares</b>: In this example, we explor using the
-              Chakra UI Center and Square components to create an interactive
-              animation effect.
+              <b>Animated Squares</b>: In this example, we explore using the
+              Chakra UI <b>Center</b> and <b>Square</b> components to create an
+              interactive animation effect. This type of animation could be the
+              basis for many different types of UI interactions, such as a
+              loading screen or a button animation.
             </HighlightText>
             <HighlightExample h="100%">
               <MyFlex>
@@ -177,21 +181,49 @@ export default function chakra_section() {
                 <CenterFunctionFive />
               </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Layout.H04 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
+            <HighlightText>
+              <b>Animated Loading Circle</b>: You can create an animated loading
+              circle using the <b>Circle</b> component. This can be a visually
+              appealing way to indicate a loading state to users. In this
+              example, we use the <b>Circle</b> component to create a loading
+              circle that spins continuously with the flower icon inside. This
+              could serve as a fancier version of the traditional loading
+              spinner.
+            </HighlightText>
             <HighlightExample h="100%">
-              <MyFlex></MyFlex>
+              <MyFlex>
+                <CenterFunctionSix />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Layout.H05 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Button Highlight</b>: In this example, we use the <b>Button</b>{" "}
+              component to create a button that is highlighted by a{" "}
+              <b>Circle</b> component when the user hovers over it. This is a
+              simple way to add a bit of interactivity to your UI designs. The{" "}
+              <b>borderRadius</b> on the <b>Circle</b> component is set at{" "}
+              <Code>{`borderRadius="50% / 30% 70%"`}</Code> to create a bit and
+              ellipse shape. And the opacity of its color is set at{" "}
+              <Code>{`opacity="0.7"`}</Code> to create a slightly more subtle
+              highlight effect.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <CenterFunctionSeven />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Layout.H06 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
