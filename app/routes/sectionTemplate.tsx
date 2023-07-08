@@ -100,7 +100,7 @@
 //           <ExampleBox>
 //             <SectionContainer>
 //               <SingleExample>
-//                 <ComponentFunctionOne />
+//                 <ComponentOne />
 //                 <ModalCode>
 //                   <Highlighter>{``}</Highlighter>
 //                 </ModalCode>
