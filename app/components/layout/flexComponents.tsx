@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { BasicText } from "~/styles/DesignComponents";
+import { BasicText, Mono } from "~/styles/DesignComponents";
 import {
   MyFlex,
   SectionContainer,
@@ -21,11 +21,15 @@ import {
 export function FlexOne() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Flex Basics</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ In this example, you can experiment with four of the most
+          fundamentally important aspects of <Mono>Flex</Mono> that you will
+          need to understand in order to use it effectively. The best way to
+          learn these is to experiment with them, so please feel free to play
+          around with the values in the controls below.
+        </SectionDescription>
       </Box>
 
       <MyFlex bg="background">

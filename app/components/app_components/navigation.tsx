@@ -338,8 +338,7 @@ export const navElements: NavElement[] = [
         label: "Center",
       },
       {
-        link: "/on_my_way",
-        // link: "/layout/container",
+        link: "/layout/container",
         label: "Container",
       },
       {
