@@ -13,9 +13,7 @@ import {
 export default function chakra_disclosure() {
   return (
     <BigBackgroundBox>
-      <MyLabel link="https://chakra-ui.com/docs/components">
-        Chakra UI: Disclosure
-      </MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/components">Disclosure</MyLabel>
       <SectionContainer paddingX={8}>
         <VStack w="100%" spacing={2}>
           <SectionDescription>

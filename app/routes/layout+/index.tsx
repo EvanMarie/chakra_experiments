@@ -13,9 +13,7 @@ import {
 export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
-      <MyLabel link="https://chakra-ui.com/docs/components">
-        Chakra UI: Layout Components
-      </MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/components">Layout</MyLabel>
       <SectionContainer paddingX={8}>
         <VStack w="100%" spacing={2}>
           <SectionDescription>
@@ -139,8 +137,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/flex"> */}
+                  <Link href="/layout/flex">
                     <HL>Flex 🔗</HL>
                   </Link>
                   : implements the flexbox layout model, making it easier to

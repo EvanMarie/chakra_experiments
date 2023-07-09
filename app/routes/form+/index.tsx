@@ -13,9 +13,7 @@ import {
 export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
-      <MyLabel link="https://chakra-ui.com/docs/components">
-        Chakra UI: Form
-      </MyLabel>
+      <MyLabel link="https://chakra-ui.com/docs/components">Form</MyLabel>
       <SectionContainer paddingX={8}>
         <VStack w="100%" spacing={2}>
           <SectionDescription>

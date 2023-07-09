@@ -40,6 +40,11 @@ import {
   FlexFive,
   FlexSix,
 } from "~/components/layout/flexComponents";
+import {
+  FlexExampleDynamicForm,
+  FlexExampleImageGallery,
+  FlexExampleNavigation,
+} from "~/components/layout/flexFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -225,7 +230,9 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <FlexThree />
-                <ModalCode></ModalCode>
+                <ModalCode>
+                  <Layout.E06 />
+                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -233,7 +240,7 @@ export default function chakra_section() {
               <SingleExample>
                 <FlexFour />
                 <ModalCode>
-                  <Layout.E03 />
+                  <Layout.E05 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -259,25 +266,63 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Dynamic Form Layout</b>: You can use <b>Flex</b> to create
+              dynamic and responsive form layouts, building forms that adapt to
+              different screen sizes and reorganize their fields automatically.
+              This example offers a simple registration form with two columns on
+              larger screens, which transforms into a single column on smaller
+              screens.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <FlexExampleDynamicForm />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Layout.H10 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Flexible Image Layout</b>: <b>Flex</b> is great for making
+              responsive and attractive image layout designs that adapt to all
+              screen sizes and the layout shifts that occur with responsive
+              designs. Keeping a consistently attractive layout with complex
+              content would be almost impossible without flexbox functionality.
+              And with Chakra's versatile, <b>Flex</b> component, it becomes
+              easy once you know the basics.{" "}
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <FlexExampleImageGallery />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Layout.H11 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Flex Nav Menu</b>: <b>Flex</b> is an essential tool for
+              creating navigation menus due to its ability to handle various
+              layout requirements with ease. With the <b>direction</b> property,
+              we can easily switch between vertical and horizontal orientations,
+              allowing us to create both types of navigation menu. <b>Flex</b>{" "}
+              enables us to control the alignment and spacing of menu items
+              effortlessly. We can use properties like <b>justifyContent</b> and{" "}
+              <b>alignItems</b> to position the menu items precisely where we
+              want them, whether it's aligning them in a row or stacking them in
+              a column.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <FlexExampleNavigation />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Layout.H12 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

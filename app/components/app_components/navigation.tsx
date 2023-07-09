@@ -342,8 +342,7 @@ export const navElements: NavElement[] = [
         label: "Container",
       },
       {
-        link: "/on_my_way",
-        // link: "/layout/flex",
+        link: "/layout/flex",
         label: "Flex",
       },
       {

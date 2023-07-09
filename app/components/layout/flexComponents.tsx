@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import {
   BasicText,
   BlueBold,
+  HL,
   Mono,
   MyDivider,
 } from "~/styles/DesignComponents";
@@ -86,9 +87,40 @@ export function FlexThree() {
     <SectionContainer>
       <SectionHeading>FlexWrap</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ The <Mono>flex-wrap</Mono> property is used in flexbox to control
+          how flex items are wrapped and displayed when they exceed the
+          available space within the flex container. It allows you to control
+          whether the items should wrap onto multiple lines or stay on a single
+          line.
+        </SectionDescription>
+        <BasicText>
+          The <Mono>flex-wrap</Mono> property provides three possible values:
+        </BasicText>
+        <BulletBox>
+          <ul>
+            <li>
+              <HL>nowrap</HL>: This is the default value where items do not wrap
+              and try to fit within a single line, potentially causing overflow.
+            </li>
+            <li>
+              <HL>wrap</HL>: Items wrap onto multiple lines if necessary to fit
+              within the container. The wrapping occurs in the direction
+              specified by the <Mono>flex-direction</Mono> property.
+            </li>
+            <li>
+              <HL>wrap-reverse</HL>: Items wrap onto multiple lines in the
+              opposite direction of the <Mono>flex-direction</Mono> property.
+              This means they wrap from bottom to top or right to left.
+            </li>
+          </ul>
+        </BulletBox>
+        <BasicText>
+          In this example, you can explore the <Mono>flexWrap</Mono> property of
+          the Chakra <Mono>Flex</Mono> component and its impact on the layout of
+          flex items. You can change the flexWrap value using the select input
+          and observe how the flex items wrap or remain on a single line.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -105,9 +137,30 @@ export function FlexFour() {
     <SectionContainer>
       <SectionHeading>FlexBasis</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ The <Mono>flex-basis</Mono> property is used in flexbox to define
+          the initial size of a flex item along the main axis before any
+          available space is distributed among the flex items. It specifies the
+          default size of an item before any remaining space is distributed
+          according to the <Mono>flex-grow</Mono> and <Mono>flex-shrink</Mono>{" "}
+          properties.
+        </SectionDescription>
+        <BasicText>
+          By default, the <Mono>flex-basis</Mono> value is set to{" "}
+          <Mono>auto</Mono>, which means that the size of the item is determined
+          by its content or the width property if specified. However, you can
+          explicitly set the <Mono>flex-basis</Mono> value to a specific length
+          or percentage to control the initial size of the flex items.
+        </BasicText>
+        <BasicText>
+          In the example below, you can interactively change the{" "}
+          <Mono>flexBasis</Mono> value of each flex item using the{" "}
+          <Mono>w</Mono> (width) property in Chakra UI. The flex items are
+          arranged in a flex container with <Mono>flex-wrap</Mono>: wrap to
+          allow items to wrap onto multiple lines when necessary. You can
+          observe how changing the flex-basis value affects the size and layout
+          of the flex items.
+        </BasicText>
       </Box>
 
       <MyFlex bg="background">

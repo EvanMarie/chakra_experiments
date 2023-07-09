@@ -13,7 +13,7 @@ export default function chakra_feedback() {
   return (
     <BigBackgroundBox>
       <MyLabel link="https://chakra-ui.com/docs/components">
-        Chakra UI: Media & Icons
+        Media & Icons
       </MyLabel>
       <SectionContainer paddingX={8}>
         <VStack w="100%" spacing={2}>
