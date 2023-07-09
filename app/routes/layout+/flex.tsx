@@ -39,7 +39,6 @@ import {
   FlexFour,
   FlexFive,
   FlexSix,
-  FlexSeven,
 } from "~/components/layout/flexComponents";
 
 hljs.registerLanguage("javascript", javascript);
@@ -161,6 +160,8 @@ export default function chakra_section() {
                 </li>
               </ul>
             </BulletBox>
+          </SectionContainer>
+          <SectionContainer>
             <BasicText>
               While you can use the verbose props, Chakra UI provides shorthand
               equivalents for these flex styles, saving you time and reducing
@@ -216,7 +217,7 @@ export default function chakra_section() {
               <SingleExample>
                 <FlexTwo />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Layout.E03 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -224,9 +225,7 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <FlexThree />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
+                <ModalCode></ModalCode>
               </SingleExample>
             </SectionContainer>
 
@@ -234,7 +233,7 @@ export default function chakra_section() {
               <SingleExample>
                 <FlexFour />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Layout.E03 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -243,7 +242,7 @@ export default function chakra_section() {
               <SingleExample>
                 <FlexFive />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Layout.E04 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -251,18 +250,6 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <FlexSix />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <FlexSeven />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
