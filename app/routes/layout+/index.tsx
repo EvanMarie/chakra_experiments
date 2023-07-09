@@ -128,8 +128,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/container"> */}
+                  <Link href="/layout/container">
                     <HL>Container 🔗</HL>
                   </Link>
                   : provides a responsive container that adjusts its width based
