@@ -350,8 +350,7 @@ export const navElements: NavElement[] = [
         label: "Grid",
       },
       {
-        link: "/on_my_way",
-        // link: "/layout/simple_grid",
+        link: "/layout/simple_grid",
         label: "Simple Grid",
       },
       {

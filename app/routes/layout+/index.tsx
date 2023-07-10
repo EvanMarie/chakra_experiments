@@ -161,8 +161,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/simple_grid"> */}
+                  <Link href="/layout/simple_grid">
                     <HL>SimpleGrid 🔗</HL>
                   </Link>
                   : builds upon the Grid component and simplifies the process of
