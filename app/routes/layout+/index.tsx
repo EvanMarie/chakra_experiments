@@ -149,8 +149,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/grid"> */}
+                  <Link href="/layout/grid">
                     <HL>Grid 🔗</HL>
                   </Link>
                   : enables you to create responsive grid layouts with ease. By

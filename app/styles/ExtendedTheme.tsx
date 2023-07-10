@@ -7,7 +7,7 @@ import {
   defineStyleConfig,
 } from "@chakra-ui/react";
 
-export const transparentBackground = "rgba(45, 43, 56, 0.95)";
+export const transparentBackground = "rgba(45, 43, 56, 0.93)";
 export const config = {
   initialColorMode: "dark",
   useSystemColorMode: true,

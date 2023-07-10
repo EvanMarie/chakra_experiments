@@ -42,7 +42,7 @@ const usefulTipColor = "tipBackground";
 const usefulTipLightbulb = "cyan";
 
 export const MainWidth = "100%";
-export const MainMaxWidth = "1000px";
+export const MainMaxWidth = "1150px";
 export const SectionHeadingSize = "23px";
 
 export const linkStyle = {

@@ -42,6 +42,16 @@ const boxStyles = {
   boxShadow: "md",
   p: 2,
 };
+
+export const boxColors = {
+  one: "accent_1",
+  two: "accent_2",
+  three: "tipBackground",
+  four: "green.200",
+  five: "purple.300",
+  six: "yellow.200",
+};
+
 /* ********************************************************************** */
 export function FlexFunctionOne() {
   const [flexDirection, setFlexDirection] = useState<
@@ -236,13 +246,13 @@ export function FlexFunctionOne() {
         h="fit-content"
         minH={containerHeight}
       >
-        <Square size={boxDimensions} bg="red.200" {...boxStyles}>
+        <Square size={boxDimensions} bg={boxColors.one} {...boxStyles}>
           CHILD 1
         </Square>
-        <Square size={boxDimensions} bg="green.200" {...boxStyles}>
+        <Square size={boxDimensions} bg={boxColors.two} {...boxStyles}>
           CHILD 2
         </Square>
-        <Square size={boxDimensions} bg="blue.200" {...boxStyles}>
+        <Square size={boxDimensions} bg={boxColors.three} {...boxStyles}>
           CHILD 3
         </Square>
       </Flex>
@@ -461,7 +471,7 @@ export function FlexFunctionTwo() {
           <Square
             size={boxDimensions}
             flex={`${box1Grow} ${box1Shrink}`}
-            bg="red.200"
+            bg={boxColors.one}
             {...boxStyles}
           >
             CHILD 1
@@ -469,7 +479,7 @@ export function FlexFunctionTwo() {
           <Square
             size={boxDimensions}
             flex={`${box2Grow} ${box2Shrink}`}
-            bg="green.200"
+            bg={boxColors.two}
             {...boxStyles}
           >
             CHILD 2
@@ -477,7 +487,7 @@ export function FlexFunctionTwo() {
           <Square
             size={boxDimensions}
             flex={`${box3Grow} ${box3Shrink}`}
-            bg="blue.200"
+            bg={boxColors.three}
             {...boxStyles}
           >
             CHILD 3
@@ -554,7 +564,7 @@ export function FlexFunctionThree() {
           <Box
             w={{ base: "50px", sm: "100px" }}
             h="100px"
-            bg="blue.200"
+            bg={boxColors.one}
             m={1}
             flexShrink={1}
             {...boxStyles}
@@ -564,7 +574,7 @@ export function FlexFunctionThree() {
           <Box
             w={{ base: "75px", sm: "150px" }}
             h="100px"
-            bg="green.200"
+            bg={boxColors.two}
             m={1}
             flexShrink={1}
             {...boxStyles}
@@ -574,7 +584,7 @@ export function FlexFunctionThree() {
           <Box
             w={{ base: "60px", sm: "120px" }}
             h="100px"
-            bg="red.200"
+            bg={boxColors.three}
             m={1}
             flexShrink={1}
             {...boxStyles}
@@ -584,7 +594,7 @@ export function FlexFunctionThree() {
           <Box
             w={{ base: "40px", sm: "80px" }}
             h="100px"
-            bg="yellow.200"
+            bg={boxColors.four}
             m={1}
             flexShrink={1}
             {...boxStyles}
@@ -594,7 +604,7 @@ export function FlexFunctionThree() {
           <Box
             w={{ base: "100px", sm: "200px" }}
             h="100px"
-            bg="purple.200"
+            bg={boxColors.five}
             m={1}
             flexShrink={1}
             {...boxStyles}
@@ -604,7 +614,7 @@ export function FlexFunctionThree() {
           <Box
             w={{ base: "65px", sm: "130px" }}
             h="100px"
-            bg="teal.200"
+            bg={boxColors.six}
             m={1}
             flexShrink={1}
             {...boxStyles}
@@ -621,12 +631,12 @@ export function FlexFunctionThree() {
 
 export function FlexFunctionFour() {
   const [flexItems, setFlexItems] = useState([
-    { id: 1, flexBasis: { base: "50px", sm: "100px" }, color: "blue.200" },
-    { id: 2, flexBasis: { base: "75px", sm: "150px" }, color: "green.200" },
-    { id: 3, flexBasis: { base: "60px", sm: "120px" }, color: "red.200" },
-    { id: 4, flexBasis: { base: "40px", sm: "80px" }, color: "yellow.200" },
-    { id: 5, flexBasis: { base: "100px", sm: "200px" }, color: "purple.200" },
-    { id: 6, flexBasis: { base: "65px", sm: "130px" }, color: "teal.200" },
+    { id: 1, flexBasis: { base: "50px", sm: "100px" }, color: boxColors.one },
+    { id: 2, flexBasis: { base: "75px", sm: "150px" }, color: boxColors.two },
+    { id: 3, flexBasis: { base: "60px", sm: "120px" }, color: boxColors.three },
+    { id: 4, flexBasis: { base: "40px", sm: "80px" }, color: boxColors.four },
+    { id: 5, flexBasis: { base: "100px", sm: "200px" }, color: boxColors.five },
+    { id: 6, flexBasis: { base: "65px", sm: "130px" }, color: boxColors.six },
   ]);
 
   const handleFlexBasisChange = (
