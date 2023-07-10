@@ -2,8 +2,11 @@ import { Box, Code, Flex, Grid, VStack } from "@chakra-ui/react";
 import {
   BasicText,
   BlueBold,
+  GridStyles,
   Mono,
   MyDivider,
+  boxColors,
+  gridBoxStyles,
 } from "~/styles/DesignComponents";
 import {
   BulletBox,
@@ -24,35 +27,6 @@ import {
   GridFunctionSeven,
 } from "./gridFunctions";
 import { ModalCode } from "~/styles/CodeDesignComponents";
-
-/* ********************************************************************** */
-export const GridStyles = {
-  bg: "mainText",
-  borderRadius: "lg",
-  p: 2,
-  w: "100%",
-  h: "fit-content",
-  gap: 1,
-};
-
-export const gridBoxStyles = {
-  borderRadius: "lg",
-  p: 2,
-  w: "100%",
-  shadow: "xl",
-  color: "background",
-  border: "2px solid #444444",
-  fontWeight: "bold",
-};
-
-export const boxColors = {
-  one: "accent_1",
-  two: "accent_2",
-  three: "tipBackground",
-  four: "green.200",
-  five: "purple.200",
-  six: "yellow.200",
-};
 
 /* ********************************************************************** */
 

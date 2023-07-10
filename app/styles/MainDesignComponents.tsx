@@ -24,6 +24,7 @@ import {
   CodeProps,
   Code,
   useMediaQuery,
+  Center,
 } from "@chakra-ui/react";
 import { BasicText, MyDivider } from "./DesignComponents";
 import { RiBookmark3Line } from "react-icons/ri";
@@ -234,7 +235,8 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
             Useful Tip No. 1
           </Text>
         </Flex>
-      </HStack>{" "}
+      </HStack>
+
       {children}
     </Flex>
   );

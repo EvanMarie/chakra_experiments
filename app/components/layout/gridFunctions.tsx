@@ -4,23 +4,23 @@ import {
   Center,
   Code,
   Container,
-  Flex,
   Grid,
   GridItem,
-  GridItemProps,
   HStack,
-  Heading,
   Image,
-  Input,
   Select,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import { ChangeEvent, useEffect, useState } from "react";
 import { SingleExample } from "~/styles/MainDesignComponents";
-import { GridStyles, boxColors, gridBoxStyles } from "./gridComponents";
 import { Highlighter } from "../styling/highlighter";
 import { CalendarIcon, EmailIcon, LinkIcon, PhoneIcon } from "@chakra-ui/icons";
+import {
+  boxColors,
+  GridStyles,
+  gridBoxStyles,
+} from "~/styles/DesignComponents";
 
 const SelectStyles = {
   size: "sm",

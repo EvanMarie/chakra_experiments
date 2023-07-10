@@ -7,8 +7,6 @@ import {
   FormControl,
   FormLabel,
   HStack,
-  Heading,
-  IconButton,
   Image,
   Input,
   Select,
@@ -22,6 +20,7 @@ import {
 import { ChangeEvent, Fragment, useState } from "react";
 import { FaArrowsAltH, FaArrowsAltV } from "react-icons/fa";
 import { GiTechnoHeart } from "react-icons/gi";
+import { boxColors } from "~/styles/DesignComponents";
 import { SingleExample } from "~/styles/MainDesignComponents";
 
 const SelectStyles = {
@@ -41,15 +40,6 @@ const boxStyles = {
   border: "2px solid #444444",
   boxShadow: "md",
   p: 2,
-};
-
-export const boxColors = {
-  one: "accent_1",
-  two: "accent_2",
-  three: "tipBackground",
-  four: "green.200",
-  five: "purple.300",
-  six: "yellow.200",
 };
 
 /* ********************************************************************** */

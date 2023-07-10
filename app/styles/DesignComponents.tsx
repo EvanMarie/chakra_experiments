@@ -50,6 +50,34 @@ export const colors = {
   linkColor: "deeppink",
 };
 
+export const GridStyles = {
+  bg: "mainText",
+  borderRadius: "lg",
+  p: 2,
+  w: "100%",
+  h: "fit-content",
+  gap: 1,
+};
+
+export const gridBoxStyles = {
+  borderRadius: "lg",
+  p: 2,
+  w: "100%",
+  shadow: "xl",
+  color: "background",
+  border: "2px solid #444444",
+  fontWeight: "bold",
+};
+
+export const boxColors = {
+  one: "accent_1",
+  two: "accent_2",
+  three: "tipBackground",
+  four: "green.200",
+  five: "purple.200",
+  six: "yellow.200",
+};
+
 export const ButtonBackground = "accent_2";
 export const ButtonHoverBG = "accent_1";
 export const CatsBouncing = "https://cat-bounce.com/";
