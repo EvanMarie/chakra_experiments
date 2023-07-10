@@ -184,8 +184,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/wrap"> */}
+                  <Link href="/layout/wrap">
                     <HL>Wrap 🔗</HL>
                   </Link>
                   : wraps its child elements and automatically adjusts their

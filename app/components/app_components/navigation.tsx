@@ -358,8 +358,7 @@ export const navElements: NavElement[] = [
         label: "Stack",
       },
       {
-        link: "/on_my_way",
-        // link: "/layout/wrap",
+        link: "/layout/wrap",
         label: "Wrap",
       },
     ],

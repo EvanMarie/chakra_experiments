@@ -73,9 +73,9 @@ export const boxColors = {
   one: "accent_1",
   two: "accent_2",
   three: "purple.200",
-  four: "green.200",
-  five: "yellow.200",
-  six: "tipBackground",
+  four: "yellow.200",
+  five: "green.200",
+  six: "orange.200",
 };
 
 export const ButtonBackground = "accent_2";
