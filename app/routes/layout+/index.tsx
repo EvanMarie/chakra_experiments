@@ -173,8 +173,7 @@ export default function chakra_feedback() {
               </li>
               <li>
                 <BasicText>
-                  <Link href="/on_my_way">
-                    {/* <Link href="/layout/stack"> */}
+                  <Link href="/layout/stack">
                     <HL>Stack 🔗</HL>
                   </Link>
                   : allows you to stack elements vertically or horizontally,

@@ -72,10 +72,10 @@ export const gridBoxStyles = {
 export const boxColors = {
   one: "accent_1",
   two: "accent_2",
-  three: "tipBackground",
+  three: "purple.200",
   four: "green.200",
-  five: "purple.200",
-  six: "yellow.200",
+  five: "yellow.200",
+  six: "tipBackground",
 };
 
 export const ButtonBackground = "accent_2";
@@ -482,5 +482,28 @@ export function HL({ children, fontWeight = "normal" }: HighlightMeProps) {
       color="accent_2"
       fontSize={HLSizes}
     >{`${children}`}</Code>
+  );
+}
+
+/* *************************************************************************** */
+
+interface NoteBoxProps extends FlexProps {
+  children?: React.ReactNode;
+}
+
+export function NoteBox({ children, ...restProps }: NoteBoxProps) {
+  return (
+    <Flex w="100%" px={8}>
+      <Flex
+        direction="column"
+        w="100%"
+        bg="tipBackground"
+        color="background"
+        borderRadius="lg"
+        p={4}
+      >
+        {children}
+      </Flex>
+    </Flex>
   );
 }
