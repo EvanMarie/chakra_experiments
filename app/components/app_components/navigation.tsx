@@ -363,6 +363,24 @@ export const navElements: NavElement[] = [
       },
     ],
   },
+  {
+    link: "/typography",
+    label: "Typography",
+    subElements: [
+      {
+        link: "/typography/heading",
+        label: "Heading",
+      },
+      {
+        link: "/typography/highlight",
+        label: "Highlight",
+      },
+      {
+        link: "/typography/text",
+        label: "Text",
+      },
+    ],
+  },
 ];
 
 export const getNavElementForUrl = (
