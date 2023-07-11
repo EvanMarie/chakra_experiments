@@ -225,14 +225,14 @@ export function GridBoxOne({ children, ...rest }: GridBoxProps) {
       flexDirection="column"
       padding={PaddingValues}
     >
-      <HStack>
-        <Flex h="20px" justify="left" mb={2}>
+      <HStack w="100%">
+        <Flex h="20px" mb={2}>
           <HiLightBulb
             size={23}
             style={{ marginRight: "5px", color: usefulTipLightbulb }}
           />
           <Text fontWeight="bold" fontSize="16px">
-            Useful Tip No. 1
+            Creative Idea No. 1
           </Text>
         </Flex>
       </HStack>
@@ -253,17 +253,17 @@ export function GridBoxTwo({ children, ...rest }: GridBoxProps) {
       flexDirection="column"
       padding={PaddingValues}
     >
-      <HStack>
-        <Flex h="20px" justify="left" mb={2}>
+      <HStack w="100%">
+        <Flex h="20px" mb={2}>
           <HiLightBulb
             size={23}
             style={{ marginRight: "5px", color: usefulTipLightbulb }}
           />
           <Text fontWeight="bold" fontSize="16px">
-            Useful Tip No. 2
+            Creative Idea No. 2
           </Text>
         </Flex>
-      </HStack>{" "}
+      </HStack>
       {children}
     </Flex>
   );
@@ -280,17 +280,17 @@ export function GridBoxThree({ children, ...rest }: GridBoxProps) {
       flexDirection="column"
       padding={PaddingValues}
     >
-      <HStack>
-        <Flex h="20px" justify="left" mb={2}>
+      <HStack w="100%">
+        <Flex h="20px" mb={2}>
           <HiLightBulb
             size={23}
             style={{ marginRight: "5px", color: usefulTipLightbulb }}
           />
           <Text fontWeight="bold" fontSize="16px">
-            Useful Tip No. 3
+            Creative Idea No. 3
           </Text>
         </Flex>
-      </HStack>{" "}
+      </HStack>
       {children}
     </Flex>
   );

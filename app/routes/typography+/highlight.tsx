@@ -1,7 +1,7 @@
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import { BasicText, HL } from "~/styles/DesignComponents";
+import { BasicText, HL, Mono } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -37,9 +37,12 @@ import {
   HighlightThree,
   HighlightFour,
   HighlightFive,
-  HighlightSix,
-  HighlightSeven,
 } from "~/components/typography/highlightComponents";
+import {
+  HighlightFunctionEight,
+  HighlightFunctionSeven,
+  HighlightFunctionSix,
+} from "~/components/typography/highlightFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -60,38 +63,24 @@ export default function chakra_section() {
           {/*  Section Introduction */}
           {/* COMPONENT DESCRIPTION */}
           <SectionContainer paddingBottom={2} mb={0}>
-            <SectionDescription>⦾ Describe</SectionDescription>
-            <BasicText></BasicText>
-            <BulletBox>
-              <ul>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-                <li>
-                  <HL></HL>: Description
-                </li>
-              </ul>
-            </BulletBox>
+            <SectionDescription>
+              ⦾ Chakra UI's <Mono>Highlight</Mono> component allows you to
+              highlight substrings within a text. It provides a simple and
+              convenient way to emphasize specific words or phrases. You can
+              render the main string as children of the <Mono>Highlight</Mono>{" "}
+              component and pass the word(s) you want to highlight to the query
+              prop. You can also use the style prop to define the
+              characteristics for the highlighted parts.
+            </SectionDescription>
+
             <DescriptionBox>
-              <BasicText>Some description</BasicText>
               {/* IMPORT CODE */}
               <ImportBox>
                 <BasicText>
-                  These components can be imported as follows:
+                  The <Mono>Highlight</Mono> component can be imported as
+                  follows:
                 </BasicText>
-                <Highlighter>{``}</Highlighter>
+                <Highlighter>{`import { Highlight } from '@chakra-ui/react'`}</Highlighter>
               </ImportBox>
             </DescriptionBox>
           </SectionContainer>
@@ -102,7 +91,12 @@ export default function chakra_section() {
               <SingleExample>
                 <HighlightOne />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Highlight
+  query="important"
+  styles={{ px: "2", py: "1", bg: "green.300" }}
+>
+  It is crucial to prioritize important tasks in your workflow.
+</Highlight>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -111,7 +105,15 @@ export default function chakra_section() {
               <SingleExample>
                 <HighlightTwo />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{` <Heading lineHeight="tall">
+  <Highlight
+    query="key"
+    styles={{ px: "2", py: "1", rounded: "full", bg: "purple.400" }}
+  >
+    Key concepts
+  </Highlight>{" "}
+  should be clearly explained in your documentation.
+</Heading>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -120,7 +122,15 @@ export default function chakra_section() {
               <SingleExample>
                 <HighlightThree />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Heading lineHeight="tall">
+  <Highlight
+    query={["efficiency", "accuracy", "consistency"]}
+    styles={{ px: "2", py: "1", rounded: "full", bg: "cyan.300" }}
+  >
+    Ensuring efficiency, accuracy, and consistency in your work is
+    essential.
+  </Highlight>
+</Heading>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -129,7 +139,17 @@ export default function chakra_section() {
               <SingleExample>
                 <HighlightFour />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Highlighter>{`<Text>Search results for: "product"</Text>
+<Text mt="6" fontWeight="bold">
+  <Highlight query="product" styles={{ py: "1", fontWeight: "normal" }}>
+    The new product launch has been well-received by customers.
+  </Highlight>
+</Text>
+<Text fontWeight="bold">
+  <Highlight query="product" styles={{ py: "1", fontWeight: "normal" }}>
+    Improving the product quality is a top priority for our team.
+  </Highlight>
+</Text>`}</Highlighter>
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -138,25 +158,7 @@ export default function chakra_section() {
               <SingleExample>
                 <HighlightFive />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <HighlightSix />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
-              </SingleExample>
-            </SectionContainer>
-
-            <SectionContainer>
-              <SingleExample>
-                <HighlightSeven />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <Typography.E03 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>
@@ -167,25 +169,62 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Real-Time Highlighting</b>: You can dynamically highlight
+              specific words or phrases in a user-inputted sentence in
+              real-time. This interactive component allows users to input a
+              keyword and a sentence, and the keyword will be highlighted
+              wherever it appears in the sentence. It provides a seamless way to
+              visually emphasize important terms or search for specific content
+              within a text.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <HighlightFunctionSix />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Typography.H04 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Search Highlight</b>: You can use the <b>Highlight</b>{" "}
+              component to create an interactive document viewer with
+              highlighting capabilities. This can be helpful when users need to
+              search for specific terms or navigate through a lengthy document.
+              By allowing users to input search queries, the <b>Highlight</b>{" "}
+              component can dynamically highlight the matched terms, enabling
+              users to locate relevant information quickly within the document.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <HighlightFunctionSeven />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Typography.H05 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Social Media Highlighter</b>: This is a creative use of the{" "}
+              <b>Highlight</b> component that allows users to write a message
+              and highlight @ mentions and hashtags within the text. As a user
+              types in the <b>Textarea</b> input, any mentions or hashtags (text
+              starting with '@' or '#') are automatically highlighted using the{" "}
+              <b>Highlight</b> component. This component can be useful in social
+              media-related applications or any scenario where highlighting
+              specific keywords or tags is necessary.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <HighlightFunctionEight />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Typography.H06 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

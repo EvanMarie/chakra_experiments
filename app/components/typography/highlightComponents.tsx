@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { BasicText } from "~/styles/DesignComponents";
+import { BasicText, Mono } from "~/styles/DesignComponents";
 import {
   MyFlex,
   SectionContainer,
@@ -21,9 +21,15 @@ import {
 export function HighlightOne() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Basic Usage</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ In this example, the word "important" is highlighted with a green
+          background, demonstrating how you can emphasize specific terms or
+          phrases in your content. This is as simple as passing the word to be
+          highlighted as a string to the <Mono>query</Mono> prop and specifying
+          the styles to be applied.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
@@ -40,9 +46,14 @@ export function HighlightOne() {
 export function HighlightTwo() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Heading Highlights</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ This example demonstrates using the <Mono>Highlight</Mono> component
+          within a Heading component. The word "Key" is highlighted with a
+          purple background, illustrating how you can draw attention to key
+          concepts or keywords within headings or titles.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
@@ -59,9 +70,14 @@ export function HighlightTwo() {
 export function HighlightThree() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Multi-Word Highlighting</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ In this example, the Highlight component is used to highlight
+          multiple words: "efficiency," "accuracy," and "consistency." The
+          highlighted words are styled with a cyan background, showcasing the
+          ability to emphasize multiple terms simultaneously.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
@@ -78,9 +94,14 @@ export function HighlightThree() {
 export function HighlightFour() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Substring Highlighting</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ This example shows how to highligh substrings within a block of
+          text. The search query "product" is highlighted in two separate
+          sentences. It demonstrates how you can accent specific substrings in
+          search results or dynamic content.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
@@ -97,9 +118,16 @@ export function HighlightFour() {
 export function HighlightFive() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Customization</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
+        <SectionDescription>
+          ⦾ This example utilizes the <Mono>useHighlight</Mono> hook to
+          customize the rendering and styling of highlighted words. The words
+          "collaboration" and "communication" within the text are styled
+          differently, with a purple background to emphasize their significance.
+          This example highlights the flexibility of the <Mono>Highlight</Mono>{" "}
+          component in customizing rendered elements based on matches.
+        </SectionDescription>
         <BasicText></BasicText>
         <BasicText></BasicText>
       </Box>
@@ -112,39 +140,3 @@ export function HighlightFive() {
 }
 
 /* ********************************************************************** */
-
-export function HighlightSix() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <HighlightFunctionSix />
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function HighlightSeven() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <HighlightFunctionSeven />
-      </MyFlex>
-    </SectionContainer>
-  );
-}

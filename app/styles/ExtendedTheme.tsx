@@ -55,27 +55,31 @@ const rangeSliderStyles = {
 /* ********************************* TEXTAREA ************************************ */
 
 export const textareaStyles = {
-  w: "100%",
-  maxWidth: "500px",
-  bg: "mainText",
-  color: "background",
-  border: "2px solid",
-  borderColor: "tipBackground",
-  borderRadius: "lg",
-  _hover: {
+  field: {
+    w: "100%",
+    maxWidth: "500px",
     bg: "mainText",
     color: "background",
-  },
-  focusBorderColor: "accent_2",
-  _focus: {
-    bg: "mainText",
-    color: "background",
-    borderColor: "accent_2",
+    border: "2px solid",
+    borderColor: "tipBackground",
+    borderRadius: "lg",
+    _hover: {
+      bg: "mainText",
+      color: "background",
+    },
     focusBorderColor: "accent_2",
-  },
-  _placeholder: {
-    color: "background",
-    opacity: 0.7,
+    _focus: {
+      field: {
+        bg: "mainText",
+        color: "background",
+        borderColor: "accent_2",
+        focusBorderColor: "accent_2",
+      },
+    },
+    _placeholder: {
+      color: "background",
+      opacity: 0.7,
+    },
   },
 };
 
@@ -141,7 +145,6 @@ const CovertCandyScheme = {
   475: "#B8264D", // exampleRed
   500: "#532291", // darkAccent_1
   600: "#5E515B", // sectionColor *adobe
-  // 800: "#433A47", // sidebarBackground, darkAccent_3 * adobe
   800: "rgba(67, 58, 71, 0.8)", // sidebarBackground, darkAccent_3 * adobe
   850: "#26231a", // darkText
   900: "#2D2B38", // background *adobe
@@ -335,7 +338,7 @@ const theme = extendTheme(
           },
         },
       },
-      Textarea: { textareaStyles },
+      Textarea: textareaStyles,
       RangeSlider: rangeSliderStyles,
       Button: buttonTheme,
       Input: defaultStyles,

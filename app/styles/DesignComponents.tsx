@@ -8,6 +8,7 @@ import {
   Grid,
   GridProps,
   HStack,
+  Highlight,
   Image,
   ImageProps,
   Link,
@@ -18,9 +19,10 @@ import {
   VStack,
   chakra,
   useBreakpointValue,
+  useHighlight,
 } from "@chakra-ui/react";
 import { AiOutlineHome } from "react-icons/ai";
-import { MyFlex, linkStyle } from "./MainDesignComponents";
+import { HighlightText, MyFlex, linkStyle } from "./MainDesignComponents";
 import { useState } from "react";
 // import { BasicTextSize } from "./MainDesignComponents";
 import styles from "~/styles/codeMarkdown.css";
@@ -263,31 +265,7 @@ export function MyDivider({
   );
 }
 
-interface MonoProps {
-  children?: React.ReactNode;
-  fontSize?: string | number;
-  width?: string;
-  marginY?: number;
-  lineHeight?: string;
-  fontWeight?: string;
-}
-
-export function Mono({
-  children,
-  width = "100%",
-  marginY = 0,
-  lineHeight = "1",
-  fontWeight = "normal",
-}: MonoProps) {
-  const monoStyle = {
-    fontWeight: fontWeight,
-    marginY: `${marginY} !important`,
-    lineheight: `${lineHeight} !important`,
-    color: "accent_1",
-    width: `${width} !important`,
-  };
-  return <chakra.span {...monoStyle}>{children}</chakra.span>;
-}
+/* ************************************************************************* */
 
 interface StackedExampleProps extends FlexProps {
   children?: React.ReactNode;
@@ -507,3 +485,66 @@ export function NoteBox({ children, ...restProps }: NoteBoxProps) {
     </Flex>
   );
 }
+
+/* *************************************************************************** */
+interface MonoProps {
+  children?: React.ReactNode;
+  fontSize?: string | number;
+  width?: string;
+  marginY?: number;
+  lineHeight?: string;
+  fontWeight?: string;
+}
+
+export function Mono({
+  children,
+  width = "100%",
+  marginY = 0,
+  lineHeight = "1",
+  fontWeight = "normal",
+}: MonoProps) {
+  const monoStyle = {
+    fontWeight: fontWeight,
+    width: `${width} !important`,
+    marginY: `${marginY} !important`,
+    lineheight: `${lineHeight} !important`,
+    color: "mainText",
+    textShadow: "0 2px 3px rgba(242, 5, 238, 0.8)",
+    // color: "#ffbddd",
+    // textShadow: "0 0 0.75rem black",
+  };
+  return <chakra.span {...monoStyle}>{children}</chakra.span>;
+}
+
+/* *************************************************************************** */
+
+// export const darkLight = "rgba(69, 33, 88, 0.44)";
+// export const brightLight = "#D5BFE0";
+
+// interface HighlightProps extends BoxProps {
+//   children: string;
+//   highlightColor?: string;
+// }
+
+// export function Mono({
+//   children,
+//   highlightColor = darkLight,
+//   ...rest
+// }: HighlightProps) {
+//   const highlightedText = children.split(" ").map((word, index) => (
+//     <Box
+//       key={index}
+//       as="span"
+//       bg={highlightColor}
+//       display="inline"
+//       paddingTop="0.15px"
+//       paddingBottom="1px"
+//       paddingX="2.25px"
+//       {...rest}
+//     >
+//       {word}
+//     </Box>
+//   ));
+
+//   return <>{highlightedText}</>;
+// }

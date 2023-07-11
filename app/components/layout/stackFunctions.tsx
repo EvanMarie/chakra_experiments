@@ -30,7 +30,7 @@ export function StackFunctionOne() {
   return (
     <SingleExample bg="background">
       <Stack spacing="24px" {...GridStyles}>
-        <Square size="100px" {...stackBoxStyles} bg={boxColors.one}>
+        <Square size={"100px"} {...stackBoxStyles} bg={boxColors.one}>
           1
         </Square>
         <Square {...stackBoxStyles} size="100px" bg={boxColors.two}>
@@ -50,13 +50,13 @@ export function StackFunctionTwo() {
   return (
     <SingleExample bg="background">
       <HStack spacing="24px" {...GridStyles}>
-        <Square size="100px" {...stackBoxStyles} bg={boxColors.one}>
+        <Square size="80px" {...stackBoxStyles} bg={boxColors.one}>
           1
         </Square>
-        <Square {...stackBoxStyles} size="100px" bg={boxColors.two}>
+        <Square {...stackBoxStyles} size="80px" bg={boxColors.two}>
           2
         </Square>
-        <Square {...stackBoxStyles} size="100px" bg={boxColors.three}>
+        <Square {...stackBoxStyles} size="80px" bg={boxColors.three}>
           3
         </Square>
       </HStack>
