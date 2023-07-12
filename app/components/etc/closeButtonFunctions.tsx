@@ -348,6 +348,7 @@ export function CloseButtonFunctionNine({
         <ModalContent>
           <Image src={imageUrl} />
           <CloseButton
+            bg="mainText"
             position="absolute"
             top={2}
             right={3}
