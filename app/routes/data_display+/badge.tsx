@@ -36,7 +36,15 @@ import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import { ModalCode } from "~/styles/CodeDesignComponents";
-import { Badge, Button, HStack, Text, Tooltip, VStack } from "@chakra-ui/react";
+import {
+  Badge,
+  Button,
+  HStack,
+  StackDivider,
+  Text,
+  Tooltip,
+  VStack,
+} from "@chakra-ui/react";
 import {
   BadgeFive,
   BadgeFour,
@@ -200,10 +208,14 @@ export default function chakra_section() {
               used to arrange the items and their corresponding badges
               vertically and horizontally, respectively.
             </HighlightText>
-            <HighlightExample h="175px">
+            <HighlightExample h="100%">
               <MyFlex p={0}>
                 {" "}
-                <VStack spacing={2} mt={2}>
+                <VStack
+                  spacing={2}
+                  mt={2}
+                  divider={<StackDivider opacity="0.3" />}
+                >
                   <HStack
                     alignItems="start"
                     justifyContent="space-between"

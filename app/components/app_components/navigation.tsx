@@ -381,6 +381,28 @@ export const navElements: NavElement[] = [
       },
     ],
   },
+  {
+    link: "/etc",
+    label: "Etc.",
+    subElements: [
+      {
+        link: "/etc/close_button",
+        label: "Close Button",
+      },
+      {
+        link: "/etc/portal",
+        label: "Portal",
+      },
+      {
+        link: "/etc/show_hide",
+        label: "Show / Hide",
+      },
+      {
+        link: "/etc/transitions",
+        label: "Transitions",
+      },
+    ],
+  },
 ];
 
 export const getNavElementForUrl = (
