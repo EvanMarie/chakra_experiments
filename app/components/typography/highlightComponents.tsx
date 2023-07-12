@@ -30,8 +30,6 @@ export function HighlightOne() {
           highlighted as a string to the <Mono>query</Mono> prop and specifying
           the styles to be applied.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -54,8 +52,6 @@ export function HighlightTwo() {
           purple background, illustrating how you can draw attention to key
           concepts or keywords within headings or titles.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -78,8 +74,6 @@ export function HighlightThree() {
           highlighted words are styled with a cyan background, showcasing the
           ability to emphasize multiple terms simultaneously.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -102,8 +96,6 @@ export function HighlightFour() {
           sentences. It demonstrates how you can accent specific substrings in
           search results or dynamic content.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">
@@ -128,8 +120,6 @@ export function HighlightFive() {
           This example highlights the flexibility of the <Mono>Highlight</Mono>{" "}
           component in customizing rendered elements based on matches.
         </SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
       </Box>
 
       <MyFlex bg="background">

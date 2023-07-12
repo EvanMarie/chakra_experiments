@@ -13,6 +13,7 @@ import {
   useHighlight,
 } from "@chakra-ui/react";
 import { ChangeEvent, useState } from "react";
+import { textAreaStyling } from "~/styles/DesignComponents";
 import { SingleExample } from "~/styles/MainDesignComponents";
 
 export function HighlightFunctionOne() {
@@ -129,23 +130,6 @@ export function HighlightFunctionFive() {
 
 const inputWidths = { base: "250px", sm: "300px", lg: "175px" };
 
-const textAreaStyles = {
-  borderRadius: "lg",
-  resize: "none",
-  bg: "mainText",
-  color: "background",
-  w: inputWidths,
-  _focus: {
-    bg: "mainText",
-    color: "background",
-    focusBorderColor: "accent_2",
-  },
-  _hover: {
-    bg: "mainText",
-    color: "background",
-    focusBorderColor: "accent_2",
-  },
-};
 export function HighlightFunctionSix() {
   const [inputValue, setInputValue] = useState("");
   const [keyword, setKeyword] = useState("wonderful");
@@ -176,7 +160,8 @@ export function HighlightFunctionSix() {
           <VStack w="100%" spacing={1}>
             <Text mb="0">Type a sentence:</Text>
             <Textarea
-              {...textAreaStyles}
+              {...textAreaStyling}
+              w={inputWidths}
               resize="none"
               value={inputValue}
               onChange={handleInputChange}
@@ -312,7 +297,8 @@ export function HighlightFunctionEight() {
       <VStack w="100%" spacing={0}>
         <Text>Write a message:</Text>
         <Textarea
-          {...textAreaStyles}
+          {...textAreaStyling}
+          w={inputWidths}
           value={message}
           onChange={handleInputChange}
           placeholder={placeholder}

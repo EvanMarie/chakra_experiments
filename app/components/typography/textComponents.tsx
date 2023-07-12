@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import { BasicText } from "~/styles/DesignComponents";
+import { Box, Code, Text } from "@chakra-ui/react";
+import { BasicText, Mono } from "~/styles/DesignComponents";
 import {
   MyFlex,
   SectionContainer,
@@ -10,10 +10,6 @@ import {
   TextFunctionOne,
   TextFunctionTwo,
   TextFunctionThree,
-  TextFunctionFour,
-  TextFunctionFive,
-  TextFunctionSix,
-  TextFunctionSeven,
 } from "./textFunctions";
 
 /* ********************************************************************** */
@@ -21,11 +17,14 @@ import {
 export function TextOne() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Customizing Font Size</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ One of the fundamental features of the <Mono>Text</Mono> component
+          is the ability to adjust the font size. You can accomplish this by
+          passing the <Mono>fontSize</Mono> prop. This example showcases the 10
+          different predefined font sizes in Chakra.{" "}
+        </SectionDescription>
       </Box>
 
       <MyFlex bg="background">
@@ -40,11 +39,18 @@ export function TextOne() {
 export function TextTwo() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Truncating Text</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ If you need to truncate text after a specific number of lines, you
+          can use the <Mono>noOfLines</Mono> prop. This feature is useful when
+          dealing with long paragraphs that may exceed the available space. This
+          feature is also full responsive, so the <Mono>noOfLines</Mono> prop
+          can take an array of values to truncate text at different screen
+          sizes. In this example, you can experiment with how the text will
+          render when the <Mono>numOfLines</Mono> property is set to different
+          values.
+        </SectionDescription>
       </Box>
 
       <MyFlex bg="background">
@@ -59,11 +65,14 @@ export function TextTwo() {
 export function TextThree() {
   return (
     <SectionContainer>
-      <SectionHeading></SectionHeading>
+      <SectionHeading>Overriding the Text Style</SectionHeading>
       <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
+        <SectionDescription>
+          ⦾ By default, the Text component renders as a <Code>{`<span>`}</Code>{" "}
+          element. However, you can override this behavior by using the{" "}
+          <Mono>as</Mono> prop. This allows you to render the text as a
+          different HTML element.
+        </SectionDescription>
       </Box>
 
       <MyFlex bg="background">
@@ -74,77 +83,3 @@ export function TextThree() {
 }
 
 /* ********************************************************************** */
-
-export function TextFour() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <TextFunctionFour />
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function TextFive() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <TextFunctionFive />
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function TextSix() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <TextFunctionSix />
-      </MyFlex>
-    </SectionContainer>
-  );
-}
-
-/* ********************************************************************** */
-
-export function TextSeven() {
-  return (
-    <SectionContainer>
-      <SectionHeading></SectionHeading>
-      <Box>
-        <SectionDescription>⦾</SectionDescription>
-        <BasicText></BasicText>
-        <BasicText></BasicText>
-      </Box>
-
-      <MyFlex bg="background">
-        <TextFunctionSeven />
-      </MyFlex>
-    </SectionContainer>
-  );
-}

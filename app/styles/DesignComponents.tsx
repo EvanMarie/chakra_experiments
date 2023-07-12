@@ -80,6 +80,22 @@ export const boxColors = {
   six: "orange.200",
 };
 
+export const textAreaStyling = {
+  borderRadius: "lg",
+  bg: "mainText",
+  color: "background",
+  _focus: {
+    bg: "mainText",
+    color: "background",
+    focusBorderColor: "accent_2",
+  },
+  _hover: {
+    bg: "mainText",
+    color: "background",
+    focusBorderColor: "accent_2",
+  },
+};
+
 export const ButtonBackground = "accent_2";
 export const ButtonHoverBG = "accent_1";
 export const CatsBouncing = "https://cat-bounce.com/";
@@ -95,6 +111,8 @@ export const ButtonStyles = {
     transition: "all 0.4s ease-in-out",
   },
 };
+
+/*  ************************************************************************* */
 
 interface MyHeadingProps {
   children: React.ReactNode;
@@ -117,6 +135,8 @@ export function MyHeading({
     </Text>
   );
 }
+
+/*  ************************************************************************* */
 
 interface HorizontalLineProps {
   bg?: string | undefined;
@@ -151,6 +171,8 @@ export function HorizontalLine({
   );
 }
 
+/*  ************************************************************************* */
+
 interface BasicTextProps extends TextProps {
   children?: React.ReactNode;
   size?: ResponsiveValue<string>;
@@ -175,6 +197,8 @@ export function BasicText({
   );
 }
 
+/*  ************************************************************************* */
+
 interface FlexibleBoxProps extends BoxProps {
   children?: React.ReactNode;
   [key: string]: any;
@@ -195,6 +219,8 @@ export function FlexibleBox({ children, ...restProps }: FlexibleBoxProps) {
     </Box>
   );
 }
+
+/*  ************************************************************************* */
 
 interface CompWithLabelProps {
   children: React.ReactNode[];
@@ -232,6 +258,8 @@ export function CompWithLabel({
     </Box>
   );
 }
+
+/* ************************************************************************* */
 
 interface MyDividerProps {
   h?: string | number;
@@ -302,6 +330,8 @@ export function StackedExample({
     </Box>
   );
 }
+
+/* ************************************************************************* */
 
 interface CollapsibleExampleProps {
   children: React.ReactNode[];
@@ -496,55 +526,50 @@ interface MonoProps {
   fontWeight?: string;
 }
 
-export function Mono({
-  children,
-  width = "100%",
-  marginY = 0,
-  lineHeight = "1",
-  fontWeight = "normal",
-}: MonoProps) {
-  const monoStyle = {
-    fontWeight: fontWeight,
-    width: `${width} !important`,
-    marginY: `${marginY} !important`,
-    lineheight: `${lineHeight} !important`,
-    color: "mainText",
-    textShadow: "0 2px 3px rgba(242, 5, 238, 0.8)",
-    // color: "#ffbddd",
-    // textShadow: "0 0 0.75rem black",
-  };
-  return <chakra.span {...monoStyle}>{children}</chakra.span>;
-}
+// export function Mono({
+//   children,
+//   width = "100%",
+//   marginY = 0,
+//   lineHeight = "1",
+//   fontWeight = "normal",
+// }: MonoProps) {
+//   const monoStyle = {
+//     fontWeight: fontWeight,
+//     width: `${width} !important`,
+//     marginY: `${marginY} !important`,
+//     lineheight: `${lineHeight} !important`,
+//     color: "mainText",
+//     textShadow: "0 2px 3px rgba(242, 5, 238, 0.8)",
+//     // color: "#ffbddd",
+//     // textShadow: "0 0 0.75rem black",
+//   };
+//   return <chakra.span {...monoStyle}>{children}</chakra.span>;
+// }
 
 /* *************************************************************************** */
 
-// export const darkLight = "rgba(69, 33, 88, 0.44)";
-// export const brightLight = "#D5BFE0";
+const highlightColor = "rgba(48, 29, 44, 0.5)";
 
-// interface HighlightProps extends BoxProps {
-//   children: string;
-//   highlightColor?: string;
-// }
+interface HighlightProps extends BoxProps {
+  children?: string;
+  highlighting?: string;
+}
 
-// export function Mono({
-//   children,
-//   highlightColor = darkLight,
-//   ...rest
-// }: HighlightProps) {
-//   const highlightedText = children.split(" ").map((word, index) => (
-//     <Box
-//       key={index}
-//       as="span"
-//       bg={highlightColor}
-//       display="inline"
-//       paddingTop="0.15px"
-//       paddingBottom="1px"
-//       paddingX="2.25px"
-//       {...rest}
-//     >
-//       {word}
-//     </Box>
-//   ));
-
-//   return <>{highlightedText}</>;
-// }
+export function Mono({
+  children,
+  highlighting = highlightColor,
+  ...rest
+}: HighlightProps) {
+  return (
+    <chakra.span
+      bg={highlighting}
+      color="#fccacc"
+      borderRadius="sm"
+      paddingX="2px"
+      paddingY="0.15px"
+      lineHeight={1}
+    >
+      {children}
+    </chakra.span>
+  );
+}
