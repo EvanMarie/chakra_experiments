@@ -36,7 +36,12 @@ import {
   TextTwo,
   TextThree,
 } from "~/components/typography/textComponents";
-import { TextFunctionFour } from "~/components/typography/textFunctions";
+import {
+  TextFunctionFive,
+  TextFunctionFour,
+  TextFunctionSix,
+} from "~/components/typography/textFunctions";
+import { TextareaFunctionSeven } from "~/components/form/textareaFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -102,6 +107,23 @@ export default function chakra_section() {
         <HighlightColumn>
           <GridBoxOne>
             <HighlightText>
+              <b>Gradient Text</b>: There are many ways to call attention to a
+              particular block of text. This example shows you how to display
+              text with a subtle gradient effect to add visual appeal and draw
+              attention to important information, while at the same time not
+              overwhelming the user visually.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <TextFunctionFive />
+              </MyFlex>
+            </HighlightExample>
+            <ModalCode>
+              <Typography.H08 />
+            </ModalCode>
+          </GridBoxOne>
+          <GridBoxTwo>
+            <HighlightText>
               <b>Dynamic Text</b>: This example showcases text in a carousel
               manner, engaging users and adding visual interest, which is great
               for any website or application. This method can be utilized to
@@ -118,20 +140,23 @@ export default function chakra_section() {
             <ModalCode>
               <Typography.H07 />
             </ModalCode>
-          </GridBoxOne>
-          <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
-            </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Interactive Story</b>: One of the best uses of text is
+              story-telling. This example creates an interactive storytelling
+              experience for users. The story is navigated through a series of
+              choices, which guide the narrative in different directions based
+              on the user's selections.{" "}
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <TextFunctionSix />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <Typography.H09 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>

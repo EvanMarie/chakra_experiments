@@ -718,8 +718,8 @@ export function HighlightExample({
   paddingX = { base: 2, sm: 4, md: 4, lg: 1 },
   paddingY = 2,
   mt = 3,
-  color = "white",
-  borderRadius = "md",
+  color = "mainText",
+  borderRadius = "lg",
   maxWidth = { base: "300px", sm: "400px", md: "400px", lg: "250px" },
   ...restProps
 }: HighlightExampleProps) {

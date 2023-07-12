@@ -3,6 +3,7 @@ import {
   Button,
   Center,
   Code,
+  Flex,
   HStack,
   Icon,
   IconButton,
@@ -32,9 +33,20 @@ export function TextFunctionOne() {
   return (
     <SingleExample bg="background">
       {" "}
-      <VStack spacing={4} {...GridStyles} color="background" p={6}>
-        <Text fontSize="6xl">fontSize="6xl"</Text>
-        <Text fontSize="5xl">fontSize="5xl"</Text>
+      <VStack
+        spacing={4}
+        {...GridStyles}
+        color="background"
+        p={2}
+        whiteSpace="pre-wrap"
+      >
+        <Text fontSize="6xl" wordBreak="break-word" lineHeight="1.1">
+          fontSize="6xl"
+        </Text>
+        <Text fontSize="5xl" wordBreak="break-word" lineHeight="1.2">
+          fontSize="5xl"
+        </Text>
+        lineHeight="1.2"
         <Text fontSize="4xl">fontSize="4xl"</Text>
         <Text fontSize="3xl">fontSize="3xl"</Text>
         <Text fontSize="2xl">fontSize="2xl"</Text>
@@ -52,7 +64,7 @@ export function TextFunctionOne() {
 
 export function TextFunctionTwo() {
   const [noOfLines, setNoOfLines] = useState(3);
-  const totalLines = 44;
+  const totalLines = 48;
 
   const handleSliderChange = (value: number) => {
     setNoOfLines(value);
@@ -61,10 +73,6 @@ export function TextFunctionTwo() {
   return (
     <SingleExample bg="background">
       <VStack w="100%" spacing={4}>
-        {/* <Text fontSize="md" color="accent_2">
-          noOfLines = {noOfLines}
-        </Text> */}
-
         <Code fontSize="lg">{`noOfLines = ${noOfLines}`}</Code>
 
         <Slider
@@ -229,9 +237,9 @@ export function TextFunctionThree() {
 
 export function TextFunctionFour() {
   const [phrases, setPhrases] = useState([
-    "Input 3 lines of text and",
-    "you can make your own",
-    "animated text too!",
+    "Stay Connected",
+    "Explore the Possibilities",
+    "Unleash Your Creativity",
   ]);
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -243,7 +251,7 @@ export function TextFunctionFour() {
     if (isAnimationRunning) {
       interval = setInterval(() => {
         setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-      }, 1500);
+      }, 2000);
     }
 
     return () => {
@@ -271,22 +279,22 @@ export function TextFunctionFour() {
   );
 
   return (
-    <VStack w="100%" spacing={4}>
+    <VStack w="100%">
       <Textarea
         {...textAreaStyling}
         resize="none"
         rows={3}
         onChange={handleInputChange}
-        placeholder="Enter three lines of text"
+        placeholder="Try your own text."
       />
       <Center
         w="100%"
         h="100px"
         my={3}
-        color="accent_2"
+        color="background"
         fontWeight="bold"
         p={4}
-        bg="sidebarBackground"
+        bg="accent_2"
         borderRadius="lg"
         border="1px solid"
         textAlign="center"
@@ -305,7 +313,7 @@ export function TextFunctionFour() {
             width="100%"
             height="100%"
             opacity={currentPhraseIndex === index ? 1 : 0}
-            transition="opacity 0.3s ease"
+            transition="opacity 0.5s ease"
           >
             <Text fontSize="26px">{phrase}</Text>
           </Box>
@@ -314,19 +322,18 @@ export function TextFunctionFour() {
       <Center w="100%">
         <HStack>
           <Button
-            color="background"
             bg={buttonColor}
             w="50px"
             h="50px"
             borderRadius="full"
-            size="lg"
+            color="accent_1"
+            border="1px solid"
             onClick={handleToggleAnimation}
-            shadow="xl"
           >
             {isAnimationRunning ? (
-              <Icon as={FaPause} boxSize={6} />
+              <Icon as={FaPause} boxSize={6} color="background" />
             ) : (
-              <Icon as={FaPlay} boxSize={6} />
+              <Icon as={FaPlay} boxSize={6} color="background" />
             )}
           </Button>
         </HStack>
@@ -338,11 +345,169 @@ export function TextFunctionFour() {
 /* ********************************************************************** */
 
 export function TextFunctionFive() {
-  return <SingleExample></SingleExample>;
+  return (
+    <SingleExample bg="mainText">
+      <Center w="100%" bg="mainText" p={3} textAlign="center" borderRadius="lg">
+        <Text
+          lineHeight="1.2"
+          fontSize="3xl"
+          fontWeight="extrabold"
+          bgGradient="linear(to-r, purple.600, blue.500, purple.700)"
+          bgClip="text"
+        >
+          Discover the Magic
+        </Text>
+      </Center>
+    </SingleExample>
+  );
 }
 
 /* ********************************************************************** */
+interface Choice {
+  label: string;
+  next: number;
+}
+
+interface StoryElement {
+  text: string;
+  choices: Choice[];
+}
 
 export function TextFunctionSix() {
-  return <SingleExample></SingleExample>;
+  const [storyIndex, setStoryIndex] = useState(0);
+  const story: StoryElement[] = [
+    {
+      // 0
+      text: "You find yourself in a dark forest. What do you do?",
+      choices: [
+        { label: "Go left", next: 1 },
+        { label: "Go right", next: 2 },
+      ],
+    },
+    {
+      // 1
+      text: "Going left, you encounter a mysterious cave. Enter or keep going?",
+      choices: [
+        { label: "Enter", next: 3 },
+        { label: "Keep going", next: 8 },
+      ],
+    },
+    {
+      // 2
+      text: "Going right, you stumble upon a hidden treasure chest! Open it or leave it?",
+      choices: [
+        { label: "Open it", next: 6 },
+        { label: "Leave it", next: 7 },
+      ],
+    },
+    {
+      // 3
+      text: "Inside the cave, you find a sleeping dragon. Try to sneak past or go back?",
+      choices: [
+        { label: "Sneak past", next: 5 },
+        { label: "Go back", next: 4 },
+      ],
+    },
+    {
+      // 4
+      text: "You decided to go back. As you exit the cave, you find yourself back in the forest.",
+      choices: [
+        { label: "Go straight", next: 12 },
+        { label: "Go right", next: 2 },
+      ],
+    },
+    {
+      // 5
+      text: "You successfully sneak past the dragon and find a treasure. You take it and become the hero of the realm. You live happily ever after.",
+      choices: [],
+    },
+    {
+      // 6
+      text: "You open the treasure chest and discover a rare artifact! You take it and become the hero of the realm. You live happily ever after.",
+      choices: [],
+    },
+    {
+      // 7
+      text: "You decide to leave the treasure chest behind and continue exploring. You find a peaceful village and decide to settle there. You live happily ever after.",
+      choices: [],
+    },
+    {
+      // 8
+      text: "You continue your journey and come across a river. Swim or find a bridge?",
+      choices: [
+        { label: "Swim", next: 9 },
+        { label: "Find a bridge", next: 10 },
+      ],
+    },
+    {
+      // 9
+      text: "You swam across the river and survived the currents. On the other side, you find a beautiful meadow. You decide to settle there and live a peaceful life. You live happily ever after.",
+      choices: [],
+    },
+    {
+      // 10
+      text: "You find a sturdy bridge and cross the river without any trouble. On the other side, you find a bustling city where you start a new life. You live happily ever after.",
+      choices: [],
+    },
+    {
+      // 11
+      text: "",
+      choices: [],
+    },
+    {
+      // 12
+      text: "You continue straight ahead and find a peaceful village. You decide to settle there and live a peaceful life. You live happily ever after.",
+      choices: [],
+    },
+  ];
+
+  const handleChoiceClick = (nextIndex: number) => {
+    if (nextIndex >= 0 && nextIndex < story.length) {
+      setStoryIndex(nextIndex);
+    }
+  };
+
+  const handleRestart = () => {
+    setStoryIndex(0);
+  };
+
+  const currentStoryElement = story[storyIndex];
+
+  return (
+    <SingleExample>
+      <Center
+        w="100%"
+        bg="mainText"
+        color="background"
+        h="fit-content"
+        borderRadius="lg"
+        fontWeight="bold"
+        fontFamily="Fantasy"
+        p={4}
+      >
+        <Text fontSize="xl">{currentStoryElement?.text}</Text>
+      </Center>
+      <VStack w="100%">
+        {" "}
+        <VStack w="100%" spacing={4} h="80px">
+          {currentStoryElement?.choices.map((choice, index) => (
+            <Button
+              key={index}
+              w="125px"
+              size="sm"
+              onClick={() => handleChoiceClick(choice.next)}
+            >
+              {choice.label}
+            </Button>
+          ))}
+          {(storyIndex === story.length - 1 ||
+            currentStoryElement?.choices.length === 0) && (
+            <Button mt={4} size="sm" w="125px" onClick={handleRestart}>
+              Restart
+            </Button>
+          )}
+        </VStack>
+      </VStack>
+    </SingleExample>
+  );
 }
