@@ -151,7 +151,7 @@ export default function chakra_section() {
               <SingleExample>
                 <TransitionsOne />
                 <ModalCode>
-                  <Highlighter>{``}</Highlighter>
+                  <ETC.E12 />
                 </ModalCode>
               </SingleExample>
             </SectionContainer>

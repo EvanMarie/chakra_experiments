@@ -183,7 +183,7 @@ export function TransitionsFunctionTwo() {
             m={0}
             p={0}
           >
-            {Array.from({ length: 11 }, (_, index) => {
+            {Array.from({ length: 10 }, (_, index) => {
               const scale = (index / 10).toFixed(1);
               return (
                 <option key={index} value={scale}>
@@ -270,7 +270,7 @@ export function TransitionsFunctionThree() {
             style={{ zIndex: 10 }}
             transition={customTransition}
           >
-            <Center {...transitionBoxStyle} w="100%" h="150px">
+            <Center {...transitionBoxStyle} w="100%" h="100px">
               <VStack justify="space-between" h="100%">
                 {" "}
                 <Code fontSize="lg">{`<Slide direction=${slideDirection}>`}</Code>

@@ -101,8 +101,8 @@ export function TransitionsTwo() {
         </BulletBox>
         <BasicText>
           Below is an example of the default settings on <Mono>ScaleFade</Mono>{" "}
-          as well as an example where you can choose the initial scale size to
-          see the differences between values.
+          as well as an example where you can choose the{" "}
+          <Mono>initialScale</Mono> size to see the differences between values.
         </BasicText>
       </Box>
 
