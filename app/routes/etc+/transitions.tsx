@@ -38,6 +38,12 @@ import {
   TransitionsFour,
   TransitionsFive,
 } from "~/components/etc/transitionsComponents";
+import {
+  TransitionsFunctionEight,
+  TransitionsFunctionFive,
+  TransitionsFunctionSeven,
+  TransitionsFunctionSix,
+} from "~/components/etc/transitionsFunctions";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -153,36 +159,24 @@ export default function chakra_section() {
             <SectionContainer>
               <SingleExample>
                 <TransitionsTwo />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TransitionsThree />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TransitionsFour />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
               </SingleExample>
             </SectionContainer>
 
             <SectionContainer>
               <SingleExample>
                 <TransitionsFive />
-                <ModalCode>
-                  <Highlighter>{``}</Highlighter>
-                </ModalCode>
               </SingleExample>
             </SectionContainer>
           </ExampleBox>
@@ -192,25 +186,62 @@ export default function chakra_section() {
 
         <HighlightColumn>
           <GridBoxOne>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Bouncing Ball</b>: In this example, we create a bouncing ball
+              animation using the <b>ScaleFade</b> component. When the user
+              clicks on the ball (button), it will shrink and fade out, and then
+              quickly expand and fade back in, creating a bouncing effect. The
+              way this works is when the user clicks on the ball/button, the{" "}
+              <b>handleBounce</b> function is triggered. It sets the{" "}
+              <b>isBouncing</b> state to true, which triggers the{" "}
+              <b>ScaleFade</b> component. (The emoji animation gets a little
+              Framer Motion deeper into<b> Framer Motion</b>.) Check out the
+              code for more details. Animations like this provide visual
+              feedback to users when they interact with certain elements, such
+              as buttons or other interactive components.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <TransitionsFunctionSix />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <ETC.H04 />
+            </ModalCode>
           </GridBoxOne>
           <GridBoxTwo>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Image Slideshow Transitions</b>: In this example, we create a
+              slideshow that smoothly crossfades between images using the{" "}
+              <b>Fade</b> and <b>useState</b> components. Cycle through the
+              images below to see the transition effect.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <TransitionsFunctionSeven />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <ETC.H05 />
+            </ModalCode>
           </GridBoxTwo>
           <GridBoxThree>
-            <HighlightText>Highlight coming soon!</HighlightText>
-            <HighlightExample h="80px">
-              <MyFlex></MyFlex>
+            <HighlightText>
+              <b>Card Transition</b>: In this example, we have a button that
+              toggles the visibility of a card. When the button is clicked, the{" "}
+              <b>SlideFade</b> component is used to smoothly reveal or hide the
+              card with a sliding animation. The card component itself is a
+              simple <b>Box</b> with some text content, demonstrating how you
+              can apply transitions to any element within your UI.
+            </HighlightText>
+            <HighlightExample h="100%">
+              <MyFlex>
+                <TransitionsFunctionEight />
+              </MyFlex>
             </HighlightExample>
-            <ModalCode>Highlight Example Code</ModalCode>
+            <ModalCode>
+              <ETC.H05 />
+            </ModalCode>
           </GridBoxThree>
         </HighlightColumn>
       </MainGrid>
