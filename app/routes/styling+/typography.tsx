@@ -33,6 +33,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -259,9 +260,11 @@ export default function chakra_section() {
               on the <b>Text</b> component.
             </HighlightText>
             <MyFlex>
-              <Text fontFamily="monospace" fontSize="15px">
-                This text uses a custom font family.
-              </Text>
+              <HighlightExample h="fit-content">
+                <Text fontFamily="monospace" fontSize="15px">
+                  This text uses a custom font family.
+                </Text>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Text fontFamily="monospace">`}</Highlighter>
@@ -273,9 +276,11 @@ export default function chakra_section() {
               prop to control the alignment of text within a component.
             </HighlightText>
             <MyFlex bg={"accent_1"}>
-              <Text textAlign="center">
-                This text is centered within its container.
-              </Text>
+              <HighlightExample h="fit-content">
+                <Text textAlign="center">
+                  This text is centered within its container.
+                </Text>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Text textAlign="center">`}</Highlighter>
@@ -293,10 +298,12 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               <Flex p={2} justifyContent="center" bg={"accent_2"}>
-                <Text lineHeight="1.5">
-                  This text has an increased line height for improved
-                  readability.
-                </Text>
+                <HighlightExample h="fit-content">
+                  <Text lineHeight="1.5">
+                    This text has an increased line height for improved
+                    readability.
+                  </Text>
+                </HighlightExample>
               </Flex>
             </MyFlex>
             <ModalCode>

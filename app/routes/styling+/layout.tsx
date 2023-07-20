@@ -1,13 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Stack,
-  StackDivider,
-  VStack,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Code, Grid, Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
@@ -15,10 +6,7 @@ import {
   BasicText,
   BlueBold,
   FlexibleBox,
-  HL,
   Mono,
-  MyDivider,
-  colors,
 } from "~/styles/DesignComponents";
 
 import {
@@ -37,8 +25,8 @@ import {
   GridBoxThree,
   SingleExample,
   MyFlex,
-  ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -140,7 +128,7 @@ export default function chakra_section() {
                   color="background"
                   paddingX={2}
                 >
-                  <Mono>width="100%" height={12}</Mono>
+                  <Code>{`width="100%" height={12}`}</Code>
                 </FlexibleBox>
                 <MiniCode>{`<Box width="100%" height={12}`}</MiniCode>
               </SingleExample>
@@ -181,7 +169,7 @@ export default function chakra_section() {
                   color="background"
                   paddingX={2}
                 >
-                  <Mono>w={256}</Mono>
+                  <Code>{`w={256}`}</Code>
                 </FlexibleBox>
                 <MiniCode>{`<Box w={256}`}</MiniCode>
                 <BasicText></BasicText>
@@ -309,13 +297,15 @@ export default function chakra_section() {
               grid items. You can customize the number of columns, column
               widths, and gaps according to your layout requirements.
             </HighlightText>
-            <Box p={3} w="100%">
-              <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1} w="100%">
-                <Box bg="yellow.400" height="30px" />
-                <Box bg="green.400" height="30px" />
-                <Box bg="blue.400" height="30px" />
-              </Grid>
-            </Box>
+            <HighlightExample h="fit-content">
+              <Box p={3} w="100%">
+                <Grid templateColumns="repeat(3, 1fr)" gap={1} m={1} w="100%">
+                  <Box bg="yellow.400" height="30px" />
+                  <Box bg="green.400" height="30px" />
+                  <Box bg="blue.400" height="30px" />
+                </Grid>
+              </Box>
+            </HighlightExample>
             <ModalCode>
               <Highlighter>{`<Grid templateColumns="repeat(3, 1fr)" gap={1}>
   <Box bg="yellow.400" height="30px" />
@@ -336,13 +326,15 @@ export default function chakra_section() {
               the elements, making it easy to create vertically or horizontally
               aligned layouts.
             </HighlightText>
-            <Box p={3} w="100%">
-              <Stack direction="column" spacing={2}>
-                <Box bg="yellow.400" height="30px" />
-                <Box bg="purple.400" height="30px" />
-                <Box bg="red.400" height="30px" />
-              </Stack>
-            </Box>
+            <HighlightExample h="fit-content">
+              <Box p={3} w="100%">
+                <Stack direction="column" spacing={2}>
+                  <Box bg="yellow.400" height="30px" />
+                  <Box bg="purple.400" height="30px" />
+                  <Box bg="red.400" height="30px" />
+                </Stack>
+              </Box>
+            </HighlightExample>
             <ModalCode>
               <Highlighter>{`<Stack direction="column" spacing={2}>
   <Box bg="yellow.400" height="30px" /> 
@@ -365,17 +357,19 @@ export default function chakra_section() {
               container, ensuring they stay within the container's width.
             </HighlightText>
             <MyFlex>
-              <Wrap spacing={1} justify="center" align="center" w="100%">
-                <WrapItem>
-                  <Box bg="red.400" height="30px" width="220px" />
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="green.400" height="30px" width="220px" />
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="blue.400" height="30px" width="220px" />
-                </WrapItem>
-              </Wrap>
+              <HighlightExample h="fit-content">
+                <Wrap spacing={1} justify="center" align="center" w="100%">
+                  <WrapItem>
+                    <Box bg="red.400" height="30px" width="175px" />
+                  </WrapItem>
+                  <WrapItem>
+                    <Box bg="green.400" height="30px" width="175px" />
+                  </WrapItem>
+                  <WrapItem>
+                    <Box bg="blue.400" height="30px" width="175px" />
+                  </WrapItem>
+                </Wrap>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Wrap spacing={1}>

@@ -305,20 +305,23 @@ export default ToggleFixedBox;
               properties.
             </HighlightText>
             <MyFlex>
-              <Box position="relative" h="175px" w="175px" bg={"accent_2"}>
-                <Box
-                  position="absolute"
-                  top="50%"
-                  left="50%"
-                  transform="translate(-50%, -50%)"
-                  bg="accent_2"
-                  color="background"
-                  p={3}
-                  borderRadius="sm"
-                >
-                  I'm a box centered within my parent
+              {" "}
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Box position="relative" h="175px" w="175px" bg={"accent_2"}>
+                  <Box
+                    position="absolute"
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
+                    bg="accent_2"
+                    color="background"
+                    p={3}
+                    borderRadius="sm"
+                  >
+                    I'm a box centered within my parent
+                  </Box>
                 </Box>
-              </Box>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <MiniCode>{`<Box

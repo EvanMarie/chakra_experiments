@@ -21,6 +21,7 @@ import {
   MyFlex,
   SectionDescription,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -182,16 +183,18 @@ export default function chakra_section() {
               corners.
             </HighlightText>
             <MyFlex>
-              <Box
-                maxWidth="200px"
-                borderTopLeftRadius="lg"
-                borderBottomRightRadius="2xl"
-                bg="accent_2"
-                color="background"
-                p={2}
-              >
-                I'm a box with different border radii on different corners.
-              </Box>
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Box
+                  maxWidth="200px"
+                  borderTopLeftRadius="lg"
+                  borderBottomRightRadius="2xl"
+                  bg="accent_2"
+                  color="background"
+                  p={2}
+                >
+                  I'm a box with different border radii on different corners.
+                </Box>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box
@@ -205,16 +208,19 @@ export default function chakra_section() {
               your theme and use them throughout your app.
             </HighlightText>
             <MyFlex>
-              <Flex
-                maxWidth="200px"
-                textAlign="center"
-                borderRadius="50px"
-                bg="accent_2"
-                color="background"
-                p={4}
-              >
-                I'm a box with a super rounded border.
-              </Flex>
+              {" "}
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Flex
+                  maxWidth="200px"
+                  textAlign="center"
+                  borderRadius="50px"
+                  bg="accent_2"
+                  color="background"
+                  p={4}
+                >
+                  I'm a box with a super rounded border.
+                </Flex>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`import { extendTheme } from "@chakra-ui/react"
@@ -243,16 +249,19 @@ export default theme
               ellipse effect.
             </HighlightText>
             <MyFlex>
-              <Flex
-                p={2}
-                maxWidth="200px"
-                textAlign="center"
-                borderRadius="50% / 20%"
-                bg="accent_2"
-                color="background"
-              >
-                I'm a box with an elliptical border radius.
-              </Flex>
+              {" "}
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Flex
+                  p={2}
+                  maxWidth="200px"
+                  textAlign="center"
+                  borderRadius="50% / 20%"
+                  bg="accent_2"
+                  color="background"
+                >
+                  I'm a box with an elliptical border radius.
+                </Flex>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{` <Flex

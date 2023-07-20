@@ -23,6 +23,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -186,15 +187,17 @@ export default function chakra_section() {
               separately. For example,{" "}
             </HighlightText>
             <MyFlex>
-              <Box
-                w="150px"
-                p={2}
-                borderTop="2px solid red"
-                borderBottom="2px dashed blue"
-                bg="white"
-              >
-                I am a Box.
-              </Box>
+              <HighlightExample h="fit-content" color="background">
+                <Box
+                  w="150px"
+                  p={2}
+                  borderTop="2px solid red"
+                  borderBottom="2px dashed blue"
+                  bg="white"
+                >
+                  I am a Box.
+                </Box>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <MiniCode>{`<Box
@@ -215,15 +218,17 @@ export default function chakra_section() {
               is invisible.
             </HighlightText>
             <MyFlex>
-              <Box
-                border="2px solid transparent"
-                borderColor="transparent"
-                borderRadius="md"
-                bg="white"
-                p={4}
-              >
-                I am a box with a transparent border.
-              </Box>
+              <HighlightExample h="fit-content" color="background">
+                <Box
+                  border="2px solid transparent"
+                  borderColor="transparent"
+                  borderRadius="md"
+                  bg="white"
+                  p={4}
+                >
+                  I am a box with a transparent border.
+                </Box>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box
@@ -242,16 +247,18 @@ export default function chakra_section() {
               the largest viewports.
             </HighlightText>
             <MyFlex>
-              <Box
-                borderWidth={["1px", "2px", "3px"]}
-                p={2}
-                bg="red"
-                color="white"
-                borderColor="black"
-              >
-                {" "}
-                My name is Boxanne.
-              </Box>
+              <HighlightExample h="fit-content" color="background">
+                <Box
+                  borderWidth={["1px", "2px", "3px"]}
+                  p={2}
+                  bg="red"
+                  color="white"
+                  borderColor="black"
+                >
+                  {" "}
+                  My name is Boxanne.
+                </Box>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box borderWidth={["1px", "2px", "3px"]}>`}</Highlighter>

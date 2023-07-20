@@ -22,6 +22,7 @@ import {
   MyFlex,
   SectionDescription,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -222,12 +223,14 @@ export default function ChakraSection() {
               ).
             </HighlightText>
             <MyFlex>
-              <Box
-                bgImage="url('https://www.wrongaddress.com')"
-                bg="teal.500"
-                height="200px"
-                width="200px"
-              />
+              <HighlightExample h="fit-content">
+                <Box
+                  bgImage="url('https://www.wrongaddress.com')"
+                  bg="teal.500"
+                  height="200px"
+                  width="200px"
+                />
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box

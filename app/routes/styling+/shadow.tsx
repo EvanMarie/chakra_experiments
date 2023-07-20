@@ -29,7 +29,7 @@ import { Highlighter } from "~/components/styling/highlighter";
 import styles from "~/styles/codeMarkdown.css";
 import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Code, SimpleGrid, Text } from "@chakra-ui/react";
 import { MiniCode, ModalCode } from "~/styles/CodeDesignComponents";
 
 hljs.registerLanguage("javascript", javascript);
@@ -66,58 +66,58 @@ export default function chakra_section() {
             <BulletBox>
               <ul>
                 <li>
-                  <HL>sm</HL>: <Mono>"0 1px 2px 0 rgba(0, 0, 0, 0.05)"</Mono> -
+                  <HL>sm</HL>: <Code>"0 1px 2px 0 rgba(0, 0, 0, 0.05)"</Code> -
                   This is a small shadow, it applies a shadow effect that is
                   slight and does not protrude much from the box frame. It's
                   good for subtle highlights and low depth elements.
                 </li>
                 <li>
                   <HL>md</HL>:{" "}
-                  <Mono>
+                  <Code>
                     "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0,
                     0, 0, 0.06)"
-                  </Mono>{" "}
+                  </Code>{" "}
                   - This is a medium shadow, it applies a more pronounced shadow
-                  than <Mono>sm</Mono>. It's good for medium depth elements and
+                  than <Code>sm</Code>. It's good for medium depth elements and
                   for creating a feeling of elevation.
                 </li>
                 <li>
                   <HL>lg</HL>:{" "}
-                  <Mono>
+                  <Code>
                     "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0,
                     0, 0, 0.05)"{" "}
-                  </Mono>{" "}
+                  </Code>{" "}
                   - This is a large shadow. It applies an even more pronounced
-                  shadow than <Mono>md</Mono>. It's good for higher depth
+                  shadow than <Code>md</Code>. It's good for higher depth
                   elements and for creating a stronger feeling of elevation.{" "}
                 </li>
                 <li>
                   <HL>xl</HL>:{" "}
-                  <Mono>
+                  <Code>
                     "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px
                     rgba(0, 0, 0, 0.04)"
-                  </Mono>{" "}
+                  </Code>{" "}
                   This is an extra-large shadow. It applies a very pronounced
                   shadow. It's good for very high depth elements and for
                   creating a strong feeling of elevation or focus.
                 </li>
                 <li>
                   <HL>2xl</HL>:{" "}
-                  <Mono>"0 25px 50px -12px rgba(0, 0, 0, 0.25)"</Mono> This is
+                  <Code>"0 25px 50px -12px rgba(0, 0, 0, 0.25)"</Code> This is
                   an extra-extra-large shadow. It applies an extremely
                   pronounced shadow, and it's best for elements that need a
                   significant amount of depth or focus.
                 </li>
                 <li>
                   <HL>outline</HL>:{" "}
-                  <Mono>"0 0 0 3px rgba(66, 153, 225, 0.6)"</Mono> This is an
+                  <Code>"0 0 0 3px rgba(66, 153, 225, 0.6)"</Code> This is an
                   outline shadow. It's best used to draw attention to a
                   particular element, like for highlighting focus on an input or
                   button.
                 </li>
                 <li>
                   <HL>inner</HL>:{" "}
-                  <Mono>"inset 0 2px 4px 0 rgba(0,0,0,0.06)"</Mono> This is an
+                  <Code>"inset 0 2px 4px 0 rgba(0,0,0,0.06)"</Code> This is an
                   inner shadow. It's applied inside the box borders and is good
                   for making elements appear as if they're being pressed down or
                   have an inner depth.

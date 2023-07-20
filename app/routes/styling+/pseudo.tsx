@@ -301,33 +301,35 @@ export default function chakra_section() {
               visible on hover with <b>opacity: "1"</b>.
             </HighlightText>
             <MyFlex>
-              <Box
-                bg="accent_2"
-                p={3}
-                color="darkText"
-                data-tooltip="I'm a tooltip"
-                sx={{
-                  position: "relative",
-                  "&::after": {
-                    content: "attr(data-tooltip)",
-                    position: "absolute",
-                    top: "100%",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    backgroundColor: "black",
-                    color: "white",
-                    padding: "5px",
-                    borderRadius: "5px",
-                    opacity: "0",
-                    transition: "opacity 0.3s",
-                  },
-                  "&:hover::after": {
-                    opacity: "1",
-                  },
-                }}
-              >
-                Hover over me
-              </Box>
+              <HighlightExample h="fit-content" color="background">
+                <Box
+                  bg="accent_2"
+                  p={3}
+                  color="darkText"
+                  data-tooltip="I'm a tooltip"
+                  sx={{
+                    position: "relative",
+                    "&::after": {
+                      content: "attr(data-tooltip)",
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      backgroundColor: "black",
+                      color: "white",
+                      padding: "5px",
+                      borderRadius: "5px",
+                      opacity: "0",
+                      transition: "opacity 0.3s",
+                    },
+                    "&:hover::after": {
+                      opacity: "1",
+                    },
+                  }}
+                >
+                  Hover over me
+                </Box>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box
@@ -411,20 +413,22 @@ export default function chakra_section() {
               <b>::before</b> pseudo-element.
             </HighlightText>
             <MyFlex>
-              <Box
-                sx={{
-                  width: "200px",
-                  height: "20px",
-                  backgroundColor: "lightgray",
-                  "&::before": {
-                    content: '""',
-                    display: "block",
-                    height: "100%",
-                    width: "50%",
-                    backgroundColor: "cyan",
-                  },
-                }}
-              />
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Box
+                  sx={{
+                    width: "200px",
+                    height: "20px",
+                    backgroundColor: "lightgray",
+                    "&::before": {
+                      content: '""',
+                      display: "block",
+                      height: "100%",
+                      width: "50%",
+                      backgroundColor: "cyan",
+                    },
+                  }}
+                />
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box

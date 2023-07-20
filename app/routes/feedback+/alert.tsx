@@ -30,6 +30,7 @@ import {
   SectionDescription,
   SingleExample,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -173,10 +174,12 @@ export default function chakra_section() {
               be adjusted to any custom icon you prefer.
             </HighlightText>
             <MyFlex>
-              <Alert status="error">
-                <AlertIcon as={LuFileWarning} boxSize="30px" />
-                <Box flex="1">A custom error icon for alerts.</Box>
-              </Alert>
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Alert status="error">
+                  <AlertIcon as={LuFileWarning} boxSize="30px" />
+                  <Box flex="1">A custom error icon for alerts.</Box>
+                </Alert>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Feedback.H01 />
@@ -191,16 +194,18 @@ export default function chakra_section() {
               page is added directly within the Alert's description.
             </HighlightText>
             <MyFlex>
-              <Alert status="info">
-                <AlertIcon />
-                <Box flex="1">
-                  For more details, visit{" "}
-                  <Link color="teal.500" href="#">
-                    our documentation
-                  </Link>
-                  .
-                </Box>
-              </Alert>
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Alert status="info">
+                  <AlertIcon />
+                  <Box flex="1">
+                    For more details, visit{" "}
+                    <Link color="teal.500" href="#">
+                      our documentation
+                    </Link>
+                    .
+                  </Box>
+                </Alert>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Feedback.H02 />
@@ -224,9 +229,11 @@ export default function chakra_section() {
               your project.
             </HighlightText>
             <MyFlex>
-              <Message status="info">
-                I'm a happy little custom message!
-              </Message>
+              <HighlightExample h="fit-content" color="background" p={4}>
+                <Message status="info">
+                  I'm a happy little custom message!
+                </Message>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Feedback.H03 />

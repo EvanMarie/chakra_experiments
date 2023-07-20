@@ -1,14 +1,8 @@
-import { Box, Flex, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Code, Flex, Text, Wrap, WrapItem } from "@chakra-ui/react";
 import type { LinksFunction } from "@remix-run/node";
 import stylesUrl from "~/styles/global.css";
 
-import {
-  BasicText,
-  Mono,
-  HL,
-  colors,
-  BlueBold,
-} from "~/styles/DesignComponents";
+import { BasicText, Mono, BlueBold } from "~/styles/DesignComponents";
 
 import {
   BigBackgroundBox,
@@ -27,8 +21,8 @@ import {
   SingleExample,
   MyFlex,
   SectionDescription,
-  ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -123,8 +117,9 @@ export default function chakra_section() {
                     <Mono>flexGrow</Mono>, <Mono>flexShrink</Mono>, and{" "}
                     <Mono>flexBasis</Mono> properties simultaneously. For
                     instance, <Mono>flex="1"</Mono> would be equivalent to
-                    setting <Mono>flexGrow={1}</Mono>,{" "}
-                    <Mono>flexShrink={1}</Mono>, <Mono>flexBasis="0%"</Mono>.
+                    setting <Code>{`flexGrow={1}`}</Code>,{" "}
+                    <Code>{`flexShrink={1}`}</Code>,{" "}
+                    <Code>{`flexBasis="0%"`}</Code>.
                   </li>
                   <li>
                     <BlueBold>Other Box Props</BlueBold>: Since{" "}
@@ -362,29 +357,31 @@ export default function chakra_section() {
               columns with equal height.
             </HighlightText>
             <MyFlex>
-              <Flex>
-                <Box flex={1} bg="red.400" p={4}>
-                  Column 1
-                </Box>
-                <Box flex={1} bg="blue.400" p={4}>
-                  Column 2
-                </Box>
-                <Box flex={1} bg="green.400" p={4}>
-                  Column 3
-                </Box>
-              </Flex>
+              {" "}
+              <HighlightExample h="fit-content">
+                <Flex>
+                  <Flex flex={1} bg="red.400" p={4} w="60px">
+                    1
+                  </Flex>
+                  <Flex flex={1} bg="blue.400" p={4} w="60px">
+                    2
+                  </Flex>
+                  <Flex flex={1} bg="green.400" p={4} w="60px">
+                    3
+                  </Flex>
+                </Flex>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Flex>
-  <Box flex={1} bg="red.400" p={4}>
-    Column 1
-  </Box>
-  <Box flex={1} bg="blue.400" p={4}>
-    Column 2
-  </Box>
-  <Box flex={1} bg="green.400" p={4}>
-    Column 3
-  </Box>
+<Flex flex={1} bg="red.400" p={4} w="60px">
+  1
+</Flex>
+<Flex flex={1} bg="blue.400" p={4} w="60px">
+  2
+</Flex>
+<Flex flex={1} bg="green.400" p={4} w="60px">
+  3
 </Flex>`}</Highlighter>
             </ModalCode>
           </GridBoxOne>
@@ -419,17 +416,20 @@ export default function chakra_section() {
               aesthetics of your UI.
             </HighlightText>
             <MyFlex>
-              <Wrap spacing={1}>
-                <WrapItem>
-                  <Box bg="red.400" height="30px" width="220px" />
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="green.400" height="30px" width="220px" />
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="blue.400" height="30px" width="220px" />
-                </WrapItem>
-              </Wrap>
+              {" "}
+              <HighlightExample h="fit-content">
+                <Wrap spacing={1}>
+                  <WrapItem>
+                    <Box bg="red.400" height="30px" width="175px" />
+                  </WrapItem>
+                  <WrapItem>
+                    <Box bg="green.400" height="30px" width="175px" />
+                  </WrapItem>
+                  <WrapItem>
+                    <Box bg="blue.400" height="30px" width="175px" />
+                  </WrapItem>
+                </Wrap>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Wrap spacing={1}>
@@ -453,17 +453,20 @@ export default function chakra_section() {
               within the container, regardless of their individual heights.
             </HighlightText>
             <MyFlex>
-              <Flex height="80px" align="center">
-                <Box bg="blue.400" p={2}>
-                  Item 1
-                </Box>
-                <Box bg="green.400" p={2}>
-                  Item 2
-                </Box>
-                <Box bg="red.400" p={2}>
-                  Item 3
-                </Box>
-              </Flex>
+              {" "}
+              <HighlightExample h="fit-content">
+                <Flex height="80px" align="center">
+                  <Box bg="blue.400" p={2}>
+                    Item 1
+                  </Box>
+                  <Box bg="green.400" p={2}>
+                    Item 2
+                  </Box>
+                  <Box bg="red.400" p={2}>
+                    Item 3
+                  </Box>
+                </Flex>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Flex height="80px" align="center">

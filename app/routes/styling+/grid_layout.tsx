@@ -18,6 +18,7 @@ import {
   GridBoxTwo,
   GridColumn,
   HighlightColumn,
+  HighlightExample,
   HighlightText,
   ImportBox,
   MainGrid,
@@ -390,24 +391,27 @@ return (
               and larger screens.
             </HighlightText>
             <MyFlex>
-              <Grid
-                templateColumns={[
-                  "repeat(1, 1fr)",
-                  "repeat(2, 1fr)",
-                  "repeat(3, 1fr)",
-                ]}
-                gap={1}
-              >
-                <Box bg="blue.300" height="30px" p={1}>
-                  One
-                </Box>
-                <Box bg="blue.300" height="30px" p={1}>
-                  Two
-                </Box>
-                <Box bg="blue.300" height="30px" p={1}>
-                  Three
-                </Box>
-              </Grid>
+              <HighlightExample h="fit-content">
+                <Grid
+                  templateColumns={[
+                    "repeat(1, 1fr)",
+                    "repeat(2, 1fr)",
+                    "repeat(3, 1fr)",
+                  ]}
+                  gap={1}
+                  color="background"
+                >
+                  <Box bg="blue.300" height="30px" p={1}>
+                    One
+                  </Box>
+                  <Box bg="blue.300" height="30px" p={1}>
+                    Two
+                  </Box>
+                  <Box bg="blue.300" height="30px" p={1}>
+                    Three
+                  </Box>
+                </Grid>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Grid
@@ -436,11 +440,17 @@ return (
               column before moving on to the next row.
             </HighlightText>
             <MyFlex>
-              <Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
-                <Box bg="red.300" h="60px" w="60px"></Box>
-                <Box bg="green.300" h="60px" w="60px"></Box>
-                <Box bg="blue.300" h="60px" w="60px"></Box>
-              </Grid>
+              <HighlightExample h="fit-content">
+                <Grid
+                  templateColumns="repeat(2, 1fr)"
+                  autoFlow="column"
+                  gap="2"
+                >
+                  <Box bg="red.300" h="60px" w="60px"></Box>
+                  <Box bg="green.300" h="60px" w="60px"></Box>
+                  <Box bg="blue.300" h="60px" w="60px"></Box>
+                </Grid>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Grid templateColumns="repeat(2, 1fr)" autoFlow="column" gap="2">
@@ -466,20 +476,22 @@ return (
               it's added as a new row instead.
             </HighlightText>
             <MyFlex>
-              <Grid
-                templateColumns="repeat(auto-fit, minmax(100, 1fr))"
-                gap="2"
-              >
-                <Box bg="red.300" h="60px" p={2}>
-                  One
-                </Box>
-                <Box bg="green.300" h="60px" p={2}>
-                  Two
-                </Box>
-                <Box bg="blue.300" h="60px" p={2}>
-                  Three
-                </Box>
-              </Grid>
+              <HighlightExample h="fit-content" color="background">
+                <Grid
+                  templateColumns="repeat(auto-fit, minmax(100, 1fr))"
+                  gap="2"
+                >
+                  <Box bg="red.300" h="60px" p={2}>
+                    One
+                  </Box>
+                  <Box bg="green.300" h="60px" p={2}>
+                    Two
+                  </Box>
+                  <Box bg="blue.300" h="60px" p={2}>
+                    Three
+                  </Box>
+                </Grid>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Grid

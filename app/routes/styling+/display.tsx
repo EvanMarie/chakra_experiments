@@ -30,6 +30,7 @@ import {
   SectionDescription,
   ViewCode,
   HighlightText,
+  HighlightExample,
 } from "~/styles/MainDesignComponents";
 
 import { Highlighter } from "~/components/styling/highlighter";
@@ -271,7 +272,8 @@ export default function chakra_section() {
               like a block-level element. <b>Box</b> component will behave like
               a block-level element.
             </HighlightText>
-            <MyFlex>
+            <MyFlex bg="background" borderRadius="md">
+              {" "}
               <Box display="inline" bg="green.400" p={4}>
                 Inline Box
               </Box>
@@ -301,10 +303,12 @@ export default function chakra_section() {
             </HighlightText>
             <MyFlex>
               {" "}
-              <Button>
-                <VisuallyHidden>Click me to perform an action</VisuallyHidden>
-                Click me
-              </Button>
+              <HighlightExample h="fit-content">
+                <Button>
+                  <VisuallyHidden>Click me to perform an action</VisuallyHidden>
+                  Click me
+                </Button>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Button>
@@ -330,14 +334,21 @@ export default function chakra_section() {
               using Chakra UI's <b>Flex</b> component.
             </HighlightText>
             <MyFlex>
-              <Flex direction="row" justifyContent="center" alignItems="center">
-                <Box bg="red.400" p={4}>
-                  Box 1
-                </Box>
-                <Box bg="blue.400" p={4}>
-                  Box 2
-                </Box>
-              </Flex>
+              {" "}
+              <HighlightExample h="fit-content">
+                <Flex
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Box bg="red.400" p={4}>
+                    Box 1
+                  </Box>
+                  <Box bg="blue.400" p={4}>
+                    Box 2
+                  </Box>
+                </Flex>
+              </HighlightExample>
             </MyFlex>
             <ModalCode>
               <Highlighter>{`<Box bg="red.400" p={4}>
