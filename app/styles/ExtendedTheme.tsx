@@ -134,14 +134,16 @@ const defaultStyles = {
 
 const CovertCandyScheme = {
   50: "#E0DEBF", // mainText * adobe
-  200: "#44EAFA", // accent_2
+  // 200: "#44EAFA", // accent_2
+  200: "#00FFFF", // accent_2, * adobe
   220: "#1FD4D5", // exampleBlue
   240: "#1FE098", // exampleGreen
   250: "#aa9ab5", // TipBackground
   300: "#FFA6AA", // accent_1, * adobe
   400: "#a7d5fa", // accent_3 * old accent 2
   425: "#7D3080", // examplePurple
-  450: "#D667A4", // linkColor *
+  // 450: "#D667A4", // linkColor *
+  450: "#FF59D5", // linkColor *
   475: "#B8264D", // exampleRed
   500: "#532291", // darkAccent_1
   600: "#5E515B", // sectionColor *adobe
