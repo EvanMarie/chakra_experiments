@@ -1,53 +1,27 @@
-# Welcome to Remix!
+# Chakra.IHeartComponents.com
 
-- [Remix Docs](https://remix.run/docs)
+For the full experience, please visit [IHeartComponents](https://www.iheartcomponents.com) and navigate to our projects - Chakra UI.
 
-## Development
+Chakra-UI is a robust tool designed to simplify the process of building high-quality user interfaces. Created by [Segun Adebayo](https://github.com/segunadebayo), it's a modular and accessible component library crafted for React, aiming to address challenges like reusability, customization, and accessibility.
 
-From your terminal:
+## Features
 
-```sh
-npm run dev
-```
+* **Style Props:** Easily style components with CSS attributes.
+* **Composition:** Reduce complexity through smaller, flexible components.
+* **Accessibility:** Follows WAI-ARIA standards.
+* **Thematic Design:** Highly customizable with themes and color palettes.
+* **Color Mode Implementation:** Optimized for light or dark mode.
+* **Responsive Design:** Modern and accessible layout components.
 
-This starts your app in development mode, rebuilding assets on file changes.
+## Introduction
 
-## Deployment
+Chakra-UI provides developers with reusable React components styled with Emotion and adhering to the best accessibility practices. It includes components like typography, form controls, modals, popovers, and many others.
 
-First, build your app for production:
+This library stands out as a popular choice for React applications, offering an impressive array of features to help create dynamic and attractive UIs.
 
-```sh
-npm run build
-```
+## Installation
 
-Then run the app in production mode:
+You can install Chakra-UI using npm or yarn:
 
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+```bash
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
