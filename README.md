@@ -1,6 +1,6 @@
 # [Chakra.IHeartComponents.com](http://chakra.iheartcomponents.com)
 
-![Chakra IHeartComponents]([image-link](https://iheartcomponents.com/images/components/chakraMain.png))
+![Chakra IHeartComponents](https://iheartcomponents.com/images/components/chakraMain.png)
 
 For the full experience, please visit [IHeartComponents](https://www.iheartcomponents.com) and navigate to our projects - Chakra UI.
 
